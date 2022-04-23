@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="600" viewBox="0 0 1920 600">
+  <defs>
+    <clipPath id="clip-footer-svg">
+      <rect width="1920" height="600"/>
+    </clipPath>
+  </defs>
+  <g id="footer-svg" clip-path="url(#clip-footer-svg)">
+    <rect width="1920" height="600" fill="#d76e2d"/>
+    <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="1134.5" cy="271.5" rx="1134.5" ry="271.5" transform="translate(-173 -417)" fill="#fff"/>
+  </g>
+</svg>

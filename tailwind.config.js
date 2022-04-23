@@ -7,6 +7,7 @@ module.exports = {
     colors: {
       'maincolor': '#D76E2D',
       'maincolordeep':"#B5581F",
+      'btngreen':'#39741F'
     },
     container: {
       center: true,
