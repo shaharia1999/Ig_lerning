@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from "react-router-dom";
-import { FaChevronUp,FaFacebookSquare, FaLinkedin, FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaChevronUp, FaFacebookSquare, FaLinkedin, FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
 import ios from "../../../asset/images/icon/ios.png";
 import android from "../../../asset/images/icon/android.png";
 import MainLogo from "../../../asset/images/logo/logo.png";
@@ -20,11 +20,10 @@ class Footer extends Component {
                                 <img className="h-12 w-12 box-shadow-footer-logo" src={MainLogo} alt="" />
                                 <p className="footer-des-long mt-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                                 <ul className="flex sm:justify-center xl:justify-start mt-2">
-                                <button className="lg:p-2 mx-2 bg-maincolor social-icons rounded-full text-lg font-semibold mt-9"><FaFacebookSquare /></button>
-                                <button className="lg:p-2 mx-2 bg-maincolor social-icons rounded-full text-lg font-semibold mt-9"><FaTwitter /></button>
-                                <button className="lg:p-2 mx-2 bg-maincolor social-icons rounded-full text-lg font-semibold mt-9"><FaLinkedin /></button>
+                                    <button className="lg:p-2 mx-2 bg-maincolor social-icons rounded-full text-lg font-semibold mt-9"><FaFacebookSquare /></button>
+                                    <button className="lg:p-2 mx-2 bg-maincolor social-icons rounded-full text-lg font-semibold mt-9"><FaTwitter /></button>
+                                    <button className="lg:p-2 mx-2 bg-maincolor social-icons rounded-full text-lg font-semibold mt-9"><FaLinkedin /></button>
                                 </ul>
-
                             </div>
 
                             <div className="md:w-2/3 lg:w-2/3 md:px-4 xl:pl-16 mt-12 lg:mt-0">
@@ -72,7 +71,6 @@ class Footer extends Component {
                                                 <span><img className="lg:h-11 lg:w-32" src={android} /></span>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
