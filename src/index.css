@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 
+.Banner1 {
+  background-image: url('../src/asset/images/banner/banner1.svg');
+  width: 100% !important;
+  height: 100vh !important;
+  opacity: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .footer-svg {
   background-image: url('../src/asset/images/banner/footer-svg.svg');
   width: 100% !important;
@@ -21,4 +33,12 @@
 
 .hr-footer-color {
   border-color: rgb(255, 255, 255);
+}
+
+.image-center{
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  object-position: center;
+  display: flex;
 }
