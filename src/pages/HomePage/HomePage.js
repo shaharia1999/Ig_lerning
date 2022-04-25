@@ -5,6 +5,7 @@ import Partner from '../../component/Home/Partner/Partner';
 import ClientSays from '../../component/ClientSays/ClientSays';
 import NavBarTop from '../../component/Common/NavBarTop/NavBarTop';
 import HomeBanner from '../../component/Home/HomeBanner/HomeBanner';
+import HomeAdvertisedment from '../../component/Home/HomeAdvertisedment/HomeAdvertisedment';
 
 class HomePage extends Component {
     render() {
@@ -12,6 +13,7 @@ class HomePage extends Component {
             <Fragment>
                 <NavBarTop/>
                 <HomeBanner/>
+                <HomeAdvertisedment/>
                 <ClientSays/>
                 <Partner/>
                 <Footer />
