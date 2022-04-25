@@ -42,3 +42,20 @@
   object-position: center;
   display: flex;
 }
+
+.home-ad-banner{
+  height: 1200px !important;
+}
+
+
+
+
+
+.hover-overlay {
+  position: absolute;
+  background-color: #000000;
+}
+
+.cat-container{
+  opacity: .1;
+}
