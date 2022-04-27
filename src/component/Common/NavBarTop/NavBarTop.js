@@ -11,7 +11,7 @@ class NavBarTop extends Component {
                     <button className="bg-white lg:mt-3 lg:mr-12 float-right h-10 w-20 rounded-lg ml-auto p-1 text-base font-medium text-black">EN</button>
                 </div>
 
-                <nav className="flex flex-wrap sticky top-0 items-center justify-between w-full py-4 md:py-0 px-4 text-lg bg-maincolor">
+                <nav className="flex flex-wrap top-0 items-center justify-between w-full py-4 md:py-0 px-4 text-lg bg-maincolor">
                     <div className="h-24">
                         <img className="h-24 mt-3 ml-36" src={igLearn} />
                     </div>

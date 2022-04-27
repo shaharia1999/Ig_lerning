@@ -6,6 +6,7 @@ import ClientSays from '../../component/ClientSays/ClientSays';
 import NavBarTop from '../../component/Common/NavBarTop/NavBarTop';
 import HomeBanner from '../../component/Home/HomeBanner/HomeBanner';
 import HomeAdvertisedment from '../../component/Home/HomeAdvertisedment/HomeAdvertisedment';
+import BusinessCompany from '../../component/Course/RecentlyAddedCourse/BusinessCompany/BusinessCompany';
 
 class HomePage extends Component {
     render() {
@@ -13,6 +14,7 @@ class HomePage extends Component {
             <Fragment>
                 <NavBarTop/>
                 <HomeBanner/>
+                <BusinessCompany/>
                 <HomeAdvertisedment/>
                 <ClientSays/>
                 <Partner/>
