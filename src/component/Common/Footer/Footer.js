@@ -35,7 +35,7 @@ class Footer extends Component {
                                         <div>
                                             <a href="#" className="footer-des block">Home</a>
                                             <a href="#" className="footer-des block">Pricing</a>
-                                            <a href="#" className="footer-des block">Contact Us</a>
+                                            <Link to="/contact-us"><span className="footer-des block">Contact Us</span></Link>
                                             <a href="#" className="footer-des block">About</a>
                                             <a href="#" className="footer-des block">Service</a>
                                         </div>

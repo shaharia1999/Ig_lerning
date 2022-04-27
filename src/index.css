@@ -2,9 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .Banner1 {
   background-image: url('../src/asset/images/banner/banner1.svg');
+  width: 100% !important;
+  height: 100vh !important;
+  opacity: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.IgLearnProBanner {
+  background-image: url('../src/asset/images/banner/IgLearnProBanner.png');
+  width: 100% !important;
+  height: 100vh !important;
+  opacity: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.ContactBanner {
+  background-image: url('../src/asset/images/banner/ContactBanner.png');
   width: 100% !important;
   height: 100vh !important;
   opacity: 1;
@@ -46,8 +69,6 @@
 .home-ad-banner{
   height: 1200px !important;
 }
-
-
 
 
 

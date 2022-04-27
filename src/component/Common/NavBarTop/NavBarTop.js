@@ -36,13 +36,13 @@ class NavBarTop extends Component {
                     <div className="hidden w-full md:flex md:items-center md:w-auto" id="menu">
                         <ul className="text-base text-gray-700 md:flex md:justify-between md:pt-0">
                             <li>
-                                <Link className="md:p-4 block font-light text-lg text-white " to=""><span className="hover:border-b-4 hover:pb-2 hover:border-white">Home</span> <span className="mx-4 font-light text-white text-xl">|</span></Link>
+                                <Link className="md:p-4 block font-light text-lg text-white " to="/"><span className="hover:border-b-4 hover:pb-2 hover:border-white">Home</span> <span className="mx-4 font-light text-white text-xl">|</span></Link>
                             </li>
                             <li>
                                 <Link className="md:p-4 block font-light text-lg text-white" to=""><span className="hover:border-b-4 hover:pb-2 hover:border-white">Pricing</span> <span className="mx-4 font-light text-white text-xl">|</span></Link>
                             </li>
                             <li>
-                                <Link className="md:p-4 block font-light text-lg text-white" to=""><span className="hover:border-b-4 hover:pb-2 hover:border-white">igLearn Pro</span> <span className="mx-4 font-light text-white text-xl">|</span></Link>
+                                <Link className="md:p-4 block font-light text-lg text-white" to="/ig-learn-Pro"><span className="hover:border-b-4 hover:pb-2 hover:border-white">igLearn Pro</span> <span className="mx-4 font-light text-white text-xl">|</span></Link>
                             </li>
                             <li>
                                 <Link className="md:p-4 block font-light text-lg text-white" to=""><span className="hover:border-b-4 hover:pb-2 hover:border-white">About Us</span> <span className="mx-4 font-light text-white text-xl">|</span></Link>
