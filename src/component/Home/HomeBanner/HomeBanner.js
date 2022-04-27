@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import GirlBannerImage from "../../../asset/images/girl-image/gir-banner-image.png";
 import Certificate from "../../../asset/images/icon/certificate.png";
 
 class HomeBanner extends Component {

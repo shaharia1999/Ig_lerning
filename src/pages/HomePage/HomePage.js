@@ -9,6 +9,11 @@ import HomeAdvertisedment from '../../component/Home/HomeAdvertisedment/HomeAdve
 import BusinessCompany from '../../component/Course/RecentlyAddedCourse/BusinessCompany/BusinessCompany';
 
 class HomePage extends Component {
+    
+    componentDidMount(){
+        window.scroll(0,0)
+    }
+
     render() {
         return (
             <Fragment>

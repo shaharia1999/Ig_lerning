@@ -19,6 +19,7 @@ module.exports = {
       'sectionTitleColor': "#1D2733",
       'maingray': "#1D2733",
       'client-section-des': '#A5A7AB',
+      'des-gray':'#414853',
       'amber': {
         300: '#fcd34d',
         400: '#fbbf24',
