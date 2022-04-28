@@ -20,6 +20,10 @@ module.exports = {
       'maingray': "#1D2733",
       'client-section-des': '#A5A7AB',
       'des-gray':'#414853',
+      'facebook-color':'#3B5998',
+      'twitter-color':'#00ACEE',
+      'google-color':'#EF213D',
+      'login-bg-color':'#F5EAC8',
       'amber': {
         300: '#fcd34d',
         400: '#fbbf24',

@@ -4,30 +4,30 @@ import { Link } from "react-router-dom";
 import "../../asset/css/login.css";
 import { FaFacebookSquare, FaGoogle, FaTwitter } from "react-icons/fa";
 
-class Login extends Component {
+class Registration extends Component {
     render() {
         return (
             <Fragment>
-                <section className="h-full md:h-screen bg-login-bg-color">
+                <section className="md:h-screen bg-login-bg-color">
                     <div className="container h-full lg:pl-32 lg:pr-32">
-                        <div className="flex justify-center items-center flex-wrap h-full text-gray-800">
-                            <div className="xl:w-10/12">
+                        <div className="flex justify-center items-center flex-wrap text-gray-800">
+                            <div className="xl:w-12/12 lg:w-12/12 mt-10">
                                 <div className="block bg-white shadow-lg">
-                                    <div className="lg:flex lg:flex-wrap g-0">
+                                    <div className="lg:flex lg:flex-wrap">
 
-                                        <div className="lg:w-6/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none">
+                                        <div className="lg:w-4/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none">
                                             <div className="text-white">
                                                 <img className="" src={LoginImg} />
                                             </div>
                                         </div>
 
-                                        <div className="lg:w-6/12 px-4 md:px-0">
+                                        <div className="lg:w-8/12 px-4 md:px-0">
                                             <div className="md:p-8 md:mx-6">
                                                 <div className="text-center">
                                                     <h4 className="text-4xl font-semibold lg:mt-16 mb-12 pb-1">Login</h4>
                                                 </div>
 
-                                                <form class="space-y-5 lg:mt-8">
+                                               <form class="space-y-5 lg:mt-8">
                                                     <div class="mb-4 relative">
                                                         <input id="email" class="rounded px-3 input active:outline-none pt-5 block w-full bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" type="text" autofocus />
                                                         <label for="email" class="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-CourseTitle text-base mt-2 cursor-text">Email or Phone</label>
@@ -45,23 +45,13 @@ class Login extends Component {
                                                         <a class="font-light lg:text-sm hover:underline p-2 float-right" href="#">Forgot password?</a>
                                                     </div>
 
-                                                    <div className="w-full mt-8 flex flex-auto lg:w-full image-center bg-maincolor rounded-sm lg:pt-4 lg:pb-4">
+                                                    <div  className="w-full mt-8 flex flex-auto lg:w-full image-center bg-maincolor rounded-sm lg:pt-4 lg:pb-4">
                                                         <Link to="#"><span className="text-lg font-normal leading-tight text-white lg:pl-24 lg:pr-24 mx-2 h-11">LOGIN</span></Link>
                                                     </div>
                                                 </form>
 
 
-                                                <div className="mt-8 text-center">
-                                                    <span class="font-normal text-client-section-des lg:text-base"> or Login using social media</span>
-                                                    <ul className="flex flex-auto sm:justify-center xl:justify-center -mt-4">
-                                                        <button className="lg:p-3 mx-2 social-icons-login-fb rounded-full text-2xl font-semibold mt-9"><FaFacebookSquare className="text-facebook-color" /></button>
-                                                        <button className="lg:p-3 mx-2 social-icons-login-twitter rounded-full text-2xl font-semibold mt-9"><FaTwitter className="text-twitter-color" /></button>
-                                                        <button className="lg:p-3 mx-2 social-icons-login-google rounded-full text-2xl font-semibold mt-9"><FaGoogle className="text-google-color" /></button>
-                                                    </ul>
-                                                    <div className="lg:mt-14">
-                                                        <span class="font-normal text-black lg:text-base"> Don't have an account? <span className="hover:underline">Sign Up</span></span>
-                                                    </div>
-                                                </div>
+                        
 
                                             </div>
                                         </div>
@@ -76,4 +66,4 @@ class Login extends Component {
         );
     }
 }
-export default Login;
+export default Registration;
