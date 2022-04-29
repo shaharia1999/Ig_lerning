@@ -80,3 +80,20 @@
 .cat-container{
   opacity: .1;
 }
+
+
+
+.social-icons-login-fb {
+  background-color: #E7F0FB;
+  padding: 10px!important;
+}
+
+.social-icons-login-twitter {
+  background-color: #E7F0FB;
+  padding: 10px!important;
+}
+
+.social-icons-login-google {
+  background-color: #FDE8EB;
+  padding: 10px!important;
+}
