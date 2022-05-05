@@ -6,16 +6,16 @@ import ClientSays from '../../component/ClientSays/ClientSays';
 import NavBarTop from '../../component/Common/NavBarTop/NavBarTop';
 import HomeBanner from '../../component/Home/HomeBanner/HomeBanner';
 import HomeAdvertisedment from '../../component/Home/HomeAdvertisedment/HomeAdvertisedment';
-import Finance from '../../component/Course/RecentlyAddedCourse/Finance/Finance';
+import DigitalMarketing from '../../component/Course/RecentlyAddedCourse/DigitalMarketing/DigitalMarketing';
 
-class FinancePage extends Component {
+class DigitalMarketingPage extends Component {
 
     render() {
         return (
             <Fragment>
                 <NavBarTop/>
                 <HomeBanner/>
-                <Finance/>
+                <DigitalMarketing/>
                 <HomeAdvertisedment/>
                 <ClientSays/>
                 <Partner/>
@@ -26,4 +26,4 @@ class FinancePage extends Component {
     }
 }
 
-export default FinancePage;
+export default DigitalMarketingPage;
