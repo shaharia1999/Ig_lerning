@@ -8,7 +8,7 @@ class NavBarTop extends Component {
         return (
             <Fragment>
                 <div className="bg-maincolordeep h-16 w-full">
-                    <button id="language" value='ar' className="bg-white lg:mt-3 lg:mr-12 float-right h-10 w-20 rounded-lg ml-auto p-1 text-base font-medium text-black">EN</button>
+                    <button id="languagess" value='en' className="bg-white lg:mt-3 lg:mr-12 float-right h-10 w-20 rounded-lg ml-auto p-1 text-base font-medium text-black">EN</button>
                 </div>
 
                 <nav className="flex flex-wrap top-0 items-center justify-between w-full py-4 md:py-0 px-4 text-lg bg-maincolor">
