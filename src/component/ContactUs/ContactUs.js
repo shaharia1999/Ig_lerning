@@ -18,7 +18,7 @@ function ContactUs(){
     const [message, setMessage] = useState('')
 
 
-    async function createPost() {
+    async function createContactUs() {
         const contact_us_data = {
             'name': name,
             'surname': surname,
@@ -32,6 +32,7 @@ function ContactUs(){
             'city_id': city_id,
             'message': message,
         }
+        console.log(' contact_us_data = ', contact_us_data);
         const contact_us_custom_utility =  { 
             method: 'post', 
             headers: new Headers({
@@ -58,20 +59,18 @@ function ContactUs(){
 
     const fetchCountry = async () =>
         await (await fetch(ApiUrl.BaseUrl + "api/v2/country-info/", custom_headers)).json();
-    // const { data, error, status, isLoading, isError, isLoadingError } = useQuery("country", fetchCountry);
-    const extra = useQuery("country", fetchCountry);
-    console.log("country =", data)
-    console.log("Check Values =", extra)
-    const test = "test1";
+    const country = useQuery("country", fetchCountry);
+    const country_response_data = country.data;
+
     
     const fetchCity = async () =>
         await (await fetch(ApiUrl.BaseUrl + "api/v2/city-info/", custom_headers)).json();
-        const { data, error, status, isLoading, isError, isLoadingError } = useQuery("country", fetchCountry);
-    console.log('city = ', data);
+    const city = useQuery("city", fetchCity);
+    const city_response_data = city.data;
+
     
 
-    if (status === 'loading'){
-        //if (typeof(data) === 'undefined'){
+    if (country.status === 'loading' || city.status === 'loading'){
         return (
             <div className="container my-12">
                 <h4 className="text-4xl	font-semibold text-sectionTitleColor ml-3">Top Categories </h4>
@@ -80,7 +79,15 @@ function ContactUs(){
                 </div>
             </div>
         );
-    }else if(status === 'success'){
+    }else if(country.status === 'success' || city.status === 'success'){
+
+        // const html_country = country_response_data.data.map((country, index) => (
+        //     <option value={country.country_id}>{country.country_name}</option>
+        // ))
+        // const html_city = city_response_data.data.map((city, index) => (
+        //     <option value={city.city_id}>{city.city_name}</option>
+        // ))
+        
         return (
             <Fragment>
                 <div className="ContactBanner">
@@ -165,10 +172,11 @@ function ContactUs(){
                                                 <div className="relative">
                                                     <select value={country_id} onChange={e=>setCountry_id(e.target.value)} className="appearance-none block w-full bg-BgLoveIcon border-none py-4 px-3 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" id="grid-state">
                                                         <option className="text-CourseTitle selected">Name of Country</option>
+                                                        {/* {html_country} */}
                                                         {
-                                                            data.data.map((country, index) => (
-                                                                <option value={country.country_id}>{country.country_name}</option>
-                                                            ))
+                                                            country_response_data.data.map((country, index) => (
+                                                                    <option value={country.country_id}>{country.country_name}</option>
+                                                                ))
                                                         }
                                                     </select>
                                                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-CourseTitle">
@@ -181,8 +189,9 @@ function ContactUs(){
                                                 <div className="relative">
                                                     <select value={city_id} onChange={e=>setCity_id(e.target.value)} className="appearance-none block w-full bg-BgLoveIcon border-none py-4 px-3 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" id="grid-state">
                                                         <option>City of Company</option>
+                                                        {/* {html_city} */}
                                                         {
-                                                            data.data.map((city, index) => (
+                                                            city_response_data.data.map((city, index) => (
                                                                 <option value={city.city_id}>{city.city_name}</option>
                                                             ))
                                                         }
@@ -203,7 +212,7 @@ function ContactUs(){
                                             <h2 className="text-client-section-des lg:font-normal lg:text-xs text-center lg:mb-6 mt-4">Fill in the form and we’ll analyse your website and get back to you with 100% specific recommendations on how to improve it</h2>
 
                                             <div className="mt-8 flex flex-auto image-center">
-                                                <Link to="#"><span className="text-lg font-normal leading-tight bg-maincolor text-white lg:pl-24 lg:pr-24 lg:pt-4 lg:pb-4 rounded-sm mx-2 h-11">SUBMIT</span></Link>
+                                                <Link onClick={createContactUs}><span className="text-lg font-normal leading-tight bg-maincolor text-white lg:pl-24 lg:pr-24 lg:pt-4 lg:pb-4 rounded-sm mx-2 h-11">SUBMIT</span></Link>
                                             </div>
 
                                         </div>
@@ -221,8 +230,7 @@ function ContactUs(){
                 </div >
             </Fragment >
         );
-
-}
+    }
 }
 
 export default ContactUs;
