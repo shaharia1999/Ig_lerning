@@ -13,7 +13,9 @@ class NavBarTop extends Component {
 
                 <nav className="flex flex-wrap top-0 items-center justify-between w-full py-4 md:py-0 px-4 text-lg bg-maincolor">
                     <div className="h-24">
-                        <img className="h-24 mt-3 ml-36" src={igLearn} />
+                        <a href='/'>
+                            <img className="h-24 mt-3 ml-36" src={igLearn} />
+                        </a>
                     </div>
 
                     <svg

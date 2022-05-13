@@ -23,7 +23,7 @@ function TopCategories() {
     const extra = useQuery("users", fetchTopCategories);
     console.log("dt =", data)
     console.log("Check Values =", extra)
-    const test = "test1";
+    
 
     const waitdata = []
 
@@ -40,7 +40,7 @@ function TopCategories() {
     }else if(status === 'success'){
         console.log("Data Found ", data)
         const html_dt = data.data.map((val, index) => (
-            <div className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/3">
+            <div  className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/3">
                 <article className="overflow-hidden rounded-lg shadow-lg hover:opacity-30 hover:bg-black">
                     <img alt="Placeholder" className="block bg-fixed h-72 w-full" src={val.category_preview_img} />
                     <h1 className="lg:text-xl lg:font-semibold text-center  text-maingray lg:mt-4 lg:mb-4">{val.category_name}</h1>
