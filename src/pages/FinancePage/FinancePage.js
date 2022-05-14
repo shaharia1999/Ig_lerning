@@ -6,22 +6,16 @@ import ClientSays from '../../component/ClientSays/ClientSays';
 import NavBarTop from '../../component/Common/NavBarTop/NavBarTop';
 import HomeBanner from '../../component/Home/HomeBanner/HomeBanner';
 import HomeAdvertisedment from '../../component/Home/HomeAdvertisedment/HomeAdvertisedment';
-import BusinessCompany from '../../component/Course/RecentlyAddedCourse/BusinessCompany/BusinessCompany';
-import RecentlyAddedCourseSectionTwo from '../../component/RecentlyAddedCourseSectionTwo/RecentlyAddedCourseSectionTwo';
+import Finance from '../../component/Course/RecentlyAddedCourse/Finance/Finance';
 
-class HomePage extends Component {
-    
-    componentDidMount(){
-        window.scroll(0,0)
-    }
+class FinancePage extends Component {
 
     render() {
         return (
             <Fragment>
                 <NavBarTop/>
                 <HomeBanner/>
-                <BusinessCompany/>
-                <RecentlyAddedCourseSectionTwo/>
+                <Finance/>
                 <HomeAdvertisedment/>
                 <ClientSays/>
                 <Partner/>
@@ -32,4 +26,4 @@ class HomePage extends Component {
     }
 }
 
-export default HomePage;
+export default FinancePage;
