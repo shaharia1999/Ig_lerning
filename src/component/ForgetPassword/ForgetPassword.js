@@ -1,9 +1,31 @@
-import React, { Fragment } from "react";
+import React, { useState, Fragment } from "react";
 import LoginImg from "../../asset/images/banner/login.png";
 import { Link } from "react-router-dom";
 import "../../asset/css/login.css";
+import ApiUrl from "../../Api/ApiUrl";
+import { useMutation } from 'react-query'
 
 function ForgetPassword() {
+    const [email, setEmail] = useState('')
+
+    async function createPost() {
+        const data = {
+            'email': email,
+        }
+        const reg_custom_utility = {
+            method: 'post',
+            headers: new Headers({
+                'Accept-Language': 'en',
+                'Content-Type': 'application/json'
+            }),
+            body: JSON.stringify(data)
+        }
+        const forgot_password_response = await (await fetch(ApiUrl.BaseUrl + "user-authentication/api/forget-password/", reg_custom_utility))
+        const forgot_pass_data = await forgot_password_response.json();
+        alert(forgot_pass_data.message)
+
+    }
+    
     return (
         <Fragment>
             <section className="h-full md:h-screen bg-login-bg-color">
@@ -28,12 +50,12 @@ function ForgetPassword() {
 
                                             <form class="space-y-5 lg:mt-8">
                                                 <div class="mb-4 relative">
-                                                    <input class="rounded px-3 input active:outline-none pt-5 block w-full bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" type="text" autofocus />
+                                                    <input class="rounded px-3 input active:outline-none pt-5 block w-full bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" type="text" value={email} onChange={e => setEmail(e.target.value)} autofocus />
                                                     <label for="email" class="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-CourseTitle text-base mt-2 cursor-text">Email</label>
                                                 </div>
 
                                                 <div className="w-full mt-8 flex flex-auto lg:w-full image-center bg-maincolor rounded-sm lg:pt-4 lg:pb-4">
-                                                    <Link><span className="text-lg font-normal leading-tight text-white lg:pl-24 lg:pr-24 mx-2 h-11">SUBMIT</span></Link>
+                                                <Link onClick={createPost}><span className="text-lg font-normal leading-tight text-white lg:pl-24 lg:pr-24 mx-2 h-11">SUBMIT</span></Link>
                                                 </div>
                                             </form>
 
@@ -56,5 +78,6 @@ function ForgetPassword() {
         </Fragment>
     );
 }
+
 
 export default ForgetPassword;

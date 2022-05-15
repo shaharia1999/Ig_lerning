@@ -31,7 +31,7 @@ function Registration() {
         const reg_custom_utility = {
             method: 'post',
             headers: new Headers({
-                'Accept-Language': 'en',
+                // 'Accept-Language': 'en',
                 'Content-Type': 'application/json'
             }),
             body: JSON.stringify(data)
