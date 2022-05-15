@@ -10,35 +10,35 @@ import ApiUrl from "../../../../Api/ApiUrl";
 
 
 function BusinessCompany() {
-    const custom_headers =  { 
-        method: 'get', 
+    // const custom_headers =  { 
+    //     method: 'get', 
         
-        headers: new Headers({
-            'Accept-Language': 'en', 
-            'Content-Type': 'application/json'
-        })
-    }
-    const fetchCourseSubCategory = async () =>
-        await (await fetch(ApiUrl.BaseUrl + "api/course/course-subcategory-response/", custom_headers)).json();
-    const subcategory_response = useQuery("country", fetchCourseSubCategory);
-    const subcategory_response_data = subcategory_response.data;
-    console.log('subcategory_response_data',subcategory_response.status);
+    //     headers: new Headers({
+    //         'Accept-Language': 'en', 
+    //         'Content-Type': 'application/json'
+    //     })
+    // }
+    // const fetchCourseSubCategory = async () =>
+    //     await (await fetch(ApiUrl.BaseUrl + "api/course/course-subcategory-response/", custom_headers)).json();
+    // const subcategory_response = useQuery("country", fetchCourseSubCategory);
+    // const subcategory_response_data = subcategory_response.data;
+    // console.log('subcategory_response_data',subcategory_response.status);
 
-    if (subcategory_response.status === 'loading'){
-        return (
-            <div className="container my-12">
-                <h4 className="text-4xl	font-semibold text-sectionTitleColor ml-3">Recently Added
-                                Course </h4>
-                <div className="flex flex-wrap -mx-1 lg:-mx-4">
-                    <h1>Loading</h1>
-                </div>
-            </div>
-        );
-    }
-    else if(subcategory_response.status === 'success'){
+    // if (subcategory_response.status === 'loading'){
+    //     return (
+    //         <div className="container my-12">
+    //             <h4 className="text-4xl	font-semibold text-sectionTitleColor ml-3">Recently Added
+    //                             Course </h4>
+    //             <div className="flex flex-wrap -mx-1 lg:-mx-4">
+    //                 <h1>Loading</h1>
+    //             </div>
+    //         </div>
+    //     );
+    // }
+    // else if(subcategory_response.status === 'success'){
         
         return (
-            // <Fragment>
+            <Fragment>
                 <div className="container my-12">
 
                     <div className="flex flex-wrap">
@@ -459,8 +459,8 @@ function BusinessCompany() {
                         </div>
                     </div>
                 </div>
-            // </Fragment>
+            </Fragment>
         );
     }
-}
+// }
 export default BusinessCompany;

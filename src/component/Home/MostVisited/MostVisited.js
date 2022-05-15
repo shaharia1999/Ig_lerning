@@ -15,7 +15,7 @@ class MostVisited extends Component {
                     <div className="flex flex-wrap -mx-1 lg:-mx-4">
 
                         <div className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/3">
-                            <div className="wrapper bg-gray-400 antialiased text-gray-900">
+                            <div className="wrapper antialiased text-gray-900">
 
                                 <div className="relative">
                                     <iframe className="w-full h-72 object-cover object-center rounded-lg shadow-md" src="https://www.youtube.com/embed/j5Zsa_eOXeY"></iframe>
@@ -90,7 +90,7 @@ class MostVisited extends Component {
 
 
                         <div className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/3">
-                            <div className="wrapper bg-gray-400 antialiased text-gray-900">
+                            <div className="wrapper antialiased text-gray-900">
 
                                 <div class="relative">
                                 <iframe className="w-full h-72 object-cover object-center rounded-lg shadow-md" src="https://www.youtube.com/embed/8JJ101D3knE"></iframe>
@@ -166,7 +166,7 @@ class MostVisited extends Component {
 
 
                         <div className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/3">
-                            <div className="wrapper bg-gray-400 antialiased text-gray-900">
+                            <div className="wrapper antialiased text-gray-900">
 
                                 <div class="relative">
                                 <iframe className="w-full h-72 object-cover object-center rounded-lg shadow-md" src="https://www.youtube.com/embed/RGOj5yH7evk"></iframe>

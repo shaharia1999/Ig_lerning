@@ -4,9 +4,12 @@ import { FaChevronUp, FaFacebookSquare, FaLinkedin, FaYoutube, FaTwitter, FaInst
 import ios from "../../../asset/images/icon/ios.png";
 import android from "../../../asset/images/icon/android.png";
 import MainLogo from "../../../asset/images/logo/logo.png";
+import { useEffect } from "react";
 
-class Footer extends Component {
-    render() {
+function Footer(){
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
         return (
             <Fragment>
                 <div className="footer-2 pt-6 md:pt-12 footer-svg">
@@ -81,6 +84,5 @@ class Footer extends Component {
             </Fragment>
         );
     }
-}
 
 export default Footer;

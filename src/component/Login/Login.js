@@ -14,15 +14,15 @@ function Login() {
     console.log('password = ', password);
     console.log('keep login = ', keep_login);
 
-    async function submitLogin(){
+    async function submitLogin() {
         const login_data = {
             'username_or_email': username_or_email,
             'password': password
         }
-        const custom_login_headers =  { 
-            method: 'post', 
+        const custom_login_headers = {
+            method: 'post',
             headers: new Headers({
-                'Accept-Language': 'en', 
+                'Accept-Language': 'en',
                 'Content-Type': 'application/json'
             }),
             body: JSON.stringify(login_data)
@@ -56,29 +56,29 @@ function Login() {
 
                                             <form class="space-y-5 lg:mt-8">
                                                 <div class="mb-4 relative">
-                                                    <input id="email" 
+                                                    <input id="email"
                                                         value={username_or_email}
-                                                        onChange={e=>setUsernameOrEmail(e.target.value)}
+                                                        onChange={e => setUsernameOrEmail(e.target.value)}
                                                         class="rounded px-3 input active:outline-none pt-5 block w-full bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" type="text" autofocus />
                                                     <label for="email" class="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-CourseTitle text-base mt-2 cursor-text">Username or Email</label>
                                                 </div>
                                                 <div class="mb-4 relative">
-                                                    <input id="password" 
+                                                    <input id="password"
                                                         value={password}
-                                                        onChange={e=>setPassword(e.target.value)}
+                                                        onChange={e => setPassword(e.target.value)}
                                                         class="w-full rounded px-3 pt-5 focus:outline-none active:outline-none input block bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" type="password" />
                                                     <label for="password" class="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-500 text-base mt-2 cursor-text">Password</label>
                                                 </div>
 
                                                 <div class="flex justify-between items-center mb-6">
                                                     <div class="form-group form-check">
-                                                        <input type="checkbox" 
+                                                        <input type="checkbox"
                                                             value={keep_login}
-                                                            onChange={e=>setKeepLoggin(e.target.checked)}
-                                                         class="default:ring-8" />
+                                                            onChange={e => setKeepLoggin(e.target.checked)}
+                                                            class="default:ring-8" />
                                                         <label class="form-check-label inline-block font-light lg:text-sm mx-2" for="inlineCheckbox1"> keep me logged in</label>
                                                     </div>
-                                                    <a class="font-light lg:text-sm hover:underline p-2 float-right" href="#">Forgot password?</a>
+                                                    <Link class="font-light lg:text-sm hover:underline p-2 float-right" to="/forget-password">Forgot password?</Link>
                                                 </div>
 
                                                 <div className="w-full mt-8 flex flex-auto lg:w-full image-center bg-maincolor rounded-sm lg:pt-4 lg:pb-4">
@@ -95,7 +95,7 @@ function Login() {
                                                     <button className="lg:p-3 mx-2 social-icons-login-google rounded-full text-2xl font-semibold mt-9"><FaGoogle className="text-google-color" /></button>
                                                 </ul>
                                                 <div className="lg:mt-14">
-                                                    <span class="font-normal text-black lg:text-base"> Don't have an account? <span className="hover:underline"><Link to="/Registration/">Sign Up</Link></span></span>
+                                                    <span class="font-normal text-black lg:text-base"> Don't have an account? <span className="hover:underline"><Link to="/registration">Sign Up</Link></span></span>
                                                 </div>
                                             </div>
 
