@@ -27,6 +27,9 @@ module.exports = {
       'twitter-color': '#00ACEE',
       'google-color': '#EF213D',
       'login-bg-color': '#F5EAC8',
+      'master-degree-bg': '#D76E2D1F',
+      'master-degree-text':'#803100',
+      'apply-now':'#39741F',
       'amber': {
         300: '#fcd34d',
         400: '#fbbf24',
