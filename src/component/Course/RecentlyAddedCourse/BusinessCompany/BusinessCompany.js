@@ -13,6 +13,7 @@ import CourseLogo from "../../../../asset/images/logo/course-logo.png";
 import 'tw-elements';
 
 function BusinessCompany() {
+
     // const custom_headers =  { 
     //     method: 'get', 
 
@@ -41,7 +42,7 @@ function BusinessCompany() {
     // else if(subcategory_response.status === 'success'){
 
 
-    
+
 
     return (
         <Fragment>
@@ -92,6 +93,7 @@ function BusinessCompany() {
                                 <div className="wrapper antialiased text-gray-900">
 
                                     <div className="relative">
+
                                         <video type="video/mp4" muted
                                             loop className="w-full vid h-72 object-cover object-center rounded-lg shadow-md"
                                             src="https://giant.gfycat.com/VerifiableTerrificHind.mp4"></video>
@@ -284,7 +286,7 @@ function BusinessCompany() {
                                 </div>
                             </div>
 
-                            
+
                         </div>
                     </div>
                     <div className="tab-pane fade" id="pills-finance" role="tabpanel"
@@ -1091,5 +1093,8 @@ function BusinessCompany() {
         </Fragment>
     );
 }
+
+
+
 // }
 export default BusinessCompany;

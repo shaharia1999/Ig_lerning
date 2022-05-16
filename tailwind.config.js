@@ -1,11 +1,8 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-
     "./node_modules/flowbite/**/*.js",
-
     './src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js',
-
   ],
   theme: {
     extend: {},
@@ -32,6 +29,8 @@ module.exports = {
       'master-degree-bg': '#D76E2D1F',
       'master-degree-text':'#803100',
       'apply-now':'#39741F',
+      'about-text1': '#02073E',
+      'visionBg': '#FCFBFB',
       'amber': {
         300: '#fcd34d',
         400: '#fbbf24',
