@@ -22,8 +22,9 @@ function MostVisited() {
     const fetchMostVisited = async () =>
         await (await fetch(ApiUrl.BaseUrl + "api/course/most-visited-course/", mostvisited_custom_headers)).json();
     const mostvisited = useQuery("country", fetchMostVisited);
-    const mostvisited_response_data = mostvisited.data;
-
+    const mostvisited_response_data = mostvisited;
+    console.log('mostvisited_response_data= ', mostvisited_response_data.data);
+    // console.log('most visite course=',mostvisited_response_data.channel_name_id)
     if (mostvisited.status === 'loading'){
         return (
             <div className="container my-12">
@@ -34,7 +35,8 @@ function MostVisited() {
             </div>
         );
     }else if (mostvisited.status === 'success'){
-        const html_mostvisited = mostvisited_response_data.data.map((mostvisited, index) => (
+        const html_mostvisited = mostvisited_response_data.data.data.map((mostvisited, index) => (
+            
             // <option value={mostvisited.course_id}>{mostvisited.course_title}</option>
 
             <div className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/3">
@@ -42,7 +44,7 @@ function MostVisited() {
 
                     <div className="relative">
                         
-                        <iframe className="w-full h-72 object-cover object-center rounded-lg shadow-md" src="https://www.youtube.com/embed/j5Zsa_eOXeY"></iframe>
+                        <iframe className="w-full h-72 object-cover object-center rounded-lg shadow-md" src={mostvisited.promotional_video}></iframe>
                         <div className="flex flex-wrap">
                             <div className="w-1/5">
                                 <a href="!#"><div class="text-sm absolute top-0 left-2 bg-black px-4 text-white rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
@@ -51,7 +53,7 @@ function MostVisited() {
                             </div>
                             <div className="w-4/5">
                                 <a href="!#"><div class="text-lg absolute top-0 text-white mt-5">
-                                    <h6 className="font-medium text-lg text-white">{mostvisited.channel_name_idchannel_name}</h6>
+                                    <h6 className="font-medium text-lg text-white">{mostvisited.channel_name_id.channel_name}</h6>
                                     <h6 className="font-light text-base text-white">{mostvisited.course_duration} min</h6>
                                 </div></a>
                             </div>
@@ -63,7 +65,7 @@ function MostVisited() {
                         <div className="bg-white p-3 rounded-lg shadow-lg">
                             <div className="flex flex-wrap">
                                 <div className=" w-4/5">
-                                    <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">Traning English Course Learn Online</h4>
+                                    <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">{mostvisited.course_title}</h4>
                                 </div>
                                 <div className="w-1/5">
                                     <button className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white lg:pl-3 lg:pr-3 lg:pt-1 lg:pb-1 rounded-md">Live</button>
@@ -119,7 +121,7 @@ function MostVisited() {
         return (
             <Fragment>
                 <div className="container my-12">
-                    <h4 className="text-4xl	font-semibold text-sectionTitleColor ml-3">Most Visited ({mostvisited_response_data.most_visited_count}) </h4>
+                    <h4 className="text-4xl	font-semibold text-sectionTitleColor ml-3">Most Visited ({mostvisited_response_data.data.most_visited_count}) </h4>
                     <div className="flex flex-wrap -mx-1 lg:-mx-4">
                         {
                             html_mostvisited
