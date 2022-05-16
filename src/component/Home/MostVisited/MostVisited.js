@@ -44,7 +44,7 @@ function MostVisited() {
                     <div className="relative">
                         <video type="video/mp4" muted
                             loop className="w-full vid h-72 object-cover object-center rounded-lg shadow-md"
-                            src="https://giant.gfycat.com/VerifiableTerrificHind.mp4"></video>
+                            src={mostvisited.promotional_video}></video>
                         {/* <img className="w-full h-72 object-cover object-center rounded-lg shadow-md" src={Course1} /> */}
 
 
@@ -60,9 +60,8 @@ function MostVisited() {
                             <div className="w-4/5">
                                 <a href="!#">
                                     <div class="text-lg absolute top-0 text-white mt-5">
-                                        <h6 className="font-medium text-lg text-white">ABC Learning
-                                            Center</h6>
-                                        <h6 className="font-light text-base text-white">45 min</h6>
+                                        <h6 className="font-medium text-lg text-white">{mostvisited.channel_name_id.channel_name}</h6>
+                                        <h6 className="font-light text-base text-white">{mostvisited.course_duration} min</h6>
 
                                         <img className="lg:h-36 ml-8" src={Play} />
                                     </div>
@@ -75,8 +74,7 @@ function MostVisited() {
                         <div className="bg-white p-3 rounded-lg shadow-lg">
                             <div className="flex flex-wrap">
                                 <div className="w-4/5">
-                                    <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">Traning
-                                        English Course Learn Online</h4>
+                                    <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">{mostvisited.course_title}</h4>
                                 </div>
                                 <div className="w-1/5">
                                     <button
