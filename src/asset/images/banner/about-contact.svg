@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1651" height="325" viewBox="0 0 1651 325">
+  <defs>
+    <clipPath id="clip-about-contact">
+      <rect width="1651" height="325"/>
+    </clipPath>
+  </defs>
+  <g id="about-contact" clip-path="url(#clip-about-contact)">
+    <g id="Group_1" data-name="Group 1" transform="translate(-134 -85)">
+      <path id="BG" d="M19.412,0H1571.074c10.721,0,19.412,9.068,19.412,20.253V249.785c0,11.185-8.691,20.253-19.412,20.253H19.412C8.691,270.038,0,260.97,0,249.785V20.253C0,9.068,8.691,0,19.412,0Z" transform="translate(165 111.949)" fill="#83c982"/>
+      <g id="Group_48" data-name="Group 48" transform="translate(810.049 166.096)" opacity="0.5">
+        <path id="Vector" d="M233.425,19.177A78.468,78.468,0,0,1,265.652,5.071a77.488,77.488,0,0,1,29.985.5V1.64a82.226,82.226,0,0,0-88.576,42.415,76.08,76.08,0,0,0-4.1,9.353c-16.267,6.382-30.33,16.847-43.148,27.35-3.123,2.549-6.265,5.194-9.293,7.743-11.094,9.3-22.551,18.9-35.1,26.373a133.353,133.353,0,0,1-46.769,16.9A124.965,124.965,0,0,1,19.1,130,119.711,119.711,0,0,1,0,123.556v4.159a124.791,124.791,0,0,0,18.2,5.98,125.7,125.7,0,0,0,29.851,3.565,135.02,135.02,0,0,0,21.21-1.706,137.373,137.373,0,0,0,48.13-17.4c12.8-7.628,24.391-17.326,35.58-26.718,3.027-2.549,6.169-5.175,9.273-7.7,11.8-9.66,24.621-19.262,39.182-25.529-3.506,12.3-3.64,24.954-.192,36.243a52.822,52.822,0,0,0,13.508,22.233,45.937,45.937,0,0,0,22.628,12.458,41.516,41.516,0,0,0,25.866-3.124,37.057,37.057,0,0,0,18.432-18.074c3.851-8.548,4.024-18.668.479-28.481a46.891,46.891,0,0,0-17.9-22.885,56.072,56.072,0,0,0-27.226-8.759,76.474,76.474,0,0,0-28.644,3.7c-.211.077-.421.134-.632.211.8-1.974,1.724-3.929,2.721-5.846A78.187,78.187,0,0,1,233.425,19.177ZM209.552,55.133a72.8,72.8,0,0,1,27.207-3.507,52.323,52.323,0,0,1,25.387,8.146,42.869,42.869,0,0,1,16.382,20.968c3.2,8.874,3.066,17.978-.364,25.606-6.323,14.068-23.912,22.425-40.025,19.032a42.2,42.2,0,0,1-20.731-11.442,49.183,49.183,0,0,1-12.531-20.6c-3.506-11.442-3.046-24.456,1.111-36.953C207.176,55.919,208.364,55.516,209.552,55.133Z" transform="translate(11.711 1.335) rotate(4.895)" fill="#fff"/>
+        <path id="Vector-2" data-name="Vector" d="M43.1,0,0,24.242l13.773,5.1L35.016,9.427l-16.158,21.8.013,0-.016,0V43.1l7.724-9.011,9.784,3.624Z" transform="matrix(0.313, 0.95, -0.95, 0.313, 328.062, 0)" fill="#fff"/>
+      </g>
+      <g id="Group_76114" data-name="Group 76114" transform="translate(1521.476 165.068)">
+        <line id="Line_1" data-name="Line 1" x2="30.143" transform="translate(8.309 0) rotate(106)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="4"/>
+        <line id="Line_3" data-name="Line 3" x2="31.318" transform="translate(29.743 57.566) rotate(-12.882)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="4"/>
+        <line id="Line_2" data-name="Line 2" x2="36.822" transform="translate(45.014 8.053) rotate(134.638)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="4"/>
+      </g>
+      <g id="Group_76115" data-name="Group 76115" transform="translate(1207.521 255.515)">
+        <line id="Line_1-2" data-name="Line 1" x2="30.143" transform="matrix(0.642, -0.767, 0.767, 0.642, 30.275, 67.325)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="4"/>
+        <line id="Line_3-2" data-name="Line 3" x2="31.318" transform="translate(34.056 6.013) rotate(-168.93)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="4"/>
+        <line id="Line_2-2" data-name="Line 2" x2="36.822" transform="translate(0 45.064) rotate(-21.41)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="4"/>
+      </g>
+    </g>
+  </g>
+</svg>

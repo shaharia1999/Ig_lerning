@@ -5,15 +5,25 @@ import CopyRight from '../../component/Common/CopyRight/CopyRight';
 import OurMission from "../../component/AboutUs/OurMission/OurMission";
 import ProvideVission from "../../component/AboutUs/ProvideVission/ProvideVission";
 import LeadingStudentVideoSection from "../../component/AboutUs/LeadingStudentVideoSection/LeadingStudentVideoSection";
+import AboutBanner from "../../component/AboutUs/AboutBanner/AboutBanner";
+import AboutAnalytics from "../../component/AboutUs/AboutAnalytics/AboutAnalytics";
+import OurTeam from "../../component/AboutUs/OurTeam/OurTeam";
+import LearningTeachingSection from "../../component/AboutUs/LearningTeachingSection/LearningTeachingSection";
+import AboutContact from "../../component/AboutUs/AboutContact/AboutContact";
 
 function AboutPage() {
     return (
         <Fragment>
             <NavBarTop />
+            <AboutBanner/>
+            <LearningTeachingSection/>
             <OurMission/>
             <ProvideVission/>
+            <AboutAnalytics/>
             <LeadingStudentVideoSection/>
 
+            <OurTeam/>
+            <AboutContact/>
             <Footer />
             <CopyRight />
         </Fragment>
