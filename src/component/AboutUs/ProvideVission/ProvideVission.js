@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Vision from "../../../asset/images/vision/vision.png";
+import Vision from "../../../asset/images/banner/provide-vission.svg";
 
 function ProvideVission() {
     return (
