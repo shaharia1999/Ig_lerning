@@ -1,35 +1,31 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import Client1 from "../../asset/images/client/client1.jpg";
 import { FaStar } from "react-icons/fa";
 import ApiUrl from '../../Api/ApiUrl';
-import { useQuery } from "react-query";
+import axios from "axios";
 
 
 function ClientSays(){
-    const cliensays_custom_headers =  { 
-        method: 'get',
-        headers: new Headers({
-            'Accept-Language': 'bn', 
-            'Content-Type': 'application/json'
-        })
-    }
+    const [says_client, setClientSays] = React.useState([]);
+    
+    React.useEffect(() => {
+        axios.get(ApiUrl.BaseUrl + 'api/course/what-our-client-say/',
+            {
+                headers: {
+                    'Accept-Language': 'bn',
+                    'Content-Type': 'application/json',
+                }
+            }
+        ).then((response) => {
+            if (response.data.error === false) {
+                setClientSays(response.data.data);
+                console.log("top ClientSays axios", response.data.data);
+            }
+        });
+    }, []);
 
-    const fetchClientSays = async () =>
-        await (await fetch(ApiUrl.BaseUrl + "api/course/what-our-client-say/", cliensays_custom_headers)).json();
-    const says_client = useQuery("says", fetchClientSays);
-    const says_client_data = says_client;
 
-    if (says_client.status === 'loading'){
-        return (
-            <div className="container my-12">
-                <h4 className="text-4xl	font-semibold text-sectionTitleColor ml-3">loading</h4>
-                <div className="flex flex-wrap -mx-1 lg:-mx-4">
-                    <h1>Loading</h1>
-                </div>
-            </div>
-        );
-    }else if (says_client.status === 'success'){
-        const html_says_client = says_client_data.data.data.map((says_client, index) => (
+        const html_says_client = says_client.map((says_client, index) => (
             <div class="lg:basis-1/3 px-4">
                 <div class="bg-white rounded-2xl shadow-client border-none lg:p-12 h-full w-auto">
                     <img className="rounded-full h-36 w-36 mt-8 mb-12" src={ApiUrl.ImageBaseUrl+ says_client.user_info.image} />
@@ -93,7 +89,6 @@ function ClientSays(){
             </div>
         </Fragment>
     );
-}
-}
 
+}
 export default ClientSays;
