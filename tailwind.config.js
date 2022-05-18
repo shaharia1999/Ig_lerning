@@ -40,9 +40,11 @@ module.exports = {
       'about-analytics-title4':'#28DCB2',
       'about-analytics-subTitle':'#0F2137',
       'shadow-about':'#45589D14',
-      'empower-bg':'#FCFBFB',
       'our-team':'#485470',
       'our-team-subtitle':'#7D8CAC',
+      'student-card-bg':'#FFFBF8',
+      'teacher-card':'#F8FFF8',
+      'teacher-card-button':'#FF8F33',
       'amber': {
         300: '#fcd34d',
         400: '#fbbf24',
