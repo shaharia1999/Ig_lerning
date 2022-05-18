@@ -14,6 +14,7 @@ import 'tw-elements';
 import RecentlyAddedCourseOne from "../../../RecentlyAddedCourseOne/RecentlyAddedCourseOne";
 import axios from "axios";
 
+
 function BusinessCompany() {
     const [subCategory, setSubCategory] = React.useState([]);
     const [recently_addedsubcategoryId, setSubcategoryID] = React.useState([]);
@@ -76,11 +77,11 @@ function BusinessCompany() {
             <li className="nav-item" role="presentation">
                 <button type="button"
                     className="nav-link block w-full md:w-auto px-6 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 text-base bg-maincolor font-medium leading-tight text-black rounded-3xl mx-2 h-11"
-                    id="pills-business-tab3"
-                    data-bs-toggle="pill"
-                    data-bs-target="pills-business"
-                    role="tab" aria-controls="pills-Business"
-                    aria-selected="true"
+                    // id="pills-business-tab3"
+                    // data-bs-toggle="pill"
+                    // data-bs-target="pills-business"
+                    // role="tab" aria-controls="pills-Business"
+                    // aria-selected="true"
                     onClick={() => fetchData(subcategory.sub_category_id)}
                 >
                     {subcategory.sub_category_name}
@@ -97,7 +98,7 @@ function BusinessCompany() {
                     <div className="relative">
                         <video type="video/mp4" muted
                             loop className="w-full vid h-72 object-cover object-center rounded-lg shadow-md"
-                            src=""></video>
+                            src={ApiUrl.ImageBaseUrl + course.promotional_video}></video>
                         {/* <img className="w-full h-72 object-cover object-center rounded-lg shadow-md" src={Course1} /> */}
 
                         <div className="flex flex-wrap">
@@ -112,8 +113,8 @@ function BusinessCompany() {
                             <div className="w-4/5">
                                 <a href="!#">
                                     <div class="text-lg absolute top-0 text-white mt-5">
-                                        <h6  className="font-medium text-lg text-white">{sub_category_course.course_informations['0']?.channel_name_id.channel_name}</h6> 
-                                        {/* <h6 className="font-light text-base text-white">{sub_category_course.course_informations['0'].course_duration} min</h6>  */}
+                                        <h6  className="font-medium text-lg text-black">joy</h6> 
+                                        <h6 className="font-light text-base text-black">{course.course_duration} min</h6> 
 
                                         <img className="lg:h-36 ml-8" src={Play} alt="" />
                                     </div>
@@ -126,7 +127,7 @@ function BusinessCompany() {
                             <div className="flex flex-wrap">
                                 <div className="w-4/5">
                                     <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">
-                                        {index+1}
+                                        {course.course_title}
                                     </h4>
                                 </div>
                                 <div className="w-1/5">
@@ -206,8 +207,10 @@ function BusinessCompany() {
 
 
                             <div class="mb-4">
-                                <ul className="nav nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4" id="pills-tab3"
-                                    role="tablist">
+                                <ul className="nav nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4" 
+                                // id="pills-tab3"
+                                //     role="tablist"
+                                    >
                                     {
                                         data_of_subcategory
                                     }
@@ -217,11 +220,11 @@ function BusinessCompany() {
                         </div>
                     </div>
                 </div>
-                <div className="tab-content mt-4" id="pills-tabContent3">
+                <div className="mt-4">
                     <div className=" fade show active"
-                        id="pills-business"
-                        role="tabpanel"
-                        aria-labelledby="pills-business-tab3"
+                        // id="pills-business"
+                        // role="tabpanel"
+                        // aria-labelledby="pills-business-tab3"
                     >
 
                         <div className="flex flex-wrap -mx-1 lg:-mx-4">
