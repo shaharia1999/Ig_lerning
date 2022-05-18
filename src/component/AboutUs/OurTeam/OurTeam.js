@@ -27,8 +27,8 @@ function OurTeam() {
                         <div className="">
                             <div className="myDIV bg-white rounded-md hover:shadow-md border-2 border-white xl:pl-24 xl:pr-24 xl:pt-8 xl:pb-8">
                                 <img className="xl:h-28 xl:w-28 border-maincolor  xl:border-2 xl:rounded-xl xl:ml-5 xl:mb-4" src={Team1} alt="" />
-                                <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center">Saimon Harmer</p>
-                                <p className="text-our-team-subtitle text-sm font-light xl:mt-1 text-center">CEO & Founder</p>
+                                <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center">Lina Jutila</p>
+                                <p className="text-our-team-subtitle text-sm font-light xl:mt-1 text-center">Web Developer</p>
                             </div>
                             <div className="hide"><ImFacebook className="my-3" /><ImTwitter className="my-3" /><BsInstagram className="my-3" /></div>
                         </div>
@@ -38,8 +38,8 @@ function OurTeam() {
                         <div className="">
                             <div className="myDIV bg-white rounded-md hover:shadow-md border-2 border-white xl:pl-24 xl:pr-24 xl:pt-8 xl:pb-8">
                                 <img className="xl:h-28 xl:w-28 border-maincolor  xl:border-2 xl:rounded-xl xl:ml-5 xl:mb-4" src={Team1} alt="" />
-                                <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center">Saimon Harmer</p>
-                                <p className="text-our-team-subtitle text-sm font-light xl:mt-1 text-center">CEO & Founder</p>
+                                <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center">Aaron Nunez</p>
+                                <p className="text-our-team-subtitle text-sm font-light xl:mt-1 text-center">Web Designer</p>
                             </div>
                             <div className="hide"><ImFacebook className="my-3" /><ImTwitter className="my-3" /><BsInstagram className="my-3" /></div>
                         </div>
@@ -50,8 +50,8 @@ function OurTeam() {
                         <div className="">
                             <div className="myDIV bg-white rounded-md hover:shadow-md border-2 border-white xl:pl-24 xl:pr-24 xl:pt-8 xl:pb-8">
                                 <img className="xl:h-28 xl:w-28 border-maincolor  xl:border-2 xl:rounded-xl xl:ml-5 xl:mb-4" src={Team1} alt="" />
-                                <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center">Saimon Harmer</p>
-                                <p className="text-our-team-subtitle text-sm font-light xl:mt-1 text-center">CEO & Founder</p>
+                                <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center">Aaron Nunez</p>
+                                <p className="text-our-team-subtitle text-sm font-light xl:mt-1 text-center">Web Designer</p>
                             </div>
                             <div className="hide"><ImFacebook className="my-3" /><ImTwitter className="my-3" /><BsInstagram className="my-3" /></div>
                         </div>
@@ -61,8 +61,8 @@ function OurTeam() {
                         <div className="">
                             <div className="myDIV bg-white rounded-md hover:shadow-md border-2 border-white xl:pl-24 xl:pr-24 xl:pt-8 xl:pb-8">
                                 <img className="xl:h-28 xl:w-28 border-maincolor  xl:border-2 xl:rounded-xl xl:ml-5 xl:mb-4" src={Team1} alt="" />
-                                <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center">Saimon Harmer</p>
-                                <p className="text-our-team-subtitle text-sm font-light xl:mt-1 text-center">CEO & Founder</p>
+                                <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center">Aaron Nunez</p>
+                                <p className="text-our-team-subtitle text-sm font-light xl:mt-1 text-center">Web Designer</p>
                             </div>
                             <div className="hide"><ImFacebook className="my-3" /><ImTwitter className="my-3" /><BsInstagram className="my-3" /></div>
                         </div>
@@ -72,8 +72,8 @@ function OurTeam() {
                         <div className="">
                             <div className="myDIV bg-white rounded-md hover:shadow-md border-2 border-white xl:pl-24 xl:pr-24 xl:pt-8 xl:pb-8">
                                 <img className="xl:h-28 xl:w-28 border-maincolor  xl:border-2 xl:rounded-xl xl:ml-5 xl:mb-4" src={Team1} alt="" />
-                                <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center">Saimon Harmer</p>
-                                <p className="text-our-team-subtitle text-sm font-light xl:mt-1 text-center">CEO & Founder</p>
+                                <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center">Aaron Nunez</p>
+                                <p className="text-our-team-subtitle text-sm font-light xl:mt-1 text-center">Web Designer</p>
                             </div>
                             <div className="hide"><ImFacebook className="my-3" /><ImTwitter className="my-3" /><BsInstagram className="my-3" /></div>
                         </div>

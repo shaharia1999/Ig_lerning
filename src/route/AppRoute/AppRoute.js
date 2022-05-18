@@ -8,6 +8,7 @@ import IgLearnProPage from '../../pages/IgLearnProPage/IgLearnProPage';
 import ContactPage from '../../pages/ContactPage/ContactPage';
 import ForgetPasswordPage from '../../pages/ForgetPasswordPage/ForgetPasswordPage';
 import AboutPage from '../../pages/AboutPage/AboutPage';
+import PricingPage from '../../pages/PricingPage/PricingPage';
 
 class AppRoute extends Component {
     render() {
@@ -23,6 +24,8 @@ class AppRoute extends Component {
                     <Route exact path="/ig-learn-Pro" render={(props) => <IgLearnProPage {...props} key={Date.now()}/>}/>
                     <Route exact path="/contact-us" render={(props) => <ContactPage {...props} key={Date.now()}/>}/>
                     <Route exact path="/about" render={(props) => <AboutPage {...props} key={Date.now()}/>}/>
+
+                    <Route exact path="/price" render={(props) => <PricingPage {...props} key={Date.now()}/>}/>
 
                     <Route path="" component={OpssPage}/>
                 </Switch>

@@ -39,8 +39,7 @@ function Footer(){
                                             <a href="#" className="footer-des block">Home</a>
                                             <a href="#" className="footer-des block">Pricing</a>
                                             <Link to="/contact-us"><span className="footer-des block">Contact Us</span></Link>
-                                            <a href="#" className="footer-des block">About</a>
-                                            <a href="#" className="footer-des block">Service</a>
+                                            <Link to="/about"><span className="footer-des block">About</span></Link>
                                         </div>
                                     </div>
                                     <div className="sm:flex-1 mt-4 sm:mt-0">

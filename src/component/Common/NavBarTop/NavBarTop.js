@@ -53,10 +53,10 @@ class NavBarTop extends Component {
 
                 </div>
 
-                <nav className="flex flex-wrap top-0 items-center justify-between w-full py-4 md:py-0 px-4 text-lg bg-maincolor">
+                <nav className="flex flex-wrap top-0 sticky-top items-center justify-between w-full py-4 md:py-0 px-4 text-lg bg-maincolor">
                     <div className="h-24">
                         <a href='/'>
-                            <img className="h-24 mt-3 ml-36" src={igLearn} />
+                            <img className="h-24 mt-3 ml-36" src={igLearn} alt=""/>
                         </a>
                     </div>
 
@@ -83,7 +83,7 @@ class NavBarTop extends Component {
                                 <Link className="md:p-4 block font-light text-lg text-white " to="/"><span className="hover:border-b-4 hover:pb-2 hover:border-white">Home</span> <span className="mx-4 font-light text-white text-xl">|</span></Link>
                             </li>
                             <li>
-                                <Link className="md:p-4 block font-light text-lg text-white" to=""><span className="hover:border-b-4 hover:pb-2 hover:border-white">Pricing</span> <span className="mx-4 font-light text-white text-xl">|</span></Link>
+                                <Link className="md:p-4 block font-light text-lg text-white" to="/price"><span className="hover:border-b-4 hover:pb-2 hover:border-white">Pricing</span> <span className="mx-4 font-light text-white text-xl">|</span></Link>
                             </li>
                             <li>
                                 <Link className="md:p-4 block font-light text-lg text-white" to="/ig-learn-Pro"><span className="hover:border-b-4 hover:pb-2 hover:border-white">igLearn Pro</span> <span className="mx-4 font-light text-white text-xl">|</span></Link>

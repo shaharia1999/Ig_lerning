@@ -10,6 +10,7 @@ import AboutAnalytics from "../../component/AboutUs/AboutAnalytics/AboutAnalytic
 import OurTeam from "../../component/AboutUs/OurTeam/OurTeam";
 import LearningTeachingSection from "../../component/AboutUs/LearningTeachingSection/LearningTeachingSection";
 import AboutContact from "../../component/AboutUs/AboutContact/AboutContact";
+import WeEmpower from "../../component/AboutUs/WeEmpower/WeEmpower";
 
 function AboutPage() {
     return (
@@ -21,7 +22,7 @@ function AboutPage() {
             <ProvideVission/>
             <AboutAnalytics/>
             <LeadingStudentVideoSection/>
-
+            <WeEmpower/>
             <OurTeam/>
             <AboutContact/>
             <Footer />
