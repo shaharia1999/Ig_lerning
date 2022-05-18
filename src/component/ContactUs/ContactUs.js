@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ApiUrl from "../../Api/ApiUrl";
 import { useMutation } from 'react-query'
 import { useQuery } from "react-query";
+import {axios} from 'axios';
 
 function ContactUs(){
     const [name, setName] = useState('')
@@ -20,32 +21,41 @@ function ContactUs(){
 
     async function createContactUs() {
         const contact_us_data = {
-            'name': name,
-            'surname': surname,
-            'professional_email': professional_email,
-            'phone_number': phone_number,
-            'job_title': job_title,
-            'company_name': company_name,
-            'company_size': company_size,
-            'number_of_learner': number_of_learner,
-            'country_id': country_id,
-            'city_id': city_id,
-            'message': message,
+            name: name,
+            surname: surname,
+            professional_email: professional_email,
+            phone_number: phone_number,
+            job_title: job_title,
+            company_name: company_name,
+            company_size: company_size,
+            number_of_learner: number_of_learner,
+            country_id: country_id,
+            city_id: city_id,
+            message: message
         }
         console.log(' contact_us_data = ', contact_us_data);
-        const contact_us_custom_utility =  { 
-            method: 'post', 
-            headers: new Headers({
-                'Accept-Language': 'en', 
-                'Content-Type': 'application/json'
-            }),
-            body: JSON.stringify(contact_us_data)
+        // const contact_us_custom_utility =  { 
+        //     method: 'post', 
+        //     headers: new Headers({
+        //         'Accept-Language': 'en', 
+        //         'Content-Type': 'application/json'
+        //     }),
+        //     body: JSON.stringify(contact_us_data)
+        // }
+        const headers={
+            'Accept-Language': 'bn',
+            'Content-Type': 'application/json',
         }
-        const contact_us_response = await (await fetch(ApiUrl.BaseUrl + "user-authentication/api/contact-us/", contact_us_custom_utility))
-        const contact_data = await contact_us_response.json();
-        console.log('contact_us response = ', contact_us_response)
-        console.log('message = ', contact_us_response.error);
-        alert(contact_data.message)
+        axios.post(ApiUrl.BaseUrl + 'user-authentication/api/contact-us/',contact_us_data,  { headers }).then((response) => {
+            if (response.data.error === false) {
+                console.log('contact succesffully');
+            }
+        });
+        // const contact_us_response = await (await fetch(ApiUrl.BaseUrl + "user-authentication/api/contact-us/", contact_us_custom_utility))
+        // const contact_data = await contact_us_response.json();
+        // console.log('contact_us response = ', contact_us_response)
+        // console.log('message = ', contact_us_response.error);
+        // alert(contact_data.message)
         
     }
 
