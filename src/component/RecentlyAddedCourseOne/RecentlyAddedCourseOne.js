@@ -6,8 +6,6 @@ import LoveIcon from "../../asset/images/icon/love-icon.png";
 import ShareIcon from "../../asset/images/icon/icon_share.png";
 import Play from "../../asset/images/icon/play.png";
 import CourseLogo from "../../asset/images/logo/course-logo.png";
-import { useQuery } from "react-query";
-import ApiUrl from "../../Api/ApiUrl";
 import 'tw-elements';
 
 function RecentlyAddedCourseOne({ subcategory_id }) {

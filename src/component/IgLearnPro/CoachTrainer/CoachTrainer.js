@@ -15,7 +15,7 @@ class CoachTrainer extends Component {
 
                         <div className="lg:w-2/5 w-full">
                             <div className="">
-                                <img className="lg:h-full lg:w-full lg:mt-7 lg:mb-7 rounded-xl" src={Trainer} />
+                                <img className="lg:h-full lg:w-full lg:mt-7 lg:mb-7 rounded-xl" src={Trainer} alt=""/>
                             </div>
                         </div>
 
@@ -27,7 +27,7 @@ class CoachTrainer extends Component {
 
                                 <div className="flex flex-wrap lg:mt-10">
                                     <div className="lg:w-1/12">
-                                        <span><img className="lg:h-12 lg:w-12" src={Calender} /></span>
+                                        <span><img className="lg:h-12 lg:w-12" src={Calender} alt=""/></span>
                                     </div>
                                     <div className="lg:w-11/12">
                                         <span><p className="text-black text-md font-normal">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p></span>
@@ -36,7 +36,7 @@ class CoachTrainer extends Component {
 
                                 <div className="flex flex-wrap lg:mt-10">
                                     <div className="lg:w-1/12">
-                                        <span><img className="lg:h-12 lg:w-12" src={User} /></span>
+                                        <span><img className="lg:h-12 lg:w-12" src={User} alt=""/></span>
                                     </div>
                                     <div className="lg:w-11/12">
                                         <span><p className="text-black text-md font-normal">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p></span>
@@ -45,7 +45,7 @@ class CoachTrainer extends Component {
 
                                 <div className="flex flex-wrap lg:mt-10">
                                     <div className="lg:w-1/12">
-                                        <span><img className="lg:h-12 lg:w-12" src={Sheild} /></span>
+                                        <span><img className="lg:h-12 lg:w-12" src={Sheild} alt=""/></span>
                                     </div>
                                     <div className="lg:w-11/12">
                                         <span><p className="text-black text-md font-normal">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p></span>
@@ -54,7 +54,7 @@ class CoachTrainer extends Component {
 
                                 <div className="flex flex-wrap lg:mt-10">
                                     <div className="lg:w-1/12">
-                                        <span><img className="lg:h-12 lg:w-12" src={File} /></span>
+                                        <span><img className="lg:h-12 lg:w-12" src={File} alt=""/></span>
                                     </div>
                                     <div className="lg:w-11/12">
                                         <span><p className="text-black text-md font-normal">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p></span>

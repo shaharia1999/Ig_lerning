@@ -16,7 +16,7 @@ class HomeAdvertisedment extends Component {
                         </div>
 
                         <div className="lg:basis-1/3">
-                            <img className="w-96 lg:ml-20 lg:mt-20 home-ad-banner" src={HomeBanner} />
+                            <img className="w-96 lg:ml-20 lg:mt-20 home-ad-banner" src={HomeBanner} alt=""/>
                         </div>
 
                     </div>
