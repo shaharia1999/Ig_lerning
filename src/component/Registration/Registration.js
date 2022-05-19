@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "../../asset/css/login.css";
 import { useQuery } from "react-query";
 import ApiUrl from "../../Api/ApiUrl";
-
+import axios from "axios";
 
 function Registration() {
     const [name, setName] = useState('')
@@ -18,28 +18,38 @@ function Registration() {
 
     async function createPost() {
         const data = {
-            'name': name,
-            'surname': surname,
-            'email': email,
-            'country_id': country_id,
-            'password': password,
-            'confirm_password': confirm_password,
-            'receive_marketing_email_update': receive_marketing_email_update,
-            'accept_terms_condition': accept_terms_condition,
+            name: name,
+            surname: surname,
+            email: email,
+            country_id: country_id,
+            password: password,
+            confirm_password: confirm_password,
+            receive_marketing_email_update: receive_marketing_email_update,
+            accept_terms_condition: accept_terms_condition
         }
-        const reg_custom_utility = {
-            method: 'post',
-            headers: new Headers({
-                // 'Accept-Language': 'en',
-                'Content-Type': 'application/json'
-            }),
-            body: JSON.stringify(data)
+        const headers={
+            'Accept-Language': 'bn',
+            'Content-Type': 'application/json',
         }
-        const registration_response = await (await fetch(ApiUrl.BaseUrl + "user-authentication/api/student-registration-new/", reg_custom_utility))
-        const reg_data = await registration_response.json();
-        console.log('login response = ', registration_response)
-        console.log('message = ', registration_response.error);
-        alert(reg_data.message)
+        // const reg_custom_utility = {
+        //     method: 'post',
+        //     headers: new Headers({
+        //         // 'Accept-Language': 'en',
+        //         'Content-Type': 'application/json'
+        //     }),
+        //     body: JSON.stringify(data)
+        // }
+        axios.post(ApiUrl.BaseUrl + 'user-authentication/api/student-registration-new/',data,  { headers }).then((response) => {
+            if (response.data.error === false) {
+                console.log('registrationg succesffully');
+            }
+        });
+
+        // const registration_response = await (await fetch(ApiUrl.BaseUrl + "user-authentication/api/student-registration-new/", reg_custom_utility))
+        // const reg_data = await registration_response.json();
+        // console.log('login response = ', registration_response)
+        // console.log('message = ', registration_response.error);
+        // alert(reg_data.message)
 
     }
 

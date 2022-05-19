@@ -5,6 +5,7 @@ import "../../asset/css/login.css";
 import { useQuery } from "react-query";
 import ApiUrl from "../../Api/ApiUrl";
 import { FaFacebookSquare, FaGoogle, FaTwitter } from "react-icons/fa";
+import axios from "axios";
 
 function Login() {
     const [username_or_email, setUsernameOrEmail] = useState('')
@@ -16,21 +17,30 @@ function Login() {
 
     async function submitLogin() {
         const login_data = {
-            'username_or_email': username_or_email,
-            'password': password
+            username_or_email: username_or_email,
+            password: password
         }
-        const custom_login_headers = {
-            method: 'post',
-            headers: new Headers({
-                'Accept-Language': 'en',
-                'Content-Type': 'application/json'
-            }),
-            body: JSON.stringify(login_data)
+        // const custom_login_headers = {
+        //     method: 'post',
+        //     headers: new Headers({
+        //         'Accept-Language': 'en',
+        //         'Content-Type': 'application/json'
+        //     }),
+        //     body: JSON.stringify(login_data)
+        // }
+        const headers={
+            'Accept-Language': 'bn',
+            'Content-Type': 'application/json',
         }
-        const login_response = await (await fetch(ApiUrl.BaseUrl + "user-authentication/api/login/", custom_login_headers))
-        const data = await login_response.json();
-        console.log('data = ', data);
-        alert(data.message)
+        axios.post(ApiUrl.BaseUrl + 'user-authentication/api/login/',login_data,  { headers }).then((response) => {
+            if (response.data.error === false) {
+                console.log('login succesffully');
+            }
+        });
+        // const login_response = await (await fetch(ApiUrl.BaseUrl + "user-authentication/api/login/", custom_login_headers))
+        // const data = await login_response.json();
+        // console.log('data = ', data);
+        // alert(data.message)
     }
 
     return (
