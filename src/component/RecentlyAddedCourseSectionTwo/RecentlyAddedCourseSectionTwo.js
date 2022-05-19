@@ -1,12 +1,6 @@
 import React, { Component, Fragment } from "react";
-import { FaStar } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import SpeedMeter from "../../asset/images/icon/icon_level.png";
-import CertificateIcon from "../../asset/images/icon/icon_certificate.png";
 import LoveIcon from "../../asset/images/icon/love-icon.png";
-import ShareIcon from "../../asset/images/icon/icon_share.png";
 import MasterCourseThumbnail from "../../asset/images/master-course/master-course-thumbnail.png";
-import Play from "../../asset/images/icon/play.png";
 import CourseLogo from "../../asset/images/logo/course-logo.png";
 import Flag from "../../asset/images/icon/usa.png";
 import { GoPrimitiveDot } from "react-icons/go";

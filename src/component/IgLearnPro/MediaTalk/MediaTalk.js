@@ -13,25 +13,25 @@ class MediaTalk extends Component {
                     <div class="flex flex-row border-none lg:p-4 w-full text-center lg:pb-16">
                         <div class="lg:basis-1/4">
                             <div className="image-center">
-                                <img className="h-48 w-56 object-contain" src={Arte} />
+                                <img className="h-48 w-56 object-contain" src={Arte} alt=""/>
                             </div>
                         </div>
 
                         <div class="lg:basis-1/4">
                             <div className="image-center">
-                                <img className="h-48 w-56 object-contain" src={Forbes} />
+                                <img className="h-48 w-56 object-contain" src={Forbes} alt=""/>
                             </div>
                         </div>
 
                         <div class="lg:basis-1/4">
                             <div className="image-center">
-                                <img className="h-48 w-56 object-contain" src={La} />
+                                <img className="h-48 w-56 object-contain" src={La} alt=""/>
                             </div>
                         </div>
 
                         <div class="lg:basis-1/4">
                             <div className="image-center">
-                                <img className="h-48 w-56 object-contain" src={Ted} />
+                                <img className="h-48 w-56 object-contain" src={Ted} alt=""/>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,4 @@
 import React, { useState, Fragment } from "react";
-import { useMutation } from 'react-query'
 import LoginImg from "../../asset/images/banner/login.png";
 import { Link } from "react-router-dom";
 import "../../asset/css/login.css";
@@ -97,7 +96,7 @@ function Registration() {
                                         <div
                                             className="lg:w-4/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none">
                                             <div className="text-white">
-                                                <img className="" src={LoginImg} />
+                                                <img className="" src={LoginImg} alt=""/>
                                             </div>
                                         </div>
 

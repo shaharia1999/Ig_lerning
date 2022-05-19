@@ -1,7 +1,5 @@
 import React from "react";
-import { useQuery } from "react-query";
 import ApiUrl from "../../../Api/ApiUrl";
-import ShareIcon from "../../../asset/images/icon/icon_share.png";
 import axios from "axios";
 
 

@@ -19,7 +19,11 @@ function OurTeam() {
                                 <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center">Saimon Harmer</p>
                                 <p className="text-our-team-subtitle text-sm font-light xl:mt-1 text-center">CEO & Founder</p>
                             </div>
-                            <div className="hide"><ImFacebook className="my-3" /><ImTwitter className="my-3" /><BsInstagram className="my-3" /></div>
+                            <div className="hide">
+                                <a rel="noreferrer" target="_blank" href="https://monirulakand.com/#/"> <ImFacebook className="my-3" /></a>
+                                <a rel="noreferrer" target="_blank" href="https://monirulakand.com/#/"> <ImTwitter className="my-3" /></a>
+                                <a rel="noreferrer" target="_blank" href="https://monirulakand.com/#/"> <BsInstagram className="my-3" /></a>
+                            </div>
                         </div>
                     </div>
 
@@ -30,7 +34,11 @@ function OurTeam() {
                                 <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center">Lina Jutila</p>
                                 <p className="text-our-team-subtitle text-sm font-light xl:mt-1 text-center">Web Developer</p>
                             </div>
-                            <div className="hide"><ImFacebook className="my-3" /><ImTwitter className="my-3" /><BsInstagram className="my-3" /></div>
+                            <div className="hide">
+                                <a rel="noreferrer" target="_blank" href="https://monirulakand.com/#/"> <ImFacebook className="my-3" /></a>
+                                <a rel="noreferrer" target="_blank" href="https://monirulakand.com/#/"> <ImTwitter className="my-3" /></a>
+                                <a rel="noreferrer" target="_blank" href="https://monirulakand.com/#/"> <BsInstagram className="my-3" /></a>
+                            </div>
                         </div>
                     </div>
 
@@ -41,7 +49,11 @@ function OurTeam() {
                                 <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center">Aaron Nunez</p>
                                 <p className="text-our-team-subtitle text-sm font-light xl:mt-1 text-center">Web Designer</p>
                             </div>
-                            <div className="hide"><ImFacebook className="my-3" /><ImTwitter className="my-3" /><BsInstagram className="my-3" /></div>
+                            <div className="hide">
+                                <a rel="noreferrer" target="_blank" href="https://monirulakand.com/#/"> <ImFacebook className="my-3" /></a>
+                                <a rel="noreferrer" target="_blank" href="https://monirulakand.com/#/"> <ImTwitter className="my-3" /></a>
+                                <a rel="noreferrer" target="_blank" href="https://monirulakand.com/#/"> <BsInstagram className="my-3" /></a>
+                            </div>
                         </div>
                     </div>
 
@@ -53,7 +65,11 @@ function OurTeam() {
                                 <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center">Aaron Nunez</p>
                                 <p className="text-our-team-subtitle text-sm font-light xl:mt-1 text-center">Web Designer</p>
                             </div>
-                            <div className="hide"><ImFacebook className="my-3" /><ImTwitter className="my-3" /><BsInstagram className="my-3" /></div>
+                            <div className="hide">
+                                <a rel="noreferrer" target="_blank" href="https://monirulakand.com/#/"> <ImFacebook className="my-3" /></a>
+                                <a rel="noreferrer" target="_blank" href="https://monirulakand.com/#/"> <ImTwitter className="my-3" /></a>
+                                <a rel="noreferrer" target="_blank" href="https://monirulakand.com/#/"> <BsInstagram className="my-3" /></a>
+                            </div>
                         </div>
                     </div>
 
@@ -64,7 +80,11 @@ function OurTeam() {
                                 <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center">Aaron Nunez</p>
                                 <p className="text-our-team-subtitle text-sm font-light xl:mt-1 text-center">Web Designer</p>
                             </div>
-                            <div className="hide"><ImFacebook className="my-3" /><ImTwitter className="my-3" /><BsInstagram className="my-3" /></div>
+                            <div className="hide">
+                                <a rel="noreferrer" target="_blank" href="https://monirulakand.com/#/"> <ImFacebook className="my-3" /></a>
+                                <a rel="noreferrer" target="_blank" href="https://monirulakand.com/#/"> <ImTwitter className="my-3" /></a>
+                                <a rel="noreferrer" target="_blank" href="https://monirulakand.com/#/"> <BsInstagram className="my-3" /></a>
+                            </div>
                         </div>
                     </div>
 
@@ -75,7 +95,11 @@ function OurTeam() {
                                 <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center">Aaron Nunez</p>
                                 <p className="text-our-team-subtitle text-sm font-light xl:mt-1 text-center">Web Designer</p>
                             </div>
-                            <div className="hide"><ImFacebook className="my-3" /><ImTwitter className="my-3" /><BsInstagram className="my-3" /></div>
+                            <div className="hide">
+                                <a rel="noreferrer" target="_blank" href="https://monirulakand.com/#/"> <ImFacebook className="my-3" /></a>
+                                <a rel="noreferrer" target="_blank" href="https://monirulakand.com/#/"> <ImTwitter className="my-3" /></a>
+                                <a rel="noreferrer" target="_blank" href="https://monirulakand.com/#/"> <BsInstagram className="my-3" /></a>
+                            </div>
                         </div>
                     </div>
 

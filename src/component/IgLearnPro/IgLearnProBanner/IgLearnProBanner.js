@@ -20,7 +20,7 @@ class IgLearnProBanner extends Component {
                                     companies that have increased their productivity and
                                     success with us</h6>
 
-                                <Link to="/"><span className="text-sm font-normal leading-tight bg-maincolor text-white lg:pl-16 lg:pr-16 lg:pt-4 lg:pb-4 rounded-3xl mx-2 h-11">Start Trial</span></Link>   
+                                <Link to="/"><span className="text-sm font-normal leading-tight bg-maincolor text-white lg:pl-16 lg:pr-16 lg:pt-4 lg:pb-4 rounded-3xl mx-2 h-11">Start Trial</span></Link>
                             </div>
 
                             <div class="lg:basis-1/2">
@@ -34,25 +34,25 @@ class IgLearnProBanner extends Component {
                     <div class="flex flex-row bg-white rounded-xl shadow-client border-none lg:p-4 w-full text-center">
                         <div class="lg:basis-1/4">
                             <div className="image-center">
-                                <img className="h-48 w-56 object-contain" src={Google} />
+                                <img className="h-48 w-56 object-contain" src={Google} alt="" />
                             </div>
                         </div>
 
                         <div class="lg:basis-1/4">
                             <div className="image-center">
-                                <img className="h-48 w-56 object-contain" src={LogoMba} />
+                                <img className="h-48 w-56 object-contain" src={LogoMba} alt="" />
                             </div>
                         </div>
 
                         <div class="lg:basis-1/4">
                             <div className="image-center">
-                                <img className="h-48 w-56 object-contain" src={Politecnico} />
+                                <img className="h-48 w-56 object-contain" src={Politecnico} alt="" />
                             </div>
                         </div>
 
                         <div class="lg:basis-1/4">
                             <div className="image-center">
-                                <img className="h-48 w-56 object-contain" src={Uci} />
+                                <img className="h-48 w-56 object-contain" src={Uci} alt="" />
                             </div>
                         </div>
                     </div>

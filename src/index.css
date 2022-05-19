@@ -44,7 +44,7 @@
   width: 1400px !important;
   height: 180px !important;
   opacity: 1;
-  background-position: center!important;
+  background-position: center !important;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -93,7 +93,7 @@
   border-color: rgb(255, 255, 255);
 }
 
-.image-center{
+.image-center {
   justify-content: center;
   justify-items: center;
   align-items: center;
@@ -101,7 +101,7 @@
   display: flex;
 }
 
-.home-ad-banner{
+.home-ad-banner {
   height: 1200px !important;
 }
 
@@ -112,7 +112,7 @@
   background-color: #000000;
 }
 
-.cat-container{
+.cat-container {
   opacity: .1;
 }
 
@@ -120,24 +120,24 @@
 
 .social-icons-login-fb {
   background-color: #E7F0FB;
-  padding: 10px!important;
+  padding: 10px !important;
 }
 
 .social-icons-login-twitter {
   background-color: #E7F0FB;
-  padding: 10px!important;
+  padding: 10px !important;
 }
 
 .social-icons-login-google {
   background-color: #FDE8EB;
-  padding: 10px!important;
+  padding: 10px !important;
 }
 
 
 
 /* About Page */
 
-.about-bg-height{
+.about-bg-height {
   width: 100% !important;
   height: 100vh !important;
   background: #ffffff;
@@ -158,16 +158,16 @@
   display: block;
   color: #D76E2D;
   margin-top: -120px;
-  margin-right: 40px!important;
-  float: right!important;
+  margin-right: 40px !important;
+  float: right !important;
 }
-    
-.myDIV:hover + .hide {
+
+.myDIV:hover+.hide {
   display: block;
   color: #D76E2D;
   margin-top: -120px;
-  margin-right: 40px!important;
-  float: right!important;
+  margin-right: 40px !important;
+  float: right !important;
 }
 
 
