@@ -19,25 +19,6 @@ function BusinessCompany() {
     const [subCategory, setSubCategory] = React.useState([]);
     const [recently_addedsubcategoryId, setSubcategoryID] = React.useState([]);
 
-    // const custom_headers = {
-    //     method: 'get',
-
-    //     headers: new Headers({
-    //         'Accept-Language': 'en',
-    //         'Content-Type': 'application/json',
-    //         "Access-Control-Allow-Origin": "*",
-    //         "Access-Control-Allow-Credentials": "true",
-    //         "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
-    //         "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-    //     })
-    // }
-
-    // const OnSubCategoryDetails = (subcategory_id) => {
-    //     console.log('subcategory = ', subcategory_id);
-    //     setSubcategoryId(subcategory_id)
-    // }
-
-
     React.useEffect(() => {
         axios.get(ApiUrl.BaseUrl + 'api/course/course-subcategory-response/',
             {
