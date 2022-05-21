@@ -2,7 +2,6 @@ import React, { useState, Fragment } from "react";
 import LoginImg from "../../asset/images/banner/login.png";
 import { Link } from "react-router-dom";
 import "../../asset/css/login.css";
-import { useQuery } from "react-query";
 import ApiUrl from "../../Api/ApiUrl";
 import axios from "axios";
 
