@@ -12,10 +12,10 @@ import ApiUrl from "../../Api/ApiUrl";
 function RecentlyAddedCourseSectionTwo() {
     const [category, setCategory] = React.useState([]);
     const [subCategory, setSubCategory] = React.useState([]);
-    const [Course, setCourse] = React.useState([]);
+    const [getCourse, setCourse] = React.useState([]);
 
     useEffect(() => {
-        axios.get(ApiUrl.BaseUrl + 'api/course/course-category-response/',
+        axios.get(ApiUrl.BaseUrl + 'api/course/category-based-subcategory/',
             {
                 headers: {
                     'Accept-Language': 'bn',
@@ -27,10 +27,10 @@ function RecentlyAddedCourseSectionTwo() {
                 setCategory(response.data.data);
                 setSubCategory(response.data.data);
                 setCourse(response.data.data);
+                console.log('11111 course data = ', response.data.data?.course_information);
                 console.log("category axios = ", response.data.data);
             }
         });
-
     }, []);
     // useEffect(() => {
     //     axios.get(ApiUrl.BaseUrl + 'api/v2/category-info/',
@@ -68,7 +68,7 @@ function RecentlyAddedCourseSectionTwo() {
     const CategoryBasedSubCategory = (category_id) => {
         alert('category id changed = '+ category_id);
         console.log('category id changed = ', category_id);
-        axios.get(ApiUrl.BaseUrl + 'api/course/course-category-response/' + category_id + "/",
+        axios.get(ApiUrl.BaseUrl + 'api/course/category-based-subcategory/' + category_id + "/",
             {
                 headers: {
                     'Accept-Language': 'bn',
@@ -87,7 +87,7 @@ function RecentlyAddedCourseSectionTwo() {
 
     function SubCategoryCourseInfo(sub_category_id) {
         alert('sub category id = '+ sub_category_id);
-        axios.get(ApiUrl.BaseUrl + 'api/course/subcategory-course-response/' + sub_category_id + "/",
+        axios.get(ApiUrl.BaseUrl + 'api/course/sub-category-based-subcategory/' + sub_category_id + "/",
             {
                 headers: {
                     'Accept-Language': 'bn',
@@ -115,7 +115,7 @@ function RecentlyAddedCourseSectionTwo() {
     ));
 
     const data_of_subcategory = subCategory.map((category_info, index) => (
-        category_info.sub_category_informations.map((subcategory, index) => (
+        category_info.sub_category_information.map((subcategory, index) => (
         <div>
             <li className="nav-item" role="presentation">
                 <button type="button"
@@ -129,97 +129,184 @@ function RecentlyAddedCourseSectionTwo() {
         ))
     ));
 
+    const data_of_course_details = getCourse.map((category_info, category_info_index) => (
+        category_info.course_information.map((course, course_index) => (
+            <div className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/4">
+                <div className="wrapper antialiased text-gray-900">
+                    <div className="relative">
+                        <img className="w-full h-72 object-cover object-center rounded-lg shadow-md" src={MasterCourseThumbnail} />
 
-    const data_of_course_details = Course.map((category_info, category_info_index) => (
-        category_info.sub_category_informations.map((subcategory, subcategory_index) => (
-            subcategory.course_informations.map((course, course_index) => {
-                return (
-                    <div className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/4">
-                        <div className="wrapper antialiased text-gray-900">
-                            <div className="relative">
-                                <img className="w-full h-72 object-cover object-center rounded-lg shadow-md" src={MasterCourseThumbnail} />
-
-                                <div className="flex flex-wrap lg:mt-3">
-                                    <div className="w-1/5">
-                                        <a href="!#">
-                                            <div
-                                                class="text-sm absolute top-0 left-3 bg-black text-white rounded-full border-2 border-white h-12 w-12 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
-                                                <img className="h-12 w-12" src={CourseLogo} />
-                                            </div>
-                                        </a>
+                        <div className="flex flex-wrap lg:mt-3">
+                            <div className="w-1/5">
+                                <a href="!#">
+                                    <div
+                                        class="text-sm absolute top-0 left-3 bg-black text-white rounded-full border-2 border-white h-12 w-12 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                                        <img className="h-12 w-12" src={CourseLogo} />
                                     </div>
-                                    <div className="w-4/5">
-                                        <a href="!#">
-                                            <div class="text-lg absolute top-0 text-white mt-5">
-                                                <h6 className="font-medium text-xl -mt-2 text-white">{course.channel_name_id?.channel_name}</h6>
-                                                <h6 className="font-extralight lg:-ml-6 flex text-sm text-white">
-                                                     <img className="w-5 h-5 rounded-full border-2 border-white mr-2" 
-                                                     src={ApiUrl.ImageBaseUrl+course.channel_name_id?.channel_name_logo} />
-                                                </h6>
-                                            </div>
-                                        </a>
+                                </a>
+                            </div>
+                            <div className="w-4/5">
+                                <a href="!#">
+                                    <div class="text-lg absolute top-0 text-white mt-5">
+                                        <h6 className="font-medium text-xl -mt-2 text-white">{course.channel_name_id?.channel_name}</h6>
+                                        <h6 className="font-extralight lg:-ml-6 flex text-sm text-white">
+                                                <img className="w-5 h-5 rounded-full border-2 border-white mr-2" 
+                                                src={ApiUrl.ImageBaseUrl+course?.channel_name_id?.channel_name_logo} />
+                                        </h6>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="relative px-4 -mt-16">
+                        <div className="bg-white p-4 rounded-lg shadow-lg">
+                            <div className="flex flex-wrap">
+                                <div className="w-full">
+                                    <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">
+                                        {course?.course_title}
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-wrap">
+                                <div className="w-2/4">
+                                    <div className="flex sm:justify-center xl:justify-start">
+                                        <span className="text-gray-600 text-xs mt-2">Starts September 2022</span>
+                                    </div>
+                                </div>
+                                <div className="w-2/4">
+                                    <div className="flex sm:justify-center xl:justify-start">
+                                        <GoPrimitiveDot className="text-sm mt-2 font-medium text-LiveBtnColor" /><span className="text-gray-600 text-xs mt-2">  11 Weeks</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="relative px-4 -mt-16">
-                                <div className="bg-white p-4 rounded-lg shadow-lg">
-                                    <div className="flex flex-wrap">
-                                        <div className="w-full">
-                                            <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">
-                                                {course.course_title}
-                                            </h4>
-                                        </div>
+
+                            <div className="flex flex-wrap">
+                                <div className="w-full">
+                                    <div className="flex xl:justify-start">
+                                        <span className="bg-master-degree-bg rounded-xl lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 text-master-degree-text  text-xs mt-2">Certified Master Degrees</span>
                                     </div>
+                                </div>
+                            </div>
 
-                                    <div className="flex flex-wrap">
-                                        <div className="w-2/4">
-                                            <div className="flex sm:justify-center xl:justify-start">
-                                                <span className="text-gray-600 text-xs mt-2">Starts September 2022</span>
-                                            </div>
-                                        </div>
-                                        <div className="w-2/4">
-                                            <div className="flex sm:justify-center xl:justify-start">
-                                                <GoPrimitiveDot className="text-sm mt-2 font-medium text-LiveBtnColor" /><span className="text-gray-600 text-xs mt-2">  11 Weeks</span>
-                                            </div>
-                                        </div>
+                            <div className="flex flex-wrap mt-5">
+                                <div className="w-2/5">
+                                    <div className="flex sm:justify-center xl:justify-start -mt-3">
+                                        <a className="z-30"><img className="h-8 w-8 rounded-full border-2 border-white" src="https://media.istockphoto.com/photos/got-this-picture-id1332291404?b=1&k=20&m=1332291404&s=170667a&w=0&h=uRm6p7xa_-YF9t_6sVY7DXnXaa2Jo_NeL4oUvrFJq6I=" /></a>
+                                        <a className="-ml-3 z-20"><img className="h-8 w-8 rounded-full border-2 border-white" src="https://cbsnews1.cbsistatic.com/hub/i/2018/11/06/0c1af1b8-155a-458e-b105-78f1e7344bf4/2018-11-06t054310z-1334124005-rc1be15a8050-rtrmadp-3-people-sexiest-man.jpg" /></a>
+                                        <a className="-ml-3 z-10"><img className="h-8 w-8 rounded-full border-2 border-white" src="https://aisvox-a.akamaihd.net/masters/940835/26-1/27-1yk13p/2540x1429/4080/800604860-jpg.jpg" /></a>
                                     </div>
-
-
-                                    <div className="flex flex-wrap">
-                                        <div className="w-full">
-                                            <div className="flex xl:justify-start">
-                                                <span className="bg-master-degree-bg rounded-xl lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 text-master-degree-text  text-xs mt-2">Certified Master Degrees</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex flex-wrap mt-5">
-                                        <div className="w-2/5">
-                                            <div className="flex sm:justify-center xl:justify-start -mt-3">
-                                                <a className="z-30"><img className="h-8 w-8 rounded-full border-2 border-white" src="https://media.istockphoto.com/photos/got-this-picture-id1332291404?b=1&k=20&m=1332291404&s=170667a&w=0&h=uRm6p7xa_-YF9t_6sVY7DXnXaa2Jo_NeL4oUvrFJq6I=" /></a>
-                                                <a className="-ml-3 z-20"><img className="h-8 w-8 rounded-full border-2 border-white" src="https://cbsnews1.cbsistatic.com/hub/i/2018/11/06/0c1af1b8-155a-458e-b105-78f1e7344bf4/2018-11-06t054310z-1334124005-rc1be15a8050-rtrmadp-3-people-sexiest-man.jpg" /></a>
-                                                <a className="-ml-3 z-10"><img className="h-8 w-8 rounded-full border-2 border-white" src="https://aisvox-a.akamaihd.net/masters/940835/26-1/27-1yk13p/2540x1429/4080/800604860-jpg.jpg" /></a>
-                                            </div>
-                                        </div>
-                                        <div className="w-3/5 relative">
-                                            <div className="flex xl:justify-end -mt-3 absolute right-0 absolute">
-                                                <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-md">
-                                                    <img className="px-1 h-3 w-5" src={LoveIcon} /></button>
-                                                <button
-                                                    className="text-sm flex font-light leading-tight bg-apply-now text-white lg:pl-3 lg:pr-3 lg:pt-2 lg:pb-2 rounded-lg"> Apply Now <MdLogin className="ml-2 text-xl font-normal" />
-                                                </button>
-                                            </div>
-                                        </div>
+                                </div>
+                                <div className="w-3/5 relative">
+                                    <div className="flex xl:justify-end -mt-3 absolute right-0 absolute">
+                                        <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-md">
+                                            <img className="px-1 h-3 w-5" src={LoveIcon} /></button>
+                                        <button
+                                            className="text-sm flex font-light leading-tight bg-apply-now text-white lg:pl-3 lg:pr-3 lg:pt-2 lg:pb-2 rounded-lg"> Apply Now <MdLogin className="ml-2 text-xl font-normal" />
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                );
-            })
+                </div>
+            </div>
         ))
     ))
+
+
+    // const data_of_course_details = getCourse.map((category_info, category_info_index) => (
+    //     category_info.sub_category_information.map((subcategory, subcategory_index) => (
+    //         subcategory.course_information.map((course, course_index) => {
+    //             return (
+    //                 <div className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/4">
+    //                     <div className="wrapper antialiased text-gray-900">
+    //                         <div className="relative">
+    //                             <img className="w-full h-72 object-cover object-center rounded-lg shadow-md" src={MasterCourseThumbnail} />
+
+    //                             <div className="flex flex-wrap lg:mt-3">
+    //                                 <div className="w-1/5">
+    //                                     <a href="!#">
+    //                                         <div
+    //                                             class="text-sm absolute top-0 left-3 bg-black text-white rounded-full border-2 border-white h-12 w-12 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+    //                                             <img className="h-12 w-12" src={CourseLogo} />
+    //                                         </div>
+    //                                     </a>
+    //                                 </div>
+    //                                 <div className="w-4/5">
+    //                                     <a href="!#">
+    //                                         <div class="text-lg absolute top-0 text-white mt-5">
+    //                                             <h6 className="font-medium text-xl -mt-2 text-white">{course.channel_name_id?.channel_name}</h6>
+    //                                             <h6 className="font-extralight lg:-ml-6 flex text-sm text-white">
+    //                                                  <img className="w-5 h-5 rounded-full border-2 border-white mr-2" 
+    //                                                  src={ApiUrl.ImageBaseUrl+course?.channel_name_id?.channel_name_logo} />
+    //                                             </h6>
+    //                                         </div>
+    //                                     </a>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+
+    //                         <div className="relative px-4 -mt-16">
+    //                             <div className="bg-white p-4 rounded-lg shadow-lg">
+    //                                 <div className="flex flex-wrap">
+    //                                     <div className="w-full">
+    //                                         <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">
+    //                                             {course?.course_title}
+    //                                         </h4>
+    //                                     </div>
+    //                                 </div>
+
+    //                                 <div className="flex flex-wrap">
+    //                                     <div className="w-2/4">
+    //                                         <div className="flex sm:justify-center xl:justify-start">
+    //                                             <span className="text-gray-600 text-xs mt-2">Starts September 2022</span>
+    //                                         </div>
+    //                                     </div>
+    //                                     <div className="w-2/4">
+    //                                         <div className="flex sm:justify-center xl:justify-start">
+    //                                             <GoPrimitiveDot className="text-sm mt-2 font-medium text-LiveBtnColor" /><span className="text-gray-600 text-xs mt-2">  11 Weeks</span>
+    //                                         </div>
+    //                                     </div>
+    //                                 </div>
+
+
+    //                                 <div className="flex flex-wrap">
+    //                                     <div className="w-full">
+    //                                         <div className="flex xl:justify-start">
+    //                                             <span className="bg-master-degree-bg rounded-xl lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 text-master-degree-text  text-xs mt-2">Certified Master Degrees</span>
+    //                                         </div>
+    //                                     </div>
+    //                                 </div>
+
+    //                                 <div className="flex flex-wrap mt-5">
+    //                                     <div className="w-2/5">
+    //                                         <div className="flex sm:justify-center xl:justify-start -mt-3">
+    //                                             <a className="z-30"><img className="h-8 w-8 rounded-full border-2 border-white" src="https://media.istockphoto.com/photos/got-this-picture-id1332291404?b=1&k=20&m=1332291404&s=170667a&w=0&h=uRm6p7xa_-YF9t_6sVY7DXnXaa2Jo_NeL4oUvrFJq6I=" /></a>
+    //                                             <a className="-ml-3 z-20"><img className="h-8 w-8 rounded-full border-2 border-white" src="https://cbsnews1.cbsistatic.com/hub/i/2018/11/06/0c1af1b8-155a-458e-b105-78f1e7344bf4/2018-11-06t054310z-1334124005-rc1be15a8050-rtrmadp-3-people-sexiest-man.jpg" /></a>
+    //                                             <a className="-ml-3 z-10"><img className="h-8 w-8 rounded-full border-2 border-white" src="https://aisvox-a.akamaihd.net/masters/940835/26-1/27-1yk13p/2540x1429/4080/800604860-jpg.jpg" /></a>
+    //                                         </div>
+    //                                     </div>
+    //                                     <div className="w-3/5 relative">
+    //                                         <div className="flex xl:justify-end -mt-3 absolute right-0 absolute">
+    //                                             <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-md">
+    //                                                 <img className="px-1 h-3 w-5" src={LoveIcon} /></button>
+    //                                             <button
+    //                                                 className="text-sm flex font-light leading-tight bg-apply-now text-white lg:pl-3 lg:pr-3 lg:pt-2 lg:pb-2 rounded-lg"> Apply Now <MdLogin className="ml-2 text-xl font-normal" />
+    //                                             </button>
+    //                                         </div>
+    //                                     </div>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </div>
+    //                 </div>
+    //             );
+    //         })
+    //     ))
+    // ))
     
    
     return (
