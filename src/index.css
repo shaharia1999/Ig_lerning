@@ -182,3 +182,36 @@
 .shadow-teacher {
   box-shadow: 10px 10px 20px rgba(5, 120, 9, 0.2);
 }
+
+
+
+/* course Details scroll bar  */
+#overflowTest {
+  background: #ffffff;
+  padding: 15px;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  border: 0px solid #ccc;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #000000;
+}
+
+.img-back{
+  background-attachment: fixed!important;
+  height: 400px;
+  background-image: url('../src/asset/images/banner/IgLearnProBanner.png');
+  width: 100% !important;
+  height: 400px !important;
+  opacity: 1;
+  margin: 0 !important;
+  padding: 0 !important;
+}

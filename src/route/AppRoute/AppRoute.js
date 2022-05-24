@@ -9,6 +9,7 @@ import ContactPage from '../../pages/ContactPage/ContactPage';
 import ForgetPasswordPage from '../../pages/ForgetPasswordPage/ForgetPasswordPage';
 import AboutPage from '../../pages/AboutPage/AboutPage';
 import PricingPage from '../../pages/PricingPage/PricingPage';
+import SingleCourseDetailsPage from '../../pages/SingleCourseDetailsPage/SingleCourseDetailsPage';
 
 class AppRoute extends Component {
     render() {
@@ -25,6 +26,8 @@ class AppRoute extends Component {
                     <Route exact path="/about" render={(props) => <AboutPage {...props} key={Date.now()} />} />
 
                     <Route exact path="/price" render={(props) => <PricingPage {...props} key={Date.now()} />} />
+
+                    <Route exact path="/course-details" render={(props) => <SingleCourseDetailsPage {...props} key={Date.now()} />} />
                     <Route path="" component={OpssPage} />
                 </Switch>
             </Fragment>
