@@ -9,8 +9,6 @@ class SingleCourseDetailsPage extends Component {
             <Fragment>
                 <NavBarTop/>
                 <SingleCourseDetails/>
-
-                <Footer/>
             </Fragment>
         );
     }
