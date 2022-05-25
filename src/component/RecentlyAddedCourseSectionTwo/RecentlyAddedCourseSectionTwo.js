@@ -66,7 +66,7 @@ function RecentlyAddedCourseSectionTwo() {
     // }, []);
 
     const CategoryBasedSubCategory = (category_id) => {
-        alert('category id changed = '+ category_id);
+        // alert('category id changed = '+ category_id);
         console.log('category id changed = ', category_id);
         axios.get(ApiUrl.BaseUrl + 'api/course/category-based-subcategory/' + category_id + "/",
             {
@@ -86,7 +86,7 @@ function RecentlyAddedCourseSectionTwo() {
     };
 
     function SubCategoryCourseInfo(sub_category_id) {
-        alert('sub category id = '+ sub_category_id);
+        // alert('sub category id = '+ sub_category_id);
         axios.get(ApiUrl.BaseUrl + 'api/course/sub-category-based-subcategory/' + sub_category_id + "/",
             {
                 headers: {
