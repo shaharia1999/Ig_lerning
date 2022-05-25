@@ -46,6 +46,7 @@ module.exports = {
       'teacher-card':'#F8FFF8',
       'teacher-card-button':'#FF8F33',
       'breadcrumbs':'#F9F9FC',
+      'breadcrumbs-text':'#999B9F',
       'amber': {
         300: '#fcd34d',
         400: '#fbbf24',

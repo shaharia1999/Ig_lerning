@@ -93,6 +93,13 @@ function ContactUs(){
                         <div className="lg:basis-4/12 lg:pl-12 lg:pr-6">
                             <h2 className="text-sectionTitleColor lg:font-semibold lg:text-5xl lg:mt-40 ">Get in Touch</h2>
                             <h2 className="text-client-section-des lg:font-normal lg:text-base lg:mb-6 lg:mt-10">Fill in the form and we’ll analyse your website and get back to you with 100% specific recommendations on how to improve it back to you with 100% specific</h2>
+                            <ul>
+                                <li>
+                                    <div>
+                                        <img></img>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
 
                         <div className="lg:basis-6/12 lg:p-2">

@@ -4,70 +4,83 @@ import RecentlyViewedCourse from "./RecentlyViewedCourse/RecentlyViewedCourse";
 import RecommandedCourse from "./RecommandedCourse/RecommandedCourse";
 import StudentBoughtCourse from "./StudentBoughtCourse/StudentBoughtCourse";
 import Footer from "../Common/Footer/Footer";
-
-import Image01 from '../../asset/images/team/team1.jpg'
+import Breadcrumbs from "../Other/Breadcrumbs/Breadcumbs";
+import 'flowbite';
+import DiscountCardCourse from "./DiscountCardCourse/DiscountCardCourse";
+import Description from "./Description/Description";
 
 function SingleCourseDetails() {
     return (
         <Fragment>
-            <nav class="bg-breadcrumbs xl:pl-10 xl:pr-10 xl:pt-4 xl:pb-4 w-full">
-                <ol class="list-reset flex text-grey-dark">
-                    <li><a href="#" class="text-black font-medium">Home</a></li>
-                    <li><span class="mx-2">/</span></li>
-                    <li><a href="#" class="text-black font-medium">Library</a></li>
-                    <li><span class="mx-2">/</span></li>
-                    <li>Data</li>
-                </ol>
-            </nav>
 
-            <div className="container-fluid stack">
-                <div className="">
-                    <div className="flex flex-basis">
-
-                        <div className="xl:w-8/12 bg-transparent xl:mr-96">
-                            <p className="p-11">This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help  This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help  This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help  This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help  This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help  the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</p>
-                        </div>
-                    </div>
-
-                    <div className="bg-white">
-                        <div className="container-fluid xl:mt-4 xl:mb-20">
-                            <h6 className="xl:mb-8 xl:ml-14 xl:text-3xl xl:font-semibold">Recently Viewed Products</h6>
-                            <RecentlyViewedCourse />
-                        </div>
+            <div>
+                <Breadcrumbs />
+            </div>
 
 
-                        <div className="container-fluid xl:mt-4 xl:mb-20">
-                            <h6 className="xl:mb-8 xl:ml-14 xl:text-3xl xl:font-semibold">Recommended courses for you</h6>
-                            <RecommandedCourse />
-                        </div>
-
-
-                        <div className="container-fluid xl:mt-4 xl:mb-20">
-                            <h6 className="xl:mb-8 xl:ml-14 xl:text-3xl xl:font-semibold">Recently bought courses</h6>
-                            <RecentlyBoughtCourse />
-                        </div>
-
-
-                        <div className="container-fluid xl:mt-4 xl:mb-20">
-                            <h6 className="xl:mb-8 xl:ml-14 xl:text-3xl xl:font-semibold">Student also bought this course</h6>
-                            <StudentBoughtCourse />
-                        </div>
-                        <Footer/>
-                    </div>
+            <div className="flex flex-wrap">
+                <div className="xl:w-8/12">
+                    <Description />
                 </div>
-
-
-
-                <div className="flex flex-wrap fixed-top xl:mt-72 float-right">
-                    <div className="xl:w-8/12 flex">
-
-                    </div>
-                    <div className="xl:w-4/12 flex">
-                        <img className="h-96 w-auto" src={Image01} />
-                    </div>
+                <div className="xl:w-4/12 relative">
+                    <DiscountCardCourse />
                 </div>
             </div>
 
+
+            <div className="stack">
+                <div className="bg-white">
+                    <div className="container-fluid xl:mt-4 xl:mb-20">
+                        <h6 className="xl:mb-8 xl:ml-32 xl:text-3xl xl:font-semibold">Recently Viewed Products</h6>
+                        <RecentlyViewedCourse />
+                    </div>
+
+                    <div className="container-fluid xl:mt-4 xl:mb-20">
+                        <h6 className="xl:mb-8 xl:ml-32 xl:text-3xl xl:font-semibold">Recommended courses for you</h6>
+                        <RecommandedCourse />
+                    </div>
+
+                    <div className="container-fluid xl:mt-4 xl:mb-20">
+                        <h6 className="xl:mb-8 xl:ml-32 xl:text-3xl xl:font-semibold">Recently bought courses</h6>
+                        <RecentlyBoughtCourse />
+                    </div>
+
+                    <div className="container-fluid xl:mt-4 xl:mb-20">
+                        <h6 className="xl:mb-8 xl:ml-32 xl:text-3xl xl:font-semibold">Student also bought this course</h6>
+                        <StudentBoughtCourse />
+                    </div>
+                    <Footer />
+
+                </div>
+                {/* 
+
+
+                <div className="flex flex-wrap fixed-top right-0 xl:mt-72 float-right justify-end">
+                    <div className="xl:w-4/12 flex xl:pr-36">
+                        <div class="bg-BgLoveIcon rounded-lg">
+                            <div className="rounded-lg">
+                                <video type="video/mp4" muted
+                                    loop className="w-full xl:p-5 h-72"
+                                    src={MyVideo}></video>
+                            </div>
+
+                            <div class="xl:p-5">
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                                <button class="text-white bg-maincolordeep xl:rounded-md xl:py-4 xl:w-full opacity-100">Enroll now</button>
+                                <h6 className="text-black xl:font-semibold xl:text-2xl xl:mt-5 xl:mb-4">What's Included</h6>
+                                <ul>
+                                    <li className="text-black">Mobile Support</li>
+                                    <li className="text-black">Lession Archive</li>
+                                    <li className="text-black">Mobile Support</li>
+                                    <li className="text-black">Tutor Chat</li>
+                                    <li className="text-black">Course Certificate</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> */}
+
+            </div>
         </Fragment>
     );
 }
