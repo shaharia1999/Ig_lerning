@@ -12,7 +12,7 @@ import 'tw-elements';
 function RecentlyViewedCourse() {
     return (
         <Fragment>
-            <div className="xl:ml-10">
+            <div className="xl:ml-28">
                 <div className="mt-4">
                     <div className=" fade show active">
                         <div className="flex flex-wrap -px-1 xl:-px-4">

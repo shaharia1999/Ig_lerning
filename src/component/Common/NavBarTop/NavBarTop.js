@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import igLearn from "../../../asset/images/logo/igLearn.png";
+import MainLogo from "../../../asset/images/logo/main-logo.svg";
 import Usa from "../../../asset/images/language-flag/usa.png";
 import Germany from "../../../asset/images/language-flag/germany.png";
 import France from "../../../asset/images/language-flag/franch.png";
@@ -56,7 +56,7 @@ class NavBarTop extends Component {
                 <nav className="flex flex-wrap top-0 sticky-top items-center justify-between w-full py-4 md:py-0 px-4 text-lg bg-maincolor">
                     <div className="h-24">
                         <a href='/'>
-                            <img className="h-24 mt-3 ml-36" src={igLearn} alt=""/>
+                            <img className="h-24 mt-3 ml-24" src={MainLogo} alt=""/>
                         </a>
                     </div>
 

@@ -9,7 +9,7 @@ import Student6 from '../../../asset/images/student-bought/student6.png';
 function StudentBoughtCourse() {
     return (
         <Fragment>
-            <div className="flex-basis flex xl:ml-14">
+            <div className="flex-basis flex xl:ml-32">
                 <div className="xl:w-1/6">
                     <img className="rounded-md" src={Student1} alt="" />
                 </div>
