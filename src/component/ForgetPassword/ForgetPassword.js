@@ -3,27 +3,24 @@ import LoginImg from "../../asset/images/banner/login.png";
 import { Link } from "react-router-dom";
 import "../../asset/css/login.css";
 import ApiUrl from "../../Api/ApiUrl";
-import { useMutation } from 'react-query'
+import axios from "axios";
 
 function ForgetPassword() {
     const [email, setEmail] = useState('')
 
     async function createPost() {
         const data = {
-            'email': email,
+            email: email,
         }
-        const reg_custom_utility = {
-            method: 'post',
-            headers: new Headers({
-                'Accept-Language': 'en',
-                'Content-Type': 'application/json'
-            }),
-            body: JSON.stringify(data)
+        const headers ={
+            'Accept-Language': 'bn',
+            'Content-Type': 'application/json',
         }
-        const forgot_password_response = await (await fetch(ApiUrl.BaseUrl + "user-authentication/api/forget-password/", reg_custom_utility))
-        const forgot_pass_data = await forgot_password_response.json();
-        alert(forgot_pass_data.message)
-
+        axios.post(ApiUrl.BaseUrl + 'user-authentication/api/forget-password/', data,  { headers }).then((response) => {
+            if (response.data.error === false) {
+                console.log('forget succesffully');
+            }
+        });
     }
     
     return (
