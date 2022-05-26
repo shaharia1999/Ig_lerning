@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Teacher from "../../../asset/images/course-teacher/teacher.jpg"
+import Teacher from "../../../asset/images/course-teacher/teacher.jpg";
 import { FaStar } from "react-icons/fa";
 import { FiCheckCircle } from "react-icons/fi";
 
@@ -13,8 +13,8 @@ function Description() {
                         <img className="xl:h-28 xl:mt-7 xl:w-28 rounded-full xl:border-4 xl:border-white xl:shadow-lg" src={Teacher} alt="teacher" />
                         <button className="xl:ml-2 text-maincolor xl:font-semibold xl:text-xl xl:mt-3">+ Follow</button>
                     </div>
-                    <div className="xl:w-10/12">
-                        <h6 className=" text-sectionTitleColor text-3xl font-semibold xl:pr-24 xl:mt-10">Learn how to pitch and grow your business, how to
+                    <div className="xl:w-10/12 xl:-ml-12">
+                        <h6 className=" text-sectionTitleColor text-3xl font-semibold xl:pr-24 xl:mt-8">Learn how to pitch and grow your business, how to
                             make your ideas speak</h6>
                         <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-4">Mario rossi   •   Trainer and Speaker</h6>
                         <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-2">
