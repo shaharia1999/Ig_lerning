@@ -1,9 +1,107 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { FaStar, FaRegThumbsUp, FaRegThumbsDown } from "react-icons/fa";
 import Teacher from "../../../asset/images/course-teacher/teacher.jpg";
 import { Link } from 'react-router-dom';
+import axios from "axios";
+import ApiUrl from "../../../Api/ApiUrl";
+
 
 function Review() {
+    const [courseReview, setStudentReview] = useState([]);
+    const [StudentInformation, setStudentInformation] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+
+    useEffect(() => {
+        setIsLoading(true);
+        axios.get(ApiUrl.BaseUrl + 'api/course/course-student-review/10/',
+            {
+                headers: {
+                    'Accept-Language': 'bn',
+                    'Content-Type': 'application/json',
+                }
+            }
+        ).then((response) => {
+            if (response.data.error === false) {
+                setIsLoading(false);
+                setStudentReview(response.data.data);
+                setStudentInformation(response.data.data.student_information);
+                 
+                console.log('course student review = ', response.data.data)
+            }
+        });
+    }, []);
+
+    const StudentReviewHTML = (() => {
+        if(isLoading === true){
+            return <div className="flex xl:mt-5">
+                        <div className="xl:w-1/12">
+                            <img className="xl:h-16 xl:w-16 rounded-full" src={Teacher} alt="teacher" />
+                        </div>
+                        <div className="xl:w-11/12">
+                            <div>
+                                <h6 className=" text-sectionTitleColor text-xl font-semibold">Abraham Pigeon</h6>
+                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">30 June, 2022</h6>
+                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-2">
+                                    <ul className="flex sm:justify-center xl:justify-start">
+                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
+                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
+                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
+                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
+                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
+                                        <h6 className="xl:ml-2 xl:-mt-.75 xl:text-xs text-black font-medium">2 month ago</h6>
+                                    </ul>
+                                </h6>
+                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:tracking-normal">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h6>
+                                <h6 className="text-breadcrumbs-text text-xs font-normal xl:mt-4">Was this review helpful?</h6>
+                                <div className="flex xl:mt-2">
+                                    <Link className="xl:p-2 xl:mx-2 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsUp className="text-maincolor xl:text-base" /></Link>
+                                    <Link className="xl:p-2 xl:mx-2 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsDown className="text-maincolor xl:text-base" /></Link>
+                                    <h6 className="text-maincolor xl:mx-2 xl:mt-1.5 text-sm font-medium">Report</h6>
+                                </div>
+                                <hr className="xl:mt-5 border" />
+                            </div>
+                        </div>
+                    </div>
+        }
+        else if(isLoading === false){
+            return (
+                courseReview.map((course_learn_info, index) => (
+                    <div className="flex xl:mt-5">
+                        <div className="xl:w-1/12">
+                            <img className="xl:h-16 xl:w-16 rounded-full" src={ApiUrl.ImageBaseUrl+course_learn_info.student_information.image} alt="teacher" />
+                        </div>
+                        <div className="xl:w-11/12">
+                            <div>
+                                <h6 className=" text-sectionTitleColor text-xl font-semibold">{course_learn_info.student_information.username}</h6>
+                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">{course_learn_info.date}</h6>
+                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-2">
+                                    <ul className="flex sm:justify-center xl:justify-start">
+                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
+                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
+                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
+                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
+                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
+                                        <h6 className="xl:ml-2 xl:-mt-.75 xl:text-xs text-black font-medium">2 month ago</h6>
+                                    </ul>
+                                </h6>
+                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:tracking-normal">
+                                    {course_learn_info.review_description}
+                                </h6>
+                                <h6 className="text-breadcrumbs-text text-xs font-normal xl:mt-4">Was this review helpful?</h6>
+                                <div className="flex xl:mt-2">
+                                    <Link className="xl:p-2 xl:mx-2 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsUp className="text-maincolor xl:text-base" /></Link>
+                                    <Link className="xl:p-2 xl:mx-2 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsDown className="text-maincolor xl:text-base" /></Link>
+                                    <h6 className="text-maincolor xl:mx-2 xl:mt-1.5 text-sm font-medium">Report</h6>
+                                </div>
+                                <hr className="xl:mt-5 border" />
+                            </div>
+                        </div>
+                    </div>
+                ))
+            )
+        }
+    })()
+
     return (
         <Fragment>
             <div className="xl:ml-32 xl:mt-5 xl:mr-14">
@@ -42,164 +140,9 @@ function Review() {
                 </div>
 
                 <div className="flex flex-wrap xl:pr-16 xl:mb-16">
-
-                    <div className="flex xl:mt-5">
-                        <div className="xl:w-1/12">
-                            <img className="xl:h-16 xl:w-16 rounded-full" src={Teacher} alt="teacher" />
-                        </div>
-                        <div className="xl:w-11/12">
-                            <div>
-                                <h6 className=" text-sectionTitleColor text-xl font-semibold">Abraham Pigeon</h6>
-                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">30 June, 2022</h6>
-                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-2">
-                                    <ul className="flex sm:justify-center xl:justify-start">
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <h6 className="xl:ml-2 xl:-mt-.75 xl:text-xs text-black font-medium">2 month ago</h6>
-                                    </ul>
-                                </h6>
-                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:tracking-normal">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h6>
-                                <h6 className="text-breadcrumbs-text text-xs font-normal xl:mt-4">Was this review helpful?</h6>
-                                <div className="flex xl:mt-2">
-                                    <Link className="xl:p-2 xl:mx-2 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsUp className="text-maincolor xl:text-base" /></Link>
-                                    <Link className="xl:p-2 xl:mx-2 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsDown className="text-maincolor xl:text-base" /></Link>
-                                    <h6 className="text-maincolor xl:mx-2 xl:mt-1.5 text-sm font-medium">Report</h6>
-                                </div>
-                                <hr className="xl:mt-5 border" />
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className="flex xl:mt-5">
-                        <div className="xl:w-1/12">
-                            <img className="xl:h-16 xl:w-16 rounded-full" src={Teacher} alt="teacher" />
-                        </div>
-                        <div className="xl:w-11/12">
-                            <div>
-                                <h6 className=" text-sectionTitleColor text-xl font-semibold">Abraham Pigeon</h6>
-                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">30 June, 2022</h6>
-                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-2">
-                                    <ul className="flex sm:justify-center xl:justify-start">
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <h6 className="xl:ml-2 xl:-mt-.75 xl:text-xs text-black font-medium">2 month ago</h6>
-                                    </ul>
-                                </h6>
-                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:tracking-normal">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h6>
-                                <h6 className="text-breadcrumbs-text text-xs font-normal xl:mt-4">Was this review helpful?</h6>
-                                <div className="flex xl:mt-2">
-                                    <Link className="xl:p-2 xl:mx-2 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsUp className="text-maincolor xl:text-base" /></Link>
-                                    <Link className="xl:p-2 xl:mx-2 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsDown className="text-maincolor xl:text-base" /></Link>
-                                    <h6 className="text-maincolor xl:mx-2 xl:mt-1.5 text-sm font-medium">Report</h6>
-                                </div>
-                                <hr className="xl:mt-5 border" />
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div className="flex xl:mt-5">
-                        <div className="xl:w-1/12">
-                            <img className="xl:h-16 xl:w-16 rounded-full" src={Teacher} alt="teacher" />
-                        </div>
-                        <div className="xl:w-11/12">
-                            <div>
-                                <h6 className=" text-sectionTitleColor text-xl font-semibold">Abraham Pigeon</h6>
-                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">30 June, 2022</h6>
-                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-2">
-                                    <ul className="flex sm:justify-center xl:justify-start">
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <h6 className="xl:ml-2 xl:-mt-.75 xl:text-xs text-black font-medium">2 month ago</h6>
-                                    </ul>
-                                </h6>
-                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:tracking-normal">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h6>
-                                <h6 className="text-breadcrumbs-text text-xs font-normal xl:mt-4">Was this review helpful?</h6>
-                                <div className="flex xl:mt-2">
-                                    <Link className="xl:p-2 xl:mx-2 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsUp className="text-maincolor xl:text-base" /></Link>
-                                    <Link className="xl:p-2 xl:mx-2 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsDown className="text-maincolor xl:text-base" /></Link>
-                                    <h6 className="text-maincolor xl:mx-2 xl:mt-1.5 text-sm font-medium">Report</h6>
-                                </div>
-                                <hr className="xl:mt-5 border" />
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div className="flex xl:mt-5">
-                        <div className="xl:w-1/12">
-                            <img className="xl:h-16 xl:w-16 rounded-full" src={Teacher} alt="teacher" />
-                        </div>
-                        <div className="xl:w-11/12">
-                            <div>
-                                <h6 className=" text-sectionTitleColor text-xl font-semibold">Abraham Pigeon</h6>
-                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">30 June, 2022</h6>
-                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-2">
-                                    <ul className="flex sm:justify-center xl:justify-start">
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <h6 className="xl:ml-2 xl:-mt-.75 xl:text-xs text-black font-medium">2 month ago</h6>
-                                    </ul>
-                                </h6>
-                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:tracking-normal">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h6>
-                                <h6 className="text-breadcrumbs-text text-xs font-normal xl:mt-4">Was this review helpful?</h6>
-                                <div className="flex xl:mt-2">
-                                    <Link className="xl:p-2 xl:mx-2 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsUp className="text-maincolor xl:text-base" /></Link>
-                                    <Link className="xl:p-2 xl:mx-2 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsDown className="text-maincolor xl:text-base" /></Link>
-                                    <h6 className="text-maincolor xl:mx-2 xl:mt-1.5 text-sm font-medium">Report</h6>
-                                </div>
-                                <hr className="xl:mt-5 border" />
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div className="flex xl:mt-5">
-                        <div className="xl:w-1/12">
-                            <img className="xl:h-16 xl:w-16 rounded-full" src={Teacher} alt="teacher" />
-                        </div>
-                        <div className="xl:w-11/12">
-                            <div>
-                                <h6 className=" text-sectionTitleColor text-xl font-semibold">Abraham Pigeon</h6>
-                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">30 June, 2022</h6>
-                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-2">
-                                    <ul className="flex sm:justify-center xl:justify-start">
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <h6 className="xl:ml-2 xl:-mt-.75 xl:text-xs text-black font-medium">2 month ago</h6>
-                                    </ul>
-                                </h6>
-                                <h6 className="text-breadcrumbs-text text-sm font-normal xl:tracking-normal">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h6>
-                                <h6 className="text-breadcrumbs-text text-xs font-normal xl:mt-4">Was this review helpful?</h6>
-                                <div className="flex xl:mt-2">
-                                    <Link className="xl:p-2 xl:mx-2 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsUp className="text-maincolor xl:text-base" /></Link>
-                                    <Link className="xl:p-2 xl:mx-2 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsDown className="text-maincolor xl:text-base" /></Link>
-                                    <h6 className="text-maincolor xl:mx-2 xl:mt-1.5 text-sm font-medium">Report</h6>
-                                </div>
-                                <hr className="xl:mt-5 border" />
-                            </div>
-                        </div>
-                    </div>
-
+                    {
+                        StudentReviewHTML
+                    }
                 </div>
 
 
