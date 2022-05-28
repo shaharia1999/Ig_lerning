@@ -12,7 +12,6 @@ class TrainerProfilePage extends Component {
             <Fragment>
                 <NavBarTop/>
                 <TrainerProfile/>
-
                 <ClientSays/>
                 <Partner/>
                 <Footer />
