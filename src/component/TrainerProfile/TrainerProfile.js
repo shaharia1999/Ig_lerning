@@ -1,16 +1,30 @@
 import React, { Fragment } from "react";
 import ContactTrainer from "./ContactTrainer/ContactTrainer";
+import CurrentCourse from "./CurrentCourse/CurrentCourse";
+import NewsFeed from "./NewsFeed/NewsFeed";
+import UpCommingEvents from "./UpCommingEvents/UpCommingEvents";
 
 function TrainerProfile() {
     return (
         <Fragment>
             <div className="container">
+
                 <div className="flex flex-wrap xl:mt-10">
                     <div className="xl:w-4/12">
-                        <p>sjbnjs sjdhfsjd fjsdhnf sfnjksdnf sdjnfksdfnsdks df sfi sdkfn sif sdnkfksdnfki s fsnkfnks fks ndfksd sdkfnsk fksnd</p>
+                        <NewsFeed/>
+                    </div>
+                    <div className="xl:w-8/12 xl:pl-7 xl:pr-7">
+                        <CurrentCourse/>
+                    </div>
+                </div>
+
+
+                <div className="flex flex-wrap xl:mt-10">
+                    <div className="xl:w-4/12">
+                        <UpCommingEvents />
                     </div>
                     <div className="xl:w-8/12 xl:pl-12 xl:pr-12">
-                            <ContactTrainer/>
+                        <ContactTrainer />
                     </div>
                 </div>
             </div >

@@ -227,3 +227,19 @@
   z-index: 2;
   opacity: 1;
 }
+
+.shadow-upcomming {
+  box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+
+
+.shadow-upcomming-big-card {
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.05);
+}
+
+
+.upcomming-shadow-card-height-width{
+  width: 500px;
+  height: 200px;
+}

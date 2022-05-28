@@ -48,6 +48,8 @@ module.exports = {
       'breadcrumbs':'#F9F9FC',
       'breadcrumbs-text':'#999B9F',
       'progress-bar':'#F3C81A',
+      'upcomming-green':'#39741F',
+      'hash-tag':' #3DB9FB',
       'amber': {
         300: '#fcd34d',
         400: '#fbbf24',
