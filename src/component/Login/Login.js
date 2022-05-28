@@ -2,7 +2,6 @@ import React, { useState, Fragment } from "react";
 import LoginImg from "../../asset/images/banner/login.png";
 import { Link } from "react-router-dom";
 import "../../asset/css/login.css";
-import { useQuery } from "react-query";
 import ApiUrl from "../../Api/ApiUrl";
 import { FaFacebookSquare, FaGoogle, FaTwitter } from "react-icons/fa";
 import axios from "axios";
@@ -21,27 +20,19 @@ function Login() {
             password: password
         }
         
-        // const custom_login_headers = {
-        //     method: 'post',
-        //     headers: new Headers({
-        //         'Accept-Language': 'en',
-        //         'Content-Type': 'application/json'
-        //     }),
-        //     body: JSON.stringify(login_data)
-        // }
         const headers={
             'Accept-Language': 'bn',
             'Content-Type': 'application/json',
         }
         axios.post(ApiUrl.BaseUrl + 'user-authentication/api/login/',login_data,  { headers }).then((response) => {
             if (response.data.error === false) {
-                console.log('login succesffully');
+                localStorage.setItem('access_token', response.data.access_token)
+                localStorage.setItem('refresh_token', response.data.refresh_token)
+                console.log('login data = ', response.data)
+                localStorage.setItem('user_data', JSON.stringify(response.data.data))
+                localStorage.setItem('keep_login', keep_login)
             }
         });
-        // const login_response = await (await fetch(ApiUrl.BaseUrl + "user-authentication/api/login/", custom_login_headers))
-        // const data = await login_response.json();
-        // console.log('data = ', data);
-        // alert(data.message)
     }
 
     return (
