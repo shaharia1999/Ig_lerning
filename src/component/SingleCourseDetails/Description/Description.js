@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 import { FiCheckCircle } from "react-icons/fi";
 import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";
-
+import StarRatings from 'react-star-ratings';
 
 function Description() {
     const [courseInfo, setCourseInfo] = useState([]);
@@ -119,15 +119,23 @@ function Description() {
                                 {courseInfo.course_title}
                             </h6>
                             <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-4">Mario rossi   •   Trainer and Speaker</h6>
-                            <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-2">
-                                <ul className="flex sm:justify-center xl:justify-start">
+                            <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">
+                                <div className="flex sm:justify-center xl:justify-start">
+
+                                <StarRatings
+                                    rating={courseInfo.avg_rating}
+                                    starDimension="15px"
+                                    starSpacing="4px"
+                                    starRatedColor="rgb(251, 191, 36)"
+                               
+                                />
+                                    {/* <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
                                     <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
                                     <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
                                     <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                    <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                    <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                    <h6 className="xl:ml-2 xl:-mt-.75 xl:text-xs"> 4.5 <em>(2312 ratings on 42012 students enrolled)</em></h6>
-                                </ul>
+                                    <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li> */}
+                                    <h6 className="xl:ml-2 xl:mt-1 xl:text-xs"> {courseInfo.avg_rating} <em>({courseInfo.total_student_rating} ratings on {courseInfo.total_student_enroll} students enrolled)</em></h6>
+                                </div>
 
                             </h6>
                         </div>

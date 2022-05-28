@@ -7,6 +7,7 @@ import Student5 from '../../../asset/images/student-bought/student5.png';
 import Student6 from '../../../asset/images/student-bought/student6.png';
 import ApiUrl from "../../../Api/ApiUrl";
 import axios from "axios";
+import StarRatings from 'react-star-ratings';
 
 
 function StudentBoughtCourse() {
@@ -18,11 +19,11 @@ function StudentBoughtCourse() {
     console.log('dataraw = ', data1);
     const [courseEnrollImage, setCourseEnrollImage] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    var data = [];
+    const student_enroll_image_data = [];
 
     useEffect(() => {
         setIsLoading(true);
-        axios.get(ApiUrl.BaseUrl + 'api/course/course-enroll-student-list/7/',
+        axios.get(ApiUrl.BaseUrl + 'api/course/course-enroll-student-list/10/',
             {
                 headers: {
                     'Accept-Language': 'bn',
@@ -38,15 +39,14 @@ function StudentBoughtCourse() {
                     else {
                         console.log(i);
                         console.log('loop data is = ', response.data.data[i]);
-                        data.push(response.data.data[i])
+                        student_enroll_image_data.push(response.data.data[i])
                         // setCourseEnrollImage.append(response.data.data[i])
                         console.log('log data = ', courseEnrollImage);
                     }
-
                 }
-                console.log('array data = ', data)
+                console.log('array data = ', student_enroll_image_data)
                 setIsLoading(false);
-                // setCourseEnrollImage(response.data.data);
+                setCourseEnrollImage(student_enroll_image_data);
                 console.log("enroll image = ", response.data.data);
                 console.log("enroll image = ", response.data.length);
                 console.log('image = ', response.data.data[1].student_image);
@@ -57,42 +57,33 @@ function StudentBoughtCourse() {
         });
     }, []);
 
-    // const profile_picture = (() => {
-    //     console.log('is loading4 = ', isLoading);
-    //     if (isLoading === true) {
+    const profile_picture = (() => {
+        console.log('is loading4 = ', isLoading);
+        
+        if (isLoading === true) {
+            return <div className="xl:w-1/6">
+            <img className="rounded-md" src={Student1} alt="" />
+        </div>
+        }
+        else if (isLoading === false) {
+            return courseEnrollImage.map((student_enroll_image, index) => (
+                    <div className="xl:w-1/6">
 
-    //     }
-    //     else if (isLoading === false) {
-    //         return (
-    //             // for(var i=0; i<courseEnrollImage.length; i++){
-    //             //     if(courseEnrollImage[i].student_image == null){
-    //             //         console.log('null data mathc');
-    //             //     }
-    //             //     else{
-    //             //         <div className="xl:w-1/6">
-    //             //             <img className="rounded-md" src={ApiUrl.ImageBaseUrl+courseEnrollImage[i].student_image} alt="" />
-    //             //         </div>
-    //             //     }
-    //             // }
-    //         // )
-    //             array1.map((student_enroll_image, index) =>
-
-    //                 <div className="xl:w-1/6">
-    //                     <h1>{student_enroll_image.course_id}</h1>
-    //                     {/* <img className="rounded-md" src={ApiUrl.ImageBaseUrl+student_enroll_image.student_image} alt="" /> */}
-    //                 </div>
-
-    //             )
-    //         )
-    //     }
-    // })()
+                         <img className="rounded-md" src={ApiUrl.ImageBaseUrl+"/media/"+student_enroll_image.student_image} alt="joy" /> 
+                    </div>
+                    
+                ))   
+                
+            
+        }
+    })()
 
     return (
 
         <div className="flex-basis flex xl:ml-32">
-            {data.map((user) => (
-                <img className="rounded-md" src={Student2} alt="" />
-            ))}
+            {
+                profile_picture
+            }
             {/* <div className="xl:w-1/6">
                     <img className="rounded-md" src={Student1} alt="" />
                 </div>
