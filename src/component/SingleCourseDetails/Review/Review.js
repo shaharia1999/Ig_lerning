@@ -75,11 +75,11 @@ function Review() {
                                 <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-2">
                                     <ul className="flex sm:justify-center xl:justify-start">
                                         <StarRatings
-                                        rating={course_learn_info.rating}
-                                        starDimension="15px"
-                                        starSpacing="4px"
-                                        starRatedColor="rgb(251, 191, 36)"
-                                    />
+                                            rating={course_learn_info.rating}
+                                            starDimension="15px"
+                                            starSpacing="4px"
+                                            starRatedColor="rgb(251, 191, 36)"
+                                        />
                                         <h6 className="xl:ml-2 xl:-mt-.75 xl:text-xs text-black font-medium">2 month ago</h6>
                                     </ul>
                                 </h6>

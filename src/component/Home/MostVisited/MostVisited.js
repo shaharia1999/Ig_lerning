@@ -8,6 +8,7 @@ import LoveIcon from "../../../asset/images/icon/love-icon.png";
 import ShareIcon from "../../../asset/images/icon/icon_share.png";
 import ApiUrl from "../../../Api/ApiUrl";
 import axios from "axios";
+import StarRatings from 'react-star-ratings';
 
 
 function MostVisited() {
@@ -267,9 +268,6 @@ function MostVisited() {
                                 <video type="video/mp4" muted
                                     loop className="w-full vid h-72 object-cover object-center rounded-lg shadow-md"
                                     src={mostvisited_c.promotional_video}></video>
-                                {/* <img className="w-full h-72 object-cover object-center rounded-lg shadow-md" src={Course1} /> */}
-
-
                                 <div className="flex flex-wrap">
                                     <div className="w-1/5">
                                         <a href="!#">
@@ -320,13 +318,14 @@ function MostVisited() {
                                     </div>
 
                                     <ul className="flex sm:justify-center xl:justify-start">
-                                        <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                        <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                        <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                        <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                        <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                        <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">( 4.5
-                                            )</h6>
+                                        <StarRatings
+                                            rating={mostvisited_c.avg_rating}
+                                            starDimension="15px"
+                                            starSpacing="4px"
+                                            starRatedColor="rgb(251, 191, 36)"
+                                        />
+                                        <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">({mostvisited_c.avg_rating})
+                                        </h6>
                                     </ul>
 
                                     <div className="flex flex-wrap">
