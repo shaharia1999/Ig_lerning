@@ -10,8 +10,6 @@ import BusinessCompany from '../../component/Course/RecentlyAddedCourse/Business
 import RecentlyAddedCourseSectionTwo from '../../component/RecentlyAddedCourseSectionTwo/RecentlyAddedCourseSectionTwo';
 
 class HomePage extends Component {
-    
-
     render() {
         return (
             <Fragment>

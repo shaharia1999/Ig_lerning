@@ -11,6 +11,7 @@ import AboutPage from '../../pages/AboutPage/AboutPage';
 import PricingPage from '../../pages/PricingPage/PricingPage';
 import SingleCourseDetailsPage from '../../pages/SingleCourseDetailsPage/SingleCourseDetailsPage';
 import TrainerProfilePage from '../../pages/TrainerProfilePage/TrainerProfilePage';
+import CourseSearchFilterPage from '../../pages/CourseSearchFilterPage/CourseSearchFilterPage';
 
 class AppRoute extends Component {
     render() {
@@ -29,8 +30,8 @@ class AppRoute extends Component {
                     <Route exact path="/price" render={(props) => <PricingPage {...props} key={Date.now()} />} />
 
                     <Route exact path="/course-details" render={(props) => <SingleCourseDetailsPage {...props} key={Date.now()} />} />
-                    
                     <Route exact path="/trainer-profile" render={(props) => <TrainerProfilePage {...props} key={Date.now()} />} />
+                    <Route exact path="/course-search-filter" render={(props) => <CourseSearchFilterPage {...props} key={Date.now()} />} />
                     
                     <Route path="" component={OpssPage} />
                 </Switch>

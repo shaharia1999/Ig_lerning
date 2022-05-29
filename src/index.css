@@ -232,12 +232,9 @@
   box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.05);
 }
 
-
-
 .shadow-upcomming-big-card {
   box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.05);
 }
-
 
 .upcomming-shadow-card-height-width{
   width: 500px;
@@ -247,4 +244,8 @@
 .TrainerBannner{
   height: 600px;
   width: 100%;
+}
+
+.shadow-search-filter {
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
 }
