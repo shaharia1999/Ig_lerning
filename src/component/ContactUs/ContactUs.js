@@ -1,4 +1,4 @@
-import React, {useState,Fragment} from "react";
+import React, {useState,Fragment, useEffect} from "react";
 import { Link } from "react-router-dom";
 import ApiUrl from "../../Api/ApiUrl";
 import axios from "axios";
@@ -33,13 +33,8 @@ function ContactUs(){
             city_id: city_id,
             message: message
         }
-        console.log(' contact_us_data = ', contact_us_data);
-        
-        const headers={
-            'Accept-Language': 'bn',
-            'Content-Type': 'application/json',
-        };
-        axios.post(ApiUrl.BaseUrl + 'user-authentication/api/contact-us/', contact_us_data,  { headers }).then((response) => {
+
+        axios.post(ApiUrl.BaseUrl + 'user-authentication/api/contact-us/', contact_us_data).then((response) => {
             if (response.data.error === false) {
                 console.log('contact succesffully');
             }
@@ -47,34 +42,18 @@ function ContactUs(){
     }
 
 
-    React.useEffect(() => {
-        axios.get(ApiUrl.BaseUrl + 'api/v2/country-info/',
-            {
-                headers: {
-                    'Accept-Language': 'bn',
-                    'Content-Type': 'application/json',
-                }
-            }
-        ).then((response) => {
+    useEffect(() => {
+        axios.get(ApiUrl.BaseUrl + 'api/v2/country-info/').then((response) => {
             if (response.data.error === false) {
                 setCountry(response.data.data);
-                console.log("top category axios", response.data.data);
             }
         });
     }, []);
 
-    React.useEffect(() => {
-        axios.get(ApiUrl.BaseUrl + 'api/v2/city-info/',
-            {
-                headers: {
-                    'Accept-Language': 'bn',
-                    'Content-Type': 'application/json',
-                }
-            }
-        ).then((response) => {
+    useEffect(() => {
+        axios.get(ApiUrl.BaseUrl + 'api/v2/city-info/').then((response) => {
             if (response.data.error === false) {
                 setCitys(response.data.data);
-                console.log("top city axios", response.data.data);
             }
         });
     }, []);
@@ -96,7 +75,7 @@ function ContactUs(){
                             <ul>
                                 <li>
                                     <div>
-                                        <img></img>
+                                        <img alt=""></img>
                                     </div>
                                 </li>
                             </ul>

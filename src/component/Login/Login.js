@@ -10,25 +10,17 @@ function Login() {
     const [username_or_email, setUsernameOrEmail] = useState('')
     const [password, setPassword] = useState('')
     const [keep_login, setKeepLoggin] = useState(false)
-    console.log('username or email = ', username_or_email);
-    console.log('password = ', password);
-    console.log('keep login = ', keep_login);
 
     async function submitLogin() {
         const login_data = {
             username_or_email: username_or_email,
             password: password
         }
-        
-        const headers={
-            'Accept-Language': 'bn',
-            'Content-Type': 'application/json',
-        }
-        axios.post(ApiUrl.BaseUrl + 'user-authentication/api/login/',login_data,  { headers }).then((response) => {
+    
+        axios.post(ApiUrl.BaseUrl + 'user-authentication/api/login/',login_data).then((response) => {
             if (response.data.error === false) {
                 localStorage.setItem('access_token', response.data.access_token)
                 localStorage.setItem('refresh_token', response.data.refresh_token)
-                console.log('login data = ', response.data)
                 localStorage.setItem('user_data', JSON.stringify(response.data.data))
                 localStorage.setItem('keep_login', keep_login)
             }
@@ -46,7 +38,7 @@ function Login() {
 
                                     <div className="lg:w-6/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none">
                                         <div className="text-white">
-                                            <img className="Image" src={LoginImg} />
+                                            <img className="Image" src={LoginImg} alt='' />
                                         </div>
                                     </div>
 

@@ -19,14 +19,7 @@ function Description() {
     
     useEffect(() => {
         setIsLoading(true);
-        axios.get(ApiUrl.BaseUrl + 'api/course/course-single-response/10/',
-            {
-                headers: {
-                    'Accept-Language': 'bn',
-                    'Content-Type': 'application/json',
-                }
-            }
-        ).then((response) => {
+        axios.get(ApiUrl.BaseUrl + 'api/course/course-single-response/10/').then((response) => {
             if (response.data.error === false) {
                 setIsLoading(false);
                 setCourseInfo(response.data.data); 
@@ -53,32 +46,29 @@ function Description() {
     }
 
     const TeacherFollow = (teacher_id) => {
-        const sender = teacher_id
-        const receiver = user_data['id']
+        const sender = user_data['id']
+        const receiver = teacher_id
         const follow_data = {
             sender: sender,
             receiver: receiver
         }
-        const headers={
-            'Accept-Language': 'bn',
-            'Content-Type': 'application/json',
-        }
-        axios.post(ApiUrl.BaseUrl + 'api/course/follow/',follow_data,  { headers }).then((response) => {
-            setIsFollow(true)
+        axios.post(ApiUrl.BaseUrl + 'api/course/follow/',follow_data).then((response) => {
+            if(response.data.error === true){
+                alert(response.data.message)
+            }
+            else{
+                setIsFollow(true)
+            }
         });
     } 
     const TeacherUnFollow = (teacher_id) => {
-        const sender = teacher_id
-        const receiver = user_data['id']
+        const sender = user_data['id']
+        const receiver = teacher_id
         const follow_data = {
             sender: sender,
             receiver: receiver
         }
-        const headers={
-            'Accept-Language': 'bn',
-            'Content-Type': 'application/json',
-        }
-        axios.post(ApiUrl.BaseUrl + 'api/course/un-follow/',follow_data,  { headers }).then((response) => {
+        axios.post(ApiUrl.BaseUrl + 'api/course/un-follow/',follow_data).then((response) => {
             if(response.data.error === false){
                 setIsFollow(false)
             }

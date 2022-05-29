@@ -12,26 +12,18 @@ function Review() {
     const [StudentInformation, setStudentInformation] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
-    const [searchValue, setSearchValue] = useState(null);
-    const [searchRating, setSearchRating] = useState(null);
+    const [searchValue, setSearchValue] = useState('');
+    const [searchRating, setSearchRating] = useState('');
 
     
 
     useEffect(() => {
         setIsLoading(true);
-        axios.get(ApiUrl.BaseUrl + 'api/course/course-student-review/10/',
-            {
-                headers: {
-                    'Accept-Language': 'bn',
-                    'Content-Type': 'application/json',
-                }
-            }
-        ).then((response) => {
+        axios.get(ApiUrl.BaseUrl + 'api/course/course-student-review/10/').then((response) => {
             if (response.data.error === false) {
                 setIsLoading(false);
                 setStudentReview(response.data.data);
                 setStudentInformation(response.data.data.student_information);
-                console.log('course student review = ', response.data.data)
             }
         });
         
@@ -108,24 +100,38 @@ function Review() {
             )
         }
     })()
-    const ReviewSearch = () => {
-        console.log('search value = ', searchValue);
+    
+    function RatingValueSearch(event){
+        setSearchRating(event.target.value)
         console.log('searchRating = ', searchRating);
-        if(searchValue !== null){
-            const review_search_data = {
-                search_value:searchValue,
-                rating: searchRating
-            }
-            axios.put(ApiUrl.BaseUrl + 'api/course/course-student-review-search/10/', review_search_data).then((response) => {
-                if (response.data.error === false) {
-                    setIsLoading(false);
-                    setStudentReview(response.data.data);
-                    setStudentInformation(response.data.data.student_information);
-                    console.log('course student review = ', response.data.data)
-                }
-            });
-        }
+        ReviewSearch()
     }
+
+    function handleSelect(e){
+        console.log(e.target.value);
+        setSearchRating(e.target.value)
+        console.log('6666searchRating = ', searchRating);
+        ReviewSearch()
+      }
+
+    const ReviewSearch = (e) => {
+        console.log('search value = ', searchValue);
+        console.log('searchRating = ', e);
+        setSearchRating(e)
+        const review_search_data = {
+            search_value:searchValue,
+            rating: e
+        }
+        axios.put(ApiUrl.BaseUrl + 'api/course/course-student-review-search/10/', review_search_data).then((response) => {
+            if (response.data.error === false) {
+                setIsLoading(false);
+                setStudentReview(response.data.data);
+                setStudentInformation(response.data.data.student_information);
+                console.log('course student review = ', response.data.data)
+            }
+        });
+    }
+   
 
     return (
         <Fragment>
@@ -142,28 +148,25 @@ function Review() {
                                     </svg>
                                 </button>
                             </div>
-
                         </div>
                     </div>
                     <div className="xl:w-4/12 xl:mt-6 xl:pl-8">
-                        <select onChange={(e) => setSearchRating(e.target.value)} value={searchRating} className="form-select form-select-lg mb-3 appearance-none block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none" aria-label=".form-select-lg example">
-                            <option selected  className="hover:bg-maincolor">All Ratings</option>
+                        <select onChange={(e) => ReviewSearch(e.target.value)} value={searchRating} className="form-select form-select-lg mb-3 appearance-none block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none" aria-label=".form-select-lg example">
+                            <option selected className="hover:bg-maincolor">All Ratings</option>
                             <option className="text-maincolor hover:bg-maincolor" value="5">5 Star</option>
-                            <option className="text-maincolor hover:bg-maincolor" value="4">4 Star</option>
-                            <option className="text-maincolor hover:bg-maincolor" value="3">3 Star</option>
-                            <option className="text-maincolor hover:bg-maincolor" value="2">2 Star</option>
-                            <option className="text-maincolor hover:bg-maincolor" value="1">1 Star</option>
+                            <option className="text-maincolor hover:bg-maincolor"  value="4">4 Star</option>
+                            <option className="text-maincolor hover:bg-maincolor"  value="3">3 Star</option>
+                            <option className="text-maincolor hover:bg-maincolor"  value="2">2 Star</option>
+                            <option className="text-maincolor hover:bg-maincolor"  value="1">1 Star</option>
                         </select>
                     </div>
                 </div>
 
                 <div className="flex flex-wrap xl:pr-16 xl:mb-16">
-
                     {
                         StudentReviewHTML
                     }
                 </div>
-
 
             </div >
         </Fragment >
