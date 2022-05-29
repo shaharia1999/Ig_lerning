@@ -3,7 +3,6 @@ import ApiUrl from "../../../Api/ApiUrl";
 import axios from "axios";
 import CourseLogo from "../../../asset/images/logo/course-logo.png";
 
-
 function TopCategories() {
     const [topCategory, setTopCategory] = useState([]);
     const [totalTopCategory, setTotalTopCategory] = useState('');

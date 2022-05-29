@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import Teacher from "../../../asset/images/course-teacher/teacher.jpg";
 import NewsFeedStage from "../../../asset/images/banner/news-feed-stage.png";
 
-
 function NewsFeed() {
     return (
         <Fragment>
