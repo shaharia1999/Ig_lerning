@@ -68,7 +68,6 @@ function UpCommingEvents() {
                             </div>
                         </div>
 
-
                         <div class="flex xl:mb-5">
                             <div class="flex w-full rounded-lg bg-white shadow-upcomming">
                                 <div className="xl:w-1/3 relative">
