@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { Fragment, useEffect, useState } from "react";
 import { FaStar, FaStepBackward } from "react-icons/fa";
 import ApiUrl from "../../../Api/ApiUrl";
+import StarRatings from 'react-star-ratings';
+
 
 function StudentFeedback() {
     const [studentFeedBack, setStudentFeedBack] = useState([]);
@@ -20,7 +22,6 @@ function StudentFeedback() {
             if (response.data.error === false) {
                 setIsLoading(false);
                 setStudentFeedBack(response.data.data); 
-                console.log('course student feedback = ', response.data.data)
             }
         });
     }, []);
@@ -117,55 +118,38 @@ function StudentFeedback() {
                     <div className="xl:w-1/5 xl:mt-6">
                         <div className="bg-maincolor xl:rounded-lg text-center">
                             <h6 className="xl:pt-6 xl:text-5xl text-white xl:font-bold">{studentFeedBack.avg_rating}</h6>
-                            {(() => {
-                                if (studentFeedBack.avg_rating > 4 && studentFeedBack.avg_rating <=5){
-                                    return <ul className="flex justify-center xl:mt-2">
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-200" /></li>
-        
-                                    </ul>
-                                }
-                                else if (studentFeedBack.avg_rating >=2 && studentFeedBack.avg_rating <3){
-                                return <ul className="flex justify-center xl:mt-2">
-                                    <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                    <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                    {/* <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li> */}
-                                    {/* <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li> */}
-                                    {/* <li className="mb-4 mx-.75"><FaStar className=" text-gray-200" /></li> */}
-    
-                                </ul>
-    
-                                }
-
-                            })()}
-
+                            <ul className="flex justify-center xl:mt-2">
+                                <StarRatings
+                                    rating={studentFeedBack.avg_rating}
+                                    starDimension="15px"
+                                    starSpacing="4px"
+                                    starRatedColor="rgb(251, 191, 36)"
+                                />
+                            </ul>
                             <h6 className="xl:pb-6 xl:-mt-2 xl:text-base text-white xl:font-medium">Course Ratings</h6>
                         </div>
                     </div>
                     <div className="xl:w-3/5 xl:mt-4 xl:pl-8 ">
                         <div class="w-full bg-gray-200 rounded-full h-3.5 xl:mt-3">
-                            <div class="bg-progress-bar h-3.5 rounded-full" style={{ width: "75%" }}></div>
+                            <div class="bg-progress-bar h-3.5 rounded-full" style={{ width: `${studentFeedBack.five_rating_percentage}%` }}></div>
                         </div>
 
                         <div class="w-full bg-gray-200 rounded-full h-3.5 xl:mt-5">
-                            <div class="bg-progress-bar h-3.5 rounded-full" style={{ width: "55%" }}></div>
+                            <div class="bg-progress-bar h-3.5 rounded-full" style={{ width: `${studentFeedBack.four_rating_percentage}%` }}></div>
                         </div>
 
                         <div class="w-full bg-gray-200 rounded-full h-3.5 xl:mt-5">
-                            <div class="bg-progress-bar h-3.5 rounded-full" style={{ width: "25%" }}></div>
-                        </div>
-
-
-                        <div class="w-full bg-gray-200 rounded-full h-3.5 xl:mt-5">
-                            <div class="bg-progress-bar h-3.5 rounded-full" style={{ width: "35%" }}></div>
+                            <div class="bg-progress-bar h-3.5 rounded-full" style={{ width: `${studentFeedBack.three_rating_percentage}%` }}></div>
                         </div>
 
 
                         <div class="w-full bg-gray-200 rounded-full h-3.5 xl:mt-5">
-                            <div class="bg-progress-bar h-3.5 rounded-full" style={{ width: "45%" }}></div>
+                            <div class="bg-progress-bar h-3.5 rounded-full" style={{ width: `${studentFeedBack.two_rating_percentage}%` }}></div>
+                        </div>
+
+
+                        <div class="w-full bg-gray-200 rounded-full h-3.5 xl:mt-5">
+                            <div class="bg-progress-bar h-3.5 rounded-full" style={{ width: `${studentFeedBack.one_rating_percentage}%` }}></div>
                         </div>
                     </div>
                     <div className="xl:w-1/5 xl:mt-5">

@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import LoginImg from "../../asset/images/banner/login.png";
 import { Link } from "react-router-dom";
 import "../../asset/css/login.css";
@@ -28,30 +28,17 @@ function Registration() {
             accept_terms_condition: accept_terms_condition
         }
 
-        const headers={
-            'Accept-Language': 'bn',
-            'Content-Type': 'application/json',
-        }
-        axios.post(ApiUrl.BaseUrl + 'user-authentication/api/student-registration-new/',data,  { headers }).then((response) => {
+        axios.post(ApiUrl.BaseUrl + 'user-authentication/api/student-registration-new/',data).then((response) => {
             if (response.data.error === false) {
-                console.log('registrationg succesffully');
+               
             }
         });
-
     }
 
-    React.useEffect(() => {
-        axios.get(ApiUrl.BaseUrl + 'api/v2/country-info/',
-            {
-                headers: {
-                    'Accept-Language': 'bn',
-                    'Content-Type': 'application/json',
-                }
-            }
-        ).then((response) => {
+    useEffect(() => {
+        axios.get(ApiUrl.BaseUrl + 'api/v2/country-info/').then((response) => {
             if (response.data.error === false) {
                 setCountry(response.data.data);
-                console.log("top category axios", response.data.data);
             }
         });
     }, []);
@@ -196,8 +183,6 @@ function Registration() {
                                                         className="hover:underline"><Link to="/login/">Sign In</Link></span></span>
                                                 </div>
                                             </div>
-
-
                                         </div>
                                     </div>
 

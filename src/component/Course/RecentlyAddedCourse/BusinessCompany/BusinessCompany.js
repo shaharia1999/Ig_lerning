@@ -16,53 +16,32 @@ import axios from "axios";
 
 
 function BusinessCompany() {
-    const [subCategory, setSubCategory] = React.useState([]);
-    const [recently_addedsubcategoryId, setSubcategoryID] = React.useState([]);
+    const [subCategory, setSubCategory] = useState([]);
+    const [recently_addedsubcategoryId, setSubcategoryID] = useState([]);
 
-    React.useEffect(() => {
-        axios.get(ApiUrl.BaseUrl + 'api/course/course-subcategory-response/',
-            {
-                headers: {
-                    'Accept-Language': 'bn',
-                    'Content-Type': 'application/json',
-                }
-            }
-        ).then((response) => {
+    useEffect(() => {
+        axios.get(ApiUrl.BaseUrl + 'api/course/course-subcategory-response/').then((response) => {
             if (response.data.error === false) {
                 setSubCategory(response.data.data);
                 setSubcategoryID(response.data.data);
-                console.log("axios", response.data);
             }
         });
     }, []);
 
     function fetchData(sub_category_id) {
-        axios.get(ApiUrl.BaseUrl + 'api/course/course-subcategory-response/' + sub_category_id + "/",
-            {
-                headers: {
-                    'Accept-Language': 'bn',
-                    'Content-Type': 'application/json',
-                }
-            }
-        ).then((response) => {
+        axios.get(ApiUrl.BaseUrl + 'api/course/course-subcategory-response/' + sub_category_id + "/").then((response) => {
             if (response.data.error === false) {
                 setSubcategoryID(response.data.data);
-                console.log("axios-details", response.data.data.course_informations);
             }
         });
     };
 
     const data_of_subcategory = subCategory.map((subcategory, index) => (
-        <div>
+        <div key={index}>
             <input id={subcategory.sub_category_id} type='hidden' name={subcategory.sub_category_id} />
             <li className="nav-item" role="presentation">
                 <button type="button"
                     className="nav-link block w-full md:w-auto px-6 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 text-base bg-maincolor font-medium leading-tight text-black rounded-3xl mx-2 h-11"
-                    // id="pills-business-tab3"
-                    // data-bs-toggle="pill"
-                    // data-bs-target="pills-business"
-                    // role="tab" aria-controls="pills-Business"
-                    // aria-selected="true"
                     onClick={() => fetchData(subcategory.sub_category_id)}
                 >
                     {subcategory.sub_category_name}
@@ -73,14 +52,13 @@ function BusinessCompany() {
     ));
 
     const data_of_subcategory_course = recently_addedsubcategoryId.map((sub_category_course, index) => (
-        sub_category_course.course_informations.map((course, course_index) => (
-            <div className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/4">
+        sub_category_course.course_info.map((course, course_index) => (
+            <div key={course_index} className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/4">
                 <div className="wrapper antialiased text-gray-900">
                     <div className="relative">
                         <video type="video/mp4" muted
                             loop className="w-full vid h-72 object-cover object-center rounded-lg shadow-md"
                             src={ApiUrl.ImageBaseUrl + course.promotional_video}></video>
-                        {/* <img className="w-full h-72 object-cover object-center rounded-lg shadow-md" src={Course1} /> */}
 
                         <div className="flex flex-wrap">
                             <div className="w-1/5">

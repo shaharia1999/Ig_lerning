@@ -2,7 +2,6 @@ import React, { useState, Fragment } from "react";
 import LoginImg from "../../asset/images/banner/login.png";
 import { Link } from "react-router-dom";
 import "../../asset/css/login.css";
-import { useQuery } from "react-query";
 import ApiUrl from "../../Api/ApiUrl";
 import { FaFacebookSquare, FaGoogle, FaTwitter } from "react-icons/fa";
 import axios from "axios";
@@ -11,37 +10,21 @@ function Login() {
     const [username_or_email, setUsernameOrEmail] = useState('')
     const [password, setPassword] = useState('')
     const [keep_login, setKeepLoggin] = useState(false)
-    console.log('username or email = ', username_or_email);
-    console.log('password = ', password);
-    console.log('keep login = ', keep_login);
 
     async function submitLogin() {
         const login_data = {
             username_or_email: username_or_email,
             password: password
         }
-        
-        // const custom_login_headers = {
-        //     method: 'post',
-        //     headers: new Headers({
-        //         'Accept-Language': 'en',
-        //         'Content-Type': 'application/json'
-        //     }),
-        //     body: JSON.stringify(login_data)
-        // }
-        const headers={
-            'Accept-Language': 'bn',
-            'Content-Type': 'application/json',
-        }
-        axios.post(ApiUrl.BaseUrl + 'user-authentication/api/login/',login_data,  { headers }).then((response) => {
+    
+        axios.post(ApiUrl.BaseUrl + 'user-authentication/api/login/',login_data).then((response) => {
             if (response.data.error === false) {
-                console.log('login succesffully');
+                localStorage.setItem('access_token', response.data.access_token)
+                localStorage.setItem('refresh_token', response.data.refresh_token)
+                localStorage.setItem('user_data', JSON.stringify(response.data.data))
+                localStorage.setItem('keep_login', keep_login)
             }
         });
-        // const login_response = await (await fetch(ApiUrl.BaseUrl + "user-authentication/api/login/", custom_login_headers))
-        // const data = await login_response.json();
-        // console.log('data = ', data);
-        // alert(data.message)
     }
 
     return (
@@ -55,7 +38,7 @@ function Login() {
 
                                     <div className="lg:w-6/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none">
                                         <div className="text-white">
-                                            <img className="Image" src={LoginImg} />
+                                            <img className="Image" src={LoginImg} alt='' />
                                         </div>
                                     </div>
 

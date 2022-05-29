@@ -17,19 +17,11 @@ function MostVisited() {
 
     useEffect(() => {
         setIsLoading(true);
-        axios.get(ApiUrl.BaseUrl + 'api/course/most-visited-course/',
-            {
-                headers: {
-                    'Accept-Language': 'bn',
-                    'Content-Type': 'application/json',
-                }
-            }
-        ).then((response) => {
+        axios.get(ApiUrl.BaseUrl + 'api/course/most-visited-course/').then((response) => {
             if (response.data.error === false) {
                 setIsLoading(false);
                 setMostvisited(response.data.data);
                 setMostvisitedTotalCount(response.data.most_visited_count)
-                console.log("most visited data = ", response.data.data);
             }
         });
     }, []);

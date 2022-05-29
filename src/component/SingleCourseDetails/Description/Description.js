@@ -11,34 +11,72 @@ function Description() {
     const [TeacherInfo, setTeacherInfo] = useState([]);
     const [CourseLearnInfo, setCourseLearnInfo] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
+    const [isFollow, setIsFollow] = useState(false);
+    const [is_check_follow, setIsCheckFollow] = useState(false);
+    var user_data = JSON.parse(localStorage.getItem("user_data"));
+    console.log('user data = ', user_data)
 
+    
     useEffect(() => {
         setIsLoading(true);
-        axios.get(ApiUrl.BaseUrl + 'api/course/course-single-response/10/',
-            {
-                headers: {
-                    'Accept-Language': 'bn',
-                    'Content-Type': 'application/json',
-                }
-            }
-        ).then((response) => {
+        axios.get(ApiUrl.BaseUrl + 'api/course/course-single-response/10/').then((response) => {
             if (response.data.error === false) {
                 setIsLoading(false);
-                // setCourseInfo(response.data);
-                console.log('course information 0 = ', response.data.data)
-                var data = JSON.stringify(response.data.data);
-                console.log('course infor data = ', data);
                 setCourseInfo(response.data.data); 
-                setTeacherInfo(response.data.data.course_created_by_info)
-                setCourseLearnInfo(response.data.data.course_learn_info)
-                console.log('course information 0 = ', response.data.data)
-                console.log('course information = ', response.data.data.course_created_by_info)
+                setTeacherInfo(response.data.data.course_created_by_info);
+                setCourseLearnInfo(response.data.data.course_learn_info);
+                setIsCheckFollow(true);
             }
         });
     }, []);
 
+    if(is_check_follow === true){
+        if (user_data !== null){
+            const user_id = user_data['id']
+            const teacher_id = TeacherInfo.id
+            const check_follow_data = {
+                sender: user_id,
+                receiver: teacher_id
+            }
+            axios.post(`${ApiUrl.BaseUrl}api/course/check-user-follow-status/`, check_follow_data).then((res) =>{
+                setIsFollow(res.data.is_follow)
+                console.log('isFollow = ', isFollow);
+            })
+        }
+    }
+
+    const TeacherFollow = (teacher_id) => {
+        const sender = user_data['id']
+        const receiver = teacher_id
+        const follow_data = {
+            sender: sender,
+            receiver: receiver
+        }
+        axios.post(ApiUrl.BaseUrl + 'api/course/follow/',follow_data).then((response) => {
+            if(response.data.error === true){
+                alert(response.data.message)
+            }
+            else{
+                setIsFollow(true)
+            }
+        });
+    } 
+    const TeacherUnFollow = (teacher_id) => {
+        const sender = user_data['id']
+        const receiver = teacher_id
+        const follow_data = {
+            sender: sender,
+            receiver: receiver
+        }
+        axios.post(ApiUrl.BaseUrl + 'api/course/un-follow/',follow_data).then((response) => {
+            if(response.data.error === false){
+                setIsFollow(false)
+            }
+        });
+    }
+    
+
     const CourseInfoTeacherAndDescription = (() => {
-        console.log('is loading4 = ', isLoading);
         if (isLoading === true) {
             return <div className="xl:ml-32">
             <div className="flex flex-wrap">
@@ -112,28 +150,36 @@ function Description() {
                             <img 
                             className="xl:h-28 xl:mt-7 xl:w-28 rounded-full xl:border-4 xl:border-white xl:shadow-lg"
                                 src={ApiUrl.ImageBaseUrl+TeacherInfo.image} alt="teacher" />
-                            <button className="xl:ml-2 text-maincolor xl:font-semibold xl:text-xl xl:mt-3">+ Follow</button>
+                            {(() => {
+                                if(isFollow === true){
+                                    return <button onClick={() => TeacherUnFollow(TeacherInfo.id)} 
+                                        className="xl:ml-2 text-maincolor xl:font-semibold xl:text-xl xl:mt-3">
+                                         + Unfollow
+                                    </button>
+                                }
+                                else{
+                                    return <button onClick={() => TeacherFollow(TeacherInfo.id)}  
+                                        className="xl:ml-2 text-maincolor xl:font-semibold xl:text-xl xl:mt-3">
+                                        + Follow
+                                    </button>
+                                }
+                                
+                            })()}
+                            
                         </div>
                         <div className="xl:w-10/12 xl:-ml-12">
                             <h6 className=" text-sectionTitleColor text-3xl font-semibold xl:pr-24 xl:mt-8">
                                 {courseInfo.course_title}
                             </h6>
-                            <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-4">Mario rossi   •   Trainer and Speaker</h6>
+                            <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-4">{TeacherInfo.username}   •   Trainer and Speaker</h6>
                             <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">
                                 <div className="flex sm:justify-center xl:justify-start">
-
                                 <StarRatings
                                     rating={courseInfo.avg_rating}
                                     starDimension="15px"
                                     starSpacing="4px"
                                     starRatedColor="rgb(251, 191, 36)"
-                               
                                 />
-                                    {/* <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                    <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                    <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                    <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                                    <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li> */}
                                     <h6 className="xl:ml-2 xl:mt-1 xl:text-xs"> {courseInfo.avg_rating} <em>({courseInfo.total_student_rating} ratings on {courseInfo.total_student_enroll} students enrolled)</em></h6>
                                 </div>
 

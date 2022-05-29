@@ -53,34 +53,6 @@ function SingleCourseDetails() {
                     </div>
                     <Footer />
                 </div>
-                {/* 
-
-
-                <div className="flex flex-wrap fixed-top right-0 xl:mt-72 float-right justify-end">
-                    <div className="xl:w-4/12 flex xl:pr-36">
-                        <div class="bg-BgLoveIcon rounded-lg">
-                            <div className="rounded-lg">
-                                <video type="video/mp4" muted
-                                    loop className="w-full xl:p-5 h-72"
-                                    src={MyVideo}></video>
-                            </div>
-
-                            <div class="xl:p-5">
-                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                                <button class="text-white bg-maincolordeep xl:rounded-md xl:py-4 xl:w-full opacity-100">Enroll now</button>
-                                <h6 className="text-black xl:font-semibold xl:text-2xl xl:mt-5 xl:mb-4">What's Included</h6>
-                                <ul>
-                                    <li className="text-black">Mobile Support</li>
-                                    <li className="text-black">Lession Archive</li>
-                                    <li className="text-black">Mobile Support</li>
-                                    <li className="text-black">Tutor Chat</li>
-                                    <li className="text-black">Course Certificate</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
-
             </div>
         </Fragment>
     );

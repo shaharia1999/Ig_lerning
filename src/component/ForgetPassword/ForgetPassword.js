@@ -12,13 +12,9 @@ function ForgetPassword() {
         const data = {
             email: email,
         }
-        const headers ={
-            'Accept-Language': 'bn',
-            'Content-Type': 'application/json',
-        }
-        axios.post(ApiUrl.BaseUrl + 'user-authentication/api/forget-password/', data,  { headers }).then((response) => {
+        axios.post(ApiUrl.BaseUrl + 'user-authentication/api/forget-password/', data).then((response) => {
             if (response.data.error === false) {
-                console.log('forget succesffully');
+               
             }
         });
     }
@@ -34,7 +30,7 @@ function ForgetPassword() {
 
                                     <div className="lg:w-6/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none">
                                         <div className="text-white">
-                                            <img className="Image" src={LoginImg} />
+                                            <img className="Image" src={LoginImg} alt=''/>
                                         </div>
                                     </div>
 
