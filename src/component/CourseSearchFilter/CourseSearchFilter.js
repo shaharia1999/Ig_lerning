@@ -1,6 +1,8 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
+import { IoCloseOutline } from "react-icons/io5";
+
 import SpeedMeter from "../../asset/images/icon/icon_level.png";
 import CertificateIcon from "../../asset/images/icon/icon_certificate.png";
 import LoveIcon from "../../asset/images/icon/love-icon.png";
@@ -9,8 +11,40 @@ import Play from "../../asset/images/icon/play.png";
 import CourseLogo from "../../asset/images/logo/course-logo.png";
 import MyVideo from "../../asset/video/mov_bbb.mp4";
 import 'tw-elements';
+import ReactFlagsSelect from "react-flags-select";
+import MultiRangeSlider from "multi-range-slider-react";
+import webroukCustomRange from "https://cdn.skypack.dev/webrouk-custom-range@latest";
 
 function CourseSearchFilter() {
+    const [selected, setSelected] = useState("");
+    const onSelect = (code) => setSelected(code);
+
+    const showSelectedLabel = ("Show Selected Label", true);
+    const showSecondarySelectedLabel = (
+        "Show Secondary Selected Label",
+        true
+    );
+    const selectedSize = ("Selected Size", 16);
+    const showOptionLabel = ("Show Option Label", true);
+    const showSecondaryOptionLabel = ("Show Secondary Option Label", true);
+    const optionsSize = ("Options Size", 16);
+    const placeholder = ("Placeholder", "");
+    const searchable = ("Searchable", false);
+    const searchPlaceholder = ("Search Placeholder", "");
+    const alignOptionsToRight = ("Align Options to Right", false);
+    const fullWidth = ("Full Width", true);
+    const disabled = ("Disabled", false);
+
+
+    // for multiple rage selection
+    const [minValue, set_minValue] = useState(25);
+    const [maxValue, set_maxValue] = useState(75);
+    const handleInput = (e) => {
+        set_minValue(e.minValue);
+        set_maxValue(e.maxValue);
+    };
+
+
     return (
         <Fragment>
             <div>
@@ -70,14 +104,26 @@ function CourseSearchFilter() {
                             </div>
                             <div className="xl:w-1/2 flex justify-end">
 
-                                <select class="select h-8 w-56 rounded-sm bg-gray-200 focus:border-hidden  active:border-hidden font-normal">
+                                <select class="select h-8 w-56 border-none active:outline-none focus:outline-none rounded-sm bg-gray-200 focus:border-hidden  active:border-hidden font-normal">
                                     <option selected className="hover:bg-maincolor text-sm">Short Result By</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="5">1</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="4">2</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="3">3</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="2">4</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="1">5</option>
+                                    <hr/>
+                                    <option className=" text-gray-500 bg-white hover:bg-maincolor" value="5">Most Relevent</option>
+                                    <hr/>
+                                    <option className=" text-gray-500 bg-white hover:bg-maincolor" value="4">Most Reviewed</option>
+                                    <hr/>
+                                    <option className=" text-gray-500 bg-white hover:bg-maincolor" value="3">Highest rated</option>
+                                    <hr/>
+                                    <option className=" text-gray-500 bg-white hover:bg-maincolor" value="2">Newest</option>
+                                    <hr/>
+                                    <option className=" text-gray-500 bg-white hover:bg-maincolor" value="1">Lowest Price</option>
+                                    <hr/>
+                                    <option className=" text-gray-500 bg-white hover:bg-maincolor" value="1">Highest Price</option>
+                                    <hr/>
+                                    <option className=" text-gray-500 bg-white hover:bg-maincolor" value="1">Best Selling</option>
+                                    <hr/>
+                                    <option className=" text-gray-500 bg-white  hover:bg-maincolor" value="1">Best Teacher</option>
                                 </select>
+
                                 <BsFillGrid3X3GapFill className=" text-3xl float-right xl:ml-4 xl:mt-2" />
                             </div>
                         </div>
@@ -87,35 +133,233 @@ function CourseSearchFilter() {
                 <div className="container">
                     <div className="flex flex-wrap xl:mt-10">
                         <div className="xl:w-4/12 xl:pr-10">
-                            <div className="flex flex-wrap bg-white rounded-xl shadow-search-filter border-none xl:pl-7 xl:pr-4 w-full xl:mt-6 xl:pb-8">
-                                <h6 className="xl:text-2xl xl:mt-5 xl:font-bold text-maingray">Course Filters</h6>
+                            <div className="flex flex-wrap bg-white rounded-xl shadow-search-filter border-none xl:pl-7 xl:pr-6 w-full xl:mt-6 xl:pb-8">
 
-                                <select class="select w-full rounded-sm xl:mt-5 bg-gray-100 focus:border-hidden  active:border-hidden font-normal">
-                                    <option selected className="hover:bg-maincolor text-sm">Short Result By</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="5">1</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="4">2</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="3">3</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="2">4</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="1">5</option>
-                                </select>
+                                <div className="xl:w-full">
+                                    <h6 className="xl:text-2xl xl:mt-5 xl:font-bold text-maingray">Course Filters</h6>
+                                </div>
 
-                                <select class="select w-1/2 rounded-sm xl:mt-5 bg-gray-100 focus:border-hidden active:border-hidden font-normal">
-                                    <option selected className="hover:bg-maincolor text-sm">Short Result By</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="5">1</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="4">2</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="3">3</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="2">4</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="1">5</option>
-                                </select>
+                                <div className="xl:w-full">
+                                    <select class="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                        <option selected className="hover:bg-maincolor text-sm">Course Details</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="3">3</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="2">4</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="1">5</option>
+                                    </select>
+                                </div>
 
-                                <select class="select w-1/2 rounded-sm xl:mt-5 bg-gray-100 focus:border-hidden active:border-hidden font-normal">
-                                    <option selected className="hover:bg-maincolor text-sm">Short Result By</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="5">1</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="4">2</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="3">3</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="2">4</option>
-                                    <option className="text-maincolor hover:bg-maincolor" value="1">5</option>
-                                </select>
+
+
+                                <div className="xl:w-full flex flex-wrap">
+                                    <div className="xl:w-1/2 xl:pr-1">
+                                        <select class="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                            <option selected className="hover:bg-maincolor text-sm">Duration</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="3">3</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="2">4</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="1">5</option>
+                                        </select>
+                                    </div>
+
+                                    <div className="xl:w-1/2 xl:pl-1">
+                                        <select class="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                            <option selected className="hover:bg-maincolor text-sm">Course By</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="3">3</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="2">4</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="1">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+
+                                <div className="xl:w-full xl:mt-7">
+                                    <ReactFlagsSelect
+                                        selected={selected}
+                                        onSelect={onSelect}
+                                        showSelectedLabel={showSelectedLabel}
+                                        showSecondarySelectedLabel={showSecondarySelectedLabel}
+                                        selectedSize={selectedSize}
+                                        showOptionLabel={showOptionLabel}
+                                        showSecondaryOptionLabel={showSecondaryOptionLabel}
+                                        optionsSize={optionsSize}
+                                        placeholder={placeholder}
+                                        searchable={searchable}
+                                        searchPlaceholder={searchPlaceholder}
+                                        alignOptionsToRight={alignOptionsToRight}
+                                        fullWidth={fullWidth}
+                                        disabled={disabled}
+                                    />
+                                </div>
+
+
+                                <div className="xl:w-full flex flex-wrap">
+                                    <div className="xl:w-1/2 xl:pr-1">
+                                        <select class="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                            <option selected className="hover:bg-maincolor text-sm">Language</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="3">3</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="2">4</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="1">5</option>
+                                        </select>
+                                    </div>
+
+                                    <div className="xl:w-1/2 xl:pl-1">
+                                        <select class="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                            <option selected className="hover:bg-maincolor text-sm">Level</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="3">3</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="2">4</option>
+                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="1">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div className="xl:w-full">
+                                    <select class="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                        <option selected className="hover:bg-maincolor text-sm">Course Features</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="3">3</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="2">4</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="1">5</option>
+                                    </select>
+                                </div>
+
+
+                                <div className="xl:w-full">
+                                    <select class="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                        <option selected className="hover:bg-maincolor text-sm">Course Prices</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="3">3</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="2">4</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="1">5</option>
+                                    </select>
+                                </div>
+
+
+                                <div className="xl:w-full">
+                                    <select class="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                        <option selected className="hover:bg-maincolor text-sm">Course Type</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="3">3</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="2">4</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="1">5</option>
+                                    </select>
+                                </div>
+
+
+                                <div className="xl:w-full">
+                                    <div class="form-check xl:mt-7">
+                                        <input class="form-check-input appearance-none focus:outline-none h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckDefault" />
+                                        <label class="form-check-label inline-block text-gray-800 xl:text-sm xl:font-normal" for="flexCheckDefault">
+                                            Option Checkable (Value)
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                                <div className="xl:w-full xl:mt-7">
+                                    <webrouk-custom-range start="0" end="5000" from="300" to="700" prefix-char="$">
+
+                                        <input type="hidden" />
+                                    </webrouk-custom-range>
+                                </div>
+
+
+                                <div className="xl:w-full xl:h-12 xl:pt-3 bg-gray-100 xl:mt-7">
+                                    <div className="flex">
+                                        <span className="ml-3 w-80 text-sm font-medium text-gray-900 dark:text-gray-300 float-left">IntelloGeek Choice</span>
+                                        <label for="default-toggle" className="relative cursor-pointer float-right right-0 flex">
+                                            <input type="checkbox" value="" id="default-toggle" className="sr-only peer" />
+                                            <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-maincolor"></div>
+
+                                        </label>
+                                    </div>
+
+                                </div>
+
+
+
+                                <div className="xl:w-full flex flex-wrap xl:mt-7">
+                                    <span
+                                        className="xl:px-4 xl:py-1.5 xl:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                        Itialian
+                                        <button className="bg-transparent hover focus:outline-none">
+                                            <span><IoCloseOutline className="xl:h-4 xl:w-4 xl:ml-3" /></span>
+                                        </button>
+                                    </span>
+
+                                    <span
+                                        className="xl:px-4 xl:py-1.5 xl:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                        With Certificate
+                                        <button className="bg-transparent hover focus:outline-none">
+                                            <span><IoCloseOutline className="xl:h-4 xl:w-4 xl:ml-3" /></span>
+                                        </button>
+                                    </span>
+
+
+                                    <span
+                                        className="xl:px-4 xl:py-1.5 xl:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                        Courses
+                                        <button className="bg-transparent hover focus:outline-none">
+                                            <span><IoCloseOutline className="xl:h-4 xl:w-4 xl:ml-3" /></span>
+                                        </button>
+                                    </span>
+
+                                    <span
+                                        className="xl:px-4 xl:py-1.5 xl:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                        Big Data Courses
+                                        <button className="bg-transparent hover focus:outline-none">
+                                            <span><IoCloseOutline className="xl:h-4 xl:w-4 xl:ml-3" /></span>
+                                        </button>
+                                    </span>
+
+                                    <span
+                                        className="xl:px-4 xl:py-1.5 xl:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                        Courses
+                                        <button className="bg-transparent hover focus:outline-none">
+                                            <span><IoCloseOutline className="xl:h-4 xl:w-4 xl:ml-3" /></span>
+                                        </button>
+                                    </span>
+
+
+                                    <span
+                                        className="xl:px-4 xl:py-1.5 xl:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                        Italian
+                                        <button className="bg-transparent hover focus:outline-none">
+                                            <span><IoCloseOutline className="xl:h-4 xl:w-4 xl:ml-3" /></span>
+                                        </button>
+                                    </span>
+
+                                    <span
+                                        className="xl:px-4 xl:py-1.5 xl:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                        Courses
+                                        <button className="bg-transparent hover focus:outline-none">
+                                            <span><IoCloseOutline className="xl:h-4 xl:w-4 xl:ml-3" /></span>
+                                        </button>
+                                    </span>
+
+                                    <span
+                                        className="xl:px-4 xl:py-1.5 xl:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                        Big Data Courses
+                                        <button className="bg-transparent hover focus:outline-none">
+                                            <span><IoCloseOutline className="xl:h-4 xl:w-4 xl:ml-3" /></span>
+                                        </button>
+                                    </span>
+                                </div>
+
+
 
                             </div>
                         </div>
