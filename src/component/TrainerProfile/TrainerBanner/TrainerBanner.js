@@ -17,8 +17,7 @@ function TrainerBanner() {
             if (response.data.error === false){
                 setIsLoading(false)
                 setTrainerProfileInfo(response.data.data)
-                setAboutInfo(response.data.data.about_info[0])
-                console.log(response.data.data.about_info[0])
+                setAboutInfo(response.data.data?.about_info[0])
             }
         })
     }, []);
