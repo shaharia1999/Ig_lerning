@@ -8,7 +8,6 @@ function TrainerProfile() {
     return (
         <Fragment>
             <div className="container">
-
                 <div className="flex flex-wrap xl:mt-10">
                     <div className="xl:w-4/12">
                         <NewsFeed/>
