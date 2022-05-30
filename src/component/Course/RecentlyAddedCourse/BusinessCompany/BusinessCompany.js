@@ -13,6 +13,7 @@ import CourseLogo from "../../../../asset/images/logo/course-logo.png";
 import 'tw-elements';
 import RecentlyAddedCourseOne from "../../../RecentlyAddedCourseOne/RecentlyAddedCourseOne";
 import axios from "axios";
+import StarRatings from 'react-star-ratings';
 
 
 function BusinessCompany() {
@@ -29,9 +30,9 @@ function BusinessCompany() {
     }, []);
 
     function fetchData(sub_category_id) {
-        axios.get(ApiUrl.BaseUrl + 'api/course/course-subcategory-response/' + sub_category_id + "/").then((response) => {
-            if (response.data.error === false) {
-                setSubcategoryID(response.data.data);
+        axios.get(ApiUrl.BaseUrl + 'api/course/course-subcategory-response/' + sub_category_id + "/").then((res) => {
+            if (res.data.error === false) {
+                setSubcategoryID(res.data.data);
             }
         });
     };
@@ -48,7 +49,6 @@ function BusinessCompany() {
                 </button>
             </li>
         </div>
-        
     ));
 
     const data_of_subcategory_course = recently_addedsubcategoryId.map((sub_category_course, index) => (
@@ -111,13 +111,13 @@ function BusinessCompany() {
                             </div>
 
                             <ul className="flex sm:justify-center xl:justify-start">
-                                <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">( 4.5
-                                    )</h6>
+                                <StarRatings
+                                    rating={course.avg_rating}
+                                    starDimension="15px"
+                                    starSpacing="4px"
+                                    starRatedColor="rgb(251, 191, 36)"
+                                />
+                                <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">({course.avg_rating})</h6>
                             </ul>
 
                             <div className="flex flex-wrap">
@@ -141,7 +141,6 @@ function BusinessCompany() {
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -153,7 +152,6 @@ function BusinessCompany() {
     return (
         <Fragment>
             <div className="container my-12">
-
                 <div className="flex flex-wrap">
                     <div className="w-1/3">
                         <div className="flex">
@@ -163,29 +161,18 @@ function BusinessCompany() {
                     </div>
                     <div className="w-2/3 relative">
                         <div className="flex right-0 absolute">
-
-
                             <div class="mb-4">
-                                <ul className="nav nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4" 
-                                // id="pills-tab3"
-                                //     role="tablist"
-                                    >
+                                <ul className="nav nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4">
                                     {
                                         data_of_subcategory
                                     }
                                 </ul>
                             </div>
-
                         </div>
                     </div>
                 </div>
                 <div className="mt-4">
-                    <div className=" fade show active"
-                        // id="pills-business"
-                        // role="tabpanel"
-                        // aria-labelledby="pills-business-tab3"
-                    >
-
+                    <div className=" fade show active">
                         <div className="flex flex-wrap -mx-1 lg:-mx-4">
                             {
                                 data_of_subcategory_course
@@ -197,9 +184,5 @@ function BusinessCompany() {
         </Fragment>
     );
 }
-// }
 
-
-
-// }
 export default BusinessCompany;
