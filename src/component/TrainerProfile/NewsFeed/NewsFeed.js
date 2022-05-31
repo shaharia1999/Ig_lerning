@@ -64,7 +64,7 @@ function NewsFeed() {
                         </div>
                         <div className="xl:w-9/12 xl:ml-3">
                             <h6 className=" text-sectionTitleColor text-xl font-semibold xl:mt-4">{userInfo.surname}</h6>
-                            <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-0">2 hours ago</h6>
+                            <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-0">{news_feed.when_published}</h6>
                         </div>
                     </div>
                     <div className="xl:w-full xl:mt-3">
