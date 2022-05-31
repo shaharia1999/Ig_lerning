@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="5279" height="3256" viewBox="0 0 5279 3256">
+  <defs>
+    <clipPath id="clip-CheckoutPageBackground">
+      <rect width="5279" height="3256"/>
+    </clipPath>
+  </defs>
+  <g id="CheckoutPageBackground" clip-path="url(#clip-CheckoutPageBackground)">
+    <rect width="5279" height="3256" fill="#fff"/>
+    <g id="Bg" transform="translate(-48.033 -6864)">
+      <path id="Path_131" data-name="Path 131" d="M10763,220h.811L16044.95,3477H10763.812Z" transform="translate(-10714.968 6644)" fill="#79ba78" opacity="0.15"/>
+    </g>
+  </g>
+</svg>

@@ -73,6 +73,17 @@
   padding: 0 !important;
 }
 
+.bg-checkout {
+  background-image: url('../src/asset/images/banner/CheckoutPageBackground.svg');
+  width: 100% !important;
+  height: 100vh !important;
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 0px !important;
+  padding: 0 !important;
+}
+
 .footer-svg {
   background-image: url('../src/asset/images/banner/footer-svg.svg');
   width: 100% !important;
@@ -196,17 +207,19 @@
 }
 
 ::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
 }
 
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-    background: #000000;
+  background: #000000;
 }
 
-.img-back{
-  background-attachment: fixed!important;
+.img-back {
+  background-attachment: fixed !important;
   height: 400px;
   background-image: url('../src/asset/images/banner/IgLearnProBanner.png');
   width: 100% !important;
@@ -217,12 +230,12 @@
 }
 
 
-.margin-right{
+.margin-right {
   margin-right: 800px;
 }
 
 
-.stack > *:nth-child(2) {
+.stack>*:nth-child(2) {
   transform: translateY(0.5rem) scale(0.95);
   z-index: 2;
   opacity: 1;
@@ -236,12 +249,12 @@
   box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.05);
 }
 
-.upcomming-shadow-card-height-width{
+.upcomming-shadow-card-height-width {
   width: 500px;
   height: 200px;
 }
 
-.TrainerBannner{
+.TrainerBannner {
   height: 600px;
   width: 100%;
 }
@@ -260,16 +273,16 @@
   padding: 8px 10px !important;
   font-family: inherit;
   color: #000000;
-  border: none!important;
-  border-radius: 2px!important; 
-  background: #F3F4F6 !important; 
+  border: none !important;
+  border-radius: 2px !important;
+  background: #F3F4F6 !important;
   font-size: 14px !important;
 }
 
 .ReactFlagsSelect-module_selectOptions__3LNBJ {
   position: absolute;
   z-index: 999999;
-  border: none!important;
+  border: none !important;
   border-radius: 2px !important;
   background: #ffffff !important;
   margin-top: 8px;
@@ -278,7 +291,7 @@
   overflow: auto;
   color: #000000 !important;
   font-weight: 300 !important;
-  font-size: 14px!important;
+  font-size: 14px !important;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -314,7 +327,8 @@
 }
 
 
-.ReactFlagsSelect-module_selectBtn__19wW7:after, .ReactFlagsSelect-module_selectBtn__19wW7[aria-expanded="true"]:after {
+.ReactFlagsSelect-module_selectBtn__19wW7:after,
+.ReactFlagsSelect-module_selectBtn__19wW7[aria-expanded="true"]:after {
   content: " ";
   width: 0;
   height: 0;
@@ -325,17 +339,17 @@
 
 
 webrouk-custom-range {
-	/* Expected variables from inside the component (optional) */
-	--primary-color: #D76E2D;
-	--text-color: hsl(0, 100%, 100%);
-	--line-color: hsl(0, 0%, 93%);
+  /* Expected variables from inside the component (optional) */
+  --primary-color: #D76E2D;
+  --text-color: hsl(0, 100%, 100%);
+  --line-color: hsl(0, 0%, 93%);
 }
 
 
 
-.hr-tag-select{
+.hr-tag-select {
   border: #E7F0FB !important;
-  border-style: solid!important;
+  border-style: solid !important;
   border-width: 2px !important;
   margin-top: 20px !important;
   margin-bottom: 20px !important;
