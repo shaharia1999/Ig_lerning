@@ -11,6 +11,10 @@ function TrainerProfileCard() {
     const [teacherProfileAbout, setTeacherProfileAbout] = useState([]);
     const [aboutInfo, setAboutInfo] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
+    const [isFollow, setIsFollow] = useState(false);
+    const [is_check_follow, setIsCheckFollow] = useState(false);
+    var user_data = JSON.parse(localStorage.getItem("user_data"));
+    console.log('user data = ', user_data)
 
     useEffect(() =>{
         setIsLoading(true)
@@ -20,9 +24,54 @@ function TrainerProfileCard() {
                 setIsLoading(false);
                 setTeacherProfileAbout(response.data.data);
                 setAboutInfo(response.data.data?.about_info[0])
+                setIsCheckFollow(true);
             }
         });
     },[]);
+
+    if(is_check_follow === true){
+        if (user_data !== null){
+            const user_id = user_data['id']
+            const teacher_id = teacherProfileAbout.id
+            const check_follow_data = {
+                sender: user_id,
+                receiver: teacher_id
+            }
+            axios.post(`${ApiUrl.BaseUrl}api/course/check-user-follow-status/`, check_follow_data).then((res) =>{
+                setIsFollow(res.data.is_follow)
+                console.log('isFollow = ', isFollow);
+            })
+        }
+    }
+    const TeacherFollow = (teacher_id) => {
+        const sender = user_data['id']
+        const receiver = teacher_id
+        const follow_data = {
+            sender: sender,
+            receiver: receiver
+        }
+        axios.post(ApiUrl.BaseUrl + 'api/course/follow/',follow_data).then((response) => {
+            if(response.data.error === true){
+                alert(response.data.message)
+            }
+            else{
+                setIsFollow(true)
+            }
+        });
+    } 
+    const TeacherUnFollow = (teacher_id) => {
+        const sender = user_data['id']
+        const receiver = teacher_id
+        const follow_data = {
+            sender: sender,
+            receiver: receiver
+        }
+        axios.post(ApiUrl.BaseUrl + 'api/course/un-follow/',follow_data).then((response) => {
+            if(response.data.error === false){
+                setIsFollow(false)
+            }
+        });
+    }
 
     const TeacherProfileHtml = (() => {
         if(isLoading === true){
@@ -113,7 +162,25 @@ function TrainerProfileCard() {
 
                         <div className="flex xl:mt-7 justify-center">
                             <button className="bg-breadcrumbs-text text-white xl:font-light xl:text-xs xl:mx-2 xl:pt-2 xl:pb-2 xl:pl-4 xl:pr-4 xl:rounded-3xl">Read More ...</button>
-                            <button className="bg-maincolor text-white xl:font-light xl:text-xs xl:mx-2 xl:pt-2 xl:pb-2 xl:pl-4 xl:pr-4 xl:rounded-3xl">Follow Now +</button>
+                            {(() => {
+                                if(isFollow === true){
+                                    return <button onClick={() => TeacherUnFollow(teacherProfileAbout.id)} 
+                                    className="bg-maincolor text-white xl:font-light xl:text-xs xl:mx-2 xl:pt-2 xl:pb-2 xl:pl-4 xl:pr-4 xl:rounded-3xl">
+                                        Unfollow
+                                    </button>
+                                }
+                                else{
+                                    return <button onClick={() => TeacherFollow(teacherProfileAbout.id)}  
+                                    className="bg-maincolor text-white xl:font-light xl:text-xs xl:mx-2 xl:pt-2 xl:pb-2 xl:pl-4 xl:pr-4 xl:rounded-3xl">
+                                        Follow Now +
+                                    </button>
+                                }
+                                
+                            })()}
+                            {/* <button 
+                                className="bg-maincolor text-white xl:font-light xl:text-xs xl:mx-2 xl:pt-2 xl:pb-2 xl:pl-4 xl:pr-4 xl:rounded-3xl">
+                                    Follow Now +
+                            </button> */}
                         </div>
 
                         <h6 className="text-center xl:text-lg text-maingray xl:font-bold xl:mt-9">Community</h6>

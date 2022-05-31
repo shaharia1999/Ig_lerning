@@ -80,7 +80,7 @@ function Review() {
                                             starSpacing="4px"
                                             starRatedColor="rgb(251, 191, 36)"
                                         />
-                                        <h6 className="xl:ml-2 xl:-mt-.75 xl:text-xs text-black font-medium">2 month ago</h6>
+                                        <h6 className="xl:ml-2 xl:-mt-.75 xl:text-xs text-black font-medium">{course_learn_info.whenpublished}</h6>
                                     </ul>
                                 </h6>
                                 <h6 className="text-breadcrumbs-text text-sm font-normal xl:tracking-normal">
