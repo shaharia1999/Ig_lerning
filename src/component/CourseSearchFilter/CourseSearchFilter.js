@@ -11,9 +11,11 @@ import Play from "../../asset/images/icon/play.png";
 import CourseLogo from "../../asset/images/logo/course-logo.png";
 import MyVideo from "../../asset/video/mov_bbb.mp4";
 import 'tw-elements';
+import StarRatings from 'react-star-ratings';
 import ReactFlagsSelect from "react-flags-select";
 import MultiRangeSlider from "multi-range-slider-react";
 import webroukCustomRange from "https://cdn.skypack.dev/webrouk-custom-range@latest";
+import { Link } from "react-router-dom";
 
 function CourseSearchFilter() {
     const [selected, setSelected] = useState("");
@@ -106,22 +108,22 @@ function CourseSearchFilter() {
 
                                 <select class="select h-8 w-56 border-none active:outline-none focus:outline-none rounded-sm bg-gray-200 focus:border-hidden  active:border-hidden font-normal">
                                     <option selected className="hover:bg-maincolor text-sm">Short Result By</option>
-                                    <hr/>
-                                    <option className=" text-gray-500 bg-white hover:bg-maincolor" value="5">Most Relevent</option>
-                                    <hr/>
-                                    <option className=" text-gray-500 bg-white hover:bg-maincolor" value="4">Most Reviewed</option>
-                                    <hr/>
-                                    <option className=" text-gray-500 bg-white hover:bg-maincolor" value="3">Highest rated</option>
-                                    <hr/>
-                                    <option className=" text-gray-500 bg-white hover:bg-maincolor" value="2">Newest</option>
-                                    <hr/>
-                                    <option className=" text-gray-500 bg-white hover:bg-maincolor" value="1">Lowest Price</option>
-                                    <hr/>
-                                    <option className=" text-gray-500 bg-white hover:bg-maincolor" value="1">Highest Price</option>
-                                    <hr/>
-                                    <option className=" text-gray-500 bg-white hover:bg-maincolor" value="1">Best Selling</option>
-                                    <hr/>
-                                    <option className=" text-gray-500 bg-white  hover:bg-maincolor" value="1">Best Teacher</option>
+
+                                    <option className=" option-custom bg-white hover:bg-maincolor" value="5">Most Relevent</option>
+
+                                    <option className=" option-custom bg-white hover:bg-maincolor" value="4">Most Reviewed</option>
+
+                                    <option className=" option-custom bg-white hover:bg-maincolor" value="3">Highest rated</option>
+
+                                    <option className=" option-custom bg-white hover:bg-maincolor" value="2">Newest</option>
+
+                                    <option className=" option-custom bg-white hover:bg-maincolor" value="1">Lowest Price</option>
+
+                                    <option className=" option-custom bg-white hover:bg-maincolor" value="1">Highest Price</option>
+
+                                    <option className=" option-custom bg-white hover:bg-maincolor" value="1">Best Selling</option>
+
+                                    <option className=" option-custom bg-white  hover:bg-maincolor" value="1">Best Teacher</option>
                                 </select>
 
                                 <BsFillGrid3X3GapFill className=" text-3xl float-right xl:ml-4 xl:mt-2" />
@@ -150,6 +152,16 @@ function CourseSearchFilter() {
                                     </select>
                                 </div>
 
+                                <div className="xl:w-full">
+                                    <select class="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                        <option selected className="hover:bg-maincolor text-sm">Subcategories Course</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="3">3</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="2">4</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="1">5</option>
+                                    </select>
+                                </div>
 
 
                                 <div className="xl:w-full flex flex-wrap">
@@ -212,7 +224,7 @@ function CourseSearchFilter() {
 
                                     <div className="xl:w-1/2 xl:pl-1">
                                         <select class="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
-                                            <option selected className="hover:bg-maincolor text-sm">Level</option>
+                                            <option selected className="hover:bg-maincolor text-sm">Course Level</option>
                                             <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
                                             <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
                                             <option className="text-maincolor bg-white hover:bg-maincolor" value="3">3</option>
@@ -260,10 +272,22 @@ function CourseSearchFilter() {
 
 
                                 <div className="xl:w-full">
+                                    <select class="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                        <option selected className="hover:bg-maincolor text-sm">Skills</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="3">3</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="2">4</option>
+                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="1">5</option>
+                                    </select>
+                                </div>
+
+
+                                <div className="xl:w-full">
                                     <div class="form-check xl:mt-7">
                                         <input class="form-check-input appearance-none focus:outline-none h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckDefault" />
                                         <label class="form-check-label inline-block text-gray-800 xl:text-sm xl:font-normal" for="flexCheckDefault">
-                                            Option Checkable (Value)
+                                            Course with certificate
                                         </label>
                                     </div>
                                 </div>
@@ -1812,6 +1836,242 @@ function CourseSearchFilter() {
                                         </div>
 
                                     </div>
+
+
+                                    <div className="flex flex-wrap w-full -px-1 xl:-px-4">
+
+                                        <div className="my-1 px-1 bg-white p-3 rounded-lg shadow-lg xl:my-3 xl:px-1.5 w-full">
+                                            <div className="wrapper flex antialiased">
+                                                <div className="relative w-2/12">
+                                                    <video type="video/mp4" muted
+                                                        loop className="w-32 vid h-24 xl:ml-2 object-cover object-center rounded-lg shadow-md"
+                                                        src={MyVideo}></video>
+
+                                                    <div className="flex flex-wrap">
+                                                        <div className="w-1/5">
+                                                            <a href="!#">
+                                                                <div
+                                                                    className="text-sm absolute top-0 left-4 rounded-full h-5 w-5 flex border-2 border-client-section-des flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                                                                    <img className="xl:h-5 xl:w-5" src={CourseLogo} alt="" />
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div className="w-4/5">
+                                                            <a href="!#">
+                                                                <div className="text-lg absolute top-0 text-white mt-3">
+                                                                    <h6 className="font-medium xl:text-xs text-white xl:ml-1">sdhjb sdfhbja asufhba</h6>
+                                                                    <h6 className="font-light xl:text-xs text-white">40 min</h6>
+                                                                    <img className="xl:h-12 xl:ml-2 xl:-mt-6" src={Play} alt="" />
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="w-6/12 xl:-ml-3">
+                                                    <div className="flex flex-wrap">
+                                                        <div className="w-full">
+                                                            <h4 className="mt-1 xl:text-xl font-semibold text leading-tight text-CourseTitle">
+                                                                Tame your Big Data Course Learn Online
+                                                            </h4>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="flex flex-wrap xl:mt-1.5 xl:mb-1.5">
+                                                        <div className="w-full">
+                                                            <div className="flex sm:justify-center xl:justify-start">
+                                                                <span className="text-gray-600 text-sm">77 Participients</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <StarRatings
+                                                        rating={3.5}
+                                                        starDimension="18px"
+                                                        starSpacing="4px"
+                                                        starRatedColor="rgb(251, 191, 36)"
+                                                    />
+                                                </div>
+
+                                                <div className="w-4/12 xl:pr-2">
+
+                                                    <div className="flex flex-wrap xl:mt-1">
+                                                        <div className="w-full">
+                                                            <div className="flex xl:justify-end">
+                                                                <span className="text-maincolor xl:text-xl xl:font-semibold">$4.99</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="flex w-full flex-wrap xl:mt-5">
+                                                        <div className="w-1/2">
+                                                            <div className="flex xl:justify-around">
+                                                                <a><img className="xl:h-7 xl:w-7 mx-1" src={SpeedMeter} alt="" /></a>
+                                                                <a><img className="xl:h-7 xl:w-7 mx-1" src={ShareIcon} alt="" /></a>
+                                                                <a><img className="xl:h-7 xl:w-7 mx-1" src={CertificateIcon} alt="" /></a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="w-1/2 relative">
+                                                            <div className="flex xl:justify-around right-0 absolute">
+                                                                <button className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white xl:mr-4 xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 rounded-md">
+                                                                    <img className="xl:h-4 xl:w-4 mx-1" src={LoveIcon} alt="" />
+                                                                </button>
+                                                                <button data-mdb-ripple="true"
+                                                                    data-mdb-ripple-color="light"
+                                                                    className="xl:text-xs xl:font-normal bg-maincolor mx-1 text-white xl:pl-4 xl:pr-4 xl:pt-2 xl:pb-2 rounded-sm">Enroll
+                                                                    Now
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+                                        <div className="my-1 px-1 bg-white p-3 rounded-lg shadow-lg xl:my-3 xl:px-1.5 w-full">
+                                            <div className="wrapper flex antialiased">
+                                                <div className="relative w-2/12">
+                                                    <video type="video/mp4" muted
+                                                        loop className="w-32 vid h-24 xl:ml-2 object-cover object-center rounded-lg shadow-md"
+                                                        src={MyVideo}></video>
+
+                                                    <div className="flex flex-wrap">
+                                                        <div className="w-1/5">
+                                                            <a href="!#">
+                                                                <div
+                                                                    className="text-sm absolute top-0 left-4 rounded-full h-5 w-5 flex border-2 border-client-section-des flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                                                                    <img className="xl:h-5 xl:w-5" src={CourseLogo} alt="" />
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div className="w-4/5">
+                                                            <a href="!#">
+                                                                <div className="text-lg absolute top-0 text-white mt-3">
+                                                                    <h6 className="font-medium xl:text-xs text-white xl:ml-1">sdhjb sdfhbja asufhba</h6>
+                                                                    <h6 className="font-light xl:text-xs text-white">40 min</h6>
+                                                                    <img className="xl:h-12 xl:ml-2 xl:-mt-6" src={Play} alt="" />
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="w-6/12 xl:-ml-3">
+                                                    <div className="flex flex-wrap">
+                                                        <div className="w-full">
+                                                            <h4 className="mt-1 xl:text-xl font-semibold text leading-tight text-CourseTitle">
+                                                                Tame your Big Data Course Learn Online
+                                                            </h4>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="flex flex-wrap xl:mt-1.5 xl:mb-1.5">
+                                                        <div className="w-full">
+                                                            <div className="flex sm:justify-center xl:justify-start">
+                                                                <span className="text-gray-600 text-sm">77 Participients</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <StarRatings
+                                                        rating={3.5}
+                                                        starDimension="18px"
+                                                        starSpacing="4px"
+                                                        starRatedColor="rgb(251, 191, 36)"
+                                                    />
+                                                </div>
+
+                                                <div className="w-4/12 xl:pr-2">
+
+                                                    <div className="flex flex-wrap xl:mt-1">
+                                                        <div className="w-full">
+                                                            <div className="flex xl:justify-end">
+                                                                <span className="text-maincolor xl:text-xl xl:font-semibold">$4.99</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="flex w-full flex-wrap xl:mt-5">
+                                                        <div className="w-1/2">
+                                                            <div className="flex xl:justify-around">
+                                                                <a><img className="xl:h-7 xl:w-7 mx-1" src={SpeedMeter} alt="" /></a>
+                                                                <a><img className="xl:h-7 xl:w-7 mx-1" src={ShareIcon} alt="" /></a>
+                                                                <a><img className="xl:h-7 xl:w-7 mx-1" src={CertificateIcon} alt="" /></a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="w-1/2 relative">
+                                                            <div className="flex xl:justify-around right-0 absolute">
+                                                                <button className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white xl:mr-4 xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 rounded-md">
+                                                                    <img className="xl:h-4 xl:w-4 mx-1" src={LoveIcon} alt="" />
+                                                                </button>
+                                                                <button data-mdb-ripple="true"
+                                                                    data-mdb-ripple-color="light"
+                                                                    className="xl:text-xs xl:font-normal bg-maincolor mx-1 text-white xl:pl-4 xl:pr-4 xl:pt-2 xl:pb-2 rounded-sm">Enroll
+                                                                    Now
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                    <div className="xl:mt-5 flex xl:ml-3">
+                                        <div className="flex xl:w-1/2 xl:justify-start">
+                                            <nav aria-label="Page navigation example">
+                                                <ul className="flex list-style-none">
+                                                    <li className="page-item"><Link
+                                                        className="page-link relative block py-2 xl:px-4 border bg-transparent transition-all duration-300 xl:text-maingray xl:font-medium hover:text-gray-800 focus:shapagination"
+                                                        href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">&laquo;</span>
+                                                    </Link></li>
+                                                    <li className="page-item"><Link
+                                                        className="page-link relative block py-2 xl:px-4 border bg-transparent transition-all duration-300 xl:text-maingray xl:font-medium hover:text-gray-800 hover:bg-pagination hover:text-white focus:shadow-none"
+                                                        href="#">1</Link></li>
+                                                    <li className="page-item"><Link
+                                                        className="page-link relative block py-2 xl:px-4 border bg-transparent transition-all duration-300 xl:text-maingray xl:font-medium hover:text-gray-800 hover:bg-pagination hover:text-white focus:shadow-none"
+                                                        href="#">2</Link></li>
+                                                    <li className="page-item"><Link
+                                                        className="page-link relative block py-2 xl:px-4 border bg-transparent transition-all duration-300 xl:text-maingray xl:font-medium hover:text-gray-800 hover:bg-pagination hover:text-white focus:shadow-none"
+                                                        href="#">3</Link></li>
+                                                    <li className="page-item"><Link
+                                                        className="page-link relative block py-2 xl:px-4 border bg-transparent transition-all duration-300 xl:text-maingray xl:font-medium hover:text-gray-800 hover:bg-pagination hover:text-white focus:shadow-none"
+                                                        href="#">4</Link></li>
+                                                    <li className="page-item"><Link
+                                                        className="page-link relative block py-2 xl:px-4 border bg-transparent transition-all duration-300 xl:text-maingray xl:font-medium hover:text-gray-800 hover:bg-pagination hover:text-white focus:shadow-none"
+                                                        href="#">5</Link></li>
+                                                    <li className="page-item"><Link
+                                                        className="page-link relative block py-2 xl:px-4 border bg-transparent transition-all duration-300 xl:text-maingray xl:font-medium hover:text-gray-800 hover:bg-pagination hover:text-white focus:shadow-none"
+                                                        href="#" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </Link></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                        <div className="flex xl:w-1/2 justify-end">
+                                            <div className="xl:mr-3">
+                                                <h6>Showing 1 - 7 of 50 Entries</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
                                 </div>
                             </div>
                         </div>
