@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { FaStar } from "react-icons/fa";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import { IoCloseOutline } from "react-icons/io5";
@@ -16,11 +16,14 @@ import ReactFlagsSelect from "react-flags-select";
 import MultiRangeSlider from "multi-range-slider-react";
 import webroukCustomRange from "https://cdn.skypack.dev/webrouk-custom-range@latest";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import ApiUrl from "../../Api/ApiUrl";
+
 
 function CourseSearchFilter() {
-    const [selected, setSelected] = useState("");
+    const [selected, setSelected] = useState(null);
     const onSelect = (code) => setSelected(code);
-
+    console.log('onselect ', selected);
     const showSelectedLabel = ("Show Selected Label", true);
     const showSecondarySelectedLabel = (
         "Show Secondary Selected Label",
@@ -36,8 +39,15 @@ function CourseSearchFilter() {
     const alignOptionsToRight = ("Align Options to Right", false);
     const fullWidth = ("Full Width", true);
     const disabled = ("Disabled", false);
-
-
+    
+    const [courseLevel, setCourseLevel] = useState([]);
+    const [courseLanguage, setCourseLanguage] = useState([]);
+    const [courseCountry, setCourseCountry] = useState([]);
+    const [courseSubCategory, setSubCategory] = useState([]);
+    const countryCodeName = [];
+    
+    const countries = courseCountry;
+  
     // for multiple rage selection
     const [minValue, set_minValue] = useState(25);
     const [maxValue, set_maxValue] = useState(75);
@@ -46,6 +56,127 @@ function CourseSearchFilter() {
         set_maxValue(e.maxValue);
     };
 
+    const [IntelloGeekChoice, setIntelloGeekChoice] = useState(false);
+    const [courseWithCertificate, setCourseWithCertificate] = useState(false);
+    const [courseLevelID, setCourseLevelID] = useState(null);
+    const [SubCategoryID, setSubCategoryID] = useState(null);
+    const [languageID, setlanguageID] = useState(null);
+
+    const [CourseLevelIsLoading, setCourseLevelIsLoading] = useState(false);
+    const [CourseLanguageIsLoading, setCourseLanguageIsLoading] = useState(false);
+    const [CourseCourtryCodeIsLoading, setCourseCourtryCodeIsLoading] = useState(false);
+    const [SubCategoryIsLoading, setSubCategoryIsLoading] = useState(false);
+    
+    // console.log('CourseLevelIsLoading = ', CourseLevelIsLoading);
+    // console.log('CourseLanguageIsLoading = ', CourseLanguageIsLoading);
+    // console.log('CourseCourtryCodeIsLoading = ', CourseCourtryCodeIsLoading);
+    // console.log('SubCategoryIsLoading = ', SubCategoryIsLoading);
+
+    useEffect(() => {
+        // setCourseLevelIsLoading(true)
+        // setCourseLanguageIsLoading(true);
+        // setCourseCourtryCodeIsLoading(true);
+        // setSubCategoryIsLoading(true);
+        axios.get(`${ApiUrl.BaseUrl}api/v2/courselevel-info/`).then((response) => {
+            if(response.data.error === false){
+                setCourseLevel(response.data.data);
+                setCourseLevelIsLoading(true)
+            }
+        });
+        axios.get(`${ApiUrl.BaseUrl}api/v2/course-language-info/`).then((response) => {
+            if(response.data.error === false){
+                setCourseLanguage(response.data.data)
+                setCourseLanguageIsLoading(true);
+            }
+        });
+        axios.get(`${ApiUrl.BaseUrl}api/v2/country-info/`).then((response) => {
+            if(response.data.error === false){
+                for(var i=0; i<response.data.data.length; i++){
+                    var s = String(response.data.data[i].country_code_name)
+                    countryCodeName.push(s)
+                }
+                setCourseCountry(countryCodeName) 
+                setCourseCourtryCodeIsLoading(true);
+            }
+            
+        });
+        axios.get(`${ApiUrl.BaseUrl}api/v2/sub-category-info/`).then((response) => {
+            if(response.data.error === false){
+                setSubCategory(response.data.data);
+                setSubCategoryIsLoading(true);
+            }
+        });
+    }, [])
+
+    
+    const SearchFunction = () => {
+
+        const data = {
+            course_level_id: courseLevelID,
+            language_id: languageID,
+            country_id: selected,
+            sub_category_id: SubCategoryID
+
+        } 
+        console.log('function called data is ', data);
+        axios.post(`${ApiUrl.BaseUrl}api/search/course/`, data).then((response) => {
+            if(response.data.error === false){
+                console.log('success')
+            }
+        })
+
+    };
+
+    if(CourseLevelIsLoading === true && CourseLanguageIsLoading === true && CourseCourtryCodeIsLoading === true && SubCategoryIsLoading === true){
+        if(courseLevelID !== null){
+            console.log('courseLevelID ', courseLevelID)
+            SearchFunction();
+        }
+        if(SubCategoryID !== null){
+            console.log('course sub category id = ', SubCategoryID);
+            SearchFunction();
+        }
+        if(selected !== null){
+            console.log('course country id = ', selected);
+            SearchFunction();
+        }
+        if(languageID !== null){
+            console.log('course languageID = ', languageID);
+            SearchFunction();
+        }
+    }
+    else{
+
+    }
+    
+
+    const CourseLevelHTML = (() => {
+        return(
+            courseLevel.map((course_level) =>(
+                <option className="text-maincolor bg-white hover:bg-maincolor"
+                    value={course_level.course_level_id}>
+                    {course_level.course_level_title}
+                </option>
+            ))
+        )
+    })()
+
+    const CourseLanguageHTML = (() => {
+        return(
+            courseLanguage.map((course_language) =>(
+                <option className="text-maincolor bg-white hover:bg-maincolor" value={course_language.language_id}>{course_language.language_name}</option>
+            ))
+        )
+    })()
+
+    const CourseSubCategoryHTML = (() => {
+        return(
+            courseSubCategory.map((course_sub_category) =>(
+                <option className="text-maincolor bg-white hover:bg-maincolor" value={course_sub_category.sub_category_id}>{course_sub_category.sub_category_name}</option>
+            ))
+        )
+    })()
+    
 
     return (
         <Fragment>
@@ -153,13 +284,13 @@ function CourseSearchFilter() {
                                 </div>
 
                                 <div className="xl:w-full">
-                                    <select class="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                    <select
+                                        onChange={(e) => setSubCategoryID(e.target.value)} value={SubCategoryID}
+                                         class="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
                                         <option selected className="hover:bg-maincolor text-sm">Subcategories Course</option>
-                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
-                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
-                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="3">3</option>
-                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="2">4</option>
-                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="1">5</option>
+                                        {
+                                            CourseSubCategoryHTML
+                                        }
                                     </select>
                                 </div>
 
@@ -206,30 +337,31 @@ function CourseSearchFilter() {
                                         alignOptionsToRight={alignOptionsToRight}
                                         fullWidth={fullWidth}
                                         disabled={disabled}
+                                        countries={countries}
                                     />
                                 </div>
 
 
                                 <div className="xl:w-full flex flex-wrap">
                                     <div className="xl:w-1/2 xl:pr-1">
-                                        <select class="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                        <select 
+                                            onChange={(e)=>setlanguageID(e.target.value)}
+                                            value={languageID}
+                                            class="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
                                             <option selected className="hover:bg-maincolor text-sm">Language</option>
-                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
-                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
-                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="3">3</option>
-                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="2">4</option>
-                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="1">5</option>
+                                            {
+                                                CourseLanguageHTML
+                                            }
                                         </select>
                                     </div>
 
                                     <div className="xl:w-1/2 xl:pl-1">
-                                        <select class="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
-                                            <option selected className="hover:bg-maincolor text-sm">Course Level</option>
-                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
-                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
-                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="3">3</option>
-                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="2">4</option>
-                                            <option className="text-maincolor bg-white hover:bg-maincolor" value="1">5</option>
+                                        <select  onChange={(e) => setCourseLevelID(e.target.value)} value={courseLevelID} 
+                                            class="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                            <option  selected className="hover:bg-maincolor text-sm">Course Level</option>
+                                            {
+                                                CourseLevelHTML
+                                            }
                                         </select>
                                     </div>
                                 </div>
@@ -285,7 +417,9 @@ function CourseSearchFilter() {
 
                                 <div className="xl:w-full">
                                     <div class="form-check xl:mt-7">
-                                        <input class="form-check-input appearance-none focus:outline-none h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckDefault" />
+                                        <input class="form-check-input appearance-none focus:outline-none h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" 
+                                            type="checkbox" value={courseWithCertificate} onChange={e => setCourseWithCertificate(e.target.checked)}
+                                            id="flexCheckDefault" />
                                         <label class="form-check-label inline-block text-gray-800 xl:text-sm xl:font-normal" for="flexCheckDefault">
                                             Course with certificate
                                         </label>
@@ -305,7 +439,7 @@ function CourseSearchFilter() {
                                     <div className="flex">
                                         <span className="ml-3 w-80 text-sm font-medium text-gray-900 dark:text-gray-300 float-left">IntelloGeek Choice</span>
                                         <label for="default-toggle" className="relative cursor-pointer float-right right-0 flex">
-                                            <input type="checkbox" value="" id="default-toggle" className="sr-only peer" />
+                                            <input type="checkbox" onChange={e => setIntelloGeekChoice(e.target.checked)} value={IntelloGeekChoice} id="default-toggle" className="sr-only peer" />
                                             <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-maincolor"></div>
 
                                         </label>
