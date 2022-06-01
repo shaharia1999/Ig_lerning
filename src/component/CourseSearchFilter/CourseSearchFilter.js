@@ -384,7 +384,6 @@ function CourseSearchFilter() {
                                 </div>
 
 
-
                             </div>
                         </div>
                         <div className="xl:w-8/12">
