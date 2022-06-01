@@ -25,3 +25,33 @@
     border-width: 4px;
     border-radius: 6px;
 }
+
+
+
+.nav-pills .nav-linkc {
+    background: #F3F4F6;
+    color: #000000!important;
+    box-shadow: none;
+}
+.nav-pills .nav-linkc.active {
+    background: #ffffff;
+    color: #1D2733!important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+
+.nav-pills .nav-linkc2 {
+    background: #ffffff;
+    color: #000000!important;
+    box-shadow: none;
+}
+.nav-pills .nav-linkc2.active {
+    background: #ffffff;
+    border-top: #ffffff;
+    border-left: #ffffff;
+    border-right: #ffffff;
+    border-bottom: #D76E2D;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 6px;
+}
