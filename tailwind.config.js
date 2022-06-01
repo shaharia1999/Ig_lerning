@@ -50,7 +50,8 @@ module.exports = {
       'progress-bar':'#F3C81A',
       'upcomming-green':'#39741F',
       'hash-tag':' #3DB9FB',
-      'pagination':' #39741F',
+      'pagination':'#39741F',
+      'price':'#83C982',
       'amber': {
         300: '#fcd34d',
         400: '#fbbf24',
