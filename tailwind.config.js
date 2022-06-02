@@ -52,6 +52,7 @@ module.exports = {
       'hash-tag':' #3DB9FB',
       'pagination':'#39741F',
       'price':'#83C982',
+      'cart-item-title':'#02073E',
       'amber': {
         300: '#fcd34d',
         400: '#fbbf24',
