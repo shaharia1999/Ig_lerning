@@ -254,6 +254,11 @@
   height: 200px;
 }
 
+.cart-checkout-shadow-card-height-width {
+  width: 535px;
+  height: 80px;
+}
+
 .TrainerBannner {
   height: 600px;
   width: 100%;
@@ -362,4 +367,9 @@ webrouk-custom-range {
   white-space: normal !important;
   padding-top: 20px !important;
   padding-bottom: 20px !important;
+}
+
+
+.cart-summery-card-height{
+  height: 440px;
 }

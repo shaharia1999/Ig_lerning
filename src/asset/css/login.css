@@ -20,9 +20,9 @@
     left: 0;
 }
 
-input[type="checkbox"] {
+/* input[type="checkbox"] {
     width: 17px;
     height: 17px;
-    accent-color: #035f0f;
-    border-radius: 0px!important;
-}
+    accent-color: #035f0f !important;
+    border-radius: 100% !important;
+} */
