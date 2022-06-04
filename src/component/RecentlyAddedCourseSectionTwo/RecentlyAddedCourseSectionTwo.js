@@ -42,7 +42,7 @@ function RecentlyAddedCourseSectionTwo() {
     };
 
     const category_data = category.map((category_info, index) => (
-        <li className="nav-item" role="presentation">
+        <li key={index} className="nav-item" role="presentation">
             <button type="button" 
                 onClick={() => CategoryBasedSubCategory(category_info.category_id)}
                 className="nav-link1 block w-full md:w-auto px-6 py-3 my-2 md:mr-2 active text-base font-medium leading-tight mx-2 h-11" id="pills-master-tab3" data-bs-toggle="pill" data-bs-target="#pills-master" role="tab" aria-controls="pills-master" aria-selected="true">
@@ -51,9 +51,9 @@ function RecentlyAddedCourseSectionTwo() {
         </li>
     ));
 
-    const data_of_subcategory = subCategory.map((category_info, index) => (
+    const data_of_subcategory = subCategory.map((category_info) => (
         category_info.sub_category_information.map((subcategory, index) => (
-        <div>
+        <div key={index}>
             <li className="nav-item" role="presentation">
                 <button type="button"
                     className="nav-link block w-full md:w-auto px-6 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 text-base bg-maincolor font-medium leading-tight text-black rounded-3xl mx-2 h-11"
@@ -66,7 +66,7 @@ function RecentlyAddedCourseSectionTwo() {
         ))
     ));
 
-    const data_of_course_details = getCourse.map((category_info, category_info_index) => (
+    const data_of_course_details = getCourse.map((category_info) => (
         category_info.course_information.map((course, course_index) => (
             <div key={course_index} className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/4">
                 <div className="wrapper antialiased text-gray-900">

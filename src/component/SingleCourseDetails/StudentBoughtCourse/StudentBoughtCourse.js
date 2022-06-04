@@ -7,27 +7,20 @@ import Student5 from '../../../asset/images/student-bought/student5.png';
 import Student6 from '../../../asset/images/student-bought/student6.png';
 import ApiUrl from "../../../Api/ApiUrl";
 import axios from "axios";
-
+import { useParams } from 'react-router-dom'
 
 function StudentBoughtCourse() {
+    let { id } = useParams()
     const [courseEnrollImage, setCourseEnrollImage] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const student_enroll_image_data = [];
 
     useEffect(() => {
         setIsLoading(true);
-        axios.get(ApiUrl.BaseUrl + 'api/course/course-enroll-student-list/10/',
-            {
-                headers: {
-                    'Accept-Language': 'bn',
-                    'Content-Type': 'application/json',
-                }
-            }
-        ).then((response) => {
+        axios.get(`${ApiUrl.BaseUrl}api/course/course-enroll-student-list/${id}/`).then((response) => {
             if (response.data.error === false) {
                 for (var i = 0; i < response.data.data.length; i++) {
                     if (response.data.data[i].student_image == null) {
-                        
                     }
                     else {
                         student_enroll_image_data.push(response.data.data[i])
@@ -42,21 +35,19 @@ function StudentBoughtCourse() {
     const profile_picture = (() => {
         if (isLoading === true) {
             return <div className="xl:w-1/6">
-            <img className="rounded-md" src={Student1} alt="" />
-        </div>
+                <img className="rounded-md" src={Student1} alt="" />
+            </div>
         }
         else if (isLoading === false) {
             return courseEnrollImage.map((student_enroll_image, index) => (
-                    <div className="xl:w-1/6">
-                         <img className="rounded-md" src={ApiUrl.ImageBaseUrl+"/media/"+student_enroll_image.student_image} alt="joy" /> 
-                    </div>
-                    
-                ))   
+                <div key={index} className="xl:w-1/6">
+                    <img className="rounded-md" src={ApiUrl.ImageBaseUrl + "/media/" + student_enroll_image.student_image} alt="joy" />
+                </div>
+            ))
         }
     })()
 
     return (
-
         <div className="flex-basis flex xl:ml-32">
             {
                 profile_picture
