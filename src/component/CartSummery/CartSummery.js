@@ -389,12 +389,12 @@ function CartSummery() {
 
 
                                             <div className="flex flex-wrap xl:mt-8">
-                                                <label data-mdb-ripple="true"
+                                                <Link to="/cart-checkout" data-mdb-ripple="true"
                                                     data-mdb-ripple-color="light"
                                                     className="flex text-center justify-center xl:h-12 btn-block cursor-pointer bg-maincolor rounded-sm xl:text-sm text-white xl:mt-5">
-                                                    <Link to="/cart-checkout" className="justify-center text-center xl:mt-3 xl:ml-24">Proceed to Pay</Link>
+                                                    <span className="justify-center text-center xl:mt-3 xl:ml-24">Proceed to Pay</span>
                                                     <FaArrowRight className="xl:mt-4 xl:pl-12px ml-24 " />
-                                                </label>
+                                                </Link>
                                             </div>
 
 
@@ -403,18 +403,6 @@ function CartSummery() {
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                         </div>

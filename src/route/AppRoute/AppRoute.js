@@ -16,6 +16,7 @@ import CheckoutPage from '../../pages/CheckoutPage/CheckoutPage';
 import CartCheckoutPage from '../../pages/CartCheckoutPage/CartCheckoutPage';
 import CartPaymentPage from '../../pages/CartPaymentPage/CartPaymentPage';
 import CartSummeryPage from '../../pages/CartSummeryPage/CartSummeryPage';
+import MyCoursePage from '../../pages/MyCoursePage/MyCoursePage';
 
 class AppRoute extends Component {
     render() {
@@ -37,6 +38,8 @@ class AppRoute extends Component {
                     <Route exact path="/cart-summery" render={(props) => <CartSummeryPage {...props} key={Date.now()} />} />
                     <Route exact path="/cart-checkout" render={(props) => <CartCheckoutPage {...props} key={Date.now()} />} />
                     <Route exact path="/cart-checkout-payment" render={(props) => <CartPaymentPage {...props} key={Date.now()} />} />
+
+                    <Route exact path="/my-course" render={(props) => <MyCoursePage {...props} key={Date.now()} />} />
 
                     <Route exact path="/course-details" render={(props) => <SingleCourseDetailsPage {...props} key={Date.now()} />} />
                     <Route exact path="/trainer-profile" render={(props) => <TrainerProfilePage {...props} key={Date.now()} />} />

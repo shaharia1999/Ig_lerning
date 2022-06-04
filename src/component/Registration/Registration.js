@@ -54,14 +54,14 @@ function Registration() {
                                 <div className="lg:flex lg:flex-wrap">
 
                                     <div
-                                        className="lg:w-4/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none">
-                                        <div className="text-white">
-                                            <img className="" src={LoginImg} alt=""/>
+                                        className="lg:w-5/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none">
+                                        <div className="text-white flex h-full">
+                                            <img className="h-full" src={LoginImg} alt=""/>
                                         </div>
                                     </div>
 
-                                    <div className="lg:w-8/12 px-4 md:px-0">
-                                        <div className="md:p-8 md:mx-6">
+                                    <div className="lg:w-7/12 xl:p-10">
+                                        <div className="">
                                             <div className="text-center">
                                                 <h4 className="text-4xl font-semibold lg:mt-16 mb-12 pb-1">Registration</h4>
                                             </div>
