@@ -72,7 +72,7 @@ function BusinessCompany() {
                             <div className="w-4/5">
                                 <a href="!#">
                                     <div class="text-lg absolute top-0 text-white mt-5">
-                                        <h6  className="font-medium text-lg text-black">joy</h6> 
+                                        <h6  className="font-medium text-lg text-black xl:-mt-1">joy</h6> 
                                         <h6 className="font-light text-base text-black">{course.course_duration} min</h6> 
 
                                         <img className="lg:h-36 ml-8" src={Play} alt="" />
@@ -86,7 +86,7 @@ function BusinessCompany() {
                             <div className="flex flex-wrap">
                                 <div className="w-4/5">
                                     <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">
-                                        {course.course_title}
+                                        {`${course.course_title.substring(0, 40)}...`}
                                     </h4>
                                 </div>
                                 <div className="w-1/5">

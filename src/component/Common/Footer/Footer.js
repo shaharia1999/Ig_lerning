@@ -1,21 +1,22 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { Link } from "react-router-dom";
 import { FaChevronUp, FaFacebookSquare, FaLinkedin, FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
 import ios from "../../../asset/images/icon/ios.png";
 import android from "../../../asset/images/icon/android.png";
 import MainLogo from "../../../asset/images/logo/logo.png";
-import { useEffect } from "react";
 
 function Footer(){
-    useEffect(() => {
-        window.scrollTo(0, 0)
-      }, [])
+
+      const ScrollTop = () => {
+        window.scrollTo(0, 0);
+      }
+
         return (
             <Fragment>
                 <div className="footer-2 pt-6 md:pt-12 footer-svg">
                     <div className="container px-4 mx-auto">
                         <div className="text-center">
-                            <button className="lg:p-10 bg-btngreen btn-center rounded-full text-3xl font-extrabold mt-9"><FaChevronUp /></button>
+                            <button onClick={ScrollTop} className="lg:p-10 bg-btngreen btn-center rounded-full text-3xl font-extrabold mt-9"><FaChevronUp /></button>
                         </div>
 
                         <div className="md:flex md:flex-wrap md:-mx-4 py-6 md:pb-12">

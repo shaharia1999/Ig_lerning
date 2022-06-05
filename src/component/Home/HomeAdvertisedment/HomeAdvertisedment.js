@@ -10,12 +10,12 @@ class HomeAdvertisedment extends Component {
                 <div className="container">
                     <div className="flex flex-wrap">
 
-                        <div className="lg:basis-2/3">
+                        <div className="xl:w-2/3">
                             <MostVisited />
                             <TopCategories />
                         </div>
 
-                        <div className="lg:basis-1/3">
+                        <div className="xl:w-1/3">
                             <img className="w-96 lg:ml-20 lg:mt-20 home-ad-banner" src={HomeBanner} alt=""/>
                         </div>
 

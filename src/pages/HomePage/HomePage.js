@@ -8,6 +8,10 @@ import HomeBanner from '../../component/Home/HomeBanner/HomeBanner';
 import HomeAdvertisedment from '../../component/Home/HomeAdvertisedment/HomeAdvertisedment';
 import BusinessCompany from '../../component/Course/RecentlyAddedCourse/BusinessCompany/BusinessCompany';
 import RecentlyAddedCourseSectionTwo from '../../component/RecentlyAddedCourseSectionTwo/RecentlyAddedCourseSectionTwo';
+import MostPopularCourse from '../../component/Home/MostPopularCourse/MostPopularCourse';
+import RecommandForYou from '../../component/Home/RecommandForYou/RecommandForYou';
+import OnlyOnIntelloGeek from '../../component/Home/OnlyOnIntelloGeek/OnlyOnIntelloGeek';
+import InBaseOfYourInterest from '../../component/Home/InBaseOfYourInterest/InBaseOfYourInterest';
 
 class HomePage extends Component {
     render() {
@@ -17,6 +21,10 @@ class HomePage extends Component {
                 <HomeBanner/>
                 <BusinessCompany/>
                 <RecentlyAddedCourseSectionTwo/>
+                <MostPopularCourse/>
+                <RecommandForYou/>
+                <OnlyOnIntelloGeek/>
+                <InBaseOfYourInterest/>
                 <HomeAdvertisedment/>
                 <ClientSays/>
                 <Partner/>

@@ -104,14 +104,14 @@ function Review() {
                                 <h6 className=" text-sectionTitleColor text-xl font-semibold">{course_learn_info.student_information.username}</h6>
                                 <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">{course_learn_info.date}</h6>
                                 <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-2">
-                                    <ul className="flex sm:justify-center xl:justify-start">
+                                    <ul className="flex sm:justify-center xl:justify-start xl:mb-1">
                                         <StarRatings
                                             rating={course_learn_info.rating}
                                             starDimension="15px"
                                             starSpacing="4px"
                                             starRatedColor="rgb(251, 191, 36)"
                                         />
-                                        <h6 className="xl:ml-2 xl:-mt-.75 xl:text-xs text-black font-medium">{course_learn_info.whenpublished}</h6>
+                                        <h6 className="xl:ml-2 xl:mt-1 xl:text-xs text-black font-medium">{course_learn_info.whenpublished}</h6>
                                     </ul>
                                 </h6>
                                 <h6 className="text-breadcrumbs-text text-sm font-normal xl:tracking-normal">
@@ -120,7 +120,7 @@ function Review() {
                                 <h6 className="text-breadcrumbs-text text-xs font-normal xl:mt-4">Was this review helpful?</h6>
                                 <div className="flex xl:mt-2">
                                     <Link to={`#`} className="xl:p-2 xl:mx-2 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsUp className="text-maincolor xl:text-base" /></Link>
-                                    <Link to={`#`} cl assName="xl:p-2 xl:mx-2 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsDown className="text-maincolor xl:text-base" /></Link>
+                                    <Link to={`#`} className="xl:p-2 xl:mx-2 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsDown className="text-maincolor xl:text-base" /></Link>
                                     <h6 className="text-maincolor xl:mx-2 xl:mt-1.5 text-sm font-medium">Report</h6>
                                 </div>
                                 <hr className="xl:mt-5 border" />

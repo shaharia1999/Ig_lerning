@@ -1,5 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
-import { FaStar } from "react-icons/fa";
+import React, { Fragment, useEffect, useState, useRef } from "react";
 import Play from "../../../asset/images/icon/play.png";
 import CourseLogo from "../../../asset/images/logo/course-logo.png";
 import SpeedMeter from "../../../asset/images/icon/icon_level.png";
@@ -10,12 +9,17 @@ import ApiUrl from "../../../Api/ApiUrl";
 import axios from "axios";
 import StarRatings from 'react-star-ratings';
 import { Link } from "react-router-dom";
-
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function MostVisited() {
     const [mostvisited, setMostvisited] = useState([]);
     const [mostvisited_total_count, setMostvisitedTotalCount] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+
+    const [nav2, setNav2] = useState();
+    const slider2 = useRef();
 
     useEffect(() => {
         setIsLoading(true);
@@ -262,7 +266,7 @@ function MostVisited() {
         else if (isLoading === false) {
             return (
                 mostvisited.map((mostvisited_c, index) => (
-                    <div key={index} className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/3">
+                    <div key={index} className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
                         <div className="wrapper antialiased text-gray-900">
 
                             <div className="relative">
@@ -280,9 +284,9 @@ function MostVisited() {
                                     </div>
                                     <div className="w-4/5">
                                         <a href="!#">
-                                            <div class="text-lg absolute top-0 text-white mt-5">
-                                                <h6 className="font-medium text-lg text-black">{mostvisited_c.channel_name_id?.channel_name}</h6>
-                                                <h6 className="font-light text-base text-black">{mostvisited_c.course_duration} min</h6>
+                                            <div class="text-lg absolute top-0 mt-5">
+                                                <h6 className="font-medium text-lg text-black">{mostvisited_c.channel_name.channel_name}</h6>
+                                                <h6 className="font-light text-sm text-black">{mostvisited_c.course_duration} min</h6>
 
                                                 <img className="lg:h-36 ml-8" src={Play} alt="" />
                                             </div>
@@ -295,11 +299,11 @@ function MostVisited() {
                                 <div className="bg-white p-3 rounded-lg shadow-lg">
                                     <div className="flex flex-wrap">
                                         <div className="w-4/5">
-                                            <Link to={`/course-details/${mostvisited_c.course_id}`} className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">{mostvisited_c.course_title}</Link>
+                                            <Link to={`/course-details/${mostvisited_c.course_id}`} className="mt-1 xl:text-base font-semibold text leading-tight text-CourseTitle">{`${mostvisited_c.course_title.substring(0, 40)}...`}</Link>
                                         </div>
                                         <div className="w-1/5">
                                             <button
-                                                className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white lg:pl-3 lg:pr-3 lg:pt-1 lg:pb-1 rounded-md">Live
+                                                className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white xl:pl-3 xl:pr-3 xl:pt-1 xl:pb-1 rounded-md">Live
                                             </button>
                                         </div>
                                     </div>
@@ -364,11 +368,30 @@ function MostVisited() {
         <Fragment>
             <div className="container my-12">
                 <h4 className="text-4xl	font-semibold text-sectionTitleColor ml-3">Most Visited ({mostvisited_total_count}) </h4>
-                <div className="flex flex-wrap -mx-1 lg:-mx-4">
-                    {
-                        html_mostvisited
-                    }
+                
+                <div className="lg:mt-6 -mx-1 lg:-mx-4">
+                    <Slider
+                        ref={(slider2) => setNav2(slider2)}
+                        slidesToShow={3}
+                        focusOnSelect={true}
+                        dots={true}
+                        adaptiveHeight={true}
+                        infinite={true}
+                        slidesToScroll={1}
+                        loop={true}
+                        speed={1000}
+                        height={600}
+                        autoplay={true}
+                        autoplaySpeed={1500}
+                        swipeToSlide={true}
+                    >
+
+                        {
+                            html_mostvisited
+                        }
+                    </Slider>
                 </div>
+
             </div>
         </Fragment>
     );
