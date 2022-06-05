@@ -38,11 +38,11 @@ class AppRoute extends Component {
                     <Route exact path="/cart-checkout" render={(props) => <CartCheckoutPage {...props} key={Date.now()} />} />
                     <Route exact path="/cart-checkout-payment" render={(props) => <CartPaymentPage {...props} key={Date.now()} />} />
 
-                    <Route exact path="/course-details" render={(props) => <SingleCourseDetailsPage {...props} key={Date.now()} />} />
+                    <Route exact path="/course-details/:id" render={(props) => <SingleCourseDetailsPage {...props} key={Date.now()} />} />
                     <Route exact path="/trainer-profile" render={(props) => <TrainerProfilePage {...props} key={Date.now()} />} />
                     <Route exact path="/course-search-filter" render={(props) => <CourseSearchFilterPage {...props} key={Date.now()} />} />
                     
-                    <Route path="" component={OpssPage} />
+                    {/* <Route path="" component={OpssPage} /> */}
                 </Switch>
             </Fragment>
         );

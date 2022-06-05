@@ -5,8 +5,11 @@ import { FiCheckCircle } from "react-icons/fi";
 import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";
 import StarRatings from 'react-star-ratings';
+import {useParams} from "react-router-dom";
+
 
 function Description() {
+    let { id } = useParams();
     const [courseInfo, setCourseInfo] = useState([]);
     const [TeacherInfo, setTeacherInfo] = useState([]);
     const [CourseLearnInfo, setCourseLearnInfo] = useState([]);
@@ -14,12 +17,10 @@ function Description() {
     const [isFollow, setIsFollow] = useState(false);
     const [is_check_follow, setIsCheckFollow] = useState(false);
     var user_data = JSON.parse(localStorage.getItem("user_data"));
-    console.log('user data = ', user_data)
-
     
     useEffect(() => {
         setIsLoading(true);
-        axios.get(ApiUrl.BaseUrl + 'api/course/course-single-response/10/').then((response) => {
+        axios.get(`${ApiUrl.BaseUrl}api/course/course-single-response/${id}/`).then((response) => {
             if (response.data.error === false) {
                 setIsLoading(false);
                 setCourseInfo(response.data.data); 
@@ -40,7 +41,6 @@ function Description() {
             }
             axios.post(`${ApiUrl.BaseUrl}api/course/check-user-follow-status/`, check_follow_data).then((res) =>{
                 setIsFollow(res.data.is_follow)
-                console.log('isFollow = ', isFollow);
             })
         }
     }
@@ -194,7 +194,7 @@ function Description() {
                             </h6>
                             <h6 className="text-sectionTitleColor xl:text-xl font-semibold xl:mt-5 xl:mb-5">What will you learn:</h6>
                             {CourseLearnInfo.map((course_learn_info, index) => (
-                                <div className="flex flex-wrap">
+                                <div key={index} className="flex flex-wrap">
                                     <div className="xl:w-1/12">
                                         <FiCheckCircle className=" text-btngreen xl:h-6 xl:w-6" />
                                     </div>

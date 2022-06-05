@@ -51,7 +51,7 @@ function BusinessCompany() {
         </div>
     ));
 
-    const data_of_subcategory_course = recently_addedsubcategoryId.map((sub_category_course, index) => (
+    const data_of_subcategory_course = recently_addedsubcategoryId.map((sub_category_course) => (
         sub_category_course.course_info.map((course, course_index) => (
             <div key={course_index} className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/4">
                 <div className="wrapper antialiased text-gray-900">
