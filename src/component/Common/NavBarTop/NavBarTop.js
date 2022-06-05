@@ -4,7 +4,7 @@ import MainLogo from "../../../asset/images/logo/main-logo.svg";
 import ReactFlagsSelect from "react-flags-select";
 
 function NavBarTop() {
-    const [selected, setSelected] = useState("");
+    const [selected, setSelected] = useState("US");
     const onSelect = (code) => setSelected(code);
 
     const showSelectedLabel = ("Show Selected Label", true);
