@@ -166,7 +166,7 @@ function Review() {
                                 ReviewSearch();
                             }}
                             className="form-select form-select-lg mb-3 appearance-none block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none" aria-label=".form-select-lg example">
-                            <option selected className="hover:bg-maincolor">All Ratings</option>
+                            <option value='' selected className="hover:bg-maincolor">All Ratings</option>
                             <option className="text-maincolor hover:bg-maincolor" value="5">5 Star</option>
                             <option className="text-maincolor hover:bg-maincolor"  value="4">4 Star</option>
                             <option className="text-maincolor hover:bg-maincolor"  value="3">3 Star</option>
