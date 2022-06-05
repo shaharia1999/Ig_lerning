@@ -9,6 +9,7 @@ import ShareIcon from "../../../asset/images/icon/icon_share.png";
 import ApiUrl from "../../../Api/ApiUrl";
 import axios from "axios";
 import StarRatings from 'react-star-ratings';
+import { Link } from "react-router-dom";
 
 
 function MostVisited() {
@@ -261,7 +262,7 @@ function MostVisited() {
         else if (isLoading === false) {
             return (
                 mostvisited.map((mostvisited_c, index) => (
-                    <div className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/3">
+                    <div key={index} className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/3">
                         <div className="wrapper antialiased text-gray-900">
 
                             <div className="relative">
@@ -294,7 +295,7 @@ function MostVisited() {
                                 <div className="bg-white p-3 rounded-lg shadow-lg">
                                     <div className="flex flex-wrap">
                                         <div className="w-4/5">
-                                            <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">{mostvisited_c.course_title}</h4>
+                                            <Link to={`/course-details/${mostvisited_c.course_id}`} className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">{mostvisited_c.course_title}</Link>
                                         </div>
                                         <div className="w-1/5">
                                             <button

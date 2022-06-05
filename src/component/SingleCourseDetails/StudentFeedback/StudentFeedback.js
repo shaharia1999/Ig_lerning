@@ -3,22 +3,17 @@ import React, { Fragment, useEffect, useState } from "react";
 import { FaStar, FaStepBackward } from "react-icons/fa";
 import ApiUrl from "../../../Api/ApiUrl";
 import StarRatings from 'react-star-ratings';
+import {useParams} from "react-router-dom";
 
 
 function StudentFeedback() {
+    let {id} = useParams();
     const [studentFeedBack, setStudentFeedBack] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         setIsLoading(true);
-        axios.get(ApiUrl.BaseUrl + 'api/course/course-student-feedback/10/',
-            {
-                headers: {
-                    'Accept-Language': 'bn',
-                    'Content-Type': 'application/json',
-                }
-            }
-        ).then((response) => {
+        axios.get(`${ApiUrl.BaseUrl}api/course/course-student-feedback/${id}/`).then((response) => {
             if (response.data.error === false) {
                 setIsLoading(false);
                 setStudentFeedBack(response.data.data); 
