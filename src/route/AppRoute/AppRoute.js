@@ -45,7 +45,7 @@ class AppRoute extends Component {
                     <Route exact path="/trainer-profile" render={(props) => <TrainerProfilePage {...props} key={Date.now()} />} />
                     <Route exact path="/course-search-filter" render={(props) => <CourseSearchFilterPage {...props} key={Date.now()} />} />
                     
-                    {/* <Route path="" component={OpssPage} /> 
+                    <Route path="" component={OpssPage} /> 
                 </Switch>
             </Fragment>
         );
