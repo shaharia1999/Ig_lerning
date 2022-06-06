@@ -29,26 +29,31 @@ function TopCategories() {
 
     const Topcategory = (() => {
         if (isLoading === true) {
-            return <div className="flex flex-basis w-full -mx-1 lg:-mx-4">
-                <div className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/3">
-                    <article className="overflow-hidden rounded-lg shadow-lg hover:opacity-30 animate-pulse">
-                        <div class="block bg-fixed h-72 w-full w-200 h-200 p-2 bg-gray-200 rounded-md animate-pulse-slow"></div>
-                        <div class="lg:text-xl lg:font-semibold text-center text-maingray lg:mt-4 lg:mb-4 p-4 bg-gray-200 rounded"></div>
-                    </article>
+            return (
+                <div class="flex flex-wrap">
+                    <div class="p-4 bg-white shadow-md hover:shadow-md rounded-lg xl:mt-2">
+                        <div class="animate-pulse xl:w-full">
+                            <div class="rounded w-full h-52 bg-gray-200"></div>
+                            <div class="flex flex-col mt-5">
+                                <div class="w-full h-5 bg-gray-200 rounded"></div>
+                                <div class="mt-2 w-10/12 h-3 bg-gray-200 rounded"></div>
+                                <div class="mt-2 w-8/12 h-3 bg-gray-200 rounded"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-white shadow-md hover:shadow-md rounded-lg xl:mt-2">
+                        <div class="animate-pulse xl:w-full">
+                            <div class="rounded w-full h-52 bg-gray-200"></div>
+                            <div class="flex flex-col mt-5">
+                                <div class="w-full h-5 bg-gray-200 rounded"></div>
+                                <div class="mt-2 w-10/12 h-3 bg-gray-200 rounded"></div>
+                                <div class="mt-2 w-8/12 h-3 bg-gray-200 rounded"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/3">
-                    <article className="overflow-hidden rounded-lg shadow-lg hover:opacity-30 animate-pulse">
-                        <div class="block bg-fixed h-72 w-full w-200 h-200 p-2 bg-gray-200 rounded-md animate-pulse-slow"></div>
-                        <div class="lg:text-xl lg:font-semibold text-center text-maingray lg:mt-4 lg:mb-4 p-4 bg-gray-200 rounded"></div>
-                    </article>
-                </div>
-                <div className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/3">
-                    <article className="overflow-hidden rounded-lg shadow-lg hover:opacity-30 animate-pulse">
-                        <div class="block bg-fixed h-72 w-full w-200 h-200 p-2 bg-gray-200 rounded-md animate-pulse-slow"></div>
-                        <div class="lg:text-xl lg:font-semibold text-center text-maingray lg:mt-4 lg:mb-4 p-4 bg-gray-200 rounded"></div>
-                    </article>
-                </div>
-            </div>
+            )
         }
         else if (isLoading === false) {
             return (
