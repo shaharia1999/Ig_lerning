@@ -51,6 +51,31 @@ function MyCourse() {
         })
     }, [])
 
+    const ArchivedCourse =(course_id) => {
+        axios.get(`${ApiUrl.BaseUrl}api/course/student-course-archive-create/${course_id}`).then((response) => {
+            if(response.data.error === false){
+
+            }
+        })
+    }
+
+    const RemoveCourseForWhishList = (wishlist_id) => {
+        console.log(wishlist_id);
+        axios.get(`${ApiUrl.BaseUrl}api/course/student-course-wishlist-remove/${wishlist_id}`).then((response) => {
+            if(response.data.error === false){
+
+            }
+        })
+    }
+
+    const RemoveCourseForArchivedList = (course_enroll_id) => {
+        axios.get(`${ApiUrl.BaseUrl}api/course/student-course-archive-remove/${course_enroll_id}`).then((response) => {
+            if(response.data.error === false){
+
+            }
+        })
+    }
+
     const MyCourseListHTML = (() => {
         if (isLoading === true) {
             return (
@@ -163,6 +188,7 @@ function MyCourse() {
 
                                 <div className="flex w-full flex-wrap xl:mt-8 xl:pr-3 xl:justify-end">
                                     <button 
+                                        // onClick={() => ArchivedCourse(my_course_list_data?.course_info?.course_id)}  
                                         className="xl:border flex border-maincolor xl:rounded-2xl xl:pl-3 xl:pr-5 xl:pt-1.5 xl:pb-1.5 xl:text-base xl:text-maincolor xl:font-semibold">
                                         <img className="h-5 w-5 mr-2" src={PlayIcon} alt="" />
                                         Start
@@ -297,8 +323,13 @@ function MyCourse() {
                                 </div>
 
                                 <div className="flex w-full flex-wrap xl:mt-10 xl:pr-3 xl:justify-end">
-                                    <img className="xl:h-5 xl:w-5 xl:mx-1" src={Delete} alt="" />
+                                
+                                    <img
+                                        onClick={() => RemoveCourseForWhishList(my_whishlist_data.wishlist_id)}  
+                                       className="xl:h-5 xl:w-5 xl:mx-1" src={Delete} alt="" />
                                     <img className="xl:h-5 xl:w-5 xl:mx-1" src={IconlyLightHeart} alt="" />
+                                 
+                                    
                                 </div>
                             </div>
                         </div>
@@ -420,7 +451,9 @@ function MyCourse() {
                                 </div>
 
                                 <div className="flex w-full flex-wrap xl:mt-8 xl:pr-3 xl:justify-end">
-                                    <button className="xl:border flex border-maincolor xl:rounded-2xl xl:pl-3 xl:pr-5 xl:pt-1.5 xl:pb-1.5 xl:text-base xl:text-maincolor xl:font-semibold"><img className="h-5 w-5 mr-2" src={PlayIcon} alt="" />Proceed</button>
+                                    <button 
+                                    // onClick={() => RemoveCourseForArchivedList(archived_data.course_enroll_id)} 
+                                     className="xl:border flex border-maincolor xl:rounded-2xl xl:pl-3 xl:pr-5 xl:pt-1.5 xl:pb-1.5 xl:text-base xl:text-maincolor xl:font-semibold"><img className="h-5 w-5 mr-2" src={PlayIcon} alt="" />Proceed</button>
                                 </div>
                                 {/* <div className="flex w-full flex-wrap xl:mt-8 xl:pr-3 xl:justify-end">
                                     <button className="xl:border flex border-maincolor xl:rounded-2xl xl:pl-3 xl:pr-5 xl:pt-1.5 xl:pb-1.5 xl:text-base xl:text-maincolor xl:font-semibold"><img className="h-5 w-5 mr-2" src={PlayIcon} alt="" />Restart</button>
