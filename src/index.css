@@ -3,15 +3,8 @@
 @tailwind utilities;
 
 .Banner1 {
-  background-image: url('../src/asset/images/banner/banner1.svg');
+  height: 900px !important;
   width: 100% !important;
-  height: 100vh !important;
-  opacity: 1;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0 !important;
-  padding: 0 !important;
 }
 
 .PriceBanner {

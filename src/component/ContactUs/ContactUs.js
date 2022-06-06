@@ -1,9 +1,12 @@
-import React, {useState,Fragment, useEffect} from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ApiUrl from "../../Api/ApiUrl";
 import axios from "axios";
+import Location from "../../asset/images/icon/location.svg";
+import Mail from "../../asset/images/icon/icon_mail.svg";
+import Phone from "../../asset/images/icon/icon_phone.svg";
 
-function ContactUs(){
+function ContactUs() {
     const [name, setName] = useState('')
     const [surname, setSurname] = useState('')
     const [professional_email, setProfessional_email] = useState('')
@@ -38,7 +41,7 @@ function ContactUs(){
             if (response.data.error === false) {
                 console.log('contact succesffully');
             }
-        }); 
+        });
     }
 
 
@@ -71,14 +74,39 @@ function ContactUs(){
 
                         <div className="lg:basis-4/12 lg:pl-12 lg:pr-6">
                             <h2 className="text-sectionTitleColor lg:font-semibold lg:text-5xl lg:mt-40 ">Get in Touch</h2>
-                            <h2 className="text-client-section-des lg:font-normal lg:text-base lg:mb-6 lg:mt-10">Fill in the form and we’ll analyse your website and get back to you with 100% specific recommendations on how to improve it back to you with 100% specific</h2>
-                            <ul>
-                                <li>
-                                    <div>
-                                        <img alt=""></img>
-                                    </div>
-                                </li>
-                            </ul>
+                            <h2 className="text-client-section-des lg:font-normal lg:text-base lg:mb-6 lg:mt-10">We have your back. We are available
+                                365x24x7 so leave us a line if you have any query or If you wish to discuss a project. We will get back to you as soon as possible.</h2>
+
+                            <div className="flex flex-wrap xl:mt-10">
+                                <div className="xl:w-2/12">
+                                    <img className="xl:h-14 w-14" src={Location} alt="" />
+                                </div>
+                                <div className="xl:w-10/12">
+                                    <h6 className="text-maingray xl:text-lg xl:font-semibold">We are here:</h6>
+                                    <h6 className="xl:text-base text-gray-400 xl:font-normal">27 Division St, New York, NY 10002, USA</h6>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-wrap xl:mt-10">
+                                <div className="xl:w-2/12">
+                                    <img className="xl:h-14 w-14" src={Phone} alt="" />
+                                </div>
+                                <div className="xl:w-10/12">
+                                    <h6 className="text-maingray xl:text-lg xl:font-semibold">Phone us:</h6>
+                                    <h6 className="xl:text-base text-gray-400 xl:font-normal">+1 (908) 123 4567</h6>
+                                </div>
+                            </div>
+
+
+                            <div className="flex flex-wrap xl:mt-10">
+                                <div className="xl:w-2/12">
+                                    <img className="xl:h-14 w-14" src={Mail} alt="" />
+                                </div>
+                                <div className="xl:w-10/12">
+                                    <h6 className="text-maingray xl:text-lg xl:font-semibold">Mail us:</h6>
+                                    <h6 className="xl:text-base text-gray-400 xl:font-normal">customerservice@evveress.com</h6>
+                                </div>
+                            </div>
                         </div>
 
                         <div className="lg:basis-6/12 lg:p-2">
@@ -90,70 +118,70 @@ function ContactUs(){
                                     <div className="flex flex-wrap -mx-3 mb-6">
                                         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                             <input className="appearance-none block w-full bg-BgLoveIcon border-none py-4 px-3 mb-3 
-                                            leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" 
-                                            id="grid-first-name" type="text" value={name}
-                                                                onChange={e=>setName(e.target.value)} placeholder="Name *" />
+                                            leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
+                                                id="grid-first-name" type="text" value={name}
+                                                onChange={e => setName(e.target.value)} placeholder="Name *" />
                                         </div>
 
                                         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                             <input className="appearance-none block w-full bg-BgLoveIcon border-none py-4 px-3 
                                             mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal 
                                             text-CourseTitle" id="grid-first-name" type="text" value={surname}
-                                            onChange={e=>setSurname(e.target.value)} placeholder="Surname *" />
+                                                onChange={e => setSurname(e.target.value)} placeholder="Surname *" />
                                         </div>
 
                                         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                             <input className="appearance-none block w-full bg-BgLoveIcon border-none py-4 px-3 mb-3
                                             leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
-                                            id="grid-first-name" type="text" value={phone_number}
-                                            onChange={e=>setPhone_number(e.target.value)} placeholder="Phone Number *" />
+                                                id="grid-first-name" type="text" value={phone_number}
+                                                onChange={e => setPhone_number(e.target.value)} placeholder="Phone Number *" />
                                         </div>
 
 
                                         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                             <input className="appearance-none block w-full bg-BgLoveIcon border-none py-4 px-3 mb-3 
-                                            leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" 
-                                            id="grid-first-name" type="text" value={job_title}
-                                            onChange={e=>setJob_title(e.target.value)} placeholder="Job Title *" />
-                                        </div>
-
-
-                                        <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                                            <input className="appearance-none block w-full bg-BgLoveIcon border-none py-4 px-3 mb-3
-                                            leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" 
-                                            id="grid-first-name" type="text" value={professional_email}
-                                            onChange={e=>setProfessional_email(e.target.value)} placeholder="Professional Email *" />
-                                        </div>
-
-                                        <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                                            <input className="appearance-none block w-full bg-BgLoveIcon border-none py-4 px-3 mb-3 
-                                            leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" 
-                                            id="grid-first-name" type="text" value={company_name}
-                                            onChange={e=>setCompany_name(e.target.value)} placeholder="Company Name *" />
+                                            leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
+                                                id="grid-first-name" type="text" value={job_title}
+                                                onChange={e => setJob_title(e.target.value)} placeholder="Job Title *" />
                                         </div>
 
 
                                         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                             <input className="appearance-none block w-full bg-BgLoveIcon border-none py-4 px-3 mb-3
                                             leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
-                                            id="grid-first-name" type="text" value={company_size}
-                                            onChange={e=>setCompany_size(e.target.value)} placeholder="Company Size *" />
+                                                id="grid-first-name" type="text" value={professional_email}
+                                                onChange={e => setProfessional_email(e.target.value)} placeholder="Professional Email *" />
+                                        </div>
+
+                                        <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                                            <input className="appearance-none block w-full bg-BgLoveIcon border-none py-4 px-3 mb-3 
+                                            leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
+                                                id="grid-first-name" type="text" value={company_name}
+                                                onChange={e => setCompany_name(e.target.value)} placeholder="Company Name *" />
+                                        </div>
+
+
+                                        <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                                            <input className="appearance-none block w-full bg-BgLoveIcon border-none py-4 px-3 mb-3
+                                            leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
+                                                id="grid-first-name" type="text" value={company_size}
+                                                onChange={e => setCompany_size(e.target.value)} placeholder="Company Size *" />
                                         </div>
 
                                         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                             <input className="appearance-none block w-full bg-BgLoveIcon border-none py-4 px-3
                                             mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
-                                            id="grid-first-name" type="text" alue={number_of_learner}
-                                            onChange={e=>setNumber_of_learner(e.target.value)} placeholder="Number of Learner *" />
+                                                id="grid-first-name" type="text" alue={number_of_learner}
+                                                onChange={e => setNumber_of_learner(e.target.value)} placeholder="Number of Learner *" />
                                         </div>
 
                                         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                             <div className="relative">
-                                                <select value={country_id} onChange={e=>setCountry_id(e.target.value)} className="appearance-none block w-full bg-BgLoveIcon border-none py-4 px-3 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" id="grid-state">
+                                                <select value={country_id} onChange={e => setCountry_id(e.target.value)} className="appearance-none block w-full bg-BgLoveIcon border-none py-4 px-3 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" id="grid-state">
                                                     <option className="text-CourseTitle selected">Name of Country</option>
                                                     {
                                                         country.map((country_c, index) => (
-                                                        <option value={country_c.country_id}>{country_c.country_name}</option>
+                                                            <option value={country_c.country_id}>{country_c.country_name}</option>
                                                         ))
                                                     }
                                                 </select>
@@ -165,11 +193,11 @@ function ContactUs(){
 
                                         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                             <div className="relative">
-                                                <select value={city_id} onChange={e=>setCity_id(e.target.value)} className="appearance-none block w-full bg-BgLoveIcon border-none py-4 px-3 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" id="grid-state">
+                                                <select value={city_id} onChange={e => setCity_id(e.target.value)} className="appearance-none block w-full bg-BgLoveIcon border-none py-4 px-3 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" id="grid-state">
                                                     <option>City of Company</option>
                                                     {
                                                         city.map((city_c, index) => (
-                                                        <option value={city_c.city_id}>{city_c.city_name}</option>
+                                                            <option value={city_c.city_id}>{city_c.city_name}</option>
                                                         ))
                                                     }
                                                 </select>
@@ -182,8 +210,8 @@ function ContactUs(){
                                         <div className="lg:w-full md:w-full px-3 mb-6 md:mb-0">
                                             <textarea className="resize-y appearance-none block w-full bg-BgLoveIcon border-none py-4 px-3 mb-3 
                                             leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" value={message}
-                                            onChange={e=>setMessage(e.target.value)}
-                                            placeholder="Message *"></textarea>
+                                                onChange={e => setMessage(e.target.value)}
+                                                placeholder="Message *"></textarea>
                                         </div>
 
                                         <h2 className="text-client-section-des lg:font-normal lg:text-xs text-center lg:mb-6 mt-4">Fill in the form and we’ll analyse your website and get back to you with 100% specific recommendations on how to improve it</h2>

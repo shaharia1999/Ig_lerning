@@ -53,6 +53,7 @@ module.exports = {
       'pagination':'#39741F',
       'price':'#83C982',
       'cart-item-title':'#02073E',
+      'light-version':'#F3F4F6',
       'amber': {
         300: '#fcd34d',
         400: '#fbbf24',
