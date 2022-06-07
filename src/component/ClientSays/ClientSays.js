@@ -26,50 +26,51 @@ function ClientSays() {
 
     const html_says_client = (() => {
         if (isLoading === true) {
-            return <div class="flex  w-full flex-wrap lg:mt-6 p-3">
-                <div class="lg:basis-1/3 px-4 animate-pulse">
-                    <div class="bg-white rounded-2xl shadow-client border-none lg:p-12 h-full w-auto">
-                        <div className="rounded-full h-36 w-36 mt-8 mb-12 bg-gray-500 rounded-full" />
-                        <div class="text-base font-normal text-client-section-des leading-8 mb-4 mt-0 h-4 bg-gray-200 rounded animate-pulse-slow" />
-                        <ul className="flex sm:justify-center xl:justify-start mt-2">
-                            <div class="mb-4 h-4 bg-gray-400 rounded w-1/4"></div>
-                            <div class="h-4 bg-gray-400 rounded w-1/4"></div>
-                        </ul>
-                        <div class="text-sectionTitleColor text-2xl font-semibold h-6 bg-gray-400 rounded w-3/4"></div>
-                        <div class="text-client-section-des text-md mt-2 h-6 bg-gray-400 rounded w-3/4"></div>
+            return (
+                <div class="flex  w-full flex-wrap xl:mt-6 p-3">
+                    <div class="xl:basis-1/3 px-4 animate-pulse">
+                        <div class="bg-white rounded-2xl shadow-client border-none xl:p-12 h-full w-auto">
+                            <div className="rounded-full bg-gray-100 h-36 w-36 mt-8 mb-12"></div>
+                            <div class="mt-2 xl:w-12/12 h-3 bg-gray-100 rounded"></div>
+                            <div class="mt-2 xl:w-12/12 h-3 bg-gray-100 rounded"></div>
+                            <div class="mt-2 xl:w-8/12 h-3 bg-gray-100 rounded"></div>
+                            <div class="mt-2 xl:w-3/12 bg-gray-100 h-4 rounded"></div>
+                            <div class="mt-2 xl:w-6/12 bg-gray-100 h-5 rounded"></div>
+                            <div class="mt-2 xl:w-3/12 bg-gray-100 h-2 rounded"></div>
+                        </div>
+                    </div>
+
+                    <div class="xl:basis-1/3 px-4 animate-pulse">
+                        <div class="bg-white rounded-2xl shadow-client border-none xl:p-12 h-full w-auto">
+                            <div className="rounded-full bg-gray-100 h-36 w-36 mt-8 mb-12"></div>
+                            <div class="mt-2 xl:w-12/12 h-3 bg-gray-100 rounded"></div>
+                            <div class="mt-2 xl:w-12/12 h-3 bg-gray-100 rounded"></div>
+                            <div class="mt-2 xl:w-8/12 h-3 bg-gray-100 rounded"></div>
+                            <div class="mt-2 xl:w-3/12 bg-gray-100 h-4 rounded"></div>
+                            <div class="mt-2 xl:w-6/12 bg-gray-100 h-5 rounded"></div>
+                            <div class="mt-2 xl:w-3/12 bg-gray-100 h-2 rounded"></div>
+                        </div>
+                    </div>
+
+                    <div class="xl:basis-1/3 px-4 animate-pulse">
+                        <div class="bg-white rounded-2xl shadow-client border-none xl:p-12 h-full w-auto">
+                            <div className="rounded-full bg-gray-100 h-36 w-36 mt-8 mb-12"></div>
+                            <div class="mt-2 xl:w-12/12 h-3 bg-gray-100 rounded"></div>
+                            <div class="mt-2 xl:w-12/12 h-3 bg-gray-100 rounded"></div>
+                            <div class="mt-2 xl:w-8/12 h-3 bg-gray-100 rounded"></div>
+                            <div class="mt-2 xl:w-3/12 bg-gray-100 h-4 rounded"></div>
+                            <div class="mt-2 xl:w-6/12 bg-gray-100 h-5 rounded"></div>
+                            <div class="mt-2 xl:w-3/12 bg-gray-100 h-2 rounded"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="lg:basis-1/3 px-4 animate-pulse">
-                    <div class="bg-white rounded-2xl shadow-client border-none lg:p-12 h-full w-auto">
-                        <div className="rounded-full h-36 w-36 mt-8 mb-12 bg-gray-500 rounded-full" />
-                        <div class="text-base font-normal text-client-section-des leading-8 mb-4 mt-0 h-4 bg-gray-200 rounded animate-pulse-slow" />
-                        <ul className="flex sm:justify-center xl:justify-start mt-2">
-                            <div class="mb-4 h-4 bg-gray-400 rounded w-1/4"></div>
-                            <div class="h-4 bg-gray-400 rounded w-1/4"></div>
-                        </ul>
-                        <div class="text-sectionTitleColor text-2xl font-semibold h-6 bg-gray-400 rounded w-3/4"></div>
-                        <div class="text-client-section-des text-md mt-2 h-6 bg-gray-400 rounded w-3/4"></div>
-                    </div>
-                </div>
-                <div class="lg:basis-1/3 px-4 animate-pulse">
-                    <div class="bg-white rounded-2xl shadow-client border-none lg:p-12 h-full w-auto">
-                        <div className="rounded-full h-36 w-36 mt-8 mb-12 bg-gray-500 rounded-full" />
-                        <div class="text-base font-normal text-client-section-des leading-8 mb-4 mt-0 h-4 bg-gray-200 rounded animate-pulse-slow" />
-                        <ul className="flex sm:justify-center xl:justify-start mt-2">
-                            <div class="mb-4 h-4 bg-gray-400 rounded w-1/4"></div>
-                            <div class="h-4 bg-gray-400 rounded w-1/4"></div>
-                        </ul>
-                        <div class="text-sectionTitleColor text-2xl font-semibold h-6 bg-gray-400 rounded w-3/4"></div>
-                        <div class="text-client-section-des text-md mt-2 h-6 bg-gray-400 rounded w-3/4"></div>
-                    </div>
-                </div>
-            </div>
+            )
         }
         else if (isLoading === false) {
             return (
                 says_client.map((says_client, index) => (
                     <div key={index} class="xl:w-1/3 px-4">
-                        <div class="bg-white rounded-2xl shadow-client border-none lg:p-12 h-full w-auto">
+                        <div class="bg-white rounded-2xl shadow-client border-none xl:p-12 h-full w-auto">
                             <img className="rounded-full h-36 w-36 mt-8 mb-12" src={ApiUrl.ImageBaseUrl + says_client.user_info.image} alt='' />
                             <h5 class="text-base font-normal text-client-section-des leading-8 mb-4 mt-0">{`${says_client.review_description.substring(0, 250)}...`}</h5>
                             {(() => {
@@ -121,10 +122,10 @@ function ClientSays() {
 
     return (
         <Fragment>
-            <div className="container lg:mt-8 lg:mb-12">
+            <div className="container xl:mt-8 xl:mb-12">
                 <h4 className="text-4xl	font-semibold ml-3 text-sectionTitleColor">What Our Client Say</h4>
 
-                <div className="lg:mt-6">
+                <div className="xl:mt-6">
                     <Slider
                         ref={(slider1) => setNav1(slider1)}
                         slidesToShow={3}
