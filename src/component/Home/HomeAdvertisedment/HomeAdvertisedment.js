@@ -5,7 +5,7 @@ import TopCategories from "../TopCategories/TopCategories";
 import axios from "axios";
 
 function HomeAdvertisedment() {
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     // useEffect(() => {
     //     setIsLoading(true);
