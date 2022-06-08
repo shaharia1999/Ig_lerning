@@ -168,50 +168,5 @@ function ClientSays() {
             </Fragment >
         );
     }
-
-    // return (
-    //     <Fragment>
-    //         <div className="container xl:mt-8 xl:mb-12">
-    //             <h4 className="text-4xl	font-semibold ml-3 text-sectionTitleColor">What Our Client Say</h4>
-
-    //             <div className="xl:mt-6">
-    //                 {
-    //                     isLoading
-    //                         return says_client_lazy_loading;
-    //                     }
-    //                     else if (isLoading === false){
-    //                         // return says_client_data;
-
-
-    //                         <Slider
-    //                         ref={(slider1) => setNav1(slider1)}
-    //                         slidesToShow={3}
-    //                         dots={true}
-    //                         adaptiveHeight={true}
-    //                         infinite={true}
-    //                         slidesToScroll={1}
-    //                         loop={true}
-    //                         speed={1000}
-    //                         height={600}
-    //                         autoplay={true}
-    //                         autoplaySpeed={1500}
-    //                         swipeToSlide={true}
-
-    //                         >
-    //                             <div className="xl:w-full">
-    //                                 <h1>joy</h1>
-    //                             </div>
-
-    //                         </Slider>
-    //                     }
-    //                 }
-    //             </div>
-
-
-
-    //         </div>
-    //     </Fragment >
-    // );
-
 }
 export default ClientSays;

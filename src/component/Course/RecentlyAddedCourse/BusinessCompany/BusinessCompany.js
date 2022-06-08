@@ -23,11 +23,9 @@ function BusinessCompany() {
     const [course_isLoading, setCourseIsLoading] = useState(false);
 
     useEffect(() => {
-        // setIsLoading(true);
-        // setCourseIsLoading(true);
+        setIsLoading(true);
+        setCourseIsLoading(true);
         
-    console.log('isLoading = ', isLoading);
-    console.log('course_isLoading = ', course_isLoading);
         axios.get(`${ApiUrl.BaseUrl}api/course/course-subcategory-response/`).then((response) => {
             if (response.data.error === false) {
                 setSubCategory(response.data.data);
@@ -49,11 +47,6 @@ function BusinessCompany() {
         });
     };
 
-    console.log('subCategory = ', subCategory);
-    console.log('recently_addedsubcategoryId = ', recently_addedsubcategoryId);
-    console.log('isLoading = ', isLoading);
-    console.log('course_isLoading = ', course_isLoading);
-
     const Subcategory_Loading = (() => {
         if (isLoading === true) {
             return(
@@ -64,7 +57,7 @@ function BusinessCompany() {
 
     const data_of_subcategory = (() => {
         if (isLoading === false) {
-            subCategory.map((subcategory, index) => (
+            return subCategory.map((subcategory, index) => (
                 <div key={index}>
                     <input id={subcategory.sub_category_id} type='hidden' name={subcategory.sub_category_id} />
                     <li className="nav-item" role="presentation">
@@ -77,10 +70,8 @@ function BusinessCompany() {
                     </li>
                 </div>
             ));
-
         }
     })()
-
 
     const subcategory_course_Loading = (() => {
         if (course_isLoading === true) {
@@ -92,8 +83,7 @@ function BusinessCompany() {
 
     const data_of_subcategory_course = (() => {
         if (course_isLoading === false) {
-
-            recently_addedsubcategoryId.map((sub_category_course) => (
+           return recently_addedsubcategoryId.map((sub_category_course) => (
                 sub_category_course.course_info.map((course, course_index) => (
                     <div key={course_index} className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/4">
                         <div className="wrapper antialiased text-gray-900">
@@ -192,9 +182,6 @@ function BusinessCompany() {
         }
     })()
 
-
-
-
     if (isLoading === true) {
         return (
             <Fragment>
@@ -267,8 +254,6 @@ function BusinessCompany() {
             </Fragment>
         );
     }
-
-
 }
 
 export default BusinessCompany;
