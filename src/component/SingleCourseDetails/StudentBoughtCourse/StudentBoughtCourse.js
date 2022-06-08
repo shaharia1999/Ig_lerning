@@ -34,9 +34,34 @@ function StudentBoughtCourse() {
 
     const profile_picture = (() => {
         if (isLoading === true) {
-            return <div className="xl:w-1/6">
-                <img className="rounded-md" src={Student1} alt="" />
-            </div>
+            return (
+                <>
+                    <div className="xl:w-1/6 xl:mx-3 animate-pulse">
+                        <div className="rounded-md xl:h-44 xl:w-full bg-gray-100"></div>
+                    </div>
+
+                    <div className="xl:w-1/6 xl:mx-3 animate-pulse">
+                        <div className="rounded-md xl:h-44 xl:w-full bg-gray-100"></div>
+                    </div>
+
+                    <div className="xl:w-1/6 xl:mx-3 animate-pulse">
+                        <div className="rounded-md xl:h-44 xl:w-full bg-gray-100"></div>
+                    </div>
+
+                    <div className="xl:w-1/6 xl:mx-3 animate-pulse">
+                        <div className="rounded-md xl:h-44 xl:w-full bg-gray-100"></div>
+                    </div>
+
+                    <div className="xl:w-1/6 xl:mx-3 animate-pulse">
+                        <div className="rounded-md xl:h-44 xl:w-full bg-gray-100"></div>
+                    </div>
+
+                    <div className="xl:w-1/6 xl:mx-3 animate-pulse">
+                        <div className="rounded-md xl:h-44 xl:w-full bg-gray-100"></div>
+                    </div>
+                </>
+
+            )
         }
         else if (isLoading === false) {
             return courseEnrollImage.map((student_enroll_image, index) => (
