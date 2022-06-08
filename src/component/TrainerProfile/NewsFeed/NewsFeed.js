@@ -22,38 +22,38 @@ function NewsFeed() {
 
     const NewFeedHTML = (() => {
         if (isLoading === true) {
-            return <div>
-                <div className="flex">
-                    <div className="xl:w-3/12">
-                        <img className="xl:h-12 xl:mt-4 xl:w-12 rounded-full xl:shadow-lg" src={Teacher} alt="teacher" />
-                    </div>
-                    <div className="xl:w-9/12 xl:ml-3">
-                        <h6 className=" text-sectionTitleColor text-xl font-semibold xl:mt-4">Franck Nicola</h6>
-                        <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-0">2 hours ago</h6>
-                    </div>
-                </div>
-                <div className="xl:w-full xl:mt-3">
-                    <h6 className="text-sm text-hash-tag font-normal">#event, #learning</h6>
-                    <h6 className="text-sm text-black font-normal xl:mt-2 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h6>
-                    <img className="rounded-lg xl:h-40 xl:w-full xl:mt-2" src={NewsFeedStage} alt="" />
-
-                    <div className="flex">
-                        <div className="flex xl:mt-3">
-                            <div class="z-40 bg-white rounded-full xl:h-9 xl:w-9 border-2 border-white"><img className=" rounded-full xl:h-9 xl:w-9 border-2 border-white" src={Teacher} alt="" /></div>
-                            <div class="z-30 bg-white rounded-full xl:-ml-3 xl:h-9 xl:w-9 border-2 border-white"><img className=" rounded-full xl:h-9 xl:w-9 border-2 border-white" src={Teacher} alt="" /></div>
-                            <div class="z-20 bg-white rounded-full xl:-ml-3 xl:h-9 xl:w-9 border-2 border-white"><img className=" rounded-full xl:h-9 xl:w-9 border-2 border-white" src={Teacher} alt="" /></div>
+            return (
+                <>
+                    <div className="flex animate-pulse">
+                        <div className="xl:w-3/12">
+                            <div className="xl:h-14 xl:mt-4 xl:w-14 rounded-full xl:shadow-sm bg-gray-100"></div>
                         </div>
-
-                        <div className="flex xl:mt-3 xl:ml-3">
-                            <h6 className="text-sm text-black font-normal xl:mt-2"> 1125 Likes </h6>
-                        </div>
-
-                        <div className="flex xl:mt-3">
-                            <h6 className="text-sm text-black font-normal xl:mt-2 xl:ml-48"> 23 Comments</h6>
+                        <div className="xl:w-9/12 xl:ml-10">
+                            <div className="xl:mt-6 bg-gray-100 h-5 w-64 rounded"></div>
+                            <div className="xl:mt-2 bg-gray-100 h-3 w-5/12 rounded"></div>
                         </div>
                     </div>
-                </div>
-            </div>
+                    <div className="xl:w-full xl:mt-3 animate-pulse">
+                        <div className="flex">
+                            <div className="xl:mt-4 bg-gray-100 h-3 w-2/12 rounded"></div>
+                            <div className="xl:mt-4 mx-2 bg-gray-100 h-3 w-3/12 rounded"></div>
+                        </div>
+
+                        <div className="xl:mt-2 bg-gray-100 h-3 w-12/12 rounded"></div>
+                        <div className="xl:mt-1 bg-gray-100 h-3 w-8/12 rounded"></div>
+                        <div class="rounded xl:mt-3 w-full h-44 bg-gray-100"></div>
+
+                        <div className="flex flex-wrap w-full">
+                            <div className="flex">
+                                <div className="z-40 xl:h-9 xl:mt-4 xl:w-9 rounded-full xl:shadow-sm bg-gray-100"></div>
+                                <div className="z-30 xl:h-9 xl:mt-4 xl:w-9 rounded-full xl:shadow-sm bg-gray-100"></div>
+                                <div className="z-20 xl:h-9 xl:mt-4 xl:w-9 rounded-full xl:shadow-sm bg-gray-100"></div>
+                            </div>
+                            <div className="xl:mt-6 xl:ml-5 bg-gray-100 h-5 w-2/12 rounded"></div>
+                        </div>
+                    </div>
+                </>
+            )
         }
         else if (isLoading === false) {
             return newsFeeds.map((news_feed, news_feed_index) => (

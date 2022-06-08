@@ -1,6 +1,7 @@
 import React from 'react';
-import 'flowbite';
 import './index.css';
+import 'flowbite';
+import './App.css';
 import './asset/css/pill.css';
 import './asset/css/custom.css';
 import ReactDOM from 'react-dom';
