@@ -579,7 +579,7 @@ function CourseSearchFilter() {
                                             onChange={selectLanguage}
                                             value={languageID}
                                             class="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
-                                            <option selected className="hover:bg-maincolor text-sm">Language</option>
+                                            <option selected value={0} className="hover:bg-maincolor text-sm">Language</option>
                                             {
                                                 CourseLanguageHTML
                                             }
