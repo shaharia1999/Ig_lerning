@@ -14,7 +14,7 @@ function PricingPage() {
             <NavBarTop />
             <PriceBanner />
             <Price/>
-            <PriceAccordonSection />
+            <PriceAccordonSection/>
             <PriceContactSection />
             <Partner />
             <Footer />
