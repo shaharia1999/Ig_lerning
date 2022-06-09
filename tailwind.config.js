@@ -63,6 +63,7 @@ module.exports = {
       'hash-tag':' #3DB9FB',
       'pagination':'#39741F',
       'price':'#83C982',
+      'price-deep': '#7ABB79',
       'cart-item-title':'#02073E',
       'light-version':'#F3F4F6',
       'amber': {
