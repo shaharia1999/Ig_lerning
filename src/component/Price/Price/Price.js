@@ -51,7 +51,7 @@ function Price() {
                                                 <h6 className="text-2xl text-maingray xl:font-medium">Free</h6>
                                             </div>
 
-                                            <div class="tab-pane fade show xl:mt-20" id="pills-profile3" role="tabpanel" aria-labelledby="pills-profile-tab3">
+                                            <div className="tab-pane fade show xl:mt-20" id="pills-profile3" role="tabpanel" aria-labelledby="pills-profile-tab3">
                                                 <h6 className="text-2xl text-maingray xl:font-medium">Free</h6>
                                             </div>
                                         </div>

@@ -21,22 +21,22 @@ function OurMission() {
 
                     <div className="xl:w-1/2 w-full">
                         <div className="xl:p-6">
-                            <div class="flex flex-row mt-3 justify-around">
-                                <div class="xl:basis-1/3">
+                            <div className="flex flex-row mt-3 justify-around">
+                                <div className="xl:basis-1/3">
                                     <img className=" h-28 w-52" src={Client2} alt=""/>
                                 </div>
-                                <div class="xl:basis-1/3">
+                                <div className="xl:basis-1/3">
                                     <img className=" h-28 w-52" src={Client1} alt=""/>
                                 </div>
-                                <div class="xl:basis-1/3">
+                                <div className="xl:basis-1/3">
                                     <img className=" h-28 w-52" src={Client3} alt=""/>
                                 </div>
                             </div>
-                            <div class="flex flex-row mt-3 justify-center">
-                                <div class="xl:basis-1/3">
+                            <div className="flex flex-row mt-3 justify-center">
+                                <div className="xl:basis-1/3">
                                     <img className=" h-28 w-52" src={Client5} alt=""/>
                                 </div>
-                                <div class="xl:basis-1/3">
+                                <div className="xl:basis-1/3">
                                     <img className=" h-28 w-52" src={Client4} alt=""/>
                                 </div>
                             </div>

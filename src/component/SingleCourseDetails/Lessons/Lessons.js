@@ -10,7 +10,7 @@ import { GrDocumentText } from "react-icons/gr";
 
 function Lessons() {
     const [open, setOpen] = useState(0);
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleOpen = (value) => {
         setOpen(open === value ? 0 : value);

@@ -46,7 +46,7 @@ function MostVisited() {
                                         <div className="absolute ml-2 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5">
-                                        <div class="absolute top-0 mt-5">
+                                        <div className="absolute top-0 mt-5">
                                             <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
                                             <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
                                             <div className="xl:h-28 xl:mt-6 xl:-ml-8 rounded-sm bg-gray-100"></div>
@@ -94,7 +94,7 @@ function MostVisited() {
                                         <div className="absolute ml-2 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5">
-                                        <div class="absolute top-0 mt-5">
+                                        <div className="absolute top-0 mt-5">
                                             <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
                                             <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
                                             <div className="xl:h-28 xl:mt-6 xl:-ml-8 rounded-sm bg-gray-100"></div>
@@ -142,7 +142,7 @@ function MostVisited() {
                                         <div className="absolute ml-2 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5">
-                                        <div class="absolute top-0 mt-5">
+                                        <div className="absolute top-0 mt-5">
                                             <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
                                             <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
                                             <div className="xl:h-28 xl:mt-6 xl:-ml-8 rounded-sm bg-gray-100"></div>
@@ -199,14 +199,14 @@ function MostVisited() {
                                     <div className="w-1/5">
                                         <a href="!#">
                                             <div
-                                                class="text-sm absolute top-0 left-2 bg-black text-white rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                                                className="text-sm absolute top-0 left-2 bg-black text-white rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
                                                 <img className="h-12 w-12" src={CourseLogo} alt="" />
                                             </div>
                                         </a>
                                     </div>
                                     <div className="w-4/5">
                                         <a href="!#">
-                                            <div class="text-lg absolute top-0 mt-5">
+                                            <div className="text-lg absolute top-0 mt-5">
                                                 <h6 className="font-medium text-lg text-black">{mostvisited_c.channel_name.channel_name}</h6>
                                                 <h6 className="font-light text-sm text-black">{mostvisited_c.course_duration} min</h6>
 

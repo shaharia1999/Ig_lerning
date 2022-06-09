@@ -41,7 +41,7 @@ function CurrentCourse() {
                                         <div className="absolute ml-3 top-0 bg-gray-100 rounded-full h-8 w-8 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5">
-                                        <div class="absolute top-0 mt-5 ml-3">
+                                        <div className="absolute top-0 mt-5 ml-3">
                                             <div className="bg-gray-100 xl:w-28 h-3 rounded"></div>
                                             <div className="bg-gray-100 xl:w-6/12 h-3 mt-2 rounded"></div>
                                             <div className="xl:h-20 xl:mt-4 xl:-ml-8 xl:-mr-5 rounded-sm bg-gray-100"></div>
@@ -89,7 +89,7 @@ function CurrentCourse() {
                                         <div className="absolute ml-3 top-0 bg-gray-100 rounded-full h-8 w-8 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5">
-                                        <div class="absolute top-0 mt-5 ml-3">
+                                        <div className="absolute top-0 mt-5 ml-3">
                                             <div className="bg-gray-100 xl:w-28 h-3 rounded"></div>
                                             <div className="bg-gray-100 xl:w-6/12 h-3 mt-2 rounded"></div>
                                             <div className="xl:h-20 xl:mt-4 xl:-ml-8 xl:-mr-5 rounded-sm bg-gray-100"></div>
@@ -137,7 +137,7 @@ function CurrentCourse() {
                                         <div className="absolute ml-3 top-0 bg-gray-100 rounded-full h-8 w-8 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5">
-                                        <div class="absolute top-0 mt-5 ml-3">
+                                        <div className="absolute top-0 mt-5 ml-3">
                                             <div className="bg-gray-100 xl:w-28 h-3 rounded"></div>
                                             <div className="bg-gray-100 xl:w-6/12 h-3 mt-2 rounded"></div>
                                             <div className="xl:h-20 xl:mt-4 xl:-ml-8 xl:-mr-5 rounded-sm bg-gray-100"></div>
@@ -185,7 +185,7 @@ function CurrentCourse() {
                                         <div className="absolute ml-3 top-0 bg-gray-100 rounded-full h-8 w-8 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5">
-                                        <div class="absolute top-0 mt-5 ml-3">
+                                        <div className="absolute top-0 mt-5 ml-3">
                                             <div className="bg-gray-100 xl:w-28 h-3 rounded"></div>
                                             <div className="bg-gray-100 xl:w-6/12 h-3 mt-2 rounded"></div>
                                             <div className="xl:h-20 xl:mt-4 xl:-ml-8 xl:-mr-5 rounded-sm bg-gray-100"></div>
@@ -244,14 +244,14 @@ function CurrentCourse() {
                                     <div className="w-1/5">
                                         <a href="!#">
                                             <div
-                                                class="text-sm absolute top-0 left-2 rounded-full h-10 w-10 flex border-2 border-client-section-des flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                                                className="text-sm absolute top-0 left-2 rounded-full h-10 w-10 flex border-2 border-client-section-des flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
                                                 <img className="h-10 w-10" src={ApiUrl.ImageBaseUrl + current_course.channel_name_id?.channel_name_logo} alt="" />
                                             </div>
                                         </a>
                                     </div>
                                     <div className="w-4/5">
                                         <a href="!#">
-                                            <div class="text-lg absolute top-0 text-black mt-5">
+                                            <div className="text-lg absolute top-0 text-black mt-5">
                                                 <h6 className="font-medium xl:text-sm text-black xl:ml-1">{current_course.channel_name_id.channel_name}</h6>
                                                 <h6 className="font-light xl:text-xs text-black">40 min</h6>
 

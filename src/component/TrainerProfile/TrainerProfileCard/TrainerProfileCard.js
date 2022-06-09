@@ -81,11 +81,11 @@ function TrainerProfileCard() {
                     </div>
 
                     <div className="xl:w-full xl:mt-7 animate-pulse">
-                        <div class="space-y-6">
-                            <div class="grid grid-cols-6 gap-8">
-                                <div class="h-2 bg-white rounded col-span-2"></div>
+                        <div className="space-y-6">
+                            <div className="grid grid-cols-6 gap-8">
+                                <div className="h-2 bg-white rounded col-span-2"></div>
                                 <div className=" bg-gray-100 h-5 col-span-2 rounded"></div>
-                                <div class="h-2 bg-white rounded col-span-2"></div>
+                                <div className="h-2 bg-white rounded col-span-2"></div>
                             </div>
                         </div>
 
@@ -99,31 +99,31 @@ function TrainerProfileCard() {
                             <div className="bg-gray-100 xl:mx-2 xl:pt-4 xl:pb-4 xl:pl-12 xl:pr-12 xl:rounded-3xl"></div>
                         </div>
 
-                        <div class="space-y-6 xl:mt-9">
-                            <div class="grid grid-cols-8 gap-8">
-                                <div class="h-2 bg-white rounded col-span-2"></div>
+                        <div className="space-y-6 xl:mt-9">
+                            <div className="grid grid-cols-8 gap-8">
+                                <div clasclassNames="h-2 bg-white rounded col-span-2"></div>
                                 <div className=" bg-gray-100 h-5 col-span-4 rounded"></div>
-                                <div class="h-2 bg-white rounded col-span-2"></div>
+                                <div className="h-2 bg-white rounded col-span-2"></div>
                             </div>
                         </div>
 
-                        <div class="space-y-6 xl:mt-9">
-                            <div class="grid grid-cols-5 gap-8">
-                                <div class="h-2 bg-white rounded col-span-1"></div>
+                        <div className="space-y-6 xl:mt-9">
+                            <div className="grid grid-cols-5 gap-8">
+                                <div className="h-2 bg-white rounded col-span-1"></div>
                                 <div className="bg-gray-100 h-10 col-span-1 rounded"></div>
                                 <div className="bg-gray-100 h-10 col-span-1 rounded"></div>
                                 <div className="bg-gray-100 h-10 col-span-1 rounded"></div>
-                                <div class="h-2 bg-white rounded col-span-1"></div>
+                                <div className="h-2 bg-white rounded col-span-1"></div>
                             </div>
                         </div>
 
-                        <div class="space-y-6 xl:mt-4">
-                            <div class="grid grid-cols-5 gap-8">
-                                <div class="h-2 bg-white rounded col-span-1"></div>
+                        <div className="space-y-6 xl:mt-4">
+                            <div className="grid grid-cols-5 gap-8">
+                                <div className="h-2 bg-white rounded col-span-1"></div>
                                 <div className="bg-gray-100 h-2 col-span-1 rounded"></div>
                                 <div className="bg-gray-100 h-2 col-span-1 rounded"></div>
                                 <div className="bg-gray-100 h-2 col-span-1 rounded"></div>
-                                <div class="h-2 bg-white rounded col-span-1"></div>
+                                <div className="h-2 bg-white rounded col-span-1"></div>
                             </div>
                         </div>
 

@@ -41,7 +41,7 @@ function NewsFeed() {
 
                         <div className="xl:mt-2 bg-gray-100 h-3 w-12/12 rounded"></div>
                         <div className="xl:mt-1 bg-gray-100 h-3 w-8/12 rounded"></div>
-                        <div class="rounded xl:mt-3 w-full h-44 bg-gray-100"></div>
+                        <div className="rounded xl:mt-3 w-full h-44 bg-gray-100"></div>
 
                         <div className="flex flex-wrap w-full">
                             <div className="flex">
@@ -76,9 +76,9 @@ function NewsFeed() {
 
                         <div className="flex">
                             <div className="flex xl:mt-3">
-                                <div class="z-40 bg-white rounded-full xl:h-9 xl:w-9 border-2 border-white"><img className=" rounded-full xl:h-9 xl:w-9 border-2 border-white" src={Teacher} alt="" /></div>
-                                <div class="z-30 bg-white rounded-full xl:-ml-3 xl:h-9 xl:w-9 border-2 border-white"><img className=" rounded-full xl:h-9 xl:w-9 border-2 border-white" src={Teacher} alt="" /></div>
-                                <div class="z-20 bg-white rounded-full xl:-ml-3 xl:h-9 xl:w-9 border-2 border-white"><img className=" rounded-full xl:h-9 xl:w-9 border-2 border-white" src={Teacher} alt="" /></div>
+                                <div className="z-40 bg-white rounded-full xl:h-9 xl:w-9 border-2 border-white"><img className=" rounded-full xl:h-9 xl:w-9 border-2 border-white" src={Teacher} alt="" /></div>
+                                <div className="z-30 bg-white rounded-full xl:-ml-3 xl:h-9 xl:w-9 border-2 border-white"><img className=" rounded-full xl:h-9 xl:w-9 border-2 border-white" src={Teacher} alt="" /></div>
+                                <div className="z-20 bg-white rounded-full xl:-ml-3 xl:h-9 xl:w-9 border-2 border-white"><img className=" rounded-full xl:h-9 xl:w-9 border-2 border-white" src={Teacher} alt="" /></div>
                             </div>
 
                             <div className="flex xl:mt-3 xl:ml-3">
