@@ -66,7 +66,7 @@ function Footer(){
                                         </div>
                                         <h4 className="text-lg font-medium footer-title mt-4 mb-2">Download App</h4>
 
-                                        <div class="flex flex-row">
+                                        <div className="flex flex-row">
                                             <div className="basis-1/2 mt-4">
                                                 <span><img className="lg:h-11 lg:w-32" src={ios} /></span>
                                             </div>

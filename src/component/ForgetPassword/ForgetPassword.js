@@ -41,10 +41,10 @@ function ForgetPassword() {
                                                 <h4 className=" text-sm font-normal lg:mt-2 mb-16 pb-1">Enter your email address associated with your account we will send you a link to reset your password</h4>
                                             </div>
 
-                                            <form class="space-y-5 lg:mt-8">
-                                                <div class="mb-4 relative">
-                                                    <input class="rounded px-3 input active:outline-none pt-5 block w-full bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" type="text" value={email} onChange={e => setEmail(e.target.value)} autofocus />
-                                                    <label for="email" class="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-CourseTitle text-base mt-2 cursor-text">Email</label>
+                                            <form className="space-y-5 lg:mt-8">
+                                                <div className="mb-4 relative">
+                                                    <input className="rounded px-3 input active:outline-none pt-5 block w-full bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" type="text" value={email} onChange={e => setEmail(e.target.value)} autofocus />
+                                                    <label for="email" className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-CourseTitle text-base mt-2 cursor-text">Email</label>
                                                 </div>
 
                                                 <div className="w-full mt-8 flex flex-auto lg:w-full image-center bg-maincolor rounded-sm lg:pt-4 lg:pb-4">
@@ -55,7 +55,7 @@ function ForgetPassword() {
 
                                             <div className="mt-8 text-center">
                                                 <div className="lg:mt-14">
-                                                    <span class="font-normal text-black lg:text-base"> Don't have an account? <span className="hover:underline"><Link to="/Registration/">Sign Up</Link></span></span>
+                                                    <span className="font-normal text-black lg:text-base"> Don't have an account? <span className="hover:underline"><Link to="/Registration/">Sign Up</Link></span></span>
                                                 </div>
                                             </div>
 

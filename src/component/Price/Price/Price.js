@@ -294,6 +294,7 @@ function Price() {
 
                                             <div class="tab-pane fade show xl:mt-20" id="pills-annual" role="tabpanel" aria-labelledby="pills-profile-tab3">
                                                 <h6 className="text-xl text-maingray xl:font-medium">e</h6>
+
                                             </div>
                                         </div>
                                     </div>

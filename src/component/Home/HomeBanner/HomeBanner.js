@@ -79,14 +79,14 @@ function HomeBanner() {
                         <h6 className="text-2xl text-sectionTitleColor font-semibold">100% Certificate Obtaining</h6>
                     </div>
 
-                    <div class="lg:basis-1/3">
+                    <div className="lg:basis-1/3">
                         <div className="image-center">
                             <img className="h-24 w-24 object-contain" src={Certificate} alt="" />
                         </div>
                         <h6 className="text-2xl text-sectionTitleColor font-semibold">100% Certificate Obtaining</h6>
                     </div>
 
-                    <div class="lg:basis-1/3">
+                    <div className="lg:basis-1/3">
                         <div className="image-center">
                             <img className="h-24 w-24 object-contain" src={Certificate} alt="" />
                         </div>

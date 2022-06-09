@@ -8,20 +8,20 @@ class Partner extends Component {
             <Fragment>
                 <div className="container mt-8 mb-8">
                     <h4 className="text-4xl	font-semibold text-sectionTitleColor ml-3">Our Partners</h4>
-                    <div class="flex flex-row mt-3 p-3">
-                        <div class="lg:basis-1/5 p-3">
+                    <div className="flex flex-row mt-3 p-3">
+                        <div className="lg:basis-1/5 p-3">
                             <img className="h-18 w-auto" src={Partner1} />
                         </div>
-                        <div class="lg:basis-1/5 p-3">
+                        <div className="lg:basis-1/5 p-3">
                             <img className="h-18 w-auto" src={Partner2} />
                         </div>
-                        <div class="lg:basis-1/5 p-3">
+                        <div className="lg:basis-1/5 p-3">
                             <img className="h-18 w-auto" src={Partner1} />
                         </div>
-                        <div class="lg:basis-1/5 p-3">
+                        <div className="lg:basis-1/5 p-3">
                             <img className="h-18 w-auto" src={Partner2} />
                         </div>
-                        <div class="lg:basis-1/5 p-3">
+                        <div className="lg:basis-1/5 p-3">
                             <img className="h-18 w-auto" src={Partner1} />
                         </div>
                     </div>

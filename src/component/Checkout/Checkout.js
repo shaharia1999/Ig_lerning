@@ -111,7 +111,7 @@ function Checkout() {
                                                     </div>
                                                 </div>
 
-                                                <div class="tab-pane fade show xl:mt-20" id="pills-profile3" role="tabpanel" aria-labelledby="pills-profile-tab3">
+                                                <div className="tab-pane fade show xl:mt-20" id="pills-profile3" role="tabpanel" aria-labelledby="pills-profile-tab3">
                                                     <div className="flex flex-wrap xl:mt-4">
                                                         <div className="xl:w-full bg-white hover:bg-price border-price border xl:ml-6 xl:mr-6 xl:pl-5 xl:pt-5 xl:pb-5 rounded-xl">
                                                             <h6 className="text-2xl text-maingray xl:font-medium">Free</h6>

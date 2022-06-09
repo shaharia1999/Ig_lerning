@@ -11,8 +11,8 @@ class IgLearnProBanner extends Component {
             <Fragment>
                 <div className="IgLearnProBanner">
                     <div className="container">
-                        <div class="flex flex-auto">
-                            <div class="lg:basis-1/2">
+                        <div className="flex flex-auto">
+                            <div className="lg:basis-1/2">
                                 <h2 className="text-white lg:font-semibold lg:text-5xl lg:mt-80 ">Train your team!</h2>
                                 <h2 className="text-white lg:font-semibold lg:text-5xl mt-6">Thanks to IntelloGeek Learning</h2>
 
@@ -23,7 +23,7 @@ class IgLearnProBanner extends Component {
                                 <Link to="/"><span className="text-sm font-normal leading-tight bg-maincolor text-white lg:pl-16 lg:pr-16 lg:pt-4 lg:pb-4 rounded-3xl mx-2 h-11">Start Trial</span></Link>
                             </div>
 
-                            <div class="lg:basis-1/2">
+                            <div className="lg:basis-1/2">
 
                             </div>
                         </div>
@@ -31,26 +31,26 @@ class IgLearnProBanner extends Component {
                 </div>
 
                 <div className="container -mt-28">
-                    <div class="flex flex-row bg-white rounded-xl shadow-client border-none lg:p-4 w-full text-center">
-                        <div class="lg:basis-1/4">
+                    <div className="flex flex-row bg-white rounded-xl shadow-client border-none lg:p-4 w-full text-center">
+                        <div className="lg:basis-1/4">
                             <div className="image-center">
                                 <img className="h-48 w-56 object-contain" src={Google} alt="" />
                             </div>
                         </div>
 
-                        <div class="lg:basis-1/4">
+                        <div className="lg:basis-1/4">
                             <div className="image-center">
                                 <img className="h-48 w-56 object-contain" src={LogoMba} alt="" />
                             </div>
                         </div>
 
-                        <div class="lg:basis-1/4">
+                        <div className="lg:basis-1/4">
                             <div className="image-center">
                                 <img className="h-48 w-56 object-contain" src={Politecnico} alt="" />
                             </div>
                         </div>
 
-                        <div class="lg:basis-1/4">
+                        <div className="lg:basis-1/4">
                             <div className="image-center">
                                 <img className="h-48 w-56 object-contain" src={Uci} alt="" />
                             </div>
