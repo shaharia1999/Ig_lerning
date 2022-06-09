@@ -23,32 +23,32 @@ function FeatureTraining() {
             return (
                 <>
                     <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
-                        <div class="animate-pulse bg-white shadow-sm rounded-lg xl:p-4 xl:w-full">
-                            <div class="rounded w-full h-52 bg-gray-100"></div>
-                            <div class="flex flex-col mt-5">
-                                <div class="w-full h-5 bg-gray-100 rounded"></div>
-                                <div class="mt-2 w-8/12 h-3 bg-gray-100 rounded"></div>
+                        <div className="animate-pulse bg-white shadow-sm rounded-lg xl:p-4 xl:w-full">
+                            <div className="rounded w-full h-52 bg-gray-100"></div>
+                            <div className="flex flex-col mt-5">
+                                <div className="w-full h-5 bg-gray-100 rounded"></div>
+                                <div className="mt-2 w-8/12 h-3 bg-gray-100 rounded"></div>
                             </div>
                         </div>
                     </div>
 
 
                     <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
-                        <div class="animate-pulse bg-white shadow-sm rounded-lg xl:p-4 xl:w-full">
-                            <div class="rounded w-full h-52 bg-gray-100"></div>
-                            <div class="flex flex-col mt-5">
-                                <div class="w-full h-5 bg-gray-100 rounded"></div>
-                                <div class="mt-2 w-8/12 h-3 bg-gray-100 rounded"></div>
+                        <div className="animate-pulse bg-white shadow-sm rounded-lg xl:p-4 xl:w-full">
+                            <div className="rounded w-full h-52 bg-gray-100"></div>
+                            <div className="flex flex-col mt-5">
+                                <div className="w-full h-5 bg-gray-100 rounded"></div>
+                                <div className="mt-2 w-8/12 h-3 bg-gray-100 rounded"></div>
                             </div>
                         </div>
                     </div>
 
                     <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
-                        <div class="animate-pulse bg-white shadow-sm rounded-lg xl:p-4 xl:w-full">
-                            <div class="rounded w-full h-52 bg-gray-100"></div>
-                            <div class="flex flex-col mt-5">
-                                <div class="w-full h-5 bg-gray-100 rounded"></div>
-                                <div class="mt-2 w-8/12 h-3 bg-gray-100 rounded"></div>
+                        <div className="animate-pulse bg-white shadow-sm rounded-lg xl:p-4 xl:w-full">
+                            <div className="rounded w-full h-52 bg-gray-100"></div>
+                            <div className="flex flex-col mt-5">
+                                <div className="w-full h-5 bg-gray-100 rounded"></div>
+                                <div claclassNamess="mt-2 w-8/12 h-3 bg-gray-100 rounded"></div>
                             </div>
                         </div>
                     </div>

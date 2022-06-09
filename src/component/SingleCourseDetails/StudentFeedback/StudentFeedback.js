@@ -31,47 +31,47 @@ function StudentFeedback() {
                         </div>
                     </div>
                     <div className="xl:w-3/5 xl:mt-4 xl:pl-8 ">
-                        <div class="w-full bg-gray-200 rounded h-3.5 xl:mt-3">
-                            <div class="bg-gray-100 h-3.5 rounded"></div>
+                        <div className="w-full bg-gray-200 rounded h-3.5 xl:mt-3">
+                            <div className="bg-gray-100 h-3.5 rounded"></div>
                         </div>
 
-                        <div class="w-full bg-gray-200 rounded h-3.5 xl:mt-5">
-                            <div class="bg-gray-100 h-3.5 rounded"></div>
+                        <div className="w-full bg-gray-200 rounded h-3.5 xl:mt-5">
+                            <div className="bg-gray-100 h-3.5 rounded"></div>
                         </div>
 
-                        <div class="w-full bg-gray-200 rounded h-3.5 xl:mt-5">
-                            <div class="bg-gray-100 h-3.5 rounded"></div>
-                        </div>
-
-
-                        <div class="w-full bg-gray-200 rounded h-3.5 xl:mt-5">
-                            <div class="bg-gray-100 h-3.5 rounded"></div>
+                        <div className="w-full bg-gray-200 rounded h-3.5 xl:mt-5">
+                            <div className="bg-gray-100 h-3.5 rounded"></div>
                         </div>
 
 
-                        <div class="w-full bg-gray-200 rounded h-3.5 xl:mt-5">
-                            <div class="bg-gray-100 h-3.5 rounded"></div>
+                        <div className="w-full bg-gray-200 rounded h-3.5 xl:mt-5">
+                            <div className="bg-gray-100 h-3.5 rounded"></div>
+                        </div>
+
+
+                        <div className="w-full bg-gray-200 rounded h-3.5 xl:mt-5">
+                            <div className="bg-gray-100 h-3.5 rounded"></div>
                         </div>
                     </div>
                     <div className="xl:w-1/5 xl:mt-2">
                         <div className="flex justify-center h-3.5 xl:mt-5">
-                            <div class="bg-gray-100 mb-4 mx-.75 xl:h-3.5 xl:w-8/12 rounded"></div>
+                            <div className="bg-gray-100 mb-4 mx-.75 xl:h-3.5 xl:w-8/12 rounded"></div>
                         </div>
 
                         <div className="flex justify-center h-3.5 xl:mt-5">
-                            <div class="bg-gray-100 mb-4 mx-.75 xl:h-3.5 xl:w-7/12 rounded"></div>
+                            <div className="bg-gray-100 mb-4 mx-.75 xl:h-3.5 xl:w-7/12 rounded"></div>
                         </div>
 
                         <div className="flex justify-center h-3.5 xl:mt-5">
-                            <div class="bg-gray-100 mb-4 mx-.75 xl:h-3.5 xl:w-6/12 rounded"></div>
+                            <div className="bg-gray-100 mb-4 mx-.75 xl:h-3.5 xl:w-6/12 rounded"></div>
                         </div>
 
                         <div className="flex justify-center h-3.5 xl:mt-5">
-                            <div class="bg-gray-100 mb-4 mx-.75 xl:h-3.5 xl:w-5/12 rounded"></div>
+                            <div className="bg-gray-100 mb-4 mx-.75 xl:h-3.5 xl:w-5/12 rounded"></div>
                         </div>
 
                         <div className="flex justify-center h-3.5 xl:mt-5">
-                            <div class="bg-gray-100 mb-4 mx-.75 xl:h-3.5 xl:w-4/12 rounded"></div>
+                            <div className="bg-gray-100 mb-4 mx-.75 xl:h-3.5 xl:w-4/12 rounded"></div>
                         </div>
 
                     </div>
@@ -95,26 +95,26 @@ function StudentFeedback() {
                     </div>
                 </div>
                 <div className="xl:w-3/5 xl:mt-4 xl:pl-8 ">
-                    <div class="w-full bg-gray-200 rounded-full h-3.5 xl:mt-3">
-                        <div class="bg-progress-bar h-3.5 rounded-full" style={{ width: `${studentFeedBack.five_rating_percentage}%` }}></div>
+                    <div className="w-full bg-gray-200 rounded-full h-3.5 xl:mt-3">
+                        <div className="bg-progress-bar h-3.5 rounded-full" style={{ width: `${studentFeedBack.five_rating_percentage}%` }}></div>
                     </div>
 
-                    <div class="w-full bg-gray-200 rounded-full h-3.5 xl:mt-5">
-                        <div class="bg-progress-bar h-3.5 rounded-full" style={{ width: `${studentFeedBack.four_rating_percentage}%` }}></div>
+                    <div className="w-full bg-gray-200 rounded-full h-3.5 xl:mt-5">
+                        <div className="bg-progress-bar h-3.5 rounded-full" style={{ width: `${studentFeedBack.four_rating_percentage}%` }}></div>
                     </div>
 
-                    <div class="w-full bg-gray-200 rounded-full h-3.5 xl:mt-5">
-                        <div class="bg-progress-bar h-3.5 rounded-full" style={{ width: `${studentFeedBack.three_rating_percentage}%` }}></div>
-                    </div>
-
-
-                    <div class="w-full bg-gray-200 rounded-full h-3.5 xl:mt-5">
-                        <div class="bg-progress-bar h-3.5 rounded-full" style={{ width: `${studentFeedBack.two_rating_percentage}%` }}></div>
+                    <div className="w-full bg-gray-200 rounded-full h-3.5 xl:mt-5">
+                        <div className="bg-progress-bar h-3.5 rounded-full" style={{ width: `${studentFeedBack.three_rating_percentage}%` }}></div>
                     </div>
 
 
-                    <div class="w-full bg-gray-200 rounded-full h-3.5 xl:mt-5">
-                        <div class="bg-progress-bar h-3.5 rounded-full" style={{ width: `${studentFeedBack.one_rating_percentage}%` }}></div>
+                    <div className="w-full bg-gray-200 rounded-full h-3.5 xl:mt-5">
+                        <div className="bg-progress-bar h-3.5 rounded-full" style={{ width: `${studentFeedBack.two_rating_percentage}%` }}></div>
+                    </div>
+
+
+                    <div className="w-full bg-gray-200 rounded-full h-3.5 xl:mt-5">
+                        <div className="bg-progress-bar h-3.5 rounded-full" style={{ width: `${studentFeedBack.one_rating_percentage}%` }}></div>
                     </div>
                 </div>
                 <div className="xl:w-1/5 xl:mt-5">

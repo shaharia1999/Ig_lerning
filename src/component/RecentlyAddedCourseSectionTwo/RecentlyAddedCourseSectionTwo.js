@@ -122,7 +122,7 @@ function RecentlyAddedCourseSectionTwo() {
                                         <div className="absolute ml-4 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5 xl:pl-3">
-                                        <div class="absolute top-0 mt-5">
+                                        <div className="absolute top-0 mt-5">
                                             <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
                                             <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
                                             <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100"></div>
@@ -169,7 +169,7 @@ function RecentlyAddedCourseSectionTwo() {
                                         <div className="absolute ml-4 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5 xl:pl-3">
-                                        <div class="absolute top-0 mt-5">
+                                        <div className="absolute top-0 mt-5">
                                             <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
                                             <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
                                             <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100"></div>
@@ -216,7 +216,7 @@ function RecentlyAddedCourseSectionTwo() {
                                         <div className="absolute ml-4 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5 xl:pl-3">
-                                        <div class="absolute top-0 mt-5">
+                                        <div className="absolute top-0 mt-5">
                                             <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
                                             <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
                                             <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100"></div>
@@ -263,7 +263,7 @@ function RecentlyAddedCourseSectionTwo() {
                                         <div className="absolute ml-4 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5 xl:pl-3">
-                                        <div class="absolute top-0 mt-5">
+                                        <div className="absolute top-0 mt-5">
                                             <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
                                             <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
                                             <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100"></div>
@@ -319,14 +319,14 @@ function RecentlyAddedCourseSectionTwo() {
                                         <div className="w-1/5">
                                             <a href="!#">
                                                 <div
-                                                    class="text-sm absolute top-0 left-3 bg-black text-white rounded-full border-2 border-white h-12 w-12 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                                                    className="text-sm absolute top-0 left-3 bg-black text-white rounded-full border-2 border-white h-12 w-12 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
                                                     <img className="h-12 w-12" src={CourseLogo} alt='' />
                                                 </div>
                                             </a>
                                         </div>
                                         <div className="w-4/5">
                                             <a href="!#">
-                                                <div class="text-lg absolute top-0 text-white mt-5">
+                                                <div className="text-lg absolute top-0 text-white mt-5">
                                                     <h6 className="font-medium text-xl -mt-2 text-white">{course.channel_name?.channel_name}</h6>
                                                     <h6 className="font-extralight lg:-ml-6 flex text-sm text-white">
                                                         <img className="w-5 h-5 rounded-full border-2 border-white mr-2"
@@ -422,7 +422,7 @@ function RecentlyAddedCourseSectionTwo() {
                         <div className="w-2/3 relative">
                             <div className="flex right-0 absolute">
 
-                                <div class="mb-4">
+                                <div className="mb-4">
                                     <ul className="nav nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4">
                                         {
                                             category_Data_Loading
@@ -472,7 +472,7 @@ function RecentlyAddedCourseSectionTwo() {
                         <div className="w-2/3 relative">
                             <div className="flex right-0 absolute">
 
-                                <div class="mb-4">
+                                <div className="mb-4">
                                     <ul className="nav nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4">
                                         {
                                             category_data
