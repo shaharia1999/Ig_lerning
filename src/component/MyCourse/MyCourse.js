@@ -58,6 +58,26 @@ function MyCourse() {
             }
         })
     }
+    const CourseFavouriteAdded = (course_id) => {
+        let favourite_data = {
+            course_id: course_id,
+            student_id: user_data['id']
+        }
+        axios.post(`${ApiUrl.BaseUrl}api/course/add-course-favourite/`, favourite_data).then((response) => {
+            if(response.data.error === false){
+
+            }
+        })
+    }
+
+    const RemoveCourseForFavourite = (course_favourite_id) => {
+        console.log(course_favourite_id);
+        axios.get(`${ApiUrl.BaseUrl}api/course/remove-course-favourite/${course_favourite_id}`).then((response) => {
+            if(response.data.error === false){
+
+            }
+        })
+    }
 
     const RemoveCourseForWhishList = (wishlist_id) => {
         console.log(wishlist_id);
@@ -189,6 +209,7 @@ function MyCourse() {
                                 <div className="flex w-full flex-wrap xl:mt-8 xl:pr-3 xl:justify-end">
                                     <button 
                                         // onClick={() => ArchivedCourse(my_course_list_data?.course_info?.course_id)}  
+                                        // onClick={() => CourseFavouriteAdded(my_course_list_data?.course_info?.course_id)}
                                         className="xl:border flex border-maincolor xl:rounded-2xl xl:pl-3 xl:pr-5 xl:pt-1.5 xl:pb-1.5 xl:text-base xl:text-maincolor xl:font-semibold">
                                         <img className="h-5 w-5 mr-2" src={PlayIcon} alt="" />
                                         Start
