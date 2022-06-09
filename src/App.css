@@ -39,6 +39,16 @@
   background-size: cover;
 }
 
+.PriceContact {
+  background-image: url('../src/asset/images/banner/price-contact.svg');
+  width: 1400px !important;
+  height: 180px !important;
+  opacity: 1;
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .IgLearnProBanner {
   background-image: url('../src/asset/images/banner/IgLearnProBanner.png');
   width: 100% !important;
