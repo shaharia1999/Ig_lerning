@@ -10,6 +10,7 @@ import Description from "./Description/Description";
 import StudentFeedback from "./StudentFeedback/StudentFeedback";
 import Review from "./Review/Review";
 import 'flowbite';
+import Lessons from "./Lessons/Lessons";
 
 function SingleCourseDetails() {
     return (
@@ -22,6 +23,7 @@ function SingleCourseDetails() {
             <div className="flex flex-wrap">
                 <div className="xl:w-8/12">
                     <Description />
+                    <Lessons/>
                     <StudentFeedback/>
                     <Review/>
                 </div>

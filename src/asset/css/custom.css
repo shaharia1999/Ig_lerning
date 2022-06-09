@@ -21,3 +21,15 @@
 {
   background-color: #D76E2D !important;
 }
+
+.icon-select button span{
+   border-color: #949494 !important;
+   border-style: solid !important;
+   border-width: 1px !important;
+   border-radius: 100% !important;
+   color: #949494;
+}
+
+.accordion-bg-color{
+  background-color: #FFFFFF;
+}
