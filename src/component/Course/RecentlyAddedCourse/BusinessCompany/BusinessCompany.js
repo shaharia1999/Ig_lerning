@@ -50,7 +50,7 @@ function BusinessCompany() {
     const Subcategory_Loading = (() => {
         if (isLoading === true) {
             return (
-                <h6>kassa</h6>
+                <h6>Loading</h6>
             )
         }
     })()

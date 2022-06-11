@@ -19,7 +19,7 @@ function PriceAccordonSection() {
         })
     }, []);
 
-    const ArchivedCourse = () => {
+    const CoursePriceClick = () => {
         const accordionHeader = document.querySelectorAll(".accordion-header");
         console.log('accordionHeader = ', accordionHeader);
         accordionHeader.forEach((header) => {
@@ -42,22 +42,6 @@ function PriceAccordonSection() {
             });
         });
     }
-
-    // const PriceQuestionHTML = (() => {
-    //     return priceQuestionData.map((price_question) => (
-    //             <div class="transition accordion-bg-color border-b">
-    //                 <div class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
-    //                     <i class="fas fa-plus bg-price rounded-full p-1 font-extralight text-xs text-white"></i>
-    //                     <h3 className="text-maingray text-base font-medium">App installation failed, how to update system information?</h3>
-    //                 </div>
-    //                 <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
-    //                     <p class="leading-6 text-sm font-light pl-9 pb-4 pr-4 text-justify">
-    //                         Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home.                                    </p>
-    //                 </div>
-    //             </div>
-    //         ))
-
-    // })()
 
     if (isLoading === true) {
         return (
@@ -138,14 +122,19 @@ function PriceAccordonSection() {
                                     {
                                         priceQuestionData.map((price_question) => (
                                             <div className="transition accordion-bg-color border-b">
-                                                <div onClick={ArchivedCourse}
+                                                <div onClick={CoursePriceClick}
                                                     className="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
                                                     <i className="fas fa-plus bg-price rounded-full p-1 font-extralight text-xs text-white"></i>
-                                                    <h3 className="text-maingray text-base font-medium">App installation failed, how to update system information?</h3>
+                                                    <h3 className="text-maingray text-base font-medium">
+                                                        {price_question.price_question}
+                                                    </h3>
                                                 </div>
                                                 <div className="accordion-content px-5 pt-0 overflow-hidden max-h-0">
                                                     <p className="leading-6 text-sm font-light pl-9 pb-4 pr-4 text-justify">
-                                                        Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home.                                    </p>
+                                                        {
+                                                            price_question.price_question_answer
+                                                        }
+                                                    </p>
                                                 </div>
                                             </div>
                                         ))
