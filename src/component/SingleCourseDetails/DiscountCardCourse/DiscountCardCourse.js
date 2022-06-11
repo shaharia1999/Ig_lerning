@@ -1,11 +1,26 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import MyVideo from "../../../asset/video/mov_bbb.mp4";
 import { MdEuro } from "react-icons/md";
 import { FaHandPointer } from "react-icons/fa";
+import axios from "axios";
+import ApiUrl from "../../../Api/ApiUrl";
+import { useParams } from "react-router-dom";
 
 function DiscountCardCourse() {
-    const [isLoading, setIsLoading] = useState(true);
-
+    let { id } = useParams();
+    const [isLoading, setIsLoading] = useState(false);
+    const [coursePriceData, setCoursePriceData] = useState([])
+    
+    useEffect(() => {
+        setIsLoading(true)
+        axios.get(`${ApiUrl.BaseUrl}api/course/course-details-price/${id}/`).then((response) => {
+            if(response.data.error === false){
+                setCoursePriceData(response.data.data)
+                console.log('course price data = ', response.data.data);
+                setIsLoading(false)
+            }
+        })
+    }, [])
     if (isLoading === true) {
         return (
             <Fragment>
@@ -56,10 +71,19 @@ function DiscountCardCourse() {
                         <div className="xl:p-5">
                             <div className="flex xl:mt-4 xl:mb-5">
                                 <div className="xl:w-6/12">
-                                    <h6 className="flex text-sectionTitleColor xl:text-3xl xl:font-semibold">228 <MdEuro className="xl:mt-.5" />  <strike className="flex text-client-section-des xl:text-xl xl:font-extralight xl:ml-4">528€ </strike></h6>
+                                    <h6 className="flex text-sectionTitleColor xl:text-3xl xl:font-semibold">{coursePriceData.new_price}
+                                     <MdEuro className="xl:mt-.5" />
+                                    <strike className="flex text-client-section-des xl:text-xl xl:font-extralight xl:ml-4">{coursePriceData.main_price}€ </strike></h6>
                                 </div>
                                 <div className="xl:w-6/12">
-                                    <h6>60% Discounted Price</h6>
+                                    {(() => {
+                                            if(coursePriceData.discount_percentage === null){
+                                                
+                                            }
+                                            else{
+                                               return <h6>{coursePriceData.discount_percentage}% Discounted Price</h6>
+                                            }
+                                    })()}
                                 </div>
                             </div>
                             <button className="text-white justify-center flex bg-maincolor xl:rounded-md xl:py-4 xl:w-full opacity-100">Enroll now <FaHandPointer className="ml-2 xl:mt-1" /> </button>

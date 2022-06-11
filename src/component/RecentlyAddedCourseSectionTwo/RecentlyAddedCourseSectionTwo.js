@@ -58,7 +58,7 @@ function RecentlyAddedCourseSectionTwo() {
     const category_Data_Loading = (() => {
         if (categoryLoading === true) {
             return (
-                <h6>kassa</h6>
+                <h6>Loading</h6>
             )
         }
     })()
@@ -82,7 +82,7 @@ function RecentlyAddedCourseSectionTwo() {
     const data_of_subcategory_Loading = (() => {
         if (subCategoryLoading === true) {
             return (
-                <h6>kassa</h6>
+                <h6>Loading</h6>
             )
         }
     })()
