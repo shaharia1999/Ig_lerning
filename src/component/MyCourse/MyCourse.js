@@ -8,6 +8,7 @@ import PlayIcon from '../../asset/images/icon/play-icon.png';
 import IconlyLightHeart from '../../asset/images/icon/Iconly-Light-Heart.svg';
 import axios from "axios";
 import ApiUrl from "../../Api/ApiUrl";
+import { Link } from "react-router-dom";
 
 function MyCourse() {
 
@@ -51,9 +52,9 @@ function MyCourse() {
         })
     }, [])
 
-    const ArchivedCourse =(course_id) => {
+    const ArchivedCourse = (course_id) => {
         axios.get(`${ApiUrl.BaseUrl}api/course/student-course-archive-create/${course_id}`).then((response) => {
-            if(response.data.error === false){
+            if (response.data.error === false) {
 
             }
         })
@@ -64,7 +65,7 @@ function MyCourse() {
             student_id: user_data['id']
         }
         axios.post(`${ApiUrl.BaseUrl}api/course/add-course-favourite/`, favourite_data).then((response) => {
-            if(response.data.error === false){
+            if (response.data.error === false) {
 
             }
         })
@@ -73,7 +74,7 @@ function MyCourse() {
     const RemoveCourseForFavourite = (course_favourite_id) => {
         console.log(course_favourite_id);
         axios.get(`${ApiUrl.BaseUrl}api/course/remove-course-favourite/${course_favourite_id}`).then((response) => {
-            if(response.data.error === false){
+            if (response.data.error === false) {
 
             }
         })
@@ -82,7 +83,7 @@ function MyCourse() {
     const RemoveCourseForWhishList = (wishlist_id) => {
         console.log(wishlist_id);
         axios.get(`${ApiUrl.BaseUrl}api/course/student-course-wishlist-remove/${wishlist_id}`).then((response) => {
-            if(response.data.error === false){
+            if (response.data.error === false) {
 
             }
         })
@@ -90,7 +91,7 @@ function MyCourse() {
 
     const RemoveCourseForArchivedList = (course_enroll_id) => {
         axios.get(`${ApiUrl.BaseUrl}api/course/student-course-archive-remove/${course_enroll_id}`).then((response) => {
-            if(response.data.error === false){
+            if (response.data.error === false) {
 
             }
         })
@@ -158,7 +159,7 @@ function MyCourse() {
         else if (isLoading === false) {
             return (
                 myEnrollCourseData.map((my_course_list_data) => (
-                    <div className="my-1 px-1 bg-white p-2 rounded-lg shadow-lg xl:my-1 xl:px-1.5 w-full">
+                    <div className="my-1 px-1 bg-white p-2 rounded-lg shadow-lg xl:my-1 xl:px-1.5 xl:w-full">
                         <div className="wrapper flex antialiased">
                             <div className="relative w-2/12">
                                 <img className="w-24 h-24 xl:ml-1 xl:rounded-lg"
@@ -201,13 +202,25 @@ function MyCourse() {
                                 <div className="flex flex-wrap">
                                     <div className="w-full">
                                         <div className="flex xl:justify-end">
-                                            <HiDotsVertical className="mt-1 xl:font-semibold xl:text-xl text-gray-400" />
+                                            <div class="dropdown dropdown-end">
+                                                <label tabindex="0" className="btn btn-ghost btn-circle avatar">
+                                                    <HiDotsVertical className="mt-1 xl:font-semibold xl:text-xl text-gray-400" />
+                                                </label>
+                                                <ul tabindex="0" className="mt-0 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                                                    <li><Link>Archieve Course</Link></li>
+                                                    <hr />
+                                                    <li><Link>Leave a Rating</Link></li>
+                                                    <hr />
+                                                    <li><Link>Add to Favourite</Link></li>
+                                                    <hr />
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="flex w-full flex-wrap xl:mt-8 xl:pr-3 xl:justify-end">
-                                    <button 
+                                    <button
                                         // onClick={() => ArchivedCourse(my_course_list_data?.course_info?.course_id)}  
                                         // onClick={() => CourseFavouriteAdded(my_course_list_data?.course_info?.course_id)}
                                         className="xl:border flex border-maincolor xl:rounded-2xl xl:pl-3 xl:pr-5 xl:pt-1.5 xl:pb-1.5 xl:text-base xl:text-maincolor xl:font-semibold">
@@ -337,20 +350,32 @@ function MyCourse() {
                                 <div className="flex flex-wrap">
                                     <div className="w-full">
                                         <div className="flex xl:justify-end">
-                                            <span className="text-pagination xl:text-2xl xl:mr-2 xl:font-semibold">$90</span>
-                                            <HiDotsVertical className="mt-1 xl:font-semibold xl:text-xl text-gray-400" />
+                                            <div class="dropdown dropdown-end">
+                                                <span className="text-pagination xl:text-2xl xl:mr-2 xl:font-semibold">$90</span>
+                                                <label tabindex="0" className="btn btn-ghost btn-circle avatar">
+                                                    <HiDotsVertical className="mt-1 xl:font-semibold xl:text-xl text-gray-400" />
+                                                </label>
+                                                <ul tabindex="0" className="mt-0 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                                                    <li><Link>Archieve Course</Link></li>
+                                                    <hr />
+                                                    <li><Link>Leave a Rating</Link></li>
+                                                    <hr />
+                                                    <li><Link>Add to Favourite</Link></li>
+                                                    <hr />
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="flex w-full flex-wrap xl:mt-10 xl:pr-3 xl:justify-end">
-                                
+
                                     <img
-                                        onClick={() => RemoveCourseForWhishList(my_whishlist_data.wishlist_id)}  
-                                       className="xl:h-5 xl:w-5 xl:mx-1" src={Delete} alt="" />
+                                        onClick={() => RemoveCourseForWhishList(my_whishlist_data.wishlist_id)}
+                                        className="xl:h-5 xl:w-5 xl:mx-1" src={Delete} alt="" />
                                     <img className="xl:h-5 xl:w-5 xl:mx-1" src={IconlyLightHeart} alt="" />
-                                 
-                                    
+
+
                                 </div>
                             </div>
                         </div>
@@ -363,7 +388,7 @@ function MyCourse() {
 
     const myArchivedCourseListtHtml = (() => {
         if (isArchivedLoading === true) {
-           return(
+            return (
                 <div className="my-1 px-1 bg-white p-2 rounded-lg shadow-lg xl:my-1 xl:px-1.5 w-full">
                     <div className="wrapper flex antialiased">
                         <div className="relative w-2/12">
@@ -434,7 +459,7 @@ function MyCourse() {
                                 <div className="flex flex-wrap">
                                     <div className="w-full">
                                         <h4 className="xl:mt-0 xl:text-base xl:font-medium leading-tight text-cart-item-title">
-                                        {archived_data?.course_info?.course_title}
+                                            {archived_data?.course_info?.course_title}
                                         </h4>
                                     </div>
                                 </div>
@@ -466,15 +491,28 @@ function MyCourse() {
                                 <div className="flex flex-wrap">
                                     <div className="w-full">
                                         <div className="flex xl:justify-end">
-                                            <HiDotsVertical className="mt-1 xl:font-semibold xl:text-xl text-gray-400" />
+                                            <div class="dropdown dropdown-end">
+                                                <span className="text-pagination xl:text-2xl xl:mr-2 xl:font-semibold">$90</span>
+                                                <label tabindex="0" className="btn btn-ghost btn-circle avatar">
+                                                    <HiDotsVertical className="mt-1 xl:font-semibold xl:text-xl text-gray-400" />
+                                                </label>
+                                                <ul tabindex="0" className="mt-0 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                                                    <li><Link>Archieve Course</Link></li>
+                                                    <hr />
+                                                    <li><Link>Leave a Rating</Link></li>
+                                                    <hr />
+                                                    <li><Link>Add to Favourite</Link></li>
+                                                    <hr />
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="flex w-full flex-wrap xl:mt-8 xl:pr-3 xl:justify-end">
-                                    <button 
-                                    // onClick={() => RemoveCourseForArchivedList(archived_data.course_enroll_id)} 
-                                     className="xl:border flex border-maincolor xl:rounded-2xl xl:pl-3 xl:pr-5 xl:pt-1.5 xl:pb-1.5 xl:text-base xl:text-maincolor xl:font-semibold"><img className="h-5 w-5 mr-2" src={PlayIcon} alt="" />Proceed</button>
+                                    <button
+                                        // onClick={() => RemoveCourseForArchivedList(archived_data.course_enroll_id)} 
+                                        className="xl:border flex border-maincolor xl:rounded-2xl xl:pl-3 xl:pr-5 xl:pt-1.5 xl:pb-1.5 xl:text-base xl:text-maincolor xl:font-semibold"><img className="h-5 w-5 mr-2" src={PlayIcon} alt="" />Proceed</button>
                                 </div>
                                 {/* <div className="flex w-full flex-wrap xl:mt-8 xl:pr-3 xl:justify-end">
                                     <button className="xl:border flex border-maincolor xl:rounded-2xl xl:pl-3 xl:pr-5 xl:pt-1.5 xl:pb-1.5 xl:text-base xl:text-maincolor xl:font-semibold"><img className="h-5 w-5 mr-2" src={PlayIcon} alt="" />Restart</button>
@@ -534,8 +572,8 @@ function MyCourse() {
                                             </div>
                                             <hr className="border xl:-mt-6" />
 
-                                            <div className="tab-content justify-center flex" id="pills-tabContent3">
-                                                <div className="tab-pane fade show active"
+                                            <div className="tab-content flex-wrap flex" id="pills-tabContent3">
+                                                <div className="tab-pane w-full fade show active"
                                                     id="pills-home3" role="tabpanel"
                                                     aria-labelledby="pills-home-tab3">
 
@@ -545,7 +583,7 @@ function MyCourse() {
                                                         }
                                                     </div>
                                                 </div>
-                                                <div className="tab-pane fade"
+                                                <div className="tab-pane w-full fade"
                                                     id="pills-profile3" role="tabpanel"
                                                     aria-labelledby="pills-profile-tab3">
                                                     <div className="flex flex-wrap w-full xl:mt-4 xl:pl-8 xl:pr-8">
@@ -554,7 +592,7 @@ function MyCourse() {
                                                         }
                                                     </div>
                                                 </div>
-                                                <div className="tab-pane fade"
+                                                <div className="tab-pane w-full fade"
                                                     id="pills-contact3" role="tabpanel"
                                                     aria-labelledby="pills-contact-tab3">
 
