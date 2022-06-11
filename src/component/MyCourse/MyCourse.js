@@ -24,7 +24,7 @@ function MyCourse() {
     const [myArchivedCourseListData, setMyArchivedCourseListData] = useState([]);
     const [TotalWhishList, setTotalWhishList] = useState();
 
-    useEffect(() => {
+    const MyCourseDataLoad = () => {
         setIsLoading(true)
         setIsWhishListLoading(true)
         setIsArchivedLoading(true)
@@ -50,12 +50,16 @@ function MyCourse() {
                 setIsArchivedLoading(false)
             }
         })
+    }
+
+    useEffect(() => {
+        MyCourseDataLoad();
     }, [])
 
-    const ArchivedCourse = (course_id) => {
-        axios.get(`${ApiUrl.BaseUrl}api/course/student-course-archive-create/${course_id}`).then((response) => {
+    const ArchivedCourse = (course_enroll_id) => {
+        axios.get(`${ApiUrl.BaseUrl}api/course/student-course-archive-create/${course_enroll_id}`).then((response) => {
             if (response.data.error === false) {
-
+                MyCourseDataLoad()
             }
         })
     }
@@ -66,7 +70,7 @@ function MyCourse() {
         }
         axios.post(`${ApiUrl.BaseUrl}api/course/add-course-favourite/`, favourite_data).then((response) => {
             if (response.data.error === false) {
-
+                MyCourseDataLoad();
             }
         })
     }
@@ -75,7 +79,7 @@ function MyCourse() {
         console.log(course_favourite_id);
         axios.get(`${ApiUrl.BaseUrl}api/course/remove-course-favourite/${course_favourite_id}`).then((response) => {
             if (response.data.error === false) {
-
+                MyCourseDataLoad();
             }
         })
     }
@@ -84,7 +88,7 @@ function MyCourse() {
         console.log(wishlist_id);
         axios.get(`${ApiUrl.BaseUrl}api/course/student-course-wishlist-remove/${wishlist_id}`).then((response) => {
             if (response.data.error === false) {
-
+                MyCourseDataLoad();
             }
         })
     }
@@ -92,7 +96,7 @@ function MyCourse() {
     const RemoveCourseForArchivedList = (course_enroll_id) => {
         axios.get(`${ApiUrl.BaseUrl}api/course/student-course-archive-remove/${course_enroll_id}`).then((response) => {
             if (response.data.error === false) {
-
+                MyCourseDataLoad();
             }
         })
     }
@@ -207,11 +211,29 @@ function MyCourse() {
                                                     <HiDotsVertical className="mt-1 xl:font-semibold xl:text-xl text-gray-400" />
                                                 </label>
                                                 <ul tabindex="0" className="mt-0 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-                                                    <li><Link>Archieve Course</Link></li>
+                                                    <li>
+                                                        <Link 
+                                                            onClick={() => ArchivedCourse(my_course_list_data?.course_enroll_id)}
+                                                        >Archieve Course</Link></li>
                                                     <hr />
                                                     <li><Link>Leave a Rating</Link></li>
                                                     <hr />
-                                                    <li><Link>Add to Favourite</Link></li>
+                                                    <li>
+                                                        {(() => {
+                                                            if(my_course_list_data?.course_favourite?.is_favourite === true){
+                                                                return <Link 
+                                                                onClick={() => RemoveCourseForFavourite(my_course_list_data?.course_favourite?.course_favourite_id)}
+                                                            >
+                                                            Remove to Favourite</Link>
+                                                            }
+                                                            else{
+                                                                return <Link 
+                                                                onClick={() => CourseFavouriteAdded(my_course_list_data?.course_info?.course_id)}
+                                                            >
+                                                            Add to Favourite</Link>
+                                                            }
+                                                        })()}
+                                                    </li>
                                                     <hr />
                                                 </ul>
                                             </div>
@@ -221,8 +243,6 @@ function MyCourse() {
 
                                 <div className="flex w-full flex-wrap xl:mt-8 xl:pr-3 xl:justify-end">
                                     <button
-                                        // onClick={() => ArchivedCourse(my_course_list_data?.course_info?.course_id)}  
-                                        // onClick={() => CourseFavouriteAdded(my_course_list_data?.course_info?.course_id)}
                                         className="xl:border flex border-maincolor xl:rounded-2xl xl:pl-3 xl:pr-5 xl:pt-1.5 xl:pb-1.5 xl:text-base xl:text-maincolor xl:font-semibold">
                                         <img className="h-5 w-5 mr-2" src={PlayIcon} alt="" />
                                         Start
@@ -351,7 +371,7 @@ function MyCourse() {
                                     <div className="w-full">
                                         <div className="flex xl:justify-end">
                                             <div class="dropdown dropdown-end">
-                                                <span className="text-pagination xl:text-2xl xl:mr-2 xl:font-semibold">$90</span>
+                                                <span className="text-pagination xl:text-2xl xl:mr-2 xl:font-semibold">${my_whishlist_data?.course_info?.course_price_info?.new_price}</span>
                                                 <label tabindex="0" className="btn btn-ghost btn-circle avatar">
                                                     <HiDotsVertical className="mt-1 xl:font-semibold xl:text-xl text-gray-400" />
                                                 </label>
@@ -492,16 +512,34 @@ function MyCourse() {
                                     <div className="w-full">
                                         <div className="flex xl:justify-end">
                                             <div class="dropdown dropdown-end">
-                                                <span className="text-pagination xl:text-2xl xl:mr-2 xl:font-semibold">$90</span>
+                                                <span className="text-pagination xl:text-2xl xl:mr-2 xl:font-semibold">${archived_data?.course_info?.course_price_info?.new_price}</span>
                                                 <label tabindex="0" className="btn btn-ghost btn-circle avatar">
                                                     <HiDotsVertical className="mt-1 xl:font-semibold xl:text-xl text-gray-400" />
                                                 </label>
                                                 <ul tabindex="0" className="mt-0 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-                                                    <li><Link>Archieve Course</Link></li>
+                                                    <li>
+                                                        <Link
+                                                            onClick={() => RemoveCourseForArchivedList(archived_data?.course_enroll_id)}
+                                                        >Remove Archieve Course</Link></li>
                                                     <hr />
                                                     <li><Link>Leave a Rating</Link></li>
                                                     <hr />
-                                                    <li><Link>Add to Favourite</Link></li>
+                                                    <li>
+                                                        {(() => {
+                                                            if(archived_data?.course_favourite?.is_favourite === true){
+                                                                return <Link 
+                                                                onClick={() => RemoveCourseForFavourite(archived_data?.course_favourite?.course_favourite_id)}
+                                                            >
+                                                            Remove to Favourite</Link>
+                                                            }
+                                                            else{
+                                                                return <Link 
+                                                                onClick={() => CourseFavouriteAdded(archived_data?.course_info?.course_id)}
+                                                            >
+                                                            Add to Favourite</Link>
+                                                            }
+                                                        })()}
+                                                    </li>
                                                     <hr />
                                                 </ul>
                                             </div>
