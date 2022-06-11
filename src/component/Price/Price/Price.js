@@ -289,11 +289,243 @@ function Price() {
 
                                                     </div>
                                                 </div>
-
                                             </div>
 
-                                            <div class="tab-pane fade show xl:mt-20" id="pills-annual" role="tabpanel" aria-labelledby="pills-profile-tab3">
-                                                <h6 className="text-xl text-maingray xl:font-medium">e</h6>
+                                            <div class="tab-pane fade show xl:mt-8" id="pills-annual" role="tabpanel" aria-labelledby="pills-profile-tab3">
+                                                <div className="flex flex-wrap">
+                                                    <div className="xl:w-3/12 xl:pt-5">
+                                                        <div className="xl:p-6">
+                                                            <div className="flex flex-wrap bg-gray-50">
+                                                                <div className="xl:w-4/12 w-full xl:mt-4">
+                                                                    <img className="w-24 h-24" src={PriceBall} alt="" />
+                                                                </div>
+
+                                                                <div className="xl:w-8/12 w-full xl:mt-6 justify-center">
+                                                                    <h6 className="text-maingray text-2xl font-semibold">Contact us!</h6>
+                                                                    <h6 className="flex text-maincolor text-lg font-semibold">Get Started <FaArrowRight className="ml-2 mt-1" /></h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="xl:pl-6">
+                                                            <div className="flex flex-wrap">
+                                                                <h6 className="text-pagination text-4xl font-semibold">Features</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="xl:w-9/12 xl:mt-10 flex ">
+                                                        <div className="flex flex-wrap">
+                                                            <div className="xl:1-4 xl:mb-4">
+                                                                <h6 className="text-maingray xl:text-xl font-medium">Free</h6>
+                                                                <h6 className="text-pagination xl:text-4xl xl:mt-3 font-bold">$0 <span className="text-maingray text-sm font-normal">/month</span></h6>
+                                                                <h6 className="text-maingray xl:text-sm xl:mt-3 font-light xl:pr-16">Not ready to commit? Try us out with ease.</h6>
+                                                                <button className="bg-maincolor text-white xl:w-28 font-normal text-sm rounded-md xl:mt-3 xl:pt-2 xl:pb-2 xl:pl-4 xl:pr-4">Select</button>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap">
+                                                            <div className="xl:1-4 xl:mb-4">
+                                                                <h6 className="text-maingray xl:text-xl font-medium">Basic</h6>
+                                                                <h6 className="text-pagination xl:text-4xl xl:mt-3 font-bold">$29 <span className="text-maingray text-sm font-normal">/month</span></h6>
+                                                                <h6 className="text-maingray xl:text-sm xl:mt-3 font-light xl:pr-16">Not ready to commit? Try us out with ease.</h6>
+                                                                <button className="bg-maincolor text-white xl:w-28 font-normal text-sm rounded-md xl:mt-3 xl:pt-2 xl:pb-2 xl:pl-4 xl:pr-4">Select</button>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap">
+                                                            <div className="xl:1-4 xl:mb-4">
+                                                                <h6 className="text-maingray xl:text-xl font-medium">Pro</h6>
+                                                                <h6 className="text-pagination xl:text-4xl xl:mt-3 font-bold">$99 <span className="text-maingray text-sm font-normal">/month</span></h6>
+                                                                <h6 className="text-maingray xl:text-sm xl:mt-3 font-light xl:pr-16">Not ready to commit? Try us out with ease.</h6>
+                                                                <button className="bg-maincolor text-white xl:w-28 font-normal text-sm rounded-md xl:mt-3 xl:pt-2 xl:pb-2 xl:pl-4 xl:pr-4">Select</button>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap">
+                                                            <div className="xl:1-4 xl:mb-4">
+                                                                <h6 className="text-maingray xl:text-xl font-medium">Business</h6>
+                                                                <h6 className="text-pagination xl:text-4xl xl:mt-3 font-bold">$249 <span className="text-maingray text-sm font-normal">/month</span></h6>
+                                                                <h6 className="text-maingray xl:text-sm xl:mt-3 font-light xl:pr-16">Not ready to commit? Try us out with ease.</h6>
+                                                                <button className="bg-maincolor text-white xl:w-28 font-normal text-sm rounded-md xl:mt-3 xl:pt-2 xl:pb-2 xl:pl-4 xl:pr-4">Select</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="flex flex-wrap bg-price rounded-lg xl:mt-10 shadow-sm">
+                                                    <div className="xl:w-3/12 xl:pt-5 xl:pl-8 xl:pb-5">
+                                                        <div className="flex flex-wrap ">
+                                                            <div className="w-full xl:mt-6 justify-center bg-price-deep xl:pt-3 border border-price xl:pb-3 xl:pl-4 rounded-l-lg">
+                                                                <h6 className="text-white text-sm font-normal">Transaction fees on sales</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap">
+                                                            <div className="w-full xl:mt-6 justify-center bg-transparent border border-price-deep xl:pt-3 xl:pb-3 xl:pl-4 rounded-l-lg">
+                                                                <h6 className="text-white text-sm font-normal">Unlimited students</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap">
+                                                            <div className="w-full xl:mt-6 justify-center bg-transparent border border-price-deep xl:pt-3 xl:pb-3 xl:pl-4 rounded-l-lg">
+                                                                <h6 className="text-white text-sm font-normal">Integrated website and builder</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap">
+                                                            <div className="w-full xl:mt-6 justify-center bg-price-deep xl:pt-3 border border-price xl:pb-3 xl:pl-4 rounded-l-lg">
+                                                                <h6 className="text-white text-sm font-normal">Transaction fees on sales</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap">
+                                                            <div className="w-full xl:mt-6 justify-center bg-transparent border border-price-deep xl:pt-3 xl:pb-3 xl:pl-4 rounded-l-lg">
+                                                                <h6 className="text-white text-sm font-normal">Transaction fees on sales</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap">
+                                                            <div className="w-full xl:mt-6 justify-center bg-price-deep xl:pt-3 border border-price xl:pb-3 xl:pl-4 rounded-l-lg">
+                                                                <h6 className="text-white text-sm font-normal">Transaction fees on sales</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap">
+                                                            <div className="w-full xl:mt-6 justify-center bg-transparent border border-price-deep xl:pt-3 xl:pb-3 xl:pl-4 rounded-l-lg">
+                                                                <h6 className="text-white text-sm font-normal">Transaction fees on sales</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap">
+                                                            <div className="w-full xl:mt-6 justify-center bg-price-deep xl:pt-3 border border-price xl:pb-3 xl:pl-4 rounded-l-lg">
+                                                                <h6 className="text-white text-sm font-normal">Transaction fees on sales</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap">
+                                                            <div className="w-full xl:mt-6 justify-center bg-transparent border border-price-deep xl:pt-3 xl:pb-3 xl:pl-4 rounded-l-lg">
+                                                                <h6 className="text-white text-sm font-normal">Transaction fees on sales</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap">
+                                                            <div className="w-full xl:mt-6 justify-center bg-price-deep xl:pt-3 border border-price xl:pb-3 xl:pl-4 rounded-l-lg">
+                                                                <h6 className="text-white text-sm font-normal">Transaction fees on sales</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap">
+                                                            <div className="w-full xl:mt-6 justify-center bg-transparent border border-price-deep xl:pt-3 xl:pb-3 xl:pl-4 rounded-l-lg">
+                                                                <h6 className="text-white text-sm font-normal">Transaction fees on sales</h6>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div className="xl:w-9/12 xl:mt-5 xl:mb-5 xl:pb-5 flex flex-wrap bg-white xl:rounded-lg xl:-ml-10">
+
+                                                        <div className="flex flex-wrap w-full">
+                                                            <div className="w-full flex xl:mt-6 bg-gray-50 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap w-full">
+                                                            <div className="w-full flex xl:mt-6 bg-gray-50 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap w-full">
+                                                            <div className="w-full flex xl:mt-6 bg-gray-50 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
+                                                                <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap w-full">
+                                                            <div className="w-full flex xl:mt-6 bg-gray-50 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap w-full">
+                                                            <div className="w-full flex xl:mt-6 bg-gray-50 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
+                                                                <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap w-full">
+                                                            <div className="w-full flex xl:mt-6 bg-gray-50 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
+                                                                <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap w-full">
+                                                            <div className="w-full flex xl:mt-6 bg-gray-50 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap w-full">
+                                                            <div className="w-full flex xl:mt-6 bg-gray-50 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap w-full">
+                                                            <div className="w-full flex xl:mt-6 bg-gray-50 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap w-full">
+                                                            <div className="w-full flex xl:mt-6 bg-gray-50 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap w-full">
+                                                            <div className="w-full flex xl:mt-6 bg-gray-50 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
+                                                                <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
 
                                             </div>
                                         </div>
