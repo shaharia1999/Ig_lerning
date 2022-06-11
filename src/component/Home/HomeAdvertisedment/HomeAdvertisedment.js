@@ -3,41 +3,21 @@ import HomeBanner from "../../../asset/images/banner/home-banner.png";
 import MostVisited from "../MostVisited/MostVisited";
 import TopCategories from "../TopCategories/TopCategories";
 import axios from "axios";
+import ApiUrl from "../../../Api/ApiUrl";
 
 function HomeAdvertisedment() {
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
+    const [bannerData, setBannerData] = useState([]);
 
-    // useEffect(() => {
-    //     setIsLoading(true);
-    //     axios.get().then((response) => {
-    //         if (response.data.error === false) {
-    //             setIsLoading(false);
-
-    //         }
-    //     });
-    // }, []);
-
-
-    // const HomeAdvertisedment_Loading = (() => {
-    //     if (isLoading === true) {
-    //         return (
-    //             <Fragment>
-
-    //             </Fragment>
-    //         )
-    //     }
-    // })()
-
-
-    // const HomeAdvertisedment_Banner = (() => {
-    //     if (isLoading === false) {
-    //         return (
-    //             <Fragment>
-
-    //             </Fragment>
-    //         )
-    //     }
-    // })()
+    useEffect(() => {
+        setIsLoading(true);
+        axios.get(`${ApiUrl.BaseUrl}api/course/banner/`).then((response) => {
+            if (response.data.error === false) {
+                setIsLoading(false);
+                setBannerData(response.data.data)
+            }
+        });
+    }, []);
 
     if (isLoading === true) {
         return (
@@ -67,7 +47,7 @@ function HomeAdvertisedment() {
                             <TopCategories />
                         </div>
                         <div className="xl:w-1/3">
-                            <img className="w-96 lg:ml-20 lg:mt-20 home-ad-banner" src={HomeBanner} alt="" />
+                            <img className="w-96 lg:ml-20 lg:mt-20 home-ad-banner" src={ApiUrl.ImageBaseUrl+bannerData.banner_image} alt="" />
                         </div>
                     </div>
                 </div>
