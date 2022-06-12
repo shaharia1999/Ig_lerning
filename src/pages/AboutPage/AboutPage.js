@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import NavBarTop from '../../component/Common/NavBarTop/NavBarTop';
 import Footer from '../../component/Common/Footer/Footer';
 import CopyRight from '../../component/Common/CopyRight/CopyRight';
@@ -11,25 +11,28 @@ import OurTeam from "../../component/AboutUs/OurTeam/OurTeam";
 import LearningTeachingSection from "../../component/AboutUs/LearningTeachingSection/LearningTeachingSection";
 import AboutContact from "../../component/AboutUs/AboutContact/AboutContact";
 import WeEmpower from "../../component/AboutUs/WeEmpower/WeEmpower";
+import darkModeTheme from "../../darkModeTheme";
 
 function AboutPage() {
+    useEffect(() => {
+        darkModeTheme();
+    }, [])
     return (
         <Fragment>
             <NavBarTop />
-            <AboutBanner/>
-            <LearningTeachingSection/>
-            <OurMission/>
-            <ProvideVission/>
-            <AboutAnalytics/>
-            <LeadingStudentVideoSection/>
-            <WeEmpower/>
-            <OurTeam/>
-            <AboutContact/>
+            <AboutBanner />
+            <LearningTeachingSection />
+            <OurMission />
+            <ProvideVission />
+            <AboutAnalytics />
+            <LeadingStudentVideoSection />
+            <WeEmpower />
+            <OurTeam />
+            <AboutContact />
             <Footer />
             <CopyRight />
         </Fragment>
     );
 }
-
 
 export default AboutPage;

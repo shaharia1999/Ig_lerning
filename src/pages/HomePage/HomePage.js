@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import CopyRight from '../../component/Common/CopyRight/CopyRight';
 import Footer from '../../component/Common/Footer/Footer';
 import Partner from '../../component/Home/Partner/Partner';
@@ -12,27 +12,28 @@ import MostPopularCourse from '../../component/Home/MostPopularCourse/MostPopula
 import RecommandForYou from '../../component/Home/RecommandForYou/RecommandForYou';
 import OnlyOnIntelloGeek from '../../component/Home/OnlyOnIntelloGeek/OnlyOnIntelloGeek';
 import InBaseOfYourInterest from '../../component/Home/InBaseOfYourInterest/InBaseOfYourInterest';
+import darkModeTheme from "../../darkModeTheme";
 
-class HomePage extends Component {
-    render() {
-        return (
-            <Fragment>
-                <NavBarTop/>
-                <HomeBanner/>
-                <BusinessCompany/>
-                <RecentlyAddedCourseSectionTwo/>
-                <MostPopularCourse/>
-                <RecommandForYou/>
-                <OnlyOnIntelloGeek/>
-                <InBaseOfYourInterest/>
-                <HomeAdvertisedment/>
-                <ClientSays/>
-                <Partner/>
-                <Footer />
-                <CopyRight/>
-            </Fragment>
-        );
-    }
+function HomePage() {
+    useEffect(() => {
+        darkModeTheme();
+    }, [])
+    return (
+        <Fragment>
+            <NavBarTop />
+            <HomeBanner />
+            <BusinessCompany />
+            <RecentlyAddedCourseSectionTwo />
+            <MostPopularCourse />
+            <RecommandForYou />
+            <OnlyOnIntelloGeek />
+            <InBaseOfYourInterest />
+            <HomeAdvertisedment />
+            <ClientSays />
+            <Partner />
+            <Footer />
+            <CopyRight />
+        </Fragment>
+    );
 }
-
 export default HomePage;

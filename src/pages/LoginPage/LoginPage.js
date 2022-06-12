@@ -1,13 +1,15 @@
-import React, { Component, Fragment } from "react";
+import React, { useEffect, Fragment } from "react";
 import Login from '../../component/Login/Login';
+import darkModeTheme from "../../darkModeTheme";
 
-class LoginPage extends Component {
-    render() {
-        return (
-            <Fragment>
-                <Login/>
-            </Fragment>
-        );
-    }
+function LoginPage() {
+    useEffect(() => {
+        darkModeTheme();
+    }, [])
+    return (
+        <Fragment>
+            <Login />
+        </Fragment>
+    );
 }
 export default LoginPage;

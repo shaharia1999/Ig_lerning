@@ -2,13 +2,14 @@ import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 import MainLogo from "../../../asset/images/logo/main-logo.svg";
 import ReactFlagsSelect from "react-flags-select";
-
 import MoonImg from "../../../asset/images/icon/moon.svg";
 import SunImg from "../../../asset/images/icon/sun.svg";
 
 function NavBarTop() {
     const [selected, setSelected] = useState("US");
     const onSelect = (code) => setSelected(code);
+
+    const userTheme = localStorage.getItem("theme");
 
     const showSelectedLabel = ("Show Selected Label", true);
     const showSecondarySelectedLabel = (
@@ -64,10 +65,26 @@ function NavBarTop() {
                             <svg className="swap-on fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
                         </label> */}
 
+                        {/* 
                         <label className="bg-light-version xl:ml-3 xl:w-12 xl:h-11 rounded-sm">
-                           <img className="moon cursor-pointer" src={MoonImg} alt=""/>
-                           <img className="sun cursor-pointer" src={SunImg} alt=""/>
-                        </label>
+                            <img className="sun cursor-pointer" src={SunImg} alt="" />
+                            <img className="moon cursor-pointer" src={MoonImg} alt="" />
+                        </label> */}
+
+                        {(() => {
+                            if (userTheme === 'dark') {
+                                return <label className="bg-light-version xl:ml-4 xl:w-12 xl:h-11 rounded-sm">
+                                    <img className="moon cursor-pointer show xl:h-7 xl:w-7 xl:mt-1.5 xl:ml-2.5" src={MoonImg} alt="" />
+                                    <img className="sun cursor-pointer hidden xl:h-7 xl:w-7 xl:mt-1.5 xl:ml-2.5" src={SunImg} alt="" />
+                                </label>
+                            }
+                            else if (userTheme === 'light') {
+                                return <label className="bg-light-version xl:ml-3 xl:w-12 xl:h-11 rounded-sm">
+                                    <img className="sun cursor-pointer show xl:h-7 xl:w-7 xl:mt-1.5 xl:ml-2.5" src={SunImg} alt="" />
+                                    <img className="moon cursor-pointer hidden xl:h-7 xl:w-7 xl:mt-1.5 xl:ml-2.5" src={MoonImg} alt="" />
+                                </label>
+                            }
+                        })()}
 
 
                     </div>

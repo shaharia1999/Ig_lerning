@@ -4,6 +4,7 @@ import Footer from '../../component/Common/Footer/Footer';
 import CopyRight from '../../component/Common/CopyRight/CopyRight';
 import Partner from '../../component/Home/Partner/Partner';
 import CourseSearchFilter from "../../component/CourseSearchFilter/CourseSearchFilter";
+import darkModeTheme from "../../darkModeTheme";
 
 function CourseSearchFilterPage() {
     return (

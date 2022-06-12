@@ -21,7 +21,6 @@ function AboutAnalytics() {
                                         </div>
                                     </div>
 
-
                                     <div className="xl:p-6">
                                         <div className="flex justify-center">
                                             <div className="block p-6 rounded-md shadow-about bg-white shadow:shadow-about/50 xl:h-80 xl:w-72">
@@ -68,6 +67,4 @@ function AboutAnalytics() {
         </Fragment>
     );
 }
-
-
 export default AboutAnalytics;

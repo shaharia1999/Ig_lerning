@@ -22,12 +22,18 @@ function Lessons() {
                 <div className="xl:ml-32">
                     <div className="flex flex-wrap xl:mt-9 xl:mb-16">
                         <div className="xl:w-11/12">
-                            <h6 className="text-sectionTitleColor text-3xl font-semibold xl:mb-8">Lessons</h6>
-                            
+                            <h6 className="text-sectionTitleColor text-3xl font-semibold xl:mb-8">
+                                Lessons
+                            </h6>
+
                             <div className="bg-gray-50 icon-select shadow mt-3 rounded-lg animate-pulse">
                                 <Accordion className="rounded m-0">
                                     <AccordionHeader className="flex pr-4">
-                                        <div className="h-10 w-10 ml-4 bg-gray-100 rounded-md" src={courseLessonImg} alt="" ></div>
+                                        <div className="h-10 w-10 ml-4 bg-gray-100 rounded-md"
+                                            src={courseLessonImg}
+                                            alt=""
+                                        >
+                                        </div>
                                         <div className="bg-gray-100 h-4 w-6/12 xl:ml-20 absolute"></div>
                                     </AccordionHeader>
                                 </Accordion>
@@ -36,7 +42,11 @@ function Lessons() {
                             <div className="bg-gray-50 icon-select shadow mt-3 rounded-lg animate-pulse">
                                 <Accordion className="rounded m-0">
                                     <AccordionHeader className="flex pr-4">
-                                        <div className="h-10 w-10 ml-4 bg-gray-100 rounded-md" src={courseLessonImg} alt="" ></div>
+                                        <div className="h-10 w-10 ml-4 bg-gray-100 rounded-md"
+                                            src={courseLessonImg}
+                                            alt=""
+                                        >
+                                        </div>
                                         <div className="bg-gray-100 h-4 w-6/12 xl:ml-20 absolute"></div>
                                     </AccordionHeader>
                                 </Accordion>
@@ -89,35 +99,41 @@ function Lessons() {
                                     <AccordionBody className="bg-gray-50">
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
-                                                <FaPlayCircle className="h-5 w-5 xl:ml-8" />
+                                                <FaPlayCircle
+                                                    className="h-5 w-5 xl:ml-8"
+                                                />
                                             </div>
                                             <div className="xl:w-11/12 mt-3 mb-3">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
                                             </div>
                                         </div>
-    
+
                                         <hr className="border-white border" />
-    
+
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
-                                                <GrDocumentText className="h-5 w-5 xl:ml-8" />
+                                                <GrDocumentText
+                                                    className="h-5 w-5 xl:ml-8"
+                                                />
                                             </div>
                                             <div className="xl:w-11/12 mt-3 mb-3">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
                                             </div>
                                         </div>
-    
+
                                         <hr className="border-white border" />
-    
+
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
-                                                <FaPlayCircle className="h-5 w-5 xl:ml-8" />
+                                                <FaPlayCircle
+                                                    className="h-5 w-5 xl:ml-8"
+                                                />
                                             </div>
                                             <div className="xl:w-11/12 mt-3 mb-3">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
                                             </div>
                                         </div>
-    
+
                                     </AccordionBody>
                                 </Accordion>
                             </div>
@@ -129,7 +145,9 @@ function Lessons() {
                                     <AccordionBody className="bg-gray-50">
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
-                                                <FaPlayCircle className="h-5 w-5 xl:ml-8" />
+                                                <FaPlayCircle
+                                                    className="h-5 w-5 xl:ml-8"
+                                                />
                                             </div>
                                             <div className="xl:w-11/12 mt-3 mb-3">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
@@ -138,7 +156,9 @@ function Lessons() {
                                         <hr className="border-white border" />
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
-                                                <FaPlayCircle className="h-5 w-5 xl:ml-8" />
+                                                <FaPlayCircle
+                                                    className="h-5 w-5 xl:ml-8"
+                                                />
                                             </div>
                                             <div className="xl:w-11/12 mt-3 mb-3">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
@@ -147,7 +167,9 @@ function Lessons() {
                                         <hr className="border-white border" />
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
-                                                <FaPlayCircle className="h-5 w-5 xl:ml-8" />
+                                                <FaPlayCircle
+                                                    className="h-5 w-5 xl:ml-8"
+                                                />
                                             </div>
                                             <div className="xl:w-11/12 mt-3 mb-3">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
@@ -164,7 +186,9 @@ function Lessons() {
                                     <AccordionBody className="bg-gray-50">
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
-                                                <FaPlayCircle className="h-5 w-5 xl:ml-8" />
+                                                <FaPlayCircle
+                                                    className="h-5 w-5 xl:ml-8"
+                                                />
                                             </div>
                                             <div className="xl:w-11/12 mt-3 mb-3">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
@@ -173,7 +197,9 @@ function Lessons() {
                                         <hr className="border-white border" />
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
-                                                <FaPlayCircle className="h-5 w-5 xl:ml-8" />
+                                                <FaPlayCircle
+                                                    className="h-5 w-5 xl:ml-8"
+                                                />
                                             </div>
                                             <div className="xl:w-11/12 mt-3 mb-3">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
@@ -182,7 +208,9 @@ function Lessons() {
                                         <hr className="border-white border" />
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
-                                                <FaPlayCircle className="h-5 w-5 xl:ml-8" />
+                                                <FaPlayCircle
+                                                    className="h-5 w-5 xl:ml-8"
+                                                />
                                             </div>
                                             <div className="xl:w-11/12 mt-3 mb-3">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
@@ -199,7 +227,9 @@ function Lessons() {
                                     <AccordionBody className="bg-gray-50">
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
-                                                <FaPlayCircle className="h-5 w-5 xl:ml-8" />
+                                                <FaPlayCircle
+                                                    className="h-5 w-5 xl:ml-8"
+                                                />
                                             </div>
                                             <div className="xl:w-11/12 mt-3 mb-3">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
@@ -208,7 +238,9 @@ function Lessons() {
                                         <hr className="border-white border" />
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
-                                                <FaPlayCircle className="h-5 w-5 xl:ml-8" />
+                                                <FaPlayCircle
+                                                    className="h-5 w-5 xl:ml-8"
+                                                />
                                             </div>
                                             <div className="xl:w-11/12 mt-3 mb-3">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
@@ -217,7 +249,9 @@ function Lessons() {
                                         <hr className="border-white border" />
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
-                                                <FaPlayCircle className="h-5 w-5 xl:ml-8" />
+                                                <FaPlayCircle
+                                                    className="h-5 w-5 xl:ml-8"
+                                                />
                                             </div>
                                             <div className="xl:w-11/12 mt-3 mb-3">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
@@ -234,7 +268,9 @@ function Lessons() {
                                     <AccordionBody className="bg-gray-50">
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
-                                                <FaPlayCircle className="h-5 w-5 xl:ml-8" />
+                                                <FaPlayCircle
+                                                    className="h-5 w-5 xl:ml-8"
+                                                />
                                             </div>
                                             <div className="xl:w-11/12 mt-3 mb-3">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
@@ -243,7 +279,9 @@ function Lessons() {
                                         <hr className="border-white border" />
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
-                                                <FaPlayCircle className="h-5 w-5 xl:ml-8" />
+                                                <FaPlayCircle
+                                                    className="h-5 w-5 xl:ml-8"
+                                                />
                                             </div>
                                             <div className="xl:w-11/12 mt-3 mb-3">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
@@ -252,7 +290,9 @@ function Lessons() {
                                         <hr className="border-white border" />
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
-                                                <FaPlayCircle className="h-5 w-5 xl:ml-8" />
+                                                <FaPlayCircle
+                                                    className="h-5 w-5 xl:ml-8"
+                                                />
                                             </div>
                                             <div className="xl:w-11/12 mt-3 mb-3">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>

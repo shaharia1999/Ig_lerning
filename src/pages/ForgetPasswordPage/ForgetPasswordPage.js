@@ -1,10 +1,14 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import ForgetPassword from "../../component/ForgetPassword/ForgetPassword";
+import darkModeTheme from "../../darkModeTheme";
 
 function ForgetPasswordPage() {
+    useEffect(() => {
+        darkModeTheme();
+    }, [])
     return (
         <Fragment>
-            <ForgetPassword/>
+            <ForgetPassword />
         </Fragment>
     );
 }
