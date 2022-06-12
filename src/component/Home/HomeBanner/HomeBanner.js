@@ -1,4 +1,4 @@
-import React, { Component, Fragment, useState, useRef } from 'react';
+import React, { Fragment, useState, useRef } from 'react';
 import Certificate from "../../../asset/images/icon/certificate.png";
 import IntelloGeekSlider1 from "../../../asset/images/banner/IntelloGeek-Slider1.svg";
 import IntelloGeekSlider2 from "../../../asset/images/banner/IntelloGeek-Slider2.svg";
@@ -10,20 +10,18 @@ import 'slick-carousel/slick/slick-theme.css';
 function HomeBanner() {
     const [nav9, setNav9] = useState();
     const slider9 = useRef();
-
     var settings = {
         appendDots: dots => (
             <div
-              style={{
-                borderRadius: "10px",
-                padding: "10px"
-              }}
+                style={{
+                    borderRadius: "10px",
+                    padding: "10px"
+                }}
             >
-              <ul style={{ margin: "300px" }}> {dots} </ul>
+                <ul style={{ margin: "300px" }}> {dots} </ul>
             </div>
-          ),
+        ),
     }
-
     return (
         <Fragment>
 
@@ -58,39 +56,60 @@ function HomeBanner() {
                 >
 
                     <div className="xl:w-full">
-                        <img src={IntelloGeekSlider1} className="xl:w-full flex overflow-hidden" alt="Wild Landscape" />
+                        <img src={IntelloGeekSlider1}
+                            className="xl:w-full flex overflow-hidden"
+                            alt="Wild Landscape" />
                     </div>
                     <div className="xl:w-full">
-                        <img src={IntelloGeekSlider2} className="xl:w-full flex overflow-hidden" alt="Wild Landscape" />
+                        <img src={IntelloGeekSlider2}
+                            className="xl:w-full flex overflow-hidden"
+                            alt="Wild Landscape" />
                     </div>
                     <div className="xl:w-full">
-                        <img src={IntelloGeekSlider3} className="xl:w-full flex overflow-hidden" alt="Wild Landscape" />
+                        <img src={IntelloGeekSlider3}
+                            className="xl:w-full flex overflow-hidden"
+                            alt="Wild Landscape" />
                     </div>
                 </Slider>
             </div>
-
 
             <div className="container -mt-28 stack flex ">
                 <div className="flex flex-row bg-white rounded-xl shadow-client border-none lg:p-20 w-full text-center">
                     <div className="lg:basis-1/3">
                         <div className="image-center">
-                            <img className="h-24 w-24 object-contain" src={Certificate} alt="" />
+                            <img
+                                className="h-24 w-24 object-contain"
+                                src={Certificate} alt="" />
                         </div>
-                        <h6 className="text-2xl text-sectionTitleColor font-semibold">100% Certificate Obtaining</h6>
+                        <h6
+                            className="text-2xl text-sectionTitleColor font-semibold">
+                            100% Certificate Obtaining
+                        </h6>
                     </div>
 
                     <div className="lg:basis-1/3">
                         <div className="image-center">
-                            <img className="h-24 w-24 object-contain" src={Certificate} alt="" />
+                            <img
+                                className="h-24 w-24 object-contain"
+                                src={Certificate}
+                                alt="" />
                         </div>
-                        <h6 className="text-2xl text-sectionTitleColor font-semibold">100% Certificate Obtaining</h6>
+                        <h6
+                            className="text-2xl text-sectionTitleColor font-semibold">
+                            100% Certificate Obtaining
+                        </h6>
                     </div>
 
                     <div className="lg:basis-1/3">
                         <div className="image-center">
-                            <img className="h-24 w-24 object-contain" src={Certificate} alt="" />
+                            <img
+                                className="h-24 w-24 object-contain"
+                                src={Certificate} alt="" />
                         </div>
-                        <h6 className="text-2xl text-sectionTitleColor font-semibold">100% Certificate Obtaining</h6>
+                        <h6
+                            className="text-2xl text-sectionTitleColor font-semibold">
+                            100% Certificate Obtaining
+                        </h6>
                     </div>
                 </div>
             </div>

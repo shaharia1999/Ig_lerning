@@ -1,12 +1,9 @@
 import React, { Fragment, useEffect, useState } from "react";
-import Teacher from "../../../asset/images/course-teacher/teacher.jpg";
-import { FaStar } from "react-icons/fa";
 import { FiCheckCircle } from "react-icons/fi";
 import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";
 import StarRatings from 'react-star-ratings';
 import { useParams } from "react-router-dom";
-
 
 function Description() {
     let { id } = useParams();
@@ -135,7 +132,8 @@ function Description() {
                         <div className="xl:w-2/12">
                             <img
                                 className="xl:h-28 xl:mt-7 xl:w-28 rounded-full xl:border-4 xl:border-white xl:shadow-lg"
-                                src={ApiUrl.ImageBaseUrl + TeacherInfo.image} alt="teacher" />
+                                src={ApiUrl.ImageBaseUrl + TeacherInfo.image}
+                                alt="teacher" />
                             {(() => {
                                 if (isFollow === true) {
                                     return <button onClick={() => TeacherUnFollow(TeacherInfo.id)}
@@ -157,7 +155,9 @@ function Description() {
                             <h6 className=" text-sectionTitleColor text-3xl font-semibold xl:pr-24 xl:mt-8">
                                 {courseInfo.course_title}
                             </h6>
-                            <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-4">{TeacherInfo.username}   •   Trainer and Speaker</h6>
+                            <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-4">
+                                {TeacherInfo.username}   •   Trainer and Speaker
+                            </h6>
                             <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">
                                 <div className="flex sm:justify-center xl:justify-start">
                                     <StarRatings
@@ -166,7 +166,14 @@ function Description() {
                                         starSpacing="4px"
                                         starRatedColor="rgb(251, 191, 36)"
                                     />
-                                    <h6 className="xl:ml-2 xl:mt-1 xl:text-xs"> {courseInfo.avg_rating} <em>({courseInfo.total_student_rating} ratings on {courseInfo.total_student_enroll} students enrolled)</em></h6>
+                                    <h6 className="xl:ml-2 xl:mt-1 xl:text-xs">
+                                        {courseInfo.avg_rating}
+                                        <em>({courseInfo.total_student_rating}
+                                            ratings on
+                                            {courseInfo.total_student_enroll}
+                                            students enrolled)
+                                        </em>
+                                    </h6>
                                 </div>
 
                             </h6>
@@ -174,17 +181,25 @@ function Description() {
                     </div>
                     <div className="flex flex-wrap xl:mt-9">
                         <div className="xl:w-full">
-                            <h6 className="text-sectionTitleColor text-3xl font-semibold">Description</h6>
+                            <h6 className="text-sectionTitleColor text-3xl font-semibold">
+                                Description
+                            </h6>
                             <h6 className="xl:text-xs xl:font-light text-breadcrumbs-text xl:mt-5 xl:leading-5 xl:pr-24">
                                 {courseInfo.course_description}
                             </h6>
-                            <h6 className="text-sectionTitleColor xl:text-xl font-semibold xl:mt-5 xl:mb-5">What will you learn:</h6>
+                            <h6 className="text-sectionTitleColor xl:text-xl font-semibold xl:mt-5 xl:mb-5">
+                                What will you learn:
+                            </h6>
                             {CourseLearnInfo.map((course_learn_info, index) => (
-                                <div key={index} className="flex flex-wrap">
+                                <div key={index}
+                                    className="flex flex-wrap">
                                     <div className="xl:w-1/12">
-                                        <FiCheckCircle className=" text-btngreen xl:h-6 xl:w-6" />
+                                        <FiCheckCircle
+                                            className=" text-btngreen xl:h-6 xl:w-6"
+                                        />
                                     </div>
-                                    <div className="xl:w-11/12 xl:-ml-14">
+                                    <div
+                                        className="xl:w-11/12 xl:-ml-14">
                                         <h6>{course_learn_info.course_learn_question}</h6>
                                         <h6 className="xl:text-xs xl:font-light text-breadcrumbs-text xl:mt-1 xl:mb-4 xl:leading-5 xl:pr-24">
                                             {course_learn_info.course_learn_answer}

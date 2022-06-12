@@ -1,13 +1,15 @@
-import React, { Component, Fragment } from "react";
+import React, { useEffect, Fragment } from "react";
 import Registration from '../../component/Registration/Registration';
+import darkModeTheme from "../../darkModeTheme";
 
-class RegistrationPage extends Component {
-    render() {
-        return (
-            <Fragment>
-                <Registration/>
-            </Fragment>
-        );
-    }
+function RegistrationPage() {
+    useEffect(() => {
+        darkModeTheme();
+    }, [])
+    return (
+        <Fragment>
+            <Registration />
+        </Fragment>
+    );
 }
 export default RegistrationPage;
