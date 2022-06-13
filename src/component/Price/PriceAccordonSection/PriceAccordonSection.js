@@ -50,7 +50,7 @@ function PriceAccordonSection() {
                     <div className="container xl:pt-24 xl:pb-10">
                         <div className="flex flex-auto justify-center">
                             <div className="xl:w-7/12 ">
-                                <h2 className=" text-about-analytics-subTitle text-center xl:font-semibold xl:text-5xl xl:mt-4">Do you have any question!</h2>
+                                <h2 className=" text-about-analytics-subTitle dark:text-white text-center xl:font-semibold xl:text-5xl xl:mt-4">Do you have any question!</h2>
                                 <h2 className="text-about-analytics-subTitle text-center xl:font-medium xl:text-base xl:mt-4 xl:pl-56 xl:pr-56 xl:mb-16">Our support team ready to help you, please contact with them</h2>
 
                                 <div className="justify-center items-center">
@@ -116,8 +116,8 @@ function PriceAccordonSection() {
                     <div className="container xl:pt-24 xl:pb-10">
                         <div className="flex flex-auto justify-center">
                             <div className="xl:w-7/12 ">
-                                <h2 className=" text-about-analytics-subTitle text-center xl:font-semibold xl:text-5xl xl:mt-4">Do you have any question!</h2>
-                                <h2 className="text-about-analytics-subTitle text-center xl:font-medium xl:text-base xl:mt-4 xl:pl-56 xl:pr-56 xl:mb-16">Our support team ready to help you, please contact with them</h2>
+                                <h2 className=" text-about-analytics-subTitle dark:text-white text-center xl:font-semibold xl:text-5xl xl:mt-4">Do you have any question!</h2>
+                                <h2 className="text-about-analytics-subTitle dark:text-gray-400 text-center xl:font-medium xl:text-base xl:mt-4 xl:pl-56 xl:pr-56 xl:mb-16">Our support team ready to help you, please contact with them</h2>
                                 <div className="justify-center items-center">
                                     {
                                         priceQuestionData.map((price_question) => (
