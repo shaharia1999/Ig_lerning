@@ -10,6 +10,9 @@ function NavBarTop() {
     const onSelect = (code) => setSelected(code);
 
     const userTheme = localStorage.getItem("theme");
+    if(userTheme === null){
+        localStorage.setItem("theme", "light");
+    }
 
     const showSelectedLabel = ("Show Selected Label", true);
     const showSecondarySelectedLabel = (
@@ -38,7 +41,7 @@ function NavBarTop() {
     return (
         <Fragment>
             <div className="flex flex-wrap">
-                <div className="bg-maincolordeep h-16 w-full dark:bg-black">
+                <div className="bg-maincolordeep h-16 w-full dark:bg-dark-color1">
                     <div className="flex flex-wrap float-right xl:pr-28 xl:pt-3">
                         <ReactFlagsSelect
                             selected={selected}
@@ -73,7 +76,7 @@ function NavBarTop() {
 
                         {(() => {
                             if (userTheme === 'dark') {
-                                return <label className="bg-light-version xl:ml-4 xl:w-12 xl:h-11 rounded-sm">
+                                return <label className="bg-light-version dark:bg-dark-color3 xl:ml-4 xl:w-12 xl:h-11 rounded-sm">
                                     <img className="moon cursor-pointer show xl:h-7 xl:w-7 xl:mt-1.5 xl:ml-2.5" src={MoonImg} alt="" />
                                     <img className="sun cursor-pointer hidden xl:h-7 xl:w-7 xl:mt-1.5 xl:ml-2.5" src={SunImg} alt="" />
                                 </label>
@@ -92,7 +95,7 @@ function NavBarTop() {
             </div>
 
 
-            <nav className="flex flex-wrap top-0 sticky-top items-center justify-between w-full py-4 md:py-0 px-4 text-lg bg-maincolor">
+            <nav className="flex flex-wrap top-0 sticky-top items-center justify-between w-full py-4 md:py-0 px-4 text-lg bg-maincolor dark:bg-dark-color2">
                 <div className="h-24">
                     <a href='/'>
                         <img className="h-24 mt-3 ml-24" src={MainLogo} alt="" />

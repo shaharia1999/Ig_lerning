@@ -105,10 +105,10 @@ function TopCategories() {
         if (isLoading === false) {
             return (
                 topCategory.map((category, index) => (
-                    <div key={index} className="my-1 px-1 w-full md:w-1/2 lg:my-8 lg:px-5 lg:w-1/3">
-                        <article className="overflow-hidden rounded-lg shadow-lg hover:opacity-30 hover:bg-black">
+                    <div key={index} className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
+                        <article className="overflow-hidden rounded-lg shadow-lg hover:opacity-30 hover:bg-black dark:bg-dark-color2">
                             <img alt="Placeholder" className="block bg-fixed h-72 w-full" src={category.category_preview_img} />
-                            <h1 className="lg:text-xl lg:font-semibold text-center text-maingray lg:mt-4 lg:mb-4">{category.category_name}</h1>
+                            <h1 className="xl:text-lg xl:font-medium text-center text-maingray dark:text-white xl:mt-4 xl:mb-4">{category.category_name}</h1>
                         </article>
                     </div>
                 ))
@@ -120,7 +120,7 @@ function TopCategories() {
         return (
             <Fragment>
                 <div className="container my-12">
-                    <h4 className="text-4xl	font-semibold text-sectionTitleColor ml-3">Top Categories ({totalTopCategory}) </h4>
+                    <h4 className="text-4xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Top Categories ({totalTopCategory}) </h4>
                     <div className="xl:mt-4">
                         {
                             Topcategory_Loading
@@ -136,7 +136,7 @@ function TopCategories() {
         return (
             <Fragment>
                 <div className="container my-12">
-                    <h4 className="text-4xl	font-semibold text-sectionTitleColor ml-3">Top Categories ({totalTopCategory}) </h4>
+                    <h4 className="text-4xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Top Categories ({totalTopCategory}) </h4>
                     <div className="xl:mt-4">
 
                         <Slider

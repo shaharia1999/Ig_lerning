@@ -1,5 +1,7 @@
 import React, { Fragment, useState, useRef } from 'react';
-import Certificate from "../../../asset/images/icon/certificate.png";
+import Certificate from "../../../asset/images/icon/certificate.svg";
+import Globe from "../../../asset/images/icon/globe.svg";
+import Teacher from "../../../asset/images/icon/teacher.svg";
 import IntelloGeekSlider1 from "../../../asset/images/banner/IntelloGeek-Slider1.svg";
 import IntelloGeekSlider2 from "../../../asset/images/banner/IntelloGeek-Slider2.svg";
 import IntelloGeekSlider3 from "../../../asset/images/banner/IntelloGeek-Slider3.svg";
@@ -74,7 +76,7 @@ function HomeBanner() {
             </div>
 
             <div className="container -mt-28 stack flex ">
-                <div className="flex flex-row bg-white rounded-xl shadow-client border-none lg:p-20 w-full text-center">
+                <div className="flex flex-row bg-white dark:bg-dark-color2 rounded-xl shadow-client border-none lg:p-20 w-full text-center">
                     <div className="lg:basis-1/3">
                         <div className="image-center">
                             <img
@@ -82,7 +84,7 @@ function HomeBanner() {
                                 src={Certificate} alt="" />
                         </div>
                         <h6
-                            className="text-2xl text-sectionTitleColor font-semibold">
+                            className="text-2xl text-sectionTitleColor font-medium xl:mt-1 dark:text-white">
                             100% Certificate Obtaining
                         </h6>
                     </div>
@@ -91,12 +93,13 @@ function HomeBanner() {
                         <div className="image-center">
                             <img
                                 className="h-24 w-24 object-contain"
-                                src={Certificate}
+                                src={Globe}
                                 alt="" />
                         </div>
                         <h6
-                            className="text-2xl text-sectionTitleColor font-semibold">
-                            100% Certificate Obtaining
+                            className="text-2xl text-sectionTitleColor font-medium xl:mt-1 dark:text-white">
+                            Live every where in
+                            the world
                         </h6>
                     </div>
 
@@ -104,11 +107,12 @@ function HomeBanner() {
                         <div className="image-center">
                             <img
                                 className="h-24 w-24 object-contain"
-                                src={Certificate} alt="" />
+                                src={Teacher} alt="" />
                         </div>
                         <h6
-                            className="text-2xl text-sectionTitleColor font-semibold">
-                            100% Certificate Obtaining
+                            className="text-2xl text-sectionTitleColor font-medium xl:mt-1 dark:text-white">
+                            Learn with the best
+                            teachers
                         </h6>
                     </div>
                 </div>

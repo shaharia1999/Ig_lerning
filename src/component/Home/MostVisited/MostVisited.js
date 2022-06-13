@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState, useRef } from "react";
 import Play from "../../../asset/images/icon/play.png";
-import CourseLogo from "../../../asset/images/logo/course-logo.png";
+import CourseLogo from "../../../asset/images/logo/course-logo.svg";
 import SpeedMeter from "../../../asset/images/icon/icon_level.png";
 import CertificateIcon from "../../../asset/images/icon/icon_certificate.png";
 import LoveIcon from "../../../asset/images/icon/love-icon.png";
@@ -207,8 +207,8 @@ function MostVisited() {
                                     <div className="w-4/5">
                                         <a href="!#">
                                             <div className="text-lg absolute top-0 mt-5">
-                                                <h6 className="font-medium text-lg text-black">{mostvisited_c.channel_name.channel_name}</h6>
-                                                <h6 className="font-light text-sm text-black">{mostvisited_c.course_duration} min</h6>
+                                                <h6 className="font-medium text-lg text-black dark:text-white">{mostvisited_c.channel_name.channel_name}</h6>
+                                                <h6 className="font-light text-sm text-black dark:text-white">{mostvisited_c.course_duration} min</h6>
 
                                                 <img className="lg:h-36 ml-8" src={Play} alt="" />
                                             </div>
@@ -218,14 +218,14 @@ function MostVisited() {
                             </div>
 
                             <div className="relative px-4 -mt-16">
-                                <div className="bg-white p-3 rounded-lg shadow-lg">
+                                <div className="bg-white p-3 dark:bg-dark-color2 rounded-lg shadow-lg dark:shadow-xl">
                                     <div className="flex flex-wrap">
                                         <div className="w-4/5">
-                                            <Link to={`/course-details/${mostvisited_c.course_id}`} className="mt-1 xl:text-base font-semibold text leading-tight text-CourseTitle">{`${mostvisited_c.course_title.substring(0, 40)}...`}</Link>
+                                            <Link to={`/course-details/${mostvisited_c.course_id}`} className="mt-1 xl:text-base font-semibold text leading-tight text-CourseTitle dark:text-white">{`${mostvisited_c.course_title.substring(0, 40)}...`}</Link>
                                         </div>
                                         <div className="w-1/5">
                                             <button
-                                                className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white xl:pl-3 xl:pr-3 xl:pt-1 xl:pb-1 rounded-md">Live
+                                                className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white xl:pl-3 xl:pr-3 xl:pt-1 xl:pb-0.5 rounded-sm">Live
                                             </button>
                                         </div>
                                     </div>
@@ -267,7 +267,7 @@ function MostVisited() {
                                             <div
                                                 className="flex sm:justify-center xl:justify-start -mt-3 right-0 absolute">
                                                 <button
-                                                    className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-md">
+                                                    className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-1 lg:pr-1 lg:pt-1 lg:pb-1 xl:mr-1 rounded-sm">
                                                     <img className="px-1 h-3 w-5" src={LoveIcon} alt="" /></button>
                                                 <button
                                                     className="text-sm font-extralight leading-tight bg-maincolor text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-sm">Enroll
@@ -306,7 +306,7 @@ function MostVisited() {
         return (
             <Fragment>
                 <div className="container my-12">
-                    <h4 className="text-4xl	font-semibold text-sectionTitleColor ml-3">Most Visited ({mostvisited_total_count}) </h4>
+                    <h4 className="text-4xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Most Visited ({mostvisited_total_count}) </h4>
                     <div className="lg:mt-6 -mx-1 lg:-mx-4">
                         <Slider
                             ref={(slider2) => setNav2(slider2)}

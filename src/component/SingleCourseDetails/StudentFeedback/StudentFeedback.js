@@ -125,7 +125,7 @@ function StudentFeedback() {
                         <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
                         <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
                         <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                        <h6 className="xl:ml-2 text-sm text-black font-normal">{studentFeedBack.five_rating_percentage}%</h6>
+                        <h6 className="xl:ml-2 text-sm text-black dark:text-gray-300 font-normal">{studentFeedBack.five_rating_percentage}%</h6>
                     </ul>
 
                     <ul className="flex justify-center xl:mt-1">
@@ -133,35 +133,35 @@ function StudentFeedback() {
                         <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
                         <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
                         <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-300" /></li>
-                        <h6 className="xl:ml-2 text-sm text-black font-normal">{studentFeedBack.four_rating_percentage}%</h6>
+                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-600" /></li>
+                        <h6 className="xl:ml-2 text-sm text-black dark:text-gray-300 font-normal">{studentFeedBack.four_rating_percentage}%</h6>
                     </ul>
 
                     <ul className="flex justify-center xl:mt-1">
                         <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
                         <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
                         <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-300" /></li>
-                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-300" /></li>
-                        <h6 className="xl:ml-2 text-sm text-black font-normal">{studentFeedBack.three_rating_percentage}%</h6>
+                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-600" /></li>
+                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-600" /></li>
+                        <h6 className="xl:ml-2 text-sm text-black dark:text-gray-300 font-normal">{studentFeedBack.three_rating_percentage}%</h6>
                     </ul>
 
                     <ul className="flex justify-center xl:mt-1">
                         <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
                         <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-300" /></li>
-                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-300" /></li>
-                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-300" /></li>
-                        <h6 className="xl:ml-2 text-sm text-black font-normal">{studentFeedBack.two_rating_percentage}%</h6>
+                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-600" /></li>
+                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-600" /></li>
+                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-600" /></li>
+                        <h6 className="xl:ml-2 text-sm text-black dark:text-gray-300 font-normal">{studentFeedBack.two_rating_percentage}%</h6>
                     </ul>
 
                     <ul className="flex justify-center xl:mt-1">
                         <li className="mb-4 mx-.75"><FaStar className="text-amber-400" /></li>
-                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-300" /></li>
-                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-300" /></li>
-                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-300" /></li>
-                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-300" /></li>
-                        <h6 className="xl:ml-2 text-sm text-black font-normal">{studentFeedBack.one_rating_percentage}%</h6>
+                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-600" /></li>
+                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-600" /></li>
+                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-600" /></li>
+                        <li className="mb-4 mx-.75"><FaStar className=" text-gray-600" /></li>
+                        <h6 className="xl:ml-2 text-sm text-black dark:text-gray-300 font-normal">{studentFeedBack.one_rating_percentage}%</h6>
                     </ul>
 
                 </div>
@@ -171,7 +171,7 @@ function StudentFeedback() {
     return (
         <Fragment>
             <div className="xl:ml-32 xl:mt-5 xl:mr-14">
-                <h6 className="text-sectionTitleColor text-3xl font-semibold">Student Feedback</h6>
+                <h6 className="text-sectionTitleColor dark:text-white text-3xl font-semibold">Student Feedback</h6>
                 {
                     StudentFeedBackHTML
                 }

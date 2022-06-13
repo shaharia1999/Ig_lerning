@@ -1,12 +1,12 @@
 import React, { Fragment, useEffect, useState } from "react";
 import LoveIcon from "../../asset/images/icon/love-icon.png";
 import MasterCourseThumbnail from "../../asset/images/master-course/master-course-thumbnail.png";
-import CourseLogo from "../../asset/images/logo/course-logo.png";
-import Flag from "../../asset/images/icon/usa.png";
+import CourseLogo from "../../asset/images/logo/course-logo.svg";
 import { GoPrimitiveDot } from "react-icons/go";
 import { MdLogin } from "react-icons/md";
 import axios from "axios";
 import ApiUrl from "../../Api/ApiUrl";
+import { Link } from "react-router-dom";
 
 
 function RecentlyAddedCourseSectionTwo() {
@@ -339,10 +339,10 @@ function RecentlyAddedCourseSectionTwo() {
                                 </div>
 
                                 <div className="relative px-4 -mt-16">
-                                    <div className="bg-white p-4 rounded-lg shadow-lg">
+                                    <div className="bg-white dark:bg-dark-color2 p-4 rounded-lg shadow-lg">
                                         <div className="flex flex-wrap">
                                             <div className="w-full">
-                                                <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">
+                                                <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle dark:text-white">
                                                     {course?.course_title}
                                                 </h4>
                                             </div>
@@ -351,12 +351,12 @@ function RecentlyAddedCourseSectionTwo() {
                                         <div className="flex flex-wrap">
                                             <div className="w-2/4">
                                                 <div className="flex sm:justify-center xl:justify-start">
-                                                    <span className="text-gray-600 text-xs mt-2">Starts September 2022</span>
+                                                    <span className="text-gray-600 dark:text-gray-400 text-xs mt-2">Starts September 2022</span>
                                                 </div>
                                             </div>
                                             <div className="w-2/4">
                                                 <div className="flex sm:justify-center xl:justify-start">
-                                                    <GoPrimitiveDot className="text-sm mt-2 font-medium text-LiveBtnColor" /><span className="text-gray-600 text-xs mt-2">  11 Weeks</span>
+                                                    <GoPrimitiveDot className="text-sm mt-2 font-medium text-LiveBtnColor" /><span className="text-gray-600 text-xs mt-2 dark:text-gray-400">  11 Weeks</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -365,7 +365,7 @@ function RecentlyAddedCourseSectionTwo() {
                                         <div className="flex flex-wrap">
                                             <div className="w-full">
                                                 <div className="flex xl:justify-start">
-                                                    <span className="bg-master-degree-bg rounded-xl lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 text-master-degree-text  text-xs mt-2">Certified Master Degrees</span>
+                                                    <span className="bg-master-degree-bg dark:bg-dark-color3 rounded-xl xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 text-master-degree-text dark:text-white text-xs mt-2">Certified Master Degrees</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -373,26 +373,26 @@ function RecentlyAddedCourseSectionTwo() {
                                         <div className="flex flex-wrap mt-5">
                                             <div className="w-2/5">
                                                 <div className="flex sm:justify-center xl:justify-start -mt-3">
-                                                    <a className="z-30">
+                                                    <Link to="" className="z-30">
                                                         <img className="h-8 w-8 rounded-full border-2 border-white"
-                                                            src="https://media.istockphoto.com/photos/got-this-picture-id1332291404?b=1&k=20&m=1332291404&s=170667a&w=0&h=uRm6p7xa_-YF9t_6sVY7DXnXaa2Jo_NeL4oUvrFJq6I=" />
-                                                    </a>
-                                                    <a className="-ml-3 z-20">
+                                                            src="https://media.istockphoto.com/photos/got-this-picture-id1332291404?b=1&k=20&m=1332291404&s=170667a&w=0&h=uRm6p7xa_-YF9t_6sVY7DXnXaa2Jo_NeL4oUvrFJq6I=" alt=""/>
+                                                    </Link>
+                                                    <Link to="" className="-ml-3 z-20">
                                                         <img className="h-8 w-8 rounded-full border-2 border-white"
-                                                            src="https://cbsnews1.cbsistatic.com/hub/i/2018/11/06/0c1af1b8-155a-458e-b105-78f1e7344bf4/2018-11-06t054310z-1334124005-rc1be15a8050-rtrmadp-3-people-sexiest-man.jpg" />
-                                                    </a>
-                                                    <a className="-ml-3 z-10">
+                                                            src="https://cbsnews1.cbsistatic.com/hub/i/2018/11/06/0c1af1b8-155a-458e-b105-78f1e7344bf4/2018-11-06t054310z-1334124005-rc1be15a8050-rtrmadp-3-people-sexiest-man.jpg" alt=""/>
+                                                    </Link>
+                                                    <Link to="" className="-ml-3 z-10">
                                                         <img className="h-8 w-8 rounded-full border-2 border-white"
-                                                            src="https://aisvox-a.akamaihd.net/masters/940835/26-1/27-1yk13p/2540x1429/4080/800604860-jpg.jpg" />
-                                                    </a>
+                                                            src="https://aisvox-a.akamaihd.net/masters/940835/26-1/27-1yk13p/2540x1429/4080/800604860-jpg.jpg" alt=""/>
+                                                    </Link>
                                                 </div>
                                             </div>
                                             <div className="w-3/5 relative">
-                                                <div className="flex xl:justify-end -mt-3 absolute right-0 absolute">
-                                                    <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-md">
+                                                <div className="flex xl:justify-end -mt-3 absolute right-0">
+                                                    <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 xl:mr-1 rounded-md">
                                                         <img className="px-1 h-3 w-5" src={LoveIcon} alt='' /></button>
                                                     <button
-                                                        className="text-sm flex font-light leading-tight bg-apply-now text-white lg:pl-3 lg:pr-3 lg:pt-2 lg:pb-2 rounded-lg"> Apply Now <MdLogin className="ml-2 text-xl font-normal" />
+                                                        className="text-sm flex font-light leading-tight bg-apply-now text-white xl:pl-3 xl:pr-3 xl:pt-2 xl:pb-2 rounded-lg"> Apply Now <MdLogin className="ml-2 text-xl font-normal" />
                                                     </button>
                                                 </div>
                                             </div>

@@ -25,7 +25,7 @@ function DiscountCardCourse() {
     if (isLoading === true) {
         return (
             <Fragment>
-                <div className="rounded-2xl fixed top-72 animate-pulse">
+                <div className="rounded-lg fixed top-72 animate-pulse">
                     <div className="bg-white rounded-2xl">
                         <div className="rounded-2xl">
                             <div className="xl:w-96 xl:h-64 rounded bg-gray-100 xl:pt-4 xl:pr-4 xl:pl-4"></div>
@@ -61,9 +61,9 @@ function DiscountCardCourse() {
     else if (isLoading === false) {
         return (
             <Fragment>
-                <div className="rounded-2xl fixed top-72">
-                    <div className="bg-BgLoveIcon rounded-2xl">
-                        <div className="rounded-2xl">
+                <div className="fixed top-72">
+                    <div className="bg-BgLoveIcon dark:bg-dark-color3 rounded-lg">
+                        <div className="rounded-xl">
                             <video
                                 type="video/mp4"
                                 muted
@@ -75,13 +75,13 @@ function DiscountCardCourse() {
                         <div className="xl:p-5">
                             <div className="flex xl:mt-4 xl:mb-5">
                                 <div className="xl:w-6/12">
-                                    <h6 className="flex text-sectionTitleColor xl:text-3xl xl:font-semibold">
+                                    <h6 className="flex text-sectionTitleColor dark:text-white xl:text-3xl xl:font-semibold">
                                         {coursePriceData.new_price}
                                         <MdEuro
                                             className="xl:mt-.5"
                                         />
                                         <strike
-                                            className="flex text-client-section-des xl:text-xl xl:font-extralight xl:ml-4">
+                                            className="flex text-client-section-des dark:text-gray-400 xl:text-xl xl:font-extralight xl:ml-4">
                                             {coursePriceData.main_price}€
                                         </strike>
                                     </h6>
@@ -92,7 +92,7 @@ function DiscountCardCourse() {
 
                                         }
                                         else {
-                                            return <h6>{coursePriceData.discount_percentage}% Discounted Price</h6>
+                                            return <h6 className="dark:text-gray-300">{coursePriceData.discount_percentage}% Discounted Price</h6>
                                         }
                                     })()}
                                 </div>
@@ -103,13 +103,13 @@ function DiscountCardCourse() {
                                     className="ml-2 xl:mt-1"
                                 />
                             </button>
-                            <h6 className="text-sectionTitleColor xl:font-semibold xl:text-2xl xl:mt-5 xl:mb-4">What's Included</h6>
+                            <h6 className="text-sectionTitleColor xl:font-semibold xl:text-2xl xl:mt-5 xl:mb-4 dark:text-white">What's Included</h6>
                             <ul className="leading-8">
-                                <li className="text-black">Mobile Support</li>
-                                <li className="text-black">Lession Archive</li>
-                                <li className="text-black">Mobile Support</li>
-                                <li className="text-black">Tutor Chat</li>
-                                <li className="text-black">Course Certificate</li>
+                                <li className="text-black dark:text-gray-300">Mobile Support</li>
+                                <li className="text-black dark:text-gray-300">Lession Archive</li>
+                                <li className="text-black dark:text-gray-300">Mobile Support</li>
+                                <li className="text-black dark:text-gray-300">Tutor Chat</li>
+                                <li className="text-black dark:text-gray-300">Course Certificate</li>
                             </ul>
                         </div>
                     </div>

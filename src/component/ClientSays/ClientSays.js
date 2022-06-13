@@ -1,5 +1,4 @@
 import React, { useState, useEffect, Fragment, useRef } from 'react';
-import Client1 from "../../asset/images/client/client1.jpg";
 import { FaStar } from "react-icons/fa";
 import ApiUrl from '../../Api/ApiUrl';
 import axios from "axios";
@@ -76,9 +75,9 @@ function ClientSays() {
         if (isLoading === false) {
             return says_client.map((says_client, index) => (
                 <div key={index} className="xl:w-1/3 px-4">
-                    <div className="bg-white rounded-2xl shadow-client border-none xl:p-12 h-full w-auto">
+                    <div className="bg-white dark:bg-dark-color2 rounded-2xl shadow-client border-none xl:p-12 h-full w-auto">
                         <img className="rounded-full h-36 w-36 mt-8 mb-12" src={ApiUrl.ImageBaseUrl + says_client.user_info.image} alt='' />
-                        <h5 className="text-base font-normal text-client-section-des leading-8 mb-4 mt-0">{`${says_client.review_description.substring(0, 250)}...`}</h5>
+                        <h5 className="text-base font-normal text-client-section-des leading-8 mb-4 mt-0 dark:text-white">{`${says_client.review_description.substring(0, 250)}...`}</h5>
                         {(() => {
                             if (says_client.rating === 5) {
                                 return <ul className="flex sm:justify-center xl:justify-start mt-2">
@@ -117,7 +116,7 @@ function ClientSays() {
                                 </ul>
                             }
                         })()}
-                        <p className="text-sectionTitleColor text-2xl font-semibold">{says_client.user_info.username}</p>
+                        <p className="text-sectionTitleColor text-2xl font-semibold dark:text-white">{says_client.user_info.username}</p>
                         <p className="text-client-section-des text-md mt-2">Student</p>
                     </div>
                 </div>
@@ -129,7 +128,7 @@ function ClientSays() {
         return (
             <Fragment>
                 <div className="container xl:mt-8 xl:mb-12">
-                    <h4 className="text-4xl	font-semibold ml-3 text-sectionTitleColor">What Our Client Say</h4>
+                    <h4 className="text-4xl	font-semibold ml-3 text-sectionTitleColor dark:text-white">What Our Client Say</h4>
                     <div className="xl:mt-6">
                         {
                             says_client_lazy_loading
@@ -143,7 +142,7 @@ function ClientSays() {
         return (
             <Fragment>
                 <div className="container xl:mt-8 xl:mb-12">
-                    <h4 className="text-4xl	font-semibold ml-3 text-sectionTitleColor">What Our Client Say</h4>
+                    <h4 className="text-4xl	font-semibold ml-3 text-sectionTitleColor dark:text-white">What Our Client Say</h4>
                     <div className="xl:mt-6">
                         <Slider
                             ref={(slider1) => setNav1(slider1)}

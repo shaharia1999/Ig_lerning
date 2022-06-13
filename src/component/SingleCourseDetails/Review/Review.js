@@ -152,7 +152,7 @@ function Review() {
                         </div>
                         <div className="xl:w-11/12">
                             <div>
-                                <h6 className=" text-sectionTitleColor text-xl font-semibold">{course_learn_info.student_information.username}</h6>
+                                <h6 className=" text-sectionTitleColor dark:text-white text-xl font-semibold">{course_learn_info.student_information.username}</h6>
                                 <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">{course_learn_info.date}</h6>
                                 <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-2">
                                     <ul className="flex sm:justify-center xl:justify-start xl:mb-1">
@@ -162,7 +162,7 @@ function Review() {
                                             starSpacing="4px"
                                             starRatedColor="rgb(251, 191, 36)"
                                         />
-                                        <h6 className="xl:ml-2 xl:mt-1 xl:text-xs text-black font-medium">{course_learn_info.whenpublished}</h6>
+                                        <h6 className="xl:ml-2 xl:mt-1 xl:text-xs text-black dark:text-white font-medium">{course_learn_info.whenpublished}</h6>
                                     </ul>
                                 </h6>
                                 <h6 className="text-breadcrumbs-text text-sm font-normal xl:tracking-normal">
@@ -174,7 +174,7 @@ function Review() {
                                     <Link to={`#`} className="xl:p-2 xl:mx-2 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsDown className="text-maincolor xl:text-base" /></Link>
                                     <h6 className="text-maincolor xl:mx-2 xl:mt-1.5 text-sm font-medium">Report</h6>
                                 </div>
-                                <hr className="xl:mt-5 border" />
+                                <hr className="xl:mt-5 border dark:border-dark-color3" />
                             </div>
                         </div>
                     </div>
@@ -186,7 +186,7 @@ function Review() {
     return (
         <Fragment>
             <div className="xl:ml-32 xl:mt-5 xl:mr-14">
-                <h6 className="text-sectionTitleColor text-3xl font-semibold">Reviews</h6>
+                <h6 className="text-sectionTitleColor dark:text-white text-3xl font-semibold">Reviews</h6>
                 <div className="flex flex-wrap xl:mr-12">
                     <div className="xl:w-8/12 xl:mt-6">
                         <div className="flex w-full">

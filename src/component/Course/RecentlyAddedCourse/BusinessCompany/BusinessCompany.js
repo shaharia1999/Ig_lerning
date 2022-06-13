@@ -1,20 +1,14 @@
-import React, { Component, Fragment, useEffect, useState } from "react";
-import { FaStar } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import React, { Fragment, useEffect, useState } from "react";
 import SpeedMeter from "../../../../asset/images/icon/icon_level.png";
 import CertificateIcon from "../../../../asset/images/icon/icon_certificate.png";
 import LoveIcon from "../../../../asset/images/icon/love-icon.png";
 import ShareIcon from "../../../../asset/images/icon/icon_share.png";
-import { useQuery } from "react-query";
 import ApiUrl from "../../../../Api/ApiUrl";
-import Course1 from "../../../../asset/images/course-thumbnail/course-thumbnail.png";
 import Play from "../../../../asset/images/icon/play.png";
-import CourseLogo from "../../../../asset/images/logo/course-logo.png";
+import CourseLogo from "../../../../asset/images/logo/course-logo.svg";
 import 'tw-elements';
-import RecentlyAddedCourseOne from "../../../RecentlyAddedCourseOne/RecentlyAddedCourseOne";
 import axios from "axios";
 import StarRatings from 'react-star-ratings';
-
 
 function BusinessCompany() {
     const [subCategory, setSubCategory] = useState([]);
@@ -566,7 +560,7 @@ function BusinessCompany() {
                     <div className="flex flex-wrap">
                         <div className="w-1/3">
                             <div className="flex">
-                                <h4 className="text-4xl	font-semibold text-sectionTitleColor ml-3">Recently Added
+                                <h4 className="text-4xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Recently Added
                                     Course</h4>
                             </div>
                         </div>
@@ -602,7 +596,7 @@ function BusinessCompany() {
                     <div className="flex flex-wrap">
                         <div className="w-1/3">
                             <div className="flex">
-                                <h4 className="text-4xl	font-semibold text-sectionTitleColor ml-3">Recently Added
+                                <h4 className="text-4xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Recently Added
                                     Course</h4>
                             </div>
                         </div>

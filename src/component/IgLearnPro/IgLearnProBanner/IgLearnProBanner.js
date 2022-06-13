@@ -31,7 +31,7 @@ class IgLearnProBanner extends Component {
                 </div>
 
                 <div className="container -mt-28">
-                    <div className="flex flex-row bg-white rounded-xl shadow-client border-none lg:p-4 w-full text-center">
+                    <div className="flex flex-row bg-white dark:bg-dark-color2 rounded-xl shadow-client border-none lg:p-4 w-full text-center">
                         <div className="lg:basis-1/4">
                             <div className="image-center">
                                 <img className="h-48 w-56 object-contain" src={Google} alt="" />
