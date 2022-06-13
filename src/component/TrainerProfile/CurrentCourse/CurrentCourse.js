@@ -12,14 +12,16 @@ import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";
 import StarRatings from 'react-star-ratings';
 import reactRouterDom from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function CurrentCourse() {
+    let {id} = useParams();
     const [currentCourse, setCurrentCourse] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         setIsLoading(true)
-        axios.get(`${ApiUrl.BaseUrl}api/course/teacher-public-profile-course/5/`).then((response) => {
+        axios.get(`${ApiUrl.BaseUrl}api/course/teacher-public-profile-course/${id}/`).then((response) => {
             if (response.data.error === false) {
                 setCurrentCourse(response.data.data?.course_info);
                 setIsLoading(false);

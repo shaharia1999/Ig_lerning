@@ -598,23 +598,22 @@ function CourseSearchFilter() {
                                 <div className="relative">
                                     <video type="video/mp4" muted
                                         loop className="w-full vid h-48 object-cover object-center rounded-lg shadow-md"
-                                        src={MyVideo}></video>
-                                    {/* <img className="w-full h-72 object-cover object-center rounded-lg shadow-md" src={Course1} /> */}
+                                        src={ApiUrl.ImageBaseUrl+course_filter_data?.course_information?.promotional_video}></video>
 
                                     <div className="flex flex-wrap">
                                         <div className="w-1/5">
                                             <a href="!#">
                                                 <div
                                                     className="text-sm absolute top-0 left-2 rounded-full h-10 w-10 flex border-2 border-client-section-des flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
-                                                    <img className="h-10 w-10" src={CourseLogo} alt="" />
+                                                    <img className="h-10 w-10" src={ApiUrl.ImageBaseUrl+course_filter_data?.course_information?.channel_name?.channel_name_logo} alt="" />
                                                 </div>
                                             </a>
                                         </div>
                                         <div className="w-4/5">
                                             <a href="!#">
-                                                <div className="text-lg absolute top-0 text-white mt-5">
-                                                    <h6 className="font-medium xl:text-sm text-white xl:ml-1">sdhjb sdfhbja asufhba</h6>
-                                                    <h6 className="font-light xl:text-xs text-white">40 min</h6>
+                                                <div className="text-lg absolute top-0 text-black mt-5">
+                                                    <h6 className="font-medium xl:text-sm text-black xl:ml-1">{course_filter_data?.course_information?.channel_name?.channel_name}</h6>
+                                                    <h6 className="font-light xl:text-xs text-black">{course_filter_data?.course_information?.course_duration} min</h6>
 
                                                     <img className="xl:h-24 xl:ml-6 xl:-mt-2" src={Play} alt="" />
                                                 </div>
@@ -627,7 +626,7 @@ function CourseSearchFilter() {
                                         <div className="flex flex-wrap">
                                             <div className="w-full">
                                                 <h4 className="mt-1 text-sm font-semibold text leading-tight text-CourseTitle">
-                                                    Tame your Big Data Course Learn Online
+                                                    {course_filter_data?.course_information?.course_title}
                                                 </h4>
                                             </div>
                                         </div>
@@ -641,19 +640,21 @@ function CourseSearchFilter() {
                                             <div className="w-1/3">
                                                 <div className="flex relative sm:justify-center xl:justify-start">
                                                     <span
-                                                        className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">$4.99</span>
+                                                        className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">${course_filter_data?.new_price}</span>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <ul className="flex sm:justify-center xl:justify-start xl:mt-1">
-                                            <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400 text-sm" /></h6>
-                                            <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400 text-sm" /></h6>
-                                            <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400 text-sm" /></h6>
-                                            <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400 text-sm" /></h6>
-                                            <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400 text-sm" /></h6>
-                                            <h6 className="mb-4 mx-1 text-xs font-normal text-client-section-des">( 4.5
-                                                )</h6>
+                                            <StarRatings
+                                                rating={course_filter_data?.course_information?.avg_rating}
+                                                starDimension="15px"
+                                                starSpacing="4px"
+                                                starRatedColor="rgb(251, 191, 36)"
+                                            />
+                                            <h6 className="mb-4 mx-1 text-xs font-normal text-client-section-des">
+                                                ({course_filter_data?.course_information?.avg_rating})
+                                            </h6>
                                         </ul>
 
                                         <div className="flex flex-wrap">
@@ -693,22 +694,22 @@ function CourseSearchFilter() {
                                 <div className="relative w-2/12">
                                     <video type="video/mp4" muted
                                         loop className="w-32 vid h-24 xl:ml-2 object-cover object-center rounded-lg shadow-md"
-                                        src={MyVideo}></video>
+                                        src={ApiUrl.ImageBaseUrl+course_filter_data1?.course_information?.promotional_video}></video>
 
                                     <div className="flex flex-wrap">
                                         <div className="w-1/5">
                                             <a href="!#">
                                                 <div
                                                     className="text-sm absolute top-0 left-4 rounded-full h-5 w-5 flex border-2 border-client-section-des flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
-                                                    <img className="xl:h-5 xl:w-5" src={CourseLogo} alt="" />
+                                                    <img className="xl:h-5 xl:w-5" src={ApiUrl.ImageBaseUrl+course_filter_data1?.course_information?.channel_name?.channel_name_logo} alt="" />
                                                 </div>
                                             </a>
                                         </div>
                                         <div className="w-4/5">
                                             <a href="!#">
                                                 <div className="text-lg absolute top-0 text-white mt-3">
-                                                    <h6 className="font-medium xl:text-xs text-white xl:ml-1">sdhjb sdfhbja asufhba</h6>
-                                                    <h6 className="font-light xl:text-xs text-white">40 min</h6>
+                                                    <h6 className="font-medium xl:text-xs text-white xl:ml-1">{course_filter_data1?.course_information?.channel_name?.channel_name}</h6>
+                                                    <h6 className="font-light xl:text-xs text-white">{course_filter_data1?.course_information?.course_duration} min</h6>
                                                     <img className="xl:h-12 xl:ml-2 xl:-mt-6" src={Play} alt="" />
                                                 </div>
                                             </a>
@@ -720,7 +721,7 @@ function CourseSearchFilter() {
                                     <div className="flex flex-wrap">
                                         <div className="w-full">
                                             <h4 className="mt-1 xl:text-xl font-semibold text leading-tight text-CourseTitle">
-                                                Tame your Big Data Course Learn Online
+                                            {course_filter_data1?.course_information?.course_title}
                                             </h4>
                                         </div>
                                     </div>
@@ -734,7 +735,7 @@ function CourseSearchFilter() {
                                     </div>
 
                                     <StarRatings
-                                        rating={3.5}
+                                        rating={course_filter_data1?.course_information?.avg_rating}
                                         starDimension="18px"
                                         starSpacing="4px"
                                         starRatedColor="rgb(251, 191, 36)"
@@ -746,7 +747,7 @@ function CourseSearchFilter() {
                                     <div className="flex flex-wrap xl:mt-1">
                                         <div className="w-full">
                                             <div className="flex xl:justify-end">
-                                                <span className="text-maincolor xl:text-xl xl:font-semibold">$4.99</span>
+                                                <span className="text-maincolor xl:text-xl xl:font-semibold">${course_filter_data1?.new_price}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -785,6 +786,16 @@ function CourseSearchFilter() {
         }
     })()
 
+    const courseSubCategoryHTML = (() => {
+        return courseSubCategory.map((course_sub_category_list) => (
+            <div className="xl:w-1/4 xl:mt-5">
+                <button className=" text-breadcrumbs-text border border-gray-200 xl:text-sm xl:font-medium rounded-3xl xl:pt-3 xl:pb-3 xl:pl-12 xl:pr-12">
+                    <i className="fa fa-book"></i>
+                    <span className="ml-2">{course_sub_category_list.sub_category_name}</span>
+                </button>
+            </div>
+        ))
+    })()
 
     return (
         <Fragment>
@@ -795,41 +806,9 @@ function CourseSearchFilter() {
                         <div className="xl:w-full">
 
                             <div className="flex flex-wrap xl:mt-6">
-                                <div className="xl:w-1/4 xl:mt-5">
-                                    <button className=" text-breadcrumbs-text border border-gray-200 xl:text-sm xl:font-medium rounded-3xl xl:pt-3 xl:pb-3 xl:pl-12 xl:pr-12"><i className="fa fa-book"></i> <span className="ml-2">Business & Company</span></button>
-                                </div>
-
-                                <div className="xl:w-1/4 xl:mt-5">
-                                    <button className=" text-breadcrumbs-text border border-gray-200 xl:text-sm xl:font-medium rounded-3xl xl:pt-3 xl:pb-3 xl:pl-12 xl:pr-12"><i className="fa fa-book"></i><span className="ml-2">Business & Company</span></button>
-                                </div>
-
-
-                                <div className="xl:w-1/4 xl:mt-5">
-                                    <button className=" text-breadcrumbs-text border border-gray-200 xl:text-sm xl:font-medium rounded-3xl xl:pt-3 xl:pb-3 xl:pl-12 xl:pr-12"><i className="fa fa-book"></i><span className="ml-2">Business & Company</span></button>
-                                </div>
-
-                                <div className="xl:w-1/4 xl:mt-5">
-                                    <button className=" text-breadcrumbs-text border border-gray-200 xl:text-sm xl:font-medium rounded-3xl xl:pt-3 xl:pb-3 xl:pl-12 xl:pr-12"><i className="fa fa-book"></i><span className="ml-2">Business & Company</span></button>
-                                </div>
-
-                                <div className="xl:w-1/4 xl:mt-5">
-                                    <button className=" text-breadcrumbs-text border border-gray-200 xl:text-sm xl:font-medium rounded-3xl xl:pt-3 xl:pb-3 xl:pl-12 xl:pr-12"><i className="fa fa-book"></i><span className="ml-2">Business & Company</span></button>
-                                </div>
-
-
-                                <div className="xl:w-1/4 xl:mt-5">
-                                    <button className=" text-breadcrumbs-text border border-gray-200 xl:text-sm xl:font-medium rounded-3xl xl:pt-3 xl:pb-3 xl:pl-12 xl:pr-12"><i className="fa fa-book"></i><span className="ml-2">Business & Company</span></button>
-                                </div>
-
-
-                                <div className="xl:w-1/4 xl:mt-5">
-                                    <button className=" text-breadcrumbs-text border border-gray-200 xl:text-sm xl:font-medium rounded-3xl xl:pt-3 xl:pb-3 xl:pl-12 xl:pr-12"><i className="fa fa-book"></i><span className="ml-2">Business & Company</span></button>
-                                </div>
-
-
-                                <div className="xl:w-1/4 xl:mt-5">
-                                    <button className=" text-breadcrumbs-text border border-gray-200 xl:text-sm xl:font-medium rounded-3xl xl:pt-3 xl:pb-3 xl:pl-12 xl:pr-12"><i className="fa fa-book"></i><span className="ml-2">Business & Company</span></button>
-                                </div>
+                                {
+                                    courseSubCategoryHTML
+                                }
                             </div>
 
                         </div>
