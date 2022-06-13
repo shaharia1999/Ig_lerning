@@ -152,7 +152,7 @@ function Description() {
 
                         </div>
                         <div className="xl:w-10/12 xl:-ml-12">
-                            <h6 className=" text-sectionTitleColor text-3xl font-semibold xl:pr-24 xl:mt-8">
+                            <h6 className=" text-sectionTitleColor dark:text-white text-3xl font-semibold xl:pr-24 xl:mt-8">
                                 {courseInfo.course_title}
                             </h6>
                             <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-4">
@@ -181,13 +181,13 @@ function Description() {
                     </div>
                     <div className="flex flex-wrap xl:mt-9">
                         <div className="xl:w-full">
-                            <h6 className="text-sectionTitleColor text-3xl font-semibold">
+                            <h6 className="text-sectionTitleColor dark:text-white text-3xl font-semibold">
                                 Description
                             </h6>
                             <h6 className="xl:text-xs xl:font-light text-breadcrumbs-text xl:mt-5 xl:leading-5 xl:pr-24">
                                 {courseInfo.course_description}
                             </h6>
-                            <h6 className="text-sectionTitleColor xl:text-xl font-semibold xl:mt-5 xl:mb-5">
+                            <h6 className="text-sectionTitleColor dark:text-white xl:text-xl font-semibold xl:mt-5 xl:mb-5">
                                 What will you learn:
                             </h6>
                             {CourseLearnInfo.map((course_learn_info, index) => (
@@ -200,7 +200,7 @@ function Description() {
                                     </div>
                                     <div
                                         className="xl:w-11/12 xl:-ml-14">
-                                        <h6>{course_learn_info.course_learn_question}</h6>
+                                        <h6 className="dark:text-white">{course_learn_info.course_learn_question}</h6>
                                         <h6 className="xl:text-xs xl:font-light text-breadcrumbs-text xl:mt-1 xl:mb-4 xl:leading-5 xl:pr-24">
                                             {course_learn_info.course_learn_answer}
                                         </h6>

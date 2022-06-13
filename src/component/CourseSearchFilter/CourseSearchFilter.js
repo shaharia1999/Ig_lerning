@@ -8,7 +8,7 @@ import CertificateIcon from "../../asset/images/icon/icon_certificate.png";
 import LoveIcon from "../../asset/images/icon/love-icon.png";
 import ShareIcon from "../../asset/images/icon/icon_share.png";
 import Play from "../../asset/images/icon/play.png";
-import CourseLogo from "../../asset/images/logo/course-logo.png";
+import CourseLogo from "../../asset/images/logo/course-logo.svg";
 import MyVideo from "../../asset/video/mov_bbb.mp4";
 import 'tw-elements';
 import StarRatings from 'react-star-ratings';

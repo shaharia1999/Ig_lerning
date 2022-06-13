@@ -5,7 +5,7 @@ import CertificateIcon from "../../../asset/images/icon/icon_certificate.png";
 import LoveIcon from "../../../asset/images/icon/love-icon.png";
 import ShareIcon from "../../../asset/images/icon/icon_share.png";
 import Play from "../../../asset/images/icon/play.png";
-import CourseLogo from "../../../asset/images/logo/course-logo.png";
+import CourseLogo from "../../../asset/images/logo/course-logo.svg";
 import MyVideo from "../../../asset/video/mov_bbb.mp4"
 import 'tw-elements';
 import Slider from 'react-slick';
@@ -19,7 +19,7 @@ function MostPopularCourse() {
     return (
         <Fragment>
             <div className="container my-12">
-                <h4 className="text-4xl	font-semibold text-sectionTitleColor ml-3">Most popular course (100) </h4>
+                <h4 className="text-4xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Most popular course (100) </h4>
 
                 <div className="lg:mt-6 -mx-1 lg:-mx-4">
                     <Slider
@@ -58,7 +58,7 @@ function MostPopularCourse() {
                                         <div className="w-4/5">
                                             <a href="!#">
                                                 <div className="text-lg absolute top-0 text-white mt-5">
-                                                    <h6 className="font-medium text-lg text-white">sdhjb sdfhbja asufhba</h6>
+                                                    <h6 className="font-medium text-lg text-white">ABC Learning Center</h6>
                                                     <h6 className="font-light text-base text-white">40 min</h6>
 
                                                     <img className="xl:h-36 ml-8" src={Play} alt="" />
@@ -68,16 +68,16 @@ function MostPopularCourse() {
                                     </div>
                                 </div>
                                 <div className="relative px-4 -mt-16">
-                                    <div className="bg-white p-3 rounded-lg shadow-lg">
+                                    <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg dark:shadow-xl">
                                         <div className="flex flex-wrap">
                                             <div className="w-4/5">
-                                                <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">
-                                                    retergerg regerge
+                                                <h4 className="mt-1 xl:text-base xl:font-medium text leading-tight text-CourseTitle dark:text-white">
+                                                    React Complete Guide
                                                 </h4>
                                             </div>
                                             <div className="w-1/5">
                                                 <button
-                                                    className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white lg:pl-3 lg:pr-3 lg:pt-1 lg:pb-1 rounded-md">Live
+                                                    className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white lg:pl-3 lg:pr-3 lg:pt-1 lg:pb-0.5 rounded-sm">LIVE
                                                 </button>
                                             </div>
                                         </div>
@@ -85,7 +85,7 @@ function MostPopularCourse() {
                                         <div className="flex flex-wrap">
                                             <div className="w-2/3">
                                                 <div className="flex sm:justify-center xl:justify-start">
-                                                    <span className="text-gray-600 text-sm">77 Participients</span>
+                                                    <span className="text-gray-600 dark:text-gray-500 text-sm">77 Participients</span>
                                                 </div>
                                             </div>
                                             <div className="w-1/3">
@@ -102,7 +102,7 @@ function MostPopularCourse() {
                                             <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                             <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                             <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                            <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">( 4.5
+                                            <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des dark:text-gray-500">( 4.5
                                                 )</h6>
                                         </ul>
 
@@ -118,7 +118,7 @@ function MostPopularCourse() {
                                                 <div
                                                     className="flex sm:justify-center xl:justify-start -mt-3 right-0 absolute">
                                                     <button
-                                                        className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-md">
+                                                        className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-1 lg:pr-1 lg:pt-1 lg:pb-1 xl:mr-1 rounded-sm">
                                                         <img className="px-1 h-3 w-5" src={LoveIcon} alt="" /></button>
                                                     <button
                                                         className="text-sm font-extralight leading-tight bg-maincolor text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-sm">Enroll
@@ -153,7 +153,7 @@ function MostPopularCourse() {
                                         <div className="w-4/5">
                                             <a href="!#">
                                                 <div className="text-lg absolute top-0 text-white mt-5">
-                                                    <h6 className="font-medium text-lg text-white">sdhjb sdfhbja asufhba</h6>
+                                                    <h6 className="font-medium text-lg text-white">ABC Learning Center</h6>
                                                     <h6 className="font-light text-base text-white">40 min</h6>
 
                                                     <img className="xl:h-36 ml-8" src={Play} alt="" />
@@ -163,16 +163,16 @@ function MostPopularCourse() {
                                     </div>
                                 </div>
                                 <div className="relative px-4 -mt-16">
-                                    <div className="bg-white p-3 rounded-lg shadow-lg">
+                                    <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg dark:shadow-xl">
                                         <div className="flex flex-wrap">
                                             <div className="w-4/5">
-                                                <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">
-                                                    retergerg regerge
+                                                <h4 className="mt-1 xl:text-base xl:font-medium text leading-tight text-CourseTitle dark:text-white">
+                                                    React Complete Guide
                                                 </h4>
                                             </div>
                                             <div className="w-1/5">
                                                 <button
-                                                    className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white lg:pl-3 lg:pr-3 lg:pt-1 lg:pb-1 rounded-md">Live
+                                                    className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white lg:pl-3 lg:pr-3 lg:pt-1 lg:pb-0.5 rounded-sm">LIVE
                                                 </button>
                                             </div>
                                         </div>
@@ -180,7 +180,7 @@ function MostPopularCourse() {
                                         <div className="flex flex-wrap">
                                             <div className="w-2/3">
                                                 <div className="flex sm:justify-center xl:justify-start">
-                                                    <span className="text-gray-600 text-sm">77 Participients</span>
+                                                    <span className="text-gray-600 dark:text-gray-500 text-sm">77 Participients</span>
                                                 </div>
                                             </div>
                                             <div className="w-1/3">
@@ -197,7 +197,7 @@ function MostPopularCourse() {
                                             <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                             <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                             <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                            <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">( 4.5
+                                            <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des dark:text-gray-500">( 4.5
                                                 )</h6>
                                         </ul>
 
@@ -213,7 +213,7 @@ function MostPopularCourse() {
                                                 <div
                                                     className="flex sm:justify-center xl:justify-start -mt-3 right-0 absolute">
                                                     <button
-                                                        className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-md">
+                                                        className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-1 lg:pr-1 lg:pt-1 lg:pb-1 xl:mr-1 rounded-sm">
                                                         <img className="px-1 h-3 w-5" src={LoveIcon} alt="" /></button>
                                                     <button
                                                         className="text-sm font-extralight leading-tight bg-maincolor text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-sm">Enroll
@@ -248,7 +248,7 @@ function MostPopularCourse() {
                                         <div className="w-4/5">
                                             <a href="!#">
                                                 <div className="text-lg absolute top-0 text-white mt-5">
-                                                    <h6 className="font-medium text-lg text-white">sdhjb sdfhbja asufhba</h6>
+                                                    <h6 className="font-medium text-lg text-white">ABC Learning Center</h6>
                                                     <h6 className="font-light text-base text-white">40 min</h6>
 
                                                     <img className="xl:h-36 ml-8" src={Play} alt="" />
@@ -258,16 +258,16 @@ function MostPopularCourse() {
                                     </div>
                                 </div>
                                 <div className="relative px-4 -mt-16">
-                                    <div className="bg-white p-3 rounded-lg shadow-lg">
+                                    <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg dark:shadow-xl">
                                         <div className="flex flex-wrap">
                                             <div className="w-4/5">
-                                                <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">
-                                                    retergerg regerge
+                                                <h4 className="mt-1 xl:text-base xl:font-medium text leading-tight text-CourseTitle dark:text-white">
+                                                    React Complete Guide
                                                 </h4>
                                             </div>
                                             <div className="w-1/5">
                                                 <button
-                                                    className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white lg:pl-3 lg:pr-3 lg:pt-1 lg:pb-1 rounded-md">Live
+                                                    className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white lg:pl-3 lg:pr-3 lg:pt-1 lg:pb-0.5 rounded-sm">LIVE
                                                 </button>
                                             </div>
                                         </div>
@@ -275,7 +275,7 @@ function MostPopularCourse() {
                                         <div className="flex flex-wrap">
                                             <div className="w-2/3">
                                                 <div className="flex sm:justify-center xl:justify-start">
-                                                    <span className="text-gray-600 text-sm">77 Participients</span>
+                                                    <span className="text-gray-600 dark:text-gray-500 text-sm">77 Participients</span>
                                                 </div>
                                             </div>
                                             <div className="w-1/3">
@@ -292,7 +292,7 @@ function MostPopularCourse() {
                                             <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                             <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                             <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                            <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">( 4.5
+                                            <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des dark:text-gray-500">( 4.5
                                                 )</h6>
                                         </ul>
 
@@ -308,7 +308,7 @@ function MostPopularCourse() {
                                                 <div
                                                     className="flex sm:justify-center xl:justify-start -mt-3 right-0 absolute">
                                                     <button
-                                                        className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-md">
+                                                        className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-1 lg:pr-1 lg:pt-1 lg:pb-1 xl:mr-1 rounded-sm">
                                                         <img className="px-1 h-3 w-5" src={LoveIcon} alt="" /></button>
                                                     <button
                                                         className="text-sm font-extralight leading-tight bg-maincolor text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-sm">Enroll
@@ -343,7 +343,7 @@ function MostPopularCourse() {
                                         <div className="w-4/5">
                                             <a href="!#">
                                                 <div className="text-lg absolute top-0 text-white mt-5">
-                                                    <h6 className="font-medium text-lg text-white">sdhjb sdfhbja asufhba</h6>
+                                                    <h6 className="font-medium text-lg text-white">ABC Learning Center</h6>
                                                     <h6 className="font-light text-base text-white">40 min</h6>
 
                                                     <img className="xl:h-36 ml-8" src={Play} alt="" />
@@ -353,16 +353,16 @@ function MostPopularCourse() {
                                     </div>
                                 </div>
                                 <div className="relative px-4 -mt-16">
-                                    <div className="bg-white p-3 rounded-lg shadow-lg">
+                                    <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg dark:shadow-xl">
                                         <div className="flex flex-wrap">
                                             <div className="w-4/5">
-                                                <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">
-                                                    retergerg regerge
+                                                <h4 className="mt-1 xl:text-base xl:font-medium text leading-tight text-CourseTitle dark:text-white">
+                                                    React Complete Guide
                                                 </h4>
                                             </div>
                                             <div className="w-1/5">
                                                 <button
-                                                    className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white lg:pl-3 lg:pr-3 lg:pt-1 lg:pb-1 rounded-md">Live
+                                                    className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white lg:pl-3 lg:pr-3 lg:pt-1 lg:pb-0.5 rounded-sm">LIVE
                                                 </button>
                                             </div>
                                         </div>
@@ -370,7 +370,7 @@ function MostPopularCourse() {
                                         <div className="flex flex-wrap">
                                             <div className="w-2/3">
                                                 <div className="flex sm:justify-center xl:justify-start">
-                                                    <span className="text-gray-600 text-sm">77 Participients</span>
+                                                    <span className="text-gray-600 dark:text-gray-500 text-sm">77 Participients</span>
                                                 </div>
                                             </div>
                                             <div className="w-1/3">
@@ -387,7 +387,7 @@ function MostPopularCourse() {
                                             <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                             <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                             <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                            <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">( 4.5
+                                            <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des dark:text-gray-500">( 4.5
                                                 )</h6>
                                         </ul>
 
@@ -403,7 +403,7 @@ function MostPopularCourse() {
                                                 <div
                                                     className="flex sm:justify-center xl:justify-start -mt-3 right-0 absolute">
                                                     <button
-                                                        className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-md">
+                                                        className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-1 lg:pr-1 lg:pt-1 lg:pb-1 xl:mr-1 rounded-sm">
                                                         <img className="px-1 h-3 w-5" src={LoveIcon} alt="" /></button>
                                                     <button
                                                         className="text-sm font-extralight leading-tight bg-maincolor text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-sm">Enroll
@@ -438,7 +438,7 @@ function MostPopularCourse() {
                                         <div className="w-4/5">
                                             <a href="!#">
                                                 <div className="text-lg absolute top-0 text-white mt-5">
-                                                    <h6 className="font-medium text-lg text-white">sdhjb sdfhbja asufhba</h6>
+                                                    <h6 className="font-medium text-lg text-white">ABC Learning Center</h6>
                                                     <h6 className="font-light text-base text-white">40 min</h6>
 
                                                     <img className="xl:h-36 ml-8" src={Play} alt="" />
@@ -448,16 +448,16 @@ function MostPopularCourse() {
                                     </div>
                                 </div>
                                 <div className="relative px-4 -mt-16">
-                                    <div className="bg-white p-3 rounded-lg shadow-lg">
+                                    <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg dark:shadow-xl">
                                         <div className="flex flex-wrap">
                                             <div className="w-4/5">
-                                                <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">
-                                                    retergerg regerge
+                                                <h4 className="mt-1 xl:text-base xl:font-medium text leading-tight text-CourseTitle dark:text-white">
+                                                    React Complete Guide
                                                 </h4>
                                             </div>
                                             <div className="w-1/5">
                                                 <button
-                                                    className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white lg:pl-3 lg:pr-3 lg:pt-1 lg:pb-1 rounded-md">Live
+                                                    className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white lg:pl-3 lg:pr-3 lg:pt-1 lg:pb-0.5 rounded-sm">LIVE
                                                 </button>
                                             </div>
                                         </div>
@@ -465,7 +465,7 @@ function MostPopularCourse() {
                                         <div className="flex flex-wrap">
                                             <div className="w-2/3">
                                                 <div className="flex sm:justify-center xl:justify-start">
-                                                    <span className="text-gray-600 text-sm">77 Participients</span>
+                                                    <span className="text-gray-600 dark:text-gray-500 text-sm">77 Participients</span>
                                                 </div>
                                             </div>
                                             <div className="w-1/3">
@@ -482,7 +482,7 @@ function MostPopularCourse() {
                                             <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                             <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                             <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                            <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">( 4.5
+                                            <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des dark:text-gray-500">( 4.5
                                                 )</h6>
                                         </ul>
 
@@ -498,7 +498,7 @@ function MostPopularCourse() {
                                                 <div
                                                     className="flex sm:justify-center xl:justify-start -mt-3 right-0 absolute">
                                                     <button
-                                                        className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-md">
+                                                        className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-1 lg:pr-1 lg:pt-1 lg:pb-1 xl:mr-1 rounded-sm">
                                                         <img className="px-1 h-3 w-5" src={LoveIcon} alt="" /></button>
                                                     <button
                                                         className="text-sm font-extralight leading-tight bg-maincolor text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-sm">Enroll

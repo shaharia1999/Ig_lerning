@@ -22,7 +22,7 @@ function Lessons() {
                 <div className="xl:ml-32">
                     <div className="flex flex-wrap xl:mt-9 xl:mb-16">
                         <div className="xl:w-11/12">
-                            <h6 className="text-sectionTitleColor text-3xl font-semibold xl:mb-8">
+                            <h6 className="text-sectionTitleColor dark:text-white text-3xl font-semibold xl:mb-8">
                                 Lessons
                             </h6>
 
@@ -90,7 +90,7 @@ function Lessons() {
                 <div className="xl:ml-32">
                     <div className="flex flex-wrap xl:mt-9 xl:mb-16">
                         <div className="xl:w-11/12">
-                            <h6 className="text-sectionTitleColor text-3xl font-semibold xl:mb-8">Lessons</h6>
+                            <h6 className="text-sectionTitleColor dark:text-white text-3xl font-semibold xl:mb-8">Lessons</h6>
                             <div className="bg-white icon-select shadow mt-3 rounded-lg">
                                 <Accordion className="rounded m-0" open={open === 1} onClick={() => handleOpen(1)}>
                                     <AccordionHeader className="flex pr-4"><img className="h-10 w-10 ml-4 rounded-md" src={courseLessonImg} alt="" />

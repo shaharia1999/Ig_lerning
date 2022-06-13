@@ -13,9 +13,9 @@ function OurMission() {
 
                     <div className="xl:w-1/2 w-full xl:pr-24">
                         <div className="xl:p-6">
-                            <p className="text-about-text1 xl:text-4xl xl:mb-6 xl:font-semibold">Our Mission</p>
+                            <p className="text-about-text1 dark:text-white xl:text-4xl xl:mb-6 xl:font-semibold">Our Mission</p>
                             <hr className=" bg-maincolor w-28 border-2 border-maincolor" />
-                            <p className="text-about-text1 xl:text-2xl font-normal xl:mt-5">Our mission is to make trust a central part of the digital transformation. We’re proud that over 60% of the Forbes Cloud 100 leans on G2 to increase revenue, manage and grow their reputation, and gain authentic customer insights.</p>
+                            <p className="text-about-text1 dark:text-gray-200 xl:text-2xl font-normal xl:mt-5">Our mission is to make trust a central part of the digital transformation. We’re proud that over 60% of the Forbes Cloud 100 leans on G2 to increase revenue, manage and grow their reputation, and gain authentic customer insights.</p>
                         </div>
                     </div>
 

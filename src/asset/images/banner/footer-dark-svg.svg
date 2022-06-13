@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="600" viewBox="0 0 1920 600">
+  <defs>
+    <clipPath id="clip-footer-dark-svg">
+      <rect width="1920" height="600"/>
+    </clipPath>
+  </defs>
+  <g id="footer-dark-svg" clip-path="url(#clip-footer-dark-svg)">
+    <path id="Path_1" data-name="Path 1" d="M0,0S898.457,298.329,1918.327,0s27.752,610.534,27.752,610.534H-48.565V0Z" fill="#2a2f38"/>
+  </g>
+</svg>

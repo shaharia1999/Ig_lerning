@@ -1,4 +1,3 @@
-
 .Banner1 {
   height: 900px !important;
   width: 100% !important;
@@ -27,7 +26,6 @@
   margin-top: -200px !important;
   padding: 0 !important;
 }
-
 
 .AboutContact {
   background-image: url('../src/asset/images/banner/about-contact.svg');
@@ -96,6 +94,18 @@
   padding: 0 !important;
 }
 
+.footer-dark-svg {
+  background-image: url('../src/asset/images/banner/footer-dark-svg.svg');
+  width: 100% !important;
+  height: 600px !important;
+  opacity: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .box-shadow-footer-logo {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
@@ -116,8 +126,6 @@
   height: 1200px !important;
 }
 
-
-
 .hover-overlay {
   position: absolute;
   background-color: #000000;
@@ -126,8 +134,6 @@
 .cat-container {
   opacity: .1;
 }
-
-
 
 .social-icons-login-fb {
   background-color: #E7F0FB;
@@ -145,13 +151,11 @@
 }
 
 
-
 /* About Page */
 
 .about-bg-height {
   width: 100% !important;
   height: 100vh !important;
-  background: #ffffff;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

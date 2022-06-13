@@ -70,6 +70,11 @@ module.exports = {
         400: '#fbbf24',
       },
 
+      // dark color 
+      'dark-color1':'#0C0E10',
+      'dark-color2':'#2A2F38',
+      'dark-color3':'#52575E',
+      'dark-color4':'#252729',
     },
     container: {
       center: true,
