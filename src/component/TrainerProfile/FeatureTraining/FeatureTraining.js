@@ -3,14 +3,16 @@ import 'tw-elements';
 import FeaturedTrainingImg from '../../../asset/images/team/featured-training1.png'
 import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";
+import { useParams } from "react-router-dom";
 
 function FeatureTraining() {
+    let {id} = useParams();
     const [featuredCourse, setFeaturedCourse] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         setIsLoading(true);
-        axios.get(`${ApiUrl.BaseUrl}api/course/teacher-public-profile-featured/5/`).then((response) => {
+        axios.get(`${ApiUrl.BaseUrl}api/course/teacher-public-profile-featured/${id}/`).then((response) => {
             if (response.data.error === false) {
                 setIsLoading(false)
                 setFeaturedCourse(response.data.data?.featured_info);

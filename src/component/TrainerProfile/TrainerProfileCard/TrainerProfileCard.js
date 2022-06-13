@@ -5,8 +5,10 @@ import YouTube from "../../../asset/images/icon/youtube.png";
 import Instagram from "../../../asset/images/icon/instagram.png";
 import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";
+import { useParams } from "react-router-dom";
 
 function TrainerProfileCard() {
+    let {id} = useParams(); 
     const [teacherProfileAbout, setTeacherProfileAbout] = useState([]);
     const [aboutInfo, setAboutInfo] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -17,7 +19,7 @@ function TrainerProfileCard() {
 
     useEffect(() => {
         setIsLoading(true)
-        axios.get(`${ApiUrl.BaseUrl}api/course/teacher-public-profile-about/5/`).then((response) => {
+        axios.get(`${ApiUrl.BaseUrl}api/course/teacher-public-profile-about/${id}/`).then((response) => {
             if (response.data.error === false) {
                 console.log('teacherProfileAbout = ', response.data.data);
                 setIsLoading(false);

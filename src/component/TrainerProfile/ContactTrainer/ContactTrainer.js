@@ -2,10 +2,10 @@ import React, { Fragment, useState, useEffect } from "react";
 import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";
 import { Link } from "react-router-dom";
-
+import { useParams } from "react-router-dom";
 
 function ContactTrainer() {
-
+    let {id} = useParams();
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
     const [email, setEmail] = useState('');
@@ -18,7 +18,8 @@ function ContactTrainer() {
             surname: surname,
             email: email,
             phone_number: phone_number,
-            message: message
+            message: message,
+            teacher_id: `${id}`
         }
         console.log('trainer data = ', trainer_contact_data);
         axios.post(`${ApiUrl.BaseUrl}api/course/contact-with-trainer/`, trainer_contact_data).then((response) => {

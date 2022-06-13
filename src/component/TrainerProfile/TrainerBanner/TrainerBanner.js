@@ -4,15 +4,17 @@ import FranckNicolas from '../../../asset/images/banner/Franck-Nicolas.png';
 import FeatureTraining from "../FeatureTraining/FeatureTraining";
 import TrainerProfileCard from "../TrainerProfileCard/TrainerProfileCard";
 import ApiUrl from "../../../Api/ApiUrl";
+import { useParams } from "react-router-dom";
 
 function TrainerBanner() {
+    let {id} = useParams();
     const [trainerProfileInfo, setTrainerProfileInfo] = useState([]);
     const [aboutInfo, setAboutInfo] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         setIsLoading(true)
-        axios.get(`${ApiUrl.BaseUrl}api/course/teacher-public-profile/5/`).then((response) => {
+        axios.get(`${ApiUrl.BaseUrl}api/course/teacher-public-profile/${id}/`).then((response) => {
             if (response.data.error === false) {
                 setTrainerProfileInfo(response.data.data)
                 setAboutInfo(response.data.data?.about_info[0])

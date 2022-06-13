@@ -3,13 +3,15 @@ import { FaUsers } from "react-icons/fa";
 import UpcommingImg from '../../../asset/images/team/up-comming.png';
 import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";
+import { useParams } from "react-router-dom";
 
 function UpCommingEvents() {
+    let {id} = useParams();
     const [upCommingEvent, setUpCommingEvent] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
         setIsLoading(true);
-        axios.get(`${ApiUrl.BaseUrl}api/course/teacher-public-profile-course-seminar/5/`).then((response) => {
+        axios.get(`${ApiUrl.BaseUrl}api/course/teacher-public-profile-course-seminar/${id}/`).then((response) => {
             if (response.data.error === false) {
                 console.log('seminar_info = ', response.data.data?.seminar_info);
                 setUpCommingEvent(response.data.data.seminar_info)

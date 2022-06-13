@@ -3,14 +3,16 @@ import Teacher from "../../../asset/images/course-teacher/teacher.jpg";
 import NewsFeedStage from "../../../asset/images/banner/news-feed-stage.png";
 import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";
+import { useParams } from "react-router-dom";
 
 function NewsFeed() {
+    let {id} = useParams();
     const [userInfo, setUserInfo] = useState([]);
     const [newsFeeds, setNewsFeed] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
         setIsLoading(true);
-        axios.get(`${ApiUrl.BaseUrl}api/course/teacher-public-profile-blog-post/5/`).then((response) => {
+        axios.get(`${ApiUrl.BaseUrl}api/course/teacher-public-profile-blog-post/${id}/`).then((response) => {
             if (response.data.error === false) {
                 setUserInfo(response.data.data)
                 console.log(response.data.data?.blog_post_info);
@@ -64,7 +66,7 @@ function NewsFeed() {
                         </div>
                         <div className="xl:w-9/12 xl:ml-3">
                             <h6 className=" text-sectionTitleColor text-xl font-semibold xl:mt-4">{userInfo.surname}</h6>
-                            <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-0">{news_feed.when_published}</h6>
+                            <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-0">{news_feed.when_published_blog_post}</h6>
                         </div>
                     </div>
                     <div className="xl:w-full xl:mt-3">

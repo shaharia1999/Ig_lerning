@@ -4,7 +4,7 @@ import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";
 import StarRatings from 'react-star-ratings';
 import { useParams } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 function Description() {
     let { id } = useParams();
     const [courseInfo, setCourseInfo] = useState([]);
@@ -132,7 +132,7 @@ function Description() {
                         <div className="xl:w-2/12">
                             <img
                                 className="xl:h-28 xl:mt-7 xl:w-28 rounded-full xl:border-4 xl:border-white xl:shadow-lg"
-                                src={ApiUrl.ImageBaseUrl + TeacherInfo.image}
+                                src={courseInfo.course_image}
                                 alt="teacher" />
                             {(() => {
                                 if (isFollow === true) {
@@ -156,7 +156,9 @@ function Description() {
                                 {courseInfo.course_title}
                             </h6>
                             <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-4">
+                                <Link to={`/trainer-profile/${TeacherInfo.id}`}>
                                 {TeacherInfo.username}   •   Trainer and Speaker
+                                </Link>
                             </h6>
                             <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">
                                 <div className="flex sm:justify-center xl:justify-start">
