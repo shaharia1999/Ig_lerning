@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState, useRef } from "react";
 import SpeedMeter from "../../../../asset/images/icon/icon_level.png";
 import CertificateIcon from "../../../../asset/images/icon/icon_certificate.png";
 import LoveIcon from "../../../../asset/images/icon/love-icon.png";
@@ -9,12 +9,83 @@ import CourseLogo from "../../../../asset/images/logo/course-logo.svg";
 import 'tw-elements';
 import axios from "axios";
 import StarRatings from 'react-star-ratings';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from "react-icons/md";
+
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <button
+            className={className}
+            style={{
+                ...style,
+                marginTop: "-20px",
+                right: "-45px",
+                opacity: "1",
+                display: "block",
+                background: "#ffffff",
+
+                boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                fontSize: "20px",
+                position: "absolute",
+                width: "40px",
+                height: "40px",
+                transform: "translate(0%, 0px)",
+                cursor: "pointer",
+                color: "transparent",
+                border: "none",
+                outline: "none",
+                borderRadius: "50px",
+            }}
+            onClick={onClick}
+        >
+            <span className="slide-arrow-font-next"><MdOutlineArrowForwardIos /></span>
+        </button>
+    );
+}
+
+function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <button
+            className={className}
+            style={{
+                ...style,
+                marginTop: "-20px",
+                left: "-45px",
+                opacity: "1",
+                display: "block",
+                background: "#ffffff",
+
+                boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                fontSize: "20px",
+                position: "absolute",
+                width: "40px",
+                height: "40px",
+                transform: "translate(0%, 0px)",
+                cursor: "pointer",
+                color: "transparent",
+                border: "none",
+                outline: "none",
+                borderRadius: "50px",
+            }}
+            onClick={onClick}
+        >
+            <span className="slide-arrow-font-previous"><MdOutlineArrowBackIos /></span>
+        </button>
+    );
+}
 
 function BusinessCompany() {
     const [subCategory, setSubCategory] = useState([]);
     const [recently_addedsubcategoryId, setSubcategoryID] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [course_isLoading, setCourseIsLoading] = useState(false);
+
+    const [nav9, setNav9] = useState();
+    const slider9 = useRef();
 
     useEffect(() => {
         setIsLoading(true);
@@ -613,11 +684,31 @@ function BusinessCompany() {
                         </div>
                     </div>
                     <div className="mt-4">
-                        <div className=" fade show active">
-                            <div className="flex flex-wrap -mx-1 lg:-mx-4">
-                                {
-                                    data_of_subcategory_course
-                                }
+                        <div className="fade show active">
+                            <div className="-mx-1 lg:-mx-4">
+                                <Slider
+                                    ref={(slider9) => setNav9(slider9)}
+                                    slidesToShow={4}
+                                    focusOnSelect={true}
+                                    dots={false}
+                                    adaptiveHeight={true}
+                                    infinite={true}
+                                    slidesToScroll={1}
+                                    loop={true}
+                                    speed={1000}
+                                    height={600}
+                                    autoplay={true}
+                                    autoplaySpeed={3000}
+                                    swipeToSlide={true}
+                                    rows={2}
+                                    nextArrow={<SampleNextArrow />}
+                                    prevArrow={<SamplePrevArrow />}
+                                >
+                                    {
+                                        data_of_subcategory_course
+                                    }
+                                </Slider>
+
                             </div>
                         </div>
                     </div>

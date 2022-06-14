@@ -152,6 +152,7 @@ function TopCategories() {
                             autoplaySpeed={1500}
                             swipeToSlide={true}
                             rows={2}
+                            arrows={false}
                         >
                             {
                                 Topcategory

@@ -59,12 +59,10 @@
 
 
 .nav-pills .nav-link-course {
-    background: #ffffff;
-    color: #000000!important;
+    /* color: #000000!important; */
     box-shadow: none;
 }
 .nav-pills .nav-link-course.active {
-    background: #ffffff;
     color: #D76E2D !important;
     border-top: none !important;
     border-left: none !important;
@@ -74,3 +72,5 @@
     border-width: 4px;
     border-radius: 0;
 }
+
+

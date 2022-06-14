@@ -12,6 +12,72 @@ import { Link } from "react-router-dom";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import {MdOutlineArrowBackIos, MdOutlineArrowForwardIos} from "react-icons/md";
+
+function SampleNextArrow(props) {
+    const {className, style, onClick} = props;
+    return (
+        <button
+            className={className}
+            style={{
+                ...style,
+                marginTop: "-20px",
+                right: "-45px",
+                opacity: "1",
+                display: "block",
+                background: "#ffffff",
+
+                boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                fontSize: "20px",
+                position: "absolute",
+                width: "40px",
+                height: "40px",
+                transform: "translate(0%, 0px)",
+                cursor: "pointer",
+                color: "transparent",
+                border: "none",
+                outline: "none",
+                borderRadius: "50px",
+            }}
+            onClick={onClick}
+        >
+            <span className="slide-arrow-font-next"><MdOutlineArrowForwardIos/></span>
+        </button>
+    );
+}
+
+function SamplePrevArrow(props) {
+    const {className, style, onClick} = props;
+    return (
+        <button
+            className={className}
+            style={{
+                ...style,
+                marginTop: "-20px",
+                left: "-45px",
+                opacity: "1",
+                display: "block",
+                background: "#ffffff",
+
+                boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                fontSize: "20px",
+                position: "absolute",
+                width: "40px",
+                height: "40px",
+                transform: "translate(0%, 0px)",
+                cursor: "pointer",
+                color: "transparent",
+                border: "none",
+                outline: "none",
+                borderRadius: "50px",
+            }}
+            onClick={onClick}
+        >
+            <span className="slide-arrow-font-previous"><MdOutlineArrowBackIos/></span>
+        </button>
+    );
+}
+
 
 function MostVisited() {
     const [mostvisited, setMostvisited] = useState([]);
@@ -312,7 +378,7 @@ function MostVisited() {
                             ref={(slider2) => setNav2(slider2)}
                             slidesToShow={3}
                             focusOnSelect={true}
-                            dots={true}
+                            dots={false}
                             adaptiveHeight={true}
                             infinite={true}
                             slidesToScroll={1}
@@ -322,6 +388,8 @@ function MostVisited() {
                             autoplay={true}
                             autoplaySpeed={1500}
                             swipeToSlide={true}
+                            nextArrow={<SampleNextArrow/>} 
+                            prevArrow= {<SamplePrevArrow/>}
                         >
 
                             {
