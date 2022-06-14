@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1187" viewBox="0 0 1920 1187">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="1920" height="1184" transform="translate(0 0.063)"/>
+    </clipPath>
+    <clipPath id="clip-ContactBannerBlack">
+      <rect width="1920" height="1187"/>
+    </clipPath>
+  </defs>
+  <g id="ContactBannerBlack" clip-path="url(#clip-ContactBannerBlack)">
+    <rect width="1920" height="1187" fill="#fff"/>
+    <g id="CheckoutPageBackground" transform="translate(0 -0.063)" clip-path="url(#clip-path)">
+      <path id="Path_1" data-name="Path 1" d="M0,0H1920V1184H0Z" transform="translate(0 0.063)" fill="#0c0e10"/>
+      <g id="Bg" transform="translate(0 0.012)">
+        <path id="Path_131" data-name="Path 131" d="M10763,220h.295l1920.883,1184.641H10763.291Z" transform="translate(-10763 -220)" fill="#2a2f38" opacity="0.15"/>
+      </g>
+    </g>
+  </g>
+</svg>

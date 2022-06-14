@@ -157,6 +157,7 @@ function ClientSays() {
                             autoplay={true}
                             autoplaySpeed={1500}
                             swipeToSlide={true}
+                            arrows={false}
                         >
                             {
                                 says_client_data
