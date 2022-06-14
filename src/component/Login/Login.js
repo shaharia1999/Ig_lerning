@@ -84,11 +84,11 @@ function Login() {
                                             <div className="mt-8 text-center">
                                                 <span className="font-normal text-client-section-des lg:text-base"> or Login using social media</span>
                                                 <ul className="flex flex-auto sm:justify-center xl:justify-center -mt-4">
-                                                    <button className="lg:p-3 mx-2 social-icons-login-fb rounded-full text-2xl font-semibold mt-9"><FaFacebookSquare className="text-facebook-color" /></button>
-                                                    <button className="lg:p-3 mx-2 social-icons-login-twitter rounded-full text-2xl font-semibold mt-9"><FaTwitter className="text-twitter-color" /></button>
-                                                    <button className="lg:p-3 mx-2 social-icons-login-google rounded-full text-2xl font-semibold mt-9"><FaGoogle className="text-google-color" /></button>
+                                                    <button className="xl:p-3 mx-2 social-icons-login-fb rounded-full text-2xl font-semibold mt-9"><FaFacebookSquare className="text-facebook-color" /></button>
+                                                    <button className="xl:p-3 mx-2 social-icons-login-twitter rounded-full text-2xl font-semibold mt-9"><FaTwitter className="text-twitter-color" /></button>
+                                                    <button className="xl:p-3 mx-2 social-icons-login-google rounded-full text-2xl font-semibold mt-9"><FaGoogle className="text-google-color" /></button>
                                                 </ul>
-                                                <div className="lg:mt-14">
+                                                <div className="xl:mt-14">
                                                     <span className="font-normal text-black lg:text-base"> Don't have an account? <span className="hover:underline"><Link to="/registration">Sign Up</Link></span></span>
                                                 </div>
                                             </div>

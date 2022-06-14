@@ -598,14 +598,14 @@ function CourseSearchFilter() {
                                 <div className="relative">
                                     <video type="video/mp4" muted
                                         loop className="w-full vid h-48 object-cover object-center rounded-lg shadow-md"
-                                        src={ApiUrl.ImageBaseUrl+course_filter_data?.course_information?.promotional_video}></video>
+                                        src={ApiUrl.ImageBaseUrl + course_filter_data?.course_information?.promotional_video}></video>
 
                                     <div className="flex flex-wrap">
                                         <div className="w-1/5">
                                             <a href="!#">
                                                 <div
-                                                    className="text-sm absolute top-0 left-2 rounded-full h-10 w-10 flex border-2 border-client-section-des flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
-                                                    <img className="h-10 w-10" src={ApiUrl.ImageBaseUrl+course_filter_data?.course_information?.channel_name?.channel_name_logo} alt="" />
+                                                    className="text-sm absolute top-0 left-2 h-10 rounded-full w-10 flex border-2 border-client-section-des flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                                                    <img className="h-10 rounded-full w-10" src={ApiUrl.ImageBaseUrl + course_filter_data?.course_information?.channel_name?.channel_name_logo} alt="" />
                                                 </div>
                                             </a>
                                         </div>
@@ -622,10 +622,10 @@ function CourseSearchFilter() {
                                     </div>
                                 </div>
                                 <div className="relative px-2 -mt-16">
-                                    <div className="bg-white p-3 rounded-lg shadow-lg">
+                                    <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg dark:shadow-xl">
                                         <div className="flex flex-wrap">
                                             <div className="w-full">
-                                                <h4 className="mt-1 text-sm font-semibold text leading-tight text-CourseTitle">
+                                                <h4 className="mt-1 text-sm font-medium text leading-tight text-CourseTitle dark:text-white">
                                                     {course_filter_data?.course_information?.course_title}
                                                 </h4>
                                             </div>
@@ -634,7 +634,7 @@ function CourseSearchFilter() {
                                         <div className="flex flex-wrap xl:mt-1">
                                             <div className="w-2/3">
                                                 <div className="flex sm:justify-center xl:justify-start">
-                                                    <span className="text-gray-600 text-xs">77 Participients</span>
+                                                    <span className="text-gray-600 text-xs dark:text-gray-500">77 Participients</span>
                                                 </div>
                                             </div>
                                             <div className="w-1/3">
@@ -645,14 +645,15 @@ function CourseSearchFilter() {
                                             </div>
                                         </div>
 
-                                        <ul className="flex sm:justify-center xl:justify-start xl:mt-1">
+                                        <ul className="flex sm:justify-center xl:justify-start">
                                             <StarRatings
                                                 rating={course_filter_data?.course_information?.avg_rating}
                                                 starDimension="15px"
-                                                starSpacing="4px"
+                                                starSpacing="2px"
                                                 starRatedColor="rgb(251, 191, 36)"
+                                                className="xl:mt-1"
                                             />
-                                            <h6 className="mb-4 mx-1 text-xs font-normal text-client-section-des">
+                                            <h6 className="mb-4 xl:mt-1.5 mx-1 text-xs font-normal text-client-section-des">
                                                 ({course_filter_data?.course_information?.avg_rating})
                                             </h6>
                                         </ul>
@@ -669,10 +670,10 @@ function CourseSearchFilter() {
                                                 <div
                                                     className="flex sm:justify-center xl:justify-start -mt-3 right-0 absolute">
                                                     <button
-                                                        className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-0 lg:pr-0 lg:pt-1 lg:pb-1 rounded-md">
+                                                        className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white xl:pl-0 xl:pr-0 xl:pt-1 xl:pb-1 xl:mr-1 rounded-sm">
                                                         <img className="xl:h-3 xl:w-3 mx-1" src={LoveIcon} alt="" /></button>
                                                     <button
-                                                        className="text-xs font-extralight bg-maincolor text-white lg:pl-1 lg:pr-1 lg:pt-0.5 lg:pb-0.5 rounded-sm">Enroll
+                                                        className="text-xs font-light bg-maincolor text-white xl:pl-1.5 xl:pr-1.5 xl:pt-0.5 xl:pb-0.5 rounded-sm">Enroll
                                                         Now
                                                     </button>
                                                 </div>
@@ -689,27 +690,27 @@ function CourseSearchFilter() {
             else if (courseList === true) {
                 return (
                     courseFilterData.map((course_filter_data1, course_filter_index1) => (
-                        <div key={course_filter_index1} className="my-1 px-1 bg-white p-3 rounded-lg shadow-lg xl:my-3 xl:px-1.5 w-full">
+                        <div key={course_filter_index1} className="my-1 px-1 bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg xl:my-3 xl:px-1.5 w-full">
                             <div className="wrapper flex antialiased">
                                 <div className="relative w-2/12">
                                     <video type="video/mp4" muted
                                         loop className="w-32 vid h-24 xl:ml-2 object-cover object-center rounded-lg shadow-md"
-                                        src={ApiUrl.ImageBaseUrl+course_filter_data1?.course_information?.promotional_video}></video>
+                                        src={ApiUrl.ImageBaseUrl + course_filter_data1?.course_information?.promotional_video}></video>
 
                                     <div className="flex flex-wrap">
                                         <div className="w-1/5">
                                             <a href="!#">
                                                 <div
                                                     className="text-sm absolute top-0 left-4 rounded-full h-5 w-5 flex border-2 border-client-section-des flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
-                                                    <img className="xl:h-5 xl:w-5" src={ApiUrl.ImageBaseUrl+course_filter_data1?.course_information?.channel_name?.channel_name_logo} alt="" />
+                                                    <img className="xl:h-5 xl:w-5" src={ApiUrl.ImageBaseUrl + course_filter_data1?.course_information?.channel_name?.channel_name_logo} alt="" />
                                                 </div>
                                             </a>
                                         </div>
                                         <div className="w-4/5">
                                             <a href="!#">
-                                                <div className="text-lg absolute top-0 text-white mt-3">
-                                                    <h6 className="font-medium xl:text-xs text-white xl:ml-1">{course_filter_data1?.course_information?.channel_name?.channel_name}</h6>
-                                                    <h6 className="font-light xl:text-xs text-white">{course_filter_data1?.course_information?.course_duration} min</h6>
+                                                <div className="text-lg absolute top-0 mt-3">
+                                                    <h6 className="font-medium xl:text-xs text-white dark:text-white xl:ml-1">{course_filter_data1?.course_information?.channel_name?.channel_name}</h6>
+                                                    <h6 className="font-light xl:text-xs text-white dark:text-white">{course_filter_data1?.course_information?.course_duration} min</h6>
                                                     <img className="xl:h-12 xl:ml-2 xl:-mt-6" src={Play} alt="" />
                                                 </div>
                                             </a>
@@ -720,8 +721,8 @@ function CourseSearchFilter() {
                                 <div className="w-6/12 xl:-ml-3">
                                     <div className="flex flex-wrap">
                                         <div className="w-full">
-                                            <h4 className="mt-1 xl:text-xl font-semibold text leading-tight text-CourseTitle">
-                                            {course_filter_data1?.course_information?.course_title}
+                                            <h4 className="mt-1 xl:text-lg font-semibold text leading-tight text-CourseTitle dark:text-white">
+                                                {course_filter_data1?.course_information?.course_title}
                                             </h4>
                                         </div>
                                     </div>
@@ -729,7 +730,7 @@ function CourseSearchFilter() {
                                     <div className="flex flex-wrap xl:mt-1.5 xl:mb-1.5">
                                         <div className="w-full">
                                             <div className="flex sm:justify-center xl:justify-start">
-                                                <span className="text-gray-600 text-sm">77 Participients</span>
+                                                <span className="text-gray-600 text-sm dark:text-gray-500">77 Participients</span>
                                             </div>
                                         </div>
                                     </div>
@@ -801,26 +802,29 @@ function CourseSearchFilter() {
         <Fragment>
             <div>
                 <div className="container">
-                    <h6 className="text-center xl:mt-10 xl:text-2xl text-maingray xl:font-semibold">Result of your Research >> “Learn Big Data”</h6>
+                    <h6 className="text-center xl:mt-10 xl:text-2xl text-maingray dark:text-white xl:font-medium xl:mb-4">Result of your Research >> “Learn Big Data”</h6>
+                </div >
+
+                <div className="container-fluid">
                     <div className="flex flex-wrap">
-                        <div className="xl:w-full">
-
-                            <div className="flex flex-wrap xl:mt-6">
-                                {
-                                    courseSubCategoryHTML
-                                }
+                        <div className="xl:w-full bg-white dark:bg-dark-color2">
+                            <div className="container">
+                                <div className="flex flex-wrap xl:mt-6 xl:mb-10">
+                                    {
+                                        courseSubCategoryHTML
+                                    }
+                                </div>
                             </div>
-
                         </div>
                     </div>
                 </div >
 
 
-                <div className="bg-gray-100 xl:mt-10 xl:pt-3 xl:pb-3">
+                <div className="bg-gray-100 dark:bg-dark-color3 xl:pt-3 xl:pb-3">
                     <div className="container">
                         <div className="flex flex-wrap">
                             <div className="xl:w-1/2">
-                                <h6 className=" text-maingray text-xl font-semibold xl:pl-10">768 Result for “Learn Big Data”</h6>
+                                <h6 className=" text-maingray dark:text-white text-xl xl:mt-2 font-medium xl:pl-10">768 Result for “Learn Big Data”</h6>
                             </div>
                             <div className="xl:w-1/2 flex justify-end">
 
@@ -849,14 +853,14 @@ function CourseSearchFilter() {
                                             <BsFillGrid3X3GapFill
                                                 value={courseList}
                                                 onClick={() => setCourseList(true)}
-                                                className=" text-3xl float-right xl:ml-4 xl:mt-2" />
+                                                className=" text-3xl cursor-pointer float-right xl:ml-4 xl:mt-2" />
                                         )
                                     } else if (courseList === true) {
                                         return (
                                             <FaThList
                                                 value={courseList}
                                                 onClick={() => setCourseList(false)}
-                                                className=" text-3xl float-right xl:ml-4 xl:mt-2" />
+                                                className="text-3xl cursor-pointer float-right xl:ml-4 xl:mt-2" />
                                         )
                                     }
                                 })()}
@@ -868,9 +872,9 @@ function CourseSearchFilter() {
                 <div className="container">
                     <div className="flex flex-wrap xl:mt-10">
                         <div className="xl:w-4/12 xl:pr-10">
-                            <div className="flex flex-wrap bg-white rounded-xl shadow-search-filter border-none xl:pl-7 xl:pr-6 w-full xl:mt-6 xl:pb-8">
+                            <div className="flex flex-wrap bg-white dark:bg-dark-color2 rounded-xl shadow-search-filter border-none xl:pl-7 xl:pr-6 w-full xl:mt-6 xl:pb-8">
                                 <div className="xl:w-full">
-                                    <h6 className="xl:text-2xl xl:mt-5 xl:font-bold text-maingray">Course Filters</h6>
+                                    <h6 className="xl:text-2xl xl:mt-5 xl:font-bold text-maingray dark:text-white">Course Filters</h6>
                                 </div>
 
                                 <div className="xl:w-full">

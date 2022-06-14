@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 import MainLogo from "../../../asset/images/logo/main-logo.svg";
+import BlackMainLogo from "../../../asset/images/logo/black-iglearn-main-logo.svg";
 import ReactFlagsSelect from "react-flags-select";
 import MoonImg from "../../../asset/images/icon/moon.svg";
 import SunImg from "../../../asset/images/icon/sun.svg";
@@ -10,7 +11,7 @@ function NavBarTop() {
     const onSelect = (code) => setSelected(code);
 
     const userTheme = localStorage.getItem("theme");
-    if(userTheme === null){
+    if (userTheme === null) {
         localStorage.setItem("theme", "light");
     }
 
@@ -134,12 +135,90 @@ function NavBarTop() {
                             <Link className="md:p-4 block font-light text-lg text-white" to="/about"><span className="hover:border-b-4 hover:pb-2 hover:border-white">About Us</span> <span className="mx-4 font-light text-white text-xl">|</span></Link>
                         </li>
                         <li>
-                            <button className="outline outline-2 hover:bg-white lg:mt-3 lg:mr-12 float-right h-12 w-52 rounded-3xl ml-auto text-base font-light text-white hover:text-maincolor hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"> <i className="fa fa-graduation-cap mr-1"></i> I want to Teach</button>
+                            {/* <button className="outline outline-2 hover:bg-white lg:mt-3 lg:mr-12 float-right h-12 w-52 rounded-3xl ml-auto text-base font-light text-white hover:text-maincolor hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"> <i className="fa fa-graduation-cap mr-1"></i> I want to Teach</button> */}
+                            <div class="dropdown dropdown-end">
+                                <label tabindex="0" className="">
+                                    <button className="outline outline-2 hover:bg-white xl:mt-3 xl:mr-12 float-right h-12 w-52 rounded-3xl ml-auto text-base font-light text-white hover:text-maincolor"> <i className="fa fa-graduation-cap mr-1"></i> I want to Teach</button>
+                                </label>
+                                <ul tabindex="0" className="mt-20 xl:-mr-10 justify-center p-8 shadow-lg menu menu-compact dropdown-content flex bg-base-100 rounded-box w-96">
+                                    <div className="h-4 w-4 bg-white xl:ml-40 rotate-45 xl:-mt-10 rounded-sm"></div>
+                                    <from className="flex flex-wrap xl:w-full">
+                                        <div className="xl:ml-16 xl:mt-6">
+                                            <img className="xl:h-24" src={BlackMainLogo} alt="" />
+                                        </div>
+                                        <h6 className="text-maingray xl:font-semibold xl:text-xl xl:-mt-2 xl:mb-5 xl:ml-20">Sign in to <span className="text-maincolor">igLearn</span></h6>
+                                        <div className="flex flex-wrap">
+                                            <div className="form-floating mb-3 xl:w-full ">
+                                                <input type="email" className="form-control bg-gray-100 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-clip-padding border-none rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingInput" placeholder="name@example.com" />
+                                                <label for="floatingInput" className="text-gray-700">Email address</label>
+                                            </div>
+                                            <div className="form-floating mb-3 xl:w-full">
+                                                <input type="password" className="form-control bg-gray-100 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-clip-padding border-none rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingPassword" placeholder="Password" />
+                                                <label for="floatingPassword" className="text-gray-700">Password</label>
+                                            </div>
+
+                                            <div className="flex justify-between items-center mb-6">
+                                                <div className="form-group form-check">
+                                                    <input type="checkbox"
+                                                        className="default:ring-8" />
+                                                    <label className="form-check-label inline-block font-light xl:text-sm mx-2" for="inlineCheckbox1"> Remember me</label>
+                                                </div>
+                                                <Link className="font-light xl:text-sm hover:underline p-2 float-right right-0 mr-0 flex" to="/forget-password">Forgot password</Link>
+                                            </div>
+
+                                            <div className="xl:w-44 flex xl:mt-5 btn-center1 xl:ml-20 bg-maincolor rounded-lg xl:pt-2 xl:pb-2">
+                                                <Link><button className="text-base xl:font-normal leading-tight text-white mx-2 h-8">Sign in</button></Link>
+                                            </div>
+                                        </div>
+                                    </from>
+                                    <h6 className="font-normal xl:mt-5 xl:ml-16 text-black xl:text-sm"> Don't have an account? <span className="hover:underline text-maincolor"><Link to="/registration">Sign Up</Link></span></h6>
+                                </ul>
+                            </div>
                         </li>
-                        <li>
-                            <button className="outline outline-2 hover:bg-white lg:mt-3 lg:mr-12 float-right h-12 w-52 rounded-3xl ml-auto text-base font-light text-white hover:text-maincolor"> <i className="fa fa-book-reader mr-1"></i> I want to Learn</button>
+                        <li className="xl:mr-10">
+                            {/* <button className="outline outline-2 hover:bg-white lg:mt-3 lg:mr-12 float-right h-12 w-52 rounded-3xl ml-auto text-base font-light text-white hover:text-maincolor"> <i className="fa fa-book-reader mr-1"></i> I want to Learn</button> */}
+                            <div class="dropdown dropdown-end">
+                                <label tabindex="0" className="">
+                                    <button className="outline outline-2 hover:bg-white xl:mt-3 xl:mr-12 float-right h-12 w-52 rounded-3xl ml-auto text-base font-light text-white hover:text-maincolor"> <i className="fa fa-book-reader mr-1"></i> I want to Learn</button>
+                                </label>
+                                <ul tabindex="0" className="mt-20 xl:-mr-10 justify-center p-8 shadow-lg menu menu-compact dropdown-content flex bg-base-100 rounded-box w-96">
+                                    <div className="h-4 w-4 bg-white xl:ml-40 rotate-45 xl:-mt-10 rounded-sm"></div>
+                                    <from className="flex flex-wrap xl:w-full">
+                                        <div className="xl:ml-16 xl:mt-6">
+                                            <img className="xl:h-24" src={BlackMainLogo} alt="" />
+                                        </div>
+                                        <h6 className="text-maingray xl:font-semibold xl:text-xl xl:-mt-2 xl:mb-5 xl:ml-20">Sign in to <span className="text-maincolor">igLearn</span></h6>
+                                        <div className="flex flex-wrap">
+                                            <div className="form-floating mb-3 xl:w-full ">
+                                                <input type="email" className="form-control bg-gray-100 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-clip-padding border-none rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingInput" placeholder="name@example.com" />
+                                                <label for="floatingInput" className="text-gray-700">Email address</label>
+                                            </div>
+                                            <div className="form-floating mb-3 xl:w-full">
+                                                <input type="password" className="form-control bg-gray-100 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-clip-padding border-none rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingPassword" placeholder="Password" />
+                                                <label for="floatingPassword" className="text-gray-700">Password</label>
+                                            </div>
+
+                                            <div className="flex justify-between items-center mb-6">
+                                                <div className="form-group form-check">
+                                                    <input type="checkbox"
+                                                        className="default:ring-8" />
+                                                    <label className="form-check-label inline-block font-light xl:text-sm mx-2" for="inlineCheckbox1"> Remember me</label>
+                                                </div>
+                                                <Link className="font-light xl:text-sm hover:underline p-2 float-right right-0 mr-0 flex" to="/forget-password">Forgot password</Link>
+                                            </div>
+
+                                            <div className="xl:w-44 flex xl:mt-5 btn-center1 xl:ml-20 bg-maincolor rounded-lg xl:pt-2 xl:pb-2">
+                                                <Link><button className="text-base xl:font-normal leading-tight text-white mx-2 h-8">Sign in</button></Link>
+                                            </div>
+                                        </div>
+                                    </from>
+                                    <h6 className="font-normal xl:mt-5 xl:ml-16 text-black xl:text-sm"> Don't have an account? <span className="hover:underline text-maincolor"><Link to="/registration">Sign Up</Link></span></h6>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
+
+
                 </div>
             </nav>
 
