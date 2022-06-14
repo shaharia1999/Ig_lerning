@@ -84,6 +84,15 @@ function MyCourse() {
         })
     }
 
+    const LeaveRating = (course_review_id) => {
+        console.log(course_review_id);
+        axios.get(`${ApiUrl.BaseUrl}api/course/leave-a-rating/${course_review_id}`).then((response) => {
+            if (response.data.error === false) {
+                MyCourseDataLoad();
+            }
+        })
+    }
+
     const RemoveCourseForWhishList = (wishlist_id) => {
         console.log(wishlist_id);
         axios.get(`${ApiUrl.BaseUrl}api/course/student-course-wishlist-remove/${wishlist_id}`).then((response) => {
@@ -191,12 +200,12 @@ function MyCourse() {
                                     <div className="w-full">
                                         <div className="flex sm:justify-center xl:justify-start">
                                             <StarRatings
-                                                rating={my_course_list_data?.course_info?.avg_rating}
+                                                rating={my_course_list_data?.my_review?.rating}
                                                 starDimension="16px"
                                                 starSpacing="3px"
                                                 starRatedColor="rgb(251, 191, 36)"
                                             />
-                                            <span className="text-xs text-gray-300 xl:ml-3 xl:mt-1.5">({my_course_list_data?.course_info?.avg_rating})</span>
+                                            <span className="text-xs text-gray-300 xl:ml-3 xl:mt-1.5">({my_course_list_data?.my_review?.rating | 0 })</span>
                                         </div>
                                     </div>
                                 </div>
@@ -216,7 +225,11 @@ function MyCourse() {
                                                             onClick={() => ArchivedCourse(my_course_list_data?.course_enroll_id)}
                                                         >Archieve Course</Link></li>
                                                     <hr />
-                                                    <li><Link>Leave a Rating</Link></li>
+                                                    <li>
+                                                        <Link 
+                                                            onClick={() => LeaveRating(my_course_list_data?.my_review?.course_review_id)}
+                                                            >Leave a Rating</Link>
+                                                    </li>
                                                     <hr />
                                                     <li>
                                                         {(() => {
@@ -496,12 +509,12 @@ function MyCourse() {
                                     <div className="w-full">
                                         <div className="flex sm:justify-center xl:justify-start">
                                             <StarRatings
-                                                rating={archived_data?.course_info?.avg_rating}
+                                                rating={archived_data?.my_review?.rating}
                                                 starDimension="16px"
                                                 starSpacing="3px"
                                                 starRatedColor="rgb(251, 191, 36)"
                                             />
-                                            <span className="text-xs text-gray-300 xl:ml-3 xl:mt-1.5">({archived_data?.course_info?.avg_rating})</span>
+                                            <span className="text-xs text-gray-300 xl:ml-3 xl:mt-1.5">({archived_data?.my_review?.rating | 0 })</span>
                                         </div>
                                     </div>
                                 </div>
