@@ -7,12 +7,12 @@ class Opss extends Component {
             <Fragment>
                 <div className="container lg:mb-16">
                     <div className="text-center lg:mt-16">
-                        <p className="text-4xl	font-semibold text-sectionTitleColor leading-8">Opss....</p>
-                        <p className="text-xl font-semibold text-sectionTitleColor mt-4 leading-8">It looks like what you are searching for</p>
-                        <p className="text-xl font-semibold text-sectionTitleColor leading-8">is currently not available on our platform!</p>
+                        <p className="text-4xl	font-semibold text-sectionTitleColor dark:text-white leading-8">Opss....</p>
+                        <p className="text-xl font-semibold text-sectionTitleColor dark:text-white mt-4 leading-8">It looks like what you are searching for</p>
+                        <p className="text-xl font-semibold text-sectionTitleColor dark:text-white leading-8">is currently not available on our platform!</p>
 
                         <div className="justify-center object-center items-center content-center flex mt-8">
-                            <img className="h-96 w-auto" src={NoData}></img>
+                            <img className="h-96 w-auto" src={NoData} alt=""></img>
                         </div>
                     </div>
                 </div>
