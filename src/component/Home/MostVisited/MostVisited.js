@@ -207,8 +207,8 @@ function MostVisited() {
                                     <div className="w-4/5">
                                         <a href="!#">
                                             <div className="text-lg absolute top-0 mt-5">
-                                                <h6 className="font-medium text-lg text-black dark:text-white">{mostvisited_c.channel_name.channel_name}</h6>
-                                                <h6 className="font-light text-sm text-black dark:text-white">{mostvisited_c.course_duration} min</h6>
+                                                <h6 className="font-medium text-lg text-black dark:text-white">{mostvisited_c?.channel_name?.channel_name}</h6>
+                                                <h6 className="font-light text-sm text-black dark:text-white">{mostvisited_c?.course_duration} min</h6>
 
                                                 <img className="lg:h-36 ml-8" src={Play} alt="" />
                                             </div>
@@ -239,7 +239,7 @@ function MostVisited() {
                                         <div className="w-1/3">
                                             <div className="flex relative sm:justify-center xl:justify-start">
                                                 <span
-                                                    className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">$4.99</span>
+                                                    className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">${mostvisited_c?.course_price[0]?.new_price}</span>
                                             </div>
                                         </div>
                                     </div>
