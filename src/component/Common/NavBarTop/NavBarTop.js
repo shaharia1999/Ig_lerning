@@ -9,7 +9,6 @@ import axios from 'axios';
 import ApiUrl from '../../../Api/ApiUrl';
 
 function NavBarTop() {
-
     const [teacherEmail, setTeacherEmail] = useState('');
     const [teacherPassword, setTeacherPassword] = useState('');
     const [keep_login, setKeepLoggin] = useState(false)
@@ -22,7 +21,7 @@ function NavBarTop() {
             password: teacherPassword
         }
         axios.post(`${ApiUrl.BaseUrl}user-authentication/api/login/`, teacher_login_data).then((response) => {
-            if (response.data.error === false){
+            if (response.data.error === false) {
                 localStorage.setItem('access_token', response.data.access_token)
                 localStorage.setItem('refresh_token', response.data.refresh_token)
                 localStorage.setItem('user_data', JSON.stringify(response.data.data))
@@ -37,7 +36,7 @@ function NavBarTop() {
             password: studentPassword
         }
         axios.post(`${ApiUrl.BaseUrl}user-authentication/api/login/`, student_login_data).then((response) => {
-            if (response.data.error === false){
+            if (response.data.error === false) {
                 localStorage.setItem('access_token', response.data.access_token)
                 localStorage.setItem('refresh_token', response.data.refresh_token)
                 localStorage.setItem('user_data', JSON.stringify(response.data.data))
@@ -130,7 +129,6 @@ function NavBarTop() {
                             }
                         })()}
 
-
                     </div>
                 </div>
             </div>
@@ -179,31 +177,31 @@ function NavBarTop() {
                             <div class="dropdown dropdown-end">
                                 <label tabindex="0" className="">
                                     <button className="outline outline-2 hover:bg-white xl:mt-3 xl:mr-12 float-right h-12 w-52 rounded-3xl ml-auto text-base font-light text-white hover:text-maincolor">
-                                         <i className="fa fa-graduation-cap mr-1"></i>
-                                          I want to Teach
+                                        <i className="fa fa-graduation-cap mr-1"></i>
+                                        I want to Teach
                                     </button>
                                 </label>
-                                <ul tabindex="0" className="mt-20 xl:-mr-10 justify-center p-8 shadow-lg menu menu-compact dropdown-content flex bg-base-100 rounded-box w-96">
-                                    <div className="h-4 w-4 bg-white xl:ml-40 rotate-45 xl:-mt-10 rounded-sm"></div>
+                                <ul tabindex="0" className="mt-20 xl:-mr-10 justify-center dark:bg-dark-color1 p-8 shadow-lg menu menu-compact dropdown-content flex bg-base-100 rounded-box w-96">
+                                    <div className="h-4 w-4 bg-white dark:bg-dark-color1 xl:ml-40 rotate-45 xl:-mt-10 rounded-sm"></div>
                                     <form className="flex flex-wrap xl:w-full">
                                         <div className="xl:ml-16 xl:mt-6">
                                             <img className="xl:h-24" src={BlackMainLogo} alt="" />
                                         </div>
-                                        <h6 className="text-maingray xl:font-semibold xl:text-xl xl:-mt-2 xl:mb-5 xl:ml-20">Sign in to <span className="text-maincolor">igLearn</span></h6>
+                                        <h6 className="text-maingray xl:font-semibold xl:text-xl xl:-mt-2 xl:mb-5 xl:ml-20 dark:text-white">Sign in to <span className="text-maincolor">igLearn</span></h6>
                                         <div className="flex flex-wrap">
                                             <div className="form-floating mb-3 xl:w-full ">
-                                                <input type="email" 
+                                                <input type="email"
                                                     value={teacherEmail}
-                                                    onChange={(e) => setTeacherEmail(e.target.value)} 
-                                                    className="form-control bg-gray-100 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-clip-padding border-none rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingInput" placeholder="name@example.com" />
-                                                <label for="floatingInput" className="text-gray-700">Email address</label>
+                                                    onChange={(e) => setTeacherEmail(e.target.value)}
+                                                    className="form-control bg-gray-100 dark:bg-dark-color2 dark:text-white block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-clip-padding border-none rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingInput" placeholder="name@example.com" />
+                                                <label for="floatingInput" className="text-gray-700 dark:text-gray-400">Email address</label>
                                             </div>
                                             <div className="form-floating mb-3 xl:w-full">
-                                                <input type="password" 
+                                                <input type="password"
                                                     value={teacherPassword}
                                                     onChange={(e) => setTeacherPassword(e.target.value)}
-                                                    className="form-control bg-gray-100 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-clip-padding border-none rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingPassword" placeholder="Password" />
-                                                <label for="floatingPassword" className="text-gray-700">Password</label>
+                                                    className="form-control bg-gray-100 dark:bg-dark-color2 dark:text-white block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-clip-padding border-none rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingPassword" placeholder="Password" />
+                                                <label for="floatingPassword" className="text-gray-700 dark:text-gray-400">Password</label>
                                             </div>
 
                                             <div className="flex justify-between items-center mb-6">
@@ -212,9 +210,9 @@ function NavBarTop() {
                                                         value={keep_login}
                                                         onChange={e => setKeepLoggin(e.target.checked)}
                                                         className="default:ring-8" />
-                                                    <label className="form-check-label inline-block font-light xl:text-sm mx-2" for="inlineCheckbox1"> Remember me</label>
+                                                    <label className="form-check-label inline-block font-light xl:text-sm mx-2 dark:text-white" for="inlineCheckbox1"> Remember me</label>
                                                 </div>
-                                                <Link className="font-light xl:text-sm hover:underline p-2 float-right right-0 mr-0 flex" to="/forget-password">Forgot password</Link>
+                                                <Link className="font-light xl:text-sm hover:underline p-2 float-right right-0 mr-0 flex dark:text-white" to="/forget-password">Forgot password</Link>
                                             </div>
 
                                             <div className="xl:w-44 flex xl:mt-5 btn-center1 xl:ml-20 bg-maincolor rounded-lg xl:pt-2 xl:pb-2">
@@ -226,7 +224,7 @@ function NavBarTop() {
                                             </div>
                                         </div>
                                     </form>
-                                    <h6 className="font-normal xl:mt-5 xl:ml-16 text-black xl:text-sm"> Don't have an account? <span className="hover:underline text-maincolor"><Link to="/registration">Sign Up</Link></span></h6>
+                                    <h6 className="font-normal xl:mt-5 xl:ml-16 text-black xl:text-sm dark:text-white"> Don't have an account? <span className="hover:underline text-maincolor"><Link to="/registration">Sign Up</Link></span></h6>
                                 </ul>
                             </div>
                         </li>
@@ -236,27 +234,27 @@ function NavBarTop() {
                                 <label tabindex="0" className="">
                                     <button className="outline outline-2 hover:bg-white xl:mt-3 xl:mr-12 float-right h-12 w-52 rounded-3xl ml-auto text-base font-light text-white hover:text-maincolor"> <i className="fa fa-book-reader mr-1"></i> I want to Learn</button>
                                 </label>
-                                <ul tabindex="0" className="mt-20 xl:-mr-10 justify-center p-8 shadow-lg menu menu-compact dropdown-content flex bg-base-100 rounded-box w-96">
-                                    <div className="h-4 w-4 bg-white xl:ml-40 rotate-45 xl:-mt-10 rounded-sm"></div>
+                                <ul tabindex="0" className="mt-20 xl:-mr-10 justify-center p-8 dark:bg-dark-color1 shadow-lg menu menu-compact dropdown-content flex bg-base-100 rounded-box w-96">
+                                    <div className="h-4 w-4 bg-white dark:bg-dark-color1 xl:ml-40 rotate-45 xl:-mt-10 rounded-sm"></div>
                                     <form className="flex flex-wrap xl:w-full">
                                         <div className="xl:ml-16 xl:mt-6">
                                             <img className="xl:h-24" src={BlackMainLogo} alt="" />
                                         </div>
-                                        <h6 className="text-maingray xl:font-semibold xl:text-xl xl:-mt-2 xl:mb-5 xl:ml-20">Sign in to <span className="text-maincolor">igLearn</span></h6>
+                                        <h6 className="text-maingray xl:font-semibold xl:text-xl xl:-mt-2 xl:mb-5 xl:ml-20 dark:text-white">Sign in to <span className="text-maincolor">igLearn</span></h6>
                                         <div className="flex flex-wrap">
                                             <div className="form-floating mb-3 xl:w-full ">
-                                                <input type="email" 
+                                                <input type="email"
                                                     value={studentEmail}
-                                                    onChange={(e)=> setStudentEmail(e.target.value)}
-                                                    className="form-control bg-gray-100 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-clip-padding border-none rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingInput" placeholder="name@example.com" />
-                                                <label for="floatingInput" className="text-gray-700">Email address</label>
+                                                    onChange={(e) => setStudentEmail(e.target.value)}
+                                                    className="form-control bg-gray-100 dark:bg-dark-color2 block w-full px-3 py-1.5 text-base font-normal text-gray-700 dark:text-white bg-clip-padding border-none rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingInput" placeholder="name@example.com" />
+                                                <label for="floatingInput" className="text-gray-700 dark:text-gray-400">Email address</label>
                                             </div>
                                             <div className="form-floating mb-3 xl:w-full">
-                                                <input type="password" 
+                                                <input type="password"
                                                     value={studentPassword}
-                                                    onChange={(e)=> setStudentPassword(e.target.value)}
-                                                    className="form-control bg-gray-100 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-clip-padding border-none rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingPassword" placeholder="Password" />
-                                                <label for="floatingPassword" className="text-gray-700">Password</label>
+                                                    onChange={(e) => setStudentPassword(e.target.value)}
+                                                    className="form-control bg-gray-100 dark:bg-dark-color2 block w-full px-3 py-1.5 text-base font-normal text-gray-700 dark:text-white bg-clip-padding border-none rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingPassword" placeholder="Password" />
+                                                <label for="floatingPassword" className="text-gray-700 dark:text-gray-400">Password</label>
                                             </div>
 
                                             <div className="flex justify-between items-center mb-6">
@@ -265,9 +263,9 @@ function NavBarTop() {
                                                         value={keep_login}
                                                         onChange={e => setKeepLoggin(e.target.checked)}
                                                         className="default:ring-8" />
-                                                    <label className="form-check-label inline-block font-light xl:text-sm mx-2" for="inlineCheckbox1"> Remember me</label>
+                                                    <label className="form-check-label inline-block font-light xl:text-sm mx-2 dark:text-white" for="inlineCheckbox1"> Remember me</label>
                                                 </div>
-                                                <Link className="font-light xl:text-sm hover:underline p-2 float-right right-0 mr-0 flex" to="/forget-password">Forgot password</Link>
+                                                <Link className="font-light xl:text-sm hover:underline p-2 float-right right-0 mr-0 flex dark:text-white" to="/forget-password">Forgot password</Link>
                                             </div>
 
                                             <div className="xl:w-44 flex xl:mt-5 btn-center1 xl:ml-20 bg-maincolor rounded-lg xl:pt-2 xl:pb-2">
@@ -279,17 +277,14 @@ function NavBarTop() {
                                             </div>
                                         </div>
                                     </form>
-                                    <h6 className="font-normal xl:mt-5 xl:ml-16 text-black xl:text-sm"> Don't have an account? <span className="hover:underline text-maincolor"><Link to="/registration">Sign Up</Link></span></h6>
+                                    <h6 className="font-normal xl:mt-5 xl:ml-16 text-black xl:text-sm dark:text-white"> Don't have an account? <span className="hover:underline text-maincolor"><Link to="/registration">Sign Up</Link></span></h6>
                                 </ul>
                             </div>
                         </li>
                     </ul>
 
-
                 </div>
             </nav>
-
-
         </Fragment>
     );
 }

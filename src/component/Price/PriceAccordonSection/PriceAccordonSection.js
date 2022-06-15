@@ -8,7 +8,6 @@ function PriceAccordonSection() {
     const [isLoading, setIsLoading] = useState(false);
     const [priceQuestionData, setPriceQuestionData] = useState([]);
 
-  
     useEffect(() => {
         setIsLoading(true)
         axios.get(`${ApiUrl.BaseUrl}api/course/price-question/`).then((response) => {
@@ -112,25 +111,25 @@ function PriceAccordonSection() {
     else if (isLoading === false) {
         return (
             <Fragment>
-                <div className="">
-                    <div className="container xl:pt-24 xl:pb-10">
+                <div className="bg-white dark:bg-dark-color2 xl:mt-10 xl:mb-0">
+                    <div className="container xl:pt-16 xl:pb-20">
                         <div className="flex flex-auto justify-center">
                             <div className="xl:w-7/12 ">
-                                <h2 className=" text-about-analytics-subTitle dark:text-white text-center xl:font-semibold xl:text-5xl xl:mt-4">Do you have any question!</h2>
+                                <h2 className=" text-about-analytics-subTitle dark:text-white text-center xl:font-semibold xl:text-4xl xl:mt-4">Do you have any question!</h2>
                                 <h2 className="text-about-analytics-subTitle dark:text-gray-400 text-center xl:font-medium xl:text-base xl:mt-4 xl:pl-56 xl:pr-56 xl:mb-16">Our support team ready to help you, please contact with them</h2>
                                 <div className="justify-center items-center">
                                     {
                                         priceQuestionData.map((price_question) => (
-                                            <div className="transition accordion-bg-color border-b">
+                                            <div className="transition accordion-bg-color dark:bg-dark-color2 border-b">
                                                 <div onClick={CoursePriceClick}
                                                     className="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
                                                     <i className="fas fa-plus bg-price rounded-full p-1 font-extralight text-xs text-white"></i>
-                                                    <h3 className="text-maingray text-base font-medium">
+                                                    <h3 className="text-maingray dark:text-white text-base font-normal">
                                                         {price_question.price_question}
                                                     </h3>
                                                 </div>
                                                 <div className="accordion-content px-5 pt-0 overflow-hidden max-h-0">
-                                                    <p className="leading-6 text-sm font-light pl-9 pb-4 pr-4 text-justify">
+                                                    <p className="leading-6 dark:text-gray-400 text-sm font-light pl-9 pb-4 pr-4 text-justify">
                                                         {
                                                             price_question.price_question_answer
                                                         }

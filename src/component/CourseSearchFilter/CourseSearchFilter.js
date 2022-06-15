@@ -614,8 +614,7 @@ function CourseSearchFilter() {
                                                 <div className="text-lg absolute top-0 text-black mt-5">
                                                     <h6 className="font-medium xl:text-sm text-black xl:ml-1">{course_filter_data?.course_information?.channel_name?.channel_name}</h6>
                                                     <h6 className="font-light xl:text-xs text-black">{course_filter_data?.course_information?.course_duration} min</h6>
-
-                                                    <img className="xl:h-24 xl:ml-6 xl:-mt-2" src={Play} alt="" />
+                                                    <img className="xl:h-24 xl:ml-6 xl:-mt-2 rounded-full" src={Play} alt="" />
                                                 </div>
                                             </a>
                                         </div>
@@ -702,7 +701,7 @@ function CourseSearchFilter() {
                                             <a href="!#">
                                                 <div
                                                     className="text-sm absolute top-0 left-4 rounded-full h-5 w-5 flex border-2 border-client-section-des flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
-                                                    <img className="xl:h-5 xl:w-5" src={ApiUrl.ImageBaseUrl + course_filter_data1?.course_information?.channel_name?.channel_name_logo} alt="" />
+                                                    <img className="xl:h-5 xl:w-5 xl:rounded-full" src={ApiUrl.ImageBaseUrl + course_filter_data1?.course_information?.channel_name?.channel_name_logo} alt="" />
                                                 </div>
                                             </a>
                                         </div>
@@ -737,8 +736,8 @@ function CourseSearchFilter() {
 
                                     <StarRatings
                                         rating={course_filter_data1?.course_information?.avg_rating}
-                                        starDimension="18px"
-                                        starSpacing="4px"
+                                        starDimension="16px"
+                                        starSpacing="2px"
                                         starRatedColor="rgb(251, 191, 36)"
                                     />
                                 </div>

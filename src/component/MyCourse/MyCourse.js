@@ -689,7 +689,7 @@ function MyCourse() {
                             <div className="xl:w-full flex justify-center">
 
 
-                                <div className="block xl:w-7/12 bg-white xl:rounded-lg shadow-lg xl:ml-10 xl:mr-10">
+                                <div className="block xl:w-7/12 bg-white dark:bg-dark-color2 xl:rounded-lg shadow-lg xl:ml-10 xl:mr-10">
                                     <div className="xl:flex xl:flex-wrap g-0">
 
                                         <div className="xl:w-full xl:rounded-lg bg-white dark:bg-dark-color2 flex">
