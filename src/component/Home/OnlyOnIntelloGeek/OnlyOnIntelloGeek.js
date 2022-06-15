@@ -14,6 +14,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";
 import StarRatings from 'react-star-ratings';
+import {Link} from 'react-router-dom';
+
 
 function OnlyOnIntelloGeek() {
     const [nav6, setNav6] = useState();
@@ -21,11 +23,13 @@ function OnlyOnIntelloGeek() {
 
     const [isOnlyIntelloGeekCourseData, setIsOnlyIntelloGeekCourseData] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
+    const [BasedTotal, setBasedTotal] = useState(0);
 
     useEffect(() => {
         setIsLoading(true);
         axios.get(`${ApiUrl.BaseUrl}api/course/is-only-intellogeek-course/`).then((response) => {
             if (response.data.error === false) {
+                setBasedTotal(response.data.total_count);
                 setIsOnlyIntelloGeekCourseData(response.data.data);
                 setIsLoading(false);
             }
@@ -33,203 +37,201 @@ function OnlyOnIntelloGeek() {
     }, []);
 
     const Is_Only_IntelloGeek_Loading = (() => {
-        if (isLoading === true) {
-            return (
-                <>
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
-                        <div className="wrapper">
-                            <div className="relative">
-                                <div className="w-full h-72 bg-white rounded-lg shadow-lg"></div>
-                                <div className="flex flex-wrap">
+        return (
+            <>
+                <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                    <div className="wrapper">
+                        <div className="relative">
+                            <div className="w-full h-72 bg-white rounded-lg shadow-lg"></div>
+                            <div className="flex flex-wrap">
 
-                                    <div className="w-1/5">
-                                        <div className="absolute ml-2 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
-                                    </div>
-                                    <div className="w-4/5">
-                                        <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-28 xl:mt-6 xl:-ml-8 rounded-sm bg-gray-100"></div>
-                                        </div>
+                                <div className="w-1/5">
+                                    <div className="absolute ml-2 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                </div>
+                                <div className="w-4/5">
+                                    <div className="absolute top-0 mt-5">
+                                        <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
+                                        <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                        <div className="xl:h-28 xl:mt-6 xl:-ml-8 rounded-sm bg-gray-100"></div>
                                     </div>
                                 </div>
-
                             </div>
-                            <div className="relative px-4 -mt-16">
-                                <div className="bg-white p-3 rounded-lg shadow-lg">
-                                    <div className="flex flex-wrap">
-                                        <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
+
+                        </div>
+                        <div className="relative px-4 -mt-16">
+                            <div className="bg-white p-3 rounded-lg shadow-lg">
+                                <div className="flex flex-wrap">
+                                    <div className="w-full">
+                                        <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
+                                    </div>
+                                </div>
+                                <div className="flex flex-wrap">
+                                    <div className="w-1/2">
+                                        <div className="flex sm:justify-center xl:justify-start">
+                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
                                         </div>
                                     </div>
-                                    <div className="flex flex-wrap">
-                                        <div className="w-1/2">
-                                            <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                            </div>
-                                        </div>
-                                        <div className="w-1/2 relative">
-                                            <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
-                                            </div>
+                                    <div className="w-1/2 relative">
+                                        <div className="flex sm:justify-center xl:justify-start right-0 absolute">
+                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
-                        <div className="wrapper">
-                            <div className="relative">
-                                <div className="w-full h-72 bg-white rounded-lg shadow-lg"></div>
-                                <div className="flex flex-wrap">
+                <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                    <div className="wrapper">
+                        <div className="relative">
+                            <div className="w-full h-72 bg-white rounded-lg shadow-lg"></div>
+                            <div className="flex flex-wrap">
 
-                                    <div className="w-1/5">
-                                        <div className="absolute ml-2 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
-                                    </div>
-                                    <div className="w-4/5">
-                                        <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-28 xl:mt-6 xl:-ml-8 rounded-sm bg-gray-100"></div>
-                                        </div>
+                                <div className="w-1/5">
+                                    <div className="absolute ml-2 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                </div>
+                                <div className="w-4/5">
+                                    <div className="absolute top-0 mt-5">
+                                        <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
+                                        <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                        <div className="xl:h-28 xl:mt-6 xl:-ml-8 rounded-sm bg-gray-100"></div>
                                     </div>
                                 </div>
-
                             </div>
-                            <div className="relative px-4 -mt-16">
-                                <div className="bg-white p-3 rounded-lg shadow-lg">
-                                    <div className="flex flex-wrap">
-                                        <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
+
+                        </div>
+                        <div className="relative px-4 -mt-16">
+                            <div className="bg-white p-3 rounded-lg shadow-lg">
+                                <div className="flex flex-wrap">
+                                    <div className="w-full">
+                                        <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
+                                    </div>
+                                </div>
+                                <div className="flex flex-wrap">
+                                    <div className="w-1/2">
+                                        <div className="flex sm:justify-center xl:justify-start">
+                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
                                         </div>
                                     </div>
-                                    <div className="flex flex-wrap">
-                                        <div className="w-1/2">
-                                            <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                            </div>
-                                        </div>
-                                        <div className="w-1/2 relative">
-                                            <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
-                                            </div>
+                                    <div className="w-1/2 relative">
+                                        <div className="flex sm:justify-center xl:justify-start right-0 absolute">
+                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
-                        <div className="wrapper">
-                            <div className="relative">
-                                <div className="w-full h-72 bg-white rounded-lg shadow-lg"></div>
-                                <div className="flex flex-wrap">
+                <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                    <div className="wrapper">
+                        <div className="relative">
+                            <div className="w-full h-72 bg-white rounded-lg shadow-lg"></div>
+                            <div className="flex flex-wrap">
 
-                                    <div className="w-1/5">
-                                        <div className="absolute ml-2 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
-                                    </div>
-                                    <div className="w-4/5">
-                                        <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-28 xl:mt-6 xl:-ml-8 rounded-sm bg-gray-100"></div>
-                                        </div>
+                                <div className="w-1/5">
+                                    <div className="absolute ml-2 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                </div>
+                                <div className="w-4/5">
+                                    <div className="absolute top-0 mt-5">
+                                        <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
+                                        <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                        <div className="xl:h-28 xl:mt-6 xl:-ml-8 rounded-sm bg-gray-100"></div>
                                     </div>
                                 </div>
-
                             </div>
-                            <div className="relative px-4 -mt-16">
-                                <div className="bg-white p-3 rounded-lg shadow-lg">
-                                    <div className="flex flex-wrap">
-                                        <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
+
+                        </div>
+                        <div className="relative px-4 -mt-16">
+                            <div className="bg-white p-3 rounded-lg shadow-lg">
+                                <div className="flex flex-wrap">
+                                    <div className="w-full">
+                                        <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
+                                    </div>
+                                </div>
+                                <div className="flex flex-wrap">
+                                    <div className="w-1/2">
+                                        <div className="flex sm:justify-center xl:justify-start">
+                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
                                         </div>
                                     </div>
-                                    <div className="flex flex-wrap">
-                                        <div className="w-1/2">
-                                            <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                            </div>
-                                        </div>
-                                        <div className="w-1/2 relative">
-                                            <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
-                                            </div>
+                                    <div className="w-1/2 relative">
+                                        <div className="flex sm:justify-center xl:justify-start right-0 absolute">
+                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
-                        <div className="wrapper">
-                            <div className="relative">
-                                <div className="w-full h-72 bg-white rounded-lg shadow-lg"></div>
-                                <div className="flex flex-wrap">
+                <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                    <div className="wrapper">
+                        <div className="relative">
+                            <div className="w-full h-72 bg-white rounded-lg shadow-lg"></div>
+                            <div className="flex flex-wrap">
 
-                                    <div className="w-1/5">
-                                        <div className="absolute ml-2 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
-                                    </div>
-                                    <div className="w-4/5">
-                                        <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-28 xl:mt-6 xl:-ml-8 rounded-sm bg-gray-100"></div>
-                                        </div>
+                                <div className="w-1/5">
+                                    <div className="absolute ml-2 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                </div>
+                                <div className="w-4/5">
+                                    <div className="absolute top-0 mt-5">
+                                        <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
+                                        <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                        <div className="xl:h-28 xl:mt-6 xl:-ml-8 rounded-sm bg-gray-100"></div>
                                     </div>
                                 </div>
-
                             </div>
-                            <div className="relative px-4 -mt-16">
-                                <div className="bg-white p-3 rounded-lg shadow-lg">
-                                    <div className="flex flex-wrap">
-                                        <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
+
+                        </div>
+                        <div className="relative px-4 -mt-16">
+                            <div className="bg-white p-3 rounded-lg shadow-lg">
+                                <div className="flex flex-wrap">
+                                    <div className="w-full">
+                                        <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
+                                    </div>
+                                </div>
+                                <div className="flex flex-wrap">
+                                    <div className="w-1/2">
+                                        <div className="flex sm:justify-center xl:justify-start">
+                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
                                         </div>
                                     </div>
-                                    <div className="flex flex-wrap">
-                                        <div className="w-1/2">
-                                            <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                            </div>
-                                        </div>
-                                        <div className="w-1/2 relative">
-                                            <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
-                                            </div>
+                                    <div className="w-1/2 relative">
+                                        <div className="flex sm:justify-center xl:justify-start right-0 absolute">
+                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </>
-            )
-        }
+                </div>
+            </>
+        )
     })()
 
     const Is_Only_IntelloGeek_Data = (() => {
@@ -268,9 +270,11 @@ function OnlyOnIntelloGeek() {
                             <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg dark:shadow-xl">
                                 <div className="flex flex-wrap">
                                     <div className="w-4/5">
-                                        <h4 className="mt-1 xl:text-base xl:font-medium text leading-tight text-CourseTitle dark:text-white">
-                                            {intellogeek_data?.course_title}
-                                        </h4>
+                                        <Link 
+                                            to={`/course-details/${intellogeek_data.course_id}`}
+                                            className="mt-1 xl:text-base font-semibold text leading-tight text-CourseTitle dark:text-white">
+                                            {`${intellogeek_data.course_title.substring(0, 40)}...`}
+                                        </Link> 
                                     </div>
                                     <div className="w-1/5">
                                         <button
@@ -340,7 +344,7 @@ function OnlyOnIntelloGeek() {
         return (
             <Fragment>
                 <div className="container my-12">
-                    <h4 className="text-4xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Only On IntelloGeek (50) </h4>
+                    <h4 className="text-4xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Only On IntelloGeek ({BasedTotal}) </h4>
 
                     <div className="lg:mt-6 flex flex-wrap -mx-1 lg:-mx-4 w-full">
                         {
@@ -351,11 +355,11 @@ function OnlyOnIntelloGeek() {
             </Fragment>
         );
     }
-    else if (isLoading === false) {
+    else if(isLoading === false) {
         return (
             <Fragment>
                 <div className="container my-12">
-                    <h4 className="text-4xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Only On IntelloGeek (50) </h4>
+                    <h4 className="text-4xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Only On IntelloGeek ({BasedTotal}) </h4>
 
                     <div className="lg:mt-6 -mx-1 lg:-mx-4">
                         <Slider
