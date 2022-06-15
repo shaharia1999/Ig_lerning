@@ -7,7 +7,74 @@ import { MdLogin } from "react-icons/md";
 import axios from "axios";
 import ApiUrl from "../../Api/ApiUrl";
 import { Link } from "react-router-dom";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from "react-icons/md";
 
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <button
+            className={className}
+            style={{
+                ...style,
+                marginTop: "-20px",
+                right: "-45px",
+                opacity: "1",
+                display: "block",
+                background: "#ffffff",
+
+                boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                fontSize: "20px",
+                position: "absolute",
+                width: "40px",
+                height: "40px",
+                transform: "translate(0%, 0px)",
+                cursor: "pointer",
+                color: "transparent",
+                border: "none",
+                outline: "none",
+                borderRadius: "50px",
+            }}
+            onClick={onClick}
+        >
+            <span className="slide-arrow-font-next"><MdOutlineArrowForwardIos /></span>
+        </button>
+    );
+}
+
+function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <button
+            className={className}
+            style={{
+                ...style,
+                marginTop: "-20px",
+                left: "-45px",
+                opacity: "1",
+                display: "block",
+                background: "#ffffff",
+
+                boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                fontSize: "20px",
+                position: "absolute",
+                width: "40px",
+                height: "40px",
+                transform: "translate(0%, 0px)",
+                cursor: "pointer",
+                color: "transparent",
+                border: "none",
+                outline: "none",
+                borderRadius: "50px",
+            }}
+            onClick={onClick}
+        >
+            <span className="slide-arrow-font-previous"><MdOutlineArrowBackIos /></span>
+        </button>
+    );
+}
 
 function RecentlyAddedCourseSectionTwo() {
     const [category, setCategory] = useState([]);
@@ -95,7 +162,7 @@ function RecentlyAddedCourseSectionTwo() {
                         <div key={index}>
                             <li className="nav-item" role="presentation">
                                 <button type="button"
-                                    className="nav-link block w-full md:w-auto px-6 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 text-base bg-maincolor font-medium leading-tight text-black rounded-3xl mx-2 h-11"
+                                    className="nav-link block w-full px-6 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 text-base bg-maincolor font-medium leading-tight text-black rounded-3xl mx-2 h-11"
                                     onClick={() => SubCategoryCourseInfo(subcategory.sub_category_id)}
                                 >
                                     {subcategory.sub_category_name}
@@ -375,15 +442,15 @@ function RecentlyAddedCourseSectionTwo() {
                                                 <div className="flex sm:justify-center xl:justify-start -mt-3">
                                                     <Link to="" className="z-30">
                                                         <img className="h-8 w-8 rounded-full border-2 border-white"
-                                                            src="https://media.istockphoto.com/photos/got-this-picture-id1332291404?b=1&k=20&m=1332291404&s=170667a&w=0&h=uRm6p7xa_-YF9t_6sVY7DXnXaa2Jo_NeL4oUvrFJq6I=" alt=""/>
+                                                            src="https://media.istockphoto.com/photos/got-this-picture-id1332291404?b=1&k=20&m=1332291404&s=170667a&w=0&h=uRm6p7xa_-YF9t_6sVY7DXnXaa2Jo_NeL4oUvrFJq6I=" alt="" />
                                                     </Link>
                                                     <Link to="" className="-ml-3 z-20">
                                                         <img className="h-8 w-8 rounded-full border-2 border-white"
-                                                            src="https://cbsnews1.cbsistatic.com/hub/i/2018/11/06/0c1af1b8-155a-458e-b105-78f1e7344bf4/2018-11-06t054310z-1334124005-rc1be15a8050-rtrmadp-3-people-sexiest-man.jpg" alt=""/>
+                                                            src="https://cbsnews1.cbsistatic.com/hub/i/2018/11/06/0c1af1b8-155a-458e-b105-78f1e7344bf4/2018-11-06t054310z-1334124005-rc1be15a8050-rtrmadp-3-people-sexiest-man.jpg" alt="" />
                                                     </Link>
                                                     <Link to="" className="-ml-3 z-10">
                                                         <img className="h-8 w-8 rounded-full border-2 border-white"
-                                                            src="https://aisvox-a.akamaihd.net/masters/940835/26-1/27-1yk13p/2540x1429/4080/800604860-jpg.jpg" alt=""/>
+                                                            src="https://aisvox-a.akamaihd.net/masters/940835/26-1/27-1yk13p/2540x1429/4080/800604860-jpg.jpg" alt="" />
                                                     </Link>
                                                 </div>
                                             </div>
@@ -470,17 +537,34 @@ function RecentlyAddedCourseSectionTwo() {
                             </div>
                         </div>
                         <div className="w-2/3 relative">
-                            <div className="flex right-0 absolute">
-
+                            {/* <div className="flex right-0 absolute">
                                 <div className="mb-4">
-                                    <ul className="nav nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4">
-                                        {
-                                            category_data
-                                        }
-                                    </ul>
-                                </div>
+                                    <ul className="nav nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4"> 
+                                    */}
+                            <Slider
+                                slidesToShow={5}
+                                focusOnSelect={true}
+                                dots={false}
+                                adaptiveHeight={true}
+                                infinite={true}
+                                slidesToScroll={1}
+                                loop={true}
+                                speed={1000}
+                                autoplay={false}
+                                autoplaySpeed={1500}
+                                swipeToSlide={true}
+                                nextArrow={<SampleNextArrow />}
+                                prevArrow={<SamplePrevArrow />}
+                            >
+                                {
+                                    category_data
+                                }
+                            </Slider>
 
-                            </div>
+                            {/* </ul>
+                                </div>
+                            </div> 
+                            */}
                         </div>
                     </div>
 
@@ -494,10 +578,27 @@ function RecentlyAddedCourseSectionTwo() {
                             <div className="flex flex-wrap -mx-1 xl:-mx-4">
                                 <div className="mt-4 w-full">
                                     <div className="fade show active">
-                                        <div className="flex flex-wrap -mx-1 lg:-mx-4">
-                                            {
-                                                data_of_course_details
-                                            }
+                                        <div className="-mx-1 lg:-mx-4">
+                                            <Slider
+                                                slidesToShow={4}
+                                                focusOnSelect={true}
+                                                dots={false}
+                                                adaptiveHeight={true}
+                                                infinite={true}
+                                                slidesToScroll={1}
+                                                loop={true}
+                                                speed={1000}
+                                                autoplay={false}
+                                                autoplaySpeed={1500}
+                                                swipeToSlide={true}
+                                                nextArrow={<SampleNextArrow />}
+                                                prevArrow={<SamplePrevArrow />}
+                                            >
+                                                {
+                                                    data_of_course_details
+                                                }
+                                            </Slider>
+
                                         </div>
                                     </div>
                                 </div>
