@@ -9,6 +9,12 @@ import StarRatings from 'react-star-ratings';
 import { HiDotsVertical } from "react-icons/hi";
 
 function CartSummery() {
+    
+    const userTheme = localStorage.getItem("theme");
+    if (userTheme === null) {
+        localStorage.setItem("theme", "light");
+    }
+    
     return (
         <Fragment>
             <section className="md:h-screen bg-checkout">
@@ -313,18 +319,13 @@ function CartSummery() {
                                                         </div>
                                                     </div>
                                                 </div>
-
                                             </div>
 
                                             <div className="bg-white opacity-50 cart-checkout-shadow-card-height-width -mt-20 justify-center text-center flex"> </div>
-
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
 
                             <div className="block xl:w-5/12 cart-summery-card-height bg-white xl:rounded-lg shadow-lg">
                                 <div className="xl:flex xl:flex-wrap">
