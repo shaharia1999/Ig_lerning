@@ -27,6 +27,18 @@
   padding: 0 !important;
 }
 
+.LearningTeachingBlack {
+  background-image: url('../src/asset/images/banner/learning-teaching-black.svg');
+  width: 100% !important;
+  height: 1000px !important;
+  opacity: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -200px !important;
+  padding: 0 !important;
+}
+
 .AboutContact {
   background-image: url('../src/asset/images/banner/about-contact.svg');
   width: 1400px !important;
@@ -71,6 +83,18 @@
   padding: 0 !important;
 }
 
+.ContactBannerBlack {
+  background-image: url('../src/asset/images/banner/ContactBannerBlack.svg');
+  width: 100% !important;
+  height: 100vh !important;
+  opacity: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .bg-checkout {
   background-image: url('../src/asset/images/banner/CheckoutPageBackground.svg');
   width: 100% !important;
@@ -83,7 +107,7 @@
 }
 
 .bg-checkout-dark {
-  background-image: url('../src/asset/images/banner/ContactBannerBlack.svg');
+  background-image: url('../src/asset/images/banner/checkoutBannerBlack.svg');
   width: 100% !important;
   height: 100vh !important;
   opacity: 1;
