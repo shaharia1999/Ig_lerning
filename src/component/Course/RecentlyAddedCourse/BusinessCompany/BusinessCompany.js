@@ -556,16 +556,16 @@ function BusinessCompany() {
                                 </div>
                             </div>
                             <div className="relative px-4 -mt-16">
-                                <div className="bg-white p-3 rounded-lg shadow-lg">
+                                <div className="bg-white dark:bg-dark-color2 xl:h-36 p-3 rounded-lg shadow-lg">
                                     <div className="flex flex-wrap">
                                         <div className="w-4/5">
-                                            <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle">
+                                            <h4 className="mt-1 xl:text-base font-medium leading-tight text-CourseTitle dark:text-white">
                                                 {`${course.course_title.substring(0, 40)}...`}
                                             </h4>
                                         </div>
-                                        <div className="w-1/5">
+                                        <div className="w-1/5 justify-end flex">
                                             <button
-                                                className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white lg:pl-3 lg:pr-3 lg:pt-1 lg:pb-1 rounded-md">Live
+                                                className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white h-6 xl:pl-3 xl:pr-3 xl:pt-1 xl:pb-1 rounded">Live
                                             </button>
                                         </div>
                                     </div>
