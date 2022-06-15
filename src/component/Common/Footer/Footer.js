@@ -15,7 +15,6 @@ function Footer() {
         window.scrollTo(0, 0);
     }
 
-
     if (userTheme === "dark") {
         return (
             <Fragment>
