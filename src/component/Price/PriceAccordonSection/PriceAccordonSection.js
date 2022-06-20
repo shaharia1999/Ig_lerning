@@ -1,10 +1,12 @@
 import React, { Fragment, useEffect, useState } from "react";
 import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";
-
+import {
+    Accordion,
+    AccordionHeader,
+} from "@material-tailwind/react";
 
 function PriceAccordonSection() {
-
     const [isLoading, setIsLoading] = useState(false);
     const [priceQuestionData, setPriceQuestionData] = useState([]);
 
@@ -50,57 +52,33 @@ function PriceAccordonSection() {
                         <div className="flex flex-auto justify-center">
                             <div className="xl:w-7/12 ">
                                 <h2 className=" text-about-analytics-subTitle dark:text-white text-center xl:font-semibold xl:text-5xl xl:mt-4">Do you have any question!</h2>
-                                <h2 className="text-about-analytics-subTitle text-center xl:font-medium xl:text-base xl:mt-4 xl:pl-56 xl:pr-56 xl:mb-16">Our support team ready to help you, please contact with them</h2>
+                                <h2 className="text-about-analytics-subTitle text-center xl:font-medium xl:text-base xl:mt-4 xl:pl-56 xl:pr-56 xl:mb-16 dark:text-gray-400">Our support team ready to help you, please contact with them</h2>
 
                                 <div className="justify-center items-center">
-                                    <div className="transition accordion-bg-color border-b">
-                                        <div className="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
-                                            <i className="fas fa-plus bg-price rounded-full p-1 font-extralight text-xs text-white"></i>
-                                            <h3 className="text-maingray text-base font-medium">How to contact with riders emergency ?</h3>
-                                        </div>
-                                        <div className="accordion-content px-5 pt-0 overflow-hidden max-h-0">
-                                            <p className="leading-6 text-sm font-light pl-9 pb-4 pr-4 text-justify">
-                                                 your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home.                                    </p>
-                                        </div>
+                                    <div className="bg-gray-50 icon-select shadow mt-3 rounded-lg animate-pulse">
+                                        <Accordion className="rounded m-0">
+                                            <AccordionHeader className="flex pr-4">
+                                                <div className="h-10 w-10 ml-4 bg-gray-100 rounded-md"></div>
+                                            </AccordionHeader>
+                                        </Accordion>
                                     </div>
 
-
-                                    <div className="transition accordion-bg-color border-b">
-                                        <div className="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
-                                            <i className="fas fa-plus bg-price rounded-full p-1 font-extralight text-xs text-white"></i>
-                                            <h3 className="text-maingray text-base font-medium">App installation failed, how to update system information?</h3>
-                                        </div>
-                                        <div className="accordion-content px-5 pt-0 overflow-hidden max-h-0">
-                                            <p className="leading-6 text-sm font-light pl-9 pb-4 pr-4 text-justify">
-                                                Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home.                                    </p>
-                                        </div>
+                                    <div className="bg-gray-50 icon-select shadow mt-3 rounded-lg animate-pulse">
+                                        <Accordion className="rounded m-0">
+                                            <AccordionHeader className="flex pr-4">
+                                                <div className="h-10 w-10 ml-4 bg-gray-100 rounded-md"></div>
+                                            </AccordionHeader>
+                                        </Accordion>
                                     </div>
 
-
-                                    <div className="transition accordion-bg-color border-b">
-                                        <div className="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
-                                            <i className="fas fa-plus bg-price rounded-full p-1 font-extralight text-xs text-white"></i>
-                                            <h3 className="text-maingray text-base font-medium">Website reponse taking time, how to improve?</h3>
-                                        </div>
-                                        <div className="accordion-content px-5 pt-0 overflow-hidden max-h-0">
-                                            <p className="leading-6 text-sm font-light pl-9 pb-4 pr-4 text-justify">
-                                                Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home.                                    </p>
-                                        </div>
-                                    </div>
-
-
-                                    <div className="transition accordion-bg-color border-b">
-                                        <div className="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
-                                            <i className="fas fa-plus bg-price rounded-full p-1 font-extralight text-xs text-white"></i>
-                                            <h3 className="text-maingray text-base font-medium">New update fixed all bug and issues</h3>
-                                        </div>
-                                        <div className="accordion-content px-5 pt-0 overflow-hidden max-h-0">
-                                            <p className="leading-6 text-sm font-light pl-9 pb-4 pr-4 text-justify">
-                                                Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home collect a sample from management news. Get your blood tests delivered at the home.                                    </p>
-                                        </div>
+                                    <div className="bg-gray-50 icon-select shadow mt-3 rounded-lg animate-pulse">
+                                        <Accordion className="rounded m-0">
+                                            <AccordionHeader className="flex pr-4">
+                                                <div className="h-10 w-10 ml-4 bg-gray-100 rounded-md"></div>
+                                            </AccordionHeader>
+                                        </Accordion>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>

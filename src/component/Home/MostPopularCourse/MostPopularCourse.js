@@ -1,12 +1,10 @@
 import React, { Fragment, useState, useRef, useEffect } from "react";
-import { FaStar } from "react-icons/fa";
 import SpeedMeter from "../../../asset/images/icon/icon_level.png";
 import CertificateIcon from "../../../asset/images/icon/icon_certificate.png";
 import LoveIcon from "../../../asset/images/icon/love-icon.png";
 import ShareIcon from "../../../asset/images/icon/icon_share.png";
 import Play from "../../../asset/images/icon/play.png";
 import CourseLogo from "../../../asset/images/logo/course-logo.svg";
-import MyVideo from "../../../asset/video/mov_bbb.mp4"
 import 'tw-elements';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -14,8 +12,70 @@ import 'slick-carousel/slick/slick-theme.css';
 import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";
 import StarRatings from 'react-star-ratings';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import {MdOutlineArrowBackIos, MdOutlineArrowForwardIos} from "react-icons/md";
 
+function SampleNextArrow(props) {
+    const {className, style, onClick} = props;
+    return (
+        <button
+            className={className}
+            style={{
+                ...style,
+                marginTop: "-20px",
+                right: "-45px",
+                opacity: "1",
+                display: "block",
+                background: "#ffffff",
+                boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                fontSize: "20px",
+                position: "absolute",
+                width: "40px",
+                height: "40px",
+                transform: "translate(0%, 0px)",
+                cursor: "pointer",
+                color: "transparent",
+                border: "none",
+                outline: "none",
+                borderRadius: "50px",
+            }}
+            onClick={onClick}
+        >
+            <span className="slide-arrow-font-next"><MdOutlineArrowForwardIos/></span>
+        </button>
+    );
+}
+
+function SamplePrevArrow(props) {
+    const {className, style, onClick} = props;
+    return (
+        <button
+            className={className}
+            style={{
+                ...style,
+                marginTop: "-20px",
+                left: "-45px",
+                opacity: "1",
+                display: "block",
+                background: "#ffffff",
+                boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                fontSize: "20px",
+                position: "absolute",
+                width: "40px",
+                height: "40px",
+                transform: "translate(0%, 0px)",
+                cursor: "pointer",
+                color: "transparent",
+                border: "none",
+                outline: "none",
+                borderRadius: "50px",
+            }}
+            onClick={onClick}
+        >
+            <span className="slide-arrow-font-previous"><MdOutlineArrowBackIos/></span>
+        </button>
+    );
+}
 
 function MostPopularCourse() {
     const [MostPopularCourseData, setMostPopularCourseData] = useState([]);
@@ -24,7 +84,7 @@ function MostPopularCourse() {
 
     useEffect(() => {
         setIsLoading(true);
-        axios.get(`${ApiUrl.BaseUrl}api/course/most-popular-course/`).then((response) => {
+        axios.get(ApiUrl.BaseUrl + 'api/course/most-popular-course/').then((response) => {
             if (response.data.error === false) {
                 setBasedTotal(response.data.total_count);
                 setMostPopularCourseData(response.data.data);
@@ -39,197 +99,194 @@ function MostPopularCourse() {
     const MostPopularCourseDataLoading = (() => {
         return (
             <>
-                <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
-                    <div className="wrapper">
-                        <div className="relative">
-                            <div className="w-full h-72 bg-white rounded-lg shadow-lg"></div>
-                            <div className="flex flex-wrap">
-
-                                <div className="w-1/5">
-                                    <div className="absolute ml-2 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
-                                </div>
-                                <div className="w-4/5">
-                                    <div className="absolute top-0 mt-5">
-                                        <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
-                                        <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                        <div className="xl:h-28 xl:mt-6 xl:-ml-8 rounded-sm bg-gray-100"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div className="relative px-4 -mt-16">
-                            <div className="bg-white p-3 rounded-lg shadow-lg">
+                 <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                        <div className="wrapper">
+                            <div className="relative">
+                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
                                 <div className="flex flex-wrap">
-                                    <div className="w-full">
-                                        <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
-                                        <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
-                                        <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
+
+                                    <div className="w-1/5">
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
-                                </div>
-                                <div className="flex flex-wrap">
-                                    <div className="w-1/2">
-                                        <div className="flex sm:justify-center xl:justify-start">
-                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                        </div>
-                                    </div>
-                                    <div className="w-1/2 relative">
-                                        <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                            <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
+                                    <div className="w-4/5 xl:pl-3">
+                                        <div className="absolute top-0 mt-5">
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
-                    <div className="wrapper">
-                        <div className="relative">
-                            <div className="w-full h-72 bg-white rounded-lg shadow-lg"></div>
-                            <div className="flex flex-wrap">
-
-                                <div className="w-1/5">
-                                    <div className="absolute ml-2 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
-                                </div>
-                                <div className="w-4/5">
-                                    <div className="absolute top-0 mt-5">
-                                        <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
-                                        <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                        <div className="xl:h-28 xl:mt-6 xl:-ml-8 rounded-sm bg-gray-100"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div className="relative px-4 -mt-16">
-                            <div className="bg-white p-3 rounded-lg shadow-lg">
-                                <div className="flex flex-wrap">
-                                    <div className="w-full">
-                                        <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
-                                        <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
-                                        <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
-                                    </div>
-                                </div>
-                                <div className="flex flex-wrap">
-                                    <div className="w-1/2">
-                                        <div className="flex sm:justify-center xl:justify-start">
-                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                            <div className="relative px-4 -mt-16">
+                                <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
+                                    <div className="flex flex-wrap">
+                                        <div className="w-full">
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
                                         </div>
                                     </div>
-                                    <div className="w-1/2 relative">
-                                        <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                            <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
+                                    <div className="flex flex-wrap">
+                                        <div className="w-1/2">
+                                            <div className="flex sm:justify-center xl:justify-start">
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                            </div>
+                                        </div>
+                                        <div className="w-1/2 relative">
+                                            <div className="flex sm:justify-center xl:justify-start right-0 absolute">
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
-                    <div className="wrapper">
-                        <div className="relative">
-                            <div className="w-full h-72 bg-white rounded-lg shadow-lg"></div>
-                            <div className="flex flex-wrap">
-
-                                <div className="w-1/5">
-                                    <div className="absolute ml-2 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
-                                </div>
-                                <div className="w-4/5">
-                                    <div className="absolute top-0 mt-5">
-                                        <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
-                                        <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                        <div className="xl:h-28 xl:mt-6 xl:-ml-8 rounded-sm bg-gray-100"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div className="relative px-4 -mt-16">
-                            <div className="bg-white p-3 rounded-lg shadow-lg">
+                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                        <div className="wrapper">
+                            <div className="relative">
+                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
                                 <div className="flex flex-wrap">
-                                    <div className="w-full">
-                                        <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
-                                        <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
-                                        <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
+
+                                    <div className="w-1/5">
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
-                                </div>
-                                <div className="flex flex-wrap">
-                                    <div className="w-1/2">
-                                        <div className="flex sm:justify-center xl:justify-start">
-                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                        </div>
-                                    </div>
-                                    <div className="w-1/2 relative">
-                                        <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                            <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
+                                    <div className="w-4/5 xl:pl-3">
+                                        <div className="absolute top-0 mt-5">
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
-                    <div className="wrapper">
-                        <div className="relative">
-                            <div className="w-full h-72 bg-white rounded-lg shadow-lg"></div>
-                            <div className="flex flex-wrap">
-
-                                <div className="w-1/5">
-                                    <div className="absolute ml-2 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
-                                </div>
-                                <div className="w-4/5">
-                                    <div className="absolute top-0 mt-5">
-                                        <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
-                                        <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                        <div className="xl:h-28 xl:mt-6 xl:-ml-8 rounded-sm bg-gray-100"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div className="relative px-4 -mt-16">
-                            <div className="bg-white p-3 rounded-lg shadow-lg">
-                                <div className="flex flex-wrap">
-                                    <div className="w-full">
-                                        <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
-                                        <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
-                                        <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
-                                    </div>
-                                </div>
-                                <div className="flex flex-wrap">
-                                    <div className="w-1/2">
-                                        <div className="flex sm:justify-center xl:justify-start">
-                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                            <div className="relative px-4 -mt-16">
+                                <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
+                                    <div className="flex flex-wrap">
+                                        <div className="w-full">
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
                                         </div>
                                     </div>
-                                    <div className="w-1/2 relative">
-                                        <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                            <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                            <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
+                                    <div className="flex flex-wrap">
+                                        <div className="w-1/2">
+                                            <div className="flex sm:justify-center xl:justify-start">
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                            </div>
+                                        </div>
+                                        <div className="w-1/2 relative">
+                                            <div className="flex sm:justify-center xl:justify-start right-0 absolute">
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                        <div className="wrapper">
+                            <div className="relative">
+                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
+                                <div className="flex flex-wrap">
+
+                                    <div className="w-1/5">
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                    </div>
+                                    <div className="w-4/5 xl:pl-3">
+                                        <div className="absolute top-0 mt-5">
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="relative px-4 -mt-16">
+                                <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
+                                    <div className="flex flex-wrap">
+                                        <div className="w-full">
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-wrap">
+                                        <div className="w-1/2">
+                                            <div className="flex sm:justify-center xl:justify-start">
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                            </div>
+                                        </div>
+                                        <div className="w-1/2 relative">
+                                            <div className="flex sm:justify-center xl:justify-start right-0 absolute">
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                        <div className="wrapper">
+                            <div className="relative">
+                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
+                                <div className="flex flex-wrap">
+
+                                    <div className="w-1/5">
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                    </div>
+                                    <div className="w-4/5 xl:pl-3">
+                                        <div className="absolute top-0 mt-5">
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="relative px-4 -mt-16">
+                                <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
+                                    <div className="flex flex-wrap">
+                                        <div className="w-full">
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-wrap">
+                                        <div className="w-1/2">
+                                            <div className="flex sm:justify-center xl:justify-start">
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                            </div>
+                                        </div>
+                                        <div className="w-1/2 relative">
+                                            <div className="flex sm:justify-center xl:justify-start right-0 absolute">
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </>
         )
     })()
@@ -366,16 +423,17 @@ function MostPopularCourse() {
                             ref={(slider4) => setNav4(slider4)}
                             slidesToShow={4}
                             focusOnSelect={true}
-                            dots={true}
-                            adaptiveHeight={true}
+                            dots={false}
+                            adaptiveHeight={false}
                             infinite={true}
                             slidesToScroll={1}
                             loop={true}
-                            speed={1000}
-                            height={600}
-                            autoplay={true}
+                            speed={200}
+                            autoplay={false}
                             autoplaySpeed={1500}
                             swipeToSlide={true}
+                            nextArrow={<SampleNextArrow/>} 
+                            prevArrow= {<SamplePrevArrow/>}
                         >
                             {
                                 MostPopularCourseDataSuccess

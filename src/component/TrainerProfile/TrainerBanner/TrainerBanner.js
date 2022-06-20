@@ -28,7 +28,7 @@ function TrainerBanner() {
             <Fragment>
                 <div className="container-fluid animate-pulse">
                     <div className="relative flex flex-wrap">
-                        <div className="TrainerBannner bg-gray-50"></div>
+                        <div className="TrainerBannner bg-gray-50 dark:bg-dark-scleton2"></div>
                     </div>
 
                     <div className="container">
@@ -51,10 +51,10 @@ function TrainerBanner() {
                 <div className="container-fluid">
                     <div className="relative flex flex-wrap">
                         <img className="TrainerBannner" src={trainerProfileInfo.cover_image} alt="" />
-                        <div className="absolute w-full py-2.5 -inset-x-24 bottom-16 text-white xl:text-4xl xl:font-semibold text-center leading-4">
+                        <div className="absolute w-full py-2.5 -inset-x-4 bottom-16 text-white xl:text-4xl xl:font-semibold text-center leading-4">
                             {trainerProfileInfo.username}
                             <span>
-                                <i className="fa fa-check text-white bg-maincolor font-light xl:p-1 rounded-full text-sm"></i>
+                                <i className="fa fa-check text-white xl:ml-3 bg-maincolor font-light xl:p-1 rounded-full text-sm"></i>
                             </span>
                         </div>
                         <div className="absolute w-full py-2.5 -inset-x-4 bottom-6 text-white xl:text-xl xl:font-light text-center leading-4">
