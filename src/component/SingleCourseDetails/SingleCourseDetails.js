@@ -31,8 +31,8 @@ function SingleCourseDetails() {
                 </div>
             </div>
 
-            <div className="stack">
-                <div className="bg-white dark:bg-dark-color2">
+            <div className="stack w-full">
+                <div className="bg-white w-full dark:bg-dark-color2">
                     <div className="container-fluid xl:mt-16 xl:mb-20">
                         <h6 className="xl:mb-8 xl:ml-32 xl:text-3xl xl:font-semibold dark:text-white">Recently Viewed Products</h6>
                         <RecentlyViewedCourse />

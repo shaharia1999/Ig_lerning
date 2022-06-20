@@ -29,7 +29,7 @@ function HomeAdvertisedment() {
                             <TopCategories />
                         </div>
                         <div className="xl:w-1/3 animate-pulse">
-                            <div className="w-96 lg:ml-20 lg:mt-20 bg-gray-100 home-ad-banner"></div>
+                            <div className="w-96 lg:ml-20 lg:mt-20 rounded-md bg-gray-100 dark:bg-dark-scleton2 home-ad-banner"></div>
                         </div>
                     </div>
                 </div>

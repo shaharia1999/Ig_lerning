@@ -115,7 +115,27 @@ function BusinessCompany() {
     const Subcategory_Loading = (() => {
         if (isLoading === true) {
             return (
-                <h6>Loading</h6>
+                <>
+                    <li className="nav-item animate-pulse mx-2">
+                        <div className="bg-gray-300 dark:bg-dark-scleton2 w-24 px-6 py-3 my-2 md:mr-2 h-8 rounded"></div>
+                    </li>
+
+                    <li className="nav-item animate-pulse mx-2">
+                        <div className="bg-gray-300 dark:bg-dark-scleton2 w-24 px-6 py-3 my-2 md:mr-2 h-8 rounded"></div>
+                    </li>
+
+                    <li className="nav-item animate-pulse mx-2">
+                        <div className="bg-gray-300 dark:bg-dark-scleton2 w-24 px-6 py-3 my-2 md:mr-2 h-8 rounded"></div>
+                    </li>
+
+                    <li className="nav-item animate-pulse mx-2">
+                        <div className="bg-gray-300 dark:bg-dark-scleton2 w-24 px-6 py-3 my-2 md:mr-2 h-8 rounded"></div>
+                    </li>
+
+                    <li className="nav-item animate-pulse mx-2">
+                        <div className="bg-gray-300 dark:bg-dark-scleton2 w-24 px-6 py-3 my-2 md:mr-2 h-8 rounded"></div>
+                    </li>
+                </>
             )
         }
     })()
@@ -142,46 +162,46 @@ function BusinessCompany() {
         if (course_isLoading === true) {
             return (
                 <>
-                    <div className="my-1 px-1 w-full bg-white md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
                         <div className="wrapper">
                             <div className="relative">
-                                <div className="w-full h-72 bg-white rounded-xl shadow-lg"></div>
+                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
                                 <div className="flex flex-wrap">
 
                                     <div className="w-1/5">
-                                        <div className="absolute ml-4 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5 xl:pl-3">
                                         <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="relative px-4 -mt-16">
-                                <div className="bg-white p-3 rounded-lg shadow-lg">
+                                <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
                                     <div className="flex flex-wrap">
                                         <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-7/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap">
                                         <div className="w-1/2">
                                             <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
                                             </div>
                                         </div>
                                         <div className="w-1/2 relative">
                                             <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -189,46 +209,46 @@ function BusinessCompany() {
                             </div>
                         </div>
                     </div>
-                    <div className="my-1 px-1 w-full bg-white md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
                         <div className="wrapper">
                             <div className="relative">
-                                <div className="w-full h-72 bg-white rounded-xl shadow-lg"></div>
+                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
                                 <div className="flex flex-wrap">
 
                                     <div className="w-1/5">
-                                        <div className="absolute ml-4 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5 xl:pl-3">
                                         <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="relative px-4 -mt-16">
-                                <div className="bg-white p-3 rounded-lg shadow-lg">
+                                <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
                                     <div className="flex flex-wrap">
                                         <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-7/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap">
                                         <div className="w-1/2">
                                             <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
                                             </div>
                                         </div>
                                         <div className="w-1/2 relative">
                                             <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -236,46 +256,46 @@ function BusinessCompany() {
                             </div>
                         </div>
                     </div>
-                    <div className="my-1 px-1 w-full bg-white md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
                         <div className="wrapper">
                             <div className="relative">
-                                <div className="w-full h-72 bg-white rounded-xl shadow-lg"></div>
+                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
                                 <div className="flex flex-wrap">
 
                                     <div className="w-1/5">
-                                        <div className="absolute ml-4 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5 xl:pl-3">
                                         <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="relative px-4 -mt-16">
-                                <div className="bg-white p-3 rounded-lg shadow-lg">
+                                <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
                                     <div className="flex flex-wrap">
                                         <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-7/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap">
                                         <div className="w-1/2">
                                             <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
                                             </div>
                                         </div>
                                         <div className="w-1/2 relative">
                                             <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -283,46 +303,46 @@ function BusinessCompany() {
                             </div>
                         </div>
                     </div>
-                    <div className="my-1 px-1 w-full bg-white md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
                         <div className="wrapper">
                             <div className="relative">
-                                <div className="w-full h-72 bg-white rounded-xl shadow-lg"></div>
+                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
                                 <div className="flex flex-wrap">
 
                                     <div className="w-1/5">
-                                        <div className="absolute ml-4 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5 xl:pl-3">
                                         <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="relative px-4 -mt-16">
-                                <div className="bg-white p-3 rounded-lg shadow-lg">
+                                <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
                                     <div className="flex flex-wrap">
                                         <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-7/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap">
                                         <div className="w-1/2">
                                             <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
                                             </div>
                                         </div>
                                         <div className="w-1/2 relative">
                                             <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -330,46 +350,46 @@ function BusinessCompany() {
                             </div>
                         </div>
                     </div>
-                    <div className="my-1 px-1 w-full bg-white md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
                         <div className="wrapper">
                             <div className="relative">
-                                <div className="w-full h-72 bg-white rounded-xl shadow-lg"></div>
+                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
                                 <div className="flex flex-wrap">
 
                                     <div className="w-1/5">
-                                        <div className="absolute ml-4 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5 xl:pl-3">
                                         <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="relative px-4 -mt-16">
-                                <div className="bg-white p-3 rounded-lg shadow-lg">
+                                <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
                                     <div className="flex flex-wrap">
                                         <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-7/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap">
                                         <div className="w-1/2">
                                             <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
                                             </div>
                                         </div>
                                         <div className="w-1/2 relative">
                                             <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -377,46 +397,46 @@ function BusinessCompany() {
                             </div>
                         </div>
                     </div>
-                    <div className="my-1 px-1 w-full bg-white md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
                         <div className="wrapper">
                             <div className="relative">
-                                <div className="w-full h-72 bg-white rounded-xl shadow-lg"></div>
+                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
                                 <div className="flex flex-wrap">
 
                                     <div className="w-1/5">
-                                        <div className="absolute ml-4 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5 xl:pl-3">
                                         <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="relative px-4 -mt-16">
-                                <div className="bg-white p-3 rounded-lg shadow-lg">
+                                <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
                                     <div className="flex flex-wrap">
                                         <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-7/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap">
                                         <div className="w-1/2">
                                             <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
                                             </div>
                                         </div>
                                         <div className="w-1/2 relative">
                                             <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -424,46 +444,46 @@ function BusinessCompany() {
                             </div>
                         </div>
                     </div>
-                    <div className="my-1 px-1 w-full bg-white md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
                         <div className="wrapper">
                             <div className="relative">
-                                <div className="w-full h-72 bg-white rounded-xl shadow-lg"></div>
+                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
                                 <div className="flex flex-wrap">
 
                                     <div className="w-1/5">
-                                        <div className="absolute ml-4 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5 xl:pl-3">
                                         <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="relative px-4 -mt-16">
-                                <div className="bg-white p-3 rounded-lg shadow-lg">
+                                <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
                                     <div className="flex flex-wrap">
                                         <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-7/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap">
                                         <div className="w-1/2">
                                             <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
                                             </div>
                                         </div>
                                         <div className="w-1/2 relative">
                                             <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -471,46 +491,46 @@ function BusinessCompany() {
                             </div>
                         </div>
                     </div>
-                    <div className="my-1 px-1 w-full bg-white md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
                         <div className="wrapper">
                             <div className="relative">
-                                <div className="w-full h-72 bg-white rounded-xl shadow-lg"></div>
+                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
                                 <div className="flex flex-wrap">
 
                                     <div className="w-1/5">
-                                        <div className="absolute ml-4 top-0 bg-gray-100 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
                                     </div>
                                     <div className="w-4/5 xl:pl-3">
                                         <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
+                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="relative px-4 -mt-16">
-                                <div className="bg-white p-3 rounded-lg shadow-lg">
+                                <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
                                     <div className="flex flex-wrap">
                                         <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-8/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 xl:w-7/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap">
                                         <div className="w-1/2">
                                             <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
                                             </div>
                                         </div>
                                         <div className="w-1/2 relative">
                                             <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 w-12 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -691,12 +711,11 @@ function BusinessCompany() {
                                     slidesToShow={4}
                                     focusOnSelect={true}
                                     dots={false}
-                                    adaptiveHeight={true}
+                                    adaptiveHeight={false}
                                     infinite={true}
                                     slidesToScroll={1}
                                     loop={true}
-                                    speed={1000}
-                                    height={600}
+                                    speed={500}
                                     autoplay={true}
                                     autoplaySpeed={3000}
                                     swipeToSlide={true}

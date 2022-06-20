@@ -35,32 +35,31 @@ function StudentBoughtCourse() {
     const profile_picture = (() => {
         if (isLoading === true) {
             return (
-                <>
-                    <div className="xl:w-1/6 xl:mx-3 animate-pulse">
+                <div className="xl:w-full flex">
+                    <div className="xl:w-1/6 xl:px-3 animate-pulse">
                         <div className="rounded-md xl:h-44 xl:w-full bg-gray-100"></div>
                     </div>
 
-                    <div className="xl:w-1/6 xl:mx-3 animate-pulse">
+                    <div className="xl:w-1/6 xl:px-3 animate-pulse">
                         <div className="rounded-md xl:h-44 xl:w-full bg-gray-100"></div>
                     </div>
 
-                    <div className="xl:w-1/6 xl:mx-3 animate-pulse">
+                    <div className="xl:w-1/6 xl:px-3 animate-pulse">
                         <div className="rounded-md xl:h-44 xl:w-full bg-gray-100"></div>
                     </div>
 
-                    <div className="xl:w-1/6 xl:mx-3 animate-pulse">
+                    <div className="xl:w-1/6 xl:px-3 animate-pulse">
                         <div className="rounded-md xl:h-44 xl:w-full bg-gray-100"></div>
                     </div>
 
-                    <div className="xl:w-1/6 xl:mx-3 animate-pulse">
+                    <div className="xl:w-1/6 xl:px-3 animate-pulse">
                         <div className="rounded-md xl:h-44 xl:w-full bg-gray-100"></div>
                     </div>
 
-                    <div className="xl:w-1/6 xl:mx-3 animate-pulse">
+                    <div className="xl:w-1/6 xl:px-3 animate-pulse">
                         <div className="rounded-md xl:h-44 xl:w-full bg-gray-100"></div>
                     </div>
-                </>
-
+                </div>
             )
         }
         else if (isLoading === false) {
@@ -73,7 +72,7 @@ function StudentBoughtCourse() {
     })()
 
     return (
-        <div className="flex-basis flex xl:ml-32">
+        <div className="flex-wrap flex xl:ml-32">
             {
                 profile_picture
             }

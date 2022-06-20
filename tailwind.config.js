@@ -77,6 +77,9 @@ module.exports = {
       'dark-color4':'#252729',
       'dark-color5':'#272C34',
       'dark-color6':'#242830',
+
+      'dark-scleton1':'#1E2126',
+      'dark-scleton2':'#393D43',
     },
     container: {
       center: true,

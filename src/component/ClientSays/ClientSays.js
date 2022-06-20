@@ -32,38 +32,38 @@ function ClientSays() {
             return (
                 <div className="flex w-full flex-wrap xl:mt-6 p-3">
                     <div className="xl:basis-1/3 px-4 animate-pulse">
-                        <div className="bg-white rounded-2xl shadow-client border-none xl:p-12 h-full w-auto">
-                            <div className="rounded-full bg-gray-100 h-36 w-36 mt-8 mb-12"></div>
-                            <div className="mt-2 xl:w-12/12 h-3 bg-gray-100 rounded"></div>
-                            <div className="mt-2 xl:w-12/12 h-3 bg-gray-100 rounded"></div>
-                            <div className="mt-2 xl:w-8/12 h-3 bg-gray-100 rounded"></div>
-                            <div className="mt-2 xl:w-3/12 bg-gray-100 h-4 rounded"></div>
-                            <div className="mt-2 xl:w-6/12 bg-gray-100 h-5 rounded"></div>
-                            <div className="mt-2 xl:w-3/12 bg-gray-100 h-2 rounded"></div>
+                        <div className="bg-white dark:bg-dark-scleton1 rounded-2xl shadow-client border-none xl:p-12 h-full w-auto">
+                            <div className="rounded-full bg-gray-100 dark:bg-dark-scleton2 h-36 w-36 mt-8 mb-12"></div>
+                            <div className="mt-2 xl:w-12/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="mt-2 xl:w-12/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="mt-2 xl:w-8/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="mt-2 xl:w-3/12 bg-gray-100 h-4 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="mt-2 xl:w-6/12 bg-gray-100 h-5 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="mt-2 xl:w-3/12 bg-gray-100 h-2 dark:bg-dark-scleton2 rounded"></div>
                         </div>
                     </div>
 
                     <div className="xl:basis-1/3 px-4 animate-pulse">
-                        <div className="bg-white rounded-2xl shadow-client border-none xl:p-12 h-full w-auto">
-                            <div className="rounded-full bg-gray-100 h-36 w-36 mt-8 mb-12"></div>
-                            <div className="mt-2 xl:w-12/12 h-3 bg-gray-100 rounded"></div>
-                            <div className="mt-2 xl:w-12/12 h-3 bg-gray-100 rounded"></div>
-                            <div className="mt-2 xl:w-8/12 h-3 bg-gray-100 rounded"></div>
-                            <div className="mt-2 xl:w-3/12 bg-gray-100 h-4 rounded"></div>
-                            <div className="mt-2 xl:w-6/12 bg-gray-100 h-5 rounded"></div>
-                            <div className="mt-2 xl:w-3/12 bg-gray-100 h-2 rounded"></div>
+                        <div className="bg-white dark:bg-dark-scleton1 rounded-2xl shadow-client border-none xl:p-12 h-full w-auto">
+                            <div className="rounded-full bg-gray-100 dark:bg-dark-scleton2 h-36 w-36 mt-8 mb-12"></div>
+                            <div className="mt-2 xl:w-12/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="mt-2 xl:w-12/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="mt-2 xl:w-8/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="mt-2 xl:w-3/12 bg-gray-100 h-4 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="mt-2 xl:w-6/12 bg-gray-100 h-5 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="mt-2 xl:w-3/12 bg-gray-100 h-2 dark:bg-dark-scleton2 rounded"></div>
                         </div>
                     </div>
 
                     <div className="xl:basis-1/3 px-4 animate-pulse">
-                        <div className="bg-white rounded-2xl shadow-client border-none xl:p-12 h-full w-auto">
-                            <div className="rounded-full bg-gray-100 h-36 w-36 mt-8 mb-12"></div>
-                            <div className="mt-2 xl:w-12/12 h-3 bg-gray-100 rounded"></div>
-                            <div className="mt-2 xl:w-12/12 h-3 bg-gray-100 rounded"></div>
-                            <div className="mt-2 xl:w-8/12 h-3 bg-gray-100 rounded"></div>
-                            <div className="mt-2 xl:w-3/12 bg-gray-100 h-4 rounded"></div>
-                            <div className="mt-2 xl:w-6/12 bg-gray-100 h-5 rounded"></div>
-                            <div clclassNameass="mt-2 xl:w-3/12 bg-gray-100 h-2 rounded"></div>
+                        <div className="bg-white dark:bg-dark-scleton1 rounded-2xl shadow-client border-none xl:p-12 h-full w-auto">
+                            <div className="rounded-full bg-gray-100 dark:bg-dark-scleton2 h-36 w-36 mt-8 mb-12"></div>
+                            <div className="mt-2 xl:w-12/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="mt-2 xl:w-12/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="mt-2 xl:w-8/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="mt-2 xl:w-3/12 bg-gray-100 h-4 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="mt-2 xl:w-6/12 bg-gray-100 h-5 dark:bg-dark-scleton2 rounded"></div>
+                            <div clclassNameass="mt-2 xl:w-3/12 bg-gray-100 dark:bg-dark-scleton2 h-2 rounded"></div>
                         </div>
                     </div>
                 </div>
