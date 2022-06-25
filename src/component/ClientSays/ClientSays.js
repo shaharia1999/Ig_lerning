@@ -74,10 +74,10 @@ function ClientSays() {
     const says_client_data = (() => {
         if (isLoading === false) {
             return says_client.map((says_client, index) => (
-                <div key={index} className="xl:w-1/3 px-4">
-                    <div className="bg-white dark:bg-dark-color2 rounded-2xl shadow-client border-none xl:p-12 h-full w-auto">
-                        <img className="rounded-full h-36 w-36 mt-8 mb-12" src={ApiUrl.ImageBaseUrl + says_client.user_info.image} alt='' />
-                        <h5 className="text-base font-normal text-client-section-des leading-8 mb-4 mt-0 dark:text-white">{`${says_client.review_description.substring(0, 250)}...`}</h5>
+                <div key={index} className="xl:w-1/3 w-1/3 px-4">
+                    <div className="bg-white dark:bg-dark-color2 rounded-2xl shadow-client border-none xl:p-12 p-10 h-full w-auto">
+                        <img className="rounded-full h-36 w-36 xl:mt-8 mt-3 xl:mb-12 mb-6" src={ApiUrl.ImageBaseUrl + says_client.user_info.image} alt='' />
+                        <h5 className="xl:text-base text-sm font-normal text-client-section-des leading-8 mb-4 mt-0 dark:text-white">{`${says_client.review_description.substring(0, 250)}...`}</h5>
                         {(() => {
                             if (says_client.rating === 5) {
                                 return <ul className="flex sm:justify-center xl:justify-start mt-2">
@@ -116,8 +116,8 @@ function ClientSays() {
                                 </ul>
                             }
                         })()}
-                        <p className="text-sectionTitleColor text-2xl font-semibold dark:text-white">{says_client.user_info.username}</p>
-                        <p className="text-client-section-des text-md mt-2">Student</p>
+                        <p className="text-sectionTitleColor xl:text-2xl text-xl font-semibold dark:text-white">{says_client.user_info.username}</p>
+                        <p className="text-client-section-des xl:text-md mt-2">Student</p>
                     </div>
                 </div>
             ))
@@ -139,12 +139,41 @@ function ClientSays() {
         );
     }
     else if (isLoading === false) {
+        var settings = {
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        initialSlide: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        };
         return (
             <Fragment>
-                <div className="container xl:mt-8 xl:mb-12">
-                    <h4 className="text-4xl	font-semibold ml-3 text-sectionTitleColor dark:text-white">What Our Client Say</h4>
-                    <div className="xl:mt-6">
+                <div className="container xl:mt-8 mt-12 xl:mb-12">
+                    <h4 className="xl:text-4xl text-2xl	font-semibold ml-3 text-sectionTitleColor dark:text-white">What Our Client Say</h4>
+                    <div className="xl:mt-6 mt-4">
                         <Slider
+                            {...settings}
                             ref={(slider1) => setNav1(slider1)}
                             slidesToShow={3}
                             dots={true}

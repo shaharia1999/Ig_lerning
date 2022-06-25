@@ -100,7 +100,7 @@ function TopCategories() {
                 topCategory.map((category, index) => (
                     <div key={index} className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
                         <article className="overflow-hidden rounded-lg shadow-lg hover:opacity-30 hover:bg-black dark:bg-dark-color2">
-                            <img alt="Placeholder" className="block bg-fixed h-72 w-full" src={category.category_preview_img} />
+                            <img alt="Placeholder" className="block bg-fixed xl:h-72 h-64 w-full" src={category.category_preview_img} />
                             <h1 className="xl:text-lg xl:font-medium text-center text-maingray dark:text-white xl:mt-4 xl:mb-4">{category.category_name}</h1>
                         </article>
                     </div>
@@ -126,13 +126,43 @@ function TopCategories() {
     }
 
     if (isLoading === false) {
+        var settings = {
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        initialSlide: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        rows:1
+                    }
+                }
+            ]
+        };
         return (
             <Fragment>
                 <div className="container my-12">
-                    <h4 className="text-4xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Top Categories ({totalTopCategory}) </h4>
-                    <div className="xl:mt-4">
+                    <h4 className="xl:text-4xl text-2xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Top Categories ({totalTopCategory}) </h4>
+                    <div className="xl:mt-4 mt-3 sm:p-4">
 
                         <Slider
+                            {...settings}
                             ref={(slider3) => setNav3(slider3)}
                             slidesToShow={3}
                             dots={true}
