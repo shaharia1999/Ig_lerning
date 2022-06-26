@@ -1,10 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
-import Student1 from '../../../asset/images/student-bought/student1.png';
-import Student2 from '../../../asset/images/student-bought/student2.png';
-import Student3 from '../../../asset/images/student-bought/student3.png';
-import Student4 from '../../../asset/images/student-bought/student4.png';
-import Student5 from '../../../asset/images/student-bought/student5.png';
-import Student6 from '../../../asset/images/student-bought/student6.png';
+import React, { useState, useEffect } from "react";
 import ApiUrl from "../../../Api/ApiUrl";
 import axios from "axios";
 import { useParams } from 'react-router-dom'

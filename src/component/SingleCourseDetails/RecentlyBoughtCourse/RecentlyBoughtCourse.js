@@ -1,19 +1,15 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { FaStar } from "react-icons/fa";
 import SpeedMeter from "../../../asset/images/icon/icon_level.png";
 import CertificateIcon from "../../../asset/images/icon/icon_certificate.png";
 import LoveIcon from "../../../asset/images/icon/love-icon.png";
 import ShareIcon from "../../../asset/images/icon/icon_share.png";
-import Course1 from "../../../asset/images/course-thumbnail/course-thumbnail.png";
 import Play from "../../../asset/images/icon/play.png";
 import CourseLogo from "../../../asset/images/logo/course-logo.svg";
-import MyVideo from "../../../asset/video/mov_bbb.mp4"
 import 'tw-elements';
 import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";
 import StarRatings from 'react-star-ratings';
 import { Link } from 'react-router-dom';
-
 
 function RecentlyBoughtCourse() {
 

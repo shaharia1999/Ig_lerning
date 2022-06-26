@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { FaStar, FaRegThumbsUp, FaRegThumbsDown } from "react-icons/fa";
-import Teacher from "../../../asset/images/course-teacher/teacher.jpg";
+import { FaRegThumbsUp, FaRegThumbsDown } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";

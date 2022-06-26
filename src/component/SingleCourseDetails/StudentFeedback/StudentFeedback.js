@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { Fragment, useEffect, useState } from "react";
-import { FaStar, FaStepBackward } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 import ApiUrl from "../../../Api/ApiUrl";
 import StarRatings from 'react-star-ratings';
 import { useParams } from "react-router-dom";
