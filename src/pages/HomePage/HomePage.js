@@ -13,6 +13,7 @@ import RecommandForYou from '../../component/Home/RecommandForYou/RecommandForYo
 import OnlyOnIntelloGeek from '../../component/Home/OnlyOnIntelloGeek/OnlyOnIntelloGeek';
 import InBaseOfYourInterest from '../../component/Home/InBaseOfYourInterest/InBaseOfYourInterest';
 import darkModeTheme from "../../darkModeTheme";
+import NavMenuMobile from '../../component/Common/NavMenuMobile/NavMenuMobile';
 
 function HomePage() {
     useEffect(() => {
@@ -20,7 +21,13 @@ function HomePage() {
     }, [])
     return (
         <Fragment>
-            <NavBarTop />
+            <div className="Desktop">
+                <NavBarTop />
+            </div>
+            <div className="Mobile">
+                <NavMenuMobile />
+            </div>
+
             <HomeBanner />
             <BusinessCompany />
             <RecentlyAddedCourseSectionTwo />
