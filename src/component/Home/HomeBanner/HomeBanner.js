@@ -94,16 +94,16 @@ function HomeBanner() {
                     </Slider>
                 </div>
 
-                <div className="container -mt-28 stack flex ">
-                    <div className="flex flex-row bg-white dark:bg-dark-color2 rounded-xl shadow-client border-none lg:p-20 w-full text-center">
+                <div className="container xl:-mt-28 -mt-16 stack flex sm:p-6">
+                    <div className="flex flex-row bg-white dark:bg-dark-color2 rounded-xl shadow-client border-none xl:p-20 pt-4 pb-4 w-full text-center">
                         <div className="lg:basis-1/3">
                             <div className="image-center">
                                 <img
-                                    className="h-24 w-24 object-contain"
+                                    className="xl:h-24 xl:w-24 h-12 w-12 object-contain"
                                     src={Certificate} alt="" />
                             </div>
                             <h6
-                                className="text-2xl text-sectionTitleColor font-medium xl:mt-1 dark:text-white">
+                                className="xl:text-2xl text-xs text-sectionTitleColor font-medium xl:mt-1 dark:text-white">
                                 100% Certificate Obtaining
                             </h6>
                         </div>
@@ -111,12 +111,12 @@ function HomeBanner() {
                         <div className="lg:basis-1/3">
                             <div className="image-center">
                                 <img
-                                    className="h-24 w-24 object-contain"
+                                    className="xl:h-24 xl:w-24 h-12 w-12 object-contain"
                                     src={Globe}
                                     alt="" />
                             </div>
                             <h6
-                                className="text-2xl text-sectionTitleColor font-medium xl:mt-1 dark:text-white">
+                                className="xl:text-2xl text-xs text-sectionTitleColor font-medium xl:mt-1 dark:text-white">
                                 Live every where in
                                 the world
                             </h6>
@@ -125,11 +125,11 @@ function HomeBanner() {
                         <div className="lg:basis-1/3">
                             <div className="image-center">
                                 <img
-                                    className="h-24 w-24 object-contain"
+                                    className="xl:h-24 xl:w-24 h-12 w-12 object-contain"
                                     src={Teacher} alt="" />
                             </div>
                             <h6
-                                className="text-2xl text-sectionTitleColor font-medium xl:mt-1 dark:text-white">
+                                className="xl:text-2xl text-xs text-sectionTitleColor font-medium xl:mt-1 dark:text-white">
                                 Learn with the best
                                 teachers
                             </h6>
