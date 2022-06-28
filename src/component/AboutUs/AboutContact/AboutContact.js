@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 function AboutContact() {
     return (
         <Fragment>
-            <section className="object-center xl:mt-36 xl:mb-20">
+            <section className="object-center xl:mt-36 xl:mb-20 xl:visible invisible">
                 <div className="container AboutContact">
                     <div className="flex flex-basis">
 

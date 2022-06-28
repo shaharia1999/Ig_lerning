@@ -5,20 +5,19 @@ function ProvideVission() {
     return (
         <Fragment>
             <section className="bg-visionBg dark:bg-dark-color2">
-                <div className="container lg:pt-20 lg:pb-20">
-                    <div className="flex flex-wrap lg:mt-6">
+                <div className="container xl:pt-20 xl:pb-20">
+                    <div className="flex flex-wrap xl:mt-6">
 
-                        <div className="lg:w-1/2 w-full xl:pr-24 lg:mt-40">
-                            <div className="lg:p-6">
-                                <p className="text-about-text1 dark:text-white lg:text-5xl lg:mb-6 lg:font-semibold">We provide a vision to transform your life with learning...</p>
-
-                                <p className="text-about-text1 dark:text-gray-400 lg:text-lg font-normal lg:mt-5">Get your tests delivered at let home collect sample from the victory of the managments that supplies best design system guidelines ever.</p>
+                        <div className="xl:w-1/2 w-full xl:pr-24 xl:mt-40 mt-10">
+                            <div className="xl:p-6 pl-5 pr-5">
+                                <p className="text-about-text1 dark:text-white xl:text-5xl text-2xl xl:mb-6 font-semibold">We provide a vision to transform your life with learning...</p>
+                                <p className="text-about-text1 dark:text-gray-400 xl:text-lg text-base font-normal xl:mt-5 mt-3">Get your tests delivered at let home collect sample from the victory of the managments that supplies best design system guidelines ever.</p>
                             </div>
                         </div>
 
-                        <div className="lg:w-1/2 w-full">
-                            <div className="lg:p-6">
-                                <img className="vision-image" src={Vision} alt=""/>
+                        <div className="xl:w-1/2 w-full">
+                            <div className="xl:p-6 p-4 ">
+                                <img className="vision-image xl:mt-0 -mt-28 -mb-28" src={Vision} alt=""/>
                             </div>
                         </div>
 

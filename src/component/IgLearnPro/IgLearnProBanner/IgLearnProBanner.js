@@ -11,19 +11,19 @@ class IgLearnProBanner extends Component {
             <Fragment>
                 <div className="IgLearnProBanner">
                     <div className="container">
-                        <div className="flex flex-auto">
-                            <div className="lg:basis-1/2">
-                                <h2 className="text-white lg:font-semibold lg:text-5xl lg:mt-80 ">Train your team!</h2>
-                                <h2 className="text-white lg:font-semibold lg:text-5xl mt-6">Thanks to IntelloGeek Learning</h2>
+                        <div className="flex flex-auto xl:p-0 p-3">
+                            <div className="xl:basis-1/2 basis-full ">
+                                <h2 className="text-white xl:font-semibold xl:text-5xl text-xl xl:mt-80 mt-12">Train your team!</h2>
+                                <h2 className="text-white xl:font-semibold xl:text-5xl text-xl xl:mt-6 mt-0">Thanks to IntelloGeek Learning</h2>
 
-                                <h6 className="text-white lg:font-extralight lg:text-xl mt-6 lg:mr-12 lg:mb-10">and grow the sale turnover of your company.
+                                <h6 className="text-white xl:font-extralight xl:text-xl mt-6 xl:mr-12 xl:mb-10">and grow the sale turnover of your company.
                                     companies that have increased their productivity and
                                     success with us</h6>
 
-                                <Link to="/"><span className="text-sm font-normal leading-tight bg-maincolor text-white lg:pl-16 lg:pr-16 lg:pt-4 lg:pb-4 rounded-3xl mx-2 h-11">Start Trial</span></Link>
+                                <Link to="/"><span className="text-sm font-normal leading-tight bg-maincolor text-white xl:pl-16 xl:pr-16 xl:pt-4 xl:pb-4 rounded-3xl mx-2 h-11">Start Trial</span></Link>
                             </div>
 
-                            <div className="lg:basis-1/2">
+                            <div className="xl:basis-1/2">
 
                             </div>
                         </div>
@@ -31,26 +31,26 @@ class IgLearnProBanner extends Component {
                 </div>
 
                 <div className="container -mt-28">
-                    <div className="flex flex-row bg-white dark:bg-dark-color2 rounded-xl shadow-client border-none lg:p-4 w-full text-center">
-                        <div className="lg:basis-1/4">
+                    <div className="flex flex-row bg-white dark:bg-dark-color2 rounded-xl shadow-client border-none xl:p-4 w-full text-center">
+                        <div className="xl:basis-1/4">
                             <div className="image-center">
                                 <img className="h-48 w-56 object-contain" src={Google} alt="" />
                             </div>
                         </div>
 
-                        <div className="lg:basis-1/4">
+                        <div className="xl:basis-1/4">
                             <div className="image-center">
                                 <img className="h-48 w-56 object-contain" src={LogoMba} alt="" />
                             </div>
                         </div>
 
-                        <div className="lg:basis-1/4">
+                        <div className="xl:basis-1/4">
                             <div className="image-center">
                                 <img className="h-48 w-56 object-contain" src={Politecnico} alt="" />
                             </div>
                         </div>
 
-                        <div className="lg:basis-1/4">
+                        <div className="xl:basis-1/4">
                             <div className="image-center">
                                 <img className="h-48 w-56 object-contain" src={Uci} alt="" />
                             </div>
