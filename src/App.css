@@ -15,6 +15,36 @@
   padding: 0 !important;
 }
 
+
+/*X-Small devices portrait phones*/
+@media (min-width: 375.98px) and (max-width: 575.98px) {
+
+  .LearningTeaching {
+    background-image: url('../src/asset/images/banner/learning-teaching.svg');
+    width: 100% !important;
+    height: 800px !important;
+    opacity: 1;
+    background-position: center;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    margin-top: -200px !important;
+    padding: 0 !important;
+  }
+
+  .LearningTeachingBlack {
+    background-image: url('../src/asset/images/banner/learning-teaching-black.svg');
+    width: 100% !important;
+    height: 800px !important;
+    opacity: 1;
+    background-position: center;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    margin-top: -200px !important;
+    padding: 0 !important;
+  }
+}
+
+
 .LearningTeaching {
   background-image: url('../src/asset/images/banner/learning-teaching.svg');
   width: 100% !important;
@@ -69,6 +99,22 @@
   background-size: cover;
   margin: 0 !important;
   padding: 0 !important;
+}
+
+
+/*X-Small devices portrait phones*/
+@media (min-width: 375.98px) and (max-width: 575.98px) {
+  .IgLearnProBanner {
+    background-image: url('../src/asset/images/banner/IgLearnProBanner.png');
+    width: 100% !important;
+    height: 400px !important;
+    opacity: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }
 
 .ContactBanner {
@@ -405,14 +451,14 @@ webrouk-custom-range {
   padding-bottom: 20px !important;
 }
 
-.cart-summery-card-height{
+.cart-summery-card-height {
   height: 440px;
 }
 
 
 
 
-.slide-arrow-font-next{
+.slide-arrow-font-next {
   font-size: 24px;
   font-weight: 900;
   color: #D76E2D;
@@ -420,7 +466,7 @@ webrouk-custom-range {
   margin-left: -20px !important;
 }
 
-.slide-arrow-font-previous{
+.slide-arrow-font-previous {
   font-size: 24px;
   font-weight: 900;
   color: #D76E2D;

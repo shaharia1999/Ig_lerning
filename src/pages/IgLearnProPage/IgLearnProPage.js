@@ -9,6 +9,7 @@ import Partner from '../../component/Home/Partner/Partner';
 import Footer from '../../component/Common/Footer/Footer';
 import CopyRight from '../../component/Common/CopyRight/CopyRight';
 import darkModeTheme from "../../darkModeTheme";
+import NavMenuMobile from '../../component/Common/NavMenuMobile/NavMenuMobile';
 
 function IgLearnProPage() {
     useEffect(() => {
@@ -16,7 +17,12 @@ function IgLearnProPage() {
     }, [])
     return (
         <Fragment>
-            <NavBarTop />
+             <div className="Desktop">
+                <NavBarTop />
+            </div>
+            <div className="Mobile">
+                <NavMenuMobile />
+            </div>
             <IgLearnProBanner />
             <CoachTrainer />
             <OurFeatures />

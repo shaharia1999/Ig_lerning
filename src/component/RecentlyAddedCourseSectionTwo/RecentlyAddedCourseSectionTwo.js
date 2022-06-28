@@ -652,7 +652,8 @@ function RecentlyAddedCourseSectionTwo() {
                     breakpoint: 480,
                     settings: {
                         slidesToShow: 3,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        arrows:false
                     }
                 }
             ]
@@ -680,7 +681,8 @@ function RecentlyAddedCourseSectionTwo() {
                     breakpoint: 480,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        arrows:false
                     }
                 }
             ]
@@ -708,7 +710,8 @@ function RecentlyAddedCourseSectionTwo() {
                     breakpoint: 480,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        arrows:false
                     }
                 }
             ]
@@ -760,7 +763,7 @@ function RecentlyAddedCourseSectionTwo() {
                             <ul className="nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4">
                             <Slider
                                 {...settings1}
-                                slidesToShow={5}
+                                slidesToShow={3}
                                 focusOnSelect={true}
                                 dots={false}
                                 adaptiveHeight={false}

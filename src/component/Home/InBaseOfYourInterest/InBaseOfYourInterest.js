@@ -438,7 +438,8 @@ function InBaseOfYourInterest() {
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
-                        rows: 1
+                        rows: 1,
+                        arrows:false
                     }
                 }
             ]

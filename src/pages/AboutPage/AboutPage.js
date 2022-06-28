@@ -12,6 +12,7 @@ import LearningTeachingSection from "../../component/AboutUs/LearningTeachingSec
 import AboutContact from "../../component/AboutUs/AboutContact/AboutContact";
 import WeEmpower from "../../component/AboutUs/WeEmpower/WeEmpower";
 import darkModeTheme from "../../darkModeTheme";
+import NavMenuMobile from '../../component/Common/NavMenuMobile/NavMenuMobile';
 
 function AboutPage() {
     useEffect(() => {
@@ -19,7 +20,12 @@ function AboutPage() {
     }, [])
     return (
         <Fragment>
-            <NavBarTop />
+             <div className="Desktop">
+                <NavBarTop />
+            </div>
+            <div className="Mobile">
+                <NavMenuMobile />
+            </div>
             <AboutBanner />
             <LearningTeachingSection />
             <OurMission />
