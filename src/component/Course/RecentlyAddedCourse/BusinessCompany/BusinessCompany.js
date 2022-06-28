@@ -145,9 +145,9 @@ function BusinessCompany() {
             return subCategory.map((subcategory, index) => (
                 <div key={index}>
                     <input id={subcategory.sub_category_id} type='hidden' name={subcategory.sub_category_id} />
-                    <li className="nav-item" role="presentation">
+                    <li className="nav-item list-none" role="presentation">
                         <button type="button"
-                            className="nav-link block w-full md:w-auto px-6 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 text-base bg-maincolor font-medium leading-tight text-black rounded-3xl mx-2 h-11"
+                            className="nav-link block w-full md:w-auto px-6 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 xl:text-base text-sm bg-maincolor font-medium leading-tight text-black rounded-3xl mx-2 h-11"
                             onClick={() => fetchData(subcategory.sub_category_id)}
                         >
                             {subcategory.sub_category_name}
@@ -551,25 +551,25 @@ function BusinessCompany() {
                         <div className="wrapper antialiased text-gray-900">
                             <div className="relative">
                                 <video type="video/mp4" muted
-                                    loop className="w-full vid h-72 object-cover object-center rounded-lg shadow-md"
+                                    loop className="w-full vid xl:h-72 h-56 object-cover object-center rounded-lg shadow-md"
                                     src={ApiUrl.ImageBaseUrl + course.promotional_video}></video>
 
                                 <div className="flex flex-wrap">
                                     <div className="w-1/5">
                                         <a href="!#">
                                             <div
-                                                className="text-sm absolute top-0 left-2 bg-black text-white rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
-                                                <img className="h-12 w-12" src={CourseLogo} alt="" />
+                                                className="text-sm absolute top-0 xl:left-2 left-4 bg-black text-white rounded-full xl:h-12 xl:w-12 h-6 w-6 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                                                <img className="xl:h-12 xl:w-12 h-6 w-6" src={CourseLogo} alt="" />
                                             </div>
                                         </a>
                                     </div>
                                     <div className="w-4/5">
                                         <a href="!#">
-                                            <div className="text-lg absolute top-0 text-white mt-5">
-                                                <h6 className="font-medium text-lg text-black xl:-mt-1">{course?.channel_name?.channel_name}</h6>
-                                                <h6 className="font-light text-base text-black">{course.course_duration} min</h6>
+                                            <div className="text-lg absolute top-0 xl:mt-5 mt-3 sm:ml-3">
+                                                <h6 className="xl:font-medium font-normal xl:text-lg text-sm text-black dark:text-white">{course?.channel_name?.channel_name}</h6>
+                                                <h6 className="font-light xl:text-sm text-xs text-black dark:text-white">{course.course_duration} min</h6>
 
-                                                <img className="lg:h-36 ml-8" src={Play} alt="" />
+                                                <img className="xl:h-36 h-24 ml-8" src={Play} alt="" />
                                             </div>
                                         </a>
                                     </div>
@@ -578,28 +578,28 @@ function BusinessCompany() {
                             <div className="relative px-4 -mt-16">
                                 <div className="bg-white dark:bg-dark-color2 xl:h-36 p-3 rounded-lg shadow-lg">
                                     <div className="flex flex-wrap">
-                                        <div className="w-4/5">
-                                            <h4 className="mt-1 xl:text-base font-medium leading-tight text-CourseTitle dark:text-white">
+                                        <div className="w-full">
+                                            <h4 className="mt-1 xl:text-base text-sm font-semibold text xl:leading-tight leading-none text-CourseTitle dark:text-white">
                                                 {`${course.course_title.substring(0, 40)}...`}
                                             </h4>
                                         </div>
-                                        <div className="w-1/5 justify-end flex">
+                                        {/* <div className="w-1/5 justify-end flex">
                                             <button
                                                 className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white h-6 xl:pl-3 xl:pr-3 xl:pt-1 xl:pb-1 rounded">Live
                                             </button>
-                                        </div>
+                                        </div> */}
                                     </div>
 
                                     <div className="flex flex-wrap">
                                         <div className="w-2/3">
                                             <div className="flex sm:justify-center xl:justify-start">
-                                                <span className="text-gray-600 text-sm">77 Participients</span>
+                                                <span className="text-gray-600 xl:text-sm text-xs">77 Participients</span>
                                             </div>
                                         </div>
                                         <div className="w-1/3">
                                             <div className="flex relative sm:justify-center xl:justify-start">
                                                 <span
-                                                    className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">${course?.course_price[0]?.new_price}</span>
+                                                    className="text-maincolor xl:text-lg text-base font-medium inset-y-0 right-0 absolute">${course?.course_price[0]?.new_price}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -611,25 +611,26 @@ function BusinessCompany() {
                                             starSpacing="4px"
                                             starRatedColor="rgb(251, 191, 36)"
                                         />
-                                        <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">({course.avg_rating})</h6>
+                                        <h6 className="mb-4 mx-1 xl:text-sm text-xs font-normal text-client-section-des">({course.avg_rating})</h6>
                                     </ul>
 
                                     <div className="flex flex-wrap">
                                         <div className="w-1/2">
-                                            <div className="flex sm:justify-center xl:justify-start -mt-3">
-                                                <a><img className="px-1 h-6 w-8" src={SpeedMeter} alt="" /></a>
-                                                <a><img className="px-1 h-6 w-8" src={ShareIcon} alt="" /></a>
-                                                <a><img className="px-1 h-6 w-8" src={CertificateIcon} alt="" /></a>
+                                            <div className="flex sm:justify-center xl:justify-start xl:-mt-3 -mt-1">
+                                                <a><img className="xl:px-1 px-0.5 xl:h-6 xl:w-8 h-4 w-5" src={SpeedMeter} alt="" /></a>
+                                                <a><img className="xl:px-1 px-0.5 xl:h-6 xl:w-8 h-4 w-5" src={ShareIcon} alt="" /></a>
+                                                <a><img className="xl;px-1 px-0.5 xl:h-6 xl:w-8 h-4 w-5" src={CertificateIcon} alt="" /></a>
                                             </div>
                                         </div>
                                         <div className="w-1/2 relative">
                                             <div
-                                                className="flex sm:justify-center xl:justify-start -mt-3 right-0 absolute">
+                                                className="flex sm:justify-center xl:justify-start xl:-mt-3 -mt-1 right-0 absolute">
                                                 <button
-                                                    className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-md">
-                                                    <img className="px-1 h-3 w-5" src={LoveIcon} alt="" /></button>
+                                                    className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white xl:pl-1 xl:pr-1 xl:pt-1 xl:pb-1 xl:mr-1 rounded-sm">
+                                                    <img className="px-1 xl:h-3 xl:w-5 h-3 w-5" src={LoveIcon} alt="" />
+                                                </button>
                                                 <button
-                                                    className="text-sm font-extralight leading-tight bg-maincolor text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-sm">Enroll
+                                                    className="xl:text-sm text-xs font-extralight leading-tight bg-maincolor text-white xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 pr-px pl-0.5 rounded-sm">Enroll
                                                     Now
                                                 </button>
                                             </div>
@@ -649,9 +650,9 @@ function BusinessCompany() {
             <Fragment>
                 <div className="container my-12">
                     <div className="flex flex-wrap">
-                        <div className="w-1/3">
+                        <div className="xl:w-1/3 w-full">
                             <div className="flex">
-                                <h4 className="text-4xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Recently Added
+                                <h4 className="xl:text-4xl text-xl font-semibold text-sectionTitleColor dark:text-white ml-3">Recently Added
                                     Course</h4>
                             </div>
                         </div>
@@ -681,32 +682,80 @@ function BusinessCompany() {
         );
     }
     else if (isLoading === false) {
+        var settings = {
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        initialSlide: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        rows: 1
+                    }
+                }
+            ]
+        };
+
         return (
             <Fragment>
                 <div className="container my-12">
                     <div className="flex flex-wrap">
-                        <div className="w-1/3">
+                        <div className="xl:w-1/3 w-full">
                             <div className="flex">
-                                <h4 className="text-4xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Recently Added
+                                <h4 className="xl:text-4xl text-xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Recently Added
                                     Course</h4>
                             </div>
                         </div>
-                        <div className="w-2/3 relative">
-                            <div className="flex right-0 absolute">
+                        <div className="xl:w-2/3 w-full relative sm:mt-4">
+                            {/* <div className="flex right-0 absolute">
                                 <div className="mb-4">
-                                    <ul className="nav nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4">
-                                        {
-                                            data_of_subcategory
-                                        }
-                                    </ul>
+                                    <ul className="nav nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4"> */}
+                            <Slider
+                                {...settings}
+
+                                slidesToShow={4}
+                                focusOnSelect={true}
+                                dots={false}
+                                adaptiveHeight={false}
+                                infinite={true}
+                                slidesToScroll={1}
+                                loop={true}
+                                speed={300}
+                                autoplay={false}
+                                autoplaySpeed={1500}
+                                swipeToSlide={true}
+                            >
+                                {
+                                    data_of_subcategory
+                                }
+                            </Slider>
+
+                            {/* </ul>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="mt-4">
                         <div className="fade show active">
                             <div className="-mx-1 lg:-mx-4">
                                 <Slider
+                                    {...settings}
                                     ref={(slider9) => setNav9(slider9)}
                                     slidesToShow={4}
                                     focusOnSelect={true}

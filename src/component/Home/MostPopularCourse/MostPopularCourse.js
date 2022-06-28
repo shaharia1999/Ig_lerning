@@ -13,10 +13,10 @@ import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";
 import StarRatings from 'react-star-ratings';
 import { Link } from 'react-router-dom';
-import {MdOutlineArrowBackIos, MdOutlineArrowForwardIos} from "react-icons/md";
+import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from "react-icons/md";
 
 function SampleNextArrow(props) {
-    const {className, style, onClick} = props;
+    const { className, style, onClick } = props;
     return (
         <button
             className={className}
@@ -41,13 +41,13 @@ function SampleNextArrow(props) {
             }}
             onClick={onClick}
         >
-            <span className="slide-arrow-font-next"><MdOutlineArrowForwardIos/></span>
+            <span className="slide-arrow-font-next"><MdOutlineArrowForwardIos /></span>
         </button>
     );
 }
 
 function SamplePrevArrow(props) {
-    const {className, style, onClick} = props;
+    const { className, style, onClick } = props;
     return (
         <button
             className={className}
@@ -72,7 +72,7 @@ function SamplePrevArrow(props) {
             }}
             onClick={onClick}
         >
-            <span className="slide-arrow-font-previous"><MdOutlineArrowBackIos/></span>
+            <span className="slide-arrow-font-previous"><MdOutlineArrowBackIos /></span>
         </button>
     );
 }
@@ -99,194 +99,194 @@ function MostPopularCourse() {
     const MostPopularCourseDataLoading = (() => {
         return (
             <>
-                 <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
-                        <div className="wrapper">
-                            <div className="relative">
-                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
-                                <div className="flex flex-wrap">
+                <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                    <div className="wrapper">
+                        <div className="relative">
+                            <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
+                            <div className="flex flex-wrap">
 
-                                    <div className="w-1/5">
-                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
-                                    </div>
-                                    <div className="w-4/5 xl:pl-3">
-                                        <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
-                                        </div>
+                                <div className="w-1/5">
+                                    <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                </div>
+                                <div className="w-4/5 xl:pl-3">
+                                    <div className="absolute top-0 mt-5">
+                                        <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
+                                        <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                        <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="relative px-4 -mt-16">
-                                <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
-                                    <div className="flex flex-wrap">
-                                        <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
+                        </div>
+                        <div className="relative px-4 -mt-16">
+                            <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
+                                <div className="flex flex-wrap">
+                                    <div className="w-full">
+                                        <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
+                                    </div>
+                                </div>
+                                <div className="flex flex-wrap">
+                                    <div className="w-1/2">
+                                        <div className="flex sm:justify-center xl:justify-start">
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
                                         </div>
                                     </div>
-                                    <div className="flex flex-wrap">
-                                        <div className="w-1/2">
-                                            <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                            </div>
-                                        </div>
-                                        <div className="w-1/2 relative">
-                                            <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
-                                            </div>
+                                    <div className="w-1/2 relative">
+                                        <div className="flex sm:justify-center xl:justify-start right-0 absolute">
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
-                        <div className="wrapper">
-                            <div className="relative">
-                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
-                                <div className="flex flex-wrap">
+                </div>
+                <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                    <div className="wrapper">
+                        <div className="relative">
+                            <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
+                            <div className="flex flex-wrap">
 
-                                    <div className="w-1/5">
-                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
-                                    </div>
-                                    <div className="w-4/5 xl:pl-3">
-                                        <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
-                                        </div>
+                                <div className="w-1/5">
+                                    <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                </div>
+                                <div className="w-4/5 xl:pl-3">
+                                    <div className="absolute top-0 mt-5">
+                                        <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
+                                        <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                        <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="relative px-4 -mt-16">
-                                <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
-                                    <div className="flex flex-wrap">
-                                        <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
+                        </div>
+                        <div className="relative px-4 -mt-16">
+                            <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
+                                <div className="flex flex-wrap">
+                                    <div className="w-full">
+                                        <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
+                                    </div>
+                                </div>
+                                <div className="flex flex-wrap">
+                                    <div className="w-1/2">
+                                        <div className="flex sm:justify-center xl:justify-start">
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
                                         </div>
                                     </div>
-                                    <div className="flex flex-wrap">
-                                        <div className="w-1/2">
-                                            <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                            </div>
-                                        </div>
-                                        <div className="w-1/2 relative">
-                                            <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
-                                            </div>
+                                    <div className="w-1/2 relative">
+                                        <div className="flex sm:justify-center xl:justify-start right-0 absolute">
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
-                        <div className="wrapper">
-                            <div className="relative">
-                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
-                                <div className="flex flex-wrap">
+                </div>
+                <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                    <div className="wrapper">
+                        <div className="relative">
+                            <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
+                            <div className="flex flex-wrap">
 
-                                    <div className="w-1/5">
-                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
-                                    </div>
-                                    <div className="w-4/5 xl:pl-3">
-                                        <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
-                                        </div>
+                                <div className="w-1/5">
+                                    <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                </div>
+                                <div className="w-4/5 xl:pl-3">
+                                    <div className="absolute top-0 mt-5">
+                                        <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
+                                        <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                        <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="relative px-4 -mt-16">
-                                <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
-                                    <div className="flex flex-wrap">
-                                        <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
+                        </div>
+                        <div className="relative px-4 -mt-16">
+                            <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
+                                <div className="flex flex-wrap">
+                                    <div className="w-full">
+                                        <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
+                                    </div>
+                                </div>
+                                <div className="flex flex-wrap">
+                                    <div className="w-1/2">
+                                        <div className="flex sm:justify-center xl:justify-start">
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
                                         </div>
                                     </div>
-                                    <div className="flex flex-wrap">
-                                        <div className="w-1/2">
-                                            <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                            </div>
-                                        </div>
-                                        <div className="w-1/2 relative">
-                                            <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
-                                            </div>
+                                    <div className="w-1/2 relative">
+                                        <div className="flex sm:justify-center xl:justify-start right-0 absolute">
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
-                        <div className="wrapper">
-                            <div className="relative">
-                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
-                                <div className="flex flex-wrap">
+                </div>
+                <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
+                    <div className="wrapper">
+                        <div className="relative">
+                            <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
+                            <div className="flex flex-wrap">
 
-                                    <div className="w-1/5">
-                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
-                                    </div>
-                                    <div className="w-4/5 xl:pl-3">
-                                        <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
-                                        </div>
+                                <div className="w-1/5">
+                                    <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                </div>
+                                <div className="w-4/5 xl:pl-3">
+                                    <div className="absolute top-0 mt-5">
+                                        <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
+                                        <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
+                                        <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="relative px-4 -mt-16">
-                                <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
-                                    <div className="flex flex-wrap">
-                                        <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
+                        </div>
+                        <div className="relative px-4 -mt-16">
+                            <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
+                                <div className="flex flex-wrap">
+                                    <div className="w-full">
+                                        <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                        <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
+                                    </div>
+                                </div>
+                                <div className="flex flex-wrap">
+                                    <div className="w-1/2">
+                                        <div className="flex sm:justify-center xl:justify-start">
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
                                         </div>
                                     </div>
-                                    <div className="flex flex-wrap">
-                                        <div className="w-1/2">
-                                            <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                            </div>
-                                        </div>
-                                        <div className="w-1/2 relative">
-                                            <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
-                                            </div>
+                                    <div className="w-1/2 relative">
+                                        <div className="flex sm:justify-center xl:justify-start right-0 absolute">
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                            <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
             </>
         )
     })()
@@ -298,7 +298,7 @@ function MostPopularCourse() {
                     <div className="wrapper antialiased text-gray-900">
                         <div className="relative">
                             <video type="video/mp4" muted
-                                loop className="w-full vid h-72 object-cover object-center rounded-lg shadow-md"
+                                loop className="w-full vid xl:h-72 h-56 object-cover object-center rounded-lg shadow-md"
                                 src={ApiUrl.ImageBaseUrl + intellogeek_data?.promotional_video}></video>
                             {/* <img className="w-full h-72 object-cover object-center rounded-lg shadow-md" src={Course1} /> */}
 
@@ -306,18 +306,18 @@ function MostPopularCourse() {
                                 <div className="w-1/5">
                                     <a href="!#">
                                         <div
-                                            className="text-sm absolute top-0 left-2 bg-black text-white rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
-                                            <img className="h-12 w-12" src={CourseLogo} alt="" />
+                                            className="text-sm absolute top-0 xl:left-2 left-4 bg-black text-white rounded-full xl:h-12 xl:w-12 h-6 w-6 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                                            <img className="xl:h-12 xl:w-12 h-6 w-6" src={CourseLogo} alt="" />
                                         </div>
                                     </a>
                                 </div>
                                 <div className="w-4/5">
                                     <a href="!#">
-                                        <div className="text-lg absolute top-0 text-black mt-5">
-                                            <h6 className="font-medium text-lg text-black">{intellogeek_data?.channel_name_id?.channel_name}</h6>
-                                            <h6 className="font-light text-base text-black">{intellogeek_data.course_duration} min</h6>
+                                        <div className="text-lg absolute top-0 xl:mt-5 mt-3 sm:ml-3">
+                                            <h6 className="font-medium xl:text-lg text-sm text-black dark:text-white">{intellogeek_data?.channel_name_id?.channel_name}</h6>
+                                            <h6 className="font-light xl:text-sm text-xs text-black dark:text-white">{intellogeek_data.course_duration} min</h6>
 
-                                            <img className="xl:h-36 ml-8" src={Play} alt="" />
+                                            <img className="xl:h-36 h-24 ml-8" src={Play} alt="" />
                                         </div>
                                     </a>
                                 </div>
@@ -329,7 +329,7 @@ function MostPopularCourse() {
                                     <div className="w-4/5">
                                         <Link
                                             to={`/course-details/${intellogeek_data.course_id}`}
-                                            className="mt-1 xl:text-base font-semibold text leading-tight text-CourseTitle dark:text-white">
+                                            className="mt-1 xl:text-base text-sm font-semibold text xl:leading-tight leading-none text-CourseTitle dark:text-white">
                                             {`${intellogeek_data.course_title.substring(0, 40)}...`}
                                         </Link>
                                     </div>
@@ -343,13 +343,13 @@ function MostPopularCourse() {
                                 <div className="flex flex-wrap">
                                     <div className="w-2/3">
                                         <div className="flex sm:justify-center xl:justify-start">
-                                            <span className="text-gray-600 dark:text-gray-500 text-sm">77 Participients</span>
+                                            <span className="text-gray-600 xl:text-sm text-xs">77 Participients</span>
                                         </div>
                                     </div>
                                     <div className="w-1/3">
                                         <div className="flex relative sm:justify-center xl:justify-start">
                                             <span
-                                                className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">
+                                                className="text-maincolor xl:text-lg text-base font-medium inset-y-0 right-0 absolute">
                                                 ${intellogeek_data?.course_price[0]?.new_price}
                                             </span>
                                         </div>
@@ -363,27 +363,28 @@ function MostPopularCourse() {
                                         starSpacing="4px"
                                         starRatedColor="rgb(251, 191, 36)"
                                     />
-                                    <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des dark:text-gray-500">
+                                    <h6 className="mb-4 mx-1 xl:text-sm text-xs font-normal text-client-section-des">
                                         ({intellogeek_data?.avg_rating})
                                     </h6>
                                 </ul>
 
                                 <div className="flex flex-wrap">
                                     <div className="w-1/2">
-                                        <div className="flex sm:justify-center xl:justify-start -mt-3">
-                                            <a><img className="px-1 h-6 w-8" src={SpeedMeter} alt="" /></a>
-                                            <a><img className="px-1 h-6 w-8" src={ShareIcon} alt="" /></a>
-                                            <a><img className="px-1 h-6 w-8" src={CertificateIcon} alt="" /></a>
+                                        <div className="flex sm:justify-center xl:justify-start xl:-mt-3 -mt-1">
+                                            <a><img className="xl:px-1 px-0.5 xl:h-6 xl:w-8 h-4 w-5" src={SpeedMeter} alt="" /></a>
+                                            <a><img className="xl:px-1 px-0.5 xl:h-6 xl:w-8 h-4 w-5" src={ShareIcon} alt="" /></a>
+                                            <a><img className="xl;px-1 px-0.5 xl:h-6 xl:w-8 h-4 w-5" src={CertificateIcon} alt="" /></a>
                                         </div>
                                     </div>
                                     <div className="w-1/2 relative">
                                         <div
-                                            className="flex sm:justify-center xl:justify-start -mt-3 right-0 absolute">
+                                            className="flex sm:justify-center xl:justify-start xl:-mt-3 -mt-1 right-0 absolute">
                                             <button
-                                                className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white lg:pl-1 lg:pr-1 lg:pt-1 lg:pb-1 xl:mr-1 rounded-sm">
-                                                <img className="px-1 h-3 w-5" src={LoveIcon} alt="" /></button>
+                                                className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white xl:pl-1 xl:pr-1 xl:pt-1 xl:pb-1 xl:mr-1 rounded-sm">
+                                                <img className="px-1 xl:h-3 xl:w-5 h-3 w-5" src={LoveIcon} alt="" />
+                                            </button>
                                             <button
-                                                className="text-sm font-extralight leading-tight bg-maincolor text-white lg:pl-2 lg:pr-2 lg:pt-1 lg:pb-1 rounded-sm">Enroll
+                                                className="xl:text-sm text-xs font-extralight leading-tight bg-maincolor text-white xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 pr-px pl-0.5 rounded-sm">Enroll
                                                 Now
                                             </button>
                                         </div>
@@ -401,7 +402,7 @@ function MostPopularCourse() {
         return (
             <Fragment>
                 <div className="container my-12">
-                    <h4 className="text-4xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Most popular course ({BasedTotal}) </h4>
+                    <h4 className="xl:text-4xl text-xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Most popular course ({BasedTotal}) </h4>
 
                     <div className="lg:mt-6 flex flex-wrap -mx-1 lg:-mx-4 w-full">
                         {
@@ -413,13 +414,43 @@ function MostPopularCourse() {
         );
     }
     else if (isLoading === false) {
+        var settings = {
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        initialSlide: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        rows: 1
+                    }
+                }
+            ]
+        };
         return (
             <Fragment>
-                <div className="container my-12">
-                    <h4 className="text-4xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Most popular course ({BasedTotal}) </h4>
+                <div className="container xl:my-12 my-5">
+                    <h4 className="xl:text-4xl text-xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Most popular course ({BasedTotal}) </h4>
 
-                    <div className="lg:mt-6 -mx-1 lg:-mx-4">
+                    <div className="xl:mt-6 mt-4 -mx-1 xl:-mx-4">
                         <Slider
+                            {...settings}
                             ref={(slider4) => setNav4(slider4)}
                             slidesToShow={4}
                             focusOnSelect={true}
@@ -432,8 +463,8 @@ function MostPopularCourse() {
                             autoplay={false}
                             autoplaySpeed={1500}
                             swipeToSlide={true}
-                            nextArrow={<SampleNextArrow/>} 
-                            prevArrow= {<SamplePrevArrow/>}
+                            nextArrow={<SampleNextArrow />}
+                            prevArrow={<SamplePrevArrow />}
                         >
                             {
                                 MostPopularCourseDataSuccess

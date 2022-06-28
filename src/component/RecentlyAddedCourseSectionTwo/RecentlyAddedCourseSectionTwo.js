@@ -479,26 +479,26 @@ function RecentlyAddedCourseSectionTwo() {
             return (
                 getCourse.map((category_info) => (
                     category_info.course_information.map((course, course_index) => (
-                        <div key={course_index} className="xl:my-8 xl:px-5 xl:w-1/4">
+                        <div key={course_index} className="xl:my-8 xl:px-5 px-2 xl:w-1/4">
                             <div className="wrapper antialiased text-gray-900">
                                 <div className="relative">
-                                    <img className="w-full h-72 object-cover object-center rounded-lg shadow-md" src={MasterCourseThumbnail} alt='' />
+                                    <img className="w-full xl:h-72 h-56 object-cover object-center rounded-lg shadow-md" src={MasterCourseThumbnail} alt='' />
 
                                     <div className="flex flex-wrap lg:mt-3">
                                         <div className="w-1/5">
                                             <a href="!#">
                                                 <div
-                                                    className="text-sm absolute top-0 left-3 bg-black text-white rounded-full border-2 border-white h-12 w-12 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
-                                                    <img className="h-12 w-12" src={CourseLogo} alt='' />
+                                                    className="text-sm absolute top-0 xl:left-2 left-4 bg-black text-white rounded-full xl:h-12 xl:w-12 h-6 w-6 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                                                    <img className="xl:h-12 xl:w-12 h-7 w-7" src={CourseLogo} alt='' />
                                                 </div>
                                             </a>
                                         </div>
                                         <div className="w-4/5">
                                             <a href="!#">
                                                 <div className="text-lg absolute top-0 text-white mt-5">
-                                                    <h6 className="font-medium text-xl -mt-2 text-white">{course.channel_name?.channel_name}</h6>
-                                                    <h6 className="font-extralight lg:-ml-6 flex text-sm text-white">
-                                                        <img className="w-5 h-5 rounded-full border-2 border-white mr-2"
+                                                    <h6 className="font-medium xl:text-xl text-sm -mt-2 text-white">{course.channel_name?.channel_name}</h6>
+                                                    <h6 className="font-extralight xl:-ml-6 -ml-4 xl:-mt-0 -mt-1 flex text-sm text-white">
+                                                        <img className="xl:w-5 xl:h-5 w-4 h-4 rounded-full border-2 border-white mr-2"
                                                             src={ApiUrl.ImageBaseUrl + course?.channel_name?.channel_name_logo} alt='' />
                                                     </h6>
                                                 </div>
@@ -508,10 +508,10 @@ function RecentlyAddedCourseSectionTwo() {
                                 </div>
 
                                 <div className="relative px-4 -mt-16">
-                                    <div className="bg-white dark:bg-dark-color2 p-4 rounded-lg shadow-lg">
+                                    <div className="bg-white dark:bg-dark-color2 xl:p-4 p-2 rounded-lg shadow-lg">
                                         <div className="flex flex-wrap">
                                             <div className="w-full">
-                                                <h4 className="mt-1 text-lg font-semibold text leading-tight text-CourseTitle dark:text-white">
+                                                <h4 className="mt-1 xl:text-lg text-sm font-semibold leading-tight text-CourseTitle dark:text-white">
                                                     {course?.course_title}
                                                 </h4>
                                             </div>
@@ -540,28 +540,28 @@ function RecentlyAddedCourseSectionTwo() {
                                         </div>
 
                                         <div className="flex flex-wrap mt-5">
-                                            <div className="w-2/5">
+                                            <div className="xl:w-2/6 w-2/6">
                                                 <div className="flex sm:justify-center xl:justify-start -mt-3">
                                                     <Link to="" className="z-30">
-                                                        <img className="h-8 w-8 rounded-full border-2 border-white"
+                                                        <img className="xl:h-8 xl:w-8 h-6 w-6 rounded-full border-2 border-white"
                                                             src="https://media.istockphoto.com/photos/got-this-picture-id1332291404?b=1&k=20&m=1332291404&s=170667a&w=0&h=uRm6p7xa_-YF9t_6sVY7DXnXaa2Jo_NeL4oUvrFJq6I=" alt="" />
                                                     </Link>
                                                     <Link to="" className="-ml-3 z-20">
-                                                        <img className="h-8 w-8 rounded-full border-2 border-white"
+                                                        <img className="xl:h-8 xl:w-8 h-6 w-6 rounded-full border-2 border-white"
                                                             src="https://cbsnews1.cbsistatic.com/hub/i/2018/11/06/0c1af1b8-155a-458e-b105-78f1e7344bf4/2018-11-06t054310z-1334124005-rc1be15a8050-rtrmadp-3-people-sexiest-man.jpg" alt="" />
                                                     </Link>
                                                     <Link to="" className="-ml-3 z-10">
-                                                        <img className="h-8 w-8 rounded-full border-2 border-white"
+                                                        <img className="xl:h-8 xl:w-8 h-6 w-6 rounded-full border-2 border-white"
                                                             src="https://aisvox-a.akamaihd.net/masters/940835/26-1/27-1yk13p/2540x1429/4080/800604860-jpg.jpg" alt="" />
                                                     </Link>
                                                 </div>
                                             </div>
-                                            <div className="w-3/5 relative">
+                                            <div className="xl:w-4/6 w-4/6 relative">
                                                 <div className="flex xl:justify-end -mt-3 absolute right-0">
-                                                    <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 xl:mr-1 rounded-md">
-                                                        <img className="px-1 h-3 w-5" src={LoveIcon} alt='' /></button>
+                                                    <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white xl:pl-2 xl:pr-2 pl-1 pr-1 pt-0.5 pb-0.5 xl:pt-1 xl:pb-1 xl:mr-1 rounded-md">
+                                                        <img className="xl:px-1 xl:h-3 xl:w-5 h-2 w-3" src={LoveIcon} alt=""/></button>
                                                     <button
-                                                        className="text-sm flex font-light leading-tight bg-apply-now text-white xl:pl-3 xl:pr-3 xl:pt-2 xl:pb-2 rounded-lg"> Apply Now <MdLogin className="ml-2 text-xl font-normal" />
+                                                        className="xl:text-sm text-xs flex font-light leading-tight bg-apply-now text-white xl:pl-3 pl-1 xl:pr-3 pr-1 xl:pt-2 pt-0.5 pb-0.5 xl:pb-2 xl:rounded-lg rounded-sm"> Apply Now <MdLogin className="xl:ml-2 ml-0.5 text-xl font-normal" />
                                                     </button>
                                                 </div>
                                             </div>
@@ -582,9 +582,9 @@ function RecentlyAddedCourseSectionTwo() {
                 <div className="container my-12">
 
                     <div className="flex flex-wrap">
-                        <div className="w-1/3">
+                        <div className="xl:w-1/3 w-full">
                             <div className="flex">
-                                <h4 className="text-4xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Recently Added
+                                <h4 className="xl:text-4xl text-xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Recently Added
                                     Course</h4>
                             </div>
                         </div>
@@ -629,21 +629,106 @@ function RecentlyAddedCourseSectionTwo() {
         );
     }
     else if (isLoading === false) {
+        var settings = {
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        initialSlide: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        };
+        var settings1 = {
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        initialSlide: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        };
+        var settings2 = {
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        initialSlide: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        };
         return (
             <Fragment>
                 <div className="container my-12">
                     <div className="flex flex-wrap">
-                        <div className="w-1/3">
+                        <div className="xl:w-1/3 w-full">
                             <div className="flex">
-                                <h4 className="text-4xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Recently Added Course</h4>
+                                <h4 className="xl:text-4xl text-xl font-semibold text-sectionTitleColor dark:text-white ml-3">Recently Added Course</h4>
                             </div>
                         </div>
-                        <div className="w-2/3 relative">
+                        <div className="xl:w-2/3 w-full relative">
                             {/* <div className="flex right-0 absolute">
                                 <div className="mb-4">
                                     <ul className="nav nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4"> 
                                     */}
                             <Slider
+                                {...settings}
                                 slidesToShow={5}
                                 focusOnSelect={true}
                                 dots={false}
@@ -673,15 +758,32 @@ function RecentlyAddedCourseSectionTwo() {
                     <div className="mt-4 flex flex-wrap">
                         <div className="show w-full active">
                             <ul className="nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4">
-                                {
+                            <Slider
+                                {...settings1}
+                                slidesToShow={5}
+                                focusOnSelect={true}
+                                dots={false}
+                                adaptiveHeight={false}
+                                infinite={true}
+                                slidesToScroll={1}
+                                loop={true}
+                                speed={300}
+                                autoplay={false}
+                                autoplaySpeed={1500}
+                                swipeToSlide={true}
+                            >
+                                  {
                                     data_of_subcategory
                                 }
+                            </Slider>
+                             
                             </ul>
                             <div className="flex flex-wrap -mx-1 xl:-mx-4">
                                 <div className="mt-4 w-full">
                                     <div className="fade show active">
                                         <div className="-mx-1 lg:-mx-4">
                                             <Slider
+                                            {...settings2}
                                                 slidesToShow={4}
                                                 focusOnSelect={true}
                                                 dots={false}

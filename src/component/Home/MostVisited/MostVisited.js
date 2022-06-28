@@ -303,7 +303,9 @@ function MostVisited() {
                                         <div className="w-1/3">
                                             <div className="flex relative sm:justify-center xl:justify-start">
                                                 <span
-                                                    className="text-maincolor xl:text-lg text-base font-medium inset-y-0 right-0 absolute">${mostvisited_c?.course_price[0]?.new_price}</span>
+                                                    className="text-maincolor xl:text-lg text-base font-medium inset-y-0 right-0 absolute">
+                                                    ${mostvisited_c?.course_price[0]?.new_price}
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
