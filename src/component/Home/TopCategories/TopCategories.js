@@ -99,9 +99,9 @@ function TopCategories() {
             return (
                 topCategory.map((category, index) => (
                     <div key={index} className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
-                        <article className="overflow-hidden rounded-lg shadow-lg hover:opacity-30 hover:bg-black dark:bg-dark-color2">
+                        <article className="overflow-hidden xl:rounded-lg rounded-sm xl:shadow-lg shadow-sm hover:opacity-30 hover:bg-black dark:bg-dark-color2">
                             <img alt="Placeholder" className="block bg-fixed xl:h-72 h-64 w-full" src={category.category_preview_img} />
-                            <h1 className="xl:text-lg xl:font-medium text-center text-maingray dark:text-white xl:mt-4 xl:mb-4">{category.category_name}</h1>
+                            <h1 className="xl:text-lg xl:font-medium text-center text-maingray dark:text-white xl:mt-4 xl:mb-4 mt-3 mb-3">{category.category_name}</h1>
                         </article>
                     </div>
                 ))
@@ -150,7 +150,8 @@ function TopCategories() {
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
-                        rows:1
+                        rows:1,
+                        dots:false
                     }
                 }
             ]
@@ -158,8 +159,8 @@ function TopCategories() {
         return (
             <Fragment>
                 <div className="container my-12">
-                    <h4 className="xl:text-4xl text-2xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Top Categories ({totalTopCategory}) </h4>
-                    <div className="xl:mt-4 mt-3 sm:p-4">
+                    <h4 className="xl:text-4xl text-xl	font-semibold text-sectionTitleColor dark:text-white xl:ml-3 ml-6">Top Categories ({totalTopCategory}) </h4>
+                    <div className="xl:mt-4 mt-3 px-1">
 
                         <Slider
                             {...settings}

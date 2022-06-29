@@ -145,9 +145,9 @@ function BusinessCompany() {
             return subCategory.map((subcategory, index) => (
                 <div key={index}>
                     <input id={subcategory.sub_category_id} type='hidden' name={subcategory.sub_category_id} />
-                    <li className="nav-item list-none" role="presentation">
+                    <li className="list-none mx-2">
                         <button type="button"
-                            className="nav-link block w-full md:w-auto px-6 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 xl:text-base text-sm bg-maincolor font-medium leading-tight text-black rounded-3xl mx-2 h-11"
+                            className="block w-full md:w-auto xl:px-5 px-3 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 xl:text-base text-xs bg-maincolor xl:font-medium font-normal leading-tight text-white rounded-3xl xl:h-11 h-10"
                             onClick={() => fetchData(subcategory.sub_category_id)}
                         >
                             {subcategory.sub_category_name}
@@ -565,21 +565,21 @@ function BusinessCompany() {
                                     </div>
                                     <div className="w-4/5">
                                         <a href="!#">
-                                            <div className="text-lg absolute top-0 xl:mt-5 mt-3 sm:ml-3">
+                                            <div className="text-lg absolute top-0 xl:mt-5 mt-3 ml-3">
                                                 <h6 className="xl:font-medium font-normal xl:text-lg text-sm text-black dark:text-white">{course?.channel_name?.channel_name}</h6>
                                                 <h6 className="font-light xl:text-sm text-xs text-black dark:text-white">{course.course_duration} min</h6>
 
-                                                <img className="xl:h-36 h-24 ml-8" src={Play} alt="" />
+                                                <img className="xl:h-36 h-24 xl:ml-8" src={Play} alt="" />
                                             </div>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <div className="relative px-4 -mt-16">
+                            <div className="relative xl:px-4 px-2 -mt-16">
                                 <div className="bg-white dark:bg-dark-color2 xl:h-36 p-3 rounded-lg shadow-lg">
                                     <div className="flex flex-wrap">
                                         <div className="w-full">
-                                            <h4 className="mt-1 xl:text-base text-sm font-semibold text xl:leading-tight leading-none text-CourseTitle dark:text-white">
+                                            <h4 className="mt-1 xl:text-base text-sm font-semibold xl:leading-tight leading-none text-CourseTitle dark:text-white">
                                                 {`${course.course_title.substring(0, 40)}...`}
                                             </h4>
                                         </div>
@@ -611,26 +611,26 @@ function BusinessCompany() {
                                             starSpacing="4px"
                                             starRatedColor="rgb(251, 191, 36)"
                                         />
-                                        <h6 className="mb-4 mx-1 xl:text-sm text-xs font-normal text-client-section-des">({course.avg_rating})</h6>
+                                        <h6 className="xl:mb-4 mb-2 mx-1 xl:text-sm text-xs font-normal text-client-section-des xl:-mt-0.5 mt-1.5">({course.avg_rating})</h6>
                                     </ul>
 
                                     <div className="flex flex-wrap">
-                                        <div className="w-1/2">
+                                        <div className="xl:w-6/12 w-5/12">
                                             <div className="flex sm:justify-center xl:justify-start xl:-mt-3 -mt-1">
                                                 <a><img className="xl:px-1 px-0.5 xl:h-6 xl:w-8 h-4 w-5" src={SpeedMeter} alt="" /></a>
                                                 <a><img className="xl:px-1 px-0.5 xl:h-6 xl:w-8 h-4 w-5" src={ShareIcon} alt="" /></a>
                                                 <a><img className="xl;px-1 px-0.5 xl:h-6 xl:w-8 h-4 w-5" src={CertificateIcon} alt="" /></a>
                                             </div>
                                         </div>
-                                        <div className="w-1/2 relative">
+                                        <div className="xl:w-6/12 w-7/12 relative">
                                             <div
                                                 className="flex sm:justify-center xl:justify-start xl:-mt-3 -mt-1 right-0 absolute">
                                                 <button
-                                                    className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white xl:pl-1 xl:pr-1 xl:pt-1 xl:pb-1 xl:mr-1 rounded-sm">
+                                                    className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white xl:pl-1 xl:pr-1 xl:pt-1 xl:pb-1 xl:mr-1 pr-0 pl-0 rounded-sm">
                                                     <img className="px-1 xl:h-3 xl:w-5 h-3 w-5" src={LoveIcon} alt="" />
                                                 </button>
                                                 <button
-                                                    className="xl:text-sm text-xs font-extralight leading-tight bg-maincolor text-white xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 pr-px pl-0.5 rounded-sm">Enroll
+                                                    className="xl:text-sm text-xs font-extralight leading-tight bg-maincolor text-white xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 pr-0.5 pl-0.5 rounded-sm">Enroll
                                                     Now
                                                 </button>
                                             </div>
@@ -719,14 +719,11 @@ function BusinessCompany() {
                     <div className="flex flex-wrap">
                         <div className="xl:w-1/3 w-full">
                             <div className="flex">
-                                <h4 className="xl:text-4xl text-xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Recently Added
+                                <h4 className="xl:text-4xl text-xl font-semibold text-sectionTitleColor dark:text-white xl:ml-6 ml-6 -mt-6">Recently Added
                                     Course</h4>
                             </div>
                         </div>
                         <div className="xl:w-2/3 w-full relative sm:mt-4">
-                            {/* <div className="flex right-0 absolute">
-                                <div className="mb-4">
-                                    <ul className="nav nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4"> */}
                             <Slider
                                 {...settings}
 
@@ -746,15 +743,11 @@ function BusinessCompany() {
                                     data_of_subcategory
                                 }
                             </Slider>
-
-                            {/* </ul>
-                                </div>
-                            </div> */}
                         </div>
                     </div>
                     <div className="mt-4">
                         <div className="fade show active">
-                            <div className="-mx-1 lg:-mx-4">
+                            <div className="-mx-1 px-1">
                                 <Slider
                                     {...settings}
                                     ref={(slider9) => setNav9(slider9)}

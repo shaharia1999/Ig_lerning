@@ -270,22 +270,25 @@ function MostVisited() {
                                     </div>
                                     <div className="w-4/5">
                                         <a href="!#">
-                                            <div className="text-lg absolute top-0 xl:mt-5 mt-3 sm:ml-3">
+                                            <div className="text-lg absolute top-0 xl:mt-5 mt-3 ml-3">
                                                 <h6 className="font-medium xl:text-lg text-sm text-black dark:text-white">{mostvisited_c?.channel_name?.channel_name}</h6>
                                                 <h6 className="font-light xl:text-sm text-xs text-black dark:text-white">{mostvisited_c?.course_duration} min</h6>
 
-                                                <img className="xl:h-36 h-24 ml-8" src={Play} alt="" />
+                                                <img className="xl:h-36 h-24 xl:ml-8" src={Play} alt="" />
                                             </div>
                                         </a>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="relative px-4 -mt-16">
+                            <div className="relative xl:px-4 px-2 -mt-16">
                                 <div className="bg-white p-3 dark:bg-dark-color2 rounded-lg shadow-lg dark:shadow-xl">
                                     <div className="flex flex-wrap">
                                         <div className="w-full">
-                                            <Link to={`/course-details/${mostvisited_c.course_id}`} className="mt-1 xl:text-base text-sm font-semibold text xl:leading-tight leading-none text-CourseTitle dark:text-white">{`${mostvisited_c.course_title.substring(0, 40)}...`}</Link>
+                                            <Link to={`/course-details/${mostvisited_c.course_id}`}
+                                                className="xl:text-base text-sm font-semibold xl:leading-none -leading-2 text-CourseTitle dark:text-white">
+                                                {`${mostvisited_c.course_title.substring(0, 40)}...`}
+                                            </Link>
                                         </div>
                                         {/* <div className="w-1/5">
                                             <button
@@ -317,27 +320,27 @@ function MostVisited() {
                                             starSpacing="4px"
                                             starRatedColor="rgb(251, 191, 36)"
                                         />
-                                        <h6 className="mb-4 mx-1 xl:text-sm text-xs font-normal text-client-section-des">({mostvisited_c.avg_rating})
+                                        <h6 className="xl:mb-4 mb-2 mx-1 xl:text-sm text-xs font-normal text-client-section-des xl:-mt-0.5 mt-1.5">({mostvisited_c.avg_rating})
                                         </h6>
                                     </ul>
 
                                     <div className="flex flex-wrap">
-                                        <div className="w-1/2">
+                                        <div className="xl:w-6/12 w-5/12">
                                             <div className="flex sm:justify-center xl:justify-start xl:-mt-3 -mt-1">
                                                 <a><img className="xl:px-1 px-0.5 xl:h-6 xl:w-8 h-4 w-5" src={SpeedMeter} alt="" /></a>
                                                 <a><img className="xl:px-1 px-0.5 xl:h-6 xl:w-8 h-4 w-5" src={ShareIcon} alt="" /></a>
                                                 <a><img className="xl;px-1 px-0.5 xl:h-6 xl:w-8 h-4 w-5" src={CertificateIcon} alt="" /></a>
                                             </div>
                                         </div>
-                                        <div className="w-1/2 relative">
+                                        <div className="xl:w-6/12 w-7/12 relative">
                                             <div
                                                 className="flex sm:justify-center xl:justify-start xl:-mt-3 -mt-1 right-0 absolute">
                                                 <button
-                                                    className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white xl:pl-1 xl:pr-1 xl:pt-1 xl:pb-1 xl:mr-1 rounded-sm">
+                                                    className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white xl:pl-1 xl:pr-1 xl:pt-1 xl:pb-1 xl:mr-1 pr-0 pl-0 rounded-sm">
                                                     <img className="px-1 xl:h-3 xl:w-5 h-3 w-5" src={LoveIcon} alt="" />
                                                 </button>
                                                 <button
-                                                    className="xl:text-sm text-xs font-extralight leading-tight bg-maincolor text-white xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 pr-px pl-0.5 rounded-sm">Enroll
+                                                    className="xl:text-sm text-xs font-extralight leading-tight bg-maincolor text-white xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 pr-0.5 pl-0.5 rounded-sm">Enroll
                                                     Now
                                                 </button>
                                             </div>
@@ -357,7 +360,7 @@ function MostVisited() {
     if (isLoading === true) {
         return (
             <Fragment>
-                <div className="container my-12">
+                <div className="container my-12 xl:mt-0 -mt-12">
                     <h4 className="xl:text-4xl text-2xl font-semibold text-sectionTitleColor ml-3 dark:text-white">Most Visited ({mostvisited_total_count}) </h4>
                     <div className="xl:mt-6 mt-4 flex flex-wrap -mx-1 xl:-mx-4">
                         {
@@ -395,16 +398,16 @@ function MostVisited() {
                         slidesToShow: 2,
                         slidesToScroll: 1,
                         rows: 1,
-                        arrows:false
+                        arrows: false
                     }
                 }
             ]
         };
         return (
             <Fragment>
-                <div className="container my-12">
-                    <h4 className="xl:text-4xl text-2xl font-semibold text-sectionTitleColor dark:text-white ml-3">Most Visited ({mostvisited_total_count}) </h4>
-                    <div className="xl:mt-6 mt-4 -mx-1 lg:-mx-4">
+                <div className="container my-12 xl:mt-0 -mt-2">
+                    <h4 className="xl:text-4xl text-xl font-semibold text-sectionTitleColor dark:text-white xl:ml-3 ml-6">Most Visited ({mostvisited_total_count}) </h4>
+                    <div className="xl:mt-6 mt-4 -mx-1 px-1">
                         <Slider
                             {...settings}
                             ref={(slider2) => setNav2(slider2)}

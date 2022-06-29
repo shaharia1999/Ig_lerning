@@ -29,7 +29,7 @@ function HomeAdvertisedment() {
                             <TopCategories />
                         </div>
                         <div className="xl:w-1/3 animate-pulse">
-                            <div className="w-96 lg:ml-20 lg:mt-20 rounded-md bg-gray-100 dark:bg-dark-scleton2 home-ad-banner"></div>
+                            <div className="w-96 xl:ml-20 xl:mt-20 rounded-md bg-gray-100 dark:bg-dark-scleton2 home-ad-banner"></div>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@ function HomeAdvertisedment() {
                             <TopCategories />
                         </div>
                         <div className="xl:w-1/3 w-full">
-                            <img className="w-96 lg:ml-20 lg:mt-20 home-ad-banner" src={ApiUrl.ImageBaseUrl+bannerData.banner_image} alt="" />
+                            <img className="xl:w-96 w-full xl:ml-20 xl:mt-20 -mt-6 xl:p-0 rounded p-6 home-ad-banner" src={ApiUrl.ImageBaseUrl+bannerData.banner_image} alt="" />
                         </div>
                     </div>
                 </div>

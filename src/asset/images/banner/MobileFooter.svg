@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="480" height="822" viewBox="0 0 480 822">
+  <defs>
+    <clipPath id="clip-MobileFooter">
+      <rect width="480" height="822"/>
+    </clipPath>
+  </defs>
+  <g id="MobileFooter" clip-path="url(#clip-MobileFooter)">
+    <g id="Group_930" data-name="Group 930" transform="translate(0 -3040.299)">
+      <path id="Path_133" data-name="Path 133" d="M-800.275-4235.064l-.109,822.7h480l.11-822.7C-599.146-4129.967-800.275-4235.064-800.275-4235.064Z" transform="translate(800.275 7275.364)" fill="#d76e2d"/>
+    </g>
+  </g>
+</svg>

@@ -10,7 +10,7 @@ class Partner extends Component {
         return (
             <Fragment>
                 <div className="container mt-8 mb-8">
-                    <h4 className="xl:text-4xl sm:text-4xl text-2xl	font-semibold text-sectionTitleColor ml-3 dark:text-white">Our Partners</h4>
+                    <h4 className="xl:text-4xl text-xl	font-semibold text-sectionTitleColor xl:ml-3 ml-6 dark:text-white">Our Partners</h4>
                     <div className="flex flex-wrap mt-3 p-3 justify-center">
                         <div className="xl:w-1/5 w-1/3 p-3">
                             <img className="h-18 w-auto" src={Okta} alt=""/>
