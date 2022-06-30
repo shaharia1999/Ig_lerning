@@ -14,6 +14,8 @@ import OnlyOnIntelloGeek from '../../component/Home/OnlyOnIntelloGeek/OnlyOnInte
 import InBaseOfYourInterest from '../../component/Home/InBaseOfYourInterest/InBaseOfYourInterest';
 import darkModeTheme from "../../darkModeTheme";
 import NavMenuMobile from '../../component/Common/NavMenuMobile/NavMenuMobile';
+import HomeBannerMobile from '../../component/Home/HomeBanner/HomeBannerMobile';
+import FooterMobile from '../../component/Common/FooterMobile/FooterMobile';
 
 function HomePage() {
     useEffect(() => {
@@ -28,7 +30,13 @@ function HomePage() {
                 <NavMenuMobile />
             </div>
 
-            <HomeBanner />
+            <div className="DesktopHomeBanner">
+                <HomeBanner />
+            </div>
+            <div className="MobileHomeBanner">
+                <HomeBannerMobile />
+            </div>
+
             <BusinessCompany />
             <RecentlyAddedCourseSectionTwo />
             <MostPopularCourse />
@@ -38,7 +46,15 @@ function HomePage() {
             <HomeAdvertisedment />
             <ClientSays />
             <Partner />
-            <Footer />
+
+
+            <div className="DesktopFooter">
+                <Footer />
+            </div>
+            <div className="MobileFooter">
+                <FooterMobile />
+            </div>
+
             <CopyRight />
         </Fragment>
     );

@@ -66,6 +66,7 @@ module.exports = {
       'cart-item-title': '#02073E',
       'light-version': '#F3F4F6',
       'navigation-drawer-btn-bg-light':'#FFF2EB',
+      'banner-bg':'#FFF3D0',
       'amber': {
         300: '#fcd34d',
         400: '#fbbf24',

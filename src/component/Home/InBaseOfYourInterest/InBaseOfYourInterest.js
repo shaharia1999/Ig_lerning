@@ -313,31 +313,31 @@ function InBaseOfYourInterest() {
                                 </div>
                                 <div className="w-4/5">
                                     <a href="!#">
-                                        <div className="text-lg absolute top-0 xl:mt-5 mt-3 sm:ml-3">
+                                        <div className="text-lg absolute top-0 xl:mt-5 mt-3 ml-3">
                                             <h6 className="font-medium xl:text-lg text-sm text-black dark:text-white">{intellogeek_data?.channel_name_id?.channel_name}</h6>
                                             <h6 className="font-light xl:text-sm text-xs text-black dark:text-white">{intellogeek_data.course_duration} min</h6>
 
-                                            <img className="xl:h-36 h-24 ml-8" src={Play} alt="" />
+                                            <img className="xl:h-36 h-24 xl:ml-8" src={Play} alt="" />
                                         </div>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div className="relative px-4 -mt-16">
+                        <div className="relative xl:px-4 px-2 -mt-16">
                             <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg dark:shadow-xl">
                                 <div className="flex flex-wrap">
-                                    <div className="w-4/5">
+                                    <div className="w-full">
                                         <Link
                                             to={`/course-details/${intellogeek_data.course_id}`}
-                                            className="mt-1 xl:text-base text-sm font-semibold text xl:leading-tight leading-none text-CourseTitle dark:text-white">
+                                            className="xl:text-base text-sm font-semibold xl:leading-none -leading-2 text-CourseTitle dark:text-white">
                                             {`${intellogeek_data.course_title.substring(0, 40)}...`}
                                         </Link>
                                     </div>
-                                    <div className="w-1/5">
+                                    {/* <div className="w-1/5">
                                         <button
                                             className="text-sm font-extralight leading-tight bg-LiveBtnColor text-white lg:pl-3 lg:pr-3 lg:pt-1 lg:pb-0.5 rounded-sm">LIVE
                                         </button>
-                                    </div>
+                                    </div> */}
                                 </div>
 
                                 <div className="flex flex-wrap">
@@ -363,33 +363,33 @@ function InBaseOfYourInterest() {
                                         starSpacing="4px"
                                         starRatedColor="rgb(251, 191, 36)"
                                     />
-                                    <h6 className="mb-4 mx-1 xl:text-sm text-xs font-normal text-client-section-des">
+                                    <h6 className="xl:mb-4 mb-2 mx-1 xl:text-sm text-xs font-normal text-client-section-des xl:-mt-0.5 mt-1.5">
                                         ({intellogeek_data?.avg_rating})
                                     </h6>
                                 </ul>
 
                                 <div className="flex flex-wrap">
-                                    <div className="w-1/2">
-                                        <div className="flex sm:justify-center xl:justify-start xl:-mt-3 -mt-1">
-                                            <a><img className="xl:px-1 px-0.5 xl:h-6 xl:w-8 h-4 w-5" src={SpeedMeter} alt="" /></a>
-                                            <a><img className="xl:px-1 px-0.5 xl:h-6 xl:w-8 h-4 w-5" src={ShareIcon} alt="" /></a>
-                                            <a><img className="xl;px-1 px-0.5 xl:h-6 xl:w-8 h-4 w-5" src={CertificateIcon} alt="" /></a>
+                                        <div className="xl:w-6/12 w-5/12">
+                                            <div className="flex sm:justify-center xl:justify-start xl:-mt-3 -mt-1">
+                                                <a><img className="xl:px-1 px-0.5 xl:h-6 xl:w-8 h-4 w-5" src={SpeedMeter} alt="" /></a>
+                                                <a><img className="xl:px-1 px-0.5 xl:h-6 xl:w-8 h-4 w-5" src={ShareIcon} alt="" /></a>
+                                                <a><img className="xl;px-1 px-0.5 xl:h-6 xl:w-8 h-4 w-5" src={CertificateIcon} alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <div className="xl:w-6/12 w-7/12 relative">
+                                            <div
+                                                className="flex sm:justify-center xl:justify-start xl:-mt-3 -mt-1 right-0 absolute">
+                                                <button
+                                                    className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white xl:pl-1 xl:pr-1 xl:pt-1 xl:pb-1 xl:mr-1 pr-0 pl-0 rounded-sm">
+                                                    <img className="px-1 xl:h-3 xl:w-5 h-3 w-5" src={LoveIcon} alt="" />
+                                                </button>
+                                                <button
+                                                    className="xl:text-sm text-xs font-extralight leading-tight bg-maincolor text-white xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 pr-0.5 pl-0.5 rounded-sm">Enroll
+                                                    Now
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="w-1/2 relative">
-                                        <div
-                                            className="flex sm:justify-center xl:justify-start xl:-mt-3 -mt-1 right-0 absolute">
-                                            <button
-                                                className="text-sm font-extralight leading-tight bg-BgLoveIcon text-white xl:pl-1 xl:pr-1 xl:pt-1 xl:pb-1 xl:mr-1 rounded-sm">
-                                                <img className="px-1 xl:h-3 xl:w-5 h-3 w-5" src={LoveIcon} alt="" />
-                                            </button>
-                                            <button
-                                                className="xl:text-sm text-xs font-extralight leading-tight bg-maincolor text-white xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 pr-px pl-0.5 rounded-sm">Enroll
-                                                Now
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -401,7 +401,7 @@ function InBaseOfYourInterest() {
     if (isLoading === true) {
         return (
             <Fragment>
-                <div className="container my-12">
+                <div className="container my-12 xl:mt-0 -mt-12">
                     <h4 className="xl:text-4xl text-xl	font-semibold text-sectionTitleColor dark:text-white ml-3">In Base Of Your Interest ({BasedTotal}) </h4>
 
                     <div className="lg:mt-6 flex flex-wrap -mx-1 lg:-mx-4 w-full">
@@ -446,10 +446,10 @@ function InBaseOfYourInterest() {
         };
         return (
             <Fragment>
-                <div className="container my-12">
-                    <h4 className="xl:text-4xl text-xl	font-semibold text-sectionTitleColor dark:text-white ml-3">In Base Of Your Interest ({BasedTotal}) </h4>
+                <div className="container my-12 xl:mt-0 -mt-2">
+                    <h4 className="xl:text-4xl text-xl	font-semibold text-sectionTitleColor dark:text-white xl:ml-3 ml-6">In Base Of Your Interest ({BasedTotal}) </h4>
 
-                    <div className="xl:mt-6 mt-4 -mx-1 xl:-mx-4">
+                    <div className="xl:mt-6 mt-4 -mx-1 px-1">
                         <Slider
                             {...settings}
                             ref={(slider7) => setNav7(slider7)}

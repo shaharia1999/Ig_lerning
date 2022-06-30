@@ -216,13 +216,16 @@ function RecentlyAddedCourseSectionTwo() {
         if (categoryLoading === false) {
             return (
                 category.map((category_info, index) => (
-                    <li key={index} className="nav-item" role="presentation">
-                        <button type="button"
-                            onClick={() => CategoryBasedSubCategory(category_info.category_id)}
-                            className="nav-link1 dark:text-white block w-full md:w-auto px-6 py-3 my-2 md:mr-2 active text-base font-medium leading-tight mx-2 h-11" id="pills-master-tab3" data-bs-toggle="pill" data-bs-target="#pills-master" role="tab" aria-controls="pills-master" aria-selected="true">
-                            {category_info.category_name}
-                        </button>
-                    </li>
+                    <div key={index}>
+                        <li className="list-none mx-2">
+                            <button type="button"
+                                onClick={() => CategoryBasedSubCategory(category_info.category_id)}
+                                className="block w-full md:w-auto xl:px-5 px-3 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 xl:text-base text-xs bg-maincolor xl:font-medium font-normal leading-tight text-white rounded-3xl xl:h-11 h-10">
+                                {category_info.category_name}
+                            </button>
+                        </li>
+                    </div>
+
                 ))
             )
         }
@@ -262,9 +265,9 @@ function RecentlyAddedCourseSectionTwo() {
                 subCategory.map((category_info) => (
                     category_info.sub_category_information.map((subcategory, index) => (
                         <div key={index}>
-                            <li className="nav-item" role="presentation">
+                            <li className="list-none mx-2">
                                 <button type="button"
-                                    className="nav-link block w-full px-6 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 text-base bg-maincolor font-medium leading-tight text-black rounded-3xl mx-2 h-11"
+                                    className="block w-full md:w-auto xl:px-5 px-3 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 xl:text-base text-xs bg-white xl:font-medium font-normal leading-tight text-black rounded-3xl xl:h-11 h-10"
                                     onClick={() => SubCategoryCourseInfo(subcategory.sub_category_id)}
                                 >
                                     {subcategory.sub_category_name}
@@ -507,7 +510,7 @@ function RecentlyAddedCourseSectionTwo() {
                                     </div>
                                 </div>
 
-                                <div className="relative px-4 -mt-16">
+                                <div className="relative xl:px-4 px-2 -mt-16">
                                     <div className="bg-white dark:bg-dark-color2 xl:p-4 p-2 rounded-lg shadow-lg">
                                         <div className="flex flex-wrap">
                                             <div className="w-full">
@@ -518,12 +521,12 @@ function RecentlyAddedCourseSectionTwo() {
                                         </div>
 
                                         <div className="flex flex-wrap">
-                                            <div className="w-2/4">
+                                            <div className="xl:w-2/4 w-full">
                                                 <div className="flex sm:justify-center xl:justify-start">
                                                     <span className="text-gray-600 dark:text-gray-400 text-xs mt-2">Starts September 2022</span>
                                                 </div>
                                             </div>
-                                            <div className="w-2/4">
+                                            <div className="xl:w-2/4 w-full">
                                                 <div className="flex sm:justify-center xl:justify-start">
                                                     <GoPrimitiveDot className="text-sm mt-2 font-medium text-LiveBtnColor" /><span className="text-gray-600 text-xs mt-2 dark:text-gray-400">  11 Weeks</span>
                                                 </div>
@@ -540,7 +543,7 @@ function RecentlyAddedCourseSectionTwo() {
                                         </div>
 
                                         <div className="flex flex-wrap mt-5">
-                                            <div className="xl:w-2/6 w-2/6">
+                                            <div className="xl:w-4/12 w-3/12">
                                                 <div className="flex sm:justify-center xl:justify-start -mt-3">
                                                     <Link to="" className="z-30">
                                                         <img className="xl:h-8 xl:w-8 h-6 w-6 rounded-full border-2 border-white"
@@ -556,12 +559,12 @@ function RecentlyAddedCourseSectionTwo() {
                                                     </Link>
                                                 </div>
                                             </div>
-                                            <div className="xl:w-4/6 w-4/6 relative">
+                                            <div className="xl:w-8/12 w-9/12 relative">
                                                 <div className="flex xl:justify-end -mt-3 absolute right-0">
                                                     <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white xl:pl-2 xl:pr-2 pl-1 pr-1 pt-0.5 pb-0.5 xl:pt-1 xl:pb-1 xl:mr-1 rounded-md">
-                                                        <img className="xl:px-1 xl:h-3 xl:w-5 h-2 w-3" src={LoveIcon} alt=""/></button>
+                                                        <img className="xl:px-1 xl:h-3 xl:w-5 h-2 w-3 mr-0.5" src={LoveIcon} alt="" /></button>
                                                     <button
-                                                        className="xl:text-sm text-xs flex font-light leading-tight bg-apply-now text-white xl:pl-3 pl-1 xl:pr-3 pr-1 xl:pt-2 pt-0.5 pb-0.5 xl:pb-2 xl:rounded-lg rounded-sm"> Apply Now <MdLogin className="xl:ml-2 ml-0.5 text-xl font-normal" />
+                                                        className="xl:text-sm text-xs flex xl:font-light font-extralight leading-tight bg-apply-now text-white xl:pl-3 pl-1 xl:pr-3 pr-1 xl:pt-2 pt-0.5 pb-0.5 xl:pb-2 xl:rounded-lg rounded-sm"> Apply Now <MdLogin className="xl:ml-2 ml-0.5 xl:text-xl text-base xl:font-normal font-light" />
                                                     </button>
                                                 </div>
                                             </div>
@@ -580,7 +583,6 @@ function RecentlyAddedCourseSectionTwo() {
         return (
             <Fragment>
                 <div className="container my-12">
-
                     <div className="flex flex-wrap">
                         <div className="xl:w-1/3 w-full">
                             <div className="flex">
@@ -653,7 +655,7 @@ function RecentlyAddedCourseSectionTwo() {
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 1,
-                        arrows:false
+                        arrows: false
                     }
                 }
             ]
@@ -682,7 +684,7 @@ function RecentlyAddedCourseSectionTwo() {
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
-                        arrows:false
+                        arrows: false
                     }
                 }
             ]
@@ -711,18 +713,18 @@ function RecentlyAddedCourseSectionTwo() {
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
-                        arrows:false
+                        arrows: false
                     }
                 }
             ]
         };
         return (
             <Fragment>
-                <div className="container my-12">
+                <div className="container my-12 xl:mt-1 -mt-4">
                     <div className="flex flex-wrap">
                         <div className="xl:w-1/3 w-full">
                             <div className="flex">
-                                <h4 className="xl:text-4xl text-xl font-semibold text-sectionTitleColor dark:text-white ml-3">Recently Added Course</h4>
+                                <h4 className="xl:text-4xl text-xl font-semibold text-sectionTitleColor dark:text-white xl:ml-3 ml-5">Recently Added Course</h4>
                             </div>
                         </div>
                         <div className="xl:w-2/3 w-full relative">
@@ -760,33 +762,33 @@ function RecentlyAddedCourseSectionTwo() {
 
                     <div className="mt-4 flex flex-wrap">
                         <div className="show w-full active">
-                            <ul className="nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4">
-                            <Slider
-                                {...settings1}
-                                slidesToShow={3}
-                                focusOnSelect={true}
-                                dots={false}
-                                adaptiveHeight={false}
-                                infinite={true}
-                                slidesToScroll={1}
-                                loop={true}
-                                speed={300}
-                                autoplay={false}
-                                autoplaySpeed={1500}
-                                swipeToSlide={true}
-                            >
-                                  {
-                                    data_of_subcategory
-                                }
-                            </Slider>
-                             
+                            <ul className="list-none pl-0 xl:mb-4 mb-2">
+                                <Slider
+                                    {...settings1}
+                                    slidesToShow={5}
+                                    focusOnSelect={true}
+                                    dots={false}
+                                    adaptiveHeight={false}
+                                    infinite={true}
+                                    slidesToScroll={1}
+                                    loop={true}
+                                    speed={300}
+                                    autoplay={false}
+                                    autoplaySpeed={1500}
+                                    swipeToSlide={true}
+                                >
+                                    {
+                                        data_of_subcategory
+                                    }
+                                </Slider>
+
                             </ul>
                             <div className="flex flex-wrap -mx-1 xl:-mx-4">
                                 <div className="mt-4 w-full">
                                     <div className="fade show active">
-                                        <div className="-mx-1 lg:-mx-4">
+                                        <div className="-mx-1 px-1">
                                             <Slider
-                                            {...settings2}
+                                                {...settings2}
                                                 slidesToShow={4}
                                                 focusOnSelect={true}
                                                 dots={false}

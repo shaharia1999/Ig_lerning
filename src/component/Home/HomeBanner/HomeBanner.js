@@ -74,6 +74,7 @@ function HomeBanner() {
                         height={600}
                         autoplay={true}
                         autoplaySpeed={3000}
+                        arrows={false}
                     >
 
                         <div className="xl:w-full">
