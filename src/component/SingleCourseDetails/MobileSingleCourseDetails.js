@@ -3,7 +3,7 @@ import RecentlyBoughtCourse from "./RecentlyBoughtCourse/RecentlyBoughtCourse";
 import RecentlyViewedCourse from "./RecentlyViewedCourse/RecentlyViewedCourse";
 import RecommandedCourse from "./RecommandedCourse/RecommandedCourse";
 import StudentBoughtCourse from "./StudentBoughtCourse/StudentBoughtCourse";
-import Footer from "../Common/Footer/Footer";
+import FooterMobile from "../Common/FooterMobile/FooterMobile";
 import Breadcrumbs from "../Other/Breadcrumbs/Breadcumbs";
 import DiscountCardCourse from "./DiscountCardCourse/DiscountCardCourse";
 import Description from "./Description/Description";
@@ -12,8 +12,9 @@ import Review from "./Review/Review";
 import 'flowbite';
 import Lessons from "./Lessons/Lessons";
 import CopyRight from '../../component/Common/CopyRight/CopyRight';
+import Partner from "../../component/Home/Partner/Partner";
 
-function SingleCourseDetails() {
+function MobileSingleCourseDetails() {
     return (
         <Fragment>
             <div>
@@ -53,7 +54,8 @@ function SingleCourseDetails() {
                         <h6 className="xl:mb-8 xl:ml-32 xl:text-3xl xl:font-semibold dark:text-white">Student also bought this course</h6>
                         <StudentBoughtCourse />
                     </div>
-                    <Footer />
+                    <Partner/>
+                    <FooterMobile/>
                     <CopyRight />
                 </div>
             </div>
@@ -61,4 +63,4 @@ function SingleCourseDetails() {
     );
 }
 
-export default SingleCourseDetails;
+export default MobileSingleCourseDetails;

@@ -7,6 +7,8 @@ import CopyRight from '../../component/Common/CopyRight/CopyRight';
 import TrainerProfile from "../../component/TrainerProfile/TrainerProfile";
 import TrainerBanner from "../../component/TrainerProfile/TrainerBanner/TrainerBanner";
 import darkModeTheme from "../../darkModeTheme";
+import NavMenuMobile from '../../component/Common/NavMenuMobile/NavMenuMobile';
+import FooterMobile from '../../component/Common/FooterMobile/FooterMobile';
 
 function TrainerProfilePage() {
     useEffect(() => {
@@ -14,12 +16,23 @@ function TrainerProfilePage() {
     }, [])
     return (
         <Fragment>
-            <NavBarTop />
+            <div className="Desktop">
+                <NavBarTop />
+            </div>
+            <div className="Mobile">
+                <NavMenuMobile />
+            </div>
+
             <TrainerBanner />
             <TrainerProfile />
             <ClientSays />
             <Partner />
-            <Footer />
+            <div className="DesktopFooter">
+                <Footer />
+            </div>
+            <div className="MobileFooter">
+                <FooterMobile />
+            </div>
             <CopyRight />
         </Fragment>
     );

@@ -157,8 +157,8 @@ function NavMenuMobile() {
                     </div>
 
                     <div className="mt-3 text-center">
-                        <button className="border-2 border-price-deep xl:mt-3 h-12 w-56 rounded-3xl text-base font-light text-price-deep">  <i className="fa fa-graduation-cap mr-1"></i>I want to Teach</button> <br />
-                        <button className="mt-3 border-2 border-price-deep xl:mt-3 h-12 w-56 rounded-3xl text-base font-light text-price-deep"> <i className="fa fa-book-reader mr-1"></i> I want to Learn</button>
+                        <Link to="/login"><button className="border-2 border-price-deep xl:mt-3 h-12 w-56 rounded-3xl text-base font-light text-price-deep">  <i className="fa fa-graduation-cap mr-1"></i>I want to Teach</button> <br /> </Link>
+                        <Link to="/login"><button className="mt-3 border-2 border-price-deep xl:mt-3 h-12 w-56 rounded-3xl text-base font-light text-price-deep"> <i className="fa fa-book-reader mr-1"></i> I want to Learn</button></Link>
                     </div>
 
                     <hr className="border mt-5 mb-8 ml-10 mr-10" />
@@ -177,11 +177,21 @@ function NavMenuMobile() {
                     <hr className="border mt-8 mb-8 ml-10 mr-10" />
 
                     <div className="mt-3 text-center">
-                        <button className="mt-3 focus:border bg-gray-100 focus:border-maincolordeep xl:mt-3 h-12 w-80 rounded-3xl text-base font-normal text-maingray focus:text-maincolordeep focus:bg-navigation-drawer-btn-bg-light"><span className="float-left ml-8">Home</span><span className="float-right mr-6">></span></button> <br />
-                        <button className="mt-3 focus:border bg-gray-100 focus:border-maincolordeep xl:mt-3 h-12 w-80 rounded-3xl text-base font-normal text-maingray focus:text-maincolordeep focus:bg-navigation-drawer-btn-bg-light"><span className="float-left ml-8">Pricing</span><span className="float-right mr-6">></span></button> <br />
-                        <button className="mt-3 focus:border bg-gray-100 focus:border-maincolordeep xl:mt-3 h-12 w-80 rounded-3xl text-base font-normal text-maingray focus:text-maincolordeep focus:bg-navigation-drawer-btn-bg-light"><span className="float-left ml-8">About us</span><span className="float-right mr-6">></span></button> <br />
-                        <button className="mt-3 focus:border bg-gray-100 focus:border-maincolordeep xl:mt-3 h-12 w-80 rounded-3xl text-base font-normal text-maingray focus:text-maincolordeep focus:bg-navigation-drawer-btn-bg-light"><span className="float-left ml-8">IgLearn Pro</span><span className="float-right mr-6">></span></button> <br />
-                        <button className="mt-3 focus:border bg-gray-100 focus:border-maincolordeep xl:mt-3 h-12 w-80 rounded-3xl text-base font-normal text-maingray focus:text-maincolordeep focus:bg-navigation-drawer-btn-bg-light"><span className="float-left ml-8">Contact</span><span className="float-right mr-6">></span></button> <br />
+                        <Link to="/">
+                            <button className="mt-3 focus:border bg-gray-100 focus:border-maincolordeep xl:mt-3 h-12 w-80 rounded-3xl text-base font-normal text-maingray focus:text-maincolordeep focus:bg-navigation-drawer-btn-bg-light"><span className="float-left ml-8">Home</span><span className="float-right mr-6">></span></button> <br />
+                        </Link>
+                        <Link to="/price">
+                            <button className="mt-3 focus:border bg-gray-100 focus:border-maincolordeep xl:mt-3 h-12 w-80 rounded-3xl text-base font-normal text-maingray focus:text-maincolordeep focus:bg-navigation-drawer-btn-bg-light"><span className="float-left ml-8">Pricing</span><span className="float-right mr-6">></span></button> <br />
+                        </Link>
+                        <Link to="/about">
+                            <button className="mt-3 focus:border bg-gray-100 focus:border-maincolordeep xl:mt-3 h-12 w-80 rounded-3xl text-base font-normal text-maingray focus:text-maincolordeep focus:bg-navigation-drawer-btn-bg-light"><span className="float-left ml-8">About us</span><span className="float-right mr-6">></span></button> <br />
+                        </Link>
+                        <Link to="/ig-learn-Pro">
+                            <button className="mt-3 focus:border bg-gray-100 focus:border-maincolordeep xl:mt-3 h-12 w-80 rounded-3xl text-base font-normal text-maingray focus:text-maincolordeep focus:bg-navigation-drawer-btn-bg-light"><span className="float-left ml-8">IgLearn Pro</span><span className="float-right mr-6">></span></button> <br />
+                        </Link>
+                        <Link to="/contact-us">
+                            <button className="mt-3 focus:border bg-gray-100 focus:border-maincolordeep xl:mt-3 h-12 w-80 rounded-3xl text-base font-normal text-maingray focus:text-maincolordeep focus:bg-navigation-drawer-btn-bg-light"><span className="float-left ml-8">Contact</span><span className="float-right mr-6">></span></button> <br />
+                        </Link>
                     </div>
 
                     <hr className="border mt-8 mb-8 ml-10 mr-10" />
