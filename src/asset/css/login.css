@@ -26,3 +26,8 @@
     accent-color: #035f0f !important;
     border-radius: 100% !important;
 } */
+
+.pointer-events-none .fill-current{
+    fill: currentColor;
+    display: none !important;
+}

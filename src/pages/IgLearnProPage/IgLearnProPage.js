@@ -10,6 +10,7 @@ import Footer from '../../component/Common/Footer/Footer';
 import CopyRight from '../../component/Common/CopyRight/CopyRight';
 import darkModeTheme from "../../darkModeTheme";
 import NavMenuMobile from '../../component/Common/NavMenuMobile/NavMenuMobile';
+import FooterMobile from '../../component/Common/FooterMobile/FooterMobile';
 
 function IgLearnProPage() {
     useEffect(() => {
@@ -17,7 +18,7 @@ function IgLearnProPage() {
     }, [])
     return (
         <Fragment>
-             <div className="Desktop">
+            <div className="Desktop">
                 <NavBarTop />
             </div>
             <div className="Mobile">
@@ -29,7 +30,14 @@ function IgLearnProPage() {
             <MediaTalk />
             <ClientSays />
             <Partner />
-            <Footer />
+
+            <div className="DesktopFooter">
+                <Footer />
+            </div>
+            <div className="MobileFooter">
+                <FooterMobile />
+            </div>
+
             <CopyRight />
         </Fragment>
     );

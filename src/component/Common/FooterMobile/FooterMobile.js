@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link } from "react-router-dom";
-import { FaChevronUp, FaFacebookSquare, FaLinkedin, FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebookSquare, FaLinkedin, FaTwitter, } from "react-icons/fa";
 import ios from "../../../asset/images/icon/ios.png";
 import android from "../../../asset/images/icon/android.png";
 import MainLogo from "../../../asset/images/logo/logo.png";
@@ -26,55 +26,59 @@ function FooterMobile() {
                             </ul>
                         </div>
 
-                        <div className="w-full mt-8 mb-8">
-                            <div class="accordion accordion-flush" id="accordionFlushExample">
-                                <div class="accordion-item border-t-0 border-l-0 border-r-0 rounded-none bg-maincolor border border-gray-200">
-                                    <h2 class="accordion-header mb-0" id="flush-headingOne">
-                                        <button class="accordion-button relative flex items-center w-full py-4 px-5 text-base text-white font-semibold text-left bg-maincolor border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                            aria-expanded="false" aria-controls="flush-collapseOne">
+                        <div class="container mt-5">
+                            <div class="m-2 rounded overflow-hidden">
+
+                                <div class="group outline-none accordion-section" tabindex="1">
+                                    <div class="group bg-maincolor flex justify-between px-0 py-3 items-center border-b-2 border-gray-300 text-white transition ease duration-500 cursor-pointer pr-10 relative">
+                                        <div class="group-focus:text-white text-lg transition ease duration-500">
                                             Links
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapseOne" class="accordion-collapse border-0 collapse"
-                                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body py-4 px-5">
-                                            <h6 className="text-base text-white font-normal">+880 123456789</h6>
-                                            <h6 className="text-base text-white font-normal">info@intellogeek.com</h6>
+                                        </div>
+                                        <div class="h-8 w-8 items-center inline-flex justify-center transform transition ease duration-500 group-focus:text-white group-focus:-rotate-180 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2">
+                                            <i class="fas fa-chevron-down"></i>
                                         </div>
                                     </div>
+                                    <div class="group-focus:max-h-screen max-h-0 bg-maincolor px-1 overflow-hidden ease duration-500">
+                                        <p class="pl-0 pt-2 pb-2 text-gray-200 text-sm text-justify">+012 345678790</p>
+                                        <p class="pl-0 pt-0 pb-2 text-gray-200 text-sm text-justify">info@intellogeek.com</p>
+                                    </div>
                                 </div>
-                                <div class="accordion-item border-l-0 border-r-0 rounded-none bg-maincolor border border-gray-200">
-                                    <h2 class="accordion-header mb-0" id="flush-headingTwo">
-                                        <button class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-white font-semibold text-left bg-maincolor border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
-                                            aria-expanded="false" aria-controls="flush-collapseTwo">
+
+                                <div class="group outline-none accordion-section" tabindex="2">
+                                    <div class="group bg-maincolor flex justify-between px-0 py-3 items-center border-b-2 border-gray-300 text-white transition ease duration-500 cursor-pointer pr-10 relative">
+                                        <div class="group-focus:text-white text-lg transition ease duration-500">
                                             Support
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapseTwo" class="accordion-collapse border-0 collapse" aria-labelledby="flush-headingTwo"
-                                        data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body py-4 px-5">
-                                            <h6 className="text-base text-white font-normal">+880 123456789</h6>
-                                            <h6 className="text-base text-white font-normal">info@intellogeek.com</h6>
+                                        </div>
+                                        <div class="h-8 w-8 items-center inline-flex justify-center transform transition ease duration-500 group-focus:text-white group-focus:-rotate-180 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2">
+                                            <i class="fas fa-chevron-down"></i>
                                         </div>
                                     </div>
+                                    <div class="group-focus:max-h-screen max-h-0 bg-maincolor px-1 overflow-hidden ease duration-500">
+                                        <p class="pl-0 pt-2 pb-2 text-gray-200 text-sm text-justify">+012 345678790</p>
+                                        <p class="pl-0 pt-0 pb-2 text-gray-200 text-sm text-justify">info@intellogeek.com</p>
+                                    </div>
                                 </div>
-                                <div class="accordion-item border-l-0 border-r-0 border-b-0 rounded-none bg-maincolor border border-gray-200">
-                                    <h2 class="accordion-header mb-0" id="flush-headingThree">
-                                        <button class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-white font-semibold text-left bg-maincolor border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
-                                            aria-expanded="false" aria-controls="flush-collapseThree">
+
+                                <div class="group outline-none accordion-section" tabindex="3">
+                                    <div class="group bg-maincolor flex justify-between px-0 py-3 items-center border-b-2 border-gray-300 text-white transition ease duration-500 cursor-pointer pr-10 relative">
+                                        <div class="group-focus:text-white text-lg transition ease duration-500">
                                             Contact us
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-                                        data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body py-4 px-5">
-                                            <h6 className="text-base text-white font-normal">+880 123456789</h6>
-                                            <h6 className="text-base text-white font-normal">info@intellogeek.com</h6>
+                                        </div>
+                                        <div class="h-8 w-8 items-center inline-flex justify-center transform transition ease duration-500 group-focus:text-white group-focus:-rotate-180 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2">
+                                            <i class="fas fa-chevron-down"></i>
                                         </div>
                                     </div>
+                                    <div class="group-focus:max-h-screen max-h-0 bg-maincolor px-1 overflow-hidden ease duration-500">
+                                        <p class="pl-0 pt-2 pb-2 text-gray-200 text-sm text-justify">+012 345678790</p>
+                                        <p class="pl-0 pt-0 pb-2 text-gray-200 text-sm text-justify">info@intellogeek.com</p>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
+
+
+
 
 
                         <div className="w-full mt-8 mb-8">
