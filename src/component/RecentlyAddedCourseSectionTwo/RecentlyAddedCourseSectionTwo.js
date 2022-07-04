@@ -20,7 +20,7 @@ function SampleNextArrow1(props) {
             style={{
                 ...style,
                 marginTop: "-20px",
-                right: "-45px",
+                right: "-50px",
                 opacity: "1",
                 display: "block",
                 background: "#ffffff",
@@ -51,7 +51,7 @@ function SamplePrevArrow1(props) {
             style={{
                 ...style,
                 marginTop: "-20px",
-                left: "-45px",
+                left: "-50",
                 opacity: "1",
                 display: "block",
                 background: "#ffffff",
@@ -81,8 +81,8 @@ function SampleNextArrow(props) {
             className={className}
             style={{
                 ...style,
-                marginTop: "-20px",
-                right: "-45px",
+                marginTop: "-25px",
+                right: "-35px",
                 opacity: "1",
                 display: "block",
                 background: "#ffffff",
@@ -113,8 +113,8 @@ function SamplePrevArrow(props) {
             className={className}
             style={{
                 ...style,
-                marginTop: "-20px",
-                left: "-45px",
+                marginTop: "-25px",
+                left: "-35px",
                 opacity: "1",
                 display: "block",
                 background: "#ffffff",
@@ -720,7 +720,7 @@ function RecentlyAddedCourseSectionTwo() {
         };
         return (
             <Fragment>
-                <div className="container my-12 xl:mt-1 -mt-4">
+                <div className="container xl:mt-1 -mt-4  2xl:my-12 xl:my-12 lg:my-12 2xl:px-16 xl:px-12 lg:px-16">
                     <div className="flex flex-wrap">
                         <div className="xl:w-1/3 w-full">
                             <div className="flex">
@@ -741,10 +741,11 @@ function RecentlyAddedCourseSectionTwo() {
                                 infinite={true}
                                 slidesToScroll={1}
                                 loop={true}
-                                speed={300}
+                                speed={200}
                                 autoplay={false}
                                 autoplaySpeed={1500}
                                 swipeToSlide={true}
+                                variableWidth={true}
                                 nextArrow={<SampleNextArrow1 />}
                                 prevArrow={<SamplePrevArrow1 />}
                             >
@@ -772,10 +773,11 @@ function RecentlyAddedCourseSectionTwo() {
                                     infinite={true}
                                     slidesToScroll={1}
                                     loop={true}
-                                    speed={300}
+                                    speed={200}
                                     autoplay={false}
                                     autoplaySpeed={1500}
                                     swipeToSlide={true}
+                                    variableWidth={true}
                                 >
                                     {
                                         data_of_subcategory
@@ -796,7 +798,7 @@ function RecentlyAddedCourseSectionTwo() {
                                                 infinite={true}
                                                 slidesToScroll={1}
                                                 loop={true}
-                                                speed={300}
+                                                speed={200}
                                                 autoplay={false}
                                                 autoplaySpeed={1500}
                                                 swipeToSlide={true}

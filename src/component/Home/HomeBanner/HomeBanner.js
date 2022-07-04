@@ -29,7 +29,8 @@ function HomeBanner() {
                     padding: "10px"
                 }}
             >
-                <ul style={{ margin: "300px" }}> {dots} </ul>
+                <ul style={{ margin: "100px" }}> {dots} </ul>
+               
             </div>
         ),
     }
@@ -59,7 +60,7 @@ function HomeBanner() {
                     </div>
                 </div> */}
 
-                <div className="container-fluid xl:w-full overflow-hidden">
+                <div className="container-fluid 2xl:w-full overflow-hidden">
                     <Slider {...settings}
                         ref={(slider9) => setNav9(slider9)}
                         slidesToShow={1}
@@ -71,66 +72,65 @@ function HomeBanner() {
                         slidesToScroll={1}
                         loop={true}
                         speed={3000}
-                        height={600}
                         autoplay={true}
                         autoplaySpeed={3000}
                         arrows={false}
                     >
 
-                        <div className="xl:w-full">
+                        <div className="2xl:w-full xl:w-full lg:w-full home-banner">
                             <img src={IntelloGeekSlider1}
-                                className="xl:w-full flex overflow-hidden"
+                                className="2xl:w-full xl:w-full lg:w-full flex overflow-hidden"
                                 alt="Wild Landscape" />
                         </div>
-                        <div className="xl:w-full">
+                        <div className="2xl:w-full xl:w-full lg:w-full home-banner">
                             <img src={IntelloGeekSlider2}
-                                className="xl:w-full flex overflow-hidden"
+                                className="2xl:w-full xl:w-full lg:w-full flex overflow-hidden"
                                 alt="Wild Landscape" />
                         </div>
-                        <div className="xl:w-full">
+                        <div className="2xl:w-full xl:w-full lg:w-full home-banner">
                             <img src={IntelloGeekSlider3}
-                                className="xl:w-full flex overflow-hidden"
+                                className="2xl:w-full xl:w-full lg:w-full flex overflow-hidden"
                                 alt="Wild Landscape" />
                         </div>
                     </Slider>
                 </div>
 
-                <div className="container xl:-mt-28 -mt-16 stack flex sm:p-6">
-                    <div className="flex flex-row bg-white dark:bg-dark-color2 rounded-xl shadow-client border-none xl:p-20 pt-4 pb-4 w-full text-center">
-                        <div className="lg:basis-1/3">
+                <div className="container 2xl:-mt-28 xl:-mt-24 lg:-mt-24 -mt-16 stack flex 2xl:p-12 xl:p-12 lg:p-10">
+                    <div className="flex flex-row bg-white dark:bg-dark-color2 rounded-xl shadow-client border-none 2xl:p-16 xl:p-12 lg:p-10 pt-4 pb-4 w-full text-center">
+                        <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/3">
                             <div className="image-center">
                                 <img
-                                    className="xl:h-24 xl:w-24 h-12 w-12 object-contain"
+                                    className="2xl:h-24 2xl:w-24 xl:h-16 xl:w-16 lg:h-12 lg:w-12 object-contain"
                                     src={Certificate} alt="" />
                             </div>
                             <h6
-                                className="xl:text-2xl text-xs text-sectionTitleColor font-medium xl:mt-1 dark:text-white">
+                                className="2xl:text-xl xl:text-lg lg:text-base text-sectionTitleColor font-medium 2xl:mt-2 xl:mt-2 lg:mt-3 dark:text-white">
                                 100% Certificate Obtaining
                             </h6>
                         </div>
 
-                        <div className="lg:basis-1/3">
+                        <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/3">
                             <div className="image-center">
                                 <img
-                                    className="xl:h-24 xl:w-24 h-12 w-12 object-contain"
+                                    className="2xl:h-24 2xl:w-24 xl:h-16 xl:w-16 lg:h-12 lg:w-12 object-contain"
                                     src={Globe}
                                     alt="" />
                             </div>
                             <h6
-                                className="xl:text-2xl text-xs text-sectionTitleColor font-medium xl:mt-1 dark:text-white">
+                                className="2xl:text-xl xl:text-lg lg:text-base text-sectionTitleColor font-medium 2xl:mt-2 xl:mt-2 lg:mt-3 dark:text-white">
                                 Live every where in
                                 the world
                             </h6>
                         </div>
 
-                        <div className="lg:basis-1/3">
+                        <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/3">
                             <div className="image-center">
                                 <img
-                                    className="xl:h-24 xl:w-24 h-12 w-12 object-contain"
+                                    className="2xl:h-24 2xl:w-24 xl:h-16 xl:w-16 lg:h-12 lg:w-12 object-contain"
                                     src={Teacher} alt="" />
                             </div>
                             <h6
-                                className="xl:text-2xl text-xs text-sectionTitleColor font-medium xl:mt-1 dark:text-white">
+                                className="2xl:text-xl xl:text-lg lg:text-base text-sectionTitleColor font-medium 2xl:mt-2 xl:mt-2 lg:mt-3 dark:text-white">
                                 Learn with the best
                                 teachers
                             </h6>

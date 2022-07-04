@@ -27,7 +27,7 @@ function Footer() {
                         <div className="md:flex md:flex-wrap md:-mx-4 py-6 md:pb-12">
                             <div className="footer-info lg:w-1/3 md:px-4 margin-top-div">
                                 <img className="h-12 w-12 box-shadow-footer-logo" src={MainLogo} alt="" />
-                                <p className="footer-des-long mt-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                <p className="footer-des-long text-black mt-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                                 <ul className="flex sm:justify-center xl:justify-start mt-2">
                                     <button className="lg:p-2 mx-2 bg-maincolor dark:bg-dark-color2 social-icons rounded-full text-lg font-semibold mt-9"><FaFacebookSquare /></button>
                                     <button className="lg:p-2 mx-2 bg-maincolor dark:bg-dark-color2 social-icons rounded-full text-lg font-semibold mt-9"><FaTwitter /></button>
@@ -102,7 +102,7 @@ function Footer() {
                         <div className="md:flex md:flex-wrap md:-mx-4 py-6 md:pb-12">
                             <div className="footer-info lg:w-1/3 md:px-4 margin-top-div">
                                 <img className="h-12 w-12 box-shadow-footer-logo" src={MainLogo} alt="" />
-                                <p className="footer-des-long mt-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                <p className="footer-des-long text-black mt-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                                 <ul className="flex sm:justify-center xl:justify-start mt-2">
                                     <button className="lg:p-2 mx-2 bg-maincolor social-icons rounded-full text-lg font-semibold mt-9"><FaFacebookSquare /></button>
                                     <button className="lg:p-2 mx-2 bg-maincolor social-icons rounded-full text-lg font-semibold mt-9"><FaTwitter /></button>
