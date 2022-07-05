@@ -42,7 +42,6 @@ function MobileRegistration() {
         });
     }, []);
 
-
     return (
         <Fragment>
             <section className="h-full bg-login-bg-color">
@@ -57,38 +56,35 @@ function MobileRegistration() {
                                         </div>
 
                                         <form className="space-y-5 mt-6">
+
                                             <div className="w-full mb-4 relative px-1">
-                                                <input id="name"
-                                                    className="rounded px-4 input active:outline-none pt-5 block w-full bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
-                                                    type="text"
+                                                <input type="text"
+                                                    id="name"
                                                     value={name}
                                                     onChange={e => setName(e.target.value)}
-                                                    autoFocus
-                                                    required />
-                                                <label htmlFor="name"
-                                                    className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-CourseTitle text-base mt-2 cursor-text">Name <span>*</span></label>
+                                                    required
+                                                    className="block rounded px-4 pb-4 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-none border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-gray-600 peer" placeholder=" " />
+                                                <label for="name" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-4 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 cursor-pointer peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Name</label>
                                             </div>
 
                                             <div className="w-full mb-4 relative px-1">
-                                                <input id="name"
-                                                    className="rounded px-4 input active:outline-none pt-5 block w-full bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
-                                                    type="text"
-                                                    value={surname} onChange={e => setSurname(e.target.value)}
-                                                    autoFocus />
-                                                <label htmlFor="name"
-                                                    className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-CourseTitle text-base mt-2 cursor-text">Surename</label>
+                                                <input type="text"
+                                                    id="sure_name"
+                                                    value={surname}
+                                                    onChange={e => setSurname(e.target.value)}
+                                                    required
+                                                    className="block rounded px-4 pb-4 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-none border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-gray-600 peer" placeholder=" " />
+                                                <label for="sure_name" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-4 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 cursor-pointer peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Surename</label>
                                             </div>
 
-
-
                                             <div className="w-full mb-4 relative px-1">
-                                                <input id="name"
-                                                    className="rounded px-4 input active:outline-none pt-5 block w-full bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
-                                                    type="email"
-                                                    value={email} onChange={e => setEmail(e.target.value)}
-                                                    autoFocus />
-                                                <label htmlFor="name"
-                                                    className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-CourseTitle text-base mt-2 cursor-text">Email</label>
+                                                <input type="email"
+                                                    id="email"
+                                                    value={email}
+                                                    onChange={e => setEmail(e.target.value)}
+                                                    required
+                                                    className="block rounded px-4 pb-4 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-none border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-gray-600 peer" placeholder=" " />
+                                                <label for="email" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-4 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 cursor-pointer peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Email</label>
                                             </div>
 
                                             <div className="w-full mb-4 relative px-1">
@@ -114,28 +110,31 @@ function MobileRegistration() {
                                                 </div>
                                             </div>
 
-
-
-
                                             <div className="w-full mb-4 relative px-1">
-                                                <input id="password"
-                                                    className="w-full rounded px-3 pt-5 focus:outline-none active:outline-none input block bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
-                                                    type="password" value={password} onChange={e => setPassword(e.target.value)} />
-                                                <label htmlFor="password"
-                                                    className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-500 text-base mt-2 cursor-text">Password</label>
+                                                <input type="password"
+                                                    id="password"
+                                                    value={password}
+                                                    onChange={e => setPassword(e.target.value)}
+                                                    required
+                                                    className="block rounded px-4 pb-4 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-none border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-gray-600 peer" placeholder=" " />
+                                                <label for="password" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-4 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 cursor-pointer peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Password</label>
                                             </div>
+
                                             <div className="w-full mb-4 relative px-1">
-                                                <input id="password"
-                                                    className="w-full rounded px-3 pt-5 focus:outline-none active:outline-none input block bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
-                                                    type="password" value={confirm_password} onChange={e => setConfirm_password(e.target.value)} />
-                                                <label htmlFor="password"
-                                                    className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-500 text-base mt-2 cursor-text">Confirm
-                                                    Password</label>
+                                                <input type="password"
+                                                    id="confirm_password"
+                                                    value={confirm_password}
+                                                    onChange={e => setConfirm_password(e.target.value)}
+                                                    required
+                                                    className="block rounded px-4 pb-4 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-none border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-gray-600 peer" placeholder=" " />
+                                                <label for="confirm_password" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-4 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 cursor-pointer peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Confirm Password</label>
                                             </div>
 
                                             <div className="flex justify-between items-center mb-4">
                                                 <div className="form-group form-check">
-                                                    <input type="checkbox" className="default:ring-8" onChange={e => setAccept_terms_condition(e.target.checked)} />
+                                                    <input type="checkbox"
+                                                        className="default:ring-8"
+                                                        onChange={e => setAccept_terms_condition(e.target.checked)} />
                                                     <label
                                                         className="form-check-label inline-block font-light text-sm mx-2"
                                                         htmlFor="inlineCheckbox1"> Accept Terms &
@@ -144,29 +143,38 @@ function MobileRegistration() {
                                             </div>
                                             <div className="flex justify-between items-center mb-4">
                                                 <div className="form-group form-check">
-                                                    <input type="checkbox" className="default:ring-8" onChange={e => setReceive_marketing_email_update(e.target.checked)} />
+                                                    <input type="checkbox"
+                                                        className="default:ring-8"
+                                                        onChange={e => setReceive_marketing_email_update(e.target.checked)} />
                                                     <label
                                                         className="form-check-label inline-block font-light text-sm mx-2"
                                                         htmlFor="inlineCheckbox1"> Receive marketing email
-                                                        update</label>
+                                                        update
+                                                    </label>
                                                 </div>
                                             </div>
-
 
                                             <div className="flex justify-center">
-                                                <div className="w-full mt-4 text-center bg-maincolor rounded-sm pt-4 pb-4">
-                                                    <Link onClick={createPost}><span
-                                                        className="text-lg font-normal leading-tight text-white mx-2 h-11">REGISTER</span></Link>
+                                                <div data-mdb-ripple="true"
+                                                    data-mdb-ripple-color="light"
+                                                    className="w-full mt-4 text-center bg-maincolor rounded-sm pt-4 pb-4">
+                                                    <Link onClick={createPost}>
+                                                        <span className="text-lg font-normal leading-tight text-white mx-2 h-11">REGISTER</span>
+                                                    </Link>
                                                 </div>
                                             </div>
-
                                         </form>
 
 
                                         <div className="text-center">
                                             <div className="mt-8 mb-8">
-                                                <span className="font-normal text-black text-base"> Already have an account? <span
-                                                    className="hover:underline"><Link to="/login/">Sign In</Link></span></span>
+                                                <span className="font-normal text-black text-base"> Already have an account?
+                                                    <span className="hover:underline">
+                                                        <Link to="/login/">
+                                                            Sign In
+                                                        </Link>
+                                                    </span>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>

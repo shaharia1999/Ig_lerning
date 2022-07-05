@@ -16,8 +16,8 @@ function Login() {
             username_or_email: username_or_email,
             password: password
         }
-    
-        axios.post(ApiUrl.BaseUrl + 'user-authentication/api/login/',login_data).then((response) => {
+
+        axios.post(ApiUrl.BaseUrl + 'user-authentication/api/login/', login_data).then((response) => {
             if (response.data.error === false) {
                 localStorage.setItem('access_token', response.data.access_token)
                 localStorage.setItem('refresh_token', response.data.refresh_token)
@@ -49,19 +49,23 @@ function Login() {
                                             </div>
 
                                             <form className="space-y-5 lg:mt-8">
-                                                <div className="mb-4 relative">
-                                                    <input id="email"
+
+                                                <div class="relative mb-4">
+                                                    <input type="email"
+                                                        id="email"
                                                         value={username_or_email}
                                                         onChange={e => setUsernameOrEmail(e.target.value)}
-                                                        className="rounded px-3 input active:outline-none pt-5 block w-full bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" type="text" autofocus />
-                                                    <label for="email" className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-CourseTitle text-base mt-2 cursor-text">Username or Email</label>
+                                                        className="block rounded px-4 pb-4 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-none border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-gray-600 peer" placeholder=" " />
+                                                    <label for="email" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-4 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 cursor-pointer peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Username or Email</label>
                                                 </div>
-                                                <div className="mb-4 relative">
-                                                    <input id="password"
+
+                                                <div class="relative mb-4">
+                                                    <input type="password"
+                                                        id="password"
                                                         value={password}
                                                         onChange={e => setPassword(e.target.value)}
-                                                        className="w-full rounded px-3 pt-5 focus:outline-none active:outline-none input block bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle" type="password" />
-                                                    <label for="password" className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-500 text-base mt-2 cursor-text">Password</label>
+                                                        className="block rounded px-4 pb-4 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-none border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-gray-600 peer" placeholder=" " />
+                                                    <label for="password" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-4 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 cursor-pointer peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Password</label>
                                                 </div>
 
                                                 <div className="flex justify-between items-center mb-6">
@@ -72,11 +76,20 @@ function Login() {
                                                             className="default:ring-8" />
                                                         <label className="form-check-label inline-block font-light lg:text-sm mx-2" for="inlineCheckbox1"> keep me logged in</label>
                                                     </div>
-                                                    <Link className="font-light lg:text-sm hover:underline p-2 float-right" to="/forget-password">Forgot password?</Link>
+                                                    <Link className="font-light lg:text-sm hover:underline p-2 float-right"
+                                                        to="/forget-password">
+                                                        Forgot password?
+                                                    </Link>
                                                 </div>
 
-                                                <div className="w-full mt-8 flex flex-auto lg:w-full image-center bg-maincolor rounded-sm lg:pt-4 lg:pb-4">
-                                                    <Link onClick={submitLogin}><span className="text-lg font-normal leading-tight text-white lg:pl-24 lg:pr-24 mx-2 h-11">LOGIN</span></Link>
+                                                <div data-mdb-ripple="true"
+                                                    data-mdb-ripple-color="light"
+                                                    className="w-full mt-8 flex flex-auto lg:w-full image-center bg-maincolor rounded-sm lg:pt-4 lg:pb-4">
+                                                    <Link onClick={submitLogin}>
+                                                        <span className="text-lg font-normal leading-tight text-white lg:pl-24 lg:pr-24 mx-2 h-11">
+                                                            LOGIN
+                                                        </span>
+                                                    </Link>
                                                 </div>
                                             </form>
 
@@ -84,12 +97,24 @@ function Login() {
                                             <div className="mt-8 text-center">
                                                 <span className="font-normal text-client-section-des lg:text-base"> or Login using social media</span>
                                                 <ul className="flex flex-auto sm:justify-center xl:justify-center -mt-4">
-                                                    <button className="xl:p-3 mx-2 social-icons-login-fb rounded-full text-2xl font-semibold mt-9"><FaFacebookSquare className="text-facebook-color" /></button>
-                                                    <button className="xl:p-3 mx-2 social-icons-login-twitter rounded-full text-2xl font-semibold mt-9"><FaTwitter className="text-twitter-color" /></button>
-                                                    <button className="xl:p-3 mx-2 social-icons-login-google rounded-full text-2xl font-semibold mt-9"><FaGoogle className="text-google-color" /></button>
+                                                    <button className="xl:p-3 mx-2 social-icons-login-fb rounded-full text-2xl font-semibold mt-9">
+                                                        <FaFacebookSquare className="text-facebook-color" />
+                                                    </button>
+                                                    <button className="xl:p-3 mx-2 social-icons-login-twitter rounded-full text-2xl font-semibold mt-9">
+                                                        <FaTwitter className="text-twitter-color" />
+                                                    </button>
+                                                    <button className="xl:p-3 mx-2 social-icons-login-google rounded-full text-2xl font-semibold mt-9">
+                                                        <FaGoogle className="text-google-color" />
+                                                    </button>
                                                 </ul>
                                                 <div className="xl:mt-14">
-                                                    <span className="font-normal text-black lg:text-base"> Don't have an account? <span className="hover:underline"><Link to="/registration">Sign Up</Link></span></span>
+                                                    <span className="font-normal text-black lg:text-base"> Don't have an account?
+                                                        <span className="hover:underline">
+                                                            <Link to="/registration">
+                                                                Sign Up
+                                                            </Link>
+                                                        </span>
+                                                    </span>
                                                 </div>
                                             </div>
 

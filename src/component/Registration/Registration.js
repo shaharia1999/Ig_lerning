@@ -28,9 +28,9 @@ function Registration() {
             accept_terms_condition: accept_terms_condition
         }
 
-        axios.post(ApiUrl.BaseUrl + 'user-authentication/api/student-registration-new/',data).then((response) => {
+        axios.post(ApiUrl.BaseUrl + 'user-authentication/api/student-registration-new/', data).then((response) => {
             if (response.data.error === false) {
-               
+
             }
         });
     }
@@ -43,77 +43,71 @@ function Registration() {
         });
     }, []);
 
-    
     return (
         <Fragment>
-            <section className="md:h-screen bg-login-bg-color">
-                <div className="container h-full lg:pl-32 lg:pr-32">
+            <section className="h-screen bg-login-bg-color">
+                <div className="container h-full xl:pl-32 xl:pr-32">
                     <div className="flex justify-center items-center flex-wrap text-gray-800">
-                        <div className="xl:w-12/12 lg:w-12/12 mt-10">
+                        <div className="xl:w-full mt-20">
                             <div className="block bg-white shadow-lg">
-                                <div className="lg:flex lg:flex-wrap">
+                                <div className="xl:flex xl:flex-wrap">
 
-                                    <div
-                                        className="lg:w-5/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none">
+                                    <div className="xl:w-5/12 flex items-center xl:rounded-r-lg rounded-b-lg xl:rounded-bl-none">
                                         <div className="text-white flex h-full">
-                                            <img className="h-full" src={LoginImg} alt=""/>
+                                            <img className="h-full" src={LoginImg} alt="" />
                                         </div>
                                     </div>
 
-                                    <div className="lg:w-7/12 xl:p-10">
+                                    <div className="xl:w-7/12 xl:p-10">
                                         <div className="">
                                             <div className="text-center">
-                                                <h4 className="text-4xl font-semibold lg:mt-16 mb-12 pb-1">Registration</h4>
+                                                <h4 className="text-4xl font-semibold xl:mt-16 mb-12 pb-1">Registration</h4>
                                             </div>
-
-                                            <form className="space-y-5 lg:mt-8">
+ 
+                                            <form className="space-y-5 xl:mt-8">
 
                                                 <div className="flex flex-auto">
-
                                                     <div className="w-1/2 mb-4 relative px-1">
-                                                        <input id="name"
-                                                            className="rounded px-4 input active:outline-none pt-5 block w-full bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
-                                                            type="text"
+                                                        <input type="text"
+                                                            id="name"
                                                             value={name}
                                                             onChange={e => setName(e.target.value)}
-                                                            autoFocus
-                                                            required />
-                                                        <label htmlFor="name"
-                                                            className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-CourseTitle text-base mt-2 cursor-text">Name <span>*</span></label>
+                                                            required
+                                                            className="block rounded px-4 pb-4 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-none border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-gray-600 peer" placeholder=" " />
+                                                        <label for="name" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-4 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 cursor-pointer peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Name</label>
                                                     </div>
 
                                                     <div className="w-1/2 mb-4 relative px-1">
-                                                        <input id="name"
-                                                            className="rounded px-4 input active:outline-none pt-5 block w-full bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
-                                                            type="text"
-                                                            value={surname} onChange={e => setSurname(e.target.value)}
-                                                            autoFocus />
-                                                        <label htmlFor="name"
-                                                            className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-CourseTitle text-base mt-2 cursor-text">Surename</label>
+                                                        <input type="text"
+                                                            id="sure_name"
+                                                            value={surname}
+                                                            onChange={e => setSurname(e.target.value)}
+                                                            required
+                                                            className="block rounded px-4 pb-4 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-none border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-gray-600 peer" placeholder=" " />
+                                                        <label for="sure_name" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-4 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 cursor-pointer peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Surename</label>
                                                     </div>
-
                                                 </div>
 
                                                 <div className="flex flex-auto">
                                                     <div className="w-1/2 mb-4 relative px-1">
-                                                        <input id="name"
-                                                            className="rounded px-4 input active:outline-none pt-5 block w-full bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
-                                                            type="email"
-                                                            value={email} onChange={e => setEmail(e.target.value)}
-                                                            autoFocus />
-                                                        <label htmlFor="name"
-                                                            className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-CourseTitle text-base mt-2 cursor-text">Email</label>
+                                                        <input type="email"
+                                                            id="email"
+                                                            value={email}
+                                                            onChange={e => setEmail(e.target.value)}
+                                                            required
+                                                            className="block rounded px-4 pb-4 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-none border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-gray-600 peer" placeholder=" " />
+                                                        <label for="email" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-4 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 cursor-pointer peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Email</label>
                                                     </div>
 
                                                     <div className="w-1/2 mb-4 relative px-1">
 
                                                         <select value={country_id} onChange={e => setCountry_id(e.target.value)}
-                                                            className="appearance-none block w-full bg-BgLoveIcon border-none py-5 px-4 mb-3 leading-tight focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
+                                                            className="appearance-none block w-full bg-BgLoveIcon border-none py-5 px-4 mb-3 leading-tight focus:border-none focus:outline-none focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
                                                             id="grid-state">
-                                                            <option className="text-CourseTitle selected">Country
+                                                            <option className="text-gary-300 selected">Country
                                                             </option>
                                                             {
-                                                                 country.map((country_c, index) => (
+                                                                country.map((country_c, index) => (
                                                                     <option value={country_c.country_id}>{country_c.country_name}</option>
                                                                 ))
                                                             }
@@ -128,59 +122,72 @@ function Registration() {
                                                             </svg>
                                                         </div>
                                                     </div>
-
                                                 </div>
 
                                                 <div className="flex flex-auto">
                                                     <div className="w-1/2 mb-4 relative px-1">
-                                                        <input id="password"
-                                                            className="w-full rounded px-3 pt-5 focus:outline-none active:outline-none input block bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
-                                                            type="password" value={password} onChange={e => setPassword(e.target.value)} />
-                                                        <label htmlFor="password"
-                                                            className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-500 text-base mt-2 cursor-text">Password</label>
+                                                        <input type="password"
+                                                            id="password"
+                                                            value={password}
+                                                            onChange={e => setPassword(e.target.value)}
+                                                            required
+                                                            className="block rounded px-4 pb-4 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-none border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-gray-600 peer" placeholder=" " />
+                                                        <label for="password" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-4 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 cursor-pointer peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Password</label>
                                                     </div>
+
                                                     <div className="w-1/2 mb-4 relative px-1">
-                                                        <input id="password"
-                                                            className="w-full rounded px-3 pt-5 focus:outline-none active:outline-none input block bg-BgLoveIcon border-none py-5 mb-3 leading-tight focus:bg-BgLoveIcon text-sm font-normal text-CourseTitle"
-                                                            type="password" value={confirm_password} onChange={e => setConfirm_password(e.target.value)} />
-                                                        <label htmlFor="password"
-                                                            className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-500 text-base mt-2 cursor-text">Confirm
-                                                            Password</label>
+                                                        <input type="password"
+                                                            id="confirm_password"
+                                                            value={confirm_password}
+                                                            onChange={e => setConfirm_password(e.target.value)}
+                                                            required
+                                                            className="block rounded px-4 pb-4 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-none border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-gray-600 peer" placeholder=" " />
+                                                        <label for="confirm_password" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-4 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 cursor-pointer peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Confirm Password</label>
                                                     </div>
                                                 </div>
 
-
-                                                <div className="flex justify-between items-center mb-6">
-                                                    <div className="form-group form-check">
-                                                        <input type="checkbox" className="default:ring-8" onChange={e => setAccept_terms_condition(e.target.checked)} />
+                                                <div className="flex justify-between items-center xl:ml-3 mb-6">
+                                                    <div className="form-group w-1/2 form-check">
+                                                        <input type="checkbox"
+                                                            className="default:ring-8"
+                                                            onChange={e => setAccept_terms_condition(e.target.checked)} />
                                                         <label
-                                                            className="form-check-label inline-block font-light lg:text-sm mx-2"
+                                                            className="form-check-label inline-block font-light xl:text-sm mx-2"
                                                             htmlFor="inlineCheckbox1"> Accept Terms &
                                                             Condition</label>
                                                     </div>
-                                                    <div className="form-group form-check">
-                                                        <input type="checkbox" className="default:ring-8" onChange={e => setReceive_marketing_email_update(e.target.checked)} />
+                                                    <div className="form-group w-1/2 form-check">
+                                                        <input type="checkbox"
+                                                            className="default:ring-8"
+                                                            onChange={e => setReceive_marketing_email_update(e.target.checked)} />
                                                         <label
-                                                            className="form-check-label inline-block font-light lg:text-sm mx-2"
+                                                            className="form-check-label inline-block font-light xl:text-sm mx-2"
                                                             htmlFor="inlineCheckbox1"> Receive marketing email
                                                             update</label>
                                                     </div>
                                                 </div>
 
                                                 <div className="flex justify-center">
-                                                    <div className="w-2/4 mt-7 text-center lg:w-2/4 bg-maincolor rounded-sm lg:pt-4 lg:pb-4">
-                                                        <Link onClick={createPost}><span
-                                                            className="text-lg font-normal leading-tight text-white mx-2 h-11">REGISTER</span></Link>
+                                                    <div data-mdb-ripple="true"
+                                                        data-mdb-ripple-color="light"
+                                                        className="w-2/4 mt-7 text-center xl:w-2/4 bg-maincolor rounded-sm xl:pt-4 xl:pb-4">
+                                                        <Link onClick={createPost}>
+                                                            <span className="text-lg font-normal leading-tight text-white mx-2 h-11">
+                                                                REGISTER
+                                                            </span>
+                                                        </Link>
                                                     </div>
                                                 </div>
-
                                             </form>
 
 
                                             <div className="mt-8 text-center">
-                                                <div className="lg:mt-14">
-                                                    <span className="font-normal text-black lg:text-base"> Already have an account? <span
-                                                        className="hover:underline"><Link to="/login/">Sign In</Link></span></span>
+                                                <div className="xl:mt-14">
+                                                    <span className="font-normal text-black xl:text-base"> Already have an account?
+                                                        <span className="hover:underline">
+                                                            <Link to="/login/">Sign In</Link>
+                                                        </span>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -194,7 +201,7 @@ function Registration() {
             </section>
         </Fragment>
     );
-    
+
 }
 
 export default Registration;

@@ -47,7 +47,6 @@ function HomePage() {
             <ClientSays />
             <Partner />
 
-
             <div className="DesktopFooter">
                 <Footer />
             </div>
