@@ -42,12 +42,12 @@ function HomeAdvertisedment() {
             <Fragment>
                 <div className="container">
                     <div className="flex flex-wrap">
-                        <div className="xl:w-2/3 w-full">
+                        <div className="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full">
                             <MostVisited />
                             <TopCategories />
                         </div>
-                        <div className="xl:w-1/3 w-full">
-                            <img className="xl:w-96 w-full xl:ml-20 xl:mt-20 -mt-6 xl:p-0 rounded p-6 home-ad-banner" src={ApiUrl.ImageBaseUrl+bannerData.banner_image} alt="" />
+                        <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full">
+                            <img className="2xl:w-96 xl:w-64 lg:w-56 w-full xl:ml-20 lg:ml-16 2xl:mt-20 xl:mt-16 lg:mt-0 -mt-6 xl:p-0 rounded p-6 home-ad-banner" src={ApiUrl.ImageBaseUrl+bannerData.banner_image} alt="" />
                         </div>
                     </div>
                 </div>

@@ -156,7 +156,7 @@
 }
 
 /*X-Small devices portrait phones*/
-@media (min-width: 375.98px) and (max-width: 575.98px) {
+@media (min-width: 375px) and (max-width: 575.98px) {
 
     /* nav menubar */
     .Mobile {}

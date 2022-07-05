@@ -21,7 +21,7 @@ function SampleNextArrow(props) {
             className={className}
             style={{
                 ...style,
-                marginTop: "-25px",
+                marginTop: "-35px",
                 right: "-45px",
                 opacity: "1",
                 display: "block",
@@ -53,7 +53,7 @@ function SamplePrevArrow(props) {
             className={className}
             style={{
                 ...style,
-                marginTop: "-25px",
+                marginTop: "-35px",
                 left: "-45px",
                 opacity: "1",
                 display: "block",
@@ -714,11 +714,11 @@ function BusinessCompany() {
 
         return (
             <Fragment>
-                <div className="container 2xl:my-12 xl:my-12 lg:my-2 2xl:px-16 xl:px-12 lg:px-16">
+                <div className="container 2xl:my-12 xl:my-12 lg:my-2 my-12 2xl:px-16 xl:px-12 lg:px-16">
                     <div className="flex flex-wrap">
                         <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full">
                             <div className="flex">
-                                <h4 className="2xl:text-3xl xl:text-2xl lg:text-xl font-semibold text-sectionTitleColor dark:text-white 2xl:ml-6 xl:ml-4 lg:ml-3 -mt-6">Recently Added
+                                <h4 className="2xl:text-3xl xl:text-2xl lg:text-xl text-xl font-semibold text-sectionTitleColor dark:text-white 2xl:ml-6 xl:ml-4 lg:ml-3 ml-4 -mt-6">Recently Added
                                     Course</h4>
                             </div>
                         </div>
@@ -745,7 +745,7 @@ function BusinessCompany() {
                             </Slider>
                         </div>
                     </div>
-                    <div className="2xl:mt-1 xl:-mt-8 lg:-mt-12 mt-4">
+                    <div className="2xl:mt-1 xl:-mt-8 lg:-mt-12">
                         <div className="fade show active">
                             <div className="-mx-1 px-1">
                                 <Slider

@@ -220,7 +220,7 @@ function RecentlyAddedCourseSectionTwo() {
                         <li className="list-none mx-2">
                             <button type="button"
                                 onClick={() => CategoryBasedSubCategory(category_info.category_id)}
-                                className="block w-full md:w-auto xl:px-5 px-3 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 xl:text-base text-xs bg-maincolor xl:font-medium font-normal leading-tight text-white rounded-3xl xl:h-11 h-10">
+                                className="inline-block w-full display md:w-auto 2xl:px-10 xl:px-10 lg:px-8 px-3 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 2xl:text-base xl:text-base lg:text-sm text-xs bg-maincolor 2xl:font-normal xl:font-normal lg:font-normal leading-tight text-white rounded-3xl xl:h-11 h-10">
                                 {category_info.category_name}
                             </button>
                         </li>
@@ -482,7 +482,7 @@ function RecentlyAddedCourseSectionTwo() {
             return (
                 getCourse.map((category_info) => (
                     category_info.course_information.map((course, course_index) => (
-                        <div key={course_index} className="xl:my-8 xl:px-5 px-2 xl:w-1/4">
+                        <div key={course_index} className="2xl:my-8 xl:my-8 lg:my-3 2xl:px-3 xl: px-2 xl:w-1/4">
                             <div className="wrapper antialiased text-gray-900">
                                 <div className="relative">
                                     <img className="w-full xl:h-72 h-56 object-cover object-center rounded-lg shadow-md" src={MasterCourseThumbnail} alt='' />
@@ -491,7 +491,7 @@ function RecentlyAddedCourseSectionTwo() {
                                         <div className="w-1/5">
                                             <a href="!#">
                                                 <div
-                                                    className="text-sm absolute top-0 xl:left-2 left-4 bg-black text-white rounded-full xl:h-12 xl:w-12 h-6 w-6 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                                                    className="text-sm absolute top-0 2xl:left-4 xl:left-3 lg:left-3 left-4 bg-black text-white rounded-full xl:h-12 xl:w-12 h-6 w-6 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
                                                     <img className="xl:h-12 xl:w-12 h-7 w-7" src={CourseLogo} alt='' />
                                                 </div>
                                             </a>
@@ -499,7 +499,7 @@ function RecentlyAddedCourseSectionTwo() {
                                         <div className="w-4/5">
                                             <a href="!#">
                                                 <div className="text-lg absolute top-0 text-white mt-5">
-                                                    <h6 className="font-medium xl:text-xl text-sm -mt-2 text-white">{course.channel_name?.channel_name}</h6>
+                                                    <h6 className="2xl:font-medium xl:font-medium lg:font-normal 2xl:text-xl xl:text-lg lg:text-base text-sm -mt-2 text-white 2xl:ml-3 xl:ml-3 lg:ml-2 ml-3">{course.channel_name?.channel_name}</h6>
                                                     <h6 className="font-extralight xl:-ml-6 -ml-4 xl:-mt-0 -mt-1 flex text-sm text-white">
                                                         <img className="xl:w-5 xl:h-5 w-4 h-4 rounded-full border-2 border-white mr-2"
                                                             src={ApiUrl.ImageBaseUrl + course?.channel_name?.channel_name_logo} alt='' />
@@ -510,24 +510,24 @@ function RecentlyAddedCourseSectionTwo() {
                                     </div>
                                 </div>
 
-                                <div className="relative xl:px-4 px-2 -mt-16">
-                                    <div className="bg-white dark:bg-dark-color2 xl:p-4 p-2 rounded-lg shadow-lg">
+                                <div className="relative 2xl:px-4 xl:px-3 lg:px-2 px-2 -mt-16">
+                                    <div className="bg-white dark:bg-dark-color2 2xl:p-4 xl:p-3 lg:p-2 p-2 rounded-lg shadow-lg">
                                         <div className="flex flex-wrap">
                                             <div className="w-full">
-                                                <h4 className="mt-1 xl:text-lg text-sm font-semibold leading-tight text-CourseTitle dark:text-white">
+                                                <h4 className="mt-1 2xl:text-base xl:text-sm lg:text-sm text-sm 2xl:font-semibold xl:font-medium lg:font-medium 2xl:tracking-tight leading-none text-CourseTitle dark:text-white">
                                                     {course?.course_title}
                                                 </h4>
                                             </div>
                                         </div>
 
                                         <div className="flex flex-wrap">
-                                            <div className="xl:w-2/4 w-full">
-                                                <div className="flex sm:justify-center xl:justify-start">
-                                                    <span className="text-gray-600 dark:text-gray-400 text-xs mt-2">Starts September 2022</span>
+                                            <div className="2xl:w-2/4 xl:w-2/4 lg:w-2/4 w-full">
+                                                <div className="flex justify-start 2xl:justify-start xl:justify-start lg:justify-start">
+                                                    <span className="text-gray-600 dark:text-gray-400 text-xs mt-2">September 2022</span>
                                                 </div>
                                             </div>
-                                            <div className="xl:w-2/4 w-full">
-                                                <div className="flex sm:justify-center xl:justify-start">
+                                            <div className="2xl:w-2/4 xl:w-2/4 lg:w-2/4 w-full">
+                                                <div className="flex justify-start 2xl:justify-start xl:justify-start lg:justify-start">
                                                     <GoPrimitiveDot className="text-sm mt-2 font-medium text-LiveBtnColor" /><span className="text-gray-600 text-xs mt-2 dark:text-gray-400">  11 Weeks</span>
                                                 </div>
                                             </div>
@@ -546,25 +546,25 @@ function RecentlyAddedCourseSectionTwo() {
                                             <div className="xl:w-4/12 w-3/12">
                                                 <div className="flex sm:justify-center xl:justify-start -mt-3">
                                                     <Link to="" className="z-30">
-                                                        <img className="xl:h-8 xl:w-8 h-6 w-6 rounded-full border-2 border-white"
+                                                        <img className="2xl:h-8 2xl:w-8 xl:h-7 xl:w-7 h-6 w-6 rounded-full border-2 border-white"
                                                             src="https://media.istockphoto.com/photos/got-this-picture-id1332291404?b=1&k=20&m=1332291404&s=170667a&w=0&h=uRm6p7xa_-YF9t_6sVY7DXnXaa2Jo_NeL4oUvrFJq6I=" alt="" />
                                                     </Link>
                                                     <Link to="" className="-ml-3 z-20">
-                                                        <img className="xl:h-8 xl:w-8 h-6 w-6 rounded-full border-2 border-white"
+                                                        <img className="2xl:h-8 2xl:w-8 xl:h-7 xl:w-7 h-6 w-6 rounded-full border-2 border-white"
                                                             src="https://cbsnews1.cbsistatic.com/hub/i/2018/11/06/0c1af1b8-155a-458e-b105-78f1e7344bf4/2018-11-06t054310z-1334124005-rc1be15a8050-rtrmadp-3-people-sexiest-man.jpg" alt="" />
                                                     </Link>
                                                     <Link to="" className="-ml-3 z-10">
-                                                        <img className="xl:h-8 xl:w-8 h-6 w-6 rounded-full border-2 border-white"
+                                                        <img className="2xl:h-8 2xl:w-8 xl:h-7 xl:w-7 h-6 w-6 rounded-full border-2 border-white"
                                                             src="https://aisvox-a.akamaihd.net/masters/940835/26-1/27-1yk13p/2540x1429/4080/800604860-jpg.jpg" alt="" />
                                                     </Link>
                                                 </div>
                                             </div>
                                             <div className="xl:w-8/12 w-9/12 relative">
                                                 <div className="flex xl:justify-end -mt-3 absolute right-0">
-                                                    <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white xl:pl-2 xl:pr-2 pl-1 pr-1 pt-0.5 pb-0.5 xl:pt-1 xl:pb-1 xl:mr-1 rounded-md">
-                                                        <img className="xl:px-1 xl:h-3 xl:w-5 h-2 w-3 mr-0.5" src={LoveIcon} alt="" /></button>
+                                                    <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white 2xl:pl-2 2xl:pr-2 2xl:pt-1 2xl:pb-1 2xl:mr-1 xl:pl-1.5 xl:pr-1.5 xl:pt-0.5 xl:pb-0.5 xl:mr-1 pl-1 pr-1 pt-0.5 pb-0.5 mr-0.5 rounded-md">
+                                                        <img className="2xl:px-1 2xl:h-3 2xl:w-5 xl:px-1 xl:h-3 xl:w-5 h-3 w-3" src={LoveIcon} alt="" /></button>
                                                     <button
-                                                        className="xl:text-sm text-xs flex xl:font-light font-extralight leading-tight bg-apply-now text-white xl:pl-3 pl-1 xl:pr-3 pr-1 xl:pt-2 pt-0.5 pb-0.5 xl:pb-2 xl:rounded-lg rounded-sm"> Apply Now <MdLogin className="xl:ml-2 ml-0.5 xl:text-xl text-base xl:font-normal font-light" />
+                                                        className="2xl:text-sm xl:text-sm lg:text-sm text-xs flex xl:font-light font-extralight leading-tight bg-apply-now text-white 2xl:pl-3 2xl:pr-3 2xl:pt-2 2xl:pb-2 xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 pl-1 pr-1 pt-0.5 pb-0.5 2xl:rounded-lg xl:rounded-md lg:rounded rounded-sm"> Apply Now <MdLogin className="xl:ml-2 ml-0.5 lg:mt-0.5 xl:text-xl text-base xl:font-normal font-light" />
                                                     </button>
                                                 </div>
                                             </div>
@@ -639,7 +639,8 @@ function RecentlyAddedCourseSectionTwo() {
                         slidesToShow: 3,
                         slidesToScroll: 3,
                         infinite: true,
-                        dots: true
+                        dots: true,
+                        arrows: false
                     }
                 },
                 {
@@ -720,14 +721,14 @@ function RecentlyAddedCourseSectionTwo() {
         };
         return (
             <Fragment>
-                <div className="container xl:mt-1 -mt-4  2xl:my-12 xl:my-12 lg:my-12 2xl:px-16 xl:px-12 lg:px-16">
+                <div className="container 2xl:my-16 xl:my-12 lg:my-8 my-12 2xl:px-16 xl:px-12 lg:px-16">
                     <div className="flex flex-wrap">
-                        <div className="xl:w-1/3 w-full">
+                        <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full">
                             <div className="flex">
-                                <h4 className="xl:text-4xl text-xl font-semibold text-sectionTitleColor dark:text-white xl:ml-3 ml-5">Recently Added Course</h4>
+                                <h4 className="2xl:text-3xl xl:text-2xl lg:text-xl text-xl font-semibold text-sectionTitleColor dark:text-white 2xl:ml-6 xl:ml-4 lg:ml-3 ml-4 -mt-6">Recently Added Course</h4>
                             </div>
                         </div>
-                        <div className="xl:w-2/3 w-full relative">
+                        <div className="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full relative 2xl:-mt-9 xl:-mt-9 lg:-mt-9 mt-4">
                             {/* <div className="flex right-0 absolute">
                                 <div className="mb-4">
                                     <ul className="nav nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4"> 
@@ -746,6 +747,7 @@ function RecentlyAddedCourseSectionTwo() {
                                 autoplaySpeed={1500}
                                 swipeToSlide={true}
                                 variableWidth={true}
+                                arrows={false}
                                 nextArrow={<SampleNextArrow1 />}
                                 prevArrow={<SamplePrevArrow1 />}
                             >
@@ -761,7 +763,7 @@ function RecentlyAddedCourseSectionTwo() {
                         </div>
                     </div>
 
-                    <div className="mt-4 flex flex-wrap">
+                    <div className="2xl:-mt-10 xl:-mt-10 lg:-mt-12 flex flex-wrap">
                         <div className="show w-full active">
                             <ul className="list-none pl-0 xl:mb-4 mb-2">
                                 <Slider
@@ -786,7 +788,7 @@ function RecentlyAddedCourseSectionTwo() {
 
                             </ul>
                             <div className="flex flex-wrap -mx-1 xl:-mx-4">
-                                <div className="mt-4 w-full">
+                                <div className="2xl:-mt-6 xl:-mt-8 lg:-mt-1 w-full">
                                     <div className="fade show active">
                                         <div className="-mx-1 px-1">
                                             <Slider

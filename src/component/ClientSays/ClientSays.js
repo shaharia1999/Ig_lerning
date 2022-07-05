@@ -170,8 +170,8 @@ function ClientSays() {
         };
         return (
             <Fragment>
-                <div className="container xl:mt-12 mt-8 xl:mb-12">
-                    <h4 className="xl:text-4xl text-xl	font-semibold xl:ml-3 ml-6 text-sectionTitleColor dark:text-white">What Our Client Say</h4>
+                <div className="container 2xl:my-12 xl:my-12 lg:my-12 my-12 2xl:px-16 xl:px-12 lg:px-16">
+                    <h4 className="2xl:text-3xl xl:text-2xl lg:text-xl text-xl font-semibold text-sectionTitleColor dark:text-white 2xl:ml-6 xl:ml-4 lg:ml-3 ml-4 2xl:mt-8 xl:mt-6 lg:mt-4 -mt-6">What Our Client Say</h4>
                     <div className="xl:mt-6 mt-4">
                         <Slider
                             {...settings}

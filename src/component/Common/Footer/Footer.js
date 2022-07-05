@@ -92,14 +92,14 @@ function Footer() {
     else if (userTheme === "light") {
         return (
             <Fragment>
-                <div className="footer-2 pt-6 md:pt-12 footer-svg">
+                <div className="pt-6 md:pt-12 footer-svg">
                     <div className="container px-4 mx-auto">
                         <div className="text-center">
                             <button onClick={ScrollTop} className="lg:p-10 bg-btngreen btn-center
                              rounded-full text-3xl font-extrabold mt-9"><FaChevronUp /></button>
                         </div>
 
-                        <div className="md:flex md:flex-wrap md:-mx-4 py-6 md:pb-12">
+                        <div className="flex flex-wrap 2xl:mx-12 xl:mx-16 lg:mx-6 2xl:py-8 xl:py-8 lg:py-6">
                             <div className="footer-info lg:w-1/3 md:px-4 margin-top-div">
                                 <img className="h-12 w-12 box-shadow-footer-logo" src={MainLogo} alt="" />
                                 <p className="footer-des-long text-black mt-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>

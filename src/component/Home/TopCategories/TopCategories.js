@@ -98,9 +98,9 @@ function TopCategories() {
         if (isLoading === false) {
             return (
                 topCategory.map((category, index) => (
-                    <div key={index} className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
+                    <div key={index} className="my-1 px-1 w-full md:w-1/2 2xl:my-8 xl:my-4 lg:my-8 xl:px-5 xl:w-1/3">
                         <article className="overflow-hidden xl:rounded-lg rounded-sm xl:shadow-lg shadow-sm hover:opacity-30 hover:bg-black dark:bg-dark-color2">
-                            <img alt="Placeholder" className="block bg-fixed xl:h-72 h-64 w-full" src={category.category_preview_img} />
+                            <img alt="Placeholder" className="block bg-fixed xl:h-72 lg:64 h-64 w-full" src={category.category_preview_img} />
                             <h1 className="xl:text-lg xl:font-medium text-center text-maingray dark:text-white xl:mt-4 xl:mb-4 mt-3 mb-3">{category.category_name}</h1>
                         </article>
                     </div>
@@ -158,9 +158,9 @@ function TopCategories() {
         };
         return (
             <Fragment>
-                <div className="container my-12">
-                    <h4 className="xl:text-4xl text-xl	font-semibold text-sectionTitleColor dark:text-white xl:ml-3 ml-6">Top Categories ({totalTopCategory}) </h4>
-                    <div className="xl:mt-4 mt-3 px-1">
+                <div className="container 2xl:my-12 xl:my-8 lg:-my-8 my-12 2xl:pl-16 2xl:-pr-4 xl:pl-12 xl:-pr-4 lg:pl-16 lg:-pr-16">
+                    <h4 className="2xl:text-3xl xl:text-2xl lg:text-xl text-xl font-semibold text-sectionTitleColor dark:text-white 2xl:ml-6 xl:ml-4 lg:ml-3 ml-4 lg:mt-8 -mt-6">Top Categories ({totalTopCategory}) </h4>
+                    <div className="2xl:mt-1 xl:-mt-2 lg:-mt-2">
 
                         <Slider
                             {...settings}
