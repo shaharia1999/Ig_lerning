@@ -155,69 +155,9 @@
 
 }
 
-/*X-Small devices portrait phones*/
-@media (min-width: 375px) and (max-width: 575.98px) {
 
-    /* nav menubar */
-    .Mobile {}
-
-    .Desktop {
-        display: none;
-    }
-
-    /* Home Page Banner */
-    .MobileHomeBanner {}
-
-    .DesktopHomeBanner {
-        display: none;
-    }
-
-    /* footer */
-    .MobileFooter {}
-
-    .DesktopFooter {
-        display: none;
-    }
-
-    /* Contact section */
-    .MobileContact {}
-
-    .DesktopContact {
-        display: none;
-    }
-
-    /* our office section */
-    .MobileOffice {}
-
-    .DesktopOffice {
-        display: none;
-    }
-
-    /* Login */
-    .MobileLogin {}
-
-    .DesktopLogin {
-        display: none;
-    }
-
-    /* Registration */
-    .MobileRegistration {}
-
-    .DesktopRegistration {
-        display: none;
-    }
-
-    /* SingleCourseDetails */
-    .MobileSingleCourseDetails {}
-
-    .DesktopSingleCourseDetails {
-        display: none;
-    }
-}
-
-
-/*Small devices landscape phones*/
-@media (min-width: 576px) and (max-width: 767.98px) {
+/*extra Small devices*/
+@media (min-width: 375px) and (max-width: 639.98px) {
 
     /* nav menubar */
     .Mobile {}
@@ -277,8 +217,8 @@
 }
 
 
-/*Medium devices tablets*/
-@media (min-width: 768px) and (max-width: 991.98px) {
+/*small devices*/
+@media (min-width: 640px) and (max-width: 767.98px) {
 
     /* nav menubar */
     .Mobile {}
@@ -338,14 +278,16 @@
 }
 
 /*Lerge Device*/
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 768px) and (max-width: 1023.98px) {
 
     /* nav menubar */
     .Mobile {
-        display: none;
+       
     }
 
-    .Desktop {}
+    .Desktop {
+        display: none;
+    }
 
     /* Home Page Banner */
     .MobileHomeBanner {
@@ -400,9 +342,70 @@
 
 }
 
+
+/*Lg Device*/
+@media (min-width: 1024px) and (max-width: 1279.98px) {
+
+    /* nav menubar */
+    .Mobile {
+        display: none;
+    }
+
+    .Desktop {}
+
+    /* Home Page Banner */
+    .MobileHomeBanner {
+        display: none;
+    }
+
+    .DesktopHomeBanner {}
+
+    /* footer */
+    .MobileFooter {
+        display: none;
+    }
+
+    .DesktopFooter {}
+
+    /* contact section */
+    .MobileContact {
+        display: none;
+    }
+
+    .DesktopContact {}
+
+
+    /* our office section */
+    .MobileOffice {
+        display: none;
+    }
+
+    .DesktopOffice {}
+
+    /* Login */
+    .MobileLogin {
+        display: none;
+    }
+
+    .DesktopLogin {}
+
+    /* Registration */
+    .MobileRegistration {
+        display: none;
+    }
+
+    .DesktopRegistration {}
+
+    /* SingleCourseDetails */
+    .MobileSingleCourseDetails {
+        display: none;
+    }
+
+    .DesktopSingleCourseDetails {}
+}
 
 /*XL Device*/
-@media (min-width: 1200px) and (max-width: 1399.98px) {
+@media (min-width: 1280px) and (max-width: 1535.98px) {
 
     /* nav menubar */
     .Mobile {
@@ -462,69 +465,8 @@
     .DesktopSingleCourseDetails {}
 }
 
-/*XXL Device*/
-@media (min-width: 1400px) and (max-width: 1599.98px) {
-
-    /* nav menubar */
-    .Mobile {
-        display: none;
-    }
-
-    .Desktop {}
-
-    /* Home Page Banner */
-    .MobileHomeBanner {
-        display: none;
-    }
-
-    .DesktopHomeBanner {}
-
-    /* footer */
-    .MobileFooter {
-        display: none;
-    }
-
-    .DesktopFooter {}
-
-    /* contact section */
-    .MobileContact {
-        display: none;
-    }
-
-    .DesktopContact {}
-
-
-    /* our office section */
-    .MobileOffice {
-        display: none;
-    }
-
-    .DesktopOffice {}
-
-    /* Login */
-    .MobileLogin {
-        display: none;
-    }
-
-    .DesktopLogin {}
-
-    /* Registration */
-    .MobileRegistration {
-        display: none;
-    }
-
-    .DesktopRegistration {}
-
-    /* SingleCourseDetails */
-    .MobileSingleCourseDetails {
-        display: none;
-    }
-
-    .DesktopSingleCourseDetails {}
-}
-
-/*XXXL Device*/
-@media (min-width: 1600px) {
+/*2XL Device*/
+@media (min-width: 1536px) {
 
     /* nav menubar */
     .Mobile {

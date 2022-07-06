@@ -95,42 +95,42 @@ function HomeBanner() {
                     </Slider>
                 </div>
 
-                <div className="container 2xl:-mt-28 xl:-mt-24 lg:-mt-24 -mt-16 stack flex 2xl:p-12 xl:p-12 lg:p-10">
-                    <div className="flex flex-row bg-white dark:bg-dark-color2 rounded-xl shadow-client border-none 2xl:p-16 xl:p-12 lg:p-10 pt-4 pb-4 w-full text-center">
-                        <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/3">
+                <div className="container 2xl:-mt-28 xl:-mt-24 lg:-mt-24 md:-mt-24 stack flex 2xl:p-12 xl:p-12 lg:p-10 md:p-8">
+                    <div className="flex flex-row bg-white dark:bg-dark-color2 rounded-xl shadow-client border-none 2xl:p-16 xl:p-12 lg:p-10 md:p-7 pt-4 pb-4 w-full text-center">
+                        <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/3 md:w-1/3">
                             <div className="image-center">
                                 <img
-                                    className="2xl:h-24 2xl:w-24 xl:h-16 xl:w-16 lg:h-12 lg:w-12 object-contain"
+                                    className="2xl:h-24 2xl:w-24 xl:h-16 xl:w-16 lg:h-12 lg:w-12 md:h-12 md:w-12 object-contain"
                                     src={Certificate} alt="" />
                             </div>
                             <h6
-                                className="2xl:text-xl xl:text-lg lg:text-base text-sectionTitleColor font-medium 2xl:mt-2 xl:mt-2 lg:mt-3 dark:text-white">
+                                className="2xl:text-xl xl:text-lg lg:text-base md:text-sm text-sectionTitleColor font-medium 2xl:mt-2 xl:mt-2 lg:mt-3 md:mt-2 dark:text-white">
                                 100% Certificate Obtaining
                             </h6>
                         </div>
 
-                        <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/3">
+                        <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/3 md:w-1/3">
                             <div className="image-center">
                                 <img
-                                    className="2xl:h-24 2xl:w-24 xl:h-16 xl:w-16 lg:h-12 lg:w-12 object-contain"
+                                    className="2xl:h-24 2xl:w-24 xl:h-16 xl:w-16 lg:h-12 lg:w-12 md:h-12 md:w-12 object-contain"
                                     src={Globe}
                                     alt="" />
                             </div>
                             <h6
-                                className="2xl:text-xl xl:text-lg lg:text-base text-sectionTitleColor font-medium 2xl:mt-2 xl:mt-2 lg:mt-3 dark:text-white">
+                                className="2xl:text-xl xl:text-lg lg:text-base md:text-sm text-sectionTitleColor font-medium 2xl:mt-2 xl:mt-2 lg:mt-3 md:mt-2 dark:text-white">
                                 Live every where in
                                 the world
                             </h6>
                         </div>
 
-                        <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/3">
+                        <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/3 md:w-1/3">
                             <div className="image-center">
                                 <img
-                                    className="2xl:h-24 2xl:w-24 xl:h-16 xl:w-16 lg:h-12 lg:w-12 object-contain"
+                                    className="2xl:h-24 2xl:w-24 xl:h-16 xl:w-16 lg:h-12 lg:w-12 md:h-12 md:w-12 object-contain"
                                     src={Teacher} alt="" />
                             </div>
                             <h6
-                                className="2xl:text-xl xl:text-lg lg:text-base text-sectionTitleColor font-medium 2xl:mt-2 xl:mt-2 lg:mt-3 dark:text-white">
+                                className="2xl:text-xl xl:text-lg lg:text-base md:text-sm text-sectionTitleColor font-medium 2xl:mt-2 xl:mt-2 lg:mt-3 md:mt-2 dark:text-white">
                                 Learn with the best
                                 teachers
                             </h6>

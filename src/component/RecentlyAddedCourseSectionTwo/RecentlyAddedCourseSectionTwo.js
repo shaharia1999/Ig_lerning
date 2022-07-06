@@ -636,15 +636,13 @@ function RecentlyAddedCourseSectionTwo() {
                 {
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 3,
                         slidesToScroll: 3,
                         infinite: true,
-                        dots: true,
-                        arrows: false
+                        dots: false
                     }
                 },
                 {
-                    breakpoint: 600,
+                    breakpoint: 768,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 2,
@@ -652,15 +650,17 @@ function RecentlyAddedCourseSectionTwo() {
                     }
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 640,
                     settings: {
-                        slidesToShow: 3,
+                        slidesToShow: 2,
                         slidesToScroll: 1,
-                        arrows: false
+                        rows: 1,
+                        arrows:false
                     }
                 }
             ]
         };
+
         var settings1 = {
             responsive: [
                 {
@@ -669,11 +669,11 @@ function RecentlyAddedCourseSectionTwo() {
                         slidesToShow: 3,
                         slidesToScroll: 3,
                         infinite: true,
-                        dots: true
+                        dots: false
                     }
                 },
                 {
-                    breakpoint: 600,
+                    breakpoint: 768,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 2,
@@ -681,7 +681,7 @@ function RecentlyAddedCourseSectionTwo() {
                     }
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 640,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
@@ -698,19 +698,21 @@ function RecentlyAddedCourseSectionTwo() {
                         slidesToShow: 3,
                         slidesToScroll: 3,
                         infinite: true,
-                        dots: true
+                        dots: false,
+                        arrows: false
                     }
                 },
                 {
-                    breakpoint: 600,
+                    breakpoint: 768,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 2,
-                        initialSlide: 2
+                        initialSlide: 2,
+                        arrows: false
                     }
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 640,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
@@ -721,7 +723,7 @@ function RecentlyAddedCourseSectionTwo() {
         };
         return (
             <Fragment>
-                <div className="container 2xl:my-16 xl:my-12 lg:my-8 my-12 2xl:px-16 xl:px-12 lg:px-16">
+                <div className="container 2xl:my-16 xl:my-12 lg:my-8 my-12 2xl:px-16 xl:px-12 lg:px-16 md:px-8 sm:px-8">
                     <div className="flex flex-wrap">
                         <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full">
                             <div className="flex">
