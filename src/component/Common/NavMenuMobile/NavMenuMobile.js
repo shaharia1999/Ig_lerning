@@ -86,18 +86,18 @@ function NavMenuMobile() {
             <Container fluid={true}
                 className="NavMobile shadow-sm border-0 NavbarBGMobile bg-maincolor sticky-top fixed-top position-fixed p-2">
                 <Row className="mt-2 flex">
-                    <Col sm={4}>
+                    <Col md={4} sm={4}>
                         {/* <Button onClick={MenuBarClickHandler} className="bars-btn"><i
                             className="fa fa-bars"></i></Button> */}
-                        <span onClick={MenuBarClickHandler}><img className="cursor-pointer ml-4" src={NavIcon} alt="" /></span>
+                        <span onClick={MenuBarClickHandler}><img className="cursor-pointer md:ml-12 sm:ml-12 ml-4" src={NavIcon} alt="" /></span>
                     </Col>
-                    <Col sm={4}>
-                        <Link><img className="cursor-pointer ml-12 justify-end h-14" src={IgLearnFullLogo} alt="" /></Link>
+                    <Col md={4} sm={4}>
+                        <Link><img className="cursor-pointer md:ml-48 sm:ml-36  ml-12 h-14" src={IgLearnFullLogo} alt="" /></Link>
                     </Col>
-                    <Col className="flex" sm={4}>
+                    <Col className="flex" md={4} sm={4}>
                         {/* <Button onClick={MenuBarClickHandler} className="bars-btn"><i
                             className="fa fa-bars"></i></Button> */}
-                        <span><img className="cursor-pointer mx-1 justify-end ml-8" src={SearchIcon} alt="" /></span>
+                        <span><img className="cursor-pointer mx-1 md:ml-48 sm:ml-32 ml-8" src={SearchIcon} alt="" /></span>
                         <span><img className="cursor-pointer mx-1" src={CartIcon} alt="" /></span>
                     </Col>
                 </Row>

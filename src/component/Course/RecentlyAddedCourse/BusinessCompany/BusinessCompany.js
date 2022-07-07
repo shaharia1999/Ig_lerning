@@ -147,7 +147,7 @@ function BusinessCompany() {
                     <input id={subcategory.sub_category_id} type='hidden' name={subcategory.sub_category_id} />
                     <li className="list-none mx-2">
                         <button type="button"
-                            className="inline-block w-full display md:w-auto 2xl:px-10 xl:px-10 lg:px-8 px-3 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 2xl:text-base xl:text-base lg:text-sm text-xs bg-maincolor 2xl:font-normal xl:font-normal lg:font-normal leading-tight text-white rounded-3xl xl:h-11 h-10"
+                            className="inline-block w-full display md:w-auto 2xl:px-10 xl:px-10 lg:px-8 md:px-6 px-3 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 2xl:text-base xl:text-base lg:text-sm text-xs bg-maincolor 2xl:font-normal xl:font-normal lg:font-normal leading-tight text-white rounded-3xl xl:h-11 h-10"
                             onClick={() => fetchData(subcategory.sub_category_id)}
                         >
                             {subcategory.sub_category_name}
@@ -547,7 +547,7 @@ function BusinessCompany() {
         if (course_isLoading === false) {
             return recently_addedsubcategoryId.map((sub_category_course) => (
                 sub_category_course.course_info.map((course, course_index) => (
-                    <div key={course_index} className="my-1 px-1 w-full md:w-1/2 2xl:my-8 xl:my-8 lg:my-8 2xl:px-5 xl:px-2 lg:px-2 2xl:w-1/4 xl:w-1/2 lg:w-1/2">
+                    <div key={course_index} className="my-1 px-1 w-full 2xl:my-8 xl:my-8 lg:my-8 2xl:px-5 xl:px-2 lg:px-2 2xl:w-1/4 xl:w-1/2 lg:w-1/2 md:1/3">
                         <div className="wrapper antialiased text-gray-900">
                             <div className="relative">
                                 <video type="video/mp4" muted
@@ -682,6 +682,8 @@ function BusinessCompany() {
         );
     }
     else if (isLoading === false) {
+
+        
         var settings = {
             responsive: [
                 {
@@ -689,11 +691,11 @@ function BusinessCompany() {
                     settings: {
                         slidesToScroll: 3,
                         infinite: true,
-                        dots: true
+                        dots: false
                     }
                 },
                 {
-                    breakpoint: 600,
+                    breakpoint: 768,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 2,
@@ -701,7 +703,7 @@ function BusinessCompany() {
                     }
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 640,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
@@ -712,17 +714,51 @@ function BusinessCompany() {
             ]
         };
 
+
+        var settings1 = {
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        dots: false,
+                        arrows: false
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        initialSlide: 2,
+                        arrows:false,
+                    }
+                },
+                {
+                    breakpoint: 640,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        rows: 1,
+                        arrows:false,
+                    }
+                },
+            ]
+        };
+
+
         return (
             <Fragment>
-                <div className="container 2xl:my-12 xl:my-12 lg:my-2 my-12 2xl:px-16 xl:px-12 lg:px-16">
+                <div className="container 2xl:my-12 xl:my-12 lg:my-2 md:my-4 sm:my-2 my-12 2xl:px-16 xl:px-12 lg:px-16 md:px-8 sm:px-8">
                     <div className="flex flex-wrap">
                         <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full">
                             <div className="flex">
-                                <h4 className="2xl:text-3xl xl:text-2xl lg:text-xl text-xl font-semibold text-sectionTitleColor dark:text-white 2xl:ml-6 xl:ml-4 lg:ml-3 ml-4 -mt-6">Recently Added
+                                <h4 className="2xl:text-3xl xl:text-2xl lg:text-xl text-xl font-semibold text-sectionTitleColor dark:text-white 2xl:ml-6 xl:ml-4 lg:ml-3 md:ml-2 sm:ml-4 ml-4 -mt-6">Recently Added
                                     Course</h4>
                             </div>
                         </div>
-                        <div className="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full relative 2xl:-mt-9 xl:-mt-9 lg:-mt-9 mt-4">
+                        <div className="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full relative 2xl:-mt-9 xl:-mt-9 lg:-mt-9 md:mt-3 mt-4">
                             <Slider
                                 {...settings}
                                 slidesToShow={4}
@@ -745,11 +781,11 @@ function BusinessCompany() {
                             </Slider>
                         </div>
                     </div>
-                    <div className="2xl:mt-1 xl:-mt-8 lg:-mt-12">
+                    <div className="2xl:mt-1 xl:-mt-8 lg:-mt-12 md:mt-4">
                         <div className="fade show active">
                             <div className="-mx-1 px-1">
                                 <Slider
-                                    {...settings}
+                                    {...settings1}
                                     ref={(slider9) => setNav9(slider9)}
                                     slidesToShow={4}
                                     focusOnSelect={true}

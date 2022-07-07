@@ -422,19 +422,22 @@ function MostPopularCourse() {
                         slidesToShow: 3,
                         slidesToScroll: 3,
                         infinite: true,
-                        dots: true
+                        dots: false,
+                        arrows:false
                     }
                 },
                 {
-                    breakpoint: 600,
+                    breakpoint: 768,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 2,
-                        initialSlide: 2
+                        initialSlide: 2,
+                        dots: false,
+                        arrows:false
                     }
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 640,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
@@ -446,10 +449,10 @@ function MostPopularCourse() {
         };
         return (
             <Fragment>
-                <div className="container 2xl:my-12 xl:my-12 lg:my-12 my-12 2xl:px-16 xl:px-12 lg:px-16">
+                <div className="container 2xl:my-12 xl:my-12 lg:my-12 my-12 2xl:px-16 xl:px-12 lg:px-16 md:px-8 sm:px-8">
                     <h4 className="2xl:text-3xl xl:text-2xl lg:text-xl text-xl font-semibold text-sectionTitleColor dark:text-white 2xl:ml-6 xl:ml-4 lg:ml-3 ml-4 -mt-6">Most popular course ({BasedTotal}) </h4>
 
-                    <div className="2xl:mt-1 xl:-mt-2 lg:-mt-2">
+                    <div className="2xl:mt-1 xl:-mt-2 lg:-mt-2 md:mt-3">
                         <Slider
                             {...settings}
                             ref={(slider4) => setNav4(slider4)}
