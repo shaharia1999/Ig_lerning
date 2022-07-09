@@ -153,6 +153,19 @@
         display: none;
     }
 
+    /* Cart Payment */
+    .CartPaymentMobile {}
+
+    .CartPaymentDesktop {
+        display: none;
+    }
+
+    /* checkout Page */
+    .MobileCheckout {}
+
+    .DesktopCheckout {
+        display: none;
+    }
 }
 
 
@@ -212,6 +225,20 @@
     .MobileSingleCourseDetails {}
 
     .DesktopSingleCourseDetails {
+        display: none;
+    }
+
+    /* Cart Payment */
+    .CartPaymentMobile {}
+
+    .CartPaymentDesktop {
+        display: none;
+    }
+
+    /* checkout Page */
+    .MobileCheckout {}
+
+    .DesktopCheckout {
         display: none;
     }
 }
@@ -275,15 +302,27 @@
     .DesktopSingleCourseDetails {
         display: none;
     }
+
+    /* Cart Payment */
+    .CartPaymentMobile {}
+
+    .CartPaymentDesktop {
+        display: none;
+    }
+
+    /* checkout Page */
+    .MobileCheckout {}
+
+    .DesktopCheckout {
+        display: none;
+    }
 }
 
 /*Lerge Device*/
 @media (min-width: 768px) and (max-width: 1023.98px) {
 
     /* nav menubar */
-    .Mobile {
-       
-    }
+    .Mobile {}
 
     .Desktop {
         display: none;
@@ -339,6 +378,22 @@
     }
 
     .DesktopSingleCourseDetails {}
+
+
+    /* Cart Payment */
+    .CartPaymentMobile {
+        display: none;
+    }
+
+    .CartPaymentDesktop {}
+
+
+    /* checkout Page */
+    .MobileCheckout {
+        display: none;
+    }
+
+    .DesktopCheckout {}
 
 }
 
@@ -402,6 +457,20 @@
     }
 
     .DesktopSingleCourseDetails {}
+
+    /* Cart Payment */
+    .CartPaymentMobile {
+        display: none;
+    }
+
+    .CartPaymentDesktop {}
+
+    /* checkout Page */
+    .MobileCheckout {
+        display: none;
+    }
+
+    .DesktopCheckout {}
 }
 
 /*XL Device*/
@@ -463,6 +532,20 @@
     }
 
     .DesktopSingleCourseDetails {}
+
+    /* Cart Payment */
+    .CartPaymentMobile {
+        display: none;
+    }
+
+    .CartPaymentDesktop {}
+
+    /* checkout Page */
+    .MobileCheckout {
+        display: none;
+    }
+
+    .DesktopCheckout {}
 }
 
 /*2XL Device*/
@@ -524,4 +607,19 @@
     }
 
     .DesktopSingleCourseDetails {}
+
+    /* Cart Payment */
+    .CartPaymentMobile {
+        display: none;
+    }
+
+    .CartPaymentDesktop {}
+
+
+    /* checkout Page */
+    .MobileCheckout {
+        display: none;
+    }
+
+    .DesktopCheckout {}
 }
