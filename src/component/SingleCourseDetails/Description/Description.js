@@ -129,9 +129,9 @@ function Description() {
             return (
                 <div>
                     <div className="flex flex-wrap">
-                        <div className="xl:w-2/12">
+                        <div className="xl:w-2/12 lg:w-2/12">
                             <img
-                                className="xl:h-28 xl:mt-7 xl:w-28 rounded-full xl:border-4 xl:border-white xl:shadow-lg"
+                                className="2xl:h-28 xl:h-24 lg:h-20 xl:mt-7 2xl:w-28 xl:w-24 lg:w-20 rounded-full xl:border-4 xl:border-white xl:shadow-lg"
                                 src={courseInfo.course_image}
                                 alt="teacher" />
                             {(() => {
@@ -151,11 +151,11 @@ function Description() {
                             })()}
 
                         </div>
-                        <div className="xl:w-10/12 xl:-ml-12">
-                            <h6 className=" text-sectionTitleColor dark:text-white text-3xl font-semibold xl:pr-24 xl:mt-8">
+                        <div className="2xl:w-10/12 xl:w-10/12 2xl:-ml-12 xl:-ml-6 lg:w-10/12 lg:-ml-10">
+                            <h6 className=" text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl font-semibold xl:pr-24 xl:mt-8">
                                 {courseInfo.course_title}
                             </h6>
-                            <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-4">
+                            <h6 className="text-breadcrumbs-text text-sm font-normal 2xl:mt-4 xl:mt-2">
                                 <Link to={`/trainer-profile/${TeacherInfo.id}`}>
                                 {TeacherInfo.username}   •   Trainer and Speaker
                                 </Link>
@@ -182,8 +182,8 @@ function Description() {
                         </div>
                     </div>
                     <div className="flex flex-wrap xl:mt-9">
-                        <div className="xl:w-full">
-                            <h6 className="text-sectionTitleColor dark:text-white text-3xl font-semibold">
+                        <div className="w-full">
+                            <h6 className="text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl font-semibold">
                                 Description
                             </h6>
                             <h6 className="xl:text-xs xl:font-light text-breadcrumbs-text xl:mt-5 xl:leading-5 xl:pr-24">

@@ -266,7 +266,7 @@ function MobileCheckout() {
                                         </div>
 
 
-                                        <form className="lg:mt-4">
+                                        <form className="mt-4">
                                             <div className="flex justify-center">
                                                 <div className="mb-3 w-full">
                                                     <label for="exampleFormControlInput1" className="form-label text-sm inline-block mb-2 text-maingray">Email Address <sup>*</sup></label>
@@ -384,7 +384,7 @@ function MobileCheckout() {
                                                 </div>
                                             </div>
 
-                                            <div className="flex flex-wrap">
+                                            <div className="flex flex-wrap mb-4">
                                                 <label for="my-modal-4" data-mdb-ripple="true"
                                                     data-mdb-ripple-color="light"
                                                     className="flex text-center justify-center h-12 btn-block cursor-pointer bg-maincolor rounded-sm text-sm text-white mt-5">

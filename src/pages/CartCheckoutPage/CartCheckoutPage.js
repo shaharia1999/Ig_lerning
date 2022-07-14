@@ -3,6 +3,7 @@ import CartCheckout from "../../component/CartCheckout/CartCheckout";
 import NavBarTop from "../../component/Common/NavBarTop/NavBarTop";
 import darkModeTheme from "../../darkModeTheme";
 import NavMenuMobile from "../../component/Common/NavMenuMobile/NavMenuMobile";
+import CartCheckoutMobile from "../../component/CartCheckout/CartCheckoutMobile";
 
 function CartCheckoutPage() {
     useEffect(() => {
@@ -16,7 +17,13 @@ function CartCheckoutPage() {
             <div className="Mobile">
                 <NavMenuMobile />
             </div>
-            <CartCheckout />
+
+            <div className="DesktopCartCheckout">
+                <CartCheckout />
+            </div>
+            <div className="MobileCartCheckout">
+                <CartCheckoutMobile />
+            </div>
         </Fragment>
     );
 }

@@ -2,6 +2,8 @@ import React, { Fragment, useEffect } from "react";
 import CartSummery from "../../component/CartSummery/CartSummery";
 import NavBarTop from "../../component/Common/NavBarTop/NavBarTop";
 import darkModeTheme from "../../darkModeTheme";
+import NavMenuMobile from "../../component/Common/NavMenuMobile/NavMenuMobile";
+import CartSummeryMobile from "../../component/CartSummery/CartSummeryMobile";
 
 function CartSummeryPage() {
     useEffect(() => {
@@ -9,8 +11,19 @@ function CartSummeryPage() {
     }, [])
     return (
         <Fragment>
-            <NavBarTop />
-            <CartSummery />
+            <div className="Desktop">
+                <NavBarTop />
+            </div>
+            <div className="Mobile">
+                <NavMenuMobile />
+            </div>
+
+            <div className="DesktopCartSummery">
+                <CartSummery />
+            </div>
+            <div className="MobileCartSummery">
+                <CartSummeryMobile />
+            </div>
         </Fragment>
     );
 }

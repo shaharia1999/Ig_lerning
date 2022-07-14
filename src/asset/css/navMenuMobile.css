@@ -166,6 +166,21 @@
     .DesktopCheckout {
         display: none;
     }
+
+
+    /* Cart Summery Page */
+    .MobileCartSummery {}
+
+    .DesktopCartSummery {
+        display: none;
+    }
+
+    /* Cart Checkout Page */
+    .MobileCartCheckout {}
+
+    .DesktopCartCheckout {
+        display: none;
+    }
 }
 
 
@@ -241,6 +256,20 @@
     .DesktopCheckout {
         display: none;
     }
+
+    /* Cart Summery Page */
+    .MobileCartSummery {}
+
+    .DesktopCartSummery {
+        display: none;
+    }
+
+    /* Cart Checkout Page */
+    .MobileCartCheckout {}
+
+    .DesktopCartCheckout {
+        display: none;
+    }
 }
 
 
@@ -314,6 +343,20 @@
     .MobileCheckout {}
 
     .DesktopCheckout {
+        display: none;
+    }
+
+    /* Cart Summery Page */
+    .MobileCartSummery {}
+
+    .DesktopCartSummery {
+        display: none;
+    }
+
+    /* Cart Checkout Page */
+    .MobileCartCheckout {}
+
+    .DesktopCartCheckout {
         display: none;
     }
 }
@@ -395,6 +438,21 @@
 
     .DesktopCheckout {}
 
+    /* Cart Summery Page */
+    .MobileCartSummery {
+        display: none;
+    }
+
+    .DesktopCartSummery {}
+
+
+    /* Cart Checkout Page */
+    .MobileCartCheckout {
+        display: none;
+    }
+
+    .DesktopCartCheckout {}
+
 }
 
 
@@ -471,6 +529,20 @@
     }
 
     .DesktopCheckout {}
+
+    /* Cart Summery Page */
+    .MobileCartSummery {
+        display: none;
+    }
+
+    .DesktopCartSummery {}
+
+    /* Cart Checkout Page */
+    .MobileCartCheckout {
+        display: none;
+    }
+
+    .DesktopCartCheckout {}
 }
 
 /*XL Device*/
@@ -546,6 +618,20 @@
     }
 
     .DesktopCheckout {}
+
+    /* Cart Summery Page */
+    .MobileCartSummery {
+        display: none;
+    }
+
+    .DesktopCartSummery {}
+
+    /* Cart Checkout Page */
+    .MobileCartCheckout {
+        display: none;
+    }
+
+    .DesktopCartCheckout {}
 }
 
 /*2XL Device*/
@@ -622,4 +708,18 @@
     }
 
     .DesktopCheckout {}
+
+    /* Cart Summery Page */
+    .MobileCartSummery {
+        display: none;
+    }
+
+    .DesktopCartSummery {}
+
+    /* Cart Checkout Page */
+    .MobileCartCheckout {
+        display: none;
+    }
+
+    .DesktopCartCheckout {}
 }
