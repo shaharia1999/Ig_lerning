@@ -146,8 +146,8 @@ function Review() {
             return (
                 courseReview.map((course_learn_info, index) => (
                     <div key={index} className="flex w-full xl:mt-5">
-                        <div className="xl:w-1/12">
-                            <img className="xl:h-16 xl:w-16 rounded-full" src={ApiUrl.ImageBaseUrl + course_learn_info.student_information.image} alt="teacher" />
+                        <div className="xl:w-1/12 xl:mt-2 2xl:mt-0">
+                            <img className="2xl:h-16 2xl:w-16 xl:h-12 xl:w-12 rounded-full" src={ApiUrl.ImageBaseUrl + course_learn_info.student_information.image} alt="teacher" />
                         </div>
                         <div className="xl:w-11/12">
                             <div>
@@ -185,7 +185,7 @@ function Review() {
     return (
         <Fragment>
             <div className="xl:ml-32 xl:mt-5 xl:mr-14">
-                <h6 className="text-sectionTitleColor dark:text-white text-3xl font-semibold">Reviews</h6>
+                <h6 className="text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl font-semibold">Reviews</h6>
                 <div className="flex flex-wrap xl:mr-12">
                     <div className="xl:w-8/12 xl:mt-6">
                         <div className="flex w-full">
@@ -216,12 +216,12 @@ function Review() {
                                 ReviewSearch();
                             }}
                             className="form-select form-select-lg mb-3 appearance-none block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none" aria-label=".form-select-lg example">
-                            <option value='' selected className="hover:bg-maincolor">All Ratings</option>
-                            <option className="text-maincolor hover:bg-maincolor" value="5">5 Star</option>
-                            <option className="text-maincolor hover:bg-maincolor" value="4">4 Star</option>
-                            <option className="text-maincolor hover:bg-maincolor" value="3">3 Star</option>
-                            <option className="text-maincolor hover:bg-maincolor" value="2">2 Star</option>
-                            <option className="text-maincolor hover:bg-maincolor" value="1">1 Star</option>
+                            <option value='' selected className="hover:bg-maincolor xl:text-lg">All Ratings</option>
+                            <option className="text-maincolor hover:bg-maincolor xl:text-lg" value="5">5 Star</option>
+                            <option className="text-maincolor hover:bg-maincolor xl:text-lg" value="4">4 Star</option>
+                            <option className="text-maincolor hover:bg-maincolor xl:text-lg" value="3">3 Star</option>
+                            <option className="text-maincolor hover:bg-maincolor xl:text-lg" value="2">2 Star</option>
+                            <option className="text-maincolor hover:bg-maincolor xl:text-lg" value="1">1 Star</option>
                         </select>
                     </div>
                 </div>

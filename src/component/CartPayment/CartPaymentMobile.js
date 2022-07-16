@@ -33,10 +33,10 @@ function CartPaymentMobile() {
     return (
         <Fragment>
             <section className="">
-                <div className="container pl-6 pr-6 pt-2">
+                <div className="container pl-4 pr-4 pt-2">
                     <div className="flex justify-center items-center flex-wrap text-gray-800">
                         <div className="w-full">
-                            <div className="block bg-white xl:rounded-lg shadow-lg">
+                            <div className="block">
                                 <div className="xl:flex xl:flex-wrap g-0">
 
                                     <div className="lg:w-6/12 sm:w-full w-full px-4 md:px-0">
