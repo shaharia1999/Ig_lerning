@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import ApiUrl from "../../../Api/ApiUrl";
 import axios from "axios";
 import { useParams } from 'react-router-dom'
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function StudentBoughtCourse() {
     let { id } = useParams()
@@ -58,18 +61,74 @@ function StudentBoughtCourse() {
         }
         else if (isLoading === false) {
             return courseEnrollImage.map((student_enroll_image, index) => (
-                <div key={index} className="xl:w-1/6">
-                    <img className="rounded-md" src={ApiUrl.ImageBaseUrl + "/media/" + student_enroll_image.student_image} alt="joy" />
+                <div key={index} className="xl:w-1/6 px-3">
+                    <img className="rounded-md xl:h-64 h-32" src={ApiUrl.ImageBaseUrl + "/media/" + student_enroll_image.student_image} alt="joy" />
                 </div>
             ))
         }
     })()
 
-    return (
-        <div className="flex-wrap flex xl:ml-32">
+
+    var settings = {
+        responsive: [
             {
-                profile_picture
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: false,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2,
+                    dots: false,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    rows: 1,
+                    arrows: false
+                }
             }
+        ]
+    };
+
+    return (
+
+        <div className="xl:ml-32 container">
+            <div className="mt-4">
+                <div className="xl:-mr-64">
+                    <Slider
+                        {...settings}
+                        slidesToShow={5}
+                        focusOnSelect={true}
+                        dots={false}
+                        adaptiveHeight={false}
+                        infinite={true}
+                        slidesToScroll={1}
+                        loop={true}
+                        speed={200}
+                        autoplay={false}
+                        autoplaySpeed={1500}
+                        swipeToSlide={true}
+                        arrows={false}
+                    >
+                        {
+                            profile_picture
+                        }
+                    </Slider>
+                </div>
+            </div>
         </div>
 
     );

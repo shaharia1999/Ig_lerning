@@ -10,7 +10,7 @@ import { GrDocumentText } from "react-icons/gr";
 
 function Lessons() {
     const [open, setOpen] = useState(0);
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleOpen = (value) => {
         setOpen(open === value ? 0 : value);
@@ -21,8 +21,8 @@ function Lessons() {
             <Fragment>
                 <div className="xl:ml-32">
                     <div className="flex flex-wrap xl:mt-9 xl:mb-16">
-                        <div className="xl:w-11/12">
-                            <h6 className="text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl font-semibold xl:mb-8">
+                        <div className="xl:w-11/12 w-full">
+                            <h6 className="text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl text-xl font-semibold xl:mb-8">
                                 Lessons
                             </h6>
 
@@ -87,23 +87,23 @@ function Lessons() {
     else if (isLoading === false) {
         return (
             <Fragment>
-                <div className="xl:ml-32">
+                <div className="xl:ml-32 xl:p-0 p-4">
                     <div className="flex flex-wrap xl:mt-9 xl:mb-16">
-                        <div className="xl:w-11/12">
-                            <h6 className="text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl font-semibold xl:mb-8">Lessons</h6>
+                        <div className="xl:w-11/12 w-full">
+                            <h6 className="text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl text-xl font-semibold xl:mb-8">Lessons</h6>
                             <div className="bg-white icon-select shadow mt-3 rounded-lg">
                                 <Accordion className="rounded m-0" open={open === 1} onClick={() => handleOpen(1)}>
                                     <AccordionHeader className="flex pr-4"><img className="h-10 w-10 ml-4 rounded-md" src={courseLessonImg} alt="" />
-                                        <h1 className="xl:text-base text-maingray font-normal xl:pl-20 absolute">Chapter 1 : Be positive</h1>
+                                        <h1 className="xl:text-base text-sm text-maingray font-normal xl:pl-20 pl-16 absolute">Chapter 1 : Be positive</h1>
                                     </AccordionHeader>
-                                    <AccordionBody className="bg-gray-50">
+                                    <AccordionBody className="bg-gray-50 xl:pl-0 pl-4">
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
                                                 <FaPlayCircle
                                                     className="h-5 w-5 xl:ml-8"
                                                 />
                                             </div>
-                                            <div className="xl:w-11/12 mt-3 mb-3">
+                                            <div className="xl:w-11/12 mt-3 mb-3 xl:ml-0 ml-2">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
                                             </div>
                                         </div>
@@ -116,7 +116,7 @@ function Lessons() {
                                                     className="h-5 w-5 xl:ml-8"
                                                 />
                                             </div>
-                                            <div className="xl:w-11/12 mt-3 mb-3">
+                                            <div className="xl:w-11/12 mt-3 mb-3 xl:ml-0 ml-2">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
                                             </div>
                                         </div>
@@ -129,7 +129,7 @@ function Lessons() {
                                                     className="h-5 w-5 xl:ml-8"
                                                 />
                                             </div>
-                                            <div className="xl:w-11/12 mt-3 mb-3">
+                                            <div className="xl:w-11/12 mt-3 mb-3 xl:ml-0 ml-2">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
                                             </div>
                                         </div>
@@ -140,16 +140,16 @@ function Lessons() {
                             <div className="bg-white icon-select shadow mt-3 rounded-lg">
                                 <Accordion open={open === 2} onClick={() => handleOpen(2)}>
                                     <AccordionHeader className="flex pr-4"><img className="h-10 w-10 ml-4 rounded-md" src={courseLessonImg} alt="" />
-                                        <h1 className="xl:text-base text-maingray font-normal xl:pl-20 absolute">Chapter 1 : Be positive</h1>
+                                        <h1 className="xl:text-base text-sm text-maingray font-normal xl:pl-20 pl-16 absolute">Chapter 1 : Be positive</h1>
                                     </AccordionHeader>
-                                    <AccordionBody className="bg-gray-50">
+                                    <AccordionBody className="bg-gray-50 xl:pl-0 pl-4">
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
                                                 <FaPlayCircle
                                                     className="h-5 w-5 xl:ml-8"
                                                 />
                                             </div>
-                                            <div className="xl:w-11/12 mt-3 mb-3">
+                                            <div className="xl:w-11/12 mt-3 mb-3 xl:ml-0 ml-2">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
                                             </div>
                                         </div>
@@ -160,7 +160,7 @@ function Lessons() {
                                                     className="h-5 w-5 xl:ml-8"
                                                 />
                                             </div>
-                                            <div className="xl:w-11/12 mt-3 mb-3">
+                                            <div className="xl:w-11/12 mt-3 mb-3 xl:ml-0 ml-2">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
                                             </div>
                                         </div>
@@ -171,7 +171,7 @@ function Lessons() {
                                                     className="h-5 w-5 xl:ml-8"
                                                 />
                                             </div>
-                                            <div className="xl:w-11/12 mt-3 mb-3">
+                                            <div className="xl:w-11/12 mt-3 mb-3 xl:ml-0 ml-2">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
                                             </div>
                                         </div>
@@ -181,16 +181,16 @@ function Lessons() {
                             <div className="bg-white icon-select shadow mt-3 rounded-lg">
                                 <Accordion open={open === 3} onClick={() => handleOpen(3)}>
                                     <AccordionHeader className="flex pr-4"><img className="h-10 w-10 ml-4 rounded-md" src={courseLessonImg} alt="" />
-                                        <h1 className="xl:text-base text-maingray font-normal xl:pl-20 absolute">Chapter 1 : Be positive</h1>
+                                        <h1 className="xl:text-base text-sm text-maingray font-normal xl:pl-20 pl-16 absolute">Chapter 1 : Be positive</h1>
                                     </AccordionHeader>
-                                    <AccordionBody className="bg-gray-50">
+                                    <AccordionBody className="bg-gray-50 xl:pl-0 pl-4">
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
                                                 <FaPlayCircle
                                                     className="h-5 w-5 xl:ml-8"
                                                 />
                                             </div>
-                                            <div className="xl:w-11/12 mt-3 mb-3">
+                                            <div className="xl:w-11/12 mt-3 mb-3 xl:ml-0 ml-2">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
                                             </div>
                                         </div>
@@ -201,7 +201,7 @@ function Lessons() {
                                                     className="h-5 w-5 xl:ml-8"
                                                 />
                                             </div>
-                                            <div className="xl:w-11/12 mt-3 mb-3">
+                                            <div className="xl:w-11/12 mt-3 mb-3 xl:ml-0 ml-2">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
                                             </div>
                                         </div>
@@ -212,7 +212,7 @@ function Lessons() {
                                                     className="h-5 w-5 xl:ml-8"
                                                 />
                                             </div>
-                                            <div className="xl:w-11/12 mt-3 mb-3">
+                                            <div className="xl:w-11/12 mt-3 mb-3 xl:ml-0 ml-2">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
                                             </div>
                                         </div>
@@ -222,16 +222,16 @@ function Lessons() {
                             <div className="bg-white icon-select shadow mt-3 rounded-lg">
                                 <Accordion open={open === 4} onClick={() => handleOpen(4)}>
                                     <AccordionHeader className="flex pr-4"><img className="h-10 w-10 ml-4 rounded-md" src={courseLessonImg} alt="" />
-                                        <h1 className="xl:text-base text-maingray font-normal xl:pl-20 absolute">Chapter 1 : Be positive</h1>
-                                    </AccordionHeader>
-                                    <AccordionBody className="bg-gray-50">
+                                        <h1 className="xl:text-base text-sm text-maingray font-normal xl:pl-20 pl-16 absolute">Chapter 1 : Be positive</h1>
+                                    </AccordionHeader> 
+                                    <AccordionBody className="bg-gray-50 xl:pl-0 pl-4">
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
                                                 <FaPlayCircle
                                                     className="h-5 w-5 xl:ml-8"
                                                 />
                                             </div>
-                                            <div className="xl:w-11/12 mt-3 mb-3">
+                                            <div className="xl:w-11/12 mt-3 mb-3 xl:ml-0 ml-2">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
                                             </div>
                                         </div>
@@ -242,7 +242,7 @@ function Lessons() {
                                                     className="h-5 w-5 xl:ml-8"
                                                 />
                                             </div>
-                                            <div className="xl:w-11/12 mt-3 mb-3">
+                                            <div className="xl:w-11/12 mt-3 mb-3 xl:ml-0 ml-2">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
                                             </div>
                                         </div>
@@ -253,7 +253,7 @@ function Lessons() {
                                                     className="h-5 w-5 xl:ml-8"
                                                 />
                                             </div>
-                                            <div className="xl:w-11/12 mt-3 mb-3">
+                                            <div className="xl:w-11/12 mt-3 mb-3 xl:ml-0 ml-2">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
                                             </div>
                                         </div>
@@ -263,16 +263,16 @@ function Lessons() {
                             <div className="bg-white icon-select shadow mt-3 rounded-lg">
                                 <Accordion open={open === 5} onClick={() => handleOpen(5)}>
                                     <AccordionHeader className="flex pr-4"><img className="h-10 w-10 ml-4 rounded-md" src={courseLessonImg} alt="" />
-                                        <h1 className="xl:text-base text-maingray font-normal xl:pl-20 absolute">Chapter 1 : Be positive</h1>
+                                        <h1 className="xl:text-base text-sm text-maingray font-normal xl:pl-20 pl-16 absolute">Chapter 1 : Be positive</h1>
                                     </AccordionHeader>
-                                    <AccordionBody className="bg-gray-50">
+                                    <AccordionBody className="bg-gray-50 xl:pl-0 pl-4">
                                         <div className="flex flex-wrap mt-0.5">
                                             <div className="xl:w-1/12 mt-3 mb-3">
                                                 <FaPlayCircle
                                                     className="h-5 w-5 xl:ml-8"
                                                 />
                                             </div>
-                                            <div className="xl:w-11/12 mt-3 mb-3">
+                                            <div className="xl:w-11/12 mt-3 mb-3 xl:ml-0 ml-2">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
                                             </div>
                                         </div>
@@ -283,7 +283,7 @@ function Lessons() {
                                                     className="h-5 w-5 xl:ml-8"
                                                 />
                                             </div>
-                                            <div className="xl:w-11/12 mt-3 mb-3">
+                                            <div className="xl:w-11/12 mt-3 mb-3 xl:ml-0 ml-2">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
                                             </div>
                                         </div>
@@ -294,7 +294,7 @@ function Lessons() {
                                                     className="h-5 w-5 xl:ml-8"
                                                 />
                                             </div>
-                                            <div className="xl:w-11/12 mt-3 mb-3">
+                                            <div className="xl:w-11/12 mt-3 mb-3 xl:ml-0 ml-2">
                                                 <h6 className="xl:text-sm text-maingray font-light">Compile VS Interpreted Languages</h6>
                                             </div>
                                         </div>

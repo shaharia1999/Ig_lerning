@@ -129,9 +129,9 @@ function Description() {
             return (
                 <div>
                     <div className="flex flex-wrap">
-                        <div className="xl:w-2/12 lg:w-2/12">
+                        <div className="xl:w-2/12 lg:w-2/12 w-3/12">
                             <img
-                                className="2xl:h-28 xl:h-24 lg:h-20 xl:mt-7 2xl:w-28 xl:w-24 lg:w-20 rounded-full xl:border-4 xl:border-white xl:shadow-lg"
+                                className="2xl:h-28 xl:h-24 lg:h-20 h-16 xl:mt-7 mt-4 2xl:w-28 xl:w-24 lg:w-20 w-16 rounded-full xl:border-4 xl:border-white border-2 shadow border-white xl:shadow-lg"
                                 src={courseInfo.course_image}
                                 alt="teacher" />
                             {(() => {
@@ -143,7 +143,7 @@ function Description() {
                                 }
                                 else {
                                     return <button onClick={() => TeacherFollow(TeacherInfo.id)}
-                                        className="xl:ml-2 text-maincolor xl:font-semibold xl:text-xl xl:mt-3">
+                                        className="xl:ml-2 text-maincolor xl:font-semibold xl:text-xl text-base font-semibold xl:mt-3 mt-2">
                                         + Follow
                                     </button>
                                 }
@@ -151,8 +151,8 @@ function Description() {
                             })()}
 
                         </div>
-                        <div className="2xl:w-10/12 xl:w-10/12 2xl:-ml-12 xl:-ml-6 lg:w-10/12 lg:-ml-10">
-                            <h6 className=" text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl font-semibold xl:pr-24 xl:mt-8">
+                        <div className="2xl:w-10/12 xl:w-10/12 w-9/12 2xl:-ml-12 xl:-ml-6 lg:w-10/12 lg:-ml-10 -ml-4">
+                            <h6 className=" text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl text-base xl:font-semibold font-medium xl:pr-24 pr-0 xl:mt-8 mt-4">
                                 {courseInfo.course_title}
                             </h6>
                             <h6 className="text-breadcrumbs-text text-sm font-normal 2xl:mt-4 xl:mt-2">
@@ -161,19 +161,18 @@ function Description() {
                                 </Link>
                             </h6>
                             <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">
-                                <div className="flex sm:justify-center xl:justify-start">
+                                <div className="flex justify-start">
                                     <StarRatings
                                         rating={courseInfo.avg_rating}
                                         starDimension="15px"
-                                        starSpacing="4px"
+                                        starSpacing="2px"
                                         starRatedColor="rgb(251, 191, 36)"
                                     />
-                                    <h6 className="xl:ml-2 xl:mt-1 xl:text-xs">
-                                        {courseInfo.avg_rating}
-                                        <em>({courseInfo.total_student_rating}
-                                            ratings on
-                                            {courseInfo.total_student_enroll}
-                                            students enrolled)
+                                    <h6 className="xl:ml-2 -ml-0.5 xl:mt-1 mt-0.5 xl:text-xs text-2xs">
+                                         {courseInfo.avg_rating}
+                                        <em>( {courseInfo.total_student_rating}
+                                             ratings on 
+                                             {courseInfo.total_student_enroll} students enrolled)
                                         </em>
                                     </h6>
                                 </div>
@@ -181,29 +180,28 @@ function Description() {
                             </h6>
                         </div>
                     </div>
-                    <div className="flex flex-wrap xl:mt-9">
+                    <div className="flex flex-wrap xl:mt-9 mt-5">
                         <div className="w-full">
-                            <h6 className="text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl font-semibold">
+                            <h6 className="text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl text-xl font-semibold">
                                 Description
                             </h6>
-                            <h6 className="xl:text-xs xl:font-light text-breadcrumbs-text xl:mt-5 xl:leading-5 xl:pr-24">
+                            <h6 className="xl:text-xs text-xs text-justify xl:font-light text-breadcrumbs-text xl:mt-5 mt-3 xl:leading-5 xl:pr-24">
                                 {courseInfo.course_description}
                             </h6>
-                            <h6 className="text-sectionTitleColor dark:text-white xl:text-xl font-semibold xl:mt-5 xl:mb-5">
+                            <h6 className="text-sectionTitleColor dark:text-white xl:text-xl font-semibold xl:mt-5 mt-3 xl:mb-5 mb-3">
                                 What will you learn:
                             </h6>
                             {CourseLearnInfo.map((course_learn_info, index) => (
                                 <div key={index}
-                                    className="flex flex-wrap">
+                                    className="flex flex-wrap xl:mb-0 mb-1">
                                     <div className="xl:w-1/12">
                                         <FiCheckCircle
                                             className=" text-btngreen xl:h-6 xl:w-6"
                                         />
                                     </div>
-                                    <div
-                                        className="xl:w-11/12 xl:-ml-14">
+                                    <div className="xl:w-11/12 xl:-ml-14 ml-1">
                                         <h6 className="dark:text-white">{course_learn_info.course_learn_question}</h6>
-                                        <h6 className="xl:text-xs xl:font-light text-breadcrumbs-text xl:mt-1 xl:mb-4 xl:leading-5 xl:pr-24">
+                                        <h6 className="xl:text-xs text-2xs xl:font-light text-breadcrumbs-text xl:mt-1 xl:mb-4 xl:leading-5 xl:pr-24">
                                             {course_learn_info.course_learn_answer}
                                         </h6>
                                     </div>
@@ -218,7 +216,7 @@ function Description() {
 
     return (
         <Fragment>
-            <div className="xl:ml-32">
+            <div className="xl:ml-32 xl:p-0 p-4">
                 {
                     CourseInfoTeacherAndDescription
                 }
