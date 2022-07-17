@@ -2,7 +2,6 @@ import React, { Fragment, useState, useEffect } from "react";
 import { FaStar, FaThList } from "react-icons/fa";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import { IoCloseOutline } from "react-icons/io5";
-
 import SpeedMeter from "../../asset/images/icon/icon_level.png";
 import CertificateIcon from "../../asset/images/icon/icon_certificate.png";
 import LoveIcon from "../../asset/images/icon/love-icon.png";

@@ -1,0 +1,46 @@
+.CourseFilterSideNavOpen {
+    height: 100%;
+    width: 400px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    overflow-x: hidden;
+    font-size: 16px;
+    padding-top: 0px !important;
+    transition: 0.1s;
+    background-color: #ffffff;
+    /*background-image: linear-gradient(to top, rgba(86, 181, 227, 100), rgba(125, 88, 165, 50));*/
+    box-shadow: 0 0 8px 0 rgba(57, 78, 234, 0.1);
+}
+
+.CourseFilterSideNavClose {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    top: 0;
+    font-size: 20px;
+    left: 0;
+    z-index: 10;
+    overflow-x: hidden;
+    transition: 0.1s;
+    background-color: #161616;
+    box-shadow: 0 0 8px 0 rgba(57, 78, 234, 0.1);
+}
+
+.CourseFilterContentOverlayOpen {
+    display: block;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 7;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.CourseFilterContentOverlayClose {
+    display: none;
+}

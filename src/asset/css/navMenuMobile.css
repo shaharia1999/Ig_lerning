@@ -181,6 +181,21 @@
     .DesktopCartCheckout {
         display: none;
     }
+
+    /* Course Search Filter Page */
+    .MobileCourseSearchFilter {}
+
+    .DesktopCourseSearchFilter {
+        display: none;
+    }
+
+    /* My Course Page */
+    .MyCourseForMobile {}
+
+    .MyCourseForDesktop {
+        display: none;
+    }
+
 }
 
 
@@ -270,6 +285,20 @@
     .DesktopCartCheckout {
         display: none;
     }
+
+    /* Course Search Filter Page */
+    .MobileCourseSearchFilter {}
+
+    .DesktopCourseSearchFilter {
+        display: none;
+    }
+
+    /* My Course Page */
+    .MyCourseForMobile {}
+
+    .MyCourseForDesktop {
+        display: none;
+    }
 }
 
 
@@ -357,6 +386,20 @@
     .MobileCartCheckout {}
 
     .DesktopCartCheckout {
+        display: none;
+    }
+
+    /* Course Search Filter Page */
+    .MobileCourseSearchFilter {}
+
+    .DesktopCourseSearchFilter {
+        display: none;
+    }
+
+    /* My Course Page */
+    .MyCourseForMobile {}
+
+    .MyCourseForDesktop {
         display: none;
     }
 }
@@ -453,6 +496,21 @@
 
     .DesktopCartCheckout {}
 
+
+    /* Course Search Filter Page */
+    .MobileCourseSearchFilter {
+        display: none;
+    }
+
+    .DesktopCourseSearchFilter {}
+
+    /* My Course Page */
+    .MyCourseForMobile {
+        display: none;
+    }
+
+    .MyCourseForDesktop {}
+
 }
 
 
@@ -543,6 +601,21 @@
     }
 
     .DesktopCartCheckout {}
+
+
+    /* Course Search Filter Page */
+    .MobileCourseSearchFilter {
+        display: none;
+    }
+
+    .DesktopCourseSearchFilter {}
+
+    /* My Course Page */
+    .MyCourseForMobile {
+        display: none;
+    }
+
+    .MyCourseForDesktop {}
 }
 
 /*XL Device*/
@@ -632,6 +705,20 @@
     }
 
     .DesktopCartCheckout {}
+
+    /* Course Search Filter Page */
+    .MobileCourseSearchFilter {
+        display: none;
+    }
+
+    .DesktopCourseSearchFilter {}
+
+    /* My Course Page */
+    .MyCourseForMobile {
+        display: none;
+    }
+
+    .MyCourseForDesktop {}
 }
 
 /*2XL Device*/
@@ -706,7 +793,7 @@
     .MobileCheckout {
         display: none;
     }
- 
+
     .DesktopCheckout {}
 
     /* Cart Summery Page */
@@ -722,4 +809,18 @@
     }
 
     .DesktopCartCheckout {}
+
+    /* Course Search Filter Page */
+    .MobileCourseSearchFilter {
+        display: none;
+    }
+
+    .DesktopCourseSearchFilter {}
+
+    /* My Course Page */
+    .MyCourseForMobile {
+        display: none;
+    }
+
+    .MyCourseForDesktop {}
 }

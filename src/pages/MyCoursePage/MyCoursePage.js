@@ -3,6 +3,7 @@ import NavBarTop from "../../component/Common/NavBarTop/NavBarTop";
 import MyCourse from "../../component/MyCourse/MyCourse";
 import darkModeTheme from "../../darkModeTheme";
 import NavMenuMobile from '../../component/Common/NavMenuMobile/NavMenuMobile';
+import MyCourseMobile from "../../component/MyCourse/MyCourseMobile";
 
 function MyCoursePage() {
     useEffect(() => {
@@ -16,7 +17,13 @@ function MyCoursePage() {
             <div className="Mobile">
                 <NavMenuMobile />
             </div>
-            <MyCourse />
+
+            <div className="MyCourseForDesktop">
+                <MyCourse />
+            </div>
+            <div className="MyCourseForMobile">
+                <MyCourseMobile />
+            </div>
         </Fragment>
     );
 }
