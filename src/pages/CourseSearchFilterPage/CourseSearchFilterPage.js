@@ -7,6 +7,7 @@ import CourseSearchFilter from "../../component/CourseSearchFilter/CourseSearchF
 import darkModeTheme from "../../darkModeTheme";
 import NavMenuMobile from '../../component/Common/NavMenuMobile/NavMenuMobile';
 import FooterMobile from '../../component/Common/FooterMobile/FooterMobile';
+import MobileCourseSearchFilter from "../../component/CourseSearchFilter/MobileCourseSearchFilter";
 
 function CourseSearchFilterPage() {
     useEffect(() => {
@@ -21,7 +22,13 @@ function CourseSearchFilterPage() {
                 <NavMenuMobile />
             </div>
 
-            <CourseSearchFilter />
+            <div className="DesktopCourseSearchFilter">
+                <CourseSearchFilter />
+            </div>
+            <div className="MobileCourseSearchFilter">
+                <MobileCourseSearchFilter />
+            </div>
+
             <Partner />
             <div className="DesktopFooter">
                 <Footer />

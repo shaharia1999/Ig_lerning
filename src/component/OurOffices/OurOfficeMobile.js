@@ -46,7 +46,7 @@ function OurOfficeMobile() {
                     >
 
                         <div className="w-1/2 px-1 py-2">
-                            <div className="bg-white dark:bg-dark-color1 dark:border-dark-color1 rounded-2xl hover:shadow-lg hover:border-maincolor hover:dark:bg-dark-color2 hover:dark:border-maincolor border-2 border-white xl:p-6 w-auto">
+                            <div className="bg-white dark:bg-dark-color1 dark:border-dark-color1 rounded-2xl hover:shadow-lg hover:border-maincolor hover:dark:bg-dark-color2 hover:dark:border-maincolor border-2 border-white p-3 w-auto">
                                 <p className="text-sectionTitleColor dark:text-white text-lg mb-6 font-semibold">Italy Office</p>
                                 <p className="text-des-gray dark:text-white text-sm font-normal mt-2 flex">
                                     <FiPhoneCall className="h-3 w-3 mr-2 text-maincolor" />
@@ -65,7 +65,7 @@ function OurOfficeMobile() {
                         </div>
 
                         <div className="w-1/2 px-1 py-2">
-                            <div className="bg-white dark:bg-dark-color1 dark:border-dark-color1 rounded-2xl hover:shadow-lg hover:border-maincolor hover:dark:bg-dark-color2 hover:dark:border-maincolor border-2 border-white xl:p-6 w-auto">
+                            <div className="bg-white dark:bg-dark-color1 dark:border-dark-color1 rounded-2xl hover:shadow-lg hover:border-maincolor hover:dark:bg-dark-color2 hover:dark:border-maincolor border-2 border-white p-3 w-auto">
                                 <p className="text-sectionTitleColor dark:text-white text-lg mb-6 font-semibold">France Office</p>
                                 <p className="text-des-gray dark:text-white text-sm font-normal mt-2 flex">
                                     <FiPhoneCall className="h-3 w-3 mr-2 text-maincolor" />
@@ -83,7 +83,7 @@ function OurOfficeMobile() {
                         </div>
 
                         <div className="w-1/2 px-1 py-2">
-                            <div className="bg-white dark:bg-dark-color1 dark:border-dark-color1 rounded-2xl hover:shadow-lg hover:border-maincolor hover:dark:bg-dark-color2 hover:dark:border-maincolor border-2 border-white xl:p-6 w-auto">
+                            <div className="bg-white dark:bg-dark-color1 dark:border-dark-color1 rounded-2xl hover:shadow-lg hover:border-maincolor hover:dark:bg-dark-color2 hover:dark:border-maincolor border-2 border-white p-3 w-auto">
                                 <p className="text-sectionTitleColor dark:text-white text-lg mb-6 font-semibold">USA Office</p>
                                 <p className="text-des-gray dark:text-white text-sm font-normal mt-2 flex">
                                     <FiPhoneCall className="h-3 w-3 mr-2 text-maincolor" />
@@ -101,7 +101,7 @@ function OurOfficeMobile() {
                         </div>
 
                         <div className="w-1/2 px-1 py-2">
-                            <div className="bg-white dark:bg-dark-color1 dark:border-dark-color1 rounded-2xl hover:shadow-lg hover:border-maincolor hover:dark:bg-dark-color2 hover:dark:border-maincolor border-2 border-white xl:p-6 w-auto">
+                            <div className="bg-white dark:bg-dark-color1 dark:border-dark-color1 rounded-2xl hover:shadow-lg hover:border-maincolor hover:dark:bg-dark-color2 hover:dark:border-maincolor border-2 border-white p-3 w-auto">
                                 <p className="text-sectionTitleColor dark:text-white text-lg mb-6 font-semibold">India Office</p>
                                 <p className="text-des-gray dark:text-white text-sm font-normal mt-2 flex">
                                     <FiPhoneCall className="h-3 w-3 mr-2 text-maincolor" />
@@ -119,7 +119,7 @@ function OurOfficeMobile() {
                         </div>
 
                         <div className="w-1/2 px-1 py-2">
-                            <div className="bg-white dark:bg-dark-color1 dark:border-dark-color1 rounded-2xl hover:shadow-lg hover:border-maincolor hover:dark:bg-dark-color2 hover:dark:border-maincolor border-2 border-white xl:p-6 w-auto">
+                            <div className="bg-white dark:bg-dark-color1 dark:border-dark-color1 rounded-2xl hover:shadow-lg hover:border-maincolor hover:dark:bg-dark-color2 hover:dark:border-maincolor border-2 border-white p-3 w-auto">
                                 <p className="text-sectionTitleColor dark:text-white text-lg mb-6 font-semibold">Cameroon Office</p>
                                 <p className="text-des-gray dark:text-white text-sm font-normal mt-2 flex">
                                     <FiPhoneCall className="h-3 w-3 mr-2 text-maincolor" />
@@ -137,7 +137,7 @@ function OurOfficeMobile() {
                         </div>
 
                         <div className="w-1/2 px-1 py-2">
-                            <div className="bg-white dark:bg-dark-color1 dark:border-dark-color1 rounded-2xl hover:shadow-lg hover:border-maincolor hover:dark:bg-dark-color2 hover:dark:border-maincolor border-2 border-white lg:p-6 w-auto">
+                            <div className="bg-white dark:bg-dark-color1 dark:border-dark-color1 rounded-2xl hover:shadow-lg hover:border-maincolor hover:dark:bg-dark-color2 hover:dark:border-maincolor border-2 border-white p-3 w-auto">
                                 <p className="text-sectionTitleColor dark:text-white text-lg mb-6 font-semibold">Senegal Office</p>
                                 <p className="text-des-gray dark:text-white text-sm font-normal mt-2 flex">
                                     <FiPhoneCall className="h-3 w-3 mr-2 text-maincolor" />
