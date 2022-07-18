@@ -30,7 +30,7 @@ function Login() {
     return (
         <Fragment>
             <section className="h-full md:h-screen bg-login-bg-color">
-                <div className="container h-full lg:pl-32 lg:pr-32">
+                <div className="container h-full 2xl:pl-32 2xl:pr-32 xl:pl-12 xl:pr-12 lg:pl-12 lg:pr-12 md:pl-8 md:pr-8">
                     <div className="flex justify-center items-center flex-wrap h-full text-gray-800">
                         <div className="xl:w-10/12">
                             <div className="block bg-white shadow-lg">
@@ -38,7 +38,7 @@ function Login() {
 
                                     <div className="lg:w-6/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none">
                                         <div className="text-white">
-                                            <img className="Image" src={LoginImg} alt='' />
+                                            <img className="Image md:display-none" src={LoginImg} alt='' />
                                         </div>
                                     </div>
 

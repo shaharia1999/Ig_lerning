@@ -196,6 +196,20 @@
         display: none;
     }
 
+    /* Price Page */
+    .PriceMobile {}
+
+    .PriceDesktop {
+        display: none;
+    }
+
+    /* Price Page contact section */
+    .PriceContactMobile {}
+
+    .PriceContactDesktop {
+        display: none;
+    }
+
 }
 
 
@@ -299,6 +313,20 @@
     .MyCourseForDesktop {
         display: none;
     }
+
+    /* Price Page */
+    .PriceMobile {}
+
+    .PriceDesktop {
+        display: none;
+    }
+
+    /* Price Page contact section */
+    .PriceContactMobile {}
+
+    .PriceContactDesktop {
+        display: none;
+    }
 }
 
 
@@ -400,6 +428,20 @@
     .MyCourseForMobile {}
 
     .MyCourseForDesktop {
+        display: none;
+    }
+
+    /* Price Page */
+    .PriceMobile {}
+
+    .PriceDesktop {
+        display: none;
+    }
+
+    /* Price Page contact section */
+    .PriceContactMobile {}
+
+    .PriceContactDesktop {
         display: none;
     }
 }
@@ -511,6 +553,20 @@
 
     .MyCourseForDesktop {}
 
+    /* Price Page */
+    .PriceMobile {
+        display: none;
+    }
+
+    .PriceDesktop {}
+
+    /* Price Page contact section */
+    .PriceContactMobile {
+        display: none;
+    }
+
+    .PriceContactDesktop {}
+
 }
 
 
@@ -616,6 +672,20 @@
     }
 
     .MyCourseForDesktop {}
+
+    /* Price Page */
+    .PriceMobile {
+        display: none;
+    }
+
+    .PriceDesktop {}
+
+    /* Price Page contact section */
+    .PriceContactMobile {
+        display: none;
+    }
+
+    .PriceContactDesktop {}
 }
 
 /*XL Device*/
@@ -719,6 +789,20 @@
     }
 
     .MyCourseForDesktop {}
+
+    /* Price Page */
+    .PriceMobile {
+        display: none;
+    }
+
+    .PriceDesktop {}
+
+    /* Price Page contact section */
+    .PriceContactMobile {
+        display: none;
+    }
+
+    .PriceContactDesktop {}
 }
 
 /*2XL Device*/
@@ -823,4 +907,18 @@
     }
 
     .MyCourseForDesktop {}
+
+    /* Price Page */
+    .PriceMobile {
+        display: none;
+    }
+
+    .PriceDesktop {}
+
+    /* Price Page contact section */
+    .PriceContactMobile {
+        display: none;
+    }
+
+    .PriceContactDesktop {}
 }

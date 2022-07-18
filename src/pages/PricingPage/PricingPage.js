@@ -10,6 +10,8 @@ import Price from "../../component/Price/Price/Price";
 import darkModeTheme from "../../darkModeTheme";
 import NavMenuMobile from '../../component/Common/NavMenuMobile/NavMenuMobile';
 import FooterMobile from '../../component/Common/FooterMobile/FooterMobile';
+import PriceMobile from "../../component/Price/Price/PriceMobile";
+import PriceContactSectionMobile from "../../component/Price/PriceContactSection/PriceContactSectionMobile";
 
 function PricingPage() {
     useEffect(() => {
@@ -25,9 +27,23 @@ function PricingPage() {
             </div>
 
             <PriceBanner />
-            <Price />
+
+            <div className="PriceDesktop">
+                <Price />
+            </div>
+            <div className="PriceMobile">
+                <PriceMobile />
+            </div>
+
             <PriceAccordonSection />
-            <PriceContactSection />
+
+            <div className="PriceContactDesktop">
+                <PriceContactSection />
+            </div>
+            <div className="PriceContactMobile">
+                <PriceContactSectionMobile />
+            </div>
+
             <Partner />
 
             <div className="DesktopFooter">
