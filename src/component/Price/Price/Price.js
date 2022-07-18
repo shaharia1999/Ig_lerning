@@ -2,9 +2,6 @@ import React, { Fragment, useEffect, useState } from "react";
 import { FaArrowRight, FaCheckCircle } from "react-icons/fa";
 import { BsFillXCircleFill } from "react-icons/bs";
 import PriceBall from "../../../asset/images/icon/price_ball.png";
-import axios from "axios";
-import ApiUrl from "../../../Api/ApiUrl";
-
 
 function Price() {
     const [isLoading, setIsLoading] = useState(false);
@@ -72,7 +69,7 @@ function Price() {
                                             <div className="tab-content" id="pills-tabContent3">
                                                 <div className="tab-pane fade show active xl:mt-8" id="pills-monthly" role="tabpanel" aria-labelledby="pills-home-tab3">
 
-                                                    <div className="flex flex-wrap">
+                                                    <div className="flex flex-wrap sticky-top bg-white shadow-sm">
                                                         <div className="xl:w-3/12 xl:pt-5">
                                                             <div className="xl:p-6">
                                                                 <div className="flex flex-wrap bg-gray-50 dark:bg-dark-color2 rounded-md">
@@ -207,100 +204,184 @@ function Price() {
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:bg-dark-color2 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:border dark:border-dark-color2 dark:border-opacity-50 dark:bg-dark-color3 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:bg-dark-color2 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:border dark:border-dark-color2 dark:border-opacity-50 dark:bg-dark-color3 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:bg-dark-color2 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:border dark:border-dark-color2 dark:border-opacity-50 dark:bg-dark-color3 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:bg-dark-color2 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:border dark:border-dark-color2 dark:border-opacity-50 dark:bg-dark-color3 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:bg-dark-color2 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:border dark:border-dark-color2 dark:border-opacity-50 dark:bg-dark-color3 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:bg-dark-color2 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" /></span>
                                                                 </div>
                                                             </div>
 
@@ -319,7 +400,9 @@ function Price() {
 
                                                                     <div className="xl:w-8/12 w-full xl:mt-6 justify-center">
                                                                         <h6 className="text-maingray dark:text-white text-2xl font-semibold">Contact us!</h6>
-                                                                        <h6 className="flex text-maincolor text-lg font-semibold">Get Started <FaArrowRight className="ml-2 mt-1" /></h6>
+                                                                        <h6 className="flex text-maincolor text-lg font-semibold">Get Started
+                                                                            <FaArrowRight className="ml-2 mt-1" />
+                                                                        </h6>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -444,100 +527,188 @@ function Price() {
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:bg-dark-color2 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:border dark:border-dark-color2 dark:border-opacity-50 dark:bg-dark-color3 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:bg-dark-color2 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:border dark:border-dark-color2 dark:border-opacity-50 dark:bg-dark-color3 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:bg-dark-color2 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:border dark:border-dark-color2 dark:border-opacity-50 dark:bg-dark-color3 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:bg-dark-color2 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:border dark:border-dark-color2 dark:border-opacity-50 dark:bg-dark-color3 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:bg-dark-color2 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:border dark:border-dark-color2 dark:border-opacity-50 dark:bg-dark-color3 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
                                                             <div className="flex flex-wrap w-full">
                                                                 <div className="w-full flex xl:mt-6 bg-gray-50 dark:bg-dark-color2 xl:pt-3 xl:pb-3 xl:ml-5 xl:mr-5 justify-around rounded-lg">
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><BsFillXCircleFill className="text-gray-400 check-font-size" /></span>
-                                                                    <span className="xl:-ml-16"><FaCheckCircle className="text-maincolor check-font-size" /></span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <BsFillXCircleFill className="text-gray-400 check-font-size" />
+                                                                    </span>
+                                                                    <span className="xl:-ml-16">
+                                                                        <FaCheckCircle className="text-maincolor check-font-size" />
+                                                                    </span>
                                                                 </div>
                                                             </div>
 
