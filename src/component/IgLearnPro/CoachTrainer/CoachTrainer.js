@@ -10,7 +10,7 @@ class CoachTrainer extends Component {
         return (
             <Fragment>
                 <div className="container xl:mt-8 xl:mb-12">
-                    <h4 className="xl:text-6xl text-xl font-semibold text-sectionTitleColor dark:text-white text-center xl:mt-20 xl:mb-16 mt-8 mb-8">Are you a  Coach or Trainer ?</h4>
+                    <h4 className="2xl:text-5xl xl:text-4xl lg:text-3xl md:text-3xl sm:text-2xl text-xl font-semibold text-sectionTitleColor dark:text-white text-center xl:mt-20 xl:mb-16 mt-8 mb-8">Are you a  Coach or Trainer ?</h4>
                     <div className="flex flex-wrap xl:mt-6">
 
                         <div className="xl:w-2/5 w-full">

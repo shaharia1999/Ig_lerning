@@ -49,7 +49,6 @@
   }
 }
 
-
 .LearningTeaching {
   background-image: url('../src/asset/images/banner/learning-teaching.svg');
   width: 100% !important;
@@ -108,11 +107,42 @@
 
 
 /*X-Small devices portrait phones*/
-@media (min-width: 375.98px) and (max-width: 575.98px) {
+@media (min-width: 375.98px) and (max-width: 639.98px) {
   .IgLearnProBanner {
     background-image: url('../src/asset/images/banner/IgLearnProBanner.png');
     width: 100% !important;
     height: 400px !important;
+    opacity: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/*small devices*/
+@media (min-width: 640px) and (max-width: 767.98px) {
+  .IgLearnProBanner {
+    background-image: url('../src/asset/images/banner/IgLearnProBanner.png');
+    width: 100% !important;
+    height: 450px !important;
+    opacity: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+
+/*Medium Device*/
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .IgLearnProBanner {
+    background-image: url('../src/asset/images/banner/IgLearnProBanner.png');
+    width: 100% !important;
+    height: 450px !important;
     opacity: 1;
     background-position: center;
     background-repeat: no-repeat;
