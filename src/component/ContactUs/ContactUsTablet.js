@@ -6,7 +6,7 @@ import Location from "../../asset/images/icon/location.svg";
 import Mail from "../../asset/images/icon/icon_mail.svg";
 import Phone from "../../asset/images/icon/icon_phone.svg";
 
-function ContactUs() {
+function ContactUsTablet() {
     const [name, setName] = useState('')
     const [surname, setSurname] = useState('')
     const [professional_email, setProfessional_email] = useState('')
@@ -273,58 +273,19 @@ function ContactUs() {
             <Fragment>
                 <div className="ContactBanner">
                     <div className="container">
-                        <div className="flex flex-auto">
-                            <div className="lg:w-1/12">
+                        <div className="flex flex-wrap">
 
-                            </div>
-
-                            <div className="lg:w-4/12 2xl:pl-12 xl:pl-8 lg:pl-1 lg:pr-6">
-                                <h2 className="text-sectionTitleColor lg:font-semibold 2xl:text-4xl xl:text-3xl lg:text-2xl 2xl:mt-36 xl:mt-28 lg:mt-28">Get in Touch</h2>
-                                <h2 className="text-client-section-des lg:font-normal xl:text-base lg:text-sm lg:mb-6 lg:mt-8">We have your back. We are available
+                            <div className="w-full">
+                                <h2 className="text-sectionTitleColor text-center font-semibold text-3xl mt-12">Get in Touch</h2>
+                                <h2 className="text-client-section-des font-normal text-xs mb-6 mt-3 text-center px-36">We have your back. We are available
                                     365x24x7 so leave us a line if you have any query or If you wish to discuss a project. We will get back to you as soon as possible.</h2>
 
-                                <div className="flex flex-wrap xl:mt-10 lg:mt-8">
-                                    <div className="w-2/12 ">
-                                        <img className="xl:h-14 xl:w-14 lg:h-8 lg:w-8"
-                                            src={Location} alt=""
-                                        />
-                                    </div>
-                                    <div className="w-10/12">
-                                        <h6 className="text-maingray xl:text-lg lg:text-base font-semibold">We are here:</h6>
-                                        <h6 className="xl:text-base lg:text-sm text-gray-400 xl:font-normal">27 Division St, New York, NY 10002, USA</h6>
-                                    </div>
-                                </div>
-
-                                <div className="flex flex-wrap xl:mt-10 lg:mt-8">
-                                    <div className="w-2/12">
-                                        <img className="xl:h-14 xl:w-14 lg:h-8 lg:w-8"
-                                            src={Phone} alt=""
-                                        />
-                                    </div>
-                                    <div className="w-10/12">
-                                        <h6 className="text-maingray xl:text-lg font-semibold">Phone us:</h6>
-                                        <h6 className="xl:text-base lg:text-sm text-gray-400 xl:font-normal">+1 (908) 123 4567</h6>
-                                    </div>
-                                </div>
-
-
-                                <div className="flex flex-wrap xl:mt-10 lg:mt-8">
-                                    <div className="w-2/12">
-                                        <img className="xl:h-14 xl:w-14 lg:h-8 lg:w-8"
-                                            src={Mail} alt=""
-                                        />
-                                    </div>
-                                    <div className="w-10/12">
-                                        <h6 className="text-maingray xl:text-lg font-semibold">Mail us:</h6>
-                                        <h6 className="xl:text-base lg:text-sm text-gray-400 xl:font-normal">customerservice@evveress.com</h6>
-                                    </div>
-                                </div>
                             </div>
 
-                            <div className="lg:w-6/12 lg:p-2">
-                                <div className="bg-white rounded-xl shadow-client border-none lg:p-12 w-auto lg:mt-10">
-                                    <h2 className="text-sectionTitleColor lg:font-semibold lg:text-2xl text-center xl:mb-6 lg:mb-3">We would like to hear from you</h2>
-                                    <h2 className="text-client-section-des font-normal xl:text-sm lg:text-xs text-center lg:mb-6">Fill in the form and we’ll analyse your website and get back to you with 100% specific recommendations on how to improve it</h2>
+                            <div className="w-full px-20">
+                                <div className="bg-white rounded-xl shadow-client border-none p-12 w-auto mt-2">
+                                    <h2 className="text-sectionTitleColor font-medium text-xl text-center mb-3">We would like to hear from you</h2>
+                                    <h2 className="text-client-section-des font-normal text-xs text-center mb-6">Fill in the form and we’ll analyse your website and get back to you with 100% specific recommendations on how to improve it</h2>
 
                                     <form className="w-full">
                                         <div className="flex flex-wrap -mx-3 xl:mb-6 lg:mb-1">
@@ -457,11 +418,9 @@ function ContactUs() {
                                                 </textarea>
                                             </div>
 
-                                            <h2 className="text-client-section-des lg:font-normal lg:text-xs text-center xl:mb-6 lg:mb-4 xl:mt-4 mt-3">Fill in the form and we’ll analyse your website and get back to you with 100% specific recommendations on how to improve it</h2>
-
-                                            <div className="xl:mt-8 mt-5 flex flex-auto image-center">
+                                            <div className="mt-5 flex flex-auto image-center">
                                                 <Link onClick={createContactUs}>
-                                                    <span className="text-lg font-normal leading-tight bg-maincolor text-white lg:pl-24 lg:pr-24 xl:pt-4 xl:pb-4 lg:pt-3 lg:pb-3 rounded-sm mx-2 h-11">SUBMIT</span>
+                                                    <span className="text-sm font-normal leading-tight bg-maincolor text-white pl-24 pr-24 pt-3 pb-3 rounded-sm mx-2 h-11">SUBMIT</span>
                                                 </Link>
                                             </div>
 
@@ -470,17 +429,58 @@ function ContactUs() {
                                 </div>
                             </div>
 
-                            <div className="lg:w-1/12">
-
-                            </div>
-
                         </div>
                     </div>
                 </div >
+
+
+                <div className="flex flex-wrap md:pl-16 md:pr-16 mt-12">
+                    <div className="w-1/3 mt-6">
+                        <div className="flex">
+                            <div className="w-3/12">
+                                <img className="h-10 w-10"
+                                    src={Location} alt=""
+                                />
+                            </div>
+                            <div className="w-9/12">
+                                <h6 className="text-maingray text-lg font-medium">We are here:</h6>
+                                <h6 className="text-sm text-gray-400 font-normal">27 Division St, New York, NY 10002, USA</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="w-1/3 mt-6">
+                        <div className="flex">
+                            <div className="w-3/12">
+                                <img className="h-10 w-10"
+                                    src={Phone} alt=""
+                                />
+                            </div>
+                            <div className="w-9/12">
+                                <h6 className="text-maingray text-lg font-medium">Phone us:</h6>
+                                <h6 className="text-sm text-gray-400 font-normal">+1 (908) 123 4567</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="w-1/3 mt-6">
+                        <div className="flex">
+                            <div className="w-3/12">
+                                <img className="h-10 w-10"
+                                    src={Mail} alt=""
+                                />
+                            </div>
+                            <div className="w-9/12">
+                                <h6 className="text-maingray text-lg font-medium">Mail us:</h6>
+                                <h6 className="text-sm text-gray-400 font-normal">customerservice@evveress.com</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </Fragment >
         );
     }
 
 }
 
-export default ContactUs;
+export default ContactUsTablet;

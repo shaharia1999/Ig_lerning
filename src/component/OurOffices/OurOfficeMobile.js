@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useRef } from 'react';
+import React, {Fragment} from 'react';
 import { FiPhoneCall, FiMail } from "react-icons/fi";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import Slider from 'react-slick';
@@ -6,19 +6,36 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 function OurOfficeMobile() {
-    const [nav10, setNav10] = useState();
-    const slider10 = useRef();
-
     var settings = {
         responsive: [
             {
-                breakpoint: 480,
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2,
+                    arrows:false,
+                    dots: false,
+                }
+            },
+            {
+                breakpoint: 640,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    dots: false
+                    dots: false,
+                    arrows:false,
                 }
-            }
+            },
         ]
     };
     
@@ -30,7 +47,6 @@ function OurOfficeMobile() {
 
                     <Slider
                         {...settings}
-                        ref={(slider10) => setNav10(slider10)}
                         slidesToShow={2}
                         dots={true}
                         adaptiveHeight={true}

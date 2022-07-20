@@ -83,25 +83,27 @@ function NavMenuMobile() {
 
     return (
         <Fragment>
-            <Container fluid={true}
-                className="NavMobile shadow-sm border-0 NavbarBGMobile bg-maincolor sticky-top fixed-top position-fixed p-2">
-                <Row className="mt-2 flex">
-                    <Col md={4} sm={4}>
+            <div
+                className="container-fluid NavMobile shadow-sm border-0 NavbarBGMobile bg-maincolor sticky-top fixed-top position-fixed p-2">
+                <div className="mt-2 flex flex-wrap">
+                    <div className="w-1/3">
                         {/* <Button onClick={MenuBarClickHandler} className="bars-btn"><i
                             className="fa fa-bars"></i></Button> */}
                         <span onClick={MenuBarClickHandler}><img className="cursor-pointer md:ml-12 sm:ml-12 ml-4" src={NavIcon} alt="" /></span>
-                    </Col>
-                    <Col md={4} sm={4}>
-                        <Link><img className="cursor-pointer md:ml-48 sm:ml-36  ml-12 h-14" src={IgLearnFullLogo} alt="" /></Link>
-                    </Col>
-                    <Col className="flex" md={4} sm={4}>
+                    </div>
+                    <div className="w-1/3 justify-center flex">
+                        <Link><img className="cursor-pointer h-16 -mt-1" src={IgLearnFullLogo} alt="" /></Link>
+                    </div>
+                    <div className="w-1/3">
                         {/* <Button onClick={MenuBarClickHandler} className="bars-btn"><i
                             className="fa fa-bars"></i></Button> */}
-                        <span><img className="cursor-pointer mx-1 md:ml-48 sm:ml-32 ml-8" src={SearchIcon} alt="" /></span>
-                        <span><img className="cursor-pointer mx-1" src={CartIcon} alt="" /></span>
-                    </Col>
-                </Row>
-            </Container>
+                        <div className="flex" style={{float: "right"}}>
+                            <div><img className="cursor-pointer mx-1" src={SearchIcon} alt="" /></div>
+                            <div><img className="cursor-pointer mx-1" src={CartIcon} alt="" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div className={SideNavState}>
                 <div className="bg-gray-200 dark:bg-dark-color4 h-16">

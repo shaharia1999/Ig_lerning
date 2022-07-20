@@ -49,14 +49,13 @@ function MobileRegistration() {
                     <div className="flex justify-center items-center flex-wrap text-gray-800">
                         <div className="w-full">
                             <div className="flex flex-wrap">
-                                <div className="w-full">
-                                    <div className="p-2 mx-2">
+                                <div className="w-full md:px-12">
+                                    <div className="sm:px-12 px-2 md:p-16 md:mt-12 mx-2 md:bg-white mb-8">
                                         <div className="text-center">
-                                            <h4 className="text-2xl font-semibold mt-8 mb-8 pb-1">Registration</h4>
+                                            <h4 className="text-2xl font-semibold md:mt-2 mt-8 mb-8 pb-1">Registration</h4>
                                         </div>
 
                                         <form className="space-y-5 mt-6">
-
                                             <div className="w-full mb-4 relative px-1">
                                                 <input type="text"
                                                     id="name"
@@ -167,7 +166,7 @@ function MobileRegistration() {
 
 
                                         <div className="text-center">
-                                            <div className="mt-8 mb-8">
+                                            <div className="mt-8 mb-4">
                                                 <span className="font-normal text-black text-base"> Already have an account?
                                                     <span className="hover:underline">
                                                         <Link to="/login/">
@@ -188,7 +187,5 @@ function MobileRegistration() {
             </section>
         </Fragment>
     );
-
 }
-
 export default MobileRegistration;

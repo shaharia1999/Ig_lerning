@@ -71,8 +71,8 @@ function ContactMobile() {
                 <div className="container">
                     <div className="flex flex-wrap">
 
-                        <div className="w-full p-4">
-                            <div className="bg-white rounded-sm shadow-client border-none p-4 w-auto mt-6">
+                        <div className="w-full sm:px-12 p-4">
+                            <div className="bg-white rounded-sm shadow-client border-none sm:p-8 p-4 w-auto mt-6">
                                 <h2 className="text-sectionTitleColor font-semibold text-xl text-center mb-0">We would like to hear from you</h2>
                                 <h2 className="text-client-section-des font-normal text-xs text-center mb-3 p-4">Fill in the form and we’ll analyse your website and get back to you with 100% specific recommendations on how to improve it</h2>
 
@@ -219,7 +219,7 @@ function ContactMobile() {
                         </div>
 
 
-                        <div className="w-full pl-6 pr-6">
+                        <div className="w-full sm:pl-10 pl-6 pr-6">
                             <h2 className="text-sectionTitleColor font-semibold text-xl mt-5">Get in Touch</h2>
 
                             <div className="flex flex-wrap mt-6">
