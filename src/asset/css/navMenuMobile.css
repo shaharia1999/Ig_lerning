@@ -121,6 +121,10 @@
     /* Contact section */
     .MobileContact {}
 
+    .TabletContact{
+        display: none;
+    }
+
     .DesktopContact {
         display: none;
     }
@@ -240,6 +244,10 @@
     /* contact section */
     .MobileContact {}
 
+    .TabletContact{
+        display: none;
+    }
+
     .DesktopContact {
         display: none;
     }
@@ -356,6 +364,10 @@
 
     /* contact section */
     .MobileContact {}
+
+    .TabletContact{
+        display: none;
+    }
 
     .DesktopContact {
         display: none;
@@ -475,30 +487,33 @@
         display: none;
     }
 
-    .DesktopContact {}
+    .TabletContact{}
+
+    .DesktopContact {
+        display: none;
+    }
 
 
     /* our office section */
-    .MobileOffice {
+    .MobileOffice {}
+
+    .DesktopOffice {
         display: none;
     }
-
-    .DesktopOffice {}
 
     /* Login */
-    .MobileLogin {
+    .MobileLogin {}
+
+    .DesktopLogin {
         display: none;
     }
-
-    .DesktopLogin {}
 
     /* Registration */
-    .MobileRegistration {
+    .MobileRegistration {}
+
+    .DesktopRegistration {
         display: none;
     }
-
-    .DesktopRegistration {}
-
 
     /* SingleCourseDetails */
     .MobileSingleCourseDetails {
@@ -596,6 +611,10 @@
 
     /* contact section */
     .MobileContact {
+        display: none;
+    }
+
+    .TabletContact{
         display: none;
     }
 
@@ -712,8 +731,12 @@
 
     .DesktopFooter {}
 
-    /* contact section */
-    .MobileContact {
+     /* contact section */
+     .MobileContact {
+        display: none;
+    }
+
+    .TabletContact{
         display: none;
     }
 
@@ -829,8 +852,12 @@
 
     .DesktopFooter {}
 
-    /* contact section */
-    .MobileContact {
+     /* contact section */
+     .MobileContact {
+        display: none;
+    }
+
+    .TabletContact{
         display: none;
     }
 

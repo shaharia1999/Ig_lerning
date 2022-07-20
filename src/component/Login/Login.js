@@ -110,9 +110,7 @@ function Login() {
                                                 <div className="xl:mt-14">
                                                     <span className="font-normal text-black lg:text-base"> Don't have an account?
                                                         <span className="hover:underline">
-                                                            <Link to="/registration">
-                                                                Sign Up
-                                                            </Link>
+                                                            <Link to="/registration"> Sign Up</Link>
                                                         </span>
                                                     </span>
                                                 </div>

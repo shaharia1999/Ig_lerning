@@ -10,6 +10,7 @@ import NavMenuMobile from '../../component/Common/NavMenuMobile/NavMenuMobile';
 import FooterMobile from '../../component/Common/FooterMobile/FooterMobile';
 import ContactMobile from "../../component/ContactUs/ContactMobile";
 import OurOfficeMobile from "../../component/OurOffices/OurOfficeMobile";
+import ContactUsTablet from "../../component/ContactUs/ContactUsTablet";
 
 function ContactPage() {
 
@@ -27,12 +28,17 @@ function ContactPage() {
                     <NavMenuMobile />
                 </div>
 
+
                 <div className="DesktopContact">
                     <ContactUs />
+                </div>
+                <div className="TabletContact">
+                    <ContactUsTablet />
                 </div>
                 <div className="MobileContact">
                     <ContactMobile />
                 </div>
+                
 
                 <div className="DesktopOffice">
                     <OurOffices />

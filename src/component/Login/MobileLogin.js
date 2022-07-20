@@ -28,19 +28,18 @@ function MobileLogin() {
 
     return (
         <Fragment>
-            <section className="h-full bg-login-bg-color">
+            <section className="h-screen bg-login-bg-color">
                 <div className="container pl-4 pr-4">
                     <div className="flex justify-center items-center flex-wrap text-gray-800">
                         <div className="w-full">
                             <div className="flex flex-wrap g-0">
-                                <div className="w-full">
-                                    <div className="p-2 mx-2">
+                                <div className="w-full md:px-16">
+                                    <div className="sm:px-12 px-2 md:p-16 md:mt-12 mx-2 md:bg-white">
                                         <div className="text-center">
-                                            <h4 className="text-2xl font-semibold mt-10 mb-8 pb-1">Login</h4>
+                                            <h4 className="text-2xl font-semibold mt-10 md:mt-2 mb-8 pb-1">Login</h4>
                                         </div>
 
                                         <form className="space-y-5 mt-8">
-
                                             <div class="relative mb-4">
                                                 <input type="email"
                                                     id="email"

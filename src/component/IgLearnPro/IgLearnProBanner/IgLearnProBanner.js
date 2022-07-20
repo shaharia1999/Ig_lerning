@@ -13,10 +13,10 @@ class IgLearnProBanner extends Component {
                     <div className="container">
                         <div className="flex flex-auto xl:p-0 p-3">
                             <div className="xl:basis-1/2 basis-full ">
-                                <h2 className="text-white xl:font-semibold xl:text-5xl text-xl xl:mt-80 mt-12 xl:ml-0 lg:ml-0 ml-4">Train your team!</h2>
-                                <h2 className="text-white xl:font-semibold xl:text-5xl text-xl xl:mt-6 xl:ml-0 lg:ml-0 ml-4 mt-0">Thanks to IntelloGeek Learning</h2>
+                                <h2 className="text-white xl:font-semibold 2xl:text-5xl xl:text-4xl lg:text-3xl lg:font-semibold text-xl 2xl:mt-64 xl:mt-60 lg:mt-48 mt-12 xl:ml-0 lg:ml-0 ml-4">Train your team!</h2>
+                                <h2 className="text-white xl:font-semibold 2xl:text-5xl xl:text-4xl lg:text-3xl lg:font-semibold text-xl 2xl:mt-6 xl:mt-3 xl:ml-0 lg:ml-0 ml-4 mt-0">Thanks to IntelloGeek Learning</h2>
 
-                                <h6 className="text-white xl:font-extralight font-light xl:text-xl text-sm xl:mt-6 xl:lg-6 mt-3 xl:ml-0 lg:ml-0 ml-4 xl:mr-12 xl:mb-10 mb-4">and grow the sale turnover of your company.
+                                <h6 className="text-white xl:font-extralight font-light 2xl:text-xl xl:text-base text-sm xl:mt-6 xl:lg-6 mt-3 xl:ml-0 lg:ml-0 ml-4 xl:mr-12 xl:mb-10 mb-4">and grow the sale turnover of your company.
                                     companies that have increased their productivity and
                                     success with us</h6>
 

@@ -122,6 +122,23 @@
   }
 }
 
+
+/*X-Small devices portrait phones*/
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .IgLearnProBanner {
+    background-image: url('../src/asset/images/banner/IgLearnProBanner.png');
+    width: 100% !important;
+    height: 550px !important;
+    opacity: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+
 .ContactBanner {
   background-image: url('../src/asset/images/banner/ContactBanner.png');
   width: 100% !important;
