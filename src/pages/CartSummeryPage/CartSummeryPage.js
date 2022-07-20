@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import CartSummery from "../../component/CartSummery/CartSummery";
 import NavBarTop from "../../component/Common/NavBarTop/NavBarTop";
 import darkModeTheme from "../../darkModeTheme";
@@ -6,6 +6,7 @@ import NavMenuMobile from "../../component/Common/NavMenuMobile/NavMenuMobile";
 import CartSummeryMobile from "../../component/CartSummery/CartSummeryMobile";
 
 function CartSummeryPage() {
+    
     useEffect(() => {
         darkModeTheme();
     }, [])
