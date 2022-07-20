@@ -26,6 +26,7 @@
         "react-star-ratings": "^2.3.0",
         "slick-carousel": "^1.8.1",
         "tw-elements": "^1.0.0-alpha12",
+        "universal-cookie": "^4.0.4",
         "web-vitals": "^2.1.4"
     },
     "scripts": {
