@@ -30,27 +30,27 @@ class IgLearnProBanner extends Component {
                     </div>
                 </div>
 
-                <div className="container xl:-mt-28 lg:-mt-20 md:-mt-16 -mt-16">
-                    <div className="flex flex-row bg-white dark:bg-dark-color2 rounded-xl shadow-client border-none xl:p-4 p-3 w-full text-center">
-                        <div className="sm:w-1/4">
+                <div className="container xl:-mt-28 lg:-mt-20 sm:-mt-16 -mt-20">
+                    <div className="flex flex-row bg-white dark:bg-dark-color2 rounded-xl shadow-client border-none md:p-4 sm:p-4 py-4 px-3 w-full text-center">
+                        <div className="w-1/4">
                             <div className="image-center">
                                 <img className="xl:h-48 xl:w-56 lg:h-32 lg:w-44 md:h-28 md:w-36 sm:h-20 sm:w-28 h-16 w-auto xl:p-0 p-2 object-contain" src={Google} alt="" />
                             </div>
                         </div>
 
-                        <div className="sm:w-1/4">
+                        <div className="w-1/4">
                             <div className="image-center">
                                 <img className="xl:h-48 xl:w-56 lg:h-32 lg:w-44 md:h-28 md:w-36 sm:h-20 sm:w-28 h-16 w-auto xl:p-0 p-2 object-contain" src={LogoMba} alt="" />
                             </div>
                         </div>
 
-                        <div className="sm:w-1/4">
+                        <div className="w-1/4">
                             <div className="image-center">
                                 <img className="xl:h-48 xl:w-56 lg:h-32 lg:w-44 md:h-28 md:w-36 sm:h-20 sm:w-28 h-16 w-auto xl:p-0 p-2 object-contain" src={Politecnico} alt="" />
                             </div>
                         </div>
 
-                        <div className="sm:w-1/4">
+                        <div className="w-1/4">
                             <div className="image-center">
                                 <img className="xl:h-48 xl:w-56 lg:h-32 lg:w-44 md:h-28 md:w-36 sm:h-20 sm:w-28 h-16 w-auto xl:p-0 p-2 object-contain" src={Uci} alt="" />
                             </div>
