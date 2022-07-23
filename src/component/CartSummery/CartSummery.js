@@ -12,7 +12,7 @@ import ApiUrl from "../../Api/ApiUrl";
 
 function CartSummery() {
     const [subTotal, setSubTotal] = useState(0);
-    const [tax, setTax] = useState(0);
+    const [Tax, setTax] = useState('0');
     const [coupon, setCoupon] = useState(0);
     const [total, setTotal] = useState(0);
     const [cartListData, setCartListData] = useState([]);
@@ -344,7 +344,7 @@ function CartSummery() {
                                                     </div>
                                                     <div className="xl:w-1/2">
                                                         <div className="float-right flex">
-                                                            <h6 className="xl:text-base text-cart-item-title xl:font-medium">${tax}</h6>
+                                                            <h6 className="xl:text-base text-cart-item-title xl:font-medium">${Tax}</h6>
                                                         </div>
                                                     </div>
                                                 </div>
