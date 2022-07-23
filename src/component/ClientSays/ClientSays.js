@@ -76,47 +76,64 @@ function ClientSays() {
             return says_client.map((says_client, index) => (
                 <div key={index} className="xl:w-1/3 w-1/3 lg:px-2 px-4">
                     <div className="bg-white dark:bg-dark-color2 xl:rounded-2xl rounded-lg shadow-client border-none xl:p-12 p-10 mb-6 h-full w-auto">
-                        <img className="rounded-full xl:h-36 xl:w-36 h-28 w-28 xl:mt-8 mt-3 xl:mb-12 mb-6" src={ApiUrl.ImageBaseUrl + says_client.user_info.image} alt='' />
-                        <h5 className="xl:text-base text-sm font-normal text-client-section-des xl:leading-8 leading-6 mb-4 mt-0 dark:text-white">{`${says_client.review_description.substring(0, 250)}...`}</h5>
+                        <img className="rounded-full xl:h-36 xl:w-36 h-28 w-28 xl:mt-8 mt-3 xl:mb-12 mb-6"
+                            src={ApiUrl.ImageBaseUrl + says_client.user_info.image}
+                            alt=''
+                        />
+                        <h5 className="xl:text-base text-sm font-normal text-client-section-des xl:leading-8 leading-6 mb-4 mt-0 dark:text-white">
+                            {`${says_client.review_description.substring(0, 250)}...`}
+                        </h5>
                         {(() => {
                             if (says_client.rating === 5) {
-                                return <ul className="flex sm:justify-center xl:justify-start mt-2">
+                                return <ul className="flex justify-start mt-2">
                                     <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                     <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                     <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                     <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                     <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                    <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">( {says_client.rating} )</h6>
+                                    <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">
+                                        ( {says_client.rating} )
+                                    </h6>
                                 </ul>
                             } else if (says_client.rating === 4) {
-                                return <ul className="flex sm:justify-center xl:justify-start mt-2">
+                                return <ul className="flex justify-start mt-2">
                                     <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                     <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                     <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                     <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                    <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">( {says_client.rating} )</h6>
+                                    <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">
+                                        ( {says_client.rating} )
+                                    </h6>
                                 </ul>
                             } else if (says_client.rating === 3) {
-                                return <ul className="flex sm:justify-center xl:justify-start mt-2">
+                                return <ul className="flex justify-start mt-2">
                                     <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                     <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                     <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                    <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">( {says_client.rating} )</h6>
+                                    <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">
+                                        ( {says_client.rating} )
+                                    </h6>
                                 </ul>
                             } else if (says_client.rating === 2) {
-                                return <ul className="flex sm:justify-center xl:justify-start mt-2">
+                                return <ul className="flex justify-start mt-2">
                                     <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
                                     <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                    <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">( {says_client.rating} )</h6>
+                                    <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">
+                                        ( {says_client.rating} )
+                                    </h6>
                                 </ul>
                             } else if (says_client.rating === 1) {
-                                return <ul className="flex sm:justify-center xl:justify-start mt-2">
+                                return <ul className="flex justify-start mt-2">
                                     <h6 className="mb-4 mx-.75"><FaStar className="text-amber-400" /></h6>
-                                    <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">( {says_client.rating} )</h6>
+                                    <h6 className="mb-4 mx-1 text-sm font-normal text-client-section-des">
+                                        ( {says_client.rating} )
+                                    </h6>
                                 </ul>
                             }
                         })()}
-                        <p className="text-sectionTitleColor xl:text-2xl text-xl font-semibold dark:text-white">{says_client.user_info.username}</p>
+                        <p className="text-sectionTitleColor xl:text-2xl text-xl font-semibold dark:text-white">
+                            {says_client.user_info.username}
+                        </p>
                         <p className="text-client-section-des xl:text-md mt-2">Student</p>
                     </div>
                 </div>
@@ -170,8 +187,8 @@ function ClientSays() {
         };
         return (
             <Fragment>
-                <div className="container 2xl:my-12 xl:my-12 lg:my-12 my-12 2xl:px-16 xl:px-12 lg:px-16 md:px-8 sm:px-6">
-                    <h4 className="2xl:text-3xl xl:text-2xl lg:text-xl text-xl font-semibold text-sectionTitleColor dark:text-white 2xl:ml-6 xl:ml-4 lg:ml-3 md:ml-3 ml-4 2xl:mt-8 xl:mt-6 lg:mt-4 -mt-6">What Our Client Say</h4>
+                <div className="container 2xl:my-12 xl:my-12 lg:my-12 my-12 2xl:px-16 xl:px-12 lg:px-8 md:px-8 sm:px-6">
+                    <h4 className="2xl:text-3xl xl:text-3xl lg:text-2xl text-xl font-semibold text-sectionTitleColor dark:text-white 2xl:ml-6 xl:ml-4 lg:ml-3 md:ml-3 ml-4 2xl:mt-8 xl:mt-6 lg:mt-4 -mt-6">What Our Client Say</h4>
                     <div className="xl:mt-6 mt-4">
                         <Slider
                             {...settings}

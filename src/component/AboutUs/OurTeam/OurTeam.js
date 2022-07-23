@@ -12,10 +12,10 @@ function OurTeam() {
 
                 <div className="flex flex-wrap xl:mt-6 xl:pl-20 xl:pr-20">
 
-                    <div className="xl:w-1/3 w-1/2 xl:px-2 xl:py-2 xl:mt-0 mt-2 flex justify-center">
+                    <div className="lg:w-1/3 w-1/2 xl:px-2 xl:py-2 xl:mt-0 mt-2 flex justify-center">
                         <div className="">
                             <div className="myDIV bg-white dark:bg-dark-color1 rounded-md xl:shadow-none shadow-lg hover:shadow-md hover:dark:bg-dark-color2 xl:pl-24 xl:pr-24 xl:pt-8 xl:pb-8 pl-8 pr-8 pt-5 pb-5">
-                                <img className="xl:h-28 xl:w-28 h-24 w-24 border-maincolor  xl:border-2 border-2 xl:rounded-xl rounded-lg xl:ml-5 xl:mb-4 justify-center" src={Team1} alt="" />
+                                <img className="lg:h-28 lg:w-28 h-24 w-24 border-maincolor  xl:border-2 border-2 xl:rounded-xl rounded-lg xl:ml-5 xl:mb-4 justify-center" src={Team1} alt="" />
                                 <p className="text-our-team xl:text-xl text-base xl:mb-3 xl:font-semibold font-medium text-center dark:text-white hover:dark:text-maincolor">Lina Jutila</p>
                                 <p className="text-our-team-subtitle xl:text-sm text-xs font-light xl:mt-1 text-center dark:text-gray-300 hover:dark:text-maincolor">CEO & Founder</p>
                             </div>
@@ -27,10 +27,10 @@ function OurTeam() {
                         </div>
                     </div>
 
-                    <div className="xl:w-1/3 w-1/2 xl:px-2 xl:py-2  xl:mt-0 mt-2 flex justify-center">
+                    <div className="lg:w-1/3 w-1/2 xl:px-2 xl:py-2  xl:mt-0 mt-2 flex justify-center">
                         <div className="">
                             <div className="myDIV bg-white dark:bg-dark-color1 rounded-md xl:shadow-none shadow-lg hover:shadow-md hover:dark:bg-dark-color2 xl:pl-24 xl:pr-24 xl:pt-8 xl:pb-8 pl-8 pr-8 pt-5 pb-5">
-                                <img className="xl:h-28 xl:w-28 h-24 w-24 border-maincolor  xl:border-2 border-2 xl:rounded-xl rounded-lg xl:ml-5 xl:mb-4" src={Team1} alt="" />
+                                <img className="lg:h-28 lg:w-28 h-24 w-24 border-maincolor  xl:border-2 border-2 xl:rounded-xl rounded-lg xl:ml-5 xl:mb-4" src={Team1} alt="" />
                                 <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center dark:text-white hover:dark:text-maincolor">Lina Jutila</p>
                                 <p className="text-our-team-subtitle xl:text-sm text-xs font-light xl:mt-1 text-center dark:text-gray-300 hover:dark:text-maincolor">Web Developer</p>
                             </div>
@@ -42,10 +42,10 @@ function OurTeam() {
                         </div>
                     </div>
 
-                    <div className="xl:w-1/3 w-1/2 xl:px-2 xl:py-2 xl:mt-0 mt-2 flex justify-center">
+                    <div className="lg:w-1/3 w-1/2 xl:px-2 xl:py-2 xl:mt-0 mt-2 flex justify-center">
                         <div className="">
                             <div className="myDIV bg-white dark:bg-dark-color1 rounded-md xl:shadow-none shadow-lg hover:shadow-md hover:dark:bg-dark-color2 xl:pl-24 xl:pr-24 xl:pt-8 xl:pb-8 pl-8 pr-8 pt-5 pb-5">
-                                <img className="xl:h-28 xl:w-28 h-24 w-24 border-maincolor  xl:border-2 border-2 xl:rounded-xl rounded-lg xl:ml-5 xl:mb-4 justify-center" src={Team1} alt="" />
+                                <img className="lg:h-28 lg:w-28 h-24 w-24 border-maincolor  xl:border-2 border-2 xl:rounded-xl rounded-lg xl:ml-5 xl:mb-4 justify-center" src={Team1} alt="" />
                                 <p className="text-our-team xl:text-xl text-base xl:mb-3 xl:font-semibold font-medium text-center dark:text-white hover:dark:text-maincolor">Lina Jutila</p>
                                 <p className="text-our-team-subtitle xl:text-sm text-xs font-light xl:mt-1 text-center dark:text-gray-300 hover:dark:text-maincolor">CEO & Founder</p>
                             </div>
@@ -57,10 +57,10 @@ function OurTeam() {
                         </div>
                     </div>
 
-                    <div className="xl:w-1/3 w-1/2 xl:px-2 xl:py-2  xl:mt-0 mt-2 flex justify-center">
+                    <div className="lg:w-1/3 w-1/2 xl:px-2 xl:py-2  xl:mt-0 mt-2 flex justify-center">
                         <div className="">
                             <div className="myDIV bg-white dark:bg-dark-color1 rounded-md xl:shadow-none shadow-lg hover:shadow-md hover:dark:bg-dark-color2 xl:pl-24 xl:pr-24 xl:pt-8 xl:pb-8 pl-8 pr-8 pt-5 pb-5">
-                                <img className="xl:h-28 xl:w-28 h-24 w-24 border-maincolor  xl:border-2 border-2 xl:rounded-xl rounded-lg xl:ml-5 xl:mb-4" src={Team1} alt="" />
+                                <img className="lg:h-28 lg:w-28 h-24 w-24 border-maincolor  xl:border-2 border-2 xl:rounded-xl rounded-lg xl:ml-5 xl:mb-4" src={Team1} alt="" />
                                 <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center dark:text-white hover:dark:text-maincolor">Lina Jutila</p>
                                 <p className="text-our-team-subtitle xl:text-sm text-xs font-light xl:mt-1 text-center dark:text-gray-300 hover:dark:text-maincolor">Web Developer</p>
                             </div>
@@ -72,10 +72,10 @@ function OurTeam() {
                         </div>
                     </div>
 
-                    <div className="xl:w-1/3 w-1/2 xl:px-2 xl:py-2 xl:mt-0 mt-2 flex justify-center">
+                    <div className="lg:w-1/3 w-1/2 xl:px-2 xl:py-2 xl:mt-0 mt-2 flex justify-center">
                         <div className="">
                             <div className="myDIV bg-white dark:bg-dark-color1 rounded-md xl:shadow-none shadow-lg hover:shadow-md hover:dark:bg-dark-color2 xl:pl-24 xl:pr-24 xl:pt-8 xl:pb-8 pl-8 pr-8 pt-5 pb-5">
-                                <img className="xl:h-28 xl:w-28 h-24 w-24 border-maincolor  xl:border-2 border-2 xl:rounded-xl rounded-lg xl:ml-5 xl:mb-4 justify-center" src={Team1} alt="" />
+                                <img className="lg:h-28 lg:w-28 h-24 w-24 border-maincolor  xl:border-2 border-2 xl:rounded-xl rounded-lg xl:ml-5 xl:mb-4 justify-center" src={Team1} alt="" />
                                 <p className="text-our-team xl:text-xl text-base xl:mb-3 xl:font-semibold font-medium text-center dark:text-white hover:dark:text-maincolor">Lina Jutila</p>
                                 <p className="text-our-team-subtitle xl:text-sm text-xs font-light xl:mt-1 text-center dark:text-gray-300 hover:dark:text-maincolor">CEO & Founder</p>
                             </div>
@@ -87,10 +87,10 @@ function OurTeam() {
                         </div>
                     </div>
 
-                    <div className="xl:w-1/3 w-1/2 xl:px-2 xl:py-2 xl:mt-0 mt-2 flex justify-center">
+                    <div className="lg:w-1/3 w-1/2 xl:px-2 xl:py-2 xl:mt-0 mt-2 flex justify-center">
                         <div className="">
                             <div className="myDIV bg-white dark:bg-dark-color1 rounded-md xl:shadow-none shadow-lg hover:shadow-md hover:dark:bg-dark-color2 xl:pl-24 xl:pr-24 xl:pt-8 xl:pb-8 pl-8 pr-8 pt-5 pb-5">
-                                <img className="xl:h-28 xl:w-28 h-24 w-24 border-maincolor  xl:border-2 border-2 xl:rounded-xl rounded-lg xl:ml-5 xl:mb-4" src={Team1} alt="" />
+                                <img className="lg:h-28 lg:w-28 h-24 w-24 border-maincolor  xl:border-2 border-2 xl:rounded-xl rounded-lg xl:ml-5 xl:mb-4" src={Team1} alt="" />
                                 <p className="text-our-team xl:text-xl xl:mb-3 xl:font-semibold text-center dark:text-white hover:dark:text-maincolor">Lina Jutila</p>
                                 <p className="text-our-team-subtitle xl:text-sm text-xs font-light xl:mt-1 text-center dark:text-gray-300 hover:dark:text-maincolor">Web Developer</p>
                             </div>
