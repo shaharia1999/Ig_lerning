@@ -65,6 +65,18 @@
   background-size: cover;
 }
 
+.PriceBanner {
+  background-image: url('../src/asset/images/banner/price-banner.svg');
+  width: 100% !important;
+  height: 320px !important;
+  opacity: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .PriceContact {
   background-image: url('../src/asset/images/banner/price-contact.svg');
   width: 1400px !important;
@@ -87,149 +99,12 @@
   padding: 0 !important;
 }
 
-
-/*X-Small devices portrait phones*/
-@media (min-width: 375.98px) and (max-width: 639.98px) {
-  .IgLearnProBanner {
-    background-image: url('../src/asset/images/banner/IgLearnProBanner.png');
-    width: 100% !important;
-    height: 400px !important;
-    opacity: 1;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-}
-
-/*small devices*/
-@media (min-width: 640px) and (max-width: 767.98px) {
-  .IgLearnProBanner {
-    background-image: url('../src/asset/images/banner/IgLearnProBanner.png');
-    width: 100% !important;
-    height: 450px !important;
-    opacity: 1;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .LearningTeaching {
-    height: 500px !important;
-    margin-top: -100px !important;
-  }
-
-  .vision-image {
-    height: 450px;
-    width: auto;
-  }
-
-}
-
-
-/*Medium Device*/
-@media (min-width: 768px) and (max-width: 1023.98px) {
-  .IgLearnProBanner {
-    background-image: url('../src/asset/images/banner/IgLearnProBanner.png');
-    width: 100% !important;
-    height: 450px !important;
-    opacity: 1;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .LearningTeaching {
-    height: 700px !important;
-    margin-top: -100px !important;
-  }
-
-  .vision-image {
-    height: 450px;
-    width: auto;
-  }
-}
-
-/*lg devices*/
-@media (min-width: 1024px) and (max-width: 1279.98px) {
-  .IgLearnProBanner {
-    background-image: url('../src/asset/images/banner/IgLearnProBanner.png');
-    width: 100% !important;
-    height: 550px !important;
-    opacity: 1;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  .about-bg-height {
-    width: 100% !important;
-    height: 570px !important;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .LearningTeaching {
-    height: 750px !important;
-    margin-top: -100px !important;
-  }
-
-  .vision-image {
-    height: 400px;
-    width: auto;
-  }
-}
-
-/* xl device */
-@media (min-width: 1280px) and (max-width: 1535.98px) {
-  .about-bg-height {
-    width: 100% !important;
-    height: 740px !important;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .LearningTeaching {
-    height: 800px !important;
-    margin-top: -100px !important;
-  }
-}
-
-/* 2xl device */
-@media (min-width: 1536px){
-  .about-bg-height {
-    width: 100% !important;
-    height: 900px !important;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-
-
 .Banner1 {
   height: 900px !important;
   width: 100% !important;
 }
 
-.PriceBanner {
-  background-image: url('../src/asset/images/banner/price-banner.svg');
-  width: 100% !important;
-  height: 700px !important;
-  opacity: 1;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0 !important;
-  padding: 0 !important;
-}
+
 
 .ContactBanner {
   background-image: url('../src/asset/images/banner/ContactBanner.png');
