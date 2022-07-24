@@ -97,7 +97,6 @@ function NavBarTop() {
                             alignOptionsToRight={alignOptionsToRight}
                             fullWidth={fullWidth}
                             disabled={disabled}
-
                             customLabels={customLabels}
                             countries={["US", "FR", "ES", "IT", "DE"]}
                         />
@@ -145,7 +144,6 @@ function NavBarTop() {
                     />
                 </svg>
 
-
                 <div className="hidden w-full md:flex md:items-center md:w-auto" id="menu">
                     <ul className="text-base text-gray-700 md:flex md:justify-between md:pt-0">
                         <li>
@@ -181,30 +179,38 @@ function NavBarTop() {
                                         I want to Teach
                                     </button>
                                 </label>
-                                <ul tabindex="0" className="2xl:mt-20 xl:mt-20 lg:mt-20 2xl:-mr-10 justify-center dark:bg-dark-color1 p-8 shadow-lg menu menu-compact dropdown-content flex bg-base-100 rounded-box w-96">
-                                    <div className="h-4 w-4 bg-white dark:bg-dark-color1 2xl:ml-40 rotate-45 2xl:-mt-10 rounded-sm"></div>
-                                    <form className="flex flex-wrap 2xl:w-full">
-                                        <div className="2xl:ml-16 2xl:mt-6">
-                                            <img className="2xl:h-24" src={BlackMainLogo} alt="" />
+                                <ul tabindex="0" className="2xl:mt-20 xl:mt-16 lg:mt-16 2xl:-mr-10 xl:-mr-16 lg:-mr-16 justify-center dark:bg-dark-color1 p-8 shadow-lg menu menu-compact dropdown-content flex bg-base-100 rounded-box xl:w-96 lg:w-80">
+                                    <div className="h-4 w-4 bg-white dark:bg-dark-color1 2xl:ml-40 xl:ml-40 lg:ml-32 rotate-45 2xl:-mt-10 xl:-mt-10 lg:-mt-10 rounded-sm"></div>
+                                    <form className="flex flex-wrap w-full">
+                                        <div className="2xl:ml-16 xl:ml-16 lg:ml-12 2xl:mt-8 xl:mt-4 lg:mt-4">
+                                            <img className="2xl:h-24 xl:h-20 lg:h-16"
+                                                src={BlackMainLogo} alt=""
+                                            />
                                         </div>
-                                        <h6 className="text-maingray 2xl:font-semibold 2xl:text-xl 2xl:-mt-2 2xl:mb-5 2xl:ml-20 dark:text-white">
+                                        <h6 className="text-maingray 2xl:font-semibold xl:font-medium 2xl:text-xl xl:text-xl lg:text-base 2xl:-mt-2 xl:-mt-2 lg:-mt-2 2xl:mb-5 xl:mb-4 lg:mb-3 2xl:ml-20 xl:ml-20 lg:ml-12 dark:text-white">
                                             Sign in to
-                                            <span className="text-maincolor">igLearn</span>
+                                            <span className="text-maincolor"> igLearn</span>
                                         </h6>
                                         <div className="flex flex-wrap">
+
                                             <div className="form-floating mb-3 2xl:w-full xl:w-full lg:w-full">
                                                 <input type="email"
                                                     value={teacherEmail}
                                                     onChange={(e) => setTeacherEmail(e.target.value)}
-                                                    className="form-control bg-gray-100 dark:bg-dark-color2 dark:text-white block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-clip-padding border-none rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingInput" placeholder="name@example.com" />
-                                                <label for="floatingInput" className="text-gray-700 dark:text-gray-400">Email address</label>
+                                                    className="form-control bg-gray-100 dark:bg-dark-color2 dark:text-white block w-full px-3 xl:py-1.5 lg:py-1 2xl:text-base text-sm font-normal text-gray-700 bg-clip-padding border-none rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingInput" placeholder="name@example.com" />
+                                                <label for="floatingInput" className="text-gray-700 dark:text-gray-400">
+                                                    Email address
+                                                </label>
                                             </div>
+
                                             <div className="form-floating mb-3 2xl:w-full xl:w-full lg:w-full">
                                                 <input type="password"
                                                     value={teacherPassword}
                                                     onChange={(e) => setTeacherPassword(e.target.value)}
-                                                    className="form-control bg-gray-100 dark:bg-dark-color2 dark:text-white block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-clip-padding border-none rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingPassword" placeholder="Password" />
-                                                <label for="floatingPassword" className="text-gray-700 dark:text-gray-400">Password</label>
+                                                    className="form-control bg-gray-100 dark:bg-dark-color2 dark:text-white block w-full px-3 xl:py-1.5 lg:py-1 2xl:text-base lg:text-sm font-normal text-gray-700 bg-clip-padding border-none rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingPassword" placeholder="Password" />
+                                                <label for="floatingPassword" className="text-gray-700 dark:text-gray-400">
+                                                    Password
+                                                </label>
                                             </div>
 
                                             <div className="flex justify-between items-center mb-6">
@@ -213,23 +219,32 @@ function NavBarTop() {
                                                         value={keep_login}
                                                         onChange={e => setKeepLoggin(e.target.checked)}
                                                         className="default:ring-8" />
-                                                    <label className="form-check-label inline-block font-light 2xl:text-sm mx-2 dark:text-white" for="inlineCheckbox1"> Remember me</label>
+                                                    <label className="form-check-label inline-block font-light xl:text-sm text-xs mx-2 dark:text-white"
+                                                        for="inlineCheckbox1
+                                                    ">
+                                                        Remember me
+                                                    </label>
                                                 </div>
-                                                <Link className="font-light 2xl:text-sm hover:underline p-2 float-right right-0 mr-0 flex dark:text-white" to="/forget-password">Forgot password</Link>
+                                                <Link className="font-light xl:text-sm text-xs hover:underline p-2 float-right right-0 mr-0 flex dark:text-white" to="/forget-password">Forgot password</Link>
                                             </div>
 
-                                            <div className="2xl:w-44 flex 2xl:mt-5 btn-center1 2xl:ml-20 bg-maincolor rounded-lg 2xl:pt-2 2xl:pb-2">
+                                            <div className="2xl:w-44 xl:w-32 lg:w-24 flex 2xl:mt-5 xl:mt-1 btn-center1 2xl:ml-20 xl:ml-24 lg:ml-20 bg-maincolor xl:rounded-lg lg:rounded-sm 2xl:pt-2 xl:pt-1 xl:pb-1 2xl:pb-2">
                                                 <Link>
                                                     <button
                                                         onClick={TeacherLoginSubmit}
-                                                        className="text-base 2xl:font-normal leading-tight text-white mx-2 h-8">
+                                                        className="2xl:text-base lg:text-sm font-normal leading-tight text-white mx-2 h-8">
                                                         Sign in
                                                     </button>
                                                 </Link>
                                             </div>
                                         </div>
                                     </form>
-                                    <h6 className="font-normal 2xl:mt-5 2xl:ml-16 text-black 2xl:text-sm dark:text-white"> Don't have an account? <span className="hover:underline text-maincolor"><Link to="/registration">Sign Up</Link></span></h6>
+                                    <h6 className="font-normal 2xl:mt-5 xl:mt-3 lg:mt-2 2xl:ml-16 xl:ml-12 lg:ml-10 text-black 2xl:text-sm xl:text-sm lg:text-xs dark:text-white">
+                                        Don't have an account?
+                                        <span className="hover:underline text-maincolor">
+                                            <Link to="/registration">Sign Up</Link>
+                                        </span>
+                                    </h6>
                                 </ul>
                             </div>
                         </li>
@@ -239,27 +254,33 @@ function NavBarTop() {
                                 <label tabindex="0" className="">
                                     <button className="outline outline-2 hover:bg-white 2xl:mt-3 2xl:mr-12 xl:mt-2 xl:mr-10 lg:mt-2 lg:mr-5 float-right 2xl:h-12 2xl:w-52 xl:h-10 xl:w-44 lg:h-8 lg:w-36 rounded-3xl ml-auto 2xl:text-base xl:text-sm lg:text-xs font-light text-white hover:text-maincolor"> <i className="fa fa-book-reader mr-1"></i> I want to Learn</button>
                                 </label>
-                                <ul tabindex="0" className="mt-20 2xl:-mr-10 justify-center p-8 dark:bg-dark-color1 shadow-lg menu menu-compact dropdown-content flex bg-base-100 rounded-box w-96">
-                                    <div className="h-4 w-4 bg-white dark:bg-dark-color1 2xl:ml-40 rotate-45 2xl:-mt-10 rounded-sm"></div>
+                                <ul tabindex="0" className="2xl:mt-20 xl:mt-16 lg:mt-16 2xl:-mr-10 xl:-mr-16 lg:-mr-8 justify-center dark:bg-dark-color1 p-8 shadow-lg menu menu-compact dropdown-content flex bg-base-100 rounded-box xl:w-96 lg:w-80">
+                                    <div className="h-4 w-4 bg-white dark:bg-dark-color1 2xl:ml-40 xl:ml-40 rotate-45 2xl:-mt-10 xl:-mt-10 rounded-sm"></div>
                                     <form className="flex flex-wrap 2xl:w-full">
-                                        <div className="2xl:ml-16 2xl:mt-6">
-                                            <img className="2xl:h-24" src={BlackMainLogo} alt="" />
+                                        <div className="2xl:ml-16 xl:ml-16 2xl:mt-8 xl:mt-4">
+                                            <img className="2xl:h-24 xl:h-20" src={BlackMainLogo} alt="" />
                                         </div>
-                                        <h6 className="text-maingray 2xl:font-semibold 2xl:text-xl 2xl:-mt-2 2xl:mb-5 2xl:ml-20 dark:text-white">Sign in to <span className="text-maincolor">igLearn</span></h6>
+                                        <h6 className="text-maingray 2xl:font-semibold xl:font-medium 2xl:text-xl xl:text-xl 2xl:-mt-2 xl:-mt-2 2xl:mb-5 xl:mb-4 2xl:ml-20 xl:ml-20 dark:text-white">Sign in to <span className="text-maincolor">igLearn</span></h6>
                                         <div className="flex flex-wrap">
-                                            <div className="form-floating mb-3 2xl:w-full ">
+
+                                            <div className="form-floating mb-3 2xl:w-full xl:w-full lg:w-full">
                                                 <input type="email"
                                                     value={studentEmail}
                                                     onChange={(e) => setStudentEmail(e.target.value)}
                                                     className="form-control bg-gray-100 dark:bg-dark-color2 block w-full px-3 py-1.5 text-base font-normal text-gray-700 dark:text-white bg-clip-padding border-none rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingInput" placeholder="name@example.com" />
-                                                <label for="floatingInput" className="text-gray-700 dark:text-gray-400">Email address</label>
+                                                <label for="floatingInput" className="text-gray-700 dark:text-gray-400">
+                                                    Email address
+                                                </label>
                                             </div>
-                                            <div className="form-floating mb-3 2xl:w-full">
+
+                                            <div className="form-floating mb-3 2xl:w-full xl:w-full lg:w-full">
                                                 <input type="password"
                                                     value={studentPassword}
                                                     onChange={(e) => setStudentPassword(e.target.value)}
                                                     className="form-control bg-gray-100 dark:bg-dark-color2 block w-full px-3 py-1.5 text-base font-normal text-gray-700 dark:text-white bg-clip-padding border-none rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingPassword" placeholder="Password" />
-                                                <label for="floatingPassword" className="text-gray-700 dark:text-gray-400">Password</label>
+                                                <label for="floatingPassword" className="text-gray-700 dark:text-gray-400">
+                                                    Password
+                                                </label>
                                             </div>
 
                                             <div className="flex justify-between items-center mb-6">
@@ -268,21 +289,28 @@ function NavBarTop() {
                                                         value={keep_login}
                                                         onChange={e => setKeepLoggin(e.target.checked)}
                                                         className="default:ring-8" />
-                                                    <label className="form-check-label inline-block font-light 2xl:text-sm mx-2 dark:text-white" for="inlineCheckbox1"> Remember me</label>
+                                                    <label className="form-check-label inline-block font-light 2xl:text-sm text-sm mx-2 dark:text-white" for="inlineCheckbox1"> Remember me</label>
                                                 </div>
-                                                <Link className="font-light 2xl:text-sm hover:underline p-2 float-right right-0 mr-0 flex dark:text-white" to="/forget-password">Forgot password</Link>
+                                                <Link className="font-light 2xl:text-sm text-sm hover:underline p-2 float-right right-0 mr-0 flex dark:text-white" to="/forget-password">Forgot password</Link>
                                             </div>
 
-                                            <div className="2xl:w-44 flex 2xl:mt-5 btn-center1 2xl:ml-20 bg-maincolor rounded-lg 2xl:pt-2 2xl:pb-2">
+                                            <div className="2xl:w-44 xl:w-32 flex 2xl:mt-5 xl:mt-1 btn-center1 2xl:ml-20 xl:ml-24 bg-maincolor rounded-lg 2xl:pt-2 xl:pt-1 xl:pb-1 2xl:pb-2">
                                                 <Link>
-                                                    <button onClick={StudentLoginSubmit} className="text-base 2xl:font-normal leading-tight text-white mx-2 h-8">
+                                                    <button
+                                                        onClick={StudentLoginSubmit}
+                                                        className="2xl:text-base lg:text-sm font-normal leading-tight text-white mx-2 h-8">
                                                         Sign in
                                                     </button>
                                                 </Link>
                                             </div>
                                         </div>
                                     </form>
-                                    <h6 className="font-normal 2xl:mt-5 2xl:ml-16 text-black 2xl:text-sm dark:text-white"> Don't have an account? <span className="hover:underline text-maincolor"><Link to="/registration">Sign Up</Link></span></h6>
+                                    <h6 className="font-normal 2xl:mt-5 xl:mt-3 2xl:ml-16 xl:ml-12 text-black 2xl:text-sm xl:text-sm dark:text-white">
+                                        Don't have an account?
+                                        <span className="hover:underline text-maincolor">
+                                            <Link to="/registration">Sign Up</Link>
+                                        </span>
+                                    </h6>
                                 </ul>
                             </div>
                         </li>
