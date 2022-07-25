@@ -93,8 +93,8 @@ function PriceAccordonSection() {
                     <div className="container xl:pt-16 xl:pb-20">
                         <div className="flex flex-auto justify-center">
                             <div className="xl:w-7/12 ">
-                                <h2 className=" text-about-analytics-subTitle dark:text-white text-center xl:font-semibold xl:text-4xl text-xl font-semibold xl:mt-4 mt-5">Do you have any question!</h2>
-                                <h2 className="text-about-analytics-subTitle dark:text-gray-400 text-center xl:font-medium xl:text-base text-xs xl:mt-4 xl:pl-56 pl-12 xl:pr-56 pr-12 xl:mb-16">Our support team ready to help you, please contact with them</h2>
+                                <h2 className=" text-about-analytics-subTitle dark:text-white text-center xl:font-semibold xl:text-4xl lg:text-3xl text-xl font-semibold xl:mt-4 mt-5">Do you have any question!</h2>
+                                <h2 className="text-about-analytics-subTitle dark:text-gray-400 text-center xl:font-medium xl:text-base lg:text-sm text-xs xl:mt-4 xl:pl-56 pl-12 xl:pr-56 pr-12 xl:mb-16 lg:mb-10">Our support team ready to help you, please contact with them</h2>
                                 <div className="justify-center items-center xl:p-0 p-4">
                                     {
                                         priceQuestionData.map((price_question) => (

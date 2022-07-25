@@ -33,6 +33,16 @@
         margin: 0 !important;
         padding: 0 !important;
     }
+    .PriceContact {
+        background-image: url('../images/banner/price-contact-mobile.svg');
+        width: 80% !important;
+        height: 550px !important;
+        opacity: 1;
+        border-radius: 10px;
+        background-position: center !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 }
 
 /*small devices*/
@@ -70,6 +80,16 @@
         margin: 0 !important;
         padding: 0 !important;
     }
+    .PriceContact {
+        background-image: url('../images/banner/price-contact-mobile.svg');
+        width: 70% !important;
+        height: 750px !important;
+        opacity: 1;
+        border-radius: 10px;
+        background-position: center !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
 }
 
@@ -109,6 +129,17 @@
         margin: 0 !important;
         padding: 0 !important;
     }
+
+    .PriceContact {
+        background-image: url('../images/banner/price-contact.svg');
+        width: 100% !important;
+        height: 140px !important;
+        opacity: 1;
+        border-radius: 10px;
+        background-position: center !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 }
 
 /*lg devices*/
@@ -154,6 +185,16 @@
         margin: 0 !important;
         padding: 0 !important;
     }
+    .PriceContact {
+        background-image: url('../images/banner/price-contact.svg');
+        width: 100% !important;
+        height: 170px !important;
+        opacity: 1;
+        border-radius: 10px;
+        background-position: center !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
 }
 
@@ -183,6 +224,17 @@
         margin: 0 !important;
         padding: 0 !important;
     }
+
+    .PriceContact {
+        background-image: url('../images/banner/price-contact.svg');
+        width: 100% !important;
+        height: 190px !important;
+        opacity: 1;
+        border-radius: 10px;
+        background-position: center !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 }
 
 /* 2xl device */
@@ -206,4 +258,15 @@
         margin: 0 !important;
         padding: 0 !important;
     }
+
+    .PriceContact {
+        background-image: url('../images/banner/price-contact.svg');
+        width: 100% !important;
+        height: 200px !important;
+        opacity: 1;
+        border-radius: 10px;
+        background-position: center !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 }

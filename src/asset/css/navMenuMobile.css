@@ -570,17 +570,21 @@
 
     /* Price Page */
     .PriceMobile {
-        display: none;
+        
     }
 
-    .PriceDesktop {}
+    .PriceDesktop {
+        display: none;
+    }
 
     /* Price Page contact section */
     .PriceContactMobile {
         display: none;
     }
 
-    .PriceContactDesktop {}
+    .PriceContactDesktop {
+     
+    }
 
 }
 

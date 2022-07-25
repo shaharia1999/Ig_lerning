@@ -121,7 +121,7 @@ function PriceMobile() {
                                                             <div className="w-full pt-1">
                                                                 <div className="p-4">
                                                                     <div className="flex flex-wrap">
-                                                                        <div className="w-7/12 justify-center">
+                                                                        <div className="w-7/12 md:w-7/12 justify-center">
                                                                             <div className="mr-1 bg-gray-100 dark:bg-dark-color2 rounded-md p-3">
                                                                                 <h6 className="text-maingray dark:text-white text-2xl mb-2 font-medium">Free</h6>
                                                                                 <h6 className=" text-green-800 dark:text-white text-3xl font-semibold">
@@ -135,7 +135,7 @@ function PriceMobile() {
                                                                             </div>
                                                                         </div>
 
-                                                                        <div className="w-5/12">
+                                                                        <div className="w-5/12 md:w-5/12">
                                                                             <div className="ml-1 bg-gray-100 dark:bg-dark-color2 rounded-md p-3">
                                                                                 <img className="" src={PriceBall} alt="" />
                                                                                 <h6 className="text-maingray text-center dark:text-white text-xl font-semibold">Contact us!</h6>
