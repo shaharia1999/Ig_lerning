@@ -15,7 +15,11 @@ module.exports = {
     './src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js',
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '128': '32rem',
+      }
+    },
     colors: {
       'white': '#FFFFFF',
       'black': '#000000',

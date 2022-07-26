@@ -8,16 +8,15 @@ import IntelloGeekSlider3 from "../../../asset/images/banner/IntelloGeek-Slider3
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import ReactFlagsSelect from "react-flags-select";
 
 function HomeBanner() {
     const [isLoading, setIsLoading] = useState(false);
-
 
     useEffect(() => {
         setIsLoading(true);
         setIsLoading(false);
     }, []);
-
 
     const [nav9, setNav9] = useState();
     const slider9 = useRef();
@@ -30,7 +29,7 @@ function HomeBanner() {
                 }}
             >
                 <ul style={{ margin: "100px" }}> {dots} </ul>
-               
+
             </div>
         ),
     }
@@ -46,19 +45,6 @@ function HomeBanner() {
     else if (isLoading === false) {
         return (
             <Fragment>
-
-                {/* <div className="container">
-                    <div class="flex flex-auto">
-                        <div class="lg:basis-1/2">
-                            <h2 className="text-sectionTitleColor lg:font-semibold lg:text-5xl lg:mt-80 ">Course what you want,</h2>
-                            <h2 className="text-sectionTitleColor lg:font-semibold lg:text-5xl mt-6">Where you want!</h2>
-                        </div>
-    
-                        <div class="lg:basis-1/2">
-    
-                        </div>
-                    </div>
-                </div> */}
 
                 <div className="container-fluid 2xl:w-full overflow-hidden">
                     <Slider {...settings}
@@ -93,6 +79,39 @@ function HomeBanner() {
                                 alt="Wild Landscape" />
                         </div>
                     </Slider>
+                </div>
+
+
+                <div className="container 2xl:-mt-128 xl:-mt-24 lg:-mt-24 md:-mt-24 stack flex 2xl:p-12 xl:p-12 lg:p-10 md:p-8 2xl:mb-56">
+                    <div className="flex flex-wrap">
+                        <div className="w-full">
+                            <h6 className="2xl:text-5xl 2xl:text-maingray 2xl:font-semibold 2xl:leading-relax">Learn what you want, <br /> Where you want!</h6> <br />
+                        </div>
+                        <div className="w-full">
+                            <div className="mt-2 flex">
+                                <div className="form">
+                                    <div className="flex bg-white w-128 rounded-3xl py-1.5">
+                                        <i className="fa fa-search ml-6 mt-3"></i>
+                                        <input type="text" className="form-control focus:border-none focus:ring-0 text-sm w-64 pr-0 bg-transparent form-input border-none ml-4" placeholder="What do you want to learn today ?" />
+                                        <span className="rotate-90 -ml-3 mr-5"><hr className='w-7 border' /></span>
+                                        <div className="bg-white z-50">
+                                            <select id="countries" className=" bg-transparent text-gray-900 text-sm rounded-lg border-none focus:border-none focus:ring-0 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                <option selected>All</option>
+                                                <option value="1">Business</option>
+                                                <option value="2">Programming</option>
+                                                <option value="3">IA & Big Data</option>
+                                                <option value="4">Art & Design</option>
+                                                <option value="4">Digital Marketing</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <button className="btn rounded-3xl px-12 py-2 ml-3 text-white text-sm bg-maincolor border-none">Search</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="container 2xl:-mt-28 xl:-mt-24 lg:-mt-24 md:-mt-24 stack flex 2xl:p-12 xl:p-12 lg:p-10 md:p-8">

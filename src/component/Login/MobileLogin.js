@@ -1,14 +1,21 @@
 import React, { useState, Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import "../../asset/css/login.css";
 import ApiUrl from "../../Api/ApiUrl";
 import { FaFacebookSquare, FaGoogle, FaTwitter } from "react-icons/fa";
 import axios from "axios";
 
 function MobileLogin() {
-    const [username_or_email, setUsernameOrEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const [keep_login, setKeepLoggin] = useState(false)
+    const [username_or_email, setUsernameOrEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [keep_login, setKeepLoggin] = useState(false);
+    const [homeRedirect1, setHomeRedirect1] = useState(false);
+
+    const onHomeRedirect1 = () => {
+        if (homeRedirect1 === true) {
+            return (<Redirect to="/" />);
+        }
+    }
 
     async function submitLogin() {
         const login_data = {
@@ -18,10 +25,11 @@ function MobileLogin() {
 
         axios.post(ApiUrl.BaseUrl + 'user-authentication/api/login/', login_data).then((response) => {
             if (response.data.error === false) {
-                localStorage.setItem('access_token', response.data.access_token)
-                localStorage.setItem('refresh_token', response.data.refresh_token)
-                localStorage.setItem('user_data', JSON.stringify(response.data.data))
-                localStorage.setItem('keep_login', keep_login)
+                localStorage.setItem('access_token', response.data.access_token);
+                localStorage.setItem('refresh_token', response.data.refresh_token);
+                localStorage.setItem('user_data', JSON.stringify(response.data.data));
+                localStorage.setItem('keep_login', keep_login);
+                setHomeRedirect1(true);
             }
         });
     }
@@ -69,11 +77,12 @@ function MobileLogin() {
                                                 <Link className="font-light text-sm hover:underline p-2 float-right" to="/forget-password">Forgot password?</Link>
                                             </div>
 
-                                            <div data-mdb-ripple="true"
-                                                data-mdb-ripple-color="light"
-                                                className="w-full mt-8 flex flex-auto image-center bg-maincolor rounded-sm pt-4 pb-4">
-                                                <Link onClick={submitLogin}>
-                                                    <span className="text-lg font-normal leading-tight text-white pl-24 pr-24 mx-2 h-11">LOGIN</span>
+                                            <div onClick={submitLogin} className="cursor-pointer mt-8 flex flex-auto rounded-sm ">
+                                                <Link className="bg-maincolor text-center w-full pt-4 pb-4">
+                                                    <span 
+                                                        className="text-lg font-normal text-center leading-tight text-white pl-24 pr-24 mx-2 h-11">
+                                                        LOGIN
+                                                    </span>
                                                 </Link>
                                             </div>
                                         </form>
@@ -109,6 +118,7 @@ function MobileLogin() {
                         </div>
                     </div>
                 </div>
+                {onHomeRedirect1()}
             </section>
         </Fragment>
     );
