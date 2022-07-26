@@ -1,15 +1,22 @@
 import React, { useState, Fragment } from "react";
 import LoginImg from "../../asset/images/banner/login.png";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import "../../asset/css/login.css";
 import ApiUrl from "../../Api/ApiUrl";
 import { FaFacebookSquare, FaGoogle, FaTwitter } from "react-icons/fa";
 import axios from "axios";
 
 function Login() {
-    const [username_or_email, setUsernameOrEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const [keep_login, setKeepLoggin] = useState(false)
+    const [username_or_email, setUsernameOrEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [keep_login, setKeepLoggin] = useState(false);
+    const [homeRedirect, setHomeRedirect] = useState(false);
+
+    const onHomeRedirect = () => {
+        if (homeRedirect === true) {
+            return (<Redirect to="/" />);
+        }
+    }
 
     async function submitLogin() {
         const login_data = {
@@ -19,10 +26,11 @@ function Login() {
 
         axios.post(ApiUrl.BaseUrl + 'user-authentication/api/login/', login_data).then((response) => {
             if (response.data.error === false) {
-                localStorage.setItem('access_token', response.data.access_token)
-                localStorage.setItem('refresh_token', response.data.refresh_token)
-                localStorage.setItem('user_data', JSON.stringify(response.data.data))
-                localStorage.setItem('keep_login', keep_login)
+                localStorage.setItem('access_token', response.data.access_token);
+                localStorage.setItem('refresh_token', response.data.refresh_token);
+                localStorage.setItem('user_data', JSON.stringify(response.data.data));
+                localStorage.setItem('keep_login', keep_login);
+                setHomeRedirect(true);
             }
         });
     }
@@ -92,7 +100,7 @@ function Login() {
                                                     </Link>
                                                 </div>
                                             </form>
-
+                                            {onHomeRedirect}
 
                                             <div className="mt-8 text-center">
                                                 <span className="font-normal text-client-section-des lg:text-base"> or Login using social media</span>
