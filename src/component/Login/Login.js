@@ -18,7 +18,7 @@ function Login() {
         }
     }
 
-    async function submitLogin() {
+    const submitLogin = () => {
         const login_data = {
             username_or_email: username_or_email,
             password: password
@@ -32,6 +32,7 @@ function Login() {
                 localStorage.setItem('keep_login', keep_login);
                 setHomeRedirect(true);
             }
+         
         });
     }
 
@@ -90,17 +91,17 @@ function Login() {
                                                     </Link>
                                                 </div>
 
-                                                <div data-mdb-ripple="true"
+                                                <div onClick={submitLogin}
+                                                    data-mdb-ripple="true"
                                                     data-mdb-ripple-color="light"
-                                                    className="w-full mt-8 flex flex-auto lg:w-full image-center bg-maincolor rounded-sm lg:pt-4 lg:pb-4">
-                                                    <Link onClick={submitLogin}>
+                                                    className="cursor-pointer w-full mt-8 flex flex-auto lg:w-full image-center bg-maincolor rounded-sm lg:pt-4 lg:pb-4">
+                                                    <Link>
                                                         <span className="text-lg font-normal leading-tight text-white lg:pl-24 lg:pr-24 mx-2 h-11">
                                                             LOGIN
                                                         </span>
                                                     </Link>
                                                 </div>
                                             </form>
-                                            {onHomeRedirect}
 
                                             <div className="mt-8 text-center">
                                                 <span className="font-normal text-client-section-des lg:text-base"> or Login using social media</span>
@@ -132,6 +133,7 @@ function Login() {
                         </div>
                     </div>
                 </div>
+                {onHomeRedirect()}
             </section>
         </Fragment>
     );

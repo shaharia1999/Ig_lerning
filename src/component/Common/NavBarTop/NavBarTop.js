@@ -24,17 +24,24 @@ function NavBarTop() {
     const [keep_login, setKeepLoggin] = useState(false)
     const [studentEmail, setStudentEmail] = useState('');
     const [studentPassword, setStudentPassword] = useState('');
+    const [homeLoginRedirect, setHomeLoginRedirect] = useState(false);
     const [homeRedirect, setHomeRedirect] = useState(false);
 
     const user_data = JSON.parse(localStorage.getItem('user_data'));
     var user_email = null;
-    if (user_data == null){
+    if (user_data == null) {
         user_email = null;
     }
-    else{
-        user_email= user_data['email'];
+    else {
+        user_email = user_data['email'];
     }
-    
+
+
+    const onHomeLoginRedirect = () => {
+        if (homeLoginRedirect === true) {
+            return (<Redirect to="/" />);
+        }
+    }
 
     const onLogout = () => {
         localStorage.removeItem('user_data');
@@ -61,7 +68,7 @@ function NavBarTop() {
                 localStorage.setItem('refresh_token', response.data.refresh_token)
                 localStorage.setItem('user_data', JSON.stringify(response.data.data))
                 localStorage.setItem('keep_login', keep_login)
-                
+                setHomeLoginRedirect(true);
             }
         })
     }
@@ -76,7 +83,7 @@ function NavBarTop() {
                 localStorage.setItem('refresh_token', response.data.refresh_token)
                 localStorage.setItem('user_data', JSON.stringify(response.data.data))
                 localStorage.setItem('keep_login', keep_login)
-             
+                setHomeLoginRedirect(true);
             }
         })
     }
@@ -115,7 +122,6 @@ function NavBarTop() {
 
     return (
         <Fragment>
-
             <div className="flex flex-wrap">
                 <div className="bg-maincolordeep 2xl:h-16 xl:h-16 lg:h-14 w-full dark:bg-dark-color1">
                     <div className="flex flex-wrap float-right 2xl:pr-28 xl:pr-28 lg:pr-16 2xl:pt-3 xl:pt-3 lg:pt-2">
@@ -139,16 +145,20 @@ function NavBarTop() {
 
                         {(() => {
                             if (userTheme === 'dark') {
-                                return <label className="bg-light-version dark:bg-dark-color3 2xl:ml-4 2xl:w-12 2xl:h-11 xl:ml-4 xl:w-12 xl:h-10 lg:ml-4 lg:w-12 lg:h-10 2xl:rounded-sm xl:rounded-md lg:rounded-md">
-                                    <img className="moon cursor-pointer show 2xl:h-7 2xl:w-7 2xl:mt-1.5 2xl:ml-2.5 xl:h-7 xl:w-7 xl:mt-1.5 xl:ml-2.5 lg:h-7 lg:w-7 lg:mt-1.5 lg:ml-2.5" src={MoonImg} alt="" />
-                                    <img className="sun cursor-pointer hidden 2xl:h-7 2xl:w-7 2xl:mt-1.5 2xl:ml-2.5 xl:h-7 xl:w-7 xl:mt-1.5 xl:ml-2.5 lg:h-7 lg:w-7 lg:mt-1.5 lg:ml-2.5" src={SunImg} alt="" />
-                                </label>
+                                return (
+                                    <label className="bg-light-version dark:bg-dark-color3 2xl:ml-4 2xl:w-12 2xl:h-11 xl:ml-4 xl:w-12 xl:h-10 lg:ml-4 lg:w-12 lg:h-10 2xl:rounded-sm xl:rounded-md lg:rounded-md">
+                                        <img className="moon cursor-pointer show 2xl:h-7 2xl:w-7 2xl:mt-1.5 2xl:ml-2.5 xl:h-7 xl:w-7 xl:mt-1.5 xl:ml-2.5 lg:h-7 lg:w-7 lg:mt-1.5 lg:ml-2.5" src={MoonImg} alt="" />
+                                        <img className="sun cursor-pointer hidden 2xl:h-7 2xl:w-7 2xl:mt-1.5 2xl:ml-2.5 xl:h-7 xl:w-7 xl:mt-1.5 xl:ml-2.5 lg:h-7 lg:w-7 lg:mt-1.5 lg:ml-2.5" src={SunImg} alt="" />
+                                    </label>
+                                )
                             }
                             else if (userTheme === 'light') {
-                                return <label className="bg-light-version 2xl:ml-3 2xl:w-12 2xl:h-11 xl:ml-4 xl:w-12 xl:h-10 lg:ml-4 lg:w-12 lg:h-10 2xl:rounded-sm xl:rounded-md lg:rounded-md">
-                                    <img className="sun cursor-pointer show 2xl:h-7 2xl:w-7 2xl:mt-1.5 2xl:ml-2.5 xl:h-7 xl:w-7 xl:mt-1.5 xl:ml-2.5 lg:h-7 lg:w-7 lg:mt-1.5 lg:ml-2.5" src={SunImg} alt="" />
-                                    <img className="moon cursor-pointer hidden 2xl:h-7 2xl:w-7 2xl:mt-1.5 2xl:ml-2.5 xl:h-7 xl:w-7 xl:mt-1.5 xl:ml-2.5 lg:h-7 lg:w-7 lg:mt-1.5 lg:ml-2.5" src={MoonImg} alt="" />
-                                </label>
+                                return (
+                                    <label className="bg-light-version 2xl:ml-3 2xl:w-12 2xl:h-11 xl:ml-4 xl:w-12 xl:h-10 lg:ml-4 lg:w-12 lg:h-10 2xl:rounded-sm xl:rounded-md lg:rounded-md">
+                                        <img className="sun cursor-pointer show 2xl:h-7 2xl:w-7 2xl:mt-1.5 2xl:ml-2.5 xl:h-7 xl:w-7 xl:mt-1.5 xl:ml-2.5 lg:h-7 lg:w-7 lg:mt-1.5 lg:ml-2.5" src={SunImg} alt="" />
+                                        <img className="moon cursor-pointer hidden 2xl:h-7 2xl:w-7 2xl:mt-1.5 2xl:ml-2.5 xl:h-7 xl:w-7 xl:mt-1.5 xl:ml-2.5 lg:h-7 lg:w-7 lg:mt-1.5 lg:ml-2.5" src={MoonImg} alt="" />
+                                    </label>
+                                )
                             }
                         })()}
 
@@ -156,16 +166,15 @@ function NavBarTop() {
                 </div>
             </div>
 
-
-
-
             {(() => {
                 if (user_email === null) {
                     return (
                         <nav className="flex flex-wrap top-0 sticky-top items-center justify-between w-full py-4 md:py-0 px-4 text-lg bg-maincolor dark:bg-dark-color2">
                             <div className="2xl:h-24 xl:h-20 lg:h-20">
                                 <a href='/'>
-                                    <img className="2xl:h-24 xl:h-20 lg:h-20 2xl:mt-3 xl:mt-2 lg:mt-2 2xl:ml-24 xl:ml-8 lg:ml-4" src={MainLogo} alt="" />
+                                    <img className="2xl:h-24 xl:h-20 lg:h-20 2xl:mt-3 xl:mt-2 lg:mt-2 2xl:ml-24 xl:ml-8 lg:ml-4"
+                                        src={MainLogo} alt=""
+                                    />
                                 </a>
                             </div>
 
@@ -212,7 +221,6 @@ function NavBarTop() {
                                         </Link>
                                     </li>
                                     <li>
-                                        {/* <button className="outline outline-2 hover:bg-white lg:mt-3 lg:mr-12 float-right h-12 w-52 rounded-3xl ml-auto text-base font-light text-white hover:text-maincolor hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"> <i className="fa fa-graduation-cap mr-1"></i> I want to Teach</button> */}
                                         <div class="dropdown dropdown-end">
                                             <label tabindex="0" className="">
                                                 <button className="outline outline-2 hover:bg-white 2xl:mt-3 2xl:mr-12 xl:mt-2 xl:mr-10 lg:mt-2 lg:mr-5 float-right 2xl:h-12 2xl:w-52 xl:h-10 xl:w-44 lg:h-8 lg:w-36 rounded-3xl ml-auto 2xl:text-base xl:text-sm lg:text-xs font-light text-white hover:text-maincolor">
@@ -269,13 +277,13 @@ function NavBarTop() {
                                                             <Link className="font-light xl:text-sm text-xs hover:underline p-2 float-right right-0 mr-0 flex dark:text-white" to="/forget-password">Forgot password</Link>
                                                         </div>
 
-                                                        <div className="2xl:w-44 xl:w-32 lg:w-24 flex 2xl:mt-5 xl:mt-1 btn-center1 2xl:ml-20 xl:ml-24 lg:ml-20 bg-maincolor xl:rounded-lg lg:rounded-sm 2xl:pt-2 xl:pt-1 xl:pb-1 2xl:pb-2">
+                                                        <div className="cursor-pointer 2xl:w-44 xl:w-32 lg:w-24 flex 2xl:mt-5 xl:mt-1 btn-center1 2xl:ml-20 xl:ml-24 lg:ml-20 bg-maincolor xl:rounded-lg lg:rounded-sm 2xl:pt-2 xl:pt-1 xl:pb-1 2xl:pb-2">
                                                             <Link>
-                                                                <button
+                                                                <span
                                                                     onClick={TeacherLoginSubmit}
                                                                     className="2xl:text-base lg:text-sm font-normal leading-tight text-white mx-2 h-8">
                                                                     Sign in
-                                                                </button>
+                                                                </span>
                                                             </Link>
                                                         </div>
                                                     </div>
@@ -290,7 +298,6 @@ function NavBarTop() {
                                         </div>
                                     </li>
                                     <li className="2xl:mr-10 xl:mr-10 lg:mr-5">
-                                        {/* <button className="outline outline-2 hover:bg-white lg:mt-3 lg:mr-12 float-right h-12 w-52 rounded-3xl ml-auto text-base font-light text-white hover:text-maincolor"> <i className="fa fa-book-reader mr-1"></i> I want to Learn</button> */}
                                         <div class="dropdown dropdown-end">
                                             <label tabindex="0" className="">
                                                 <button className="outline outline-2 hover:bg-white 2xl:mt-3 2xl:mr-12 xl:mt-2 xl:mr-10 lg:mt-2 lg:mr-5 float-right 2xl:h-12 2xl:w-52 xl:h-10 xl:w-44 lg:h-8 lg:w-36 rounded-3xl ml-auto 2xl:text-base xl:text-sm lg:text-xs font-light text-white hover:text-maincolor"> <i className="fa fa-book-reader mr-1"></i> I want to Learn</button>
@@ -334,13 +341,13 @@ function NavBarTop() {
                                                             <Link className="font-light xl:text-sm text-xs hover:underline p-2 float-right right-0 mr-0 flex dark:text-white" to="/forget-password">Forgot password</Link>
                                                         </div>
 
-                                                        <div className="2xl:w-44 xl:w-32 lg:w-24 flex 2xl:mt-5 xl:mt-1 btn-center1 2xl:ml-20 xl:ml-24 lg:ml-20 bg-maincolor xl:rounded-lg lg:rounded-sm 2xl:pt-2 xl:pt-1 xl:pb-1 2xl:pb-2">
-                                                            <Link>
-                                                                <button
+                                                        <div>
+                                                            <Link className="cursor-pointer flex  2xl:w-44 xl:w-32 lg:w-24 bg-maincolor 2xl:mt-5 xl:mt-1 btn-center1 2xl:ml-20 xl:ml-24 lg:ml-20  xl:rounded-lg lg:rounded-sm 2xl:pt-2 xl:pt-1 xl:pb-1 2xl:pb-2">
+                                                                <span
                                                                     onClick={StudentLoginSubmit}
-                                                                    className="2xl:text-base lg:text-sm font-normal leading-tight text-white mx-2 h-8">
+                                                                    className="2xl:text-base lg:text-sm font-normal leading-tight text-white mx-2 h-7">
                                                                     Sign in
-                                                                </button>
+                                                                </span>
                                                             </Link>
                                                         </div>
                                                     </div>
@@ -357,7 +364,7 @@ function NavBarTop() {
                                 </ul>
 
                             </div>
-
+                            {onHomeLoginRedirect}
                         </nav>
                     )
                 }
@@ -407,55 +414,81 @@ function NavBarTop() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <div class="dropdown dropdown-end 2xl:mr-24">
+                                        <div class="dropdown dropdown-end 2xl:mr-24 xl:mr-20 lg:mr-16">
                                             <label tabindex="0" className="flex cursor-pointer">
-                                                <img className='xl:h-12 xl:w-12 border-2 xl:mt-2 border-white rounded-full' src={StudentImg} alt="" />
-                                                <div className='xl:mt-2 xl:ml-3'>
-                                                    <h6 className='xl:text-base text-white font-medium'>Monirul Islam</h6>
-                                                    <h6 className='text-sm text-white font-light xl:-mt-1'>Student</h6>
+                                                <img className='2xl:h-12 2xl:w-12 xl:h-10 xl:w-10 lg:h-8 lg:w-8 border-2 xl:mt-2 lg:mt-2.5 border-white rounded-full' src={StudentImg} alt="" />
+                                                <div className='xl:mt-2 xl:ml-3 lg:mt-2 lg:ml-2'>
+                                                    <h6 className='2xl:text-base xl:text-sm text-sm text-white 2xl:font-medium xl:font-normal'>Monirul Islam</h6>
+                                                    <h6 className='2xl:text-sm xl:text-xs lg:text-2xs text-white font-light 2xl:-mt-1 xl:mt-auto lg:-mt-1'>Student</h6>
                                                 </div>
                                             </label>
-                                            <ul tabindex="0" className="2xl:mt-5 2xl:-mr-5 justify-center dark:bg-dark-color1 p-2 shadow-lg menu menu-compact dropdown-content flex bg-base-100 rounded-md">
-                                                <div className="2xl:w-48">
-                                                    <ul className='mb-4'>
-                                                        <li className='mt-1'>
+                                            <ul tabindex="0" className="2xl:mt-5 2xl:-mr-5 xl:mt-4 xl:-mr-12 lg:mt-4 lg:-mr-12 justify-center dark:bg-dark-color1 p-2 shadow-lg menu menu-compact dropdown-content flex bg-base-100 rounded-md">
+                                                <div className="2xl:w-48 xl:w-48 lg:w-48">
+                                                    <ul className='2xl:mb-4 mb-2'>
+                                                        <li className="xl:mt-1 lg:mt-0">
                                                             <Link className="" to="/my-course">
-                                                                <span className="text-sm text-maingray flex mt-1 mb-1"><img className="h-4 w-4 mr-3 mt-1" src={Home} alt="" /> My Course</span>
+                                                                <span className="text-sm text-maingray flex xl:mt-1 lg:mt-0 mb-1">
+                                                                    <img className="h-4 w-4 mr-3 mt-1" src={Home} alt="" />
+                                                                    My Course
+                                                                </span>
                                                             </Link>
                                                         </li>
-                                                        <li className='mt-1'>
+                                                        <li className="xl:mt-1 lg:mt-0">
                                                             <Link className="" to="/cart-summery">
-                                                                <span className="text-sm text-maingray flex mt-1 mb-1"><img className="h-4 w-4 mr-3 mt-1" src={Graph} alt="" /> Cart <h6 className="bg-maincolor w-5 h-5 text-2xs text-white rounded-full pl-1.5 ml-2">3</h6></span>
+                                                                <span className="text-sm text-maingray flex xl:mt-1 lg:mt-0 mb-1">
+                                                                    <img className="h-4 w-4 mr-3 mt-1" src={Graph} alt="" />
+                                                                    Cart
+                                                                    <h6 className="bg-maincolor w-5 h-5 text-2xs text-white rounded-full pl-1.5 ml-2">3</h6>
+                                                                </span>
                                                             </Link>
                                                         </li>
-                                                        <li className='mt-1'>
+                                                        <li className="xl:mt-1 lg:mt-0">
                                                             <Link className="" to="/">
-                                                                <span className="text-sm text-maingray flex mt-1 mb-1"><img className="h-4 w-4 mr-3 mt-1" src={Notification} alt="" /> Notification</span>
+                                                                <span className="text-sm text-maingray flex xl:mt-1 lg:mt-0 mb-1">
+                                                                    <img className="h-4 w-4 mr-3 mt-1" src={Notification} alt="" />
+                                                                    Notification
+                                                                </span>
                                                             </Link>
                                                         </li>
-                                                        <li className='mt-1'>
+                                                        <li className="xl:mt-1 lg:mt-0">
                                                             <Link className="" to="/">
-                                                                <span className="text-sm text-maingray flex mt-1 mb-1"><img className="h-4 w-4 mr-3 mt-1" src={Bag} alt="" /> Go To dashboard</span>
+                                                                <span className="text-sm text-maingray flex xl:mt-1 lg:mt-0 mb-1">
+                                                                    <img className="h-4 w-4 mr-3 mt-1" src={Bag} alt="" />
+                                                                    Go To dashboard
+                                                                </span>
                                                             </Link>
                                                         </li>
-                                                        <li className='mt-1'>
+                                                        <li className="xl:mt-1 lg:mt-0">
                                                             <Link className="" to="/">
-                                                                <span className="text-sm text-maingray flex mt-1 mb-1"><img className="h-4 w-4 mr-3 mt-1" src={Wallet} alt="" /> Payment Method</span>
+                                                                <span className="text-sm text-maingray flex xl:mt-1 lg:mt-0 mb-1">
+                                                                    <img className="h-4 w-4 mr-3 mt-1" src={Wallet} alt="" />
+                                                                    Payment Method
+                                                                </span>
                                                             </Link>
                                                         </li>
-                                                        <li className='mt-1'>
+                                                        <li className="xl:mt-1 lg:mt-0">
                                                             <Link className="" to="/">
-                                                                <span className="text-sm text-maingray flex mt-1 mb-1"><img className="h-4 w-4 mr-3 mt-1" src={Chat} alt="" /> Messages <h6 className="bg-maincolor w-5 h-5 text-2xs text-white rounded-full pl-1.5 ml-2">10</h6></span>
+                                                                <span className="text-sm text-maingray flex xl:mt-1 lg:mt-0 mb-1">
+                                                                    <img className="h-4 w-4 mr-3 mt-1" src={Chat} alt="" />
+                                                                    Messages
+                                                                    <h6 className="bg-maincolor w-5 h-5 text-2xs text-white rounded-full pl-1.5 ml-2">10</h6>
+                                                                </span>
                                                             </Link>
                                                         </li>
-                                                        <li className='mt-1'>
+                                                        <li className="xl:mt-1 lg:mt-0">
                                                             <Link className="" to="/">
-                                                                <span className="text-sm text-maingray flex mt-1 mb-1"><img className="h-4 w-4 mr-3 mt-1" src={Setting} alt="" /> Account Settings</span>
+                                                                <span className="text-sm text-maingray flex xl:mt-1 lg:mt-0 mb-1">
+                                                                    <img className="h-4 w-4 mr-3 mt-1" src={Setting} alt="" />
+                                                                    Account Settings
+                                                                </span>
                                                             </Link>
                                                         </li>
-                                                        <li className='mt-1'>
-                                                            <Link className="" to="/" onClick={onLogout}>
-                                                                <span className="text-sm text-maingray flex mt-1 mb-1"><img className="h-4 w-4 mr-3 mt-1" src={Logout} alt="" /> Logout</span>
+                                                        <li className="xl:mt-1 lg:mt-0">
+                                                            <Link className="" onClick={onLogout}>
+                                                                <span className="text-sm text-maingray flex xl:mt-1 lg:mt-0 mb-1">
+                                                                    <img className="h-4 w-4 mr-3 mt-1" src={Logout} alt="" />
+                                                                    Logout
+                                                                </span>
                                                             </Link>
                                                         </li>
                                                     </ul>
@@ -477,4 +510,3 @@ function NavBarTop() {
 
 }
 export default NavBarTop;
-
