@@ -411,18 +411,18 @@ function Checkout() {
     else if(userTheme ==='light'){
         return (
             <Fragment>
-                <section className="md:h-screen bg-checkout">
-                    <div className="container xl:pl-32 xl:pr-32 xl:pt-10">
-                        <div className="flex justify-center items-center flex-wrap text-gray-800">
-                            <div className="xl:w-10/12">
-                                <div className="block bg-white xl:rounded-lg shadow-lg">
-                                    <div className="xl:flex xl:flex-wrap g-0">
+                <section className="h-screen bg-checkout">
+                    <div className="container 2xl:pl-36 2xl:pr-36 xl:pl-20 xl:pr-20 lg:pl-12 lg:pr-12 xl:pt-10 lg:pt-8">
+                        <div className="flex justify-center flex-wrap text-gray-800">
+                            <div className="lg:w-full">
+                                <div className="block bg-white xl:rounded-lg lg:rounded-md shadow-lg">
+                                    <div className="lg:flex xl:flex-wrap g-0">
     
-                                        <div className="xl:w-6/12 xl:rounded-lg bg-gray-100 flex items-center">
-                                            <div className="xl:mt-12 w-full">
+                                        <div className="lg:w-6/12 xl:rounded-lg lg:rounded-md bg-gray-100 flex">
+                                            <div className="lg:mt-12 w-full">
     
                                                 <div className="flex justify-center">
-                                                    <ul className="nav bg-gray-100 xl:w-80 justify-center rounded-md shadow-lg xl:pl-2 nav-pills flex md:flex-row flex-wrap list-none pl-0 mb-4" id="pills-tab3" role="tablist">
+                                                    <ul className="nav bg-gray-100 lg:w-80 justify-center rounded-md shadow-lg xl:pl-2 nav-pills flex md:flex-row flex-wrap list-none pl-0 mb-4" id="pills-tab3" role="tablist">
                                                         <li className="nav-item" role="presentation">
                                                             <button
                                                                 type="button"
@@ -451,76 +451,76 @@ function Checkout() {
                                                     </ul>
                                                 </div>
     
-                                                <button className=" bg-price text-xs text-white rounded-xl h-6 w-20 xl:pt-1 xl:-mt-10px xl:pl-3 xl:pr-2 flex xl:ml-80 xl:-mt-24">SAVE 10%</button>
+                                                <button className="bg-price text-xs text-white rounded-xl h-6 w-20 xl:pt-1 lg:pt-0.5 xl:-mt-10px xl:pl-3 lg:pl-2.5 xl:pr-2 flex xl:ml-80 lg:ml-72 xl:-mt-24 lg:-mt-24">SAVE 10%</button>
     
                                                 <div className="tab-content" id="pills-tabContent3">
-                                                    <div className="tab-pane fade show active xl:mt-20" id="pills-home3" role="tabpanel" aria-labelledby="pills-home-tab3">
+                                                    <div className="tab-pane fade show active xl:mt-20 lg:mt-16" id="pills-home3" role="tabpanel" aria-labelledby="pills-home-tab3">
     
-                                                        <div className="flex flex-wrap xl:mt-4">
-                                                            <div className="xl:w-full bg-white hover:bg-price border-price border xl:ml-6 xl:mr-6 xl:pl-5 xl:pt-5 xl:pb-5 rounded-xl">
-                                                                <h6 className="text-2xl text-maingray xl:font-medium">Free</h6>
+                                                        <div className="flex flex-wrap xl:mt-4 lg:mt-3">
+                                                            <div className="lg:w-full bg-white border-price border xl:mx-6 xl:px-5 lg:mx-4 lg:px-4 xl:pb-5 lg:pb-2 xl:pt-3.5 lg:pt-2 rounded-xl">
+                                                                <h6 className="xl:text-2xl lg:text-xl text-maingray lg:font-medium">Free</h6>
                                                                 <h6 className="xl:text-xs  text-maingray font-normal xl:mt-1">Not ready to commit? Try us out with ease.</h6>
-                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl xl:font-medium">$0</span> /month</h6>
+                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl lg:text-2xl xl:font-medium">$0</span> /month</h6>
                                                             </div>
                                                         </div>
     
-                                                        <div className="flex flex-wrap xl:mt-4">
-                                                            <div className="xl:w-full bg-white border-price border xl:ml-6 xl:mr-6 xl:pl-5 xl:pt-5 xl:pb-5 rounded-xl">
-                                                                <h6 className="text-2xl text-maingray xl:font-medium">Basic</h6>
+                                                        <div className="flex flex-wrap xl:mt-4 lg:mt-3">
+                                                            <div className="lg:w-full bg-white border-price border xl:mx-6 xl:px-5 lg:mx-4 lg:px-4 xl:pb-5 lg:pb-2 xl:pt-3.5 lg:pt-2 rounded-xl">
+                                                                <h6 className="xl:text-2xl lg:text-xl text-maingray lg:font-medium">Basic</h6>
                                                                 <h6 className="xl:text-xs text-maingray font-normal xl:mt-1">Not ready to commit? Try us out with ease.</h6>
-                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl xl:font-medium">$29</span> /month</h6>
+                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl lg:text-2xl xl:font-medium">$29</span> /month</h6>
                                                             </div>
                                                         </div>
     
     
-                                                        <div className="flex flex-wrap xl:mt-4">
-                                                            <div className="xl:w-full bg-white border-price border xl:ml-6 xl:mr-6 xl:pl-5 xl:pt-5 xl:pb-5 rounded-xl">
-                                                                <h6 className="text-2xl text-maingray xl:font-medium">Pro</h6>
+                                                        <div className="flex flex-wrap xl:mt-4 lg:mt-3">
+                                                            <div className="lg:w-full bg-white border-price border xl:mx-6 xl:px-5 lg:mx-4 lg:px-4 xl:pb-5 lg:pb-2 xl:pt-3.5 lg:pt-2 rounded-xl">
+                                                                <h6 className="xl:text-2xl lg:text-xl text-maingray lg:font-medium">Pro</h6>
                                                                 <h6 className="xl:text-xs text-maingray font-normal xl:mt-1">Not ready to commit? Try us out with ease.</h6>
-                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl xl:font-medium">$99</span> /month</h6>
+                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl lg:text-2xl xl:font-medium">$99</span> /month</h6>
                                                             </div>
                                                         </div>
     
-                                                        <div className="flex flex-wrap xl:mt-4 xl:mb-6">
-                                                            <div className="xl:w-full bg-white border-price border xl:ml-6 xl:mr-6 xl:pl-5 xl:pt-5 xl:pb-5 rounded-xl">
-                                                                <h6 className="text-2xl text-maingray xl:font-medium">Business</h6>
+                                                        <div className="flex flex-wrap xl:mt-4 lg:mt-3">
+                                                            <div className="lg:w-full bg-white border-price border xl:mx-6 xl:px-5 lg:mx-4 lg:px-4 xl:pb-5 lg:pb-2 xl:pt-3.5 lg:pt-2 rounded-xl">
+                                                                <h6 className="xl:text-2xl lg:text-xl text-maingray lg:font-medium">Business</h6>
                                                                 <h6 className="xl:text-xs text-maingray font-normal xl:mt-1">Not ready to commit? Try us out with ease.</h6>
-                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl xl:font-medium">$249</span> /month</h6>
+                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl lg:text-2xl xl:font-medium">$249</span> /month</h6>
                                                             </div>
                                                         </div>
                                                     </div>
     
                                                     <div className="tab-pane fade show xl:mt-20" id="pills-profile3" role="tabpanel" aria-labelledby="pills-profile-tab3">
-                                                        <div className="flex flex-wrap xl:mt-4">
-                                                            <div className="xl:w-full bg-white hover:bg-price border-price border xl:ml-6 xl:mr-6 xl:pl-5 xl:pt-5 xl:pb-5 rounded-xl">
-                                                                <h6 className="text-2xl text-maingray xl:font-medium">Free</h6>
+                                                        <div className="flex flex-wrap xl:mt-4 lg:mt-3">
+                                                            <div className="lg:w-full bg-white border-price border xl:mx-6 xl:px-5 lg:mx-4 lg:px-4 xl:pb-5 lg:pb-2 xl:pt-3.5 lg:pt-2 rounded-xl">
+                                                                <h6 className="xl:text-2xl lg:text-xl text-maingray lg:font-medium">Free</h6>
                                                                 <h6 className="xl:text-xs  text-maingray font-normal xl:mt-1">Not ready to commit? Try us out with ease.</h6>
-                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl xl:font-medium">$0</span> /month</h6>
+                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl lg:text-2xl xl:font-medium">$0</span> /month</h6>
                                                             </div>
                                                         </div>
     
-                                                        <div className="flex flex-wrap xl:mt-4">
-                                                            <div className="xl:w-full bg-white border-price border xl:ml-6 xl:mr-6 xl:pl-5 xl:pt-5 xl:pb-5 rounded-xl">
-                                                                <h6 className="text-2xl text-maingray xl:font-medium">Basic</h6>
+                                                        <div className="flex flex-wrap xl:mt-4 lg:mt-3">
+                                                            <div className="lg:w-full bg-white border-price border xl:mx-6 xl:px-5 lg:mx-4 lg:px-4 xl:pb-5 lg:pb-2 xl:pt-3.5 lg:pt-2 rounded-xll">
+                                                                <h6 className="xl:text-2xl lg:text-xl text-maingray lg:font-medium">Basic</h6>
                                                                 <h6 className="xl:text-xs text-maingray font-normal xl:mt-1">Not ready to commit? Try us out with ease.</h6>
-                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl xl:font-medium">$29</span> /month</h6>
+                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl lg:text-2xl xl:font-medium">$29</span> /month</h6>
                                                             </div>
                                                         </div>
     
     
-                                                        <div className="flex flex-wrap xl:mt-4">
-                                                            <div className="xl:w-full bg-white border-price border xl:ml-6 xl:mr-6 xl:pl-5 xl:pt-5 xl:pb-5 rounded-xl">
-                                                                <h6 className="text-2xl text-maingray xl:font-medium">Pro</h6>
+                                                        <div className="flex flex-wrap xl:mt-4 lg:mt-3">
+                                                            <div className="lg:w-full bg-white border-price border xl:mx-6 xl:px-5 lg:mx-4 lg:px-4 xl:pb-5 lg:pb-2 xl:pt-3.5 lg:pt-2 rounded-xll">
+                                                                <h6 className="xl:text-2xl lg:text-xl text-maingray lg:font-medium">Pro</h6>
                                                                 <h6 className="xl:text-xs text-maingray font-normal xl:mt-1">Not ready to commit? Try us out with ease.</h6>
-                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl xl:font-medium">$99</span> /month</h6>
+                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl lg:text-2xl xl:font-medium">$99</span> /month</h6>
                                                             </div>
                                                         </div>
     
                                                         <div className="flex flex-wrap xl:mt-4 xl:mb-6">
-                                                            <div className="xl:w-full bg-white border-price border xl:ml-6 xl:mr-6 xl:pl-5 xl:pt-5 xl:pb-5 rounded-xl">
-                                                                <h6 className="text-2xl text-maingray xl:font-medium">Business</h6>
+                                                            <div className="lg:w-full bg-white border-price border xl:mx-6 xl:px-5 lg:mx-4 lg:px-4 xl:pb-5 lg:pb-2 xl:pt-3.5 lg:pt-2 rounded-xl">
+                                                                <h6 className="xl:text-2xl lg:text-xl text-maingray lg:font-medium">Business</h6>
                                                                 <h6 className="xl:text-xs text-maingray font-normal xl:mt-1">Not ready to commit? Try us out with ease.</h6>
-                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl xl:font-medium">$249</span> /month</h6>
+                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl lg:text-2xl xl:font-medium">$249</span> /month</h6>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -539,25 +539,25 @@ function Checkout() {
                                                 </div>
     
     
-                                                <div className="flex flex-wrap xl:mt-4">
+                                                <div className="flex flex-wrap lg:mt-4">
                                                     <div className="w-full flex">
-                                                        <div className="xl:w-2/12 border-gray-200 hover:border-price xl:border-2 justify-center flex rounded-md xl:m-1">
-                                                            <img className="xl:pt-1 xl:pb-1 xl:pl-2 xl:pr-2 xl:h-10" src={Visa} alt="" />
+                                                        <div className="lg:w-2/12 border-gray-200 hover:border-price lg:border-2 justify-center flex rounded-md lg:m-1">
+                                                            <img className="lg:pt-1 lg:pb-1 lg:pl-2 lg:pr-2 lg:h-10" src={Visa} alt="" />
                                                         </div>
-                                                        <div className="xl:w-2/12 border-gray-200 hover:border-price xl:border-2 justify-center flex rounded-md xl:m-1">
-                                                            <img className="xl:pt-1 xl:pb-1 xl:pl-2 xl:pr-2 xl:h-10" src={MasterCard} alt="" />
+                                                        <div className="lg:w-2/12 border-gray-200 hover:border-price lg:border-2 justify-center flex rounded-md lg:m-1">
+                                                            <img className="lg:pt-1 lg:pb-1 lg:pl-2 lg:pr-2 lg:h-10" src={MasterCard} alt="" />
                                                         </div>
-                                                        <div className="xl:w-2/12 border-gray-200 hover:border-price xl:border-2 justify-center flex rounded-md xl:m-1">
-                                                            <img className="xl:pt-1 xl:pb-1 xl:pl-2 xl:pr-2 xl:h-10" src={PayPal} alt="" />
+                                                        <div className="lg:w-2/12 border-gray-200 hover:border-price lg:border-2 justify-center flex rounded-md lg:m-1">
+                                                            <img className="lg:pt-1 lg:pb-1 lg:pl-2 lg:pr-2 lg:h-10" src={PayPal} alt="" />
                                                         </div>
-                                                        <div className="xl:w-2/12 border-gray-200 hover:border-price xl:border-2 justify-center flex rounded-md xl:m-1">
-                                                            <img className="xl:pt-1 xl:pb-1 xl:pl-2 xl:pr-2 xl:h-10" src={IPay} alt="" />
+                                                        <div className="lg:w-2/12 border-gray-200 hover:border-price lg:border-2 justify-center flex rounded-md lg:m-1">
+                                                            <img className="lg:pt-1 lg:pb-1 lg:pl-2 lg:pr-2 lg:h-10" src={IPay} alt="" />
                                                         </div>
-                                                        <div className="xl:w-2/12 border-gray-200 hover:border-price xl:border-2 justify-center flex rounded-md xl:m-1">
-                                                            <img className="xl:pt-1 xl:pb-1 xl:pl-2 xl:pr-2 xl:h-10" src={Payoneer} alt="" />
+                                                        <div className="lg:w-2/12 border-gray-200 hover:border-price lg:border-2 justify-center flex rounded-md lg:m-1">
+                                                            <img className="lg:pt-1 lg:pb-1 lg:pl-2 lg:pr-2 lg:h-10" src={Payoneer} alt="" />
                                                         </div>
-                                                        <div className="xl:w-2/12 border-gray-200 hover:border-price xl:border-2 justify-center flex rounded-md xl:m-1">
-                                                            <img className="xl:pt-1 xl:pb-1 xl:pl-2 xl:pr-2 xl:h-10" src={BitCoin} alt="" />
+                                                        <div className="lg:w-2/12 border-gray-200 hover:border-price lg:border-2 justify-center flex rounded-md lg:m-1">
+                                                            <img className="lg:pt-1 lg:pb-1 lg:pl-2 lg:pr-2 lg:h-10" src={BitCoin} alt="" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -565,7 +565,7 @@ function Checkout() {
     
                                                 <form className="lg:mt-4">
                                                     <div className="flex justify-center">
-                                                        <div className="mb-3 xl:w-full">
+                                                        <div className="mb-3 lg:w-full">
                                                             <label for="exampleFormControlInput1" className="form-label text-sm inline-block mb-2 text-maingray">Email Address <sup>*</sup></label>
                                                             <input
                                                                 type="text"
@@ -577,7 +577,7 @@ function Checkout() {
                                                     </div>
     
                                                     <div className="flex justify-center">
-                                                        <div className="mb-3 xl:w-full">
+                                                        <div className="mb-3 lg:w-full">
                                                             <label for="exampleFormControlInput1" className="form-label text-sm inline-block mb-2 text-maingray">Cardholder Name <sup>*</sup></label>
                                                             <input
                                                                 type="text"
@@ -589,7 +589,7 @@ function Checkout() {
                                                     </div>
     
                                                     <div className="flex justify-center">
-                                                        <div className="mb-3 xl:w-full">
+                                                        <div className="mb-3 lg:w-full">
                                                             <label for="exampleFormControlInput1" className="form-label text-sm inline-block mb-2 text-maingray">Card Details <sup>*</sup></label>
                                                             <input
                                                                 type="text"
@@ -602,7 +602,7 @@ function Checkout() {
     
     
                                                     <div className="flex">
-                                                        <div className="mb-3 xl:w-1/2 xl:mr-4">
+                                                        <div className="mb-3 xl:w-1/2 xl:mr-4 lg:mr-1">
                                                             <label for="exampleFormControlInput1" className="form-label text-sm inline-block mb-2 text-maingray">Expiry <sup>*</sup></label>
                                                             <input
                                                                 type="text"
@@ -612,7 +612,7 @@ function Checkout() {
                                                             />
                                                         </div>
     
-                                                        <div className="mb-3 xl:w-1/2 xl:ml-4">
+                                                        <div className="mb-3 xl:w-1/2 xl:ml-4 lg:ml-1">
                                                             <label for="exampleFormControlInput1" className="form-label text-sm inline-block mb-2 text-maingray">CVC <sup>*</sup></label>
                                                             <input
                                                                 type="text"
@@ -626,7 +626,7 @@ function Checkout() {
     
     
                                                     <div className="flex flex-wrap">
-                                                        <div className="xl:w-full">
+                                                        <div className="lg:w-full">
                                                             <ReactFlagsSelect
                                                                 selected={selected}
                                                                 onSelect={onSelect}
@@ -646,7 +646,7 @@ function Checkout() {
                                                         </div>
     
     
-                                                        <div className="mb-3 xl:w-1/2 xl:-mt-1">
+                                                        <div className="mb-3 lg:w-1/2 lg:-mt-1">
                                                             <input
                                                                 type="text"
                                                                 className="form-control rounded-l block w-full px-3 py-2.5 text-sm font-normal text-maingray bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
@@ -655,7 +655,7 @@ function Checkout() {
                                                             />
                                                         </div>
     
-                                                        <div className="mb-3 xl:w-1/2 xl:-mt-1">
+                                                        <div className="mb-3 lg:w-1/2 lg:-mt-1">
                                                             <input
                                                                 type="text"
                                                                 className="form-control rounded-r block w-full px-3 py-2.5 text-sm font-normal text-maingray bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"

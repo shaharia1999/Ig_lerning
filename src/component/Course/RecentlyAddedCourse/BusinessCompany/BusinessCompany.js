@@ -781,7 +781,7 @@ function BusinessCompany() {
                             </Slider>
                         </div>
                     </div>
-                    <div className="2xl:mt-1 xl:-mt-8 lg:-mt-12 md:mt-4">
+                    <div className="2xl:mt-1 xl:-mt-8 lg:-mt-5 md:mt-4">
                         <div className="fade show active">
                             <div className="-mx-1 px-1">
                                 <Slider
