@@ -546,11 +546,11 @@
 
 
     /* checkout Page */
-    .MobileCheckout {
+    .MobileCheckout {}
+
+    .DesktopCheckout {
         display: none;
     }
-
-    .DesktopCheckout {}
 
     /* Cart Summery Page */
     .MobileCartSummery {
@@ -586,7 +586,9 @@
         display: none;
     }
 
-    .MyCourseForDesktop {}
+    .MyCourseForDesktop {
+       
+    }
 
     /* Price Page */
     .PriceMobile {

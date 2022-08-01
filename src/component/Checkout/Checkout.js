@@ -454,21 +454,21 @@ function Checkout() {
                                                 <button className="bg-price text-xs text-white rounded-xl h-6 w-20 xl:pt-1 lg:pt-0.5 xl:-mt-10px xl:pl-3 lg:pl-2.5 xl:pr-2 flex xl:ml-80 lg:ml-72 xl:-mt-24 lg:-mt-24">SAVE 10%</button>
     
                                                 <div className="tab-content" id="pills-tabContent3">
-                                                    <div className="tab-pane fade show active xl:mt-20 lg:mt-16" id="pills-home3" role="tabpanel" aria-labelledby="pills-home-tab3">
+                                                    <div className="tab-pane fade show active xl:mt-20 lg:mt-20" id="pills-home3" role="tabpanel" aria-labelledby="pills-home-tab3">
     
                                                         <div className="flex flex-wrap xl:mt-4 lg:mt-3">
                                                             <div className="lg:w-full bg-white border-price border xl:mx-6 xl:px-5 lg:mx-4 lg:px-4 xl:pb-5 lg:pb-2 xl:pt-3.5 lg:pt-2 rounded-xl">
                                                                 <h6 className="xl:text-2xl lg:text-xl text-maingray lg:font-medium">Free</h6>
-                                                                <h6 className="xl:text-xs  text-maingray font-normal xl:mt-1">Not ready to commit? Try us out with ease.</h6>
-                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl lg:text-2xl xl:font-medium">$0</span> /month</h6>
+                                                                <h6 className="lg:text-xs  text-maingray font-normal lg:mt-1">Not ready to commit? Try us out with ease.</h6>
+                                                                <h6 className="lg:text-base text-maingray xl:font-normal xl:mt-3 lg:mt-2"><span className="text-pagination xl:text-3xl lg:text-2xl lg:font-medium">$0</span> /month</h6>
                                                             </div>
                                                         </div>
     
                                                         <div className="flex flex-wrap xl:mt-4 lg:mt-3">
                                                             <div className="lg:w-full bg-white border-price border xl:mx-6 xl:px-5 lg:mx-4 lg:px-4 xl:pb-5 lg:pb-2 xl:pt-3.5 lg:pt-2 rounded-xl">
                                                                 <h6 className="xl:text-2xl lg:text-xl text-maingray lg:font-medium">Basic</h6>
-                                                                <h6 className="xl:text-xs text-maingray font-normal xl:mt-1">Not ready to commit? Try us out with ease.</h6>
-                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl lg:text-2xl xl:font-medium">$29</span> /month</h6>
+                                                                <h6 className="lg:text-xs text-maingray font-normal lg:mt-1">Not ready to commit? Try us out with ease.</h6>
+                                                                <h6 className="lg:text-base text-maingray xl:font-normal xl:mt-3 lg:mt-2"><span className="text-pagination xl:text-3xl lg:text-2xl lg:font-medium">$29</span> /month</h6>
                                                             </div>
                                                         </div>
     
@@ -476,16 +476,16 @@ function Checkout() {
                                                         <div className="flex flex-wrap xl:mt-4 lg:mt-3">
                                                             <div className="lg:w-full bg-white border-price border xl:mx-6 xl:px-5 lg:mx-4 lg:px-4 xl:pb-5 lg:pb-2 xl:pt-3.5 lg:pt-2 rounded-xl">
                                                                 <h6 className="xl:text-2xl lg:text-xl text-maingray lg:font-medium">Pro</h6>
-                                                                <h6 className="xl:text-xs text-maingray font-normal xl:mt-1">Not ready to commit? Try us out with ease.</h6>
-                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl lg:text-2xl xl:font-medium">$99</span> /month</h6>
+                                                                <h6 className="lg:text-xs text-maingray font-normal lg:mt-1">Not ready to commit? Try us out with ease.</h6>
+                                                                <h6 className="lg:text-base text-maingray xl:font-normal xl:mt-3 lg:mt-2"><span className="text-pagination xl:text-3xl lg:text-2xl lg:font-medium">$99</span> /month</h6>
                                                             </div>
                                                         </div>
     
                                                         <div className="flex flex-wrap xl:mt-4 lg:mt-3">
                                                             <div className="lg:w-full bg-white border-price border xl:mx-6 xl:px-5 lg:mx-4 lg:px-4 xl:pb-5 lg:pb-2 xl:pt-3.5 lg:pt-2 rounded-xl">
                                                                 <h6 className="xl:text-2xl lg:text-xl text-maingray lg:font-medium">Business</h6>
-                                                                <h6 className="xl:text-xs text-maingray font-normal xl:mt-1">Not ready to commit? Try us out with ease.</h6>
-                                                                <h6 className="xl:text-base text-maingray xl:font-normal xl:mt-3"><span className="text-pagination xl:text-3xl lg:text-2xl xl:font-medium">$249</span> /month</h6>
+                                                                <h6 className="lg:text-xs text-maingray font-normal lg:mt-1">Not ready to commit? Try us out with ease.</h6>
+                                                                <h6 className="lg:text-base text-maingray xl:font-normal xl:mt-3 lg:mt-2"><span className="text-pagination xl:text-3xl lg:text-2xl lg:font-medium">$249</span> /month</h6>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -684,9 +684,9 @@ function Checkout() {
                                                     <div className="flex flex-wrap">
                                                         <label for="my-modal-3" data-mdb-ripple="true"
                                                             data-mdb-ripple-color="light"
-                                                            className="flex text-center justify-center xl:h-12 btn-block cursor-pointer bg-maincolor rounded-sm xl:text-sm text-white xl:mt-5">
-                                                            <span className="justify-center text-center xl:mt-3 xl:ml-24">Proceed to Pay</span>
-                                                            <FaArrowRight className="xl:mt-4 xl:pl-12px ml-24 " />
+                                                            className="flex text-center justify-center xl:h-12 btn-block cursor-pointer bg-maincolor rounded-sm xl:text-sm text-white xl:mt-5 lg:mt-4">
+                                                            <span className="justify-center text-sm text-center xl:mt-3 lg:mt-2 xl:mb-0 lg:mb-3 xl:ml-24">Proceed to Pay</span>
+                                                            <FaArrowRight className="xl:mt-4 lg:mt-3 xl:pl-12px ml-24"/>
                                                         </label>
                                                     </div>
                                                 </form>

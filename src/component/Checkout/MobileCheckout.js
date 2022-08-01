@@ -46,7 +46,7 @@ function MobileCheckout() {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: false,
@@ -55,9 +55,10 @@ function MobileCheckout() {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
-                    initialSlide: 1
+                    initialSlide: 1,
+                    dots: false
                 }
             },
             {
@@ -234,8 +235,8 @@ function MobileCheckout() {
                                     </div>
                                 </div>
 
-                                <div className="w-full px-4">
-                                    <div className="md:p-8 md:mx-6">
+                                <div className="w-full mt-2 px-4">
+                                    <div className="md:p-8 sm:p-5 md:mx-6">
                                         <div className=" justify-start">
                                             <h4 className="text-xl text-maingray font-medium mt-5">Payment Details</h4>
                                             <h6 className="text-xs text-maingray font-light">Complete your purchase by providing payment details</h6>
