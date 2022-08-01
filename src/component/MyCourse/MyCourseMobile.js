@@ -117,6 +117,62 @@ function MyCourseMobile() {
     const MyCourseListHTML = (() => {
         if (isLoading === true) {
             return (
+                <>
+                      <div className="bg-white p-2 rounded-lg shadow-lg my-1 px-1.5 w-full">
+                    <div className="wrapper flex antialiased">
+                        <div className="relative w-2/12">
+                            <img className="w-24 h-24 ml-1 rounded-lg"
+                                src={CartCheckoutImg} alt="" />
+                        </div>
+
+                        <div className="w-7/12 ml-3">
+                            <div className="flex flex-wrap">
+                                <div className="w-full">
+                                    <h4 className="mt-0 text-base font-medium leading-tight text-cart-item-title">
+                                        How to handle google map API with handle google map node.js
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-wrap mt-1 mb-0">
+                                <div className="w-full">
+                                    <div className="flex justify-start">
+                                        <span className="text-gray-600 text-xs">77 Participients</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-wrap mt-1 mb-0">
+                                <div className="w-full">
+                                    <div className="flex justify-start">
+                                        <StarRatings
+                                            rating={3.5}
+                                            starDimension="16px"
+                                            starSpacing="3px"
+                                            starRatedColor="rgb(251, 191, 36)"
+                                        />
+                                        <span className="text-xs text-gray-300 ml-3 mt-1.5">(3.5)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="w-3/12 pr-2">
+                            <div className="flex flex-wrap">
+                                <div className="w-full">
+                                    <div className="flex justify-end">
+                                        <HiDotsVertical className="mt-1 font-semibold text-xl text-gray-400" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="flex w-full flex-wrap mt-8 pr-3 justify-end">
+                                <button className="border flex border-maincolor rounded-2xl pl-3 pr-5 pt-1.5 pb-1.5 text-base text-maincolor font-semibold"><img className="h-5 w-5 mr-2" src={PlayIcon} alt="" />Start</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="bg-white p-2 rounded-lg shadow-lg my-1 px-1.5 w-full">
                     <div className="wrapper flex antialiased">
                         <div className="relative w-2/12">
@@ -171,6 +227,119 @@ function MyCourseMobile() {
                         </div>
                     </div>
                 </div>
+
+
+                <div className="bg-white p-2 rounded-lg shadow-lg my-1 px-1.5 w-full">
+                    <div className="wrapper flex antialiased">
+                        <div className="relative w-2/12">
+                            <img className="w-24 h-24 ml-1 rounded-lg"
+                                src={CartCheckoutImg} alt="" />
+                        </div>
+
+                        <div className="w-7/12 ml-3">
+                            <div className="flex flex-wrap">
+                                <div className="w-full">
+                                    <h4 className="mt-0 text-base font-medium leading-tight text-cart-item-title">
+                                        How to handle google map API with handle google map node.js
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-wrap mt-1 mb-0">
+                                <div className="w-full">
+                                    <div className="flex justify-start">
+                                        <span className="text-gray-600 text-xs">77 Participients</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-wrap mt-1 mb-0">
+                                <div className="w-full">
+                                    <div className="flex justify-start">
+                                        <StarRatings
+                                            rating={3.5}
+                                            starDimension="16px"
+                                            starSpacing="3px"
+                                            starRatedColor="rgb(251, 191, 36)"
+                                        />
+                                        <span className="text-xs text-gray-300 ml-3 mt-1.5">(3.5)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="w-3/12 pr-2">
+                            <div className="flex flex-wrap">
+                                <div className="w-full">
+                                    <div className="flex justify-end">
+                                        <HiDotsVertical className="mt-1 font-semibold text-xl text-gray-400" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="flex w-full flex-wrap mt-8 pr-3 justify-end">
+                                <button className="border flex border-maincolor rounded-2xl pl-3 pr-5 pt-1.5 pb-1.5 text-base text-maincolor font-semibold"><img className="h-5 w-5 mr-2" src={PlayIcon} alt="" />Start</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div className="bg-white p-2 rounded-lg shadow-lg my-1 px-1.5 w-full">
+                    <div className="wrapper flex antialiased">
+                        <div className="relative w-2/12">
+                            <img className="w-24 h-24 ml-1 rounded-lg"
+                                src={CartCheckoutImg} alt="" />
+                        </div>
+
+                        <div className="w-7/12 ml-3">
+                            <div className="flex flex-wrap">
+                                <div className="w-full">
+                                    <h4 className="mt-0 text-base font-medium leading-tight text-cart-item-title">
+                                        How to handle google map API with handle google map node.js
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-wrap mt-1 mb-0">
+                                <div className="w-full">
+                                    <div className="flex justify-start">
+                                        <span className="text-gray-600 text-xs">77 Participients</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-wrap mt-1 mb-0">
+                                <div className="w-full">
+                                    <div className="flex justify-start">
+                                        <StarRatings
+                                            rating={3.5}
+                                            starDimension="16px"
+                                            starSpacing="3px"
+                                            starRatedColor="rgb(251, 191, 36)"
+                                        />
+                                        <span className="text-xs text-gray-300 ml-3 mt-1.5">(3.5)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="w-3/12 pr-2">
+                            <div className="flex flex-wrap">
+                                <div className="w-full">
+                                    <div className="flex justify-end">
+                                        <HiDotsVertical className="mt-1 font-semibold text-xl text-gray-400" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="flex w-full flex-wrap mt-8 pr-3 justify-end">
+                                <button className="border flex border-maincolor rounded-2xl pl-3 pr-5 pt-1.5 pb-1.5 text-base text-maincolor font-semibold"><img className="h-5 w-5 mr-2" src={PlayIcon} alt="" />Start</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </>
             )
         }
         else if (isLoading === false) {

@@ -4,12 +4,10 @@ import { FaArrowRight } from "react-icons/fa";
 import CartCheckoutImg from '../../asset/images/checkout/course-cart-img.png';
 import Heart from '../../asset/images/checkout/Heart.svg';
 import Delete from '../../asset/images/checkout/Delete.svg';
-import { Link } from "react-router-dom";
 import StarRatings from 'react-star-ratings';
 import { HiDotsVertical } from "react-icons/hi";
 
 function CartSummeryMobile() {
-
     const userTheme = localStorage.getItem("theme");
     if (userTheme === null) {
         localStorage.setItem("theme", "light");
