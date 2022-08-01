@@ -17,10 +17,9 @@ function CartSummery() {
     const [total, setTotal] = useState(0);
     const [cartListData, setCartListData] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-
+    const cart_id = localStorage.getItem('cart_id')
+    console.log('cart id = ', cart_id);
     const MyCartDataLoad = () => {
-        const cart_id = localStorage.getItem('cart_id')
-        console.log('cart id = ', cart_id);
         if (cart_id != null){
             setIsLoading(true);
             axios.get(`${ApiUrl.BaseUrl}api/course/add-to-cart-all-course-list/${cart_id}/`).then((response) => {
@@ -38,6 +37,23 @@ function CartSummery() {
     }
 
     useEffect(() => {
+        var user_data = JSON.parse(localStorage.getItem('user_data'))
+        console.log('user data = ', user_data);
+        console.log('user data id = ', user_data['id']);
+        var user_id = user_data['id']
+        console.log('user id = ', user_id);
+        if (user_id != null){
+            let payload_data = {
+                cart_id: cart_id,
+                user_id: user_id
+            }
+            axios.post(`${ApiUrl.BaseUrl}api/course/cart-user-id-saved/`, payload_data).then((response) => {
+
+            })
+        }
+        else{
+            alert('login please')
+        }
         MyCartDataLoad();
     }, [])
 

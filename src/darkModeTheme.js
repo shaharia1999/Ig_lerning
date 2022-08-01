@@ -1,3 +1,5 @@
+import Footer from "./component/Common/Footer/Footer";
+
 function darkModeTheme() {
     const sunIcon = document.querySelector(".sun");
     const moonIcon = document.querySelector(".moon");
@@ -18,12 +20,14 @@ function darkModeTheme() {
             document.documentElement.classList.add('dark');
             sunIcon.classList.add("hidden");
             moonIcon.classList.add("show");
+            <Footer/>
             return;
         }
         else {
             document.documentElement.classList.remove('dark');
             sunIcon.classList.add("show");
             moonIcon.classList.add("hidden");
+            <Footer/>
             return;
         }
     };
