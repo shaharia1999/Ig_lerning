@@ -135,7 +135,7 @@ function MyCourseMobile() {
 
                             <div className="flex flex-wrap mt-1 mb-0">
                                 <div className="w-full">
-                                    <div className="flex sm:justify-center justify-start">
+                                    <div className="flex justify-start">
                                         <span className="text-gray-600 text-xs">77 Participients</span>
                                     </div>
                                 </div>
@@ -143,7 +143,7 @@ function MyCourseMobile() {
 
                             <div className="flex flex-wrap mt-1 mb-0">
                                 <div className="w-full">
-                                    <div className="flex sm:justify-center justify-start">
+                                    <div className="flex justify-start">
                                         <StarRatings
                                             rating={3.5}
                                             starDimension="16px"
@@ -179,7 +179,7 @@ function MyCourseMobile() {
                     <div className="my-1 bg-white dark:bg-dark-color3 p-2 rounded-lg shadow-lg px-1.5 w-full">
                         <div className="wrapper flex antialiased">
                             <div className="relative w-2/12">
-                                <img className="w-12 h-12 ml-1 rounded-lg"
+                                <img className="w-16 h-16 ml-1 rounded-lg"
                                     src={CartCheckoutImg} alt="" />
                             </div>
 
@@ -195,7 +195,7 @@ function MyCourseMobile() {
 
                                 <div className="flex flex-wrap mt-1 mb-0">
                                     <div className="w-full">
-                                        <div className="flex sm:justify-center justify-start">
+                                        <div className="flex justify-start">
                                             <span className="text-gray-600 dark:text-gray-400 text-xs">77 Participients</span>
                                         </div>
                                     </div>
@@ -203,7 +203,7 @@ function MyCourseMobile() {
 
                                 <div className="flex flex-wrap mt-0 mb-0">
                                     <div className="w-full">
-                                        <div className="flex sm:justify-center justify-start">
+                                        <div className="flex justify-start">
                                             <StarRatings
                                                 rating={my_course_list_data?.my_review?.rating}
                                                 starDimension="16px"
@@ -222,7 +222,7 @@ function MyCourseMobile() {
                                         <div className="flex justify-end">
                                             <div class="dropdown dropdown-end">
                                                 <label tabindex="0" className="btn btn-ghost btn-circle avatar">
-                                                    <HiDotsVertical className="mt-1 font-semibold text-xl text-gray-400" />
+                                                    <HiDotsVertical className="-mt-2 font-semibold text-lg text-gray-400" />
                                                 </label>
                                                 <ul tabindex="0" className="mt-0 dark:bg-gray-400 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
                                                     <li>
@@ -259,9 +259,9 @@ function MyCourseMobile() {
                                     </div>
                                 </div>
 
-                                <div className="flex w-full flex-wrap mt-1 pr-3 justify-end">
+                                <div className="flex w-full flex-wrap mt-0.5 pr-3 justify-end">
                                     <button
-                                        className="border flex border-maincolor rounded-2xl pl-4 pr-8 pt-1.5 pb-1.5 text-xs text-maincolor font-semibold">
+                                        className="border flex border-maincolor rounded-2xl px-3 py-1 text-xs text-maincolor font-semibold">
                                         <img className="h-4 w-4 mr-1" src={PlayIcon} alt="" />
                                         Start
                                     </button>
@@ -684,7 +684,7 @@ function MyCourseMobile() {
     else if (userTheme === "light") {
         return (
             <Fragment>
-                    <div className="container pl-4 pr-4 pt-5">
+                    <div className="container sm:px-6 px-4 pt-5">
                         <div className="flex justify-center flex-wrap text-gray-800">
                             <div className="w-full flex justify-center">
 
