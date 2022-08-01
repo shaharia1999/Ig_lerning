@@ -4,6 +4,7 @@ import NavBarTop from "../../component/Common/NavBarTop/NavBarTop";
 import darkModeTheme from "../../darkModeTheme";
 import NavMenuMobile from "../../component/Common/NavMenuMobile/NavMenuMobile";
 import CartCheckoutMobile from "../../component/CartCheckout/CartCheckoutMobile";
+import CartCheckoutTablet from "../../component/CartCheckout/CartCheckoutTablet";
 
 function CartCheckoutPage() {
     useEffect(() => {
@@ -23,6 +24,9 @@ function CartCheckoutPage() {
             </div>
             <div className="MobileCartCheckout">
                 <CartCheckoutMobile />
+            </div>
+            <div className="TabletCartCheckout">
+                <CartCheckoutTablet />
             </div>
         </Fragment>
     );

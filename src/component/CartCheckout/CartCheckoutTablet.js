@@ -8,10 +8,8 @@ import Visa from '../../asset/images/payment/visa.svg';
 import MasterCard from '../../asset/images/payment/master-card.svg';
 import IPay from '../../asset/images/payment/i-pay.svg';
 import BitCoin from '../../asset/images/payment/bit-coin.svg';
-import CartCheckoutImg from '../../asset/images/checkout/course-cart-img.png';
-import { Link } from "react-router-dom";
 
-function CartCheckoutMobile() {
+function CartCheckoutTablet() {
     const [selected, setSelected] = useState("");
     const onSelect = (code) => setSelected(code);
 
@@ -39,10 +37,10 @@ function CartCheckoutMobile() {
                         <div className="block w-full">
                             <div className="flex flex-wrap g-0">
 
-                                <div className="w-full pl-4 pr-4">
+                                <div className="w-full pl-7 pr-7">
                                     <div className="mx-3">
                                         <div className=" justify-start">
-                                            <h4 className="text-xl text-maingray font-medium mt-5">Payment Details</h4>
+                                            <h4 className="text-xl text-maingray font-medium mt-7">Payment Details</h4>
                                             <h6 className="text-xs text-maingray font-light">Complete your purchase by providing payment details</h6>
                                         </div>
 
@@ -174,7 +172,7 @@ function CartCheckoutMobile() {
                                             </div>
 
 
-                                            <div className="flex flex-wrap mb-5">
+                                            <div className="flex flex-wrap">
                                                 <label for="exampleFormControlInput1" className="form-label text-sm inline-block mb-2 text-maingray">Apply Cupon</label>
 
                                                 <div className="relative w-full">
@@ -190,78 +188,17 @@ function CartCheckoutMobile() {
                                             </div>
                                         </form>
 
-                                    </div>
-                                </div>
-
-                                <div className="navbar shadow-CourseTitle justify-center sticky bottom-0 flex bg-white p-4 shadow-2xl rounded-t-3xl">
-                                    <div className="flex flex-wrap ">
-                                        <div className="w-80 px-2">
-
-                                            <div className="flex mt-4">
-                                                <div className="w-full flex">
-                                                    <div className="w-1/2">
-                                                        <h6 className="text-sm text-cart-item-title font-medium">Sub Total</h6>
-                                                    </div>
-                                                    <div className="w-1/2">
-                                                        <div className="float-right flex">
-                                                            <h6 className="text-sm text-cart-item-title font-medium">$490</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        <div className="flex flex-wrap mt-6 mb-8">
+                                            <div className="w-full flex">
+                                                <label data-mdb-ripple="true"
+                                                    data-mdb-ripple-color="light"
+                                                    className="btn-block cursor-pointer text-center justify-center pt-3 pb-3 rounded-sm bg-maincolor text-white text-sm font-normal"><span className="ml-20">Proceed to Pay</span><span className="float-right"> <FaArrowRight className="ml-12 mr-3 mt-0.5" /></span></label>
                                             </div>
-
-                                            <hr className="mt-1 mb-1" />
-
-                                            <div className="flex flex-wrap">
-                                                <div className="w-1/2">
-                                                    <h6 className="text-sm text-cart-item-title font-medium">Tax</h6>
-                                                </div>
-                                                <div className="w-1/2">
-                                                    <div className="float-right flex">
-                                                        <h6 className="text-sm text-cart-item-title font-medium">$20</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <hr className="mt-1 mb-1" />
-
-
-                                            <div className="flex flex-wrap">
-                                                <div className="w-1/2 flex">
-                                                    <h6 className="text-sm text-cart-item-title font-medium">Cupon <span className="text-xs text-gray-500 font-light">(30% OFF)</span></h6>
-                                                </div>
-                                                <div className="w-1/2">
-                                                    <div className="float-right justify-end">
-                                                        <h6 className="text-sm text-cart-item-title font-medium">-$80</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <hr className="mt-1 mb-1" />
-
-                                            <div className="flex flex-wrap">
-                                                <div className="w-1/2 flex">
-                                                    <h6 className="text-base text-cart-item-title font-semibold">Total</h6>
-                                                </div>
-                                                <div className="w-1/2">
-                                                    <div className="float-right flex">
-                                                        <h6 className="text-base text-maincolor font-semibold">$490</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div className="flex flex-wrap mt-4">
-                                                <div className="w-full flex">
-                                                    <label data-mdb-ripple="true"
-                                                        data-mdb-ripple-color="light"
-                                                        className="btn-block cursor-pointer text-center justify-center pt-2 pb-2 rounded-sm bg-maincolor text-white text-sm font-normal"><span className="ml-20">Proceed to Pay</span><span className="float-right"> <FaArrowRight className="ml-12 mr-3 mt-0.5" /></span></label>
-                                                </div>
-                                            </div>
-
                                         </div>
+
                                     </div>
                                 </div>
+
 
                             </div>
                         </div>
@@ -271,4 +208,4 @@ function CartCheckoutMobile() {
         </Fragment >
     );
 }
-export default CartCheckoutMobile;
+export default CartCheckoutTablet;

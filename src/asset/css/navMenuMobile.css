@@ -182,6 +182,10 @@
     /* Cart Checkout Page */
     .MobileCartCheckout {}
 
+    .TabletCartCheckout{
+        display: none;
+    }
+
     .DesktopCartCheckout {
         display: none;
     }
@@ -303,6 +307,10 @@
 
     /* Cart Checkout Page */
     .MobileCartCheckout {}
+    
+    .TabletCartCheckout{
+        display: none;
+    }
 
     .DesktopCartCheckout {
         display: none;
@@ -425,6 +433,10 @@
     /* Cart Checkout Page */
     .MobileCartCheckout {}
 
+    .TabletCartCheckout{
+        display: none;
+    }
+
     .DesktopCartCheckout {
         display: none;
     }
@@ -525,10 +537,12 @@
 
     /* Cart Payment */
     .CartPaymentMobile {
-        display: none;
+        
     }
 
-    .CartPaymentDesktop {}
+    .CartPaymentDesktop {
+        display: none;
+    }
 
 
     /* checkout Page */
@@ -551,7 +565,13 @@
         display: none;
     }
 
-    .DesktopCartCheckout {}
+    .TabletCartCheckout{
+       
+    }
+
+    .DesktopCartCheckout {
+        display: none;
+    }
 
 
     /* Course Search Filter Page */
@@ -679,6 +699,10 @@
         display: none;
     }
 
+    .TabletCartCheckout{
+        display: none;
+    }
+
     .DesktopCartCheckout {}
 
 
@@ -801,6 +825,10 @@
         display: none;
     }
 
+    .TabletCartCheckout{
+        display: none;
+    }
+
     .DesktopCartCheckout {}
 
     /* Course Search Filter Page */
@@ -920,6 +948,10 @@
 
     /* Cart Checkout Page */
     .MobileCartCheckout {
+        display: none;
+    }
+
+    .TabletCartCheckout{
         display: none;
     }
 
