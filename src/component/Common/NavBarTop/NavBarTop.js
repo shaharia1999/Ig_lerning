@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import 'flowbite';
+import '../../../asset/css/searchBarHome.css';
 import { Link, Redirect } from 'react-router-dom';
 import MainLogo from "../../../asset/images/logo/main-logo.svg";
 import BlackMainLogo from "../../../asset/images/logo/black-iglearn-main-logo.svg";
@@ -17,6 +18,8 @@ import Notification from '../../../asset/images/nav-menu-dropdown/Notification.s
 import Setting from '../../../asset/images/nav-menu-dropdown/Setting.svg';
 import Wallet from '../../../asset/images/nav-menu-dropdown/Wallet.svg';
 import Logout from '../../../asset/images/nav-menu-dropdown/power-off.png';
+import searchDashIcon from '../../../asset/images/nav-menu-dropdown/search-dash-icon.png';
+import { IoCloseOutline } from "react-icons/io5";
 
 function NavBarTop() {
     const [teacherEmail, setTeacherEmail] = useState('');
@@ -35,7 +38,6 @@ function NavBarTop() {
     else {
         user_email = user_data['email'];
     }
-
 
     const onHomeLoginRedirect = () => {
         if (homeLoginRedirect === true) {
@@ -72,6 +74,7 @@ function NavBarTop() {
             }
         })
     }
+
     const StudentLoginSubmit = () => {
         const student_login_data = {
             username_or_email: studentEmail,
@@ -198,32 +201,32 @@ function NavBarTop() {
                                 <ul className="text-base text-gray-700 md:flex md:justify-between md:pt-0">
                                     <li>
                                         <Link className="md:p-4 block font-light 2xl:text-lg text-sm text-white " to="/">
-                                            <span className="hover:border-b-4 hover:pb-2 hover:border-white">Home</span>
+                                            <span className="hover:border-b-4 hover:pb-2 hover:border-white -ml-4">Home</span>
                                             <span className="2xl:mx-4 xl:mx-3 lg:mx-2 font-light text-white 2xl:text-xl text-sm">|</span>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link className="md:p-4 block font-light 2xl:text-lg text-sm text-white" to="/price">
-                                            <span className="hover:border-b-4 hover:pb-2 hover:border-white">Pricing</span>
+                                            <span className="hover:border-b-4 hover:pb-2 hover:border-white -ml-4">Pricing</span>
                                             <span className="2xl:mx-4 xl:mx-3 lg:mx-2 font-light text-white 2xl:text-xl text-sm">|</span>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link className="md:p-4 block font-light 2xl:text-lg text-sm text-white" to="/ig-learn-Pro">
-                                            <span className="hover:border-b-4 hover:pb-2 hover:border-white">igLearn Pro</span>
+                                            <span className="hover:border-b-4 hover:pb-2 hover:border-white -ml-4">igLearn Pro</span>
                                             <span className="2xl:mx-4 xl:mx-3 lg:mx-2 font-light text-white 2xl:text-xl text-sm">|</span>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link className="md:p-4 block font-light 2xl:text-lg text-sm text-white" to="/about">
-                                            <span className="hover:border-b-4 hover:pb-2 hover:border-white">About Us</span>
+                                            <span className="hover:border-b-4 hover:pb-2 hover:border-white -ml-4">About Us</span>
                                             <span className="2xl:mx-4 xl:mx-3 lg:mx-2 font-light text-white 2xl:text-xl text-sm">|</span>
                                         </Link>
                                     </li>
                                     <li>
                                         <div class="dropdown dropdown-end">
                                             <label tabindex="0" className="">
-                                                <button className="outline outline-2 hover:bg-white 2xl:mt-3 2xl:mr-12 xl:mt-2 xl:mr-10 lg:mt-2 lg:mr-5 float-right 2xl:h-12 2xl:w-52 xl:h-10 xl:w-44 lg:h-8 lg:w-36 rounded-3xl ml-auto 2xl:text-base xl:text-sm lg:text-xs font-light text-white hover:text-maincolor">
+                                                <button className="outline outline-2 hover:bg-white 2xl:mt-3 2xl:mr-8 xl:mt-2 xl:mr-8 lg:mt-2 lg:mr-5 float-right 2xl:h-10 2xl:w-52 xl:h-10 xl:w-44 lg:h-8 lg:w-36 rounded-3xl ml-auto 2xl:text-base xl:text-sm lg:text-xs font-light text-white hover:text-maincolor">
                                                     <i className="fa fa-graduation-cap mr-1"></i>
                                                     I want to Teach
                                                 </button>
@@ -300,7 +303,7 @@ function NavBarTop() {
                                     <li className="2xl:mr-10 xl:mr-10 lg:mr-5">
                                         <div class="dropdown dropdown-end">
                                             <label tabindex="0" className="">
-                                                <button className="outline outline-2 hover:bg-white 2xl:mt-3 2xl:mr-12 xl:mt-2 xl:mr-10 lg:mt-2 lg:mr-5 float-right 2xl:h-12 2xl:w-52 xl:h-10 xl:w-44 lg:h-8 lg:w-36 rounded-3xl ml-auto 2xl:text-base xl:text-sm lg:text-xs font-light text-white hover:text-maincolor"> <i className="fa fa-book-reader mr-1"></i> I want to Learn</button>
+                                                <button className="outline outline-2 hover:bg-white 2xl:mt-3 2xl:mr-12 xl:mt-2 xl:mr-10 lg:mt-2 lg:mr-5 float-right 2xl:h-10 2xl:w-52 xl:h-10 xl:w-44 lg:h-8 lg:w-36 rounded-3xl ml-auto 2xl:text-base xl:text-sm lg:text-xs font-light text-white hover:text-maincolor"> <i className="fa fa-book-reader mr-1"></i> I want to Learn</button>
                                             </label>
                                             <ul tabindex="0" className="2xl:mt-20 xl:mt-16 lg:mt-16 2xl:-mr-10 xl:-mr-16 lg:-mr-6 justify-center dark:bg-dark-color1 p-8 shadow-lg menu menu-compact dropdown-content flex bg-base-100 rounded-box xl:w-96 lg:w-80">
                                                 <div className="h-4 w-4 bg-white dark:bg-dark-color1 2xl:ml-40 xl:ml-40 lg:ml-32 rotate-45 2xl:-mt-10 xl:-mt-10 lg:-mt-10 rounded-sm"></div>                                    <form className="flex flex-wrap 2xl:w-full">
@@ -373,8 +376,179 @@ function NavBarTop() {
                         <nav className="flex flex-wrap top-0 sticky-top items-center justify-between w-full py-4 md:py-0 px-4 text-lg bg-maincolor dark:bg-dark-color2">
                             <div className="2xl:h-24 xl:h-20 lg:h-20">
                                 <a href='/'>
-                                    <img className="2xl:h-24 xl:h-20 lg:h-20 2xl:mt-3 xl:mt-2 lg:mt-2 2xl:ml-24 xl:ml-8 lg:ml-4" src={MainLogo} alt="" />
+                                    <img className="2xl:h-24 xl:h-20 lg:h-16 2xl:mt-3 xl:mt-2 lg:mt-3 2xl:ml-24 xl:ml-8 lg:ml-4" src={MainLogo} alt="" />
                                 </a>
+                            </div>
+
+                            <div class="dropdown">
+                                <label tabindex="0" className="flex cursor-pointer">
+                                    <div>
+                                        <div className="flex">
+                                            <div className="form">
+                                                <div className="flex bg-white 2xl:w-128 xl:w-112 lg:w-80 rounded-3xl 2xl:py-1.5 xl:py-1 lg:py-0.5">
+                                                    <i className="fa fa-search text-gray-400 xl:ml-6 lg:ml-4 mt-3"></i>
+                                                    <input type="text"
+                                                        className="form-control focus:border-none focus:ring-0 text-sm w-112 pr-0 bg-transparent form-input border-none xl:ml-4 lg:ml-0"
+                                                        placeholder="Find your course"
+                                                    />
+                                                    <span className="rotate-90 -ml-3 xl:mr-10 lg:mr-8">
+                                                        <img className="2xl:h-5 2xl:w-5 xl:h-4 xl:w-5 lg:h-3 lg:w-6"
+                                                            src={searchDashIcon} alt=""
+                                                        />
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                                <ul tabindex="0" className="2xl:mt-1 xl:mt-1 lg:mt-1 justify-center dark:bg-dark-color1 pl-0 shadow-xl menu menu-compact dropdown-content flex bg-base-100 rounded-lg">
+                                    <div className="2xl:w-128 px-5 py-5">
+                                        <div className="mt-1">
+                                            <h6 className="text-base text-maingray font-normal ml-1.5">Search History</h6>
+                                            <div className="flex-wrap flex">
+                                                <span
+                                                    className="xl:px-4 xl:py-1.5 xl:mx-1 lg:px-3 lg:py-1 lg:mx-0.5 rounded-full text-maincolor bg-maincolor/5 font-normal text-xs flex border border-maincolor/80 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                                    UI/UX design Course
+                                                    <button className="bg-transparent hover focus:outline-none">
+                                                        <span>
+                                                            <IoCloseOutline
+                                                                className="xl:h-4 xl:w-4 xl:ml-3 lg:h-3 lg:w-3 lg:ml-2 rounded-full border border-maincolor"
+                                                            />
+                                                        </span>
+                                                    </button>
+                                                </span>
+
+                                                <span
+                                                    className="xl:px-4 xl:py-1.5 xl:mx-1 lg:px-3 lg:py-1 lg:mx-0.5 rounded-full text-maincolor bg-maincolor/5 font-normal text-xs flex border border-maincolor/80 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                                    Master Degree
+                                                    <button className="bg-transparent hover focus:outline-none">
+                                                        <span>
+                                                            <IoCloseOutline
+                                                                className="xl:h-4 xl:w-4 xl:ml-3 lg:h-3 lg:w-3 lg:ml-2 rounded-full border border-maincolor"
+                                                            />
+                                                        </span>
+                                                    </button>
+                                                </span>
+
+                                                <span
+                                                    className="xl:px-4 xl:py-1.5 xl:mx-1 lg:px-3 lg:py-1 lg:mx-0.5 rounded-full text-maincolor bg-maincolor/5 font-normal text-xs flex border border-maincolor/80 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                                    Courses
+                                                    <button className="bg-transparent hover focus:outline-none">
+                                                        <span>
+                                                            <IoCloseOutline
+                                                                className="xl:h-4 xl:w-4 xl:ml-3 lg:h-3 lg:w-3 lg:ml-2 rounded-full border border-maincolor"
+                                                            />
+                                                        </span>
+                                                    </button>
+                                                </span>
+
+                                                <span
+                                                    className="xl:px-4 xl:py-1.5 xl:mx-1 lg:px-3 lg:py-1 lg:mx-0.5 rounded-full text-maincolor bg-maincolor/5 font-normal text-xs flex border border-maincolor/80 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                                    Big Data
+                                                    <button className="bg-transparent hover focus:outline-none">
+                                                        <span>
+                                                            <IoCloseOutline
+                                                                className="xl:h-4 xl:w-4 xl:ml-3 lg:h-3 lg:w-3 lg:ml-2 rounded-full border border-maincolor"
+                                                            />
+                                                        </span>
+                                                    </button>
+                                                </span>
+
+                                                <span
+                                                    className="xl:px-4 xl:py-1.5 xl:mx-1 lg:px-3 lg:py-1 lg:mx-0.5 rounded-full text-maincolor bg-maincolor/5 font-normal text-xs flex border border-maincolor/80 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                                    Courses
+                                                    <button className="bg-transparent hover focus:outline-none">
+                                                        <span>
+                                                            <IoCloseOutline
+                                                                className="xl:h-4 xl:w-4 xl:ml-3 lg:h-3 lg:w-3 lg:ml-2 rounded-full border border-maincolor"
+                                                            />
+                                                        </span>
+                                                    </button>
+                                                </span>
+
+                                                <span
+                                                    className="xl:px-4 xl:py-1.5 xl:mx-1 lg:px-3 lg:py-1 lg:mx-0.5 rounded-full text-maincolor bg-maincolor/5 font-normal text-xs flex border border-maincolor/80 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                                    AWS Complete Course
+                                                    <button className="bg-transparent hover focus:outline-none">
+                                                        <span>
+                                                            <IoCloseOutline
+                                                                className="xl:h-4 xl:w-4 xl:ml-3 lg:h-3 lg:w-3 lg:ml-2 rounded-full border border-maincolor"
+                                                            />
+                                                        </span>
+                                                    </button>
+                                                </span>
+
+                                                <span
+                                                    className="xl:px-4 xl:py-1.5 xl:mx-1 lg:px-3 lg:py-1 lg:mx-0.5 rounded-full text-maincolor bg-maincolor/5 font-normal text-xs flex border border-maincolor/80 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                                    Courses
+                                                    <button className="bg-transparent hover focus:outline-none">
+                                                        <span>
+                                                            <IoCloseOutline
+                                                                className="xl:h-4 xl:w-4 xl:ml-3 lg:h-3 lg:w-3 lg:ml-2 rounded-full border border-maincolor"
+                                                            />
+                                                        </span>
+                                                    </button>
+                                                </span>
+
+                                                <span
+                                                    className="xl:px-4 xl:py-1.5 xl:mx-1 lg:px-3 lg:py-1 lg:mx-0.5 rounded-full text-maincolor bg-maincolor/5 font-normal text-xs flex border border-maincolor/80 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                                    Big Data Courses
+                                                    <button className="bg-transparent hover focus:outline-none">
+                                                        <span>
+                                                            <IoCloseOutline
+                                                                className="xl:h-4 xl:w-4 xl:ml-3 lg:h-3 lg:w-3 lg:ml-2 rounded-full border border-maincolor"
+                                                            />
+                                                        </span>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div className="mt-5 mb-3">
+                                            <h6 className="text-base text-maingray font-normal ml-1.5">Recommanded</h6>
+                                            <div className="flex-wrap flex">
+                                                <span
+                                                    className="xl:px-4 xl:py-1.5 xl:mx-1 lg:px-3 lg:py-1 lg:mx-0.5 rounded-full text-maincolor bg-maincolor/5 font-normal text-xs flex border border-maincolor/80 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                                    Itialian
+                                                </span>
+
+                                                <span
+                                                    className="xl:px-4 xl:py-1.5 xl:mx-1 lg:px-3 lg:py-1 lg:mx-0.5 rounded-full text-maincolor bg-maincolor/5 font-normal text-xs flex border border-maincolor/80 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                                    With Certificate
+                                                </span>
+
+                                                <span
+                                                    className="xl:px-4 xl:py-1.5 xl:mx-1 lg:px-3 lg:py-1 lg:mx-0.5 rounded-full text-maincolor bg-maincolor/5 font-normal text-xs flex border border-maincolor/80 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                                    Courses
+                                                </span>
+
+                                                <span
+                                                    className="xl:px-4 xl:py-1.5 xl:mx-1 lg:px-3 lg:py-1 lg:mx-0.5 rounded-full text-maincolor bg-maincolor/5 font-normal text-xs flex border border-maincolor/80 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                                    Big Data Courses
+                                                </span>
+
+                                                <span
+                                                    className="xl:px-4 xl:py-1.5 xl:mx-1 lg:px-3 lg:py-1 lg:mx-0.5 rounded-full text-maincolor bg-maincolor/5 font-normal text-xs flex border border-maincolor/80 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                                    Courses
+                                                </span>
+
+                                                <span
+                                                    className="xl:px-4 xl:py-1.5 xl:mx-1 lg:px-3 lg:py-1 lg:mx-0.5 rounded-full text-maincolor bg-maincolor/5 font-normal text-xs flex border border-maincolor/80 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                                    Italian
+                                                </span>
+
+                                                <span
+                                                    className="xl:px-4 xl:py-1.5 xl:mx-1 lg:px-3 lg:py-1 lg:mx-0.5 rounded-full text-maincolor bg-maincolor/5 font-normal text-xs flex border border-maincolor/80 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                                    Courses
+                                                </span>
+
+                                                <span
+                                                    className="xl:px-4 xl:py-1.5 xl:mx-1 lg:px-3 lg:py-1 lg:mx-0.5 rounded-full text-maincolor bg-maincolor/5 font-normal text-xs flex border border-maincolor/80 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                                    Big Data Courses
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
                             </div>
 
                             <svg
@@ -396,28 +570,31 @@ function NavBarTop() {
                             <div className="hidden w-full md:flex md:items-center md:w-auto" id="menu">
                                 <ul className="text-base text-gray-700 md:flex md:justify-between md:pt-0">
                                     <li>
-                                        <Link className="md:p-4 block font-light 2xl:text-lg text-sm text-white " to="/">
-                                            <span className="hover:border-b-4 hover:pb-2 hover:border-white">Certifications</span>
+                                        <Link className="md:p-4 block font-light 2xl:text-base text-sm text-white " to="/">
+                                            <span className="hover:border-b-4 hover:pb-2 -ml-5 hover:border-white">Certifications</span>
                                             <span className="2xl:mx-4 xl:mx-3 lg:mx-2 font-light text-white 2xl:text-xl text-sm">|</span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link className="md:p-4 block font-light 2xl:text-lg text-sm text-white" to="/price">
-                                            <span className="hover:border-b-4 hover:pb-2 hover:border-white">University</span>
+                                        <Link className="md:p-4 block font-light 2xl:text-base text-sm text-white" to="/price">
+                                            <span className="hover:border-b-4 hover:pb-2 -ml-5 hover:border-white">University</span>
                                             <span className="2xl:mx-4 xl:mx-3 lg:mx-2 font-light text-white 2xl:text-xl text-sm">|</span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link className="md:p-4 block font-light 2xl:text-lg text-sm text-white" to="/ig-learn-Pro">
-                                            <span className="hover:border-b-4 hover:pb-2 hover:border-white">IG for Business</span>
+                                        <Link className="md:p-4 block font-light 2xl:text-base text-sm text-white" to="/ig-learn-Pro">
+                                            <span className="hover:border-b-4 hover:pb-2 -ml-5 hover:border-white">IG for Business</span>
                                             <span className="2xl:mx-4 xl:mx-3 lg:mx-2 font-light text-white 2xl:text-xl text-sm">|</span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <div class="dropdown dropdown-end 2xl:mr-24 xl:mr-20 lg:mr-16">
+                                        <div class="dropdown dropdown-end 2xl:mr-20 xl:mr-16 lg:mr-10">
                                             <label tabindex="0" className="flex cursor-pointer">
-                                                <img className='2xl:h-12 2xl:w-12 xl:h-10 xl:w-10 lg:h-8 lg:w-8 border-2 xl:mt-2 lg:mt-2.5 border-white rounded-full' src={StudentImg} alt="" />
-                                                <div className='xl:mt-2 xl:ml-3 lg:mt-2 lg:ml-2'>
+                                                <img className='xl:h-10 xl:w-10 lg:h-8 lg:w-8 border-2 xl:mt-3 lg:mt-2.5 border-white rounded-full'
+                                                    src={StudentImg}
+                                                    alt=""
+                                                />
+                                                <div className='xl:mt-3 xl:ml-3 lg:mt-2 lg:ml-2'>
                                                     <h6 className='2xl:text-base xl:text-sm text-sm text-white 2xl:font-medium xl:font-normal'>Monirul Islam</h6>
                                                     <h6 className='2xl:text-sm xl:text-xs lg:text-2xs text-white font-light 2xl:-mt-1 xl:mt-auto lg:-mt-1'>Student</h6>
                                                 </div>
@@ -428,7 +605,10 @@ function NavBarTop() {
                                                         <li className="xl:mt-1 lg:mt-0">
                                                             <Link className="" to="/my-course">
                                                                 <span className="text-sm text-maingray flex xl:mt-1 lg:mt-0 mb-1">
-                                                                    <img className="h-4 w-4 mr-3 mt-1" src={Home} alt="" />
+                                                                    <img className="h-4 w-4 mr-3 mt-1"
+                                                                        src={Home}
+                                                                        alt=""
+                                                                    />
                                                                     My Course
                                                                 </span>
                                                             </Link>
@@ -436,7 +616,10 @@ function NavBarTop() {
                                                         <li className="xl:mt-1 lg:mt-0">
                                                             <Link className="" to="/cart-summery">
                                                                 <span className="text-sm text-maingray flex xl:mt-1 lg:mt-0 mb-1">
-                                                                    <img className="h-4 w-4 mr-3 mt-1" src={Graph} alt="" />
+                                                                    <img className="h-4 w-4 mr-3 mt-1"
+                                                                        src={Graph}
+                                                                        alt=""
+                                                                    />
                                                                     Cart
                                                                     <h6 className="bg-maincolor w-5 h-5 text-2xs text-white rounded-full pl-1.5 ml-2">3</h6>
                                                                 </span>
@@ -445,7 +628,9 @@ function NavBarTop() {
                                                         <li className="xl:mt-1 lg:mt-0">
                                                             <Link className="" to="/">
                                                                 <span className="text-sm text-maingray flex xl:mt-1 lg:mt-0 mb-1">
-                                                                    <img className="h-4 w-4 mr-3 mt-1" src={Notification} alt="" />
+                                                                    <img className="h-4 w-4 mr-3 mt-1"
+                                                                        src={Notification} alt=""
+                                                                    />
                                                                     Notification
                                                                 </span>
                                                             </Link>
@@ -453,7 +638,9 @@ function NavBarTop() {
                                                         <li className="xl:mt-1 lg:mt-0">
                                                             <Link className="" to="/">
                                                                 <span className="text-sm text-maingray flex xl:mt-1 lg:mt-0 mb-1">
-                                                                    <img className="h-4 w-4 mr-3 mt-1" src={Bag} alt="" />
+                                                                    <img className="h-4 w-4 mr-3 mt-1"
+                                                                        src={Bag} alt=""
+                                                                    />
                                                                     Go To dashboard
                                                                 </span>
                                                             </Link>
@@ -461,7 +648,9 @@ function NavBarTop() {
                                                         <li className="xl:mt-1 lg:mt-0">
                                                             <Link className="" to="/">
                                                                 <span className="text-sm text-maingray flex xl:mt-1 lg:mt-0 mb-1">
-                                                                    <img className="h-4 w-4 mr-3 mt-1" src={Wallet} alt="" />
+                                                                    <img className="h-4 w-4 mr-3 mt-1"
+                                                                        src={Wallet} alt=""
+                                                                    />
                                                                     Payment Method
                                                                 </span>
                                                             </Link>
@@ -469,7 +658,9 @@ function NavBarTop() {
                                                         <li className="xl:mt-1 lg:mt-0">
                                                             <Link className="" to="/">
                                                                 <span className="text-sm text-maingray flex xl:mt-1 lg:mt-0 mb-1">
-                                                                    <img className="h-4 w-4 mr-3 mt-1" src={Chat} alt="" />
+                                                                    <img className="h-4 w-4 mr-3 mt-1"
+                                                                        src={Chat} alt=""
+                                                                    />
                                                                     Messages
                                                                     <h6 className="bg-maincolor w-5 h-5 text-2xs text-white rounded-full pl-1.5 ml-2">10</h6>
                                                                 </span>
@@ -478,7 +669,9 @@ function NavBarTop() {
                                                         <li className="xl:mt-1 lg:mt-0">
                                                             <Link className="" to="/">
                                                                 <span className="text-sm text-maingray flex xl:mt-1 lg:mt-0 mb-1">
-                                                                    <img className="h-4 w-4 mr-3 mt-1" src={Setting} alt="" />
+                                                                    <img className="h-4 w-4 mr-3 mt-1"
+                                                                        src={Setting} alt=""
+                                                                    />
                                                                     Account Settings
                                                                 </span>
                                                             </Link>
@@ -486,7 +679,9 @@ function NavBarTop() {
                                                         <li className="xl:mt-1 lg:mt-0">
                                                             <Link className="" onClick={onLogout}>
                                                                 <span className="text-sm text-maingray flex xl:mt-1 lg:mt-0 mb-1">
-                                                                    <img className="h-4 w-4 mr-3 mt-1" src={Logout} alt="" />
+                                                                    <img className="h-4 w-4 mr-3 mt-1"
+                                                                        src={Logout} alt=""
+                                                                    />
                                                                     Logout
                                                                 </span>
                                                             </Link>
@@ -497,13 +692,11 @@ function NavBarTop() {
                                         </div>
                                     </li>
                                 </ul>
-
                             </div>
                         </nav>
                     )
                 }
             })()}
-
             {onHomeRedirect}
         </Fragment>
     );

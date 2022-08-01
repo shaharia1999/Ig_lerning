@@ -8,7 +8,6 @@ import IntelloGeekSlider3 from "../../../asset/images/banner/IntelloGeek-Slider3
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import ReactFlagsSelect from "react-flags-select";
 
 function HomeBanner() {
     const [isLoading, setIsLoading] = useState(false);
@@ -82,20 +81,20 @@ function HomeBanner() {
                 </div>
 
 
-                <div className="container 2xl:-mt-128 xl:-mt-24 lg:-mt-24 md:-mt-24 stack flex 2xl:p-12 xl:p-12 lg:p-10 md:p-8 2xl:mb-56">
+                <div className="container 2xl:-mt-128 xl:-mt-112 lg:-mt-96 md:-mt-96 stack flex 2xl:p-12 xl:p-12 lg:p-10 md:p-8 2xl:mb-56 xl:mb-40 lg:mb-36 md:mb-36">
                     <div className="flex flex-wrap">
                         <div className="w-full">
-                            <h6 className="2xl:text-5xl 2xl:text-maingray 2xl:font-semibold 2xl:leading-relax">Learn what you want, <br /> Where you want!</h6> <br />
+                            <h6 className="2xl:text-5xl xl:text-4xl lg:text-3xl md:text-3xl text-maingray font-semibold 2xl:leading-relax">Learn what you want, <br /> Where you want!</h6> <br />
                         </div>
                         <div className="w-full">
                             <div className="mt-2 flex">
                                 <div className="form">
-                                    <div className="flex bg-white w-128 rounded-3xl py-1.5">
-                                        <i className="fa fa-search ml-6 mt-3"></i>
+                                    <div className="flex bg-white w-128 rounded-3xl 2xl:py-1.5 xl:py-1 lg:py-1 md:py-0.5">
+                                        <i className="fa fa-search text-gray-400 ml-6 mt-3"></i>
                                         <input type="text" className="form-control focus:border-none focus:ring-0 text-sm w-64 pr-0 bg-transparent form-input border-none ml-4" placeholder="What do you want to learn today ?" />
                                         <span className="rotate-90 -ml-3 mr-5"><hr className='w-7 border' /></span>
                                         <div className="bg-white z-50">
-                                            <select id="countries" className=" bg-transparent text-gray-900 text-sm rounded-lg border-none focus:border-none focus:ring-0 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <select id="countries" className="bg-transparent text-gray-400 text-sm rounded-lg border-none focus:border-none focus:ring-0 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                                 <option selected>All</option>
                                                 <option value="1">Business</option>
                                                 <option value="2">Programming</option>
@@ -108,7 +107,7 @@ function HomeBanner() {
                                     </div>
                                 </div>
 
-                                <button className="btn rounded-3xl px-12 py-2 ml-3 text-white text-sm bg-maincolor border-none">Search</button>
+                                <button className="btn rounded-3xl lg:px-12 md:px-8 lg:py-2 md:py-0 ml-3 text-white text-sm bg-maincolor border-none">Search</button>
                             </div>
                         </div>
                     </div>

@@ -72,10 +72,10 @@ function NavMenuMobile() {
     const SideNavOpenClose = () => {
         if (SideNavState === "sideNavOpen") {
             setSideNavState("sideNavClose");
-            setContentOverState("ContentOverlayClose")
+            setContentOverState("ContentOverlayClose");
         } else {
             setSideNavState("sideNavOpen");
-            setContentOverState("ContentOverlayOpen")
+            setContentOverState("ContentOverlayOpen");
         }
     }
 
@@ -131,8 +131,16 @@ function NavMenuMobile() {
                     </div>
                     <div className="w-1/3">
                         <div className="flex" style={{ float: "right" }}>
-                            <div><img className="cursor-pointer mx-1" src={SearchIcon} alt="" /></div>
-                            <div><img className="cursor-pointer mx-1" src={CartIcon} alt="" /></div>
+                            <div>
+                                <img className="cursor-pointer mx-1"
+                                    src={SearchIcon} alt=""
+                                />
+                            </div>
+                            <div>
+                                <img className="cursor-pointer mx-1"
+                                    src={CartIcon} alt=""
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>

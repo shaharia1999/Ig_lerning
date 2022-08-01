@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { FaStar, FaThList } from "react-icons/fa";
+import { FaThList } from "react-icons/fa";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import { IoCloseOutline } from "react-icons/io5";
 import SpeedMeter from "../../asset/images/icon/icon_level.png";
@@ -7,14 +7,9 @@ import CertificateIcon from "../../asset/images/icon/icon_certificate.png";
 import LoveIcon from "../../asset/images/icon/love-icon.png";
 import ShareIcon from "../../asset/images/icon/icon_share.png";
 import Play from "../../asset/images/icon/play.png";
-import CourseLogo from "../../asset/images/logo/course-logo.svg";
-import MyVideo from "../../asset/video/mov_bbb.mp4";
 import 'tw-elements';
 import StarRatings from 'react-star-ratings';
 import ReactFlagsSelect from "react-flags-select";
-import MultiRangeSlider from "multi-range-slider-react";
-import webroukCustomRange from "https://cdn.skypack.dev/webrouk-custom-range@latest";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import ApiUrl from "../../Api/ApiUrl";
 
