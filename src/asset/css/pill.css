@@ -55,7 +55,6 @@
 }
 
 
-
 .nav-pills .nav-link-course {
     /* color: #000000!important; */
     box-shadow: none;
@@ -72,3 +71,21 @@
 }
 
 
+
+/* my course details page nav-link */
+
+.nav-pills .nav-link-my-course-details {
+    /* color: #000000!important; */
+    box-shadow: none;
+}
+.nav-pills .nav-link-my-course-details.active {
+    color: #000000 !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: #D76E2D;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 0;
+    padding-bottom: 3px;
+}
