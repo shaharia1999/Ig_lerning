@@ -25,7 +25,7 @@ function DiscountCardCourse() {
     if (isLoading === true) {
         return (
             <Fragment>
-                <div className="rounded-lg fixed top-72 animate-pulse">
+                <div className="rounded-lg fixed xl:top-72 lg:top-64 animate-pulse">
                     <div className="bg-white rounded-2xl">
                         <div className="rounded-2xl">
                             <div className="xl:w-96 xl:h-64 rounded bg-gray-100 xl:pt-4 xl:pr-4 xl:pl-4"></div>
@@ -61,32 +61,32 @@ function DiscountCardCourse() {
     else if (isLoading === false) {
         return (
             <Fragment>
-                <div className="fixed top-72">
+                <div className="fixed xl:top-72 lg:top-64">
                     <div className="bg-BgLoveIcon dark:bg-dark-color3 rounded-lg">
-                        <div className="rounded-xl">
+                        <div className="xl:rounded-xl lg:rounded-sm">
                             <video
                                 type="video/mp4"
                                 muted
                                 loop
-                                className="w-96 rounded-2xl xl:pt-4 xl:pr-4 xl:pl-4"
+                                className="xl:w-96 lg:w-80 xl:rounded-2xl lg:rounded-lg xl:pt-4 lg:pt-3 xl:px-4 lg:px-3"
                                 src={MyVideo}></video>
                         </div>
 
-                        <div className="xl:p-5">
-                            <div className="flex xl:mt-4 xl:mb-5">
-                                <div className="xl:w-6/12">
-                                    <h6 className="flex text-sectionTitleColor dark:text-white xl:text-3xl xl:font-semibold">
+                        <div className="xl:p-5 lg:p-4">
+                            <div className="flex xl:my-5 lg:my-3">
+                                <div className="lg:w-6/12">
+                                    <h6 className="flex text-sectionTitleColor dark:text-white xl:text-3xl lg:text-2xl lg:font-semibold">
                                         {coursePriceData.new_price}
                                         <MdEuro
-                                            className="xl:mt-.5"
+                                            className="xl:mt-.5 lg:mt-1"
                                         />
                                         <strike
-                                            className="flex text-client-section-des dark:text-gray-400 xl:text-xl xl:font-extralight xl:ml-4">
+                                            className="flex text-client-section-des dark:text-gray-400 lg:text-xl lg:font-extralight xl:ml-4 lg:ml-4">
                                             {coursePriceData.main_price}€
                                         </strike>
                                     </h6>
                                 </div>
-                                <div className="xl:w-6/12">
+                                <div className="lg:w-6/12">
                                     {(() => {
                                         if (coursePriceData.discount_percentage === null) {
 
@@ -97,13 +97,13 @@ function DiscountCardCourse() {
                                     })()}
                                 </div>
                             </div>
-                            <button className="text-white justify-center flex bg-maincolor xl:rounded-md xl:py-4 xl:w-full opacity-100">
+                            <button className="text-white justify-center flex bg-maincolor lg:rounded-md xl:py-4 lg:py-3 lg:w-full opacity-100">
                                 Enroll now
                                 <FaHandPointer
-                                    className="ml-2 xl:mt-1"
+                                    className="ml-2 xl:mt-1 lg:mt-1"
                                 />
                             </button>
-                            <h6 className="text-sectionTitleColor xl:font-semibold xl:text-2xl xl:mt-5 xl:mb-4 dark:text-white">What's Included</h6>
+                            <h6 className="text-sectionTitleColor lg:font-semibold xl:text-2xl lg:text-xl xl:mt-5 xl:mb-4 lg:my-3 dark:text-white">What's Included</h6>
                             <ul className="leading-8">
                                 <li className="text-black dark:text-gray-300">Mobile Support</li>
                                 <li className="text-black dark:text-gray-300">Lession Archive</li>

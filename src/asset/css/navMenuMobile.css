@@ -575,11 +575,11 @@
 
 
     /* Course Search Filter Page */
-    .MobileCourseSearchFilter {
+    .MobileCourseSearchFilter {}
+
+    .DesktopCourseSearchFilter {
         display: none;
     }
-
-    .DesktopCourseSearchFilter {}
 
     /* My Course Page */
     .MyCourseForMobile {

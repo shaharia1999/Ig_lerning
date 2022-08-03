@@ -172,7 +172,7 @@ function StudentFeedback() {
     })()
     return (
         <Fragment>
-            <div className="xl:ml-32 xl:mt-5 xl:mr-14 xl:p-0 p-4">
+            <div className="xl:ml-32 lg:ml-12 xl:mt-5 xl:mr-14 xl:p-0 p-4">
                 <h6 className="text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl text-xl font-semibold">Student Feedback</h6>
                 {
                     StudentFeedBackHTML

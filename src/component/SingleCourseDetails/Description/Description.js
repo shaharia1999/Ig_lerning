@@ -151,16 +151,16 @@ function Description() {
                             })()}
 
                         </div>
-                        <div className="2xl:w-10/12 xl:w-10/12 w-9/12 2xl:-ml-12 xl:-ml-6 lg:w-10/12 lg:-ml-10 -ml-4">
-                            <h6 className=" text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl text-base xl:font-semibold font-medium xl:pr-24 pr-0 xl:mt-8 mt-4">
+                        <div className="2xl:w-10/12 xl:w-10/12 w-9/12 2xl:-ml-8 xl:-ml-6 lg:w-10/12 lg:-ml-2 -ml-4">
+                            <h6 className=" text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl lg:text-xl text-base lg:font-semibold font-medium xl:pr-24 pr-0 xl:mt-8 lg:mt-5 mt-4">
                                 {courseInfo.course_title}
                             </h6>
-                            <h6 className="text-breadcrumbs-text text-sm font-normal 2xl:mt-4 xl:mt-2">
+                            <h6 className="text-breadcrumbs-text text-sm font-normal 2xl:mt-4 xl:mt-2 lg:mt-1">
                                 <Link to={`/trainer-profile/${TeacherInfo.id}`}>
                                 {TeacherInfo.username}   •   Trainer and Speaker
                                 </Link>
                             </h6>
-                            <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">
+                            <h6 className="text-breadcrumbs-text text-sm font-normal lg:mt-1">
                                 <div className="flex justify-start">
                                     <StarRatings
                                         rating={courseInfo.avg_rating}
@@ -168,7 +168,7 @@ function Description() {
                                         starSpacing="2px"
                                         starRatedColor="rgb(251, 191, 36)"
                                     />
-                                    <h6 className="xl:ml-2 -ml-0.5 xl:mt-1 mt-0.5 xl:text-xs text-2xs">
+                                    <h6 className="xl:ml-2 lg:ml-1 -ml-0.5 xl:mt-1 mt-0.5 xl:text-xs text-2xs">
                                          {courseInfo.avg_rating}
                                         <em>( {courseInfo.total_student_rating}
                                              ratings on 
@@ -185,7 +185,7 @@ function Description() {
                             <h6 className="text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl text-xl font-semibold">
                                 Description
                             </h6>
-                            <h6 className="xl:text-xs text-xs text-justify xl:font-light text-breadcrumbs-text xl:mt-5 mt-3 xl:leading-5 xl:pr-24">
+                            <h6 className="xl:text-xs text-xs text-justify xl:font-light text-breadcrumbs-text xl:mt-5 mt-3 xl:leading-5 xl:pr-24 lg:pr-8">
                                 {courseInfo.course_description}
                             </h6>
                             <h6 className="text-sectionTitleColor dark:text-white xl:text-xl font-semibold xl:mt-5 mt-3 xl:mb-5 mb-3">
@@ -216,7 +216,7 @@ function Description() {
 
     return (
         <Fragment>
-            <div className="xl:ml-32 xl:p-0 p-4">
+            <div className="xl:ml-32 lg:ml-12 xl:p-0 p-4">
                 {
                     CourseInfoTeacherAndDescription
                 }

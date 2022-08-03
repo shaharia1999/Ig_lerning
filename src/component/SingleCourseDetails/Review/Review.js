@@ -184,7 +184,7 @@ function Review() {
 
     return (
         <Fragment>
-            <div className="xl:ml-32 xl:mt-5 xl:mr-14 xl:p-0 p-4">
+            <div className="xl:ml-32 lg:ml-12 xl:mt-5 xl:mr-14 xl:p-0 p-4">
                 <h6 className="text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl text-xl font-semibold">Reviews</h6>
                 <div className="flex flex-wrap xl:mr-12">
                     <div className="xl:w-8/12 w-7/12 xl:mt-6 mt-4 xl:mr-0 mr-2">
