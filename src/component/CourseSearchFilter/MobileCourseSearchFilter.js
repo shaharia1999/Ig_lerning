@@ -799,7 +799,7 @@ function MobileCourseSearchFilter() {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 2,
                     infinite: true,
                     dots: false,
@@ -835,11 +835,11 @@ function MobileCourseSearchFilter() {
 
 
             <div className="container">
-                <div className="flex flex-wrap pl-5 pr-5 mt-7">
+                <div className="flex flex-wrap md:px-6 sm:px-7 px-5 md:mt-10 mt-7">
                     <div className="w-3/5">
                         <h6 className="text-lg text-maingray dark:text-white font-semibold mb-2">Result of your Research {'>>'} “Learn Big Data”</h6>
                     </div>
-                    <div className="w-2/5 mt-2 flex justify-end">
+                    <div className="w-2/5 flex justify-end">
                         <button onClick={CourseFilterClickHandler} className="bg-maincolor text-sm font-medium rounded-lg px-3 py-1 h-8 text-white ">Course Filter</button>
                     </div>
                 </div>
@@ -849,7 +849,7 @@ function MobileCourseSearchFilter() {
                 <div className="flex flex-wrap">
                     <div className="w-full bg-white dark:bg-dark-color2">
                         <div className="container">
-                            <div className="mt-4 mb-8">
+                            <div className="md:mt-6 mt-4 mb-8">
                                 <Slider
                                     {...settings1}
                                     slidesToShow={3}
@@ -929,7 +929,7 @@ function MobileCourseSearchFilter() {
                                         arrows={false}
                                         rows={4}
                                     >
-                                        <div className="my-1 px-1.5 w-1/2">
+                                        <div className="my-1 sm:px-5 md:px-2 px-1.5 md:w-1/3">
                                             <div className="wrapper antialiased text-gray-900">
                                                 <div className="relative">
                                                     <video type="video/mp4" muted
@@ -948,7 +948,7 @@ function MobileCourseSearchFilter() {
                                                         <div className="w-4/5">
                                                             <a href="!#">
                                                                 <div className="text-lg absolute top-0 text-black mt-3">
-                                                                    <h6 className="font-medium text-sm text-black ml-2">sefewfw</h6>
+                                                                    <h6 className="font-medium text-sm text-black ml-2">Learn Python</h6>
                                                                     <h6 className="font-light text-xs text-black ml-2">30 min</h6>
                                                                     <img className="h-24 ml-4 mt-auto rounded-full" src={Play} alt="" />
                                                                 </div>
@@ -961,26 +961,26 @@ function MobileCourseSearchFilter() {
                                                         <div className="flex flex-wrap">
                                                             <div className="w-full">
                                                                 <h4 className="mt-1 text-sm font-medium text leading-tight text-CourseTitle dark:text-white">
-                                                                    fwefw wefwe ewfwefw
+                                                                Learn Python: The Complete Python Programming
                                                                 </h4>
                                                             </div>
                                                         </div>
 
                                                         <div className="flex flex-wrap mt-1">
                                                             <div className="w-2/3">
-                                                                <div className="flex sm:justify-center justify-start">
+                                                                <div className="flex md:justify-start">
                                                                     <span className="text-gray-600 text-xs dark:text-gray-500">77 Participients</span>
                                                                 </div>
                                                             </div>
                                                             <div className="w-1/3">
-                                                                <div className="flex relative sm:justify-center justify-start">
+                                                                <div className="flex relative justify-start">
                                                                     <span
                                                                         className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">$20</span>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <ul className="flex sm:justify-center justify-start">
+                                                        <ul className="flex justify-start">
                                                             <StarRatings
                                                                 rating={4}
                                                                 starDimension="15px"
@@ -995,10 +995,10 @@ function MobileCourseSearchFilter() {
 
                                                         <div className="flex flex-wrap">
                                                             <div className="w-2/5">
-                                                                <div className="flex sm:justify-center justify-start -mt-2">
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
+                                                                <div className="flex justify-start -mt-2">
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
                                                                 </div>
                                                             </div>
                                                             <div className="w-3/5 relative">
@@ -1006,7 +1006,7 @@ function MobileCourseSearchFilter() {
                                                                     className="flex sm:justify-center justify-start -mt-3 right-0 absolute">
                                                                     <button
                                                                         className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white pl-0 pr-0 pt-1 pb-1 mr-0.5 rounded-sm">
-                                                                        <img className="h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
+                                                                        <img className="md:h-3 md:w-3 h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
                                                                     <button
                                                                         className="text-2xs font-light bg-maincolor text-white pl-1.5 pr-1.5 pt-0.5 pb-0.5 rounded-sm">Enroll
                                                                         Now
@@ -1020,7 +1020,7 @@ function MobileCourseSearchFilter() {
                                             </div>
                                         </div>
 
-                                        <div className="my-1 px-1.5 w-1/2">
+                                        <div className="my-1 sm:px-5 md:px-2 px-1.5 md:w-1/3">
                                             <div className="wrapper antialiased text-gray-900">
                                                 <div className="relative">
                                                     <video type="video/mp4" muted
@@ -1039,7 +1039,7 @@ function MobileCourseSearchFilter() {
                                                         <div className="w-4/5">
                                                             <a href="!#">
                                                                 <div className="text-lg absolute top-0 text-black mt-3">
-                                                                    <h6 className="font-medium text-sm text-black ml-2">sefewfw</h6>
+                                                                    <h6 className="font-medium text-sm text-black ml-2">Learn Python</h6>
                                                                     <h6 className="font-light text-xs text-black ml-2">30 min</h6>
                                                                     <img className="h-24 ml-4 mt-auto rounded-full" src={Play} alt="" />
                                                                 </div>
@@ -1052,26 +1052,26 @@ function MobileCourseSearchFilter() {
                                                         <div className="flex flex-wrap">
                                                             <div className="w-full">
                                                                 <h4 className="mt-1 text-sm font-medium text leading-tight text-CourseTitle dark:text-white">
-                                                                    fwefw wefwe ewfwefw
+                                                                Learn Python: The Complete Python Programming
                                                                 </h4>
                                                             </div>
                                                         </div>
 
                                                         <div className="flex flex-wrap mt-1">
                                                             <div className="w-2/3">
-                                                                <div className="flex sm:justify-center justify-start">
+                                                                <div className="flex md:justify-start">
                                                                     <span className="text-gray-600 text-xs dark:text-gray-500">77 Participients</span>
                                                                 </div>
                                                             </div>
                                                             <div className="w-1/3">
-                                                                <div className="flex relative sm:justify-center justify-start">
+                                                                <div className="flex relative justify-start">
                                                                     <span
                                                                         className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">$20</span>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <ul className="flex sm:justify-center justify-start">
+                                                        <ul className="flex justify-start">
                                                             <StarRatings
                                                                 rating={4}
                                                                 starDimension="15px"
@@ -1086,10 +1086,10 @@ function MobileCourseSearchFilter() {
 
                                                         <div className="flex flex-wrap">
                                                             <div className="w-2/5">
-                                                                <div className="flex sm:justify-center justify-start -mt-2">
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
+                                                                <div className="flex justify-start -mt-2">
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
                                                                 </div>
                                                             </div>
                                                             <div className="w-3/5 relative">
@@ -1097,7 +1097,7 @@ function MobileCourseSearchFilter() {
                                                                     className="flex sm:justify-center justify-start -mt-3 right-0 absolute">
                                                                     <button
                                                                         className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white pl-0 pr-0 pt-1 pb-1 mr-0.5 rounded-sm">
-                                                                        <img className="h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
+                                                                        <img className="md:h-3 md:w-3 h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
                                                                     <button
                                                                         className="text-2xs font-light bg-maincolor text-white pl-1.5 pr-1.5 pt-0.5 pb-0.5 rounded-sm">Enroll
                                                                         Now
@@ -1111,7 +1111,8 @@ function MobileCourseSearchFilter() {
                                             </div>
                                         </div>
 
-                                        <div className="my-1 px-1.5 w-1/2">
+
+                                        <div className="my-1 sm:px-5 md:px-2 px-1.5 md:w-1/3">
                                             <div className="wrapper antialiased text-gray-900">
                                                 <div className="relative">
                                                     <video type="video/mp4" muted
@@ -1130,7 +1131,7 @@ function MobileCourseSearchFilter() {
                                                         <div className="w-4/5">
                                                             <a href="!#">
                                                                 <div className="text-lg absolute top-0 text-black mt-3">
-                                                                    <h6 className="font-medium text-sm text-black ml-2">sefewfw</h6>
+                                                                    <h6 className="font-medium text-sm text-black ml-2">Learn Python</h6>
                                                                     <h6 className="font-light text-xs text-black ml-2">30 min</h6>
                                                                     <img className="h-24 ml-4 mt-auto rounded-full" src={Play} alt="" />
                                                                 </div>
@@ -1143,26 +1144,26 @@ function MobileCourseSearchFilter() {
                                                         <div className="flex flex-wrap">
                                                             <div className="w-full">
                                                                 <h4 className="mt-1 text-sm font-medium text leading-tight text-CourseTitle dark:text-white">
-                                                                    fwefw wefwe ewfwefw
+                                                                Learn Python: The Complete Python Programming
                                                                 </h4>
                                                             </div>
                                                         </div>
 
                                                         <div className="flex flex-wrap mt-1">
                                                             <div className="w-2/3">
-                                                                <div className="flex sm:justify-center justify-start">
+                                                                <div className="flex md:justify-start">
                                                                     <span className="text-gray-600 text-xs dark:text-gray-500">77 Participients</span>
                                                                 </div>
                                                             </div>
                                                             <div className="w-1/3">
-                                                                <div className="flex relative sm:justify-center justify-start">
+                                                                <div className="flex relative justify-start">
                                                                     <span
                                                                         className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">$20</span>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <ul className="flex sm:justify-center justify-start">
+                                                        <ul className="flex justify-start">
                                                             <StarRatings
                                                                 rating={4}
                                                                 starDimension="15px"
@@ -1177,10 +1178,10 @@ function MobileCourseSearchFilter() {
 
                                                         <div className="flex flex-wrap">
                                                             <div className="w-2/5">
-                                                                <div className="flex sm:justify-center justify-start -mt-2">
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
+                                                                <div className="flex justify-start -mt-2">
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
                                                                 </div>
                                                             </div>
                                                             <div className="w-3/5 relative">
@@ -1188,7 +1189,7 @@ function MobileCourseSearchFilter() {
                                                                     className="flex sm:justify-center justify-start -mt-3 right-0 absolute">
                                                                     <button
                                                                         className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white pl-0 pr-0 pt-1 pb-1 mr-0.5 rounded-sm">
-                                                                        <img className="h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
+                                                                        <img className="md:h-3 md:w-3 h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
                                                                     <button
                                                                         className="text-2xs font-light bg-maincolor text-white pl-1.5 pr-1.5 pt-0.5 pb-0.5 rounded-sm">Enroll
                                                                         Now
@@ -1202,7 +1203,8 @@ function MobileCourseSearchFilter() {
                                             </div>
                                         </div>
 
-                                        <div className="my-1 px-1.5 w-1/2">
+
+                                        <div className="my-1 sm:px-5 md:px-2 px-1.5 md:w-1/3">
                                             <div className="wrapper antialiased text-gray-900">
                                                 <div className="relative">
                                                     <video type="video/mp4" muted
@@ -1221,7 +1223,7 @@ function MobileCourseSearchFilter() {
                                                         <div className="w-4/5">
                                                             <a href="!#">
                                                                 <div className="text-lg absolute top-0 text-black mt-3">
-                                                                    <h6 className="font-medium text-sm text-black ml-2">sefewfw</h6>
+                                                                    <h6 className="font-medium text-sm text-black ml-2">Learn Python</h6>
                                                                     <h6 className="font-light text-xs text-black ml-2">30 min</h6>
                                                                     <img className="h-24 ml-4 mt-auto rounded-full" src={Play} alt="" />
                                                                 </div>
@@ -1234,26 +1236,26 @@ function MobileCourseSearchFilter() {
                                                         <div className="flex flex-wrap">
                                                             <div className="w-full">
                                                                 <h4 className="mt-1 text-sm font-medium text leading-tight text-CourseTitle dark:text-white">
-                                                                    fwefw wefwe ewfwefw
+                                                                Learn Python: The Complete Python Programming
                                                                 </h4>
                                                             </div>
                                                         </div>
 
                                                         <div className="flex flex-wrap mt-1">
                                                             <div className="w-2/3">
-                                                                <div className="flex sm:justify-center justify-start">
+                                                                <div className="flex md:justify-start">
                                                                     <span className="text-gray-600 text-xs dark:text-gray-500">77 Participients</span>
                                                                 </div>
                                                             </div>
                                                             <div className="w-1/3">
-                                                                <div className="flex relative sm:justify-center justify-start">
+                                                                <div className="flex relative justify-start">
                                                                     <span
                                                                         className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">$20</span>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <ul className="flex sm:justify-center justify-start">
+                                                        <ul className="flex justify-start">
                                                             <StarRatings
                                                                 rating={4}
                                                                 starDimension="15px"
@@ -1268,10 +1270,10 @@ function MobileCourseSearchFilter() {
 
                                                         <div className="flex flex-wrap">
                                                             <div className="w-2/5">
-                                                                <div className="flex sm:justify-center justify-start -mt-2">
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
+                                                                <div className="flex justify-start -mt-2">
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
                                                                 </div>
                                                             </div>
                                                             <div className="w-3/5 relative">
@@ -1279,7 +1281,7 @@ function MobileCourseSearchFilter() {
                                                                     className="flex sm:justify-center justify-start -mt-3 right-0 absolute">
                                                                     <button
                                                                         className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white pl-0 pr-0 pt-1 pb-1 mr-0.5 rounded-sm">
-                                                                        <img className="h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
+                                                                        <img className="md:h-3 md:w-3 h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
                                                                     <button
                                                                         className="text-2xs font-light bg-maincolor text-white pl-1.5 pr-1.5 pt-0.5 pb-0.5 rounded-sm">Enroll
                                                                         Now
@@ -1293,7 +1295,8 @@ function MobileCourseSearchFilter() {
                                             </div>
                                         </div>
 
-                                        <div className="my-1 px-1.5 w-1/2">
+
+                                        <div className="my-1 sm:px-5 md:px-2 px-1.5 md:w-1/3">
                                             <div className="wrapper antialiased text-gray-900">
                                                 <div className="relative">
                                                     <video type="video/mp4" muted
@@ -1312,7 +1315,7 @@ function MobileCourseSearchFilter() {
                                                         <div className="w-4/5">
                                                             <a href="!#">
                                                                 <div className="text-lg absolute top-0 text-black mt-3">
-                                                                    <h6 className="font-medium text-sm text-black ml-2">sefewfw</h6>
+                                                                    <h6 className="font-medium text-sm text-black ml-2">Learn Python</h6>
                                                                     <h6 className="font-light text-xs text-black ml-2">30 min</h6>
                                                                     <img className="h-24 ml-4 mt-auto rounded-full" src={Play} alt="" />
                                                                 </div>
@@ -1325,26 +1328,26 @@ function MobileCourseSearchFilter() {
                                                         <div className="flex flex-wrap">
                                                             <div className="w-full">
                                                                 <h4 className="mt-1 text-sm font-medium text leading-tight text-CourseTitle dark:text-white">
-                                                                    fwefw wefwe ewfwefw
+                                                                Learn Python: The Complete Python Programming
                                                                 </h4>
                                                             </div>
                                                         </div>
 
                                                         <div className="flex flex-wrap mt-1">
                                                             <div className="w-2/3">
-                                                                <div className="flex sm:justify-center justify-start">
+                                                                <div className="flex md:justify-start">
                                                                     <span className="text-gray-600 text-xs dark:text-gray-500">77 Participients</span>
                                                                 </div>
                                                             </div>
                                                             <div className="w-1/3">
-                                                                <div className="flex relative sm:justify-center justify-start">
+                                                                <div className="flex relative justify-start">
                                                                     <span
                                                                         className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">$20</span>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <ul className="flex sm:justify-center justify-start">
+                                                        <ul className="flex justify-start">
                                                             <StarRatings
                                                                 rating={4}
                                                                 starDimension="15px"
@@ -1359,10 +1362,10 @@ function MobileCourseSearchFilter() {
 
                                                         <div className="flex flex-wrap">
                                                             <div className="w-2/5">
-                                                                <div className="flex sm:justify-center justify-start -mt-2">
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
+                                                                <div className="flex justify-start -mt-2">
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
                                                                 </div>
                                                             </div>
                                                             <div className="w-3/5 relative">
@@ -1370,7 +1373,7 @@ function MobileCourseSearchFilter() {
                                                                     className="flex sm:justify-center justify-start -mt-3 right-0 absolute">
                                                                     <button
                                                                         className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white pl-0 pr-0 pt-1 pb-1 mr-0.5 rounded-sm">
-                                                                        <img className="h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
+                                                                        <img className="md:h-3 md:w-3 h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
                                                                     <button
                                                                         className="text-2xs font-light bg-maincolor text-white pl-1.5 pr-1.5 pt-0.5 pb-0.5 rounded-sm">Enroll
                                                                         Now
@@ -1384,7 +1387,8 @@ function MobileCourseSearchFilter() {
                                             </div>
                                         </div>
 
-                                        <div className="my-1 px-1.5 w-1/2">
+
+                                        <div className="my-1 sm:px-5 md:px-2 px-1.5 md:w-1/3">
                                             <div className="wrapper antialiased text-gray-900">
                                                 <div className="relative">
                                                     <video type="video/mp4" muted
@@ -1403,7 +1407,7 @@ function MobileCourseSearchFilter() {
                                                         <div className="w-4/5">
                                                             <a href="!#">
                                                                 <div className="text-lg absolute top-0 text-black mt-3">
-                                                                    <h6 className="font-medium text-sm text-black ml-2">sefewfw</h6>
+                                                                    <h6 className="font-medium text-sm text-black ml-2">Learn Python</h6>
                                                                     <h6 className="font-light text-xs text-black ml-2">30 min</h6>
                                                                     <img className="h-24 ml-4 mt-auto rounded-full" src={Play} alt="" />
                                                                 </div>
@@ -1416,26 +1420,26 @@ function MobileCourseSearchFilter() {
                                                         <div className="flex flex-wrap">
                                                             <div className="w-full">
                                                                 <h4 className="mt-1 text-sm font-medium text leading-tight text-CourseTitle dark:text-white">
-                                                                    fwefw wefwe ewfwefw
+                                                                Learn Python: The Complete Python Programming
                                                                 </h4>
                                                             </div>
                                                         </div>
 
                                                         <div className="flex flex-wrap mt-1">
                                                             <div className="w-2/3">
-                                                                <div className="flex sm:justify-center justify-start">
+                                                                <div className="flex md:justify-start">
                                                                     <span className="text-gray-600 text-xs dark:text-gray-500">77 Participients</span>
                                                                 </div>
                                                             </div>
                                                             <div className="w-1/3">
-                                                                <div className="flex relative sm:justify-center justify-start">
+                                                                <div className="flex relative justify-start">
                                                                     <span
                                                                         className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">$20</span>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <ul className="flex sm:justify-center justify-start">
+                                                        <ul className="flex justify-start">
                                                             <StarRatings
                                                                 rating={4}
                                                                 starDimension="15px"
@@ -1450,10 +1454,10 @@ function MobileCourseSearchFilter() {
 
                                                         <div className="flex flex-wrap">
                                                             <div className="w-2/5">
-                                                                <div className="flex sm:justify-center justify-start -mt-2">
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
+                                                                <div className="flex justify-start -mt-2">
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
                                                                 </div>
                                                             </div>
                                                             <div className="w-3/5 relative">
@@ -1461,7 +1465,7 @@ function MobileCourseSearchFilter() {
                                                                     className="flex sm:justify-center justify-start -mt-3 right-0 absolute">
                                                                     <button
                                                                         className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white pl-0 pr-0 pt-1 pb-1 mr-0.5 rounded-sm">
-                                                                        <img className="h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
+                                                                        <img className="md:h-3 md:w-3 h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
                                                                     <button
                                                                         className="text-2xs font-light bg-maincolor text-white pl-1.5 pr-1.5 pt-0.5 pb-0.5 rounded-sm">Enroll
                                                                         Now
@@ -1475,7 +1479,8 @@ function MobileCourseSearchFilter() {
                                             </div>
                                         </div>
 
-                                        <div className="my-1 px-1.5 w-1/2">
+
+                                        <div className="my-1 sm:px-5 md:px-2 px-1.5 md:w-1/3">
                                             <div className="wrapper antialiased text-gray-900">
                                                 <div className="relative">
                                                     <video type="video/mp4" muted
@@ -1494,7 +1499,7 @@ function MobileCourseSearchFilter() {
                                                         <div className="w-4/5">
                                                             <a href="!#">
                                                                 <div className="text-lg absolute top-0 text-black mt-3">
-                                                                    <h6 className="font-medium text-sm text-black ml-2">sefewfw</h6>
+                                                                    <h6 className="font-medium text-sm text-black ml-2">Learn Python</h6>
                                                                     <h6 className="font-light text-xs text-black ml-2">30 min</h6>
                                                                     <img className="h-24 ml-4 mt-auto rounded-full" src={Play} alt="" />
                                                                 </div>
@@ -1507,26 +1512,26 @@ function MobileCourseSearchFilter() {
                                                         <div className="flex flex-wrap">
                                                             <div className="w-full">
                                                                 <h4 className="mt-1 text-sm font-medium text leading-tight text-CourseTitle dark:text-white">
-                                                                    fwefw wefwe ewfwefw
+                                                                Learn Python: The Complete Python Programming
                                                                 </h4>
                                                             </div>
                                                         </div>
 
                                                         <div className="flex flex-wrap mt-1">
                                                             <div className="w-2/3">
-                                                                <div className="flex sm:justify-center justify-start">
+                                                                <div className="flex md:justify-start">
                                                                     <span className="text-gray-600 text-xs dark:text-gray-500">77 Participients</span>
                                                                 </div>
                                                             </div>
                                                             <div className="w-1/3">
-                                                                <div className="flex relative sm:justify-center justify-start">
+                                                                <div className="flex relative justify-start">
                                                                     <span
                                                                         className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">$20</span>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <ul className="flex sm:justify-center justify-start">
+                                                        <ul className="flex justify-start">
                                                             <StarRatings
                                                                 rating={4}
                                                                 starDimension="15px"
@@ -1541,10 +1546,10 @@ function MobileCourseSearchFilter() {
 
                                                         <div className="flex flex-wrap">
                                                             <div className="w-2/5">
-                                                                <div className="flex sm:justify-center justify-start -mt-2">
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
+                                                                <div className="flex justify-start -mt-2">
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
                                                                 </div>
                                                             </div>
                                                             <div className="w-3/5 relative">
@@ -1552,7 +1557,7 @@ function MobileCourseSearchFilter() {
                                                                     className="flex sm:justify-center justify-start -mt-3 right-0 absolute">
                                                                     <button
                                                                         className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white pl-0 pr-0 pt-1 pb-1 mr-0.5 rounded-sm">
-                                                                        <img className="h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
+                                                                        <img className="md:h-3 md:w-3 h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
                                                                     <button
                                                                         className="text-2xs font-light bg-maincolor text-white pl-1.5 pr-1.5 pt-0.5 pb-0.5 rounded-sm">Enroll
                                                                         Now
@@ -1566,7 +1571,8 @@ function MobileCourseSearchFilter() {
                                             </div>
                                         </div>
 
-                                        <div className="my-1 px-1.5 w-1/2">
+
+                                        <div className="my-1 sm:px-5 md:px-2 px-1.5 md:w-1/3">
                                             <div className="wrapper antialiased text-gray-900">
                                                 <div className="relative">
                                                     <video type="video/mp4" muted
@@ -1585,7 +1591,7 @@ function MobileCourseSearchFilter() {
                                                         <div className="w-4/5">
                                                             <a href="!#">
                                                                 <div className="text-lg absolute top-0 text-black mt-3">
-                                                                    <h6 className="font-medium text-sm text-black ml-2">sefewfw</h6>
+                                                                    <h6 className="font-medium text-sm text-black ml-2">Learn Python</h6>
                                                                     <h6 className="font-light text-xs text-black ml-2">30 min</h6>
                                                                     <img className="h-24 ml-4 mt-auto rounded-full" src={Play} alt="" />
                                                                 </div>
@@ -1598,26 +1604,26 @@ function MobileCourseSearchFilter() {
                                                         <div className="flex flex-wrap">
                                                             <div className="w-full">
                                                                 <h4 className="mt-1 text-sm font-medium text leading-tight text-CourseTitle dark:text-white">
-                                                                    fwefw wefwe ewfwefw
+                                                                Learn Python: The Complete Python Programming
                                                                 </h4>
                                                             </div>
                                                         </div>
 
                                                         <div className="flex flex-wrap mt-1">
                                                             <div className="w-2/3">
-                                                                <div className="flex sm:justify-center justify-start">
+                                                                <div className="flex md:justify-start">
                                                                     <span className="text-gray-600 text-xs dark:text-gray-500">77 Participients</span>
                                                                 </div>
                                                             </div>
                                                             <div className="w-1/3">
-                                                                <div className="flex relative sm:justify-center justify-start">
+                                                                <div className="flex relative justify-start">
                                                                     <span
                                                                         className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">$20</span>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <ul className="flex sm:justify-center justify-start">
+                                                        <ul className="flex justify-start">
                                                             <StarRatings
                                                                 rating={4}
                                                                 starDimension="15px"
@@ -1632,10 +1638,10 @@ function MobileCourseSearchFilter() {
 
                                                         <div className="flex flex-wrap">
                                                             <div className="w-2/5">
-                                                                <div className="flex sm:justify-center justify-start -mt-2">
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
+                                                                <div className="flex justify-start -mt-2">
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
                                                                 </div>
                                                             </div>
                                                             <div className="w-3/5 relative">
@@ -1643,7 +1649,7 @@ function MobileCourseSearchFilter() {
                                                                     className="flex sm:justify-center justify-start -mt-3 right-0 absolute">
                                                                     <button
                                                                         className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white pl-0 pr-0 pt-1 pb-1 mr-0.5 rounded-sm">
-                                                                        <img className="h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
+                                                                        <img className="md:h-3 md:w-3 h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
                                                                     <button
                                                                         className="text-2xs font-light bg-maincolor text-white pl-1.5 pr-1.5 pt-0.5 pb-0.5 rounded-sm">Enroll
                                                                         Now
@@ -1657,7 +1663,8 @@ function MobileCourseSearchFilter() {
                                             </div>
                                         </div>
 
-                                        <div className="my-1 px-1.5 w-1/2">
+
+                                        <div className="my-1 sm:px-5 md:px-2 px-1.5 md:w-1/3">
                                             <div className="wrapper antialiased text-gray-900">
                                                 <div className="relative">
                                                     <video type="video/mp4" muted
@@ -1676,7 +1683,7 @@ function MobileCourseSearchFilter() {
                                                         <div className="w-4/5">
                                                             <a href="!#">
                                                                 <div className="text-lg absolute top-0 text-black mt-3">
-                                                                    <h6 className="font-medium text-sm text-black ml-2">sefewfw</h6>
+                                                                    <h6 className="font-medium text-sm text-black ml-2">Learn Python</h6>
                                                                     <h6 className="font-light text-xs text-black ml-2">30 min</h6>
                                                                     <img className="h-24 ml-4 mt-auto rounded-full" src={Play} alt="" />
                                                                 </div>
@@ -1689,26 +1696,26 @@ function MobileCourseSearchFilter() {
                                                         <div className="flex flex-wrap">
                                                             <div className="w-full">
                                                                 <h4 className="mt-1 text-sm font-medium text leading-tight text-CourseTitle dark:text-white">
-                                                                    fwefw wefwe ewfwefw
+                                                                Learn Python: The Complete Python Programming
                                                                 </h4>
                                                             </div>
                                                         </div>
 
                                                         <div className="flex flex-wrap mt-1">
                                                             <div className="w-2/3">
-                                                                <div className="flex sm:justify-center justify-start">
+                                                                <div className="flex md:justify-start">
                                                                     <span className="text-gray-600 text-xs dark:text-gray-500">77 Participients</span>
                                                                 </div>
                                                             </div>
                                                             <div className="w-1/3">
-                                                                <div className="flex relative sm:justify-center justify-start">
+                                                                <div className="flex relative justify-start">
                                                                     <span
                                                                         className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">$20</span>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <ul className="flex sm:justify-center justify-start">
+                                                        <ul className="flex justify-start">
                                                             <StarRatings
                                                                 rating={4}
                                                                 starDimension="15px"
@@ -1723,10 +1730,10 @@ function MobileCourseSearchFilter() {
 
                                                         <div className="flex flex-wrap">
                                                             <div className="w-2/5">
-                                                                <div className="flex sm:justify-center justify-start -mt-2">
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
+                                                                <div className="flex justify-start -mt-2">
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
                                                                 </div>
                                                             </div>
                                                             <div className="w-3/5 relative">
@@ -1734,7 +1741,7 @@ function MobileCourseSearchFilter() {
                                                                     className="flex sm:justify-center justify-start -mt-3 right-0 absolute">
                                                                     <button
                                                                         className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white pl-0 pr-0 pt-1 pb-1 mr-0.5 rounded-sm">
-                                                                        <img className="h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
+                                                                        <img className="md:h-3 md:w-3 h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
                                                                     <button
                                                                         className="text-2xs font-light bg-maincolor text-white pl-1.5 pr-1.5 pt-0.5 pb-0.5 rounded-sm">Enroll
                                                                         Now
@@ -1748,7 +1755,8 @@ function MobileCourseSearchFilter() {
                                             </div>
                                         </div>
 
-                                        <div className="my-1 px-1.5 w-1/2">
+
+                                        <div className="my-1 sm:px-5 md:px-2 px-1.5 md:w-1/3">
                                             <div className="wrapper antialiased text-gray-900">
                                                 <div className="relative">
                                                     <video type="video/mp4" muted
@@ -1767,7 +1775,7 @@ function MobileCourseSearchFilter() {
                                                         <div className="w-4/5">
                                                             <a href="!#">
                                                                 <div className="text-lg absolute top-0 text-black mt-3">
-                                                                    <h6 className="font-medium text-sm text-black ml-2">sefewfw</h6>
+                                                                    <h6 className="font-medium text-sm text-black ml-2">Learn Python</h6>
                                                                     <h6 className="font-light text-xs text-black ml-2">30 min</h6>
                                                                     <img className="h-24 ml-4 mt-auto rounded-full" src={Play} alt="" />
                                                                 </div>
@@ -1780,26 +1788,26 @@ function MobileCourseSearchFilter() {
                                                         <div className="flex flex-wrap">
                                                             <div className="w-full">
                                                                 <h4 className="mt-1 text-sm font-medium text leading-tight text-CourseTitle dark:text-white">
-                                                                    fwefw wefwe ewfwefw
+                                                                Learn Python: The Complete Python Programming
                                                                 </h4>
                                                             </div>
                                                         </div>
 
                                                         <div className="flex flex-wrap mt-1">
                                                             <div className="w-2/3">
-                                                                <div className="flex sm:justify-center justify-start">
+                                                                <div className="flex md:justify-start">
                                                                     <span className="text-gray-600 text-xs dark:text-gray-500">77 Participients</span>
                                                                 </div>
                                                             </div>
                                                             <div className="w-1/3">
-                                                                <div className="flex relative sm:justify-center justify-start">
+                                                                <div className="flex relative justify-start">
                                                                     <span
                                                                         className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">$20</span>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <ul className="flex sm:justify-center justify-start">
+                                                        <ul className="flex justify-start">
                                                             <StarRatings
                                                                 rating={4}
                                                                 starDimension="15px"
@@ -1814,10 +1822,10 @@ function MobileCourseSearchFilter() {
 
                                                         <div className="flex flex-wrap">
                                                             <div className="w-2/5">
-                                                                <div className="flex sm:justify-center justify-start -mt-2">
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
+                                                                <div className="flex justify-start -mt-2">
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
                                                                 </div>
                                                             </div>
                                                             <div className="w-3/5 relative">
@@ -1825,7 +1833,7 @@ function MobileCourseSearchFilter() {
                                                                     className="flex sm:justify-center justify-start -mt-3 right-0 absolute">
                                                                     <button
                                                                         className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white pl-0 pr-0 pt-1 pb-1 mr-0.5 rounded-sm">
-                                                                        <img className="h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
+                                                                        <img className="md:h-3 md:w-3 h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
                                                                     <button
                                                                         className="text-2xs font-light bg-maincolor text-white pl-1.5 pr-1.5 pt-0.5 pb-0.5 rounded-sm">Enroll
                                                                         Now
@@ -1839,7 +1847,8 @@ function MobileCourseSearchFilter() {
                                             </div>
                                         </div>
 
-                                        <div className="my-1 px-1.5 w-1/2">
+
+                                        <div className="my-1 sm:px-5 md:px-2 px-1.5 md:w-1/3">
                                             <div className="wrapper antialiased text-gray-900">
                                                 <div className="relative">
                                                     <video type="video/mp4" muted
@@ -1858,7 +1867,7 @@ function MobileCourseSearchFilter() {
                                                         <div className="w-4/5">
                                                             <a href="!#">
                                                                 <div className="text-lg absolute top-0 text-black mt-3">
-                                                                    <h6 className="font-medium text-sm text-black ml-2">sefewfw</h6>
+                                                                    <h6 className="font-medium text-sm text-black ml-2">Learn Python</h6>
                                                                     <h6 className="font-light text-xs text-black ml-2">30 min</h6>
                                                                     <img className="h-24 ml-4 mt-auto rounded-full" src={Play} alt="" />
                                                                 </div>
@@ -1871,26 +1880,26 @@ function MobileCourseSearchFilter() {
                                                         <div className="flex flex-wrap">
                                                             <div className="w-full">
                                                                 <h4 className="mt-1 text-sm font-medium text leading-tight text-CourseTitle dark:text-white">
-                                                                    fwefw wefwe ewfwefw
+                                                                Learn Python: The Complete Python Programming
                                                                 </h4>
                                                             </div>
                                                         </div>
 
                                                         <div className="flex flex-wrap mt-1">
                                                             <div className="w-2/3">
-                                                                <div className="flex sm:justify-center justify-start">
+                                                                <div className="flex md:justify-start">
                                                                     <span className="text-gray-600 text-xs dark:text-gray-500">77 Participients</span>
                                                                 </div>
                                                             </div>
                                                             <div className="w-1/3">
-                                                                <div className="flex relative sm:justify-center justify-start">
+                                                                <div className="flex relative justify-start">
                                                                     <span
                                                                         className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">$20</span>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <ul className="flex sm:justify-center justify-start">
+                                                        <ul className="flex justify-start">
                                                             <StarRatings
                                                                 rating={4}
                                                                 starDimension="15px"
@@ -1905,10 +1914,10 @@ function MobileCourseSearchFilter() {
 
                                                         <div className="flex flex-wrap">
                                                             <div className="w-2/5">
-                                                                <div className="flex sm:justify-center justify-start -mt-2">
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
+                                                                <div className="flex justify-start -mt-2">
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
                                                                 </div>
                                                             </div>
                                                             <div className="w-3/5 relative">
@@ -1916,7 +1925,7 @@ function MobileCourseSearchFilter() {
                                                                     className="flex sm:justify-center justify-start -mt-3 right-0 absolute">
                                                                     <button
                                                                         className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white pl-0 pr-0 pt-1 pb-1 mr-0.5 rounded-sm">
-                                                                        <img className="h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
+                                                                        <img className="md:h-3 md:w-3 h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
                                                                     <button
                                                                         className="text-2xs font-light bg-maincolor text-white pl-1.5 pr-1.5 pt-0.5 pb-0.5 rounded-sm">Enroll
                                                                         Now
@@ -1930,7 +1939,8 @@ function MobileCourseSearchFilter() {
                                             </div>
                                         </div>
 
-                                        <div className="my-1 px-1.5 w-1/2">
+
+                                        <div className="my-1 sm:px-5 md:px-2 px-1.5 md:w-1/3">
                                             <div className="wrapper antialiased text-gray-900">
                                                 <div className="relative">
                                                     <video type="video/mp4" muted
@@ -1949,7 +1959,7 @@ function MobileCourseSearchFilter() {
                                                         <div className="w-4/5">
                                                             <a href="!#">
                                                                 <div className="text-lg absolute top-0 text-black mt-3">
-                                                                    <h6 className="font-medium text-sm text-black ml-2">sefewfw</h6>
+                                                                    <h6 className="font-medium text-sm text-black ml-2">Learn Python</h6>
                                                                     <h6 className="font-light text-xs text-black ml-2">30 min</h6>
                                                                     <img className="h-24 ml-4 mt-auto rounded-full" src={Play} alt="" />
                                                                 </div>
@@ -1962,26 +1972,26 @@ function MobileCourseSearchFilter() {
                                                         <div className="flex flex-wrap">
                                                             <div className="w-full">
                                                                 <h4 className="mt-1 text-sm font-medium text leading-tight text-CourseTitle dark:text-white">
-                                                                    fwefw wefwe ewfwefw
+                                                                Learn Python: The Complete Python Programming
                                                                 </h4>
                                                             </div>
                                                         </div>
 
                                                         <div className="flex flex-wrap mt-1">
                                                             <div className="w-2/3">
-                                                                <div className="flex sm:justify-center justify-start">
+                                                                <div className="flex md:justify-start">
                                                                     <span className="text-gray-600 text-xs dark:text-gray-500">77 Participients</span>
                                                                 </div>
                                                             </div>
                                                             <div className="w-1/3">
-                                                                <div className="flex relative sm:justify-center justify-start">
+                                                                <div className="flex relative justify-start">
                                                                     <span
                                                                         className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">$20</span>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <ul className="flex sm:justify-center justify-start">
+                                                        <ul className="flex justify-start">
                                                             <StarRatings
                                                                 rating={4}
                                                                 starDimension="15px"
@@ -1996,10 +2006,10 @@ function MobileCourseSearchFilter() {
 
                                                         <div className="flex flex-wrap">
                                                             <div className="w-2/5">
-                                                                <div className="flex sm:justify-center justify-start -mt-2">
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
-                                                                    <a><img className="h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
+                                                                <div className="flex justify-start -mt-2">
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
                                                                 </div>
                                                             </div>
                                                             <div className="w-3/5 relative">
@@ -2007,7 +2017,99 @@ function MobileCourseSearchFilter() {
                                                                     className="flex sm:justify-center justify-start -mt-3 right-0 absolute">
                                                                     <button
                                                                         className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white pl-0 pr-0 pt-1 pb-1 mr-0.5 rounded-sm">
-                                                                        <img className="h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
+                                                                        <img className="md:h-3 md:w-3 h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
+                                                                    <button
+                                                                        className="text-2xs font-light bg-maincolor text-white pl-1.5 pr-1.5 pt-0.5 pb-0.5 rounded-sm">Enroll
+                                                                        Now
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div className="my-1 sm:px-5 md:px-2 px-1.5 md:w-1/3">
+                                            <div className="wrapper antialiased text-gray-900">
+                                                <div className="relative">
+                                                    <video type="video/mp4" muted
+                                                        loop className="w-full vid h-48 object-cover object-center rounded-lg shadow-md"
+                                                        src={SpeedMeter}></video>
+
+                                                    <div className="flex flex-wrap">
+                                                        <div className="w-1/5">
+                                                            <a href="!#">
+                                                                <div
+                                                                    className="text-sm absolute top-0 left-2 h-8 rounded-full w-8 flex border-2 border-client-section-des flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                                                                    <img className="h-8 rounded-full w-8" src={SpeedMeter} alt="" />
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div className="w-4/5">
+                                                            <a href="!#">
+                                                                <div className="text-lg absolute top-0 text-black mt-3">
+                                                                    <h6 className="font-medium text-sm text-black ml-2">Learn Python</h6>
+                                                                    <h6 className="font-light text-xs text-black ml-2">30 min</h6>
+                                                                    <img className="h-24 ml-4 mt-auto rounded-full" src={Play} alt="" />
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="relative px-2 -mt-16">
+                                                    <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg dark:shadow-xl">
+                                                        <div className="flex flex-wrap">
+                                                            <div className="w-full">
+                                                                <h4 className="mt-1 text-sm font-medium text leading-tight text-CourseTitle dark:text-white">
+                                                                Learn Python: The Complete Python Programming
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex flex-wrap mt-1">
+                                                            <div className="w-2/3">
+                                                                <div className="flex md:justify-start">
+                                                                    <span className="text-gray-600 text-xs dark:text-gray-500">77 Participients</span>
+                                                                </div>
+                                                            </div>
+                                                            <div className="w-1/3">
+                                                                <div className="flex relative justify-start">
+                                                                    <span
+                                                                        className="text-maincolor text-lg font-medium inset-y-0 right-0 absolute">$20</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <ul className="flex justify-start">
+                                                            <StarRatings
+                                                                rating={4}
+                                                                starDimension="15px"
+                                                                starSpacing="2px"
+                                                                starRatedColor="rgb(251, 191, 36)"
+                                                                className="mt-1"
+                                                            />
+                                                            <h6 className="mb-4 mt-1.5 mx-1 text-xs font-normal text-client-section-des">
+                                                                (4)
+                                                            </h6>
+                                                        </ul>
+
+                                                        <div className="flex flex-wrap">
+                                                            <div className="w-2/5">
+                                                                <div className="flex justify-start -mt-2">
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={SpeedMeter} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={ShareIcon} alt="" /></a>
+                                                                    <a><img className="md:h-4 md:w-4 h-3.5 w-3.5 mx-1" src={CertificateIcon} alt="" /></a>
+                                                                </div>
+                                                            </div>
+                                                            <div className="w-3/5 relative">
+                                                                <div
+                                                                    className="flex sm:justify-center justify-start -mt-3 right-0 absolute">
+                                                                    <button
+                                                                        className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white pl-0 pr-0 pt-1 pb-1 mr-0.5 rounded-sm">
+                                                                        <img className="md:h-3 md:w-3 h-2 w-2 mx-1" src={LoveIcon} alt="" /></button>
                                                                     <button
                                                                         className="text-2xs font-light bg-maincolor text-white pl-1.5 pr-1.5 pt-0.5 pb-0.5 rounded-sm">Enroll
                                                                         Now

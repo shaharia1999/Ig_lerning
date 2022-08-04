@@ -29,7 +29,7 @@ function RecentlyBoughtCourse() {
                 setIsLoading(false);
             }
         });
-    }, []);
+    }, []); 
     const RecentlyBoughtCourseLoading = (() => {
         return (
             <>
@@ -404,6 +404,16 @@ function RecentlyBoughtCourse() {
         var settings = {
             responsive: [
                 {
+                    breakpoint: 1279.98,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false,
+                        arrows: false
+                    }
+                },
+                {
                     breakpoint: 1024,
                     settings: {
                         slidesToShow: 3,
@@ -436,9 +446,9 @@ function RecentlyBoughtCourse() {
         };
         return (
             <Fragment>
-                <div className="xl:ml-28 container">
-                    <div className="mt-4">
-                        <div className="xl:-mr-64">
+                <div className="xl:pl-28 lg:pl-12">
+                    <div className="xl:mt-4 lg:mt-0">
+                        <div className="">
                             <Slider
                                 {...settings}
                                 slidesToShow={5}

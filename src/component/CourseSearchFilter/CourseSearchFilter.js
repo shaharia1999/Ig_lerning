@@ -587,7 +587,7 @@ function CourseSearchFilter() {
             if (courseList === false) {
                 return (
                     courseFilterData.map((course_filter_data, course_filter_index) => (
-                        <div key={course_filter_index} className="my-1 px-1 w-full md:w-1/2 xl:my-4 xl:px-1.5 xl:w-1/4">
+                        <div key={course_filter_index} className="my-1 px-1 w-full md:w-1/2 xl:my-4 xl:px-1.5 lg:w-1/3 xl:w-1/4">
                             <div className="wrapper antialiased text-gray-900">
                                 <div className="relative">
                                     <video type="video/mp4" muted
@@ -606,9 +606,9 @@ function CourseSearchFilter() {
                                         <div className="w-4/5">
                                             <a href="!#">
                                                 <div className="text-lg absolute top-0 text-black mt-5">
-                                                    <h6 className="font-medium xl:text-sm text-black xl:ml-1">{course_filter_data?.course_information?.channel_name?.channel_name}</h6>
-                                                    <h6 className="font-light xl:text-xs text-black">{course_filter_data?.course_information?.course_duration} min</h6>
-                                                    <img className="xl:h-24 xl:ml-6 xl:-mt-2 rounded-full" src={Play} alt="" />
+                                                    <h6 className="font-medium lg:text-sm text-black xl:ml-1">{course_filter_data?.course_information?.channel_name?.channel_name}</h6>
+                                                    <h6 className="font-light lg:text-xs text-black">{course_filter_data?.course_information?.course_duration} min</h6>
+                                                    <img className="xl:h-24 lg:h-24 xl:ml-6 lg:ml-4 xl:-mt-2 rounded-full" src={Play} alt="" />
                                                 </div>
                                             </a>
                                         </div>
@@ -624,9 +624,9 @@ function CourseSearchFilter() {
                                             </div>
                                         </div>
 
-                                        <div className="flex flex-wrap xl:mt-1">
+                                        <div className="flex flex-wrap lg:mt-1">
                                             <div className="w-2/3">
-                                                <div className="flex sm:justify-center xl:justify-start">
+                                                <div className="flex sm:justify-center lg:justify-start">
                                                     <span className="text-gray-600 text-xs dark:text-gray-500">77 Participients</span>
                                                 </div>
                                             </div>
@@ -638,7 +638,7 @@ function CourseSearchFilter() {
                                             </div>
                                         </div>
 
-                                        <ul className="flex sm:justify-center xl:justify-start">
+                                        <ul className="flex sm:justify-center lg:justify-start">
                                             <StarRatings
                                                 rating={course_filter_data?.course_information?.avg_rating}
                                                 starDimension="15px"
@@ -646,27 +646,27 @@ function CourseSearchFilter() {
                                                 starRatedColor="rgb(251, 191, 36)"
                                                 className="xl:mt-1"
                                             />
-                                            <h6 className="mb-4 xl:mt-1.5 mx-1 text-xs font-normal text-client-section-des">
+                                            <h6 className="mb-4 xl:mt-1.5 lg:mt-1 mx-1 text-xs font-normal text-client-section-des">
                                                 ({course_filter_data?.course_information?.avg_rating})
                                             </h6>
                                         </ul>
 
                                         <div className="flex flex-wrap">
                                             <div className="w-1/2">
-                                                <div className="flex sm:justify-center xl:justify-start -mt-3">
-                                                    <a><img className="xl:h-4 xl:w-4 mx-1" src={SpeedMeter} alt="" /></a>
-                                                    <a><img className="xl:h-4 xl:w-4 mx-1" src={ShareIcon} alt="" /></a>
-                                                    <a><img className="xl:h-4 xl:w-4 mx-1" src={CertificateIcon} alt="" /></a>
+                                                <div className="flex sm:justify-center lg:justify-start xl:-mt-3 lg:-mt-2">
+                                                    <a><img className="xl:h-4 xl:w-4 lg:h-4 lg:w-4 2xl:mx-1 lg:mx-0.5" src={SpeedMeter} alt="" /></a>
+                                                    <a><img className="xl:h-4 xl:w-4 lg:h-4 lg:w-4 2xl:mx-1 lg:mx-0.5" src={ShareIcon} alt="" /></a>
+                                                    <a><img className="xl:h-4 xl:w-4 lg:h-4 lg:w-4 2xl:mx-1 lg:mx-0.5" src={CertificateIcon} alt="" /></a>
                                                 </div>
                                             </div>
                                             <div className="w-1/2 relative">
                                                 <div
-                                                    className="flex sm:justify-center xl:justify-start -mt-3 right-0 absolute">
+                                                    className="flex sm:justify-center xl:justify-start -mt-3 2xl:ml-auto xl:-ml-5 lg:-ml-5 right-0 absolute">
                                                     <button
-                                                        className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white xl:pl-0 xl:pr-0 xl:pt-1 xl:pb-1 xl:mr-1 rounded-sm">
-                                                        <img className="xl:h-3 xl:w-3 mx-1" src={LoveIcon} alt="" /></button>
+                                                        className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white xl:pl-0 xl:pr-0 xl:pt-1 xl:pb-1 lg:py-0.5 px-0.5 xl:mr-1 lg:mr-0.5 rounded-sm">
+                                                        <img className="xl:h-3 xl:w-3 lg:h-3 lg:w-3 mx-1" src={LoveIcon} alt="" /></button>
                                                     <button
-                                                        className="text-xs font-light bg-maincolor text-white xl:pl-1.5 xl:pr-1.5 xl:pt-0.5 xl:pb-0.5 rounded-sm">Enroll
+                                                        className="text-xs font-light bg-maincolor text-white xl:pl-1.5 xl:pr-1.5 xl:pt-0.5 xl:pb-0.5 lg:px-1 lg:py-1 rounded-sm">Enroll
                                                         Now
                                                     </button>
                                                 </div>
@@ -704,25 +704,25 @@ function CourseSearchFilter() {
                                                 <div className="text-lg absolute top-0 mt-3">
                                                     <h6 className="font-medium xl:text-xs text-white dark:text-white xl:ml-1">{course_filter_data1?.course_information?.channel_name?.channel_name}</h6>
                                                     <h6 className="font-light xl:text-xs text-white dark:text-white">{course_filter_data1?.course_information?.course_duration} min</h6>
-                                                    <img className="xl:h-12 xl:ml-2 xl:-mt-6" src={Play} alt="" />
+                                                    <img className="xl:h-16 lg:h-16 xl:ml-2 lg:ml-1 lg:-mt-4 xl:-mt-2" src={Play} alt="" />
                                                 </div>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="w-6/12 xl:-ml-3">
+                                <div className="w-6/12 2xl:-ml-3 xl:ml-3 lg:ml-4">
                                     <div className="flex flex-wrap">
                                         <div className="w-full">
-                                            <h4 className="mt-1 xl:text-lg font-semibold text leading-tight text-CourseTitle dark:text-white">
+                                            <h4 className="mt-1 2xl:text-lg xl:text-base lg:text-sm font-semibold text leading-none text-CourseTitle dark:text-white">
                                                 {course_filter_data1?.course_information?.course_title}
                                             </h4>
                                         </div>
                                     </div>
 
-                                    <div className="flex flex-wrap xl:mt-1.5 xl:mb-1.5">
+                                    <div className="flex flex-wrap 2xl:my-1 xl:my-0.5 lg:my-0.5">
                                         <div className="w-full">
-                                            <div className="flex sm:justify-center xl:justify-start">
+                                            <div className="flex sm:justify-center lg:justify-start">
                                                 <span className="text-gray-600 text-sm dark:text-gray-500">77 Participients</span>
                                             </div>
                                         </div>
@@ -740,29 +740,29 @@ function CourseSearchFilter() {
 
                                     <div className="flex flex-wrap xl:mt-1">
                                         <div className="w-full">
-                                            <div className="flex xl:justify-end">
+                                            <div className="flex lg:justify-end">
                                                 <span className="text-maincolor xl:text-xl xl:font-semibold">${course_filter_data1?.new_price}</span>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div className="flex w-full flex-wrap xl:mt-5">
+                                    <div className="flex w-full flex-wrap xl:mt-5 lg:mt-10">
                                         <div className="w-1/2">
-                                            <div className="flex xl:justify-around">
-                                                <a><img className="xl:h-7 xl:w-7 mx-1" src={SpeedMeter} alt="" /></a>
-                                                <a><img className="xl:h-7 xl:w-7 mx-1" src={ShareIcon} alt="" /></a>
-                                                <a><img className="xl:h-7 xl:w-7 mx-1" src={CertificateIcon} alt="" /></a>
+                                            <div className="flex lg:justify-end">
+                                                <a><img className="2xl:h-7 2xl:w-7 xl:h-6 xl:w-6 lg:h-5.5 lg:w-5 xl:mx-1 lg:mx-0.5" src={SpeedMeter} alt="" /></a>
+                                                <a><img className="2xl:h-7 2xl:w-7 xl:h-6 xl:w-6 lg:h-5 lg:w-5 xl:mx-1 lg:mx-0.5" src={ShareIcon} alt="" /></a>
+                                                <a><img className="2xl:h-7 2xl:w-7 xl:h-6 xl:w-6 lg:h-5 lg:w-5 xl:mx-1 lg:mx-0.5" src={CertificateIcon} alt="" /></a>
                                             </div>
                                         </div>
 
                                         <div className="w-1/2 relative">
-                                            <div className="flex xl:justify-around right-0 absolute">
-                                                <button className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white xl:mr-4 xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 rounded-md">
-                                                    <img className="xl:h-4 xl:w-4 mx-1" src={LoveIcon} alt="" />
+                                            <div className="flex lg:justify-start right-0 absolute">
+                                                <button className="text-xs font-extralight leading-tight bg-BgLoveIcon text-white 2xl:mr-4 2xl:px-2 2xl:py-1 xl:px-2 xl:py-0.5 lg:px-1 lg:py-1  xl:rounded-md lg:rounded">
+                                                    <img className="2xl:h-4 2xl:w-4 lg:h-3 lg:w-3 mx-1" src={LoveIcon} alt="" />
                                                 </button>
                                                 <button data-mdb-ripple="true"
                                                     data-mdb-ripple-color="light"
-                                                    className="xl:text-xs xl:font-normal bg-maincolor mx-1 text-white xl:pl-4 xl:pr-4 xl:pt-2 xl:pb-2 rounded-sm">Enroll
+                                                    className="xl:text-xs lg:text-2xs lg:font-normal bg-maincolor mx-1 text-white 2xl:px-4 xl:px-2 xl:py-1.5 lg:px-2 lg:py-1 rounded-sm">Enroll
                                                     Now
                                                 </button>
                                             </div>
@@ -782,8 +782,8 @@ function CourseSearchFilter() {
 
     const courseSubCategoryHTML = (() => {
         return courseSubCategory.map((course_sub_category_list) => (
-            <div className="xl:w-1/4 xl:mt-5">
-                <button className=" text-breadcrumbs-text border border-gray-200 xl:text-sm xl:font-medium rounded-3xl xl:pt-3 xl:pb-3 xl:pl-12 xl:pr-12">
+            <div className="lg:w-auto lg:mt-5 lg:mx-2">
+                <button className=" text-breadcrumbs-text border border-gray-200 lg:text-sm lg:font-medium rounded-3xl xl:py-3 xl:px-12 lg:py-2 lg:px-10">
                     <i className="fa fa-book"></i>
                     <span className="ml-2">{course_sub_category_list.sub_category_name}</span>
                 </button>
@@ -795,14 +795,14 @@ function CourseSearchFilter() {
         <Fragment>
             <div>
                 <div className="container">
-                    <h6 className="text-center xl:mt-10 xl:text-2xl text-maingray dark:text-white xl:font-medium xl:mb-4">Result of your Research >> “Learn Big Data”</h6>
+                    <h6 className="text-center xl:mt-10 lg:mt-8 xl:text-2xl lg:text-xl text-maingray dark:text-white lg:font-medium lg:mb-4">Result of your Research >> “Learn Big Data”</h6>
                 </div >
 
                 <div className="container-fluid">
                     <div className="flex flex-wrap">
-                        <div className="xl:w-full bg-white dark:bg-dark-color2">
+                        <div className="lg:w-full bg-white dark:bg-dark-color2">
                             <div className="container">
-                                <div className="flex flex-wrap xl:mt-6 xl:mb-10">
+                                <div className="flex flex-wrap xl:mt-6 lg:mt-4 xl:mb-10 lg:mb-8">
                                     {
                                         courseSubCategoryHTML
                                     }
@@ -813,15 +813,15 @@ function CourseSearchFilter() {
                 </div >
 
 
-                <div className="bg-gray-100 dark:bg-dark-color3 xl:pt-3 xl:pb-3">
+                <div className="bg-gray-100 dark:bg-dark-color3 xl:py-3 lg:py-3">
                     <div className="container">
                         <div className="flex flex-wrap">
-                            <div className="xl:w-1/2">
-                                <h6 className=" text-maingray dark:text-white text-xl xl:mt-2 font-medium xl:pl-10">768 Result for “Learn Big Data”</h6>
+                            <div className="lg:w-1/2">
+                                <h6 className=" text-maingray dark:text-white text-xl xl:mt-2 lg:mt-3 font-medium xl:pl-10 lg:pl-6">768 Result for “Learn Big Data”</h6>
                             </div>
-                            <div className="xl:w-1/2 flex justify-end">
+                            <div className="lg:w-1/2 flex justify-end">
 
-                                <select className="select h-8 w-56 border-none active:outline-none focus:outline-none rounded-sm bg-gray-200 focus:border-hidden  active:border-hidden font-normal">
+                                <select className="select xl:h-8 lg:h-5 w-56 border-none active:outline-none focus:outline-none rounded-sm bg-gray-200 focus:border-hidden  active:border-hidden font-normal">
                                     <option selected className="hover:bg-maincolor text-sm">Short Result By</option>
 
                                     <option className=" option-custom bg-white hover:bg-maincolor" value="5">Most Relevent</option>
@@ -846,14 +846,14 @@ function CourseSearchFilter() {
                                             <BsFillGrid3X3GapFill
                                                 value={courseList}
                                                 onClick={() => setCourseList(true)}
-                                                className=" text-3xl cursor-pointer float-right xl:ml-4 xl:mt-2" />
+                                                className=" text-3xl cursor-pointer float-right xl:ml-4 lg:ml-4 xl:mt-2 lg:mt-2" />
                                         )
                                     } else if (courseList === true) {
                                         return (
                                             <FaThList
                                                 value={courseList}
                                                 onClick={() => setCourseList(false)}
-                                                className="text-3xl cursor-pointer float-right xl:ml-4 xl:mt-2" />
+                                                className="text-3xl cursor-pointer float-right xl:ml-4 lg:ml-4 xl:mt-2 lg:mt-2" />
                                         )
                                     }
                                 })()}
@@ -863,15 +863,15 @@ function CourseSearchFilter() {
                 </div>
 
                 <div className="container">
-                    <div className="flex flex-wrap xl:mt-10">
-                        <div className="xl:w-4/12 xl:pr-10">
-                            <div className="flex flex-wrap bg-white dark:bg-dark-color2 rounded-xl shadow-search-filter border-none xl:pl-7 xl:pr-6 w-full xl:mt-6 xl:pb-8">
-                                <div className="xl:w-full">
-                                    <h6 className="xl:text-2xl xl:mt-5 xl:font-bold text-maingray dark:text-white">Course Filters</h6>
+                    <div className="flex flex-wrap lg:mt-10">
+                        <div className="lg:w-4/12 lg:pr-10">
+                            <div className="flex flex-wrap bg-white dark:bg-dark-color2 rounded-xl shadow-search-filter border-none xl:pl-7 lg:pl-4 xl:pr-6 lg:pr-4 w-full xl:mt-6 xl:pb-8 lg:pb-5">
+                                <div className="lg:w-full">
+                                    <h6 className="xl:text-2xl lg:text-xl xl:mt-5 lg:mt-4 lg:font-bold text-maingray dark:text-white">Course Filters</h6>
                                 </div>
 
-                                <div className="xl:w-full">
-                                    <select className="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                <div className="lg:w-full">
+                                    <select className="select lg:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 lg:mt-4 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
                                         <option selected className="hover:bg-maincolor text-sm">Course Details</option>
                                         <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
                                         <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
@@ -881,11 +881,11 @@ function CourseSearchFilter() {
                                     </select>
                                 </div>
 
-                                <div className="xl:w-full">
+                                <div className="lg:w-full">
                                     <select
                                         onChange={selectSubCategoryID}
                                         value={SubCategoryID}
-                                        className="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                        className="select lg:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 lg:mt-4 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
                                         <option selected className="hover:bg-maincolor text-sm">Subcategories Course</option>
                                         {
                                             CourseSubCategoryHTML
@@ -893,9 +893,9 @@ function CourseSearchFilter() {
                                     </select>
                                 </div>
 
-                                <div className="xl:w-full flex flex-wrap">
-                                    <div className="xl:w-1/2 xl:pr-1">
-                                        <select className="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                <div className="lg:w-full flex flex-wrap">
+                                    <div className="xl:w-1/2 lg:w-full xl:pr-1">
+                                        <select className="select lg:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 lg:mt-4 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
                                             <option selected className="hover:bg-maincolor text-sm">Duration</option>
                                             <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
                                             <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
@@ -905,8 +905,8 @@ function CourseSearchFilter() {
                                         </select>
                                     </div>
 
-                                    <div className="xl:w-1/2 xl:pl-1">
-                                        <select className="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                    <div className="xl:w-1/2 lg:w-full xl:pl-1">
+                                        <select className="select lg:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 lg:mt-4 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
                                             <option selected className="hover:bg-maincolor text-sm">Course By</option>
                                             <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
                                             <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
@@ -917,7 +917,7 @@ function CourseSearchFilter() {
                                     </div>
                                 </div>
 
-                                <div className="xl:w-full xl:mt-7">
+                                <div className="lg:w-full xl:mt-7">
                                     <ReactFlagsSelect
                                         value={selected}
                                         selected={selected}
@@ -938,23 +938,23 @@ function CourseSearchFilter() {
                                     />
                                 </div>
 
-                                <div className="xl:w-full flex flex-wrap">
-                                    <div className="xl:w-1/2 xl:pr-1">
+                                <div className="lg:w-full flex flex-wrap">
+                                    <div className="xl:w-1/2 lg:w-full xl:pr-1">
                                         <select
                                             onChange={selectLanguage}
                                             value={languageID}
-                                            className="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                            className="select lg:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 lg:mt-4 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
                                             <option selected value={0} className="hover:bg-maincolor text-sm">Language</option>
                                             {
                                                 CourseLanguageHTML
                                             }
                                         </select>
                                     </div>
-                                    <div className="xl:w-1/2 xl:pl-1">
+                                    <div className="xl:w-1/2 lg:w-full xl:pl-1">
                                         <select
                                             onChange={selectCourseLevelID}
                                             value={courseLevelID}
-                                            className="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                            className="select lg:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 lg:mt-4 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
                                             <option selected className="hover:bg-maincolor text-sm">Course Level</option>
                                             {
                                                 CourseLevelHTML
@@ -963,8 +963,8 @@ function CourseSearchFilter() {
                                     </div>
                                 </div>
 
-                                <div className="xl:w-full">
-                                    <select className="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                <div className="lg:w-full">
+                                    <select className="select lg:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 lg:mt-4 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
                                         <option selected className="hover:bg-maincolor text-sm">Course Features</option>
                                         <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
                                         <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
@@ -974,8 +974,8 @@ function CourseSearchFilter() {
                                     </select>
                                 </div>
 
-                                <div className="xl:w-full">
-                                    <select className="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                <div className="lg:w-full">
+                                    <select className="select lg:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 lg:mt-4 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
                                         <option selected className="hover:bg-maincolor text-sm">Course Prices</option>
                                         <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
                                         <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
@@ -985,8 +985,8 @@ function CourseSearchFilter() {
                                     </select>
                                 </div>
 
-                                <div className="xl:w-full">
-                                    <select className="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                <div className="lg:w-full">
+                                    <select className="select lg:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 lg:mt-4 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
                                         <option selected className="hover:bg-maincolor text-sm">Course Type</option>
                                         <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
                                         <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
@@ -996,8 +996,8 @@ function CourseSearchFilter() {
                                     </select>
                                 </div>
 
-                                <div className="xl:w-full">
-                                    <select className="select xl:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                <div className="lg:w-full">
+                                    <select className="select lg:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 lg:mt-4 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
                                         <option selected className="hover:bg-maincolor text-sm">Skills</option>
                                         <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
                                         <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
@@ -1007,27 +1007,27 @@ function CourseSearchFilter() {
                                     </select>
                                 </div>
 
-                                <div className="xl:w-full">
-                                    <div className="form-check xl:mt-7">
+                                <div className="lg:w-full">
+                                    <div className="form-check xl:mt-7 lg:mt-4">
                                         <input className="form-check-input appearance-none focus:outline-none h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                                             type="checkbox"
                                             value={courseWithCertificate}
                                             onChange={selectCourseWithCertificate}
                                             id="flexCheckDefault" />
-                                        <label className="form-check-label inline-block text-gray-800 xl:text-sm xl:font-normal" for="flexCheckDefault">
+                                        <label className="form-check-label inline-block text-gray-800 lg:text-sm lg:font-normal" for="flexCheckDefault">
                                             Course with certificate
                                         </label>
                                     </div>
                                 </div>
 
-                                <div className="xl:w-full xl:mt-7">
+                                <div className="lg:w-full xl:mt-7 lg:mt-4">
                                     <webrouk-custom-range start="0" end="5000" from="300" to="700" prefix-char="$">
 
                                         <input type="hidden" />
                                     </webrouk-custom-range>
                                 </div>
 
-                                <div className="xl:w-full xl:h-12 xl:pt-3 bg-gray-100 xl:mt-7">
+                                <div className="lg:w-full xl:h-12 lg:h-8 xl:pt-3 lg:pt-1.5 bg-gray-100 xl:mt-7 lg:mt-3">
                                     <div className="flex">
                                         <span className="ml-3 w-80 text-sm font-medium text-gray-900 dark:text-gray-300 float-left">IntelloGeek Choice</span>
                                         <label for="default-toggle" className="relative cursor-pointer float-right right-0 flex">
@@ -1040,9 +1040,9 @@ function CourseSearchFilter() {
                                     </div>
                                 </div>
 
-                                <div className="xl:w-full flex flex-wrap xl:mt-7">
+                                <div className="lg:w-full flex flex-wrap xl:mt-7 lg:mt-4">
                                     <span
-                                        className="xl:px-4 xl:py-1.5 xl:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                        className="xl:px-4 xl:py-1.5 lg:px-3 lg:py-1 lg:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
                                         Itialian
                                         <button className="bg-transparent hover focus:outline-none">
                                             <span><IoCloseOutline className="xl:h-4 xl:w-4 xl:ml-3" /></span>
@@ -1050,7 +1050,7 @@ function CourseSearchFilter() {
                                     </span>
 
                                     <span
-                                        className="xl:px-4 xl:py-1.5 xl:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                        className="xl:px-4 xl:py-1.5 lg:px-3 lg:py-1 lg:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
                                         With Certificate
                                         <button className="bg-transparent hover focus:outline-none">
                                             <span><IoCloseOutline className="xl:h-4 xl:w-4 xl:ml-3" /></span>
@@ -1058,7 +1058,7 @@ function CourseSearchFilter() {
                                     </span>
 
                                     <span
-                                        className="xl:px-4 xl:py-1.5 xl:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                        className="xl:px-4 xl:py-1.5 lg:px-3 lg:py-1 lg:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
                                         Courses
                                         <button className="bg-transparent hover focus:outline-none">
                                             <span><IoCloseOutline className="xl:h-4 xl:w-4 xl:ml-3" /></span>
@@ -1066,7 +1066,7 @@ function CourseSearchFilter() {
                                     </span>
 
                                     <span
-                                        className="xl:px-4 xl:py-1.5 xl:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                        className="xl:px-4 xl:py-1.5 lg:px-3 lg:py-1 lg:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
                                         Big Data Courses
                                         <button className="bg-transparent hover focus:outline-none">
                                             <span><IoCloseOutline className="xl:h-4 xl:w-4 xl:ml-3" /></span>
@@ -1074,7 +1074,7 @@ function CourseSearchFilter() {
                                     </span>
 
                                     <span
-                                        className="xl:px-4 xl:py-1.5 xl:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                        className="xl:px-4 xl:py-1.5 lg:px-3 lg:py-1 lg:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
                                         Courses
                                         <button className="bg-transparent hover focus:outline-none">
                                             <span><IoCloseOutline className="xl:h-4 xl:w-4 xl:ml-3" /></span>
@@ -1082,7 +1082,7 @@ function CourseSearchFilter() {
                                     </span>
 
                                     <span
-                                        className="xl:px-4 xl:py-1.5 xl:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                        className="xl:px-4 xl:py-1.5 lg:px-3 lg:py-1 lg:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
                                         Italian
                                         <button className="bg-transparent hover focus:outline-none">
                                             <span><IoCloseOutline className="xl:h-4 xl:w-4 xl:ml-3" /></span>
@@ -1090,7 +1090,7 @@ function CourseSearchFilter() {
                                     </span>
 
                                     <span
-                                        className="xl:px-4 xl:py-1.5 xl:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                        className="xl:px-4 xl:py-1.5 lg:px-3 lg:py-1 lg:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
                                         Courses
                                         <button className="bg-transparent hover focus:outline-none">
                                             <span><IoCloseOutline className="xl:h-4 xl:w-4 xl:ml-3" /></span>
@@ -1098,7 +1098,7 @@ function CourseSearchFilter() {
                                     </span>
 
                                     <span
-                                        className="xl:px-4 xl:py-1.5 xl:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                        className="xl:px-4 xl:py-1.5 lg:px-3 lg:py-1 lg:mx-1 rounded-full text-gray-900 bg-white font-normal text-xs flex border border-gray-300 xl:mt-2 lg:mt-1 align-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
                                         Big Data Courses
                                         <button className="bg-transparent hover focus:outline-none">
                                             <span><IoCloseOutline className="xl:h-4 xl:w-4 xl:ml-3" /></span>
@@ -1107,7 +1107,7 @@ function CourseSearchFilter() {
                                 </div>
                             </div>
                         </div>
-                        <div className="xl:w-8/12">
+                        <div className="lg:w-8/12">
                             <div className="mt-4">
                                 <div className="fade show active">
                                     <div className="flex flex-wrap w-full -px-1 xl:-px-4">

@@ -87,9 +87,9 @@ function Lessons() {
     else if (isLoading === false) {
         return (
             <Fragment>
-                <div className="xl:ml-32 xl:p-0 p-4">
+                <div className="xl:ml-32 lg:ml-12 xl:p-0 p-4">
                     <div className="flex flex-wrap xl:mt-9 xl:mb-16">
-                        <div className="xl:w-11/12 w-full">
+                        <div className="lg:w-11/12 w-full">
                             <h6 className="text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl text-xl font-semibold xl:mb-8">Lessons</h6>
                             <div className="bg-white icon-select shadow mt-3 rounded-lg">
                                 <Accordion className="rounded m-0" open={open === 1} onClick={() => handleOpen(1)}>
