@@ -14,6 +14,7 @@ function CartSummery() {
     const [subTotal, setSubTotal] = useState(0);
     const [Tax, setTax] = useState('0');
     const [coupon, setCoupon] = useState(0);
+    const [coupon_percentage, setCouponPercentage] = useState(0);
     const [total, setTotal] = useState(0);
     const [cartListData, setCartListData] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -26,6 +27,7 @@ function CartSummery() {
                 if (response.data.error === false) {
                     setSubTotal(response.data.sub_total);
                     setTax(response.data.tax);
+                    setCouponPercentage(response.data.coupon_percentage);
                     setCoupon(response.data.coupon);
                     setTotal(response.data.total);
                     setCartListData(response.data.data);
@@ -369,7 +371,7 @@ function CartSummery() {
 
                                                 <div className="flex flex-wrap">
                                                     <div className="xl:w-1/2 flex">
-                                                        <h6 className="xl:text-base text-cart-item-title xl:font-medium">Cupon <span className="text-xs text-gray-500 font-light">(30% OFF)</span></h6>
+                                                        <h6 className="xl:text-base text-cart-item-title xl:font-medium">Cupon <span className="text-xs text-gray-500 font-light">({coupon_percentage}% OFF)</span></h6>
                                                     </div>
                                                     <div className="xl:w-1/2">
                                                         <div className="float-right flex">

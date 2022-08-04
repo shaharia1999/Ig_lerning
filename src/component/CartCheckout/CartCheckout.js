@@ -14,6 +14,8 @@ import axios from "axios";
 import ApiUrl from "../../Api/ApiUrl";
 
 function CartCheckout() {
+    
+
     const [selected, setSelected] = useState("");
     const onSelect = (code) => setSelected(code);
 
@@ -35,14 +37,26 @@ function CartCheckout() {
 
     const [subTotal, setSubTotal] = useState(0);
     const [tax, setTax] = useState(0);
+    const [coupon_percentage, setCouponPercentage] = useState(0);
     const [coupon, setCoupon] = useState(0);
     const [total, setTotal] = useState(0);
     const [cartListData, setCartListData] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
+    const cart_id = localStorage.getItem('cart_id')
+    console.log('cart id = ', cart_id);
+
+    const [emailAddress, setEmailAddress] = useState('');
+    const [cardholderName, setCardholderName] = useState('');
+    const [cardDetails, setCardDetails] = useState('');
+    const [expiry, setExpiry] = useState('');
+    const [CVC, setCVC] = useState('');
+    const [selectCountry, setSelectCountry] = useState('');
+    const [zip, setZip] = useState('');
+    const [state, setState] = useState('');
+    const [couponCode, SetCouponCode] = useState();
 
     const MyCartDataLoad = () => {
-        const cart_id = localStorage.getItem('cart_id')
-        console.log('cart id = ', cart_id);
+        
         if (cart_id != null){
             setIsLoading(true);
             axios.put(`${ApiUrl.BaseUrl}api/course/add-to-cart-checkout/${cart_id}/`).then((response) => {
@@ -50,6 +64,7 @@ function CartCheckout() {
                     setSubTotal(response.data.sub_total);
                     setTax(response.data.tax);
                     setCoupon(response.data.coupon);
+                    setCouponPercentage(response.data.coupon_percentage);
                     setTotal(response.data.total);
                     setCartListData(response.data.data);
                     console.log('cartListData = ', response.data.data);
@@ -97,6 +112,25 @@ function CartCheckout() {
             </div>
         )
     })()
+
+    const CouponCodeSubmit = (e) => {
+        e.preventDefault();
+        const data = {
+            coupon_code: couponCode,
+        }
+        axios.put(`${ApiUrl.BaseUrl}api/course/add-to-cart-checkout/${cart_id}/`, data).then((response) => {
+            if (response.data.error === false) {
+                setSubTotal(response.data.sub_total);
+                setTax(response.data.tax);
+                setCoupon(response.data.coupon);
+                setCouponPercentage(response.data.coupon_percentage);
+                setTotal(response.data.total);
+                setCartListData(response.data.data);
+                console.log('cartListData = ', response.data.data);
+                setIsLoading(false);
+            }
+        });
+    };
 
     const AddToCartCheckOutDataSuccess = (() => {
         return cartListData.map((cartData) => (
@@ -428,7 +462,7 @@ function CartCheckout() {
                                                             </div>
                                                             <div className="lg:w-1/2">
                                                                 <div className="float-right flex">
-                                                                    <h6 className="text-sm text-cart-item-title lg:font-medium xl:mr-5">${TextTrack}</h6>
+                                                                    <h6 className="text-sm text-cart-item-title lg:font-medium xl:mr-5">${tax}</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -436,7 +470,7 @@ function CartCheckout() {
     
                                                         <div className="flex flex-wrap">
                                                             <div className="lg:w-1/2 flex">
-                                                                <h6 className="text-sm text-cart-item-title lg:font-medium">Cupon <span className="text-xs text-gray-500 font-light">(30% OFF)</span></h6>
+                                                                <h6 className="text-sm text-cart-item-title lg:font-medium">Cupon <span className="text-xs text-gray-500 font-light">({coupon_percentage}% OFF)</span></h6>
                                                             </div>
                                                             <div className="lg:w-1/2">
                                                                 <div className="float-right flex">
@@ -607,11 +641,16 @@ function CartCheckout() {
                                                             <input
                                                                 type="search"
                                                                 id="search-dropdown"
+                                                                value={couponCode}
+                                                                onChange={e => SetCouponCode(e.target.value)}
                                                                 className="form-control rounded block w-full px-3 py-2.5 text-sm font-normal text-maingray bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                                                                 placeholder="Enter Code"
                                                             />
-                                                            <button type="submit"
-                                                                className="absolute top-0 right-0 pt-2.5 pb-2.5 pl-5 pr-5 text-sm font-medium text-white bg-pagination rounded-r-lg border border-pagination hover:bg-pagination focus:ring-4 focus:outline-none focus:ring-blue-300">Apply</button>
+                                                            <button 
+                                                                onClick={CouponCodeSubmit}
+                                                                className="absolute top-0 right-0 pt-2.5 pb-2.5 pl-5 pr-5 text-sm font-medium text-white bg-pagination rounded-r-lg border border-pagination hover:bg-pagination focus:ring-4 focus:outline-none focus:ring-blue-300">
+                                                                Apply
+                                                            </button>
                                                         </div>
                                                     </div>
     
