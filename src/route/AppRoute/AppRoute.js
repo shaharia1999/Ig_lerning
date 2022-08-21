@@ -18,6 +18,7 @@ import CartPaymentPage from '../../pages/CartPaymentPage/CartPaymentPage';
 import CartSummeryPage from '../../pages/CartSummeryPage/CartSummeryPage';
 import MyCoursePage from '../../pages/MyCoursePage/MyCoursePage';
 import MyCourseDetailsPage from '../../pages/MyCourseDetailsPage/MyCourseDetailsPage';
+import CategoryDetailsPage from '../../pages/CategoryDetailsPage/CategoryDetailsPage';
 
 function AppRoute() {
     return (
@@ -46,6 +47,8 @@ function AppRoute() {
                 <Route exact path="/course-search-filter" render={(props) => <CourseSearchFilterPage {...props} key={Date.now()} />} />
 
                 <Route exact path="/my-course-details" render={(props) => <MyCourseDetailsPage {...props} key={Date.now()} />} />
+
+                <Route exact path="/category-details" render={(props) => <CategoryDetailsPage {...props} key={Date.now()} />} />
 
                 <Route path="" component={OpssPage} />
             </Switch>

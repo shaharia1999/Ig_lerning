@@ -2,6 +2,7 @@ import React from 'react';
 import './index.css';
 import 'flowbite';
 import './App.css';
+import './asset/css/style.css';
 import './asset/css/pill.css';
 import './asset/css/custom.css';
 import './asset/css/responsive.css';
