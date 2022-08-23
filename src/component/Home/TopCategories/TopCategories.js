@@ -120,7 +120,6 @@ function TopCategories() {
                         }
                     </div>
                 </div>
-
             </Fragment>
         );
     }

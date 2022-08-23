@@ -145,7 +145,10 @@ function ClientSays() {
         return (
             <Fragment>
                 <div className="container xl:mt-8 xl:mb-12">
-                    <h4 className="text-4xl	font-semibold ml-3 text-sectionTitleColor dark:text-white">What Our Client Say</h4>
+                    <h4 className="text-4xl	font-semibold ml-3 text-sectionTitleColor dark:text-white">What Our Client Say</h4
+                    
+                    
+                    >
                     <div className="xl:mt-6">
                         {
                             says_client_lazy_loading
