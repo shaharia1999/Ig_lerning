@@ -13,6 +13,7 @@ import StudentBoughtCourse from "../SingleCourseDetails/StudentBoughtCourse/Stud
 import Footer from "../Common/Footer/Footer";
 import CopyRight from "../Common/CopyRight/CopyRight";
 import InstituteCoverBanner from "./InstituteCoverBanner/InstituteCoverBanner";
+import InstituteDescription from "./InstituteDescription/InstituteDescription";
 
 function InstituteCourseDetails() {
     return(
@@ -21,13 +22,18 @@ function InstituteCourseDetails() {
         <Breadcrumbs />
     </div>
 
-    <div>
-        <InstituteCoverBanner />
+    <div className="flex relative flex-wrap">
+        <div className="">
+            <InstituteCoverBanner />
+        </div>
+        <div className="lg:w-4/12 ml-auto">
+            <DiscountCardCourse />
+        </div>
     </div>
 
     <div className="flex flex-wrap">
         <div className="lg:w-8/12">
-            <Description />
+            <InstituteDescription />
             <Lessons />
             <StudentFeedback />
             <Review />

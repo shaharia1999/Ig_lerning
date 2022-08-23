@@ -32,29 +32,29 @@ function StudentBoughtCourse() {
     const profile_picture = (() => {
         if (isLoading === true) {
             return (
-                <div className="xl:w-full flex">
+                <div className="flex flex-wrap">
                     <div className="xl:w-1/6 xl:px-3 animate-pulse">
-                        <div className="rounded-md xl:h-44 xl:w-full bg-gray-100"></div>
+                        <div className="rounded-md xl:h-44 bg-gray-100"></div>
                     </div>
 
                     <div className="xl:w-1/6 xl:px-3 animate-pulse">
-                        <div className="rounded-md xl:h-44 xl:w-full bg-gray-100"></div>
+                        <div className="rounded-md xl:h-44 bg-gray-100"></div>
                     </div>
 
                     <div className="xl:w-1/6 xl:px-3 animate-pulse">
-                        <div className="rounded-md xl:h-44 xl:w-full bg-gray-100"></div>
+                        <div className="rounded-md xl:h-44 bg-gray-100"></div>
                     </div>
 
                     <div className="xl:w-1/6 xl:px-3 animate-pulse">
-                        <div className="rounded-md xl:h-44 xl:w-full bg-gray-100"></div>
+                        <div className="rounded-md xl:h-44 bg-gray-100"></div>
                     </div>
 
                     <div className="xl:w-1/6 xl:px-3 animate-pulse">
-                        <div className="rounded-md xl:h-44 xl:w-full bg-gray-100"></div>
+                        <div className="rounded-md xl:h-44 bg-gray-100"></div>
                     </div>
 
                     <div className="xl:w-1/6 xl:px-3 animate-pulse">
-                        <div className="rounded-md xl:h-44 xl:w-full bg-gray-100"></div>
+                        <div className="rounded-md xl:h-44 bg-gray-100"></div>
                     </div>
                 </div>
             )
