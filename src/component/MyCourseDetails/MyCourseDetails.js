@@ -4,8 +4,11 @@ import { FiCheckCircle } from "react-icons/fi";
 import StarRatings from 'react-star-ratings';
 import { FaRegThumbsUp, FaRegThumbsDown } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { FaStar } from "react-icons/fa";
 
 function MyCourseDetails() {
+
+    
     return (
         <Fragment>
             <div className="container">
@@ -16,8 +19,30 @@ function MyCourseDetails() {
                     <div className="lg:w-8/12">
                         <div className="">
                             <div className="w-full">
-                                <img src={VideoImg} alt="" />
+                                {/* <img src={VideoImg} alt="" /> */}
+                                <video
+                                    id="my-video"
+                                    // class="video-js"
+                                    class="video-js vjs-theme-fantasy vjs-16-9"
+                                    controls
+                                    autoPlay={true}
+                                    muted
+                                    // aspectRatio="16:9"
+                                    // width="1020px"
+                                    // height="576px"
+                                    poster="https://futurevisioncomputers.com/wp-content/uploads/2021/03/computer_institute_banner_classes_in_surat-scaled-1024x576.jpg"
+                                    data-setup='{}'
+                                >
+                                    <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4" />
+                                    <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm" />
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noreferrer">supports HTML5 video</a>
+                                    </p>
+                                </video>
                             </div>
+
                             <div className="w-full">
                                 <h6 className="lg:text-2xl lg:font-medium lg:mt-4">
                                     UI UX Designing Full Course
@@ -187,7 +212,99 @@ function MyCourseDetails() {
                                 <div className="tab-pane w-full fade"
                                     id="pills-4" role="tabpanel"
                                     aria-labelledby="pills-contact-tab3">
-                                    <div className="lg:-mt-2 md:mt-5">
+
+                                    <div className=" xl:mt-5 xl:mr-14 xl:p-0 p-4">
+                                        <h6 className="text-sectionTitleColor lg:text-xl dark:text-white font-semibold">Student Feedback</h6>
+                                        <div className="flex flex-wrap xl:mt-0 mt-4">
+                                            <div className="xl:w-1/5 w-4/12 xl:mt-6">
+                                                <div className="bg-maincolor xl:rounded-lg rounded-md text-center">
+                                                    <h6 className="2xl:pt-6 xl:pt-4 pt-2 2xl:text-5xl xl:text-3xl text-lg text-white xl:font-bold">3.5</h6>
+                                                    <ul className="flex justify-center xl:mt-2">
+                                                        <StarRatings
+                                                            rating={3.5}
+                                                            starDimension="15px"
+                                                            starSpacing="4px"
+                                                            starRatedColor="rgb(251, 191, 36)"
+                                                        />
+                                                    </ul>
+                                                    <h6 className="2xl:pb-6 xl:pb-4 pb-2 2xl:mt-2 xl:mt-1 xl:text-base text-xs text-white xl:font-medium">Course Ratings</h6>
+                                                </div>
+                                            </div>
+                                            <div className="xl:w-3/5 w-4/12 2xl:mt-4 xl:mt-3 xl:pl-8 pl-2">
+                                                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-3 xl:mt-4 mt-2">
+                                                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
+                                                </div>
+
+                                                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-4 mt-2">
+                                                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
+                                                </div>
+
+                                                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-4 mt-2">
+                                                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
+                                                </div>
+
+
+                                                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-4 mt-2">
+                                                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
+                                                </div>
+
+
+                                                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-3.5 mt-2">
+                                                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
+                                                </div>
+                                            </div>
+                                            <div className="xl:w-1/5 w-4/12 2xl:mt-5 xl:mt-8">
+
+                                                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 mt-1.5">
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">40%</h6>
+                                                </ul>
+
+                                                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2">
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">20%</h6>
+                                                </ul>
+
+                                                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2.5">
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">18%</h6>
+                                                </ul>
+
+                                                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2.5">
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">12%</h6>
+                                                </ul>
+
+                                                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2.5">
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">10%</h6>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="lg:mt-5 md:mt-5">
                                         <div className="lg:mt-0 xl:p-0 p-4">
                                             <h6 className="text-sectionTitleColor dark:text-white lg:text-xl text-xl font-semibold">Reviews</h6>
                                             <div className="w-full flex ">
@@ -323,6 +440,7 @@ function MyCourseDetails() {
 
                                         </div >
                                     </div>
+
                                 </div>
                                 <div className="tab-pane w-full fade"
                                     id="pills-5" role="tabpanel"

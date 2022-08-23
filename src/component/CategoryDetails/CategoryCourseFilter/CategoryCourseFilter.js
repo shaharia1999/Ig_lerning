@@ -819,48 +819,104 @@ function CategoryCourseFilter() {
 
                 <div className="container lg:mt-8">
                     <div className="flex flex-wrap w-full">
+
                         <div className="w-1/5 text-center lg:px-2">
-                            <div className="bg-white rounded-md shadow-lg lg:p-8">
-                                <img className="h-20 w-20 rounded-full mx-auto border-2 border-maincolor" src="https://eddie-hernandez.com/wp-content/uploads/2021/09/Medical-Residency-ERAS-application-photo-headshot-01.jpg" alt="" />
-                                <h6 className="w-12 h-7 flex text-center mx-auto bg-white shadow-md p-2 -mt-3 relative rounded-sm"><FaStar className="text-xs text-CertificateColor"/><span className="text-xs">4.8</span></h6>
+                            <div className="bg-white rounded-md shadow-lg lg:p-6">
+                                <img className="h-20 w-20 rounded-full mx-auto border-4 border-maincolor" src="https://eddie-hernandez.com/wp-content/uploads/2021/09/Medical-Residency-ERAS-application-photo-headshot-01.jpg" alt="" />
+                                <h6 className="w-12 h-7 flex text-center mx-auto bg-white shadow-md p-2 -mt-3 relative rounded-sm"><FaStar className="text-xs text-CertificateColor" /><span className="text-xs text-maingray font-medium ml-0.5 -mt-0.25">4.8</span></h6>
                                 <h6 className="xl:mt-2 xl:font-medium xl:text-lg">Daniel Walter Scott</h6>
-                                <h6 className="text-xs">User Experience Design, User Interface Design</h6>
+                                <h6 className="text-xs text-gray-600">User Experience Design, User Interface Design</h6>
+                                <div className="flex-wrap flex lg:mt-5 divide-x-2">
+                                    <div className="w-1/2">
+                                        <h6 className="lg:text-sm text-gray-400 font-normal">Total Students</h6>
+                                        <h6 className="lg:text-lg text-maincolor font-semibold justify-start">546,238</h6>
+                                    </div>
+                                
+                                    <div className="w-1/2">
+                                        <h6 className="lg:text-sm text-gray-400 font-normal">Total Course</h6>
+                                        <h6 className="lg:text-lg text-maincolor font-semibold justify-start">30</h6>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div className="w-1/5 text-center lg:px-2">
-                            <div className="bg-white rounded-md shadow-lg lg:p-8">
-                                <img className="h-20 w-20 rounded-full mx-auto border-2 border-maincolor" src="https://eddie-hernandez.com/wp-content/uploads/2021/09/Medical-Residency-ERAS-application-photo-headshot-01.jpg" alt="" />
-                                <h6 className="w-12 h-7 flex text-center mx-auto bg-white shadow-md p-2 -mt-3 relative rounded-sm"><FaStar className="text-xs text-CertificateColor"/><span className="text-xs">4.8</span></h6>
+                            <div className="bg-white rounded-md shadow-lg lg:p-6">
+                                <img className="h-20 w-20 rounded-full mx-auto border-4 border-maincolor" src="https://eddie-hernandez.com/wp-content/uploads/2021/09/Medical-Residency-ERAS-application-photo-headshot-01.jpg" alt="" />
+                                <h6 className="w-12 h-7 flex text-center mx-auto bg-white shadow-md p-2 -mt-3 relative rounded-sm"><FaStar className="text-xs text-CertificateColor" /><span className="text-xs text-maingray font-medium ml-0.5 -mt-0.25">4.8</span></h6>
                                 <h6 className="xl:mt-2 xl:font-medium xl:text-lg">Daniel Walter Scott</h6>
                                 <h6 className="text-xs">User Experience Design, User Interface Design</h6>
+                                <div className="flex-wrap flex lg:mt-5 divide-x-2">
+                                    <div className="w-1/2">
+                                        <h6 className="lg:text-sm text-gray-400 font-normal">Total Students</h6>
+                                        <h6 className="lg:text-lg text-maincolor font-semibold justify-start">546,238</h6>
+                                    </div>
+                                
+                                    <div className="w-1/2">
+                                        <h6 className="lg:text-sm text-gray-400 font-normal">Total Course</h6>
+                                        <h6 className="lg:text-lg text-maincolor font-semibold justify-start">30</h6>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div className="w-1/5 text-center lg:px-2">
-                            <div className="bg-white rounded-md shadow-lg lg:p-8">
-                                <img className="h-20 w-20 rounded-full mx-auto border-2 border-maincolor" src="https://eddie-hernandez.com/wp-content/uploads/2021/09/Medical-Residency-ERAS-application-photo-headshot-01.jpg" alt="" />
-                                <h6 className="w-12 h-7 flex text-center mx-auto bg-white shadow-md p-2 -mt-3 relative rounded-sm"><FaStar className="text-xs text-CertificateColor"/><span className="text-xs">4.8</span></h6>
+                            <div className="bg-white rounded-md shadow-lg lg:p-6">
+                                <img className="h-20 w-20 rounded-full mx-auto border-4 border-maincolor" src="https://eddie-hernandez.com/wp-content/uploads/2021/09/Medical-Residency-ERAS-application-photo-headshot-01.jpg" alt="" />
+                                <h6 className="w-12 h-7 flex text-center mx-auto bg-white shadow-md p-2 -mt-3 relative rounded-sm"><FaStar className="text-xs text-CertificateColor" /><span className="text-xs text-maingray font-medium ml-0.5 -mt-0.25">4.8</span></h6>
                                 <h6 className="xl:mt-2 xl:font-medium xl:text-lg">Daniel Walter Scott</h6>
                                 <h6 className="text-xs">User Experience Design, User Interface Design</h6>
+                                <div className="flex-wrap flex lg:mt-5 divide-x-2">
+                                    <div className="w-1/2">
+                                        <h6 className="lg:text-sm text-gray-400 font-normal">Total Students</h6>
+                                        <h6 className="lg:text-lg text-maincolor font-semibold justify-start">546,238</h6>
+                                    </div>
+                                
+                                    <div className="w-1/2">
+                                        <h6 className="lg:text-sm text-gray-400 font-normal">Total Course</h6>
+                                        <h6 className="lg:text-lg text-maincolor font-semibold justify-start">30</h6>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div className="w-1/5 text-center lg:px-2">
-                            <div className="bg-white rounded-md shadow-lg lg:p-8">
-                                <img className="h-20 w-20 rounded-full mx-auto border-2 border-maincolor" src="https://eddie-hernandez.com/wp-content/uploads/2021/09/Medical-Residency-ERAS-application-photo-headshot-01.jpg" alt="" />
-                                <h6 className="w-12 h-7 flex text-center mx-auto bg-white shadow-md p-2 -mt-3 relative rounded-sm"><FaStar className="text-xs text-CertificateColor"/><span className="text-xs">4.8</span></h6>
+                            <div className="bg-white rounded-md shadow-lg lg:p-6">
+                                <img className="h-20 w-20 rounded-full mx-auto border-4 border-maincolor" src="https://eddie-hernandez.com/wp-content/uploads/2021/09/Medical-Residency-ERAS-application-photo-headshot-01.jpg" alt="" />
+                                <h6 className="w-12 h-7 flex text-center mx-auto bg-white shadow-md p-2 -mt-3 relative rounded-sm"><FaStar className="text-xs text-CertificateColor" /><span className="text-xs text-maingray font-medium ml-0.5 -mt-0.25">4.8</span></h6>
                                 <h6 className="xl:mt-2 xl:font-medium xl:text-lg">Daniel Walter Scott</h6>
                                 <h6 className="text-xs">User Experience Design, User Interface Design</h6>
+                                <div className="flex-wrap flex lg:mt-5 divide-x-2">
+                                    <div className="w-1/2">
+                                        <h6 className="lg:text-sm text-gray-400 font-normal">Total Students</h6>
+                                        <h6 className="lg:text-lg text-maincolor font-semibold justify-start">546,238</h6>
+                                    </div>
+                                
+                                    <div className="w-1/2">
+                                        <h6 className="lg:text-sm text-gray-400 font-normal">Total Course</h6>
+                                        <h6 className="lg:text-lg text-maincolor font-semibold justify-start">30</h6>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div className="w-1/5 text-center lg:px-2">
-                            <div className="bg-white rounded-md shadow-lg lg:p-8">
-                                <img className="h-20 w-20 rounded-full mx-auto border-2 border-maincolor" src="https://eddie-hernandez.com/wp-content/uploads/2021/09/Medical-Residency-ERAS-application-photo-headshot-01.jpg" alt="" />
-                                <h6 className="w-12 h-7 flex text-center mx-auto bg-white shadow-md p-2 -mt-3 relative rounded-sm"><FaStar className="text-xs text-CertificateColor"/><span className="text-xs">4.8</span></h6>
+                            <div className="bg-white rounded-md shadow-lg lg:p-6">
+                                <img className="h-20 w-20 rounded-full mx-auto border-4 border-maincolor" src="https://eddie-hernandez.com/wp-content/uploads/2021/09/Medical-Residency-ERAS-application-photo-headshot-01.jpg" alt="" />
+                                <h6 className="w-12 h-7 flex text-center mx-auto bg-white shadow-md p-2 -mt-3 relative rounded-sm"><FaStar className="text-xs text-CertificateColor" /><span className="text-xs text-maingray font-medium ml-0.5 -mt-0.25">4.8</span></h6>
                                 <h6 className="xl:mt-2 xl:font-medium xl:text-lg">Daniel Walter Scott</h6>
                                 <h6 className="text-xs">User Experience Design, User Interface Design</h6>
+                                <div className="flex-wrap flex lg:mt-5 divide-x-2">
+                                    <div className="w-1/2">
+                                        <h6 className="lg:text-sm text-gray-400 font-normal">Total Students</h6>
+                                        <h6 className="lg:text-lg text-maincolor font-semibold justify-start">546,238</h6>
+                                    </div>
+                                
+                                    <div className="w-1/2">
+                                        <h6 className="lg:text-sm text-gray-400 font-normal">Total Course</h6>
+                                        <h6 className="lg:text-lg text-maincolor font-semibold justify-start">30</h6>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
