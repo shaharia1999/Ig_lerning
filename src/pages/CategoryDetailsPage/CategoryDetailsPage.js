@@ -13,6 +13,7 @@ import CategoryCourseFilter from "../../component/CategoryDetails/CategoryCourse
 
 function CategoryDetailsPage() {
     useEffect(() => {
+        window.scroll(0,0);
         darkModeTheme();
     }, [])
     return (

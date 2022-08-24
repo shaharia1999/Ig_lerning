@@ -12,7 +12,6 @@ import {
     AccordionHeader,
     AccordionBody
 } from "@material-tailwind/react";
-import { FaPlayCircle } from "react-icons/fa";
 import { GrDocumentText } from "react-icons/gr";
 
 function MyCourseDetails() {
@@ -32,8 +31,10 @@ function MyCourseDetails() {
                             <div className="flex flex-wrap xl:mt-9 xl:mb-16">
                                 <div className="lg:w-11/12 w-full">
                                     <h6 className="text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl text-xl font-semibold xl:mb-3">Content</h6>
-                                    <h6 className="text-maincolor dark:text-white text-base font-normal xl:mb-8">5 Section.24 Lecture.2h 22m total length</h6>
-
+                                    <h6 className="text-maincolor dark:text-white text-base font-normal lg:mb-5">5 Section.24 Lecture.2h 22m total length</h6>
+                                    <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700 lg:mb-5">
+                                        <div class="bg-maincolor text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full" style={{width: "45%"}}> 45%</div>
+                                    </div>
                                     <div className="bg-white icon-select shadow mt-3 rounded-lg">
                                         <Accordion className="rounded m-0" open={open === 1} onClick={() => handleOpen(1)}>
                                             <AccordionHeader className="pr-4">
@@ -41,6 +42,7 @@ function MyCourseDetails() {
                                                     <h1 className="xl:text-base text-sm text-maingray font-medium xl:pl-8">Chapter 1 : Be positive</h1>
                                                     <h1 className="lg:text-sm text-sm text-gray-400 font-normal xl:-ml-8">01/14  | 1h 38 min</h1>
                                                 </div>
+                                                <div className="h-4 w-4 bg-price-deep rounded-full xl:-mr-64 z-40 float-right flex xl:mt-5"></div>
                                             </AccordionHeader>
                                             <AccordionBody className="bg-gray-50 xl:pl-0 pl-4">
                                                 <div className="flex flex-wrap mt-0.5">
@@ -97,8 +99,9 @@ function MyCourseDetails() {
                                                 <div>
                                                     <h1 className="xl:text-base text-sm text-maingray font-medium xl:pl-8">Chapter 2 : Be positive</h1>
                                                     <h1 className="lg:text-sm text-sm text-gray-400 font-normal xl:-ml-8">01/14  | 1h 38 min</h1>
-                                                </div>                                            </AccordionHeader>
-                                                <AccordionBody className="bg-gray-50 xl:pl-0 pl-4">
+                                                </div>    
+                                                <div className="h-4 w-4 bg-gray-500 rounded-full xl:-mr-64 z-40 float-right flex xl:mt-5"></div>                                        </AccordionHeader>
+                                            <AccordionBody className="bg-gray-50 xl:pl-0 pl-4">
                                                 <div className="flex flex-wrap mt-0.5">
                                                     <div className="xl:w-2/12 mt-3 mb-3">
                                                         <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
@@ -272,6 +275,7 @@ function MyCourseDetails() {
                                                     <h1 className="xl:text-base text-sm text-maingray font-medium xl:pl-8">Chapter 3 : Be positive</h1>
                                                     <h1 className="lg:text-sm text-sm text-gray-400 font-normal xl:-ml-8">01/14  | 1h 38 min</h1>
                                                 </div>
+                                                <div className="h-4 w-4 bg-price-deep rounded-full xl:-mr-64 z-40 float-right flex xl:mt-5"></div>
                                             </AccordionHeader>
                                             <AccordionBody className="bg-gray-50 xl:pl-0 pl-4">
                                                 <div className="flex flex-wrap mt-0.5">
@@ -329,6 +333,7 @@ function MyCourseDetails() {
                                                     <h1 className="xl:text-base text-sm text-maingray font-medium xl:pl-8">Chapter 4 : Be positive</h1>
                                                     <h1 className="lg:text-sm text-sm text-gray-400 font-normal xl:-ml-8">01/14  | 1h 38 min</h1>
                                                 </div>
+                                                <div className="h-4 w-4 bg-price-deep rounded-full xl:-mr-64 z-40 float-right flex xl:mt-5"></div>
                                             </AccordionHeader>
                                             <AccordionBody className="bg-gray-50 xl:pl-0 pl-4">
                                                 <div className="flex flex-wrap mt-0.5">
@@ -386,6 +391,7 @@ function MyCourseDetails() {
                                                     <h1 className="xl:text-base text-sm text-maingray font-medium xl:pl-8">Chapter 5 : Be positive</h1>
                                                     <h1 className="lg:text-sm text-sm text-gray-400 font-normal xl:-ml-8">01/14  | 1h 38 min</h1>
                                                 </div>
+                                                <div className="h-4 w-4 bg-price-deep rounded-full xl:-mr-64 z-40 float-right flex xl:mt-5"></div>
                                             </AccordionHeader>
                                             <AccordionBody className="bg-gray-50 xl:pl-0 pl-4">
                                                 <div className="flex flex-wrap mt-0.5">
@@ -449,8 +455,8 @@ function MyCourseDetails() {
                                     // class="video-js"
                                     class="video-js vjs-theme-fantasy vjs-16-9"
                                     controls
-                                    autoPlay={true}
-                                    muted
+                                    // autoPlay={true}
+                                    // muted
                                     // aspectRatio="16:9"
                                     // width="1020px"
                                     // height="576px"

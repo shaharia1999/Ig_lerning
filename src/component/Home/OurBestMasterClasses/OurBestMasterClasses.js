@@ -138,7 +138,7 @@ function SamplePrevArrow(props) {
     );
 }
 
-function RecentlyAddedCourseSectionTwo() {
+function OurBestMasterClasses() {
     const [category, setCategory] = useState([]);
     const [subCategory, setSubCategory] = useState([]);
     const [getCourse, setCourse] = useState([]);
@@ -823,9 +823,5 @@ function RecentlyAddedCourseSectionTwo() {
             </Fragment>
         );
     }
-
-
-
-
 }
-export default RecentlyAddedCourseSectionTwo;
+export default OurBestMasterClasses;

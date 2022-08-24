@@ -61,11 +61,17 @@ function HomePage() {
             </div>
 
             <BusinessCompany />
+
             <RecentlyAddedCourseSectionTwo />
-            <MostPopularCourse />
+
+
+
+            {/* <MostPopularCourse />
             <RecommandForYou />
             <OnlyOnIntelloGeek />
-            <InBaseOfYourInterest />
+            <InBaseOfYourInterest /> */}
+
+            
             <HomeAdvertisedment />
             <ClientSays />
             <Partner />

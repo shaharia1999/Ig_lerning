@@ -27,6 +27,9 @@
   border-width: 1px !important;
   border-radius: 100% !important;
   color: #949494;
+  height: 18px;
+  width: 18px;
+  margin-top: -35px;
 }
 
 .accordion-bg-color {
@@ -35,6 +38,22 @@
 
 .check-font-size {
   font-size: 22px;
+}
+
+
+.vjs-theme-fantasy .vjs-big-play-button {
+  width: 50px!important;
+  height: 50px!important;
+  background: #FFFFFF !important;
+  line-height: 50px !important;
+  font-size: 35px;
+  border: none;
+  top: 50% !important;
+  left: 50% !important;
+  margin-top: -35px !important;
+  margin-left: -25px !important;
+  color: rgb(57 78 234 / 10%) !important;
+  border-radius: 100% !important;
 }
 
 @media (min-width: 640px) {
