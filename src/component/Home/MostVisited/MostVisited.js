@@ -299,8 +299,8 @@ function MostVisited() {
                                     <div className="w-4/5">
                                         <a href="!#">
                                             <div className="text-lg absolute top-0 xl:mt-5 mt-3 ml-3">
-                                                <h6 className="font-medium xl:text-lg text-sm text-black dark:text-white">{mostvisited_c?.channel_name?.channel_name}</h6>
-                                                <h6 className="font-light xl:text-sm text-xs text-black dark:text-white">{mostvisited_c?.course_duration} min</h6>
+                                                <h6 className="font-medium xl:text-lg text-sm text-white dark:text-white">{mostvisited_c?.channel_name?.channel_name}</h6>
+                                                <h6 className="font-light xl:text-sm text-xs text-white dark:text-white">{mostvisited_c?.course_duration} min</h6>
 
                                                 <img className="2xl:h-36 xl:h-32 lg:h-24 h-24 2xl:ml-4 xl:ml-3 lg:ml-2" src={Play} alt="" />
                                             </div>
@@ -461,7 +461,7 @@ function MostVisited() {
                             infinite={true}
                             slidesToScroll={1}
                             loop={true}
-                            speed={300}
+                            speed={100}
                             autoplay={true}
                             autoplaySpeed={2000}
                             swipeToSlide={true}

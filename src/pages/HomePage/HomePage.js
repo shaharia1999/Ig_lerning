@@ -18,6 +18,8 @@ import HomeBannerMobile from '../../component/Home/HomeBanner/HomeBannerMobile';
 import FooterMobile from '../../component/Common/FooterMobile/FooterMobile';
 import ApiUrl from '../../Api/ApiUrl';
 import axios from "axios";
+import OurBestMasterClasses from '../../component/Home/OurBestMasterClasses/OurBestMasterClasses';
+import BestSchoolAndInstitute from '../../component/Home/BestSchoolAndInstitute/BestSchoolAndInstitute';
 
 
 
@@ -62,9 +64,11 @@ function HomePage() {
 
             <BusinessCompany />
 
+            <OurBestMasterClasses/>
+
             <RecentlyAddedCourseSectionTwo />
 
-
+            <BestSchoolAndInstitute/>
 
             {/* <MostPopularCourse />
             <RecommandForYou />

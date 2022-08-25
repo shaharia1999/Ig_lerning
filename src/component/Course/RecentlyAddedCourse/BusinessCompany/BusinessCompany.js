@@ -799,7 +799,7 @@ function BusinessCompany() {
                             <Slider
                                 {...settings}
                                 slidesToShow={4}
-                                focusOnSelect={true}
+                                focusOnSelect={false}
                                 dots={false}
                                 adaptiveHeight={false}
                                 infinite={true}
@@ -825,13 +825,13 @@ function BusinessCompany() {
                                     {...settings1}
                                     ref={(slider9) => setNav9(slider9)}
                                     slidesToShow={4}
-                                    focusOnSelect={true}
+                                    focusOnSelect={false}
                                     dots={false}
                                     adaptiveHeight={false}
                                     infinite={true}
                                     slidesToScroll={1}
                                     loop={true}
-                                    speed={200}
+                                    speed={100}
                                     autoplay={true}
                                     autoplaySpeed={3000}
                                     swipeToSlide={true}
