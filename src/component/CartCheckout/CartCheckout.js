@@ -114,11 +114,14 @@ function CartCheckout() {
     })()
 
     const CouponCodeSubmit = (e) => {
+        console.log('coupon method ');
         e.preventDefault();
         const data = {
             coupon_code: couponCode,
         }
         axios.put(`${ApiUrl.BaseUrl}api/course/add-to-cart-checkout/${cart_id}/`, data).then((response) => {
+            console.log('coupon response = ', response.data);
+            
             if (response.data.error === false) {
                 setSubTotal(response.data.sub_total);
                 setTax(response.data.tax);
@@ -129,6 +132,12 @@ function CartCheckout() {
                 console.log('cartListData = ', response.data.data);
                 setIsLoading(false);
             }
+            else{
+                alert(response.data.message)
+            }
+        }).catch(er => {
+            console.log('err = ', er);
+            alert(er)
         });
     };
 

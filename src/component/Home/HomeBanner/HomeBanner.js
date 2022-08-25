@@ -8,15 +8,25 @@ import IntelloGeekSlider3 from "../../../asset/images/banner/IntelloGeek-Slider3
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import axios from 'axios';
+import ApiUrl from "../../../Api/ApiUrl";
+
 
 function HomeBanner() {
     const [isLoading, setIsLoading] = useState(false);
+    const [categoryInfo, setCategoryInfo] = useState([]);
 
     useEffect(() => {
         setIsLoading(true);
-        setIsLoading(false);
+        axios.get(`${ApiUrl.BaseUrl}api/v2/category-info/`).then((response) => {
+        
+            if (response.data.error === false) {
+                setCategoryInfo(response.data.data);
+                setIsLoading(false);
+            }
+        });
     }, []);
-
+    console.log('categoryInfo = ', categoryInfo);
     const [nav9, setNav9] = useState();
     const slider9 = useRef();
     var settings = {
