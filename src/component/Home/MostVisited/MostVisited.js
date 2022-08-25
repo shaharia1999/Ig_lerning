@@ -449,7 +449,7 @@ function MostVisited() {
         return (
             <Fragment>
                 <div className="container 2xl:my-12 xl:my-8 lg:-my-8 my-12 2xl:pl-16 2xl:-pr-4 xl:pl-12 xl:-pr-4 lg:pl-16 lg:-pr-28 md:px-10 sm:px-8">
-                    <h4 className="2xl:text-3xl xl:text-2xl lg:text-xl text-xl font-semibold text-sectionTitleColor dark:text-white 2xl:ml-6 xl:ml-4 lg:ml-3 ml-4 md:-mt-12 sm:-mt-6 -mt-6">Most Visited ({mostvisited_total_count}) </h4>
+                    <h4 className="2xl:text-3xl xl:text-2xl lg:text-xl text-xl font-semibold text-sectionTitleColor dark:text-white 2xl:ml-6 xl:ml-4 lg:ml-3 ml-4 2xl:-mt-2 xl:mt-6 lg:mt-8 md:-mt-12 sm:-mt-6 -mt-6">Most Visited ({mostvisited_total_count}) </h4>
                     <div className="2xl:mt-1 xl:-mt-2 lg:-mt-2 md:mt-3 sm:mt-3">
                         <Slider
                             {...settings}

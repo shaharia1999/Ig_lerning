@@ -3,6 +3,7 @@ import LoveIcon from "../../../asset/images/icon/love-icon.png";
 import MasterCourseThumbnail from "../../../asset/images/master-course/master-course-thumbnail.png";
 import CourseLogo from "../../../asset/images/logo/course-logo.svg";
 import { GoPrimitiveDot } from "react-icons/go";
+import { HiOutlineArrowRight } from "react-icons/hi";
 import { MdLogin } from "react-icons/md";
 import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";
@@ -218,7 +219,7 @@ function BestSchoolAndInstitute() {
             return (
                 category.map((category_info, index) => (
                     <div key={index}>
-                        <li className="list-none active-btn-css lg:mx-8">
+                        <li className="list-none active-btn-css xl:mx-1">
                             <button type="button"
                                 onClick={() => CategoryBasedSubCategory(category_info.category_id)}
                                 className="inline-block w-full display md:w-auto 2xl:px-2 xl:px-10 lg:px-8 px-3 py-3 my-2 md:mr-2 ourbestclsBtn 2xl:text-base xl:text-base lg:text-sm text-xs xl:font-medium lg:font-normal leading-tight text-maingray xl:h-11 h-10">
@@ -267,7 +268,7 @@ function BestSchoolAndInstitute() {
                         <div key={index}>
                             <li className="list-none mx-2">
                                 <button type="button"
-                                    className="inline-block w-full display md:w-auto 2xl:px-10 xl:px-10 lg:px-8 md:px-6 px-3 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 2xl:text-base xl:text-base lg:text-sm text-xs bg-maincolor 2xl:font-normal xl:font-normal lg:font-normal leading-tight text-white rounded-3xl xl:h-11 h-10"
+                                    className="inline-block w-full display md:w-auto 2xl:px-10 xl:px-10 lg:px-6 md:px-6 px-3 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 2xl:text-base xl:text-base lg:text-sm text-xs bg-maincolor 2xl:font-normal xl:font-normal lg:font-normal leading-tight text-white rounded-3xl xl:h-11 h-10"
                                     onClick={() => SubCategoryCourseInfo(subcategory.sub_category_id)}
                                 >
                                     {subcategory.sub_category_name}
@@ -790,7 +791,7 @@ function BestSchoolAndInstitute() {
 
                         </ul>
                         <div className="flex flex-wrap -mx-1 xl:-mx-4">
-                            <div className="2xl:mt-6 xl:mt-6 lg:-mt-1 w-full">
+                            <div className="2xl:mt-6 xl:mt-6 lg:mt-2 w-full">
                                 <div className="fade show active">
                                     <div className="-mx-1 px-1">
                                         <Slider
@@ -811,12 +812,206 @@ function BestSchoolAndInstitute() {
                                         >
 
                                             <div className="lg:w-1/4 px-2">
-                                                <div className="bg-bg-school-institute rounded-md">
-                                                    <img className="lg:rounded-md xl:h-72 xl:w-full" src="https://www.bethesdaheadshots.com/wp-content/uploads/2022/05/black-female-corporate-headshot-800.jpg" alt="" />
-                                                    <div className="">
-                                                        <h6 className="xl:text-2xl text-white xl:mt-8 font-semibold">Ecole d'informatique et du numérique</h6>
-                                                        <h6 className="xl:text-lg text-white lg:px-3 leading-none">Learn about art of classical music, Italian and Western</h6>
-                                                        <h6 className="xl:text-sm text-gray-400">Italia - Milano</h6>
+                                                <div className="bg-bg-school-institute rounded-lg">
+                                                    <video
+                                                        id="my-video"
+                                                        // class="video-js"
+                                                        class="video-js vjs-theme-fantasy vjs-big-play-centered vjs-big-play-button w-full xl:h-72 lg:h-48 object-cover object-center rounded-lg shadow-md"
+                                                        controls
+                                                        preload="auto"
+                                                        // autoPlay={true}
+                                                        muted
+                                                        // aspectRatio="4:3"
+                                                        // width="1020px"
+                                                        // height="576px"
+                                                        poster="https://futurevisioncomputers.com/wp-content/uploads/2021/03/computer_institute_banner_classes_in_surat-scaled-1024x576.jpg"
+                                                        data-setup='{}'
+                                                    >
+                                                        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4" />
+                                                        <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm" />
+                                                        <p class="vjs-no-js">
+                                                            To view this video please enable JavaScript, and consider upgrading to a
+                                                            web browser that
+                                                            <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noreferrer">supports HTML5 video</a>
+                                                        </p>
+                                                    </video>
+                                                    <div className="xl:mt-3 lg::mt-3 xl:pb-5 lg:pb-4">
+                                                        <h6 className="xl:text-lg lg:text-sm text-white xl:px-4 lg:px-3 xl:font-medium lg:font-normal leading-none">Ecole d'informatique et du numérique</h6>
+                                                        <div className="flex flex-wrap xl:mt-4 mt-3">
+                                                            <div className="w-1/2">
+                                                                <h6 className="xl:text-sm text-xs text-white xl:px-4 px-3 leading-none">Estiam Paris</h6>
+                                                                <h6 className="xl:text-xs text-2xs text-gray-400 xl:px-4 px-3">680€ - 990€</h6>
+                                                            </div>
+                                                            <div className="w-1/2">
+                                                                <h6 className="xl:text-base lg:text-xs flex float-right mr-4 xl:mt-3 text-maincolordeep font-medium">
+                                                                    Découvrir <HiOutlineArrowRight className="mt-1 ml-1 text-white"/>
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="lg:w-1/4 px-2">
+                                                <div className="bg-bg-school-institute rounded-lg">
+                                                    <video
+                                                        id="my-video"
+                                                        // class="video-js"
+                                                        class="video-js vjs-theme-fantasy vjs-big-play-centered vjs-big-play-button w-full xl:h-72 lg:h-48 object-cover object-center rounded-lg shadow-md"
+                                                        controls
+                                                        preload="auto"
+                                                        // autoPlay={true}
+                                                        muted
+                                                        // aspectRatio="4:3"
+                                                        // width="1020px"
+                                                        // height="576px"
+                                                        poster="https://futurevisioncomputers.com/wp-content/uploads/2021/03/computer_institute_banner_classes_in_surat-scaled-1024x576.jpg"
+                                                        data-setup='{}'
+                                                    >
+                                                        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4" />
+                                                        <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm" />
+                                                        <p class="vjs-no-js">
+                                                            To view this video please enable JavaScript, and consider upgrading to a
+                                                            web browser that
+                                                            <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noreferrer">supports HTML5 video</a>
+                                                        </p>
+                                                    </video>
+                                                    <div className="xl:mt-3 lg::mt-3 xl:pb-5 lg:pb-4">
+                                                        <h6 className="xl:text-lg lg:text-sm text-white xl:px-4 lg:px-3 xl:font-medium lg:font-normal leading-none">Ecole d'informatique et du numérique</h6>
+                                                        <div className="flex flex-wrap xl:mt-4 mt-3">
+                                                            <div className="w-1/2">
+                                                                <h6 className="xl:text-sm text-xs text-white xl:px-4 px-3 leading-none">Estiam Paris</h6>
+                                                                <h6 className="xl:text-xs text-2xs text-gray-400 xl:px-4 px-3">680€ - 990€</h6>
+                                                            </div>
+                                                            <div className="w-1/2">
+                                                                <h6 className="xl:text-base lg:text-xs flex float-right mr-4 xl:mt-3 text-maincolordeep font-medium">
+                                                                    Découvrir <HiOutlineArrowRight className="mt-1 ml-1 text-white"/>
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="lg:w-1/4 px-2">
+                                                <div className="bg-bg-school-institute rounded-lg">
+                                                    <video
+                                                        id="my-video"
+                                                        // class="video-js"
+                                                        class="video-js vjs-theme-fantasy vjs-big-play-centered vjs-big-play-button w-full xl:h-72 lg:h-48 object-cover object-center rounded-lg shadow-md"
+                                                        controls
+                                                        preload="auto"
+                                                        // autoPlay={true}
+                                                        muted
+                                                        // aspectRatio="4:3"
+                                                        // width="1020px"
+                                                        // height="576px"
+                                                        poster="https://futurevisioncomputers.com/wp-content/uploads/2021/03/computer_institute_banner_classes_in_surat-scaled-1024x576.jpg"
+                                                        data-setup='{}'
+                                                    >
+                                                        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4" />
+                                                        <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm" />
+                                                        <p class="vjs-no-js">
+                                                            To view this video please enable JavaScript, and consider upgrading to a
+                                                            web browser that
+                                                            <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noreferrer">supports HTML5 video</a>
+                                                        </p>
+                                                    </video>
+                                                    <div className="xl:mt-3 lg::mt-3 xl:pb-5 lg:pb-4">
+                                                        <h6 className="xl:text-lg lg:text-sm text-white xl:px-4 lg:px-3 xl:font-medium lg:font-normal leading-none">Ecole d'informatique et du numérique</h6>
+                                                        <div className="flex flex-wrap xl:mt-4 mt-3">
+                                                            <div className="w-1/2">
+                                                                <h6 className="xl:text-sm text-xs text-white xl:px-4 px-3 leading-none">Estiam Paris</h6>
+                                                                <h6 className="xl:text-xs text-2xs text-gray-400 xl:px-4 px-3">680€ - 990€</h6>
+                                                            </div>
+                                                            <div className="w-1/2">
+                                                                <h6 className="xl:text-base lg:text-xs flex float-right mr-4 xl:mt-3 text-maincolordeep font-medium">
+                                                                    Découvrir <HiOutlineArrowRight className="mt-1 ml-1 text-white"/>
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="lg:w-1/4 px-2">
+                                                <div className="bg-bg-school-institute rounded-lg">
+                                                    <video
+                                                        id="my-video"
+                                                        // class="video-js"
+                                                        class="video-js vjs-theme-fantasy vjs-big-play-centered vjs-big-play-button w-full xl:h-72 lg:h-48 object-cover object-center rounded-lg shadow-md"
+                                                        controls
+                                                        preload="auto"
+                                                        // autoPlay={true}
+                                                        muted
+                                                        // aspectRatio="4:3"
+                                                        // width="1020px"
+                                                        // height="576px"
+                                                        poster="https://futurevisioncomputers.com/wp-content/uploads/2021/03/computer_institute_banner_classes_in_surat-scaled-1024x576.jpg"
+                                                        data-setup='{}'
+                                                    >
+                                                        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4" />
+                                                        <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm" />
+                                                        <p class="vjs-no-js">
+                                                            To view this video please enable JavaScript, and consider upgrading to a
+                                                            web browser that
+                                                            <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noreferrer">supports HTML5 video</a>
+                                                        </p>
+                                                    </video>
+                                                    <div className="xl:mt-3 lg::mt-3 xl:pb-5 lg:pb-4">
+                                                        <h6 className="xl:text-lg lg:text-sm text-white xl:px-4 lg:px-3 xl:font-medium lg:font-normal leading-none">Ecole d'informatique et du numérique</h6>
+                                                        <div className="flex flex-wrap xl:mt-4 mt-3">
+                                                            <div className="w-1/2">
+                                                                <h6 className="xl:text-sm text-xs text-white xl:px-4 px-3 leading-none">Estiam Paris</h6>
+                                                                <h6 className="xl:text-xs text-2xs text-gray-400 xl:px-4 px-3">680€ - 990€</h6>
+                                                            </div>
+                                                            <div className="w-1/2">
+                                                                <h6 className="xl:text-base lg:text-xs flex float-right mr-4 xl:mt-3 text-maincolordeep font-medium">
+                                                                    Découvrir <HiOutlineArrowRight className="mt-1 ml-1 text-white"/>
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="lg:w-1/4 px-2">
+                                                <div className="bg-bg-school-institute rounded-lg">
+                                                    <video
+                                                        id="my-video"
+                                                        // class="video-js"
+                                                        class="video-js vjs-theme-fantasy vjs-big-play-centered vjs-big-play-button w-full xl:h-72 lg:h-48 object-cover object-center rounded-lg shadow-md"
+                                                        controls
+                                                        preload="auto"
+                                                        // autoPlay={true}
+                                                        muted
+                                                        // aspectRatio="4:3"
+                                                        // width="1020px"
+                                                        // height="576px"
+                                                        poster="https://futurevisioncomputers.com/wp-content/uploads/2021/03/computer_institute_banner_classes_in_surat-scaled-1024x576.jpg"
+                                                        data-setup='{}'
+                                                    >
+                                                        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4" />
+                                                        <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm" />
+                                                        <p class="vjs-no-js">
+                                                            To view this video please enable JavaScript, and consider upgrading to a
+                                                            web browser that
+                                                            <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noreferrer">supports HTML5 video</a>
+                                                        </p>
+                                                    </video>
+                                                    <div className="xl:mt-3 lg::mt-3 xl:pb-5 lg:pb-4">
+                                                        <h6 className="xl:text-lg lg:text-sm text-white xl:px-4 lg:px-3 xl:font-medium lg:font-normal leading-none">Ecole d'informatique et du numérique</h6>
+                                                        <div className="flex flex-wrap xl:mt-4 mt-3">
+                                                            <div className="w-1/2">
+                                                                <h6 className="xl:text-sm text-xs text-white xl:px-4 px-3 leading-none">Estiam Paris</h6>
+                                                                <h6 className="xl:text-xs text-2xs text-gray-400 xl:px-4 px-3">680€ - 990€</h6>
+                                                            </div>
+                                                            <div className="w-1/2">
+                                                                <h6 className="xl:text-base lg:text-xs flex float-right mr-4 xl:mt-3 text-maincolordeep font-medium">
+                                                                    Découvrir <HiOutlineArrowRight className="mt-1 ml-1 text-white"/>
+                                                                </h6>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
