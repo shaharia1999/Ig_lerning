@@ -217,7 +217,7 @@ function RecentlyAddedCourseSectionTwo() {
             return (
                 category.map((category_info, index) => (
                     <div key={index}>
-                        <li className="list-none lg:mx-8">
+                        <li className="list-none xl:mx-1">
                             <button type="button"
                                 onClick={() => CategoryBasedSubCategory(category_info.category_id)}
                                 className="inline-block w-full display md:w-auto 2xl:px-2 xl:px-10 lg:px-8 px-3 py-3 my-2 md:mr-2 border-b-4 border-b-maincolor focus:outline-none focus:ring-0 2xl:text-base xl:text-base lg:text-sm text-xs xl:font-medium lg:font-normal leading-tight text-maingray xl:h-11 h-10">
@@ -266,7 +266,7 @@ function RecentlyAddedCourseSectionTwo() {
                         <div key={index}>
                             <li className="list-none mx-2">
                                 <button type="button"
-                                    className="inline-block w-full display md:w-auto 2xl:px-10 xl:px-10 lg:px-8 md:px-6 px-3 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 2xl:text-base xl:text-base lg:text-sm text-xs bg-maincolor 2xl:font-normal xl:font-normal lg:font-normal leading-tight text-white rounded-3xl xl:h-11 h-10"
+                                    className="inline-block w-full display md:w-auto 2xl:px-10 xl:px-10 lg:px-6 md:px-6 px-3 py-3 my-2 md:mr-2 focus:outline-none focus:ring-0 2xl:text-base xl:text-base lg:text-sm text-xs bg-maincolor 2xl:font-normal xl:font-normal lg:font-normal leading-tight text-white rounded-3xl xl:h-11 h-10"
                                     onClick={() => SubCategoryCourseInfo(subcategory.sub_category_id)}
                                 >
                                     {subcategory.sub_category_name}
@@ -722,7 +722,7 @@ function RecentlyAddedCourseSectionTwo() {
         };
         return (
             <Fragment>
-                <div className="container 2xl:my-20 xl:my-12 lg:my-8 my-12 2xl:px-16 xl:px-12 lg:px-16 md:px-8 sm:px-8">
+                <div className="container 2xl:my-20 xl:my-16 lg:my-12 my-12 2xl:px-16 xl:px-12 lg:px-16 md:px-8 sm:px-8">
                     <div className="flex flex-wrap">
                         <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full">
                             <div className="flex">
@@ -764,7 +764,7 @@ function RecentlyAddedCourseSectionTwo() {
                         </div>
                     </div>
 
-                    <div className="2xl:mt-3 xl:-mt-10 lg:-mt-12 flex flex-wrap">
+                    <div className="2xl:mt-4 xl:-mt-10 lg:-mt-12 flex flex-wrap">
                         <div className="show w-full active">
                             <ul className="list-none pl-0 xl:mb-4 mb-2">
                                 <Slider
@@ -789,7 +789,7 @@ function RecentlyAddedCourseSectionTwo() {
 
                             </ul>
                             <div className="flex flex-wrap -mx-1 xl:-mx-4">
-                                <div className="2xl:-mt-6 xl:-mt-8 lg:-mt-1 w-full">
+                                <div className="2xl:-mt-3 xl:-mt-5 lg:-mt-1 w-full">
                                     <div className="fade show active">
                                         <div className="-mx-1 px-1">
                                             <Slider
