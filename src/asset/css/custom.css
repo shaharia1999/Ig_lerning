@@ -40,7 +40,6 @@
   font-size: 22px;
 }
 
-
 .vjs-theme-fantasy .vjs-big-play-button {
   width: 50px!important;
   height: 50px!important;
@@ -54,6 +53,13 @@
   margin-left: -25px !important;
   color: rgb(57 78 234 / 10%) !important;
   border-radius: 100% !important;
+}
+
+/* .nav-list > li:first-child > a:first-child{ */
+.active-btn-css > li:first-child{
+  border-bottom-width: 4px !important;
+  border-bottom-style: solid !important;
+  border-bottom-color: #D76E2D !important;
 }
 
 @media (min-width: 640px) {
