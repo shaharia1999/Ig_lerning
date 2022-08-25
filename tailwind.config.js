@@ -72,6 +72,7 @@ module.exports = {
       'light-version': '#F3F4F6',
       'navigation-drawer-btn-bg-light':'#FFF2EB',
       'banner-bg':'#FFF3D0',
+      'bg-school-institute':'#0A142A',
       'amber': {
         300: '#fcd34d',
         400: '#fbbf24',

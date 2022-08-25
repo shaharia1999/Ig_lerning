@@ -79,6 +79,17 @@ function SamplePrevArrow(props) {
 }
 
 function BusinessCompany() {
+
+    function playPause(videoID) {
+        var myVideo = document.getElementById(videoID);
+
+        if (myVideo.paused)
+            myVideo.play();
+        else
+            myVideo.pause();
+    }
+
+
     const [subCategory, setSubCategory] = useState([]);
     const [recently_addedsubcategoryId, setSubcategoryID] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -550,9 +561,35 @@ function BusinessCompany() {
                     <div key={course_index} className="my-1 px-1 w-full 2xl:my-8 xl:my-8 lg:my-8 2xl:px-5 xl:px-2 lg:px-2 2xl:w-1/4 xl:w-1/2 lg:w-1/2 md:1/3">
                         <div className="wrapper antialiased text-gray-900">
                             <div className="relative">
-                                <video type="video/mp4" muted
+                                {/* <video type="video/mp4" muted
                                     loop className="w-full vid xl:h-72 h-56 object-cover object-center rounded-lg shadow-md"
-                                    src={ApiUrl.ImageBaseUrl + course.promotional_video}></video>
+                                    src={ApiUrl.ImageBaseUrl + course.promotional_video}></video> */}
+
+
+                                <video
+                                    id="my-video"
+                                    // class="video-js"
+                                    class="video-js vjs-theme-fantasy vjs-big-play-centered vjs-big-play-button w-full vid xl:h-72 h-56 object-cover object-center rounded-lg shadow-md"
+                                    controls
+                                    preload="auto"
+                                    // autoPlay={true}
+                                    muted
+                                    // aspectRatio="4:3"
+                                    // width="1020px"
+                                    // height="576px"
+                                    poster="https://futurevisioncomputers.com/wp-content/uploads/2021/03/computer_institute_banner_classes_in_surat-scaled-1024x576.jpg"
+                                    data-setup='{}'
+                                >
+                                    <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4" />
+                                    <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm" />
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noreferrer">supports HTML5 video</a>
+                                    </p>
+                                </video>
+
+
 
                                 <div className="flex flex-wrap">
                                     <div className="w-1/5">
@@ -566,10 +603,10 @@ function BusinessCompany() {
                                     <div className="w-4/5">
                                         <a href="!#">
                                             <div className="text-lg absolute top-0 2xl:mt-3 xl:mt-3 lg:mt-3 mt-3 ml-3">
-                                                <h6 className="xl:font-medium font-normal xl:text-lg text-sm text-black dark:text-white">{course?.channel_name?.channel_name}</h6>
-                                                <h6 className="font-light xl:text-sm text-xs text-black dark:text-white">{course.course_duration} min</h6>
-
-                                                <img className="2xl:h-36 xl:h-32 lg:h-24 h-24 2xl:ml-4 xl:ml-3 lg:ml-2" src={Play} alt="" />
+                                                <h6 className="xl:font-medium font-normal xl:text-lg text-sm text-white dark:text-white">{course?.channel_name?.channel_name}</h6>
+                                                <h6 className="font-light xl:text-sm text-xs text-white dark:text-white">{course.course_duration} min</h6>
+                                                
+                                                {/* <img className="2xl:h-36 xl:h-32 lg:h-24 h-24 2xl:ml-4 xl:ml-3 lg:ml-2" src={Play} alt="" /> */}
                                             </div>
                                         </a>
                                     </div>
@@ -683,7 +720,7 @@ function BusinessCompany() {
     }
     else if (isLoading === false) {
 
-        
+
         var settings = {
             responsive: [
                 {
@@ -708,7 +745,7 @@ function BusinessCompany() {
                         slidesToShow: 2,
                         slidesToScroll: 1,
                         rows: 1,
-                        arrows:false
+                        arrows: false
                     }
                 }
             ]
@@ -732,7 +769,7 @@ function BusinessCompany() {
                         slidesToShow: 2,
                         slidesToScroll: 2,
                         initialSlide: 2,
-                        arrows:false,
+                        arrows: false,
                     }
                 },
                 {
@@ -741,7 +778,7 @@ function BusinessCompany() {
                         slidesToShow: 2,
                         slidesToScroll: 1,
                         rows: 1,
-                        arrows:false,
+                        arrows: false,
                     }
                 },
             ]
@@ -762,7 +799,7 @@ function BusinessCompany() {
                             <Slider
                                 {...settings}
                                 slidesToShow={4}
-                                focusOnSelect={true}
+                                focusOnSelect={false}
                                 dots={false}
                                 adaptiveHeight={false}
                                 infinite={true}
@@ -788,13 +825,13 @@ function BusinessCompany() {
                                     {...settings1}
                                     ref={(slider9) => setNav9(slider9)}
                                     slidesToShow={4}
-                                    focusOnSelect={true}
+                                    focusOnSelect={false}
                                     dots={false}
                                     adaptiveHeight={false}
                                     infinite={true}
                                     slidesToScroll={1}
                                     loop={true}
-                                    speed={200}
+                                    speed={100}
                                     autoplay={true}
                                     autoplaySpeed={3000}
                                     swipeToSlide={true}

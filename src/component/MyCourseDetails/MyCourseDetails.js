@@ -1,23 +1,478 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import VideoImg from "../../asset/images/VideoImg/videoImg.png"
 import { FiCheckCircle } from "react-icons/fi";
 import StarRatings from 'react-star-ratings';
 import { FaRegThumbsUp, FaRegThumbsDown } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { FaStar } from "react-icons/fa";
+
+import courseLessonImg from '../../asset/images/course-thumbnail/lesson-img.svg'
+import {
+    Accordion,
+    AccordionHeader,
+    AccordionBody
+} from "@material-tailwind/react";
+import { GrDocumentText } from "react-icons/gr";
 
 function MyCourseDetails() {
+
+    const [open, setOpen] = useState(0);
+
+    const handleOpen = (value) => {
+        setOpen(open === value ? 0 : value);
+    };
+
     return (
         <Fragment>
             <div className="container">
                 <div className="flex flex-wrap lg:mt-7">
                     <div className="lg:w-4/12">
+                        <div className="xl:p-0 p-4">
+                            <div className="flex flex-wrap xl:mt-9 xl:mb-16">
+                                <div className="lg:w-11/12 w-full">
+                                    <h6 className="text-sectionTitleColor dark:text-white 2xl:text-3xl xl:text-2xl text-xl font-semibold xl:mb-3">Content</h6>
+                                    <h6 className="text-maincolor dark:text-white text-base font-normal lg:mb-5">5 Section.24 Lecture.2h 22m total length</h6>
+                                    <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700 lg:mb-5">
+                                        <div class="bg-maincolor text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full" style={{width: "45%"}}> 45%</div>
+                                    </div>
+                                    <div className="bg-white icon-select shadow mt-3 rounded-lg">
+                                        <Accordion className="rounded m-0" open={open === 1} onClick={() => handleOpen(1)}>
+                                            <AccordionHeader className="pr-4">
+                                                <div>
+                                                    <h1 className="xl:text-base text-sm text-maingray font-medium xl:pl-8">Chapter 1 : Be positive</h1>
+                                                    <h1 className="lg:text-sm text-sm text-gray-400 font-normal xl:-ml-8">01/14  | 1h 38 min</h1>
+                                                </div>
+                                                <div className="h-4 w-4 bg-price-deep rounded-full xl:-mr-64 z-40 float-right flex xl:mt-5"></div>
+                                            </AccordionHeader>
+                                            <AccordionBody className="bg-gray-50 xl:pl-0 pl-4">
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
 
+                                                <hr className="border-white border" />
+
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <hr className="border-white border" />
+
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </AccordionBody>
+                                        </Accordion>
+                                    </div>
+                                    <div className="bg-white icon-select shadow mt-3 rounded-lg">
+                                        <Accordion open={open === 2} onClick={() => handleOpen(2)}>
+                                            <AccordionHeader className="flex pr-4">
+                                                <div>
+                                                    <h1 className="xl:text-base text-sm text-maingray font-medium xl:pl-8">Chapter 2 : Be positive</h1>
+                                                    <h1 className="lg:text-sm text-sm text-gray-400 font-normal xl:-ml-8">01/14  | 1h 38 min</h1>
+                                                </div>    
+                                                <div className="h-4 w-4 bg-gray-500 rounded-full xl:-mr-64 z-40 float-right flex xl:mt-5"></div>                                        </AccordionHeader>
+                                            <AccordionBody className="bg-gray-50 xl:pl-0 pl-4">
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <hr className="border-white border" />
+
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <hr className="border-white border" />
+
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <hr className="border-white border" />
+
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+
+                                                <hr className="border-white border" />
+
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+
+                                                <hr className="border-white border" />
+
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+
+                                                <hr className="border-white border" />
+
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+
+                                                <hr className="border-white border" />
+
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+
+                                                <hr className="border-white border" />
+
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+
+                                                <hr className="border-white border" />
+
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </AccordionBody>
+                                        </Accordion>
+                                    </div>
+                                    <div className="bg-white icon-select shadow mt-3 rounded-lg">
+                                        <Accordion open={open === 3} onClick={() => handleOpen(3)}>
+                                            <AccordionHeader className="flex pr-4">
+                                                <div>
+                                                    <h1 className="xl:text-base text-sm text-maingray font-medium xl:pl-8">Chapter 3 : Be positive</h1>
+                                                    <h1 className="lg:text-sm text-sm text-gray-400 font-normal xl:-ml-8">01/14  | 1h 38 min</h1>
+                                                </div>
+                                                <div className="h-4 w-4 bg-price-deep rounded-full xl:-mr-64 z-40 float-right flex xl:mt-5"></div>
+                                            </AccordionHeader>
+                                            <AccordionBody className="bg-gray-50 xl:pl-0 pl-4">
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <hr className="border-white border" />
+
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <hr className="border-white border" />
+
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </AccordionBody>
+                                        </Accordion>
+                                    </div>
+                                    <div className="bg-white icon-select shadow mt-3 rounded-lg">
+                                        <Accordion open={open === 4} onClick={() => handleOpen(4)}>
+                                            <AccordionHeader className="flex pr-4">
+                                                <div>
+                                                    <h1 className="xl:text-base text-sm text-maingray font-medium xl:pl-8">Chapter 4 : Be positive</h1>
+                                                    <h1 className="lg:text-sm text-sm text-gray-400 font-normal xl:-ml-8">01/14  | 1h 38 min</h1>
+                                                </div>
+                                                <div className="h-4 w-4 bg-price-deep rounded-full xl:-mr-64 z-40 float-right flex xl:mt-5"></div>
+                                            </AccordionHeader>
+                                            <AccordionBody className="bg-gray-50 xl:pl-0 pl-4">
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <hr className="border-white border" />
+
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <hr className="border-white border" />
+
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </AccordionBody>
+                                        </Accordion>
+                                    </div>
+                                    <div className="bg-white icon-select shadow mt-3 rounded-lg">
+                                        <Accordion open={open === 5} onClick={() => handleOpen(5)}>
+                                            <AccordionHeader className="flex pr-4">
+                                                <div>
+                                                    <h1 className="xl:text-base text-sm text-maingray font-medium xl:pl-8">Chapter 5 : Be positive</h1>
+                                                    <h1 className="lg:text-sm text-sm text-gray-400 font-normal xl:-ml-8">01/14  | 1h 38 min</h1>
+                                                </div>
+                                                <div className="h-4 w-4 bg-price-deep rounded-full xl:-mr-64 z-40 float-right flex xl:mt-5"></div>
+                                            </AccordionHeader>
+                                            <AccordionBody className="bg-gray-50 xl:pl-0 pl-4">
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <hr className="border-white border" />
+
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <hr className="border-white border" />
+
+                                                <div className="flex flex-wrap mt-0.5">
+                                                    <div className="xl:w-2/12 mt-3 mb-3">
+                                                        <img className="h-8 w-8 xl:ml-8 rounded-md" src={courseLessonImg} alt="" />
+                                                    </div>
+                                                    <div className="xl:w-10/12 mt-3 mb-3 xl:ml-0 ml-2">
+                                                        <h6 className="xl:text-sm text-maingray font-medium">Compile VS Interpreted Languages</h6>
+                                                        <span className="flex ">
+                                                            <GrDocumentText
+                                                                className="h-4 w-4 mr-3"
+                                                            /> | <span className="ml-2">38 min</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </AccordionBody>
+                                        </Accordion>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className="lg:w-8/12">
                         <div className="">
                             <div className="w-full">
-                                <img src={VideoImg} alt="" />
+                                {/* <img src={VideoImg} alt="" /> */}
+                                <video
+                                    id="my-video"
+                                    // class="video-js"
+                                    class="video-js vjs-theme-fantasy vjs-16-9"
+                                    controls
+                                    // autoPlay={true}
+                                    // muted
+                                    // aspectRatio="16:9"
+                                    // width="1020px"
+                                    // height="576px"
+                                    poster="https://futurevisioncomputers.com/wp-content/uploads/2021/03/computer_institute_banner_classes_in_surat-scaled-1024x576.jpg"
+                                    data-setup='{}'
+                                >
+                                    <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4" />
+                                    <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm" />
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noreferrer">supports HTML5 video</a>
+                                    </p>
+                                </video>
                             </div>
+
                             <div className="w-full">
                                 <h6 className="lg:text-2xl lg:font-medium lg:mt-4">
                                     UI UX Designing Full Course
@@ -187,7 +642,99 @@ function MyCourseDetails() {
                                 <div className="tab-pane w-full fade"
                                     id="pills-4" role="tabpanel"
                                     aria-labelledby="pills-contact-tab3">
-                                    <div className="lg:-mt-2 md:mt-5">
+
+                                    <div className=" xl:mt-5 xl:mr-14 xl:p-0 p-4">
+                                        <h6 className="text-sectionTitleColor lg:text-xl dark:text-white font-semibold">Student Feedback</h6>
+                                        <div className="flex flex-wrap xl:mt-0 mt-4">
+                                            <div className="xl:w-1/5 w-4/12 xl:mt-6">
+                                                <div className="bg-maincolor xl:rounded-lg rounded-md text-center">
+                                                    <h6 className="2xl:pt-6 xl:pt-4 pt-2 2xl:text-5xl xl:text-3xl text-lg text-white xl:font-bold">3.5</h6>
+                                                    <ul className="flex justify-center xl:mt-2">
+                                                        <StarRatings
+                                                            rating={3.5}
+                                                            starDimension="15px"
+                                                            starSpacing="4px"
+                                                            starRatedColor="rgb(251, 191, 36)"
+                                                        />
+                                                    </ul>
+                                                    <h6 className="2xl:pb-6 xl:pb-4 pb-2 2xl:mt-2 xl:mt-1 xl:text-base text-xs text-white xl:font-medium">Course Ratings</h6>
+                                                </div>
+                                            </div>
+                                            <div className="xl:w-3/5 w-4/12 2xl:mt-4 xl:mt-3 xl:pl-8 pl-2">
+                                                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-3 xl:mt-4 mt-2">
+                                                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
+                                                </div>
+
+                                                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-4 mt-2">
+                                                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
+                                                </div>
+
+                                                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-4 mt-2">
+                                                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
+                                                </div>
+
+
+                                                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-4 mt-2">
+                                                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
+                                                </div>
+
+
+                                                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-3.5 mt-2">
+                                                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
+                                                </div>
+                                            </div>
+                                            <div className="xl:w-1/5 w-4/12 2xl:mt-5 xl:mt-8">
+
+                                                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 mt-1.5">
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">40%</h6>
+                                                </ul>
+
+                                                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2">
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">20%</h6>
+                                                </ul>
+
+                                                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2.5">
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">18%</h6>
+                                                </ul>
+
+                                                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2.5">
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">12%</h6>
+                                                </ul>
+
+                                                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2.5">
+                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                                                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">10%</h6>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="lg:mt-5 md:mt-5">
                                         <div className="lg:mt-0 xl:p-0 p-4">
                                             <h6 className="text-sectionTitleColor dark:text-white lg:text-xl text-xl font-semibold">Reviews</h6>
                                             <div className="w-full flex ">
@@ -323,6 +870,7 @@ function MyCourseDetails() {
 
                                         </div >
                                     </div>
+
                                 </div>
                                 <div className="tab-pane w-full fade"
                                     id="pills-5" role="tabpanel"

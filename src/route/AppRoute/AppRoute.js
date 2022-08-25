@@ -19,6 +19,7 @@ import CartSummeryPage from '../../pages/CartSummeryPage/CartSummeryPage';
 import MyCoursePage from '../../pages/MyCoursePage/MyCoursePage';
 import MyCourseDetailsPage from '../../pages/MyCourseDetailsPage/MyCourseDetailsPage';
 import CategoryDetailsPage from '../../pages/CategoryDetailsPage/CategoryDetailsPage';
+import InstituteCourseDetailsPage from '../../pages/InstituteCourseDetailsPage/InstituteCourseDetailsPage';
 
 function AppRoute() {
     return (
@@ -49,6 +50,8 @@ function AppRoute() {
                 <Route exact path="/my-course-details" render={(props) => <MyCourseDetailsPage {...props} key={Date.now()} />} />
 
                 <Route exact path="/category-details" render={(props) => <CategoryDetailsPage {...props} key={Date.now()} />} />
+
+                <Route exact path="/institute-course-details" render={(props) => <InstituteCourseDetailsPage {...props} key={Date.now()} />} />
 
                 <Route path="" component={OpssPage} />
             </Switch>

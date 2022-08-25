@@ -1,16 +1,17 @@
 import React, { Fragment, useEffect, useState } from "react";
-import LoveIcon from "../../asset/images/icon/love-icon.png";
-import MasterCourseThumbnail from "../../asset/images/master-course/master-course-thumbnail.png";
-import CourseLogo from "../../asset/images/logo/course-logo.svg";
+import LoveIcon from "../../../asset/images/icon/love-icon.png";
+import MasterCourseThumbnail from "../../../asset/images/master-course/master-course-thumbnail.png";
+import CourseLogo from "../../../asset/images/logo/course-logo.svg";
 import { GoPrimitiveDot } from "react-icons/go";
 import { MdLogin } from "react-icons/md";
 import axios from "axios";
-import ApiUrl from "../../Api/ApiUrl";
+import ApiUrl from "../../../Api/ApiUrl";
 import { Link } from "react-router-dom";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from "react-icons/md";
+import FeaturePlay from '../../../asset/images/icon/feature-play.png';
 
 function SampleNextArrow1(props) {
     const { className, style, onClick } = props;
@@ -138,7 +139,7 @@ function SamplePrevArrow(props) {
     );
 }
 
-function RecentlyAddedCourseSectionTwo() {
+function OurBestMasterClasses() {
     const [category, setCategory] = useState([]);
     const [subCategory, setSubCategory] = useState([]);
     const [getCourse, setCourse] = useState([]);
@@ -217,10 +218,10 @@ function RecentlyAddedCourseSectionTwo() {
             return (
                 category.map((category_info, index) => (
                     <div key={index}>
-                        <li className="list-none lg:mx-8">
+                        <li className="list-none active-btn-css lg:mx-8">
                             <button type="button"
                                 onClick={() => CategoryBasedSubCategory(category_info.category_id)}
-                                className="inline-block w-full display md:w-auto 2xl:px-2 xl:px-10 lg:px-8 px-3 py-3 my-2 md:mr-2 border-b-4 border-b-maincolor focus:outline-none focus:ring-0 2xl:text-base xl:text-base lg:text-sm text-xs xl:font-medium lg:font-normal leading-tight text-maingray xl:h-11 h-10">
+                                className="inline-block w-full display md:w-auto 2xl:px-2 xl:px-10 lg:px-8 px-3 py-3 my-2 md:mr-2 ourbestclsBtn 2xl:text-base xl:text-base lg:text-sm text-xs xl:font-medium lg:font-normal leading-tight text-maingray xl:h-11 h-10">
                                 {category_info.category_name}
                             </button>
                         </li>
@@ -578,164 +579,197 @@ function RecentlyAddedCourseSectionTwo() {
         }
     })()
 
-    if (isLoading === true) {
-        return (
-            <Fragment>
-                <div className="container my-12">
-                    <div className="flex flex-wrap">
-                        <div className="xl:w-1/3 w-full">
-                            <div className="flex">
-                                <h4 className="xl:text-4xl text-xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Recently Added
-                                    Course</h4>
-                            </div>
-                        </div>
-                        <div className="w-2/3 relative">
-                            <div className="flex right-0 absolute">
+    // if (isLoading === true) {
+    //     return (
+    //         <Fragment>
+    //             <div className="container my-12">
+    //                 <div className="flex flex-wrap">
+    //                     <div className="xl:w-1/3 w-full">
+    //                         <div className="flex">
+    //                             <h4 className="xl:text-4xl text-xl	font-semibold text-sectionTitleColor dark:text-white ml-3">Recently Added
+    //                                 Course</h4>
+    //                         </div>
+    //                     </div>
+    //                     <div className="w-2/3 relative">
+    //                         <div className="flex right-0 absolute">
 
-                                <div className="mb-4">
-                                    <ul className="nav nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4">
-                                        {
-                                            category_Data_Loading
-                                        }
-                                    </ul>
-                                </div>
+    //                             <div className="mb-4">
+    //                                 <ul className="nav nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4">
+    //                                     {
+    //                                         category_Data_Loading
+    //                                     }
+    //                                 </ul>
+    //                             </div>
 
-                            </div>
+    //                         </div>
+    //                     </div>
+    //                 </div>
+
+    //                 <div className="mt-4 flex flex-wrap">
+    //                     <div className="show w-full active">
+    //                         <ul className="nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4">
+    //                             {
+    //                                 data_of_subcategory_Loading
+    //                             }
+    //                         </ul>
+
+    //                         <div className="flex flex-wrap -mx-1 xl:-mx-4">
+    //                             <div className="mt-4 w-full">
+    //                                 <div className="fade show active">
+    //                                     <div className="flex flex-wrap -mx-1 lg:-mx-4">
+    //                                         {
+    //                                             data_of_course_details_Loading
+    //                                         }
+    //                                     </div>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </div>
+    //                 </div>
+    //             </div>
+    //         </Fragment>
+    //     );
+    // }
+    // else if (isLoading === false) {
+    var settings = {
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    rows: 1,
+                    arrows: false
+                }
+            }
+        ]
+    };
+
+    var settings1 = {
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    arrows: false
+                }
+            }
+        ]
+    };
+    var settings2 = {
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: false,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    arrows: false
+                }
+            }
+        ]
+    };
+    return (
+        <Fragment>
+            <div className="container 2xl:my-16 xl:my-12 lg:my-8 my-12 2xl:px-16 xl:px-12 lg:px-16 md:px-8 sm:px-8">
+                <div className="flex flex-wrap">
+                    <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full">
+                        <div className="flex">
+                            <h4 className="2xl:text-3xl xl:text-2xl lg:text-xl text-xl font-semibold text-sectionTitleColor dark:text-white 2xl:ml-6 xl:ml-4 lg:ml-3 ml-4 -mt-6">Our Best Master Classes</h4>
                         </div>
                     </div>
-
-                    <div className="mt-4 flex flex-wrap">
-                        <div className="show w-full active">
-                            <ul className="nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4">
-                                {
-                                    data_of_subcategory_Loading
-                                }
-                            </ul>
-
-                            <div className="flex flex-wrap -mx-1 xl:-mx-4">
-                                <div className="mt-4 w-full">
-                                    <div className="fade show active">
-                                        <div className="flex flex-wrap -mx-1 lg:-mx-4">
-                                            {
-                                                data_of_course_details_Loading
-                                            }
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </Fragment>
-        );
-    }
-    else if (isLoading === false) {
-        var settings = {
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: false
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        initialSlide: 2
-                    }
-                },
-                {
-                    breakpoint: 640,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        rows: 1,
-                        arrows:false
-                    }
-                }
-            ]
-        };
-
-        var settings1 = {
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: false
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        initialSlide: 2
-                    }
-                },
-                {
-                    breakpoint: 640,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        arrows: false
-                    }
-                }
-            ]
-        };
-        var settings2 = {
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: false,
-                        arrows: false
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        initialSlide: 2,
-                        arrows: false
-                    }
-                },
-                {
-                    breakpoint: 640,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        arrows: false
-                    }
-                }
-            ]
-        };
-        return (
-            <Fragment>
-                <div className="container 2xl:my-20 xl:my-12 lg:my-8 my-12 2xl:px-16 xl:px-12 lg:px-16 md:px-8 sm:px-8">
-                    <div className="flex flex-wrap">
-                        <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full">
-                            <div className="flex">
-                                <h4 className="2xl:text-3xl xl:text-2xl lg:text-xl text-xl font-semibold text-sectionTitleColor dark:text-white 2xl:ml-6 xl:ml-4 lg:ml-3 ml-4 -mt-6">Recently Added Course</h4>
-                            </div>
-                        </div>
-                        <div className="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full relative 2xl:-mt-9 xl:-mt-9 lg:-mt-9 mt-4">
-                            {/* <div className="flex right-0 absolute">
+                    <div className="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full relative 2xl:-mt-9 xl:-mt-9 lg:-mt-9 mt-4">
+                        {/* <div className="flex right-0 absolute">
                                 <div className="mb-4">
                                     <ul className="nav nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4"> 
                                     */}
+                        <Slider
+                            {...settings}
+                            slidesToShow={5}
+                            focusOnSelect={false}
+                            dots={false}
+                            adaptiveHeight={false}
+                            infinite={true}
+                            slidesToScroll={1}
+                            loop={true}
+                            speed={100}
+                            autoplay={false}
+                            autoplaySpeed={1500}
+                            swipeToSlide={true}
+                            variableWidth={true}
+                            arrows={false}
+                            nextArrow={<SampleNextArrow1 />}
+                            prevArrow={<SamplePrevArrow1 />}
+                        >
+                            {
+                                category_data
+                            }
+                        </Slider>
+
+                        {/* </ul>
+                                </div>
+                            </div> 
+                            */}
+                    </div>
+                </div>
+
+                <div className="2xl:mt-3 xl:-mt-10 lg:-mt-12 flex flex-wrap">
+                    <div className="show w-full active">
+                        <ul className="list-none pl-0 xl:mb-4 mb-2">
                             <Slider
-                                {...settings}
+                                {...settings1}
                                 slidesToShow={5}
                                 focusOnSelect={false}
                                 dots={false}
@@ -748,84 +782,105 @@ function RecentlyAddedCourseSectionTwo() {
                                 autoplaySpeed={1500}
                                 swipeToSlide={true}
                                 variableWidth={true}
-                                arrows={false}
-                                nextArrow={<SampleNextArrow1 />}
-                                prevArrow={<SamplePrevArrow1 />}
                             >
                                 {
-                                    category_data
+                                    data_of_subcategory
                                 }
                             </Slider>
 
-                            {/* </ul>
-                                </div>
-                            </div> 
-                            */}
-                        </div>
-                    </div>
+                        </ul>
+                        <div className="flex flex-wrap -mx-1 xl:-mx-4">
+                            <div className="2xl:mt-6 xl:mt-6 lg:-mt-1 w-full">
+                                <div className="fade show active">
+                                    <div className="-mx-1 px-1">
+                                        <Slider
+                                            {...settings2}
+                                            slidesToShow={4}
+                                            focusOnSelect={false}
+                                            dots={false}
+                                            // adaptiveHeight={false}
+                                            infinite={true}
+                                            slidesToScroll={1}
+                                            loop={true}
+                                            speed={100}
+                                            autoplay={false}
+                                            autoplaySpeed={1500}
+                                            swipeToSlide={true}
+                                            nextArrow={<SampleNextArrow />}
+                                            prevArrow={<SamplePrevArrow />}
+                                        >
 
-                    <div className="2xl:mt-3 xl:-mt-10 lg:-mt-12 flex flex-wrap">
-                        <div className="show w-full active">
-                            <ul className="list-none pl-0 xl:mb-4 mb-2">
-                                <Slider
-                                    {...settings1}
-                                    slidesToShow={5}
-                                    focusOnSelect={false}
-                                    dots={false}
-                                    adaptiveHeight={false}
-                                    infinite={true}
-                                    slidesToScroll={1}
-                                    loop={true}
-                                    speed={100}
-                                    autoplay={false}
-                                    autoplaySpeed={1500}
-                                    swipeToSlide={true}
-                                    variableWidth={true}
-                                >
-                                    {
-                                        data_of_subcategory
-                                    }
-                                </Slider>
+                                            <div className="lg:w-1/4 px-2">
+                                                <img className="lg:rounded-md xl:h-112 xl:w-full" src="https://www.bethesdaheadshots.com/wp-content/uploads/2022/05/black-female-corporate-headshot-800.jpg" alt="" />
+                                                <div className="text-center xl:-mt-80">
+                                                    <img className="mx-auto" src={FeaturePlay} alt="" />
+                                                    <h6 className="xl:text-2xl text-maincolor xl:mt-8 font-semibold">Laurea Pausini</h6>
+                                                    <h6 className="xl:text-sm text-gray-400">Italia - Milano</h6>
+                                                    <h6 className="xl:text-lg text-white lg:px-3 leading-none">Learn about art of classical music, Italian and Western</h6>
+                                                    <button className="bg-maincolor text-xs font-light border-0 border-sm rounded-md text-white px-2 py-1 mt-3">With Certificate</button>
+                                                    <h6 className="text-xs text-maincolor mt-2">Starts September 2022 - 11 Weeks</h6>
+                                                </div>
+                                            </div>
 
-                            </ul>
-                            <div className="flex flex-wrap -mx-1 xl:-mx-4">
-                                <div className="2xl:-mt-6 xl:-mt-8 lg:-mt-1 w-full">
-                                    <div className="fade show active">
-                                        <div className="-mx-1 px-1">
-                                            <Slider
-                                                {...settings2}
-                                                slidesToShow={4}
-                                                focusOnSelect={false}
-                                                dots={false}
-                                                adaptiveHeight={false}
-                                                infinite={true}
-                                                slidesToScroll={1}
-                                                loop={true}
-                                                speed={100}
-                                                autoplay={false}
-                                                autoplaySpeed={1500}
-                                                swipeToSlide={true}
-                                                nextArrow={<SampleNextArrow />}
-                                                prevArrow={<SamplePrevArrow />}
-                                            >
-                                                {
-                                                    data_of_course_details
-                                                }
-                                            </Slider>
+                                              <div className="lg:w-1/4 px-2">
+                                                <img className="lg:rounded-md xl:h-112 xl:w-full" src="https://www.bethesdaheadshots.com/wp-content/uploads/2022/05/black-female-corporate-headshot-800.jpg" alt="" />
+                                                <div className="text-center xl:-mt-80">
+                                                    <img className="mx-auto" src={FeaturePlay} alt="" />
+                                                    <h6 className="xl:text-2xl text-maincolor xl:mt-8 font-semibold">Laurea Pausini</h6>
+                                                    <h6 className="xl:text-sm text-gray-400">Italia - Milano</h6>
+                                                    <h6 className="xl:text-lg text-white lg:px-3 leading-none">Learn about art of classical music, Italian and Western</h6>
+                                                    <button className="bg-maincolor text-xs font-light border-0 border-sm rounded-md text-white px-2 py-1 mt-3">With Certificate</button>
+                                                    <h6 className="text-xs text-maincolor mt-2">Starts September 2022 - 11 Weeks</h6>
+                                                </div>
+                                            </div>
 
-                                        </div>
+                                            <div className="lg:w-1/4 px-2">
+                                                <img className="lg:rounded-md xl:h-112 xl:w-full" src="https://i.pinimg.com/736x/c8/1a/8b/c81a8b6bcee899a76686672e8832863e--professional-headshots-corporate-headshots.jpg" alt="" />
+                                                <div className="text-center xl:-mt-80">
+                                                    <img className="mx-auto" src={FeaturePlay} alt="" />
+                                                    <h6 className="xl:text-2xl text-maincolor xl:mt-8 font-semibold">Laurea Pausini</h6>
+                                                    <h6 className="xl:text-sm text-gray-400">Italia - Milano</h6>
+                                                    <h6 className="xl:text-lg text-white lg:px-3 leading-none">Learn about art of classical music, Italian and Western</h6>
+                                                    <button className="bg-maincolor text-xs font-light border-0 border-sm rounded-md text-white px-2 py-1 mt-3">With Certificate</button>
+                                                    <h6 className="text-xs text-maincolor mt-2">Starts September 2022 - 11 Weeks</h6>
+                                                </div>
+                                            </div>
+
+                                            <div className="lg:w-1/4 px-2">
+                                                <img className="lg:rounded-md xl:h-112 xl:w-full" src="https://images.squarespace-cdn.com/content/v1/53b599ebe4b08a2784696956/1585161216625-SPEZ9Q48H4XWEAN47K1O/professional-headshots-nyc-043.jpg" alt="" />
+                                                <div className="text-center xl:-mt-80">
+                                                    <img className="mx-auto" src={FeaturePlay} alt="" />
+                                                    <h6 className="xl:text-2xl text-maincolor xl:mt-8 font-semibold">Laurea Pausini</h6>
+                                                    <h6 className="xl:text-sm text-gray-400">Italia - Milano</h6>
+                                                    <h6 className="xl:text-lg text-white lg:px-3 leading-none">Learn about art of classical music, Italian and Western</h6>
+                                                    <button className="bg-maincolor text-xs font-light border-0 border-sm rounded-md text-white px-2 py-1 mt-3">With Certificate</button>
+                                                    <h6 className="text-xs text-maincolor mt-2">Starts September 2022 - 11 Weeks</h6>
+                                                </div>
+                                            </div>
+
+                                            <div className="lg:w-1/4 px-2">
+                                                <img className="lg:rounded-md xl:h-112 xl:w-full" src="https://images.squarespace-cdn.com/content/v1/58b048cf1b631bb7fa6ac6c0/1b70e543-c126-4f30-a3d9-b738217d5fc0/business-headshots-e03s43d4ssdde-33we32w321sdf3.jpg?format=1500w" alt="" />
+                                                <div className="text-center xl:-mt-80">
+                                                    <img className="mx-auto" src={FeaturePlay} alt="" />
+                                                    <h6 className="xl:text-2xl text-maincolor xl:mt-8 font-semibold">Laurea Pausini</h6>
+                                                    <h6 className="xl:text-sm text-gray-400">Italia - Milano</h6>
+                                                    <h6 className="xl:text-lg text-white lg:px-3 leading-none">Learn about art of classical music, Italian and Western</h6>
+                                                    <button className="bg-maincolor text-xs font-light border-0 border-sm rounded-md text-white px-2 py-1 mt-3">With Certificate</button>
+                                                    <h6 className="text-xs text-maincolor mt-2">Starts September 2022 - 11 Weeks</h6>
+                                                </div>
+                                            </div>
+
+                                        </Slider>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </Fragment>
-        );
-    }
-
-
-
-
+            </div>
+        </Fragment>
+    );
 }
-export default RecentlyAddedCourseSectionTwo;
+// }
+export default OurBestMasterClasses;

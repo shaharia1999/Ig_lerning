@@ -1,1 +1,16 @@
-@import './Custom//feature-course.css';
+@import './Custom/feature-course.css';
+@import './video.css';
+
+.institute-cover{
+    width: 100vw !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    max-width: 100%!important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 640px;
+}

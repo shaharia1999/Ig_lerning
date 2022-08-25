@@ -4,6 +4,7 @@ import axios from "axios";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { Link } from "react-router-dom";
 
 function TopCategories() {
     const [topCategory, setTopCategory] = useState([]);
@@ -99,10 +100,10 @@ function TopCategories() {
             return (
                 topCategory.map((category, index) => (
                     <div key={index} className="my-1 px-1 w-full md:w-1/2 2xl:my-8 xl:my-4 lg:my-8 xl:px-5 xl:w-1/3">
-                        <article className="overflow-hidden xl:rounded-lg rounded-sm xl:shadow-lg shadow-sm hover:opacity-30 hover:bg-black dark:bg-dark-color2">
+                        <Link to="/category-details" className="overflow-hidden xl:rounded-lg rounded-sm xl:shadow-lg shadow-sm hover:opacity-30 hover:bg-black dark:bg-dark-color2">
                             <img alt="Placeholder" className="block bg-fixed lg:h-64 md:h-48 h-56 w-full" src={category.category_preview_img} />
                             <h1 className="xl:text-lg xl:font-medium text-center text-maingray dark:text-white xl:mt-4 xl:mb-4 mt-3 mb-3">{category.category_name}</h1>
-                        </article>
+                        </Link>
                     </div>
                 ))
             )
@@ -120,7 +121,6 @@ function TopCategories() {
                         }
                     </div>
                 </div>
-
             </Fragment>
         );
     }
