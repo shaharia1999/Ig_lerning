@@ -1,4 +1,5 @@
-@import './Custom//feature-course.css';
+@import './Custom/feature-course.css';
+@import './video.css';
 
 .institute-cover{
     width: 100vw !important;

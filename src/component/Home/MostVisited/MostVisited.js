@@ -256,9 +256,37 @@ function MostVisited() {
                         <div className="wrapper antialiased text-gray-900">
 
                             <div className="relative">
-                                <video type="video/mp4" muted
+
+
+                                <video
+                                    id="my-video"
+                                    // class="video-js"
+                                    class="video-js vjs-theme-fantasy vjs-big-play-centered w-full vid xl:h-72 h-56 object-cover object-center rounded-lg shadow-md"
+                                    controls
+                                    preload="auto"
+                                    // autoPlay={true}
+                                    muted
+                                    // aspectRatio="4:3"
+                                    // width="1020px"
+                                    // height="576px"
+                                    poster="https://futurevisioncomputers.com/wp-content/uploads/2021/03/computer_institute_banner_classes_in_surat-scaled-1024x576.jpg"
+                                    data-setup='{}'
+                                >
+                                    <source src={mostvisited_c.promotional_video} type="video/mp4" />
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noreferrer">supports HTML5 video</a>
+                                    </p>
+                                </video>
+
+
+                                {/* <video type="video/mp4" muted
                                     loop className="w-full vid xl:h-72 h-56 object-cover object-center rounded-lg shadow-md"
-                                    src={mostvisited_c.promotional_video}></video>
+                                    src={mostvisited_c.promotional_video}></video> */}
+
+
+
                                 <div className="flex flex-wrap">
                                     <div className="w-1/5">
                                         <a href="!#">
@@ -382,7 +410,7 @@ function MostVisited() {
                         slidesToScroll: 1,
                         infinite: true,
                         dots: false,
-                        arrows:false,
+                        arrows: false,
                         rows: 1
                     }
                 },
@@ -393,7 +421,7 @@ function MostVisited() {
                         slidesToScroll: 1,
                         infinite: true,
                         dots: false,
-                        arrows:false,
+                        arrows: false,
                         rows: 1
                     }
                 },
@@ -404,7 +432,7 @@ function MostVisited() {
                         slidesToScroll: 2,
                         initialSlide: 2,
                         dots: false,
-                        arrows:false
+                        arrows: false
                     }
                 },
                 {
