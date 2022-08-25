@@ -32,11 +32,15 @@ function NavBarTop() {
 
     const user_data = JSON.parse(localStorage.getItem('user_data'));
     var user_email = null;
+    var username = null;
+    var studentImage = null;
     if (user_data == null) {
         user_email = null;
     }
     else {
         user_email = user_data['email'];
+        username = user_data['username'];
+        studentImage = user_data['image'];
     }
 
     const onHomeLoginRedirect = () => {
@@ -591,11 +595,11 @@ function NavBarTop() {
                                         <div class="dropdown dropdown-end 2xl:mr-20 xl:mr-16 lg:mr-10">
                                             <label tabindex="0" className="flex cursor-pointer">
                                                 <img className='xl:h-10 xl:w-10 lg:h-8 lg:w-8 border-2 xl:mt-3 lg:mt-2.5 border-white rounded-full'
-                                                    src={StudentImg}
+                                                    src={studentImage}
                                                     alt=""
                                                 />
                                                 <div className='xl:mt-3 xl:ml-3 lg:mt-2 lg:ml-2'>
-                                                    <h6 className='2xl:text-base xl:text-sm text-sm text-white 2xl:font-medium xl:font-normal'>Monirul Islam</h6>
+                                                    <h6 className='2xl:text-base xl:text-sm text-sm text-white 2xl:font-medium xl:font-normal'>{username}</h6>
                                                     <h6 className='2xl:text-sm xl:text-xs lg:text-2xs text-white font-light 2xl:-mt-1 xl:mt-auto lg:-mt-1'>Student</h6>
                                                 </div>
                                             </label>
