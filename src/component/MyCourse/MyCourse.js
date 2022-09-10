@@ -55,7 +55,7 @@ function MyCourse() {
             }
         })
     }
-
+    console.log('course_enroll_id = ', myEnrollCourseData)
     useEffect(() => {
         MyCourseDataLoad();
     }, [])
@@ -186,9 +186,10 @@ function MyCourse() {
                             <div className="w-7/12 xl:ml-3">
                                 <div className="flex flex-wrap">
                                     <div className="w-full">
-                                        <h4 className="lg:mt-0 xl:text-base md:text-sm md:font-medium leading-tight text-cart-item-title dark:text-white">
-                                            {my_course_list_data?.course_info?.course_title}
-                                        </h4>
+                                    <Link to={`/my-course-details/${my_course_list_data.course_enroll_id}`}
+                                        className="lg:mt-0 xl:text-base md:text-sm md:font-medium leading-tight text-cart-item-title dark:text-white">
+                                                {`${my_course_list_data.course_info.course_title.substring(0, 40)}...`}
+                                    </Link>
                                     </div>
                                 </div>
 

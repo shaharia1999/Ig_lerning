@@ -1,11 +1,13 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState, useRef } from "react";
 import VideoImg from "../../asset/images/VideoImg/videoImg.png"
 import { FiCheckCircle } from "react-icons/fi";
 import StarRatings from 'react-star-ratings';
 import { FaRegThumbsUp, FaRegThumbsDown } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { FaStar } from "react-icons/fa";
-
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import ApiUrl from "../../Api/ApiUrl";
 import courseLessonImg from '../../asset/images/course-thumbnail/lesson-img.svg'
 import {
     Accordion,
@@ -15,7 +17,25 @@ import {
 import { GrDocumentText } from "react-icons/gr";
 
 function MyCourseDetails() {
-
+    let { id } = useParams();
+    var user_data = JSON.parse(localStorage.getItem('user_data'))
+    console.log('user data = ', user_data);
+    console.log('user data id = ', user_data['id']);
+    const [isLoading, setIsLoading] = useState(false);
+    const [CourseEnrollDetails, setCourseEnrollDetails] = useState([]);
+    const [CourseLearnInfo, setCourseLearnInfo] = useState([]);
+    useEffect(() => {
+        setIsLoading(true);
+        axios.get(ApiUrl.BaseUrl + 'api/course/course-enroll-details-overview/'+ id + '/').then((response) => {
+            if (response.data.error === false) {
+                setCourseEnrollDetails(response.data.data);
+                setCourseLearnInfo(response.data.data['course_learn_info'])
+                setIsLoading(false);
+            }
+        });
+    }, []);
+    console.log('CourseEnrollDetails = ', CourseEnrollDetails)
+    console.log('course_learn_info = ', CourseLearnInfo)
     const [open, setOpen] = useState(0);
 
     const handleOpen = (value) => {
@@ -559,53 +579,37 @@ function MyCourseDetails() {
                                                 Description
                                             </h6>
                                             <h6 className="xl:text-xs text-xs text-justify xl:font-light text-breadcrumbs-text xl:mt-5 mt-3 xl:leading-5 xl:pr-24">
-                                                Make real project according to the client requirements Implement HTML/Bootstrap template & Customise Django Admin Panel PostgreSQL Database & Deploy it into Production Server Setup Virtual Environment Creating Django Apps Git Implementing HTML and Bootstrap PostgreSQL Database Setup Django Static Files & Media Files Django Admin Customisation Database Schema, Models and Migrations Implementing RichText Editor & Multi-Select Fields on Admin Backend Fetching Database Objects Pagination Search Functionality User Authentication Login with Facebook & Login with Google Send Emails Database Dump Data & Load Data (local & remote) Deploy on Heroku Server (Gunicorn, Whitenoise)
+                                                {CourseEnrollDetails?.course_info?.course_description} {' '}
                                             </h6>
                                             <h6 className="text-sectionTitleColor dark:text-white xl:text-xl font-semibold xl:mt-5 mt-3 xl:mb-5 mb-3">
                                                 What will you learn:
                                             </h6>
 
                                             <div className="flex flex-wrap xl:mb-0 mb-1">
-                                                <div className="xl:w-1/12">
-                                                    <FiCheckCircle
-                                                        className=" text-btngreen xl:h-6 xl:w-6"
-                                                    />
-                                                </div>
-                                                <div className="xl:w-11/12 xl:-ml-14 ml-1">
-                                                    <h6 className="dark:text-white">What will you learn:</h6>
-                                                    <h6 className="xl:text-xs text-2xs xl:font-light text-breadcrumbs-text xl:mt-1 xl:mb-4 xl:leading-5 xl:pr-24">
-                                                        Make real project according to the client requirements Implement
-                                                    </h6>
-                                                </div>
+                                                
+                                                {
+                                                    CourseLearnInfo.map((course_learn) => (
+                                                        <>
+                                                            <div className="xl:w-1/12">
+                                                                <FiCheckCircle
+                                                                    className=" text-btngreen xl:h-6 xl:w-6"
+                                                                />
+                                                            </div>
+                                                            <div className="xl:w-11/12 xl:-ml-14 ml-1">
+                                                                <h6 className="dark:text-white">{course_learn?.course_learn_question}:</h6>
+                                                                <h6 className="xl:text-xs text-2xs xl:font-light text-breadcrumbs-text xl:mt-1 xl:mb-4 xl:leading-5 xl:pr-24">
+                                                                    {course_learn?.course_learn_answer}
+                                                                </h6>
+                                                            </div>
+                                                        </>
+                                                    ))
+                                                }
+                                                
                                             </div>
 
-                                            <div className="flex flex-wrap xl:mb-0 mb-1">
-                                                <div className="xl:w-1/12">
-                                                    <FiCheckCircle
-                                                        className=" text-btngreen xl:h-6 xl:w-6"
-                                                    />
-                                                </div>
-                                                <div className="xl:w-11/12 xl:-ml-14 ml-1">
-                                                    <h6 className="dark:text-white">What will you learn:</h6>
-                                                    <h6 className="xl:text-xs text-2xs xl:font-light text-breadcrumbs-text xl:mt-1 xl:mb-4 xl:leading-5 xl:pr-24">
-                                                        Make real project according to the client requirements Implement
-                                                    </h6>
-                                                </div>
-                                            </div>
+                                            
 
-                                            <div className="flex flex-wrap xl:mb-0 mb-1">
-                                                <div className="xl:w-1/12">
-                                                    <FiCheckCircle
-                                                        className=" text-btngreen xl:h-6 xl:w-6"
-                                                    />
-                                                </div>
-                                                <div className="xl:w-11/12 xl:-ml-14 ml-1">
-                                                    <h6 className="dark:text-white">What will you learn:</h6>
-                                                    <h6 className="xl:text-xs text-2xs xl:font-light text-breadcrumbs-text xl:mt-1 xl:mb-4 xl:leading-5 xl:pr-24">
-                                                        Make real project according to the client requirements Implement
-                                                    </h6>
-                                                </div>
-                                            </div>
+                                           
 
                                             <div className="flex flex-wrap xl:mb-0 mb-1">
                                                 <div className="xl:w-1/12">
