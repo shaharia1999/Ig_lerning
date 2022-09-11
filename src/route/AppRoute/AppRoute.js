@@ -47,7 +47,7 @@ function AppRoute() {
                 <Route exact path="/trainer-profile/:id" render={(props) => <TrainerProfilePage {...props} key={Date.now()} />} />
                 <Route exact path="/course-search-filter" render={(props) => <CourseSearchFilterPage {...props} key={Date.now()} />} />
 
-                <Route exact path="/my-course-details" render={(props) => <MyCourseDetailsPage {...props} key={Date.now()} />} />
+                <Route exact path="/my-course-details/:id" render={(props) => <MyCourseDetailsPage {...props} key={Date.now()} />} />
 
                 <Route exact path="/category-details" render={(props) => <CategoryDetailsPage {...props} key={Date.now()} />} />
 
