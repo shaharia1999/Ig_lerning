@@ -10,11 +10,16 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import axios from 'axios';
 import ApiUrl from "../../../Api/ApiUrl";
+import { Redirect } from 'react-router-dom';
 
 
 function HomeBanner() {
     const [isLoading, setIsLoading] = useState(false);
     const [categoryInfo, setCategoryInfo] = useState([]);
+    const [CategoryID, setCategoryID] = useState('')
+    const [searchValue, setSearchValue] = useState('')
+    const [UserRedirect, setUserRedirect] = useState(false)
+    const [SearchFilter, setSearchFilter] = useState('');
 
     useEffect(() => {
         setIsLoading(true);
@@ -27,6 +32,33 @@ function HomeBanner() {
         });
     }, []);
     console.log('categoryInfo = ', categoryInfo);
+
+    const EktaFunction=()=>{
+        if (UserRedirect === true){
+            return <Redirect to={SearchFilter}/>
+        }
+        else{
+            setUserRedirect(false)
+        }
+    }
+    
+    async function searchSection() {
+        const data = {
+            category_id: CategoryID,
+            searchValue: searchValue,
+        }
+        console.log('data = ', data);
+
+        var course_filter_value =  `course-search-filter/?category_id=${CategoryID}&searchValue=${searchValue}`;
+        setSearchFilter(course_filter_value)
+        setUserRedirect(true)
+
+        // axios.post(ApiUrl.BaseUrl + 'user-authentication/api/student-registration-new/', data).then((response) => {
+        //     if (response.data.error === false) {
+
+        //     }
+        // });
+    }
     const [nav9, setNav9] = useState();
     const slider9 = useRef();
     var settings = {
@@ -101,23 +133,24 @@ function HomeBanner() {
                                 <div className="form">
                                     <div className="flex bg-white w-128 rounded-3xl 2xl:py-1.5 xl:py-1 lg:py-1 md:py-0.5">
                                         <i className="fa fa-search text-gray-400 ml-6 mt-3"></i>
-                                        <input type="text" className="form-control focus:border-none focus:ring-0 text-sm w-64 pr-0 bg-transparent form-input border-none ml-4" placeholder="What do you want to learn today ?" />
+                                        <input value ={searchValue} onChange={e => setSearchValue(e.target.value)} type="text" className="form-control focus:border-none focus:ring-0 text-sm w-64 pr-0 bg-transparent form-input border-none ml-4" placeholder="What do you want to learn today ?" />
                                         <span className="rotate-90 -ml-3 mr-5"><hr className='w-7 border' /></span>
                                         <div className="bg-white z-50">
-                                            <select id="countries" className="bg-transparent text-gray-400 text-sm rounded-lg border-none focus:border-none focus:ring-0 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <select value={CategoryID} onChange={e => setCategoryID(e.target.value)}
+                                                id="countries" className="bg-transparent text-gray-400 text-sm rounded-lg border-none focus:border-none focus:ring-0 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                                 <option selected>All</option>
-                                                <option value="1">Business</option>
-                                                <option value="2">Programming</option>
-                                                <option value="3">IA & Big Data</option>
-                                                <option value="4">Art & Design</option>
-                                                <option value="4">Digital Marketing</option>
+                                                {
+                                                    categoryInfo.map((category) => (
+                                                        <option value={category.category_id}>{category.category_name}</option>
+                                                    ))
+                                                }
                                             </select>
                                         </div>
 
                                     </div>
                                 </div>
 
-                                <button className="btn rounded-3xl lg:px-12 md:px-8 lg:py-2 md:py-0 ml-3 text-white text-sm bg-maincolor border-none">Search</button>
+                                <button onClick={EktaFunction} className="btn rounded-3xl lg:px-12 md:px-8 lg:py-2 md:py-0 ml-3 text-white text-sm bg-maincolor border-none">Search</button>
                             </div>
                         </div>
                     </div>
@@ -165,6 +198,8 @@ function HomeBanner() {
                         </div>
                     </div>
                 </div>
+                {EktaFunction}
+
 
             </Fragment>
         );
