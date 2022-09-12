@@ -10,7 +10,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import axios from 'axios';
 import ApiUrl from "../../../Api/ApiUrl";
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 
 function HomeBanner() {
@@ -18,7 +18,7 @@ function HomeBanner() {
     const [categoryInfo, setCategoryInfo] = useState([]);
     const [CategoryID, setCategoryID] = useState('')
     const [searchValue, setSearchValue] = useState('')
-    const [UserRedirect, setUserRedirect] = useState(false)
+    const [UserRedirect, setUserRedirect] = useState(false);
     const [SearchFilter, setSearchFilter] = useState('');
 
     useEffect(() => {
@@ -33,14 +33,7 @@ function HomeBanner() {
     }, []);
     console.log('categoryInfo = ', categoryInfo);
 
-    const EktaFunction=()=>{
-        if (UserRedirect === true){
-            return <Redirect to={SearchFilter}/>
-        }
-        else{
-            setUserRedirect(false)
-        }
-    }
+    
     
     async function searchSection() {
         const data = {
@@ -49,15 +42,17 @@ function HomeBanner() {
         }
         console.log('data = ', data);
 
-        var course_filter_value =  `course-search-filter/?category_id=${CategoryID}&searchValue=${searchValue}`;
+        var course_filter_value =  `/course-search-filter/?category_id=${CategoryID}&searchValue=${searchValue}`;
+        
         setSearchFilter(course_filter_value)
-        setUserRedirect(true)
-
-        // axios.post(ApiUrl.BaseUrl + 'user-authentication/api/student-registration-new/', data).then((response) => {
-        //     if (response.data.error === false) {
-
-        //     }
-        // });
+        setUserRedirect(true);
+    }
+    const EktaFunction=()=>{
+        if (UserRedirect === true){
+            return (
+                <Redirect to={`/course-search-filter/?category_id=${CategoryID}&searchValue=${searchValue}`}/>
+            )
+        }
     }
     const [nav9, setNav9] = useState();
     const slider9 = useRef();
@@ -150,7 +145,7 @@ function HomeBanner() {
                                     </div>
                                 </div>
 
-                                <button onClick={EktaFunction} className="btn rounded-3xl lg:px-12 md:px-8 lg:py-2 md:py-0 ml-3 text-white text-sm bg-maincolor border-none">Search</button>
+                                <Link onClick={searchSection} className="btn rounded-3xl lg:px-12 md:px-8 lg:py-2 md:py-0 ml-3 text-white text-sm bg-maincolor border-none">Search</Link>
                             </div>
                         </div>
                     </div>
@@ -198,7 +193,7 @@ function HomeBanner() {
                         </div>
                     </div>
                 </div>
-                {EktaFunction}
+                {EktaFunction()}
 
 
             </Fragment>
