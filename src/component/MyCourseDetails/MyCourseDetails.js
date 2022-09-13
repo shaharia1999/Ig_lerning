@@ -24,16 +24,84 @@ function MyCourseDetails() {
     const [isLoading, setIsLoading] = useState(false);
     const [CourseEnrollDetails, setCourseEnrollDetails] = useState([]);
     const [CourseLearnInfo, setCourseLearnInfo] = useState([]);
+    const [CourseID, setCourseID] = useState('');
+    const [studentFeedBack, setStudentFeedBack] = useState([]);
+    const [courseReview, setStudentReview] = useState([]);
+    const [StudentInformation, setStudentInformation] = useState([]);
+    
+    var [searchValue, setSearchValue] = useState('');
+    var [searchRating, setSearchRating] = useState('');
+    var searchRating1 = '';
+
     useEffect(() => {
         setIsLoading(true);
+        my_course_details()
+    }, []);
+
+    const my_course_details = (() => {
         axios.get(ApiUrl.BaseUrl + 'api/course/course-enroll-details-overview/'+ id + '/').then((response) => {
             if (response.data.error === false) {
                 setCourseEnrollDetails(response.data.data);
                 setCourseLearnInfo(response.data.data['course_learn_info'])
+                setCourseID(response.data.data.course_id)
+                student_feedback(response.data.data.course_id)
+                course_review(response.data.data.course_id)
                 setIsLoading(false);
             }
         });
-    }, []);
+    })
+    
+    const student_feedback = ((courseId) => {
+        console.log('course id = ', CourseID);
+        axios.get(`${ApiUrl.BaseUrl}api/course/course-student-feedback/${courseId}/`).then((response) => {
+            if (response.data.error === false) {
+                setStudentFeedBack(response.data.data);
+            }
+        });
+    })
+
+    const course_review = ((courseId) => {
+        axios.get(`${ApiUrl.BaseUrl}api/course/course-student-review/${courseId}/`).then((response) => {
+            if (response.data.error === false) {
+                setIsLoading(false);
+                setStudentReview(response.data.data);
+                setStudentInformation(response.data.data.student_information);
+            }
+        });
+    })
+
+    function ReviewSearch() {
+        var review_search_data = {
+            search_value: searchValue,
+            rating: searchRating1
+        }
+        console.log('review data = ', review_search_data);
+        axios.put(`${ApiUrl.BaseUrl}api/course/course-student-review-search/${CourseID}/`, review_search_data).then((response) => {
+            if (response.data.error === false) {
+                setIsLoading(false);
+                setStudentReview(response.data.data);
+                setStudentInformation(response.data.data.student_information);
+                console.log('course student review = ', response.data.data)
+            }
+        });
+    }
+
+    function ReviewSearch1() {
+        var review_search_data = {
+            search_value: searchValue,
+            rating: searchRating
+        }
+        axios.put(`${ApiUrl.BaseUrl}api/course/course-student-review-search/${CourseID}/`, review_search_data).then((response) => {
+            if (response.data.error === false) {
+                setIsLoading(false);
+                setStudentReview(response.data.data);
+                setStudentInformation(response.data.data.student_information);
+            }
+        });
+    }
+
+    
+    
     console.log('CourseEnrollDetails = ', CourseEnrollDetails)
     console.log('course_learn_info = ', CourseLearnInfo)
     const [open, setOpen] = useState(0);
@@ -42,6 +110,326 @@ function MyCourseDetails() {
         setOpen(open === value ? 0 : value);
     };
 
+    const course_enroll_overview_Loading = (() => {
+        if (isLoading === true) {
+            return (
+                <div className="w-full">
+                    <h6 className="text-sectionTitleColor dark:text-white lg:text-xl font-semibold">
+                        Description
+                    </h6>
+                    <h6 className="xl:text-xs text-xs text-justify xl:font-light text-breadcrumbs-text xl:mt-5 mt-3 xl:leading-5 xl:pr-24">
+                    Make real project according to the client requirements Implement HTML/Bootstrap template & Customise Django Admin Panel PostgreSQL Database & Deploy it into Production Server Setup Virtual Environment Creating Django Apps Git Implementing HTML and Bootstrap PostgreSQL Database Setup Django Static Files & Media Files Django Admin Customisation Database Schema, Models and Migrations Implementing RichText Editor & Multi-Select Fields on Admin Backend Fetching Database Objects Pagination Search Functionality User Authentication Login with Facebook & Login with Google Send Emails Database Dump Data & Load Data (local & remote) Deploy on Heroku Server (Gunicorn, Whitenoise)
+                    </h6>
+                    <h6 className="text-sectionTitleColor dark:text-white xl:text-xl font-semibold xl:mt-5 mt-3 xl:mb-5 mb-3">
+                        What will you learn:
+                    </h6>
+
+                    <div className="flex flex-wrap xl:mb-0 mb-1">
+                        <div className="xl:w-1/12">
+                            <FiCheckCircle
+                                className=" text-btngreen xl:h-6 xl:w-6"
+                            />
+                        </div>
+                        <div className="xl:w-11/12 xl:-ml-14 ml-1">
+                            <h6 className="dark:text-white">What will you learn:</h6>
+                            <h6 className="xl:text-xs text-2xs xl:font-light text-breadcrumbs-text xl:mt-1 xl:mb-4 xl:leading-5 xl:pr-24">
+                                Make real project according to the client requirements Implement
+                            </h6>
+                        </div>
+                    </div>
+
+                </div>
+            )
+        }
+    })()
+
+    const course_enroll_overview = (() => {
+        if (isLoading === false) {
+            return (
+                <div className="w-full">
+                    <h6 className="text-sectionTitleColor dark:text-white lg:text-xl font-semibold">
+                        Description
+                    </h6>
+                    <h6 className="xl:text-xs text-xs text-justify xl:font-light text-breadcrumbs-text xl:mt-5 mt-3 xl:leading-5 xl:pr-24">
+                        {CourseEnrollDetails?.course_info?.course_description} {' '}
+                    </h6>
+                    <h6 className="text-sectionTitleColor dark:text-white xl:text-xl font-semibold xl:mt-5 mt-3 xl:mb-5 mb-3">
+                        What will you learn:
+                    </h6>
+                    {
+                        CourseLearnInfo.map((course_learn) => (
+                            <div className="flex flex-wrap xl:mb-0 mb-1">
+                                <div className="xl:w-1/12">
+                                    <FiCheckCircle
+                                        className=" text-btngreen xl:h-6 xl:w-6"
+                                    />
+                                </div>
+                                <div className="xl:w-11/12 xl:-ml-14 ml-1">
+                                    <h6 className="dark:text-white">{' '} {course_learn?.course_learn_question}</h6>
+                                    <h6 className="xl:text-xs text-2xs xl:font-light text-breadcrumbs-text xl:mt-1 xl:mb-4 xl:leading-5 xl:pr-24">
+                                        {course_learn?.course_learn_answer}
+                                    </h6>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+            )
+        }
+    })()
+
+    const my_course_student_feedback_loading = (() => {
+        return (
+            <div className="flex flex-wrap xl:mt-0 mt-4">
+                <div className="xl:w-1/5 w-4/12 xl:mt-6">
+                    <div className="bg-maincolor xl:rounded-lg rounded-md text-center">
+                        <h6 className="2xl:pt-6 xl:pt-4 pt-2 2xl:text-5xl xl:text-3xl text-lg text-white xl:font-bold">3.5</h6>
+                        <ul className="flex justify-center xl:mt-2">
+                            <StarRatings
+                                rating={3.5}
+                                starDimension="15px"
+                                starSpacing="4px"
+                                starRatedColor="rgb(251, 191, 36)"
+                            />
+                        </ul>
+                        <h6 className="2xl:pb-6 xl:pb-4 pb-2 2xl:mt-2 xl:mt-1 xl:text-base text-xs text-white xl:font-medium">Course Ratings</h6>
+                    </div>
+                </div>
+                <div className="xl:w-3/5 w-4/12 2xl:mt-4 xl:mt-3 xl:pl-8 pl-2">
+                    <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-3 xl:mt-4 mt-2">
+                        <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
+                    </div>
+
+                    <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-4 mt-2">
+                        <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
+                    </div>
+
+                    <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-4 mt-2">
+                        <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
+                    </div>
+
+
+                    <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-4 mt-2">
+                        <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
+                    </div>
+
+
+                    <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-3.5 mt-2">
+                        <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
+                    </div>
+                </div>
+                <div className="xl:w-1/5 w-4/12 2xl:mt-5 xl:mt-8">
+
+                    <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 mt-1.5">
+                        <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">40%</h6>
+                    </ul>
+
+                    <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2">
+                        <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">20%</h6>
+                    </ul>
+
+                    <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2.5">
+                        <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">18%</h6>
+                    </ul>
+
+                    <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2.5">
+                        <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">12%</h6>
+                    </ul>
+
+                    <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2.5">
+                        <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                        <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">10%</h6>
+                    </ul>
+
+                </div>
+            </div>
+        )
+    })()
+    const my_course_student_feedback = (() => {
+        return <div className="flex flex-wrap xl:mt-0 mt-4">
+            <div className="xl:w-1/5 w-4/12 xl:mt-6">
+                <div className="bg-maincolor xl:rounded-lg rounded-md text-center">
+                    <h6 className="2xl:pt-6 xl:pt-4 pt-2 2xl:text-5xl xl:text-3xl text-lg text-white xl:font-bold">{studentFeedBack.avg_rating}</h6>
+                    <ul className="flex justify-center xl:mt-2">
+                        <StarRatings
+                            rating={studentFeedBack.avg_rating}
+                            starDimension="15px"
+                            starSpacing="4px"
+                            starRatedColor="rgb(251, 191, 36)"
+                        />
+                    </ul>
+                    <h6 className="2xl:pb-6 xl:pb-4 pb-2 2xl:mt-2 xl:mt-1 xl:text-base text-xs text-white xl:font-medium">Course Ratings</h6>
+                </div>
+            </div>
+            <div className="xl:w-3/5 w-4/12 2xl:mt-4 xl:mt-3 xl:pl-8 pl-2">
+                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-3 xl:mt-4 mt-2">
+                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: `${studentFeedBack.five_rating_percentage}%` }}></div>
+                </div>
+
+                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-4 mt-2">
+                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: `${studentFeedBack.four_rating_percentage}%` }}></div>
+                </div>
+
+                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-4 mt-2">
+                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full"  style={{ width: `${studentFeedBack.three_rating_percentage}%` }}></div>
+                </div>
+
+
+                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-4 mt-2">
+                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: `${studentFeedBack.two_rating_percentage}%` }}></div>
+                </div>
+
+
+                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-3.5 mt-2">
+                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: `${studentFeedBack.one_rating_percentage}%` }}></div>
+                </div>
+            </div>
+            <div className="xl:w-1/5 w-4/12 2xl:mt-5 xl:mt-8">
+
+                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 mt-1.5">
+                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">{studentFeedBack.five_rating_percentage}%</h6>
+                </ul>
+
+                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2">
+                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">{studentFeedBack.four_rating_percentage}%</h6>
+                </ul>
+
+                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2.5">
+                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">{studentFeedBack.three_rating_percentage}%</h6>
+                </ul>
+
+                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2.5">
+                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">{studentFeedBack.two_rating_percentage}%</h6>
+                </ul>
+
+                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2.5">
+                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
+                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">{studentFeedBack.one_rating_percentage}%</h6>
+                </ul>
+            </div>
+        </div>
+    })()
+
+    const my_course_review_loading = (() => {
+        return <div className="flex w-full xl:mt-5 mt-5">
+            <div className="xl:w-1/12 w-2/12 xl:mt-2 2xl:mt-0">
+                <img className="2xl:h-16 2xl:w-16 xl:h-12 xl:w-12 h-12 w-12 rounded-full" src={VideoImg} alt="teacher" />
+            </div>
+            <div className="xl:w-11/12 w-10/12">
+                <div>
+                    <h6 className=" text-sectionTitleColor dark:text-white text-lg font-semibold">Monirul Islam Akand</h6>
+                    <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1 mt-0">30 June, 2020</h6>
+                    <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">
+                        <ul className="flex sm:justify-center xl:justify-start xl:mb-1">
+                            <StarRatings
+                                rating={3.5}
+                                starDimension="15px"
+                                starSpacing="2px"
+                                starRatedColor="rgb(251, 191, 36)"
+                            />
+                            <h6 className="xl:ml-2 ml-2 xl:mt-1 mt-0.5 xl:text-xs text-2xs text-black dark:text-white font-medium">2 month ago</h6>
+                        </ul>
+                    </h6>
+                    <h6 className="text-breadcrumbs-text text-sm xl:font-normal font-normal xl:tracking-normal xl:mt-0 mt-3">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </h6>
+                    <h6 className="text-breadcrumbs-text text-xs font-normal xl:mt-4 mt-3">Was this review helpful?</h6>
+                    <div className="flex xl:mt-2 mt-1">
+                        <Link to={`#`} className="xl:p-2 p-1.5 xl:mx-2 mx-1 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsUp className="text-maincolor xl:text-base" /></Link>
+                        <Link to={`#`} className="xl:p-2 p-1.5 xl:mx-2 mx-1 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsDown className="text-maincolor xl:text-base" /></Link>
+                        <h6 className="text-maincolor xl:mx-2 xl:mt-1.5 mt-1.5 xl:ml-2 ml-2 text-sm font-medium">Report</h6>
+                    </div>
+                    <hr className="xl:mt-5 mt-3 border dark:border-dark-color3" />
+                </div>
+            </div>
+        </div>
+    })()
+    const my_course_review = (() => {
+        return (
+            courseReview.map((course_learn_info, index) => (
+                <div className="flex w-full xl:mt-5 mt-5">
+                    <div className="xl:w-1/12 w-2/12 xl:mt-2 2xl:mt-0">
+                        <img className="2xl:h-16 2xl:w-16 xl:h-12 xl:w-12 h-12 w-12 rounded-full" src={ApiUrl.ImageBaseUrl + course_learn_info.student_information.image} alt="teacher" />
+                    </div>
+                    <div className="xl:w-11/12 w-10/12">
+                        <div>
+                            <h6 className=" text-sectionTitleColor dark:text-white text-lg font-semibold">{course_learn_info.student_information.username}</h6>
+                            <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1 mt-0">{course_learn_info.date}</h6>
+                            <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">
+                                <ul className="flex sm:justify-center xl:justify-start xl:mb-1">
+                                    <StarRatings
+                                        rating={course_learn_info.rating}
+                                        starDimension="15px"
+                                        starSpacing="2px"
+                                        starRatedColor="rgb(251, 191, 36)"
+                                    />
+                                    <h6 className="xl:ml-2 ml-2 xl:mt-1 mt-0.5 xl:text-xs text-2xs text-black dark:text-white font-medium">{course_learn_info.whenpublished}</h6>
+                                </ul>
+                            </h6>
+                            <h6 className="text-breadcrumbs-text text-sm xl:font-normal font-normal xl:tracking-normal xl:mt-0 mt-3">
+                                {course_learn_info.review_description}
+                            </h6>
+                            <h6 className="text-breadcrumbs-text text-xs font-normal xl:mt-4 mt-3">Was this review helpful?</h6>
+                            <div className="flex xl:mt-2 mt-1">
+                                <Link to={`#`} className="xl:p-2 p-1.5 xl:mx-2 mx-1 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsUp className="text-maincolor xl:text-base" /></Link>
+                                <Link to={`#`} className="xl:p-2 p-1.5 xl:mx-2 mx-1 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsDown className="text-maincolor xl:text-base" /></Link>
+                                <h6 className="text-maincolor xl:mx-2 xl:mt-1.5 mt-1.5 xl:ml-2 ml-2 text-sm font-medium">Report</h6>
+                            </div>
+                            <hr className="xl:mt-5 mt-3 border dark:border-dark-color3" />
+                        </div>
+                    </div>
+                </div>
+            ))
+        )
+    })()
     return (
         <Fragment>
             <div className="container">
@@ -574,59 +962,14 @@ function MyCourseDetails() {
                                     aria-labelledby="pills-home-tab3">
 
                                     <div className="flex flex-wrap lg:-mt-2 md:mt-5">
-                                        <div className="w-full">
-                                            <h6 className="text-sectionTitleColor dark:text-white lg:text-xl font-semibold">
-                                                Description
-                                            </h6>
-                                            <h6 className="xl:text-xs text-xs text-justify xl:font-light text-breadcrumbs-text xl:mt-5 mt-3 xl:leading-5 xl:pr-24">
-                                                {CourseEnrollDetails?.course_info?.course_description} {' '}
-                                            </h6>
-                                            <h6 className="text-sectionTitleColor dark:text-white xl:text-xl font-semibold xl:mt-5 mt-3 xl:mb-5 mb-3">
-                                                What will you learn:
-                                            </h6>
-
-                                            <div className="flex flex-wrap xl:mb-0 mb-1">
-                                                
-                                                {
-                                                    CourseLearnInfo.map((course_learn) => (
-                                                        <>
-                                                            <div className="xl:w-1/12">
-                                                                <FiCheckCircle
-                                                                    className=" text-btngreen xl:h-6 xl:w-6"
-                                                                />
-                                                            </div>
-                                                            <div className="xl:w-11/12 xl:-ml-14 ml-1">
-                                                                <h6 className="dark:text-white">{course_learn?.course_learn_question}:</h6>
-                                                                <h6 className="xl:text-xs text-2xs xl:font-light text-breadcrumbs-text xl:mt-1 xl:mb-4 xl:leading-5 xl:pr-24">
-                                                                    {course_learn?.course_learn_answer}
-                                                                </h6>
-                                                            </div>
-                                                        </>
-                                                    ))
-                                                }
-                                                
-                                            </div>
-
-                                            
-
-                                           
-
-                                            <div className="flex flex-wrap xl:mb-0 mb-1">
-                                                <div className="xl:w-1/12">
-                                                    <FiCheckCircle
-                                                        className=" text-btngreen xl:h-6 xl:w-6"
-                                                    />
-                                                </div>
-                                                <div className="xl:w-11/12 xl:-ml-14 ml-1">
-                                                    <h6 className="dark:text-white">What will you learn:</h6>
-                                                    <h6 className="xl:text-xs text-2xs xl:font-light text-breadcrumbs-text xl:mt-1 xl:mb-4 xl:leading-5 xl:pr-24">
-                                                        Make real project according to the client requirements Implement
-                                                    </h6>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
+                                        {(() => {
+                                            if (isLoading === true) {
+                                                return course_enroll_overview_Loading
+                                            }
+                                            else{
+                                               return course_enroll_overview
+                                            }
+                                        })()}
                                     </div>
                                 </div>
                                 <div className="tab-pane w-full fade"
@@ -649,93 +992,14 @@ function MyCourseDetails() {
 
                                     <div className=" xl:mt-5 xl:mr-14 xl:p-0 p-4">
                                         <h6 className="text-sectionTitleColor lg:text-xl dark:text-white font-semibold">Student Feedback</h6>
-                                        <div className="flex flex-wrap xl:mt-0 mt-4">
-                                            <div className="xl:w-1/5 w-4/12 xl:mt-6">
-                                                <div className="bg-maincolor xl:rounded-lg rounded-md text-center">
-                                                    <h6 className="2xl:pt-6 xl:pt-4 pt-2 2xl:text-5xl xl:text-3xl text-lg text-white xl:font-bold">3.5</h6>
-                                                    <ul className="flex justify-center xl:mt-2">
-                                                        <StarRatings
-                                                            rating={3.5}
-                                                            starDimension="15px"
-                                                            starSpacing="4px"
-                                                            starRatedColor="rgb(251, 191, 36)"
-                                                        />
-                                                    </ul>
-                                                    <h6 className="2xl:pb-6 xl:pb-4 pb-2 2xl:mt-2 xl:mt-1 xl:text-base text-xs text-white xl:font-medium">Course Ratings</h6>
-                                                </div>
-                                            </div>
-                                            <div className="xl:w-3/5 w-4/12 2xl:mt-4 xl:mt-3 xl:pl-8 pl-2">
-                                                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-3 xl:mt-4 mt-2">
-                                                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
-                                                </div>
-
-                                                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-4 mt-2">
-                                                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
-                                                </div>
-
-                                                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-4 mt-2">
-                                                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
-                                                </div>
-
-
-                                                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-4 mt-2">
-                                                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
-                                                </div>
-
-
-                                                <div className="w-full bg-gray-200 rounded-full 2xl:h-3.5 xl:h-3 h-2 2xl:mt-5 xl:mt-3.5 mt-2">
-                                                    <div className="bg-progress-bar 2xl:h-3.5 xl:h-3 h-2 rounded-full" style={{ width: "60px" }}></div>
-                                                </div>
-                                            </div>
-                                            <div className="xl:w-1/5 w-4/12 2xl:mt-5 xl:mt-8">
-
-                                                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 mt-1.5">
-                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">40%</h6>
-                                                </ul>
-
-                                                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2">
-                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">20%</h6>
-                                                </ul>
-
-                                                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2.5">
-                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">18%</h6>
-                                                </ul>
-
-                                                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2.5">
-                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">12%</h6>
-                                                </ul>
-
-                                                <ul className="flex justify-center 2xl:mt-1 xl:-mt-1 -mt-2.5">
-                                                    <li className="mb-4 mx-0.5"><FaStar className="text-amber-400 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <li className="mb-4 mx-0.5"><FaStar className=" text-gray-600 xl:h-4 xl:w-4 h-2.5 w-2.5" /></li>
-                                                    <h6 className="xl:ml-2 xl:text-sm text-2xs text-black dark:text-gray-300 font-normal ml-2 xl:mt-0 -mt-0.5">10%</h6>
-                                                </ul>
-
-                                            </div>
-                                        </div>
+                                        {(() => {
+                                            if (isLoading === true) {
+                                                return my_course_student_feedback_loading
+                                            }
+                                            else{
+                                               return my_course_student_feedback
+                                            }
+                                        })()}
                                     </div>
 
                                     <div className="lg:mt-5 md:mt-5">
@@ -746,9 +1010,14 @@ function MyCourseDetails() {
                                                     <div className="flex w-full">
                                                         <div className="input-group relative flex flex-wrap items-stretch w-full rounded-sm mb-4">
                                                             <input type="search"
-
+                                                                value={searchValue}
+                                                                onChange={(e) => setSearchValue(e.target.value)}
                                                                 className="form-control relative flex-auto min-w-0 block w-full xl:px-5 px-3 py-1.5 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-md transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none" placeholder="Search Reviews" aria-label="Search" aria-describedby="button-addon2" />
                                                             <button
+                                                                onClick={(e) => {
+                                                                    console.log('searchRating1 = ', searchRating1);
+                                                                    ReviewSearch1();
+                                                                }}
                                                                 className="btn inline-block px-6 py-2.5 bg-maincolor border-none text-white font-medium text-xs leading-tight uppercase rounded-md shadow-md hover:bg-black hover:shadow-lg focus:bg-maincolor  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-maincolor active:shadow-lg transition duration-150 ease-in-out flex items-center" type="button" id="button-addon2">
                                                                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" className="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                                                     <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
@@ -759,6 +1028,12 @@ function MyCourseDetails() {
                                                 </div>
                                                 <div className="lg:w-4/12 xl:mt-6 mt-4 xl:pl-8">
                                                     <select
+                                                        value={searchRating}
+                                                        onChange={(e) => {
+                                                            searchRating1 = e.target.value;
+                                                            setSearchRating(searchRating1);
+                                                            ReviewSearch();
+                                                        }}
                                                         className="form-select form-select-lg mb-3 appearance-none block w-full px-4 xl:py-2 py-3 xl:text-xl text-sm font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none" aria-label=".form-select-lg example">
                                                         <option value='' selected className="hover:bg-maincolor xl:text-lg text-sm">All Ratings</option>
                                                         <option className="text-maincolor hover:bg-maincolor xl:text-lg text-sm" value="5">5 Star</option>
@@ -771,7 +1046,16 @@ function MyCourseDetails() {
                                             </div>
 
                                             <div className="flex flex-wrap xl:pr-16 xl:mb-16">
-                                                <div className="flex w-full xl:mt-5 mt-5">
+                                                {(() => {
+                                                    if (isLoading === true) {
+                                                        return my_course_review_loading
+                                                    }
+                                                    else{
+                                                        return my_course_review
+                                                    }
+                                                })()}
+
+                                                {/* <div className="flex w-full xl:mt-5 mt-5">
                                                     <div className="xl:w-1/12 w-2/12 xl:mt-2 2xl:mt-0">
                                                         <img className="2xl:h-16 2xl:w-16 xl:h-12 xl:w-12 h-12 w-12 rounded-full" src={VideoImg} alt="teacher" />
                                                     </div>
@@ -802,74 +1086,10 @@ function MyCourseDetails() {
                                                             <hr className="xl:mt-5 mt-3 border dark:border-dark-color3" />
                                                         </div>
                                                     </div>
-                                                </div>
-
-                                                <div className="flex w-full xl:mt-5 mt-5">
-                                                    <div className="xl:w-1/12 w-2/12 xl:mt-2 2xl:mt-0">
-                                                        <img className="2xl:h-16 2xl:w-16 xl:h-12 xl:w-12 h-12 w-12 rounded-full" src={VideoImg} alt="teacher" />
-                                                    </div>
-                                                    <div className="xl:w-11/12 w-10/12">
-                                                        <div>
-                                                            <h6 className=" text-sectionTitleColor dark:text-white text-lg font-semibold">Monirul Islam Akand</h6>
-                                                            <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1 mt-0">30 June, 2020</h6>
-                                                            <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">
-                                                                <ul className="flex sm:justify-center xl:justify-start xl:mb-1">
-                                                                    <StarRatings
-                                                                        rating={3.5}
-                                                                        starDimension="15px"
-                                                                        starSpacing="2px"
-                                                                        starRatedColor="rgb(251, 191, 36)"
-                                                                    />
-                                                                    <h6 className="xl:ml-2 ml-2 xl:mt-1 mt-0.5 xl:text-xs text-2xs text-black dark:text-white font-medium">2 month ago</h6>
-                                                                </ul>
-                                                            </h6>
-                                                            <h6 className="text-breadcrumbs-text text-sm xl:font-normal font-normal xl:tracking-normal xl:mt-0 mt-3">
-                                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                                            </h6>
-                                                            <h6 className="text-breadcrumbs-text text-xs font-normal xl:mt-4 mt-3">Was this review helpful?</h6>
-                                                            <div className="flex xl:mt-2 mt-1">
-                                                                <Link to={`#`} className="xl:p-2 p-1.5 xl:mx-2 mx-1 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsUp className="text-maincolor xl:text-base" /></Link>
-                                                                <Link to={`#`} className="xl:p-2 p-1.5 xl:mx-2 mx-1 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsDown className="text-maincolor xl:text-base" /></Link>
-                                                                <h6 className="text-maincolor xl:mx-2 xl:mt-1.5 mt-1.5 xl:ml-2 ml-2 text-sm font-medium">Report</h6>
-                                                            </div>
-                                                            <hr className="xl:mt-5 mt-3 border dark:border-dark-color3" />
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                </div> */}
 
 
-                                                <div className="flex w-full xl:mt-5 mt-5">
-                                                    <div className="xl:w-1/12 w-2/12 xl:mt-2 2xl:mt-0">
-                                                        <img className="2xl:h-16 2xl:w-16 xl:h-12 xl:w-12 h-12 w-12 rounded-full" src={VideoImg} alt="teacher" />
-                                                    </div>
-                                                    <div className="xl:w-11/12 w-10/12">
-                                                        <div>
-                                                            <h6 className=" text-sectionTitleColor dark:text-white text-lg font-semibold">Monirul Islam Akand</h6>
-                                                            <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1 mt-0">30 June, 2020</h6>
-                                                            <h6 className="text-breadcrumbs-text text-sm font-normal xl:mt-1">
-                                                                <ul className="flex sm:justify-center xl:justify-start xl:mb-1">
-                                                                    <StarRatings
-                                                                        rating={3.5}
-                                                                        starDimension="15px"
-                                                                        starSpacing="2px"
-                                                                        starRatedColor="rgb(251, 191, 36)"
-                                                                    />
-                                                                    <h6 className="xl:ml-2 ml-2 xl:mt-1 mt-0.5 xl:text-xs text-2xs text-black dark:text-white font-medium">2 month ago</h6>
-                                                                </ul>
-                                                            </h6>
-                                                            <h6 className="text-breadcrumbs-text text-sm xl:font-normal font-normal xl:tracking-normal xl:mt-0 mt-3">
-                                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                                            </h6>
-                                                            <h6 className="text-breadcrumbs-text text-xs font-normal xl:mt-4 mt-3">Was this review helpful?</h6>
-                                                            <div className="flex xl:mt-2 mt-1">
-                                                                <Link to={`#`} className="xl:p-2 p-1.5 xl:mx-2 mx-1 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsUp className="text-maincolor xl:text-base" /></Link>
-                                                                <Link to={`#`} className="xl:p-2 p-1.5 xl:mx-2 mx-1 bg-white border border-opacity-80 border-maincolor rounded-full"><FaRegThumbsDown className="text-maincolor xl:text-base" /></Link>
-                                                                <h6 className="text-maincolor xl:mx-2 xl:mt-1.5 mt-1.5 xl:ml-2 ml-2 text-sm font-medium">Report</h6>
-                                                            </div>
-                                                            <hr className="xl:mt-5 mt-3 border dark:border-dark-color3" />
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                
                                             </div>
 
                                         </div >

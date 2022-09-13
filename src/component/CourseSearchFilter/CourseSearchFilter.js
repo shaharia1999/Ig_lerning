@@ -12,9 +12,30 @@ import StarRatings from 'react-star-ratings';
 import ReactFlagsSelect from "react-flags-select";
 import axios from "axios";
 import ApiUrl from "../../Api/ApiUrl";
-
+import { useParams } from "react-router-dom";
 
 function CourseSearchFilter() {
+    var search_filter_value = window.location.hash
+    console.log('search_filter_value = ', search_filter_value)
+    var search_filter_value_split = search_filter_value.split('?')
+    console.log('search filter value split = ', search_filter_value_split)
+    var c = search_filter_value_split[1]
+    console.log('c = ', c)
+    var categoryIDValue;
+    var searchValue;
+    if(c === undefined){
+         console.log('if conditon true')
+         categoryIDValue = ''
+         searchValue = ''
+    }
+    else{
+        var d = c.split('&')
+        console.log('d = ', d);
+         categoryIDValue = d[0].split('=')[1]
+         searchValue = d[1].split('=')[1]
+    }
+    console.log('category Id value = ', categoryIDValue);
+    console.log('search Value = ', searchValue);
     const showSelectedLabel = ("Show Selected Label", true);
     const showSecondarySelectedLabel = (
         "Show Secondary Selected Label",
@@ -33,9 +54,11 @@ function CourseSearchFilter() {
 
     const [courseLevel, setCourseLevel] = useState([]);
     const [courseLanguage, setCourseLanguage] = useState([]);
+    const [coursePriceTier, setCoursePriceTier] = useState([]);
     const [courseCountry, setCourseCountry] = useState([]);
     const [courseSubCategory, setSubCategory] = useState([]);
     const [courseFilterData, setCourseFilterData] = useState([]);
+    const [CourseTotalFound, setCourseTotalFound] = useState(0);
     const countryCodeName = [];
 
     const countries = courseCountry;
@@ -104,6 +127,11 @@ function CourseSearchFilter() {
         newIntelloGeekChoice = e.target.checked;
         SearchFunction();
     }
+    const [PriceTier, setPriceTier] = useState(null);
+    var selectPriceTier = (e) => {
+        setPriceTier(e.target.value)
+        SearchFunction();
+    }
 
     console.log('courseWithCertificate = ', courseWithCertificate);
     console.log('IntelloGeekChoice = ', IntelloGeekChoice);
@@ -114,6 +142,11 @@ function CourseSearchFilter() {
 
 
     useEffect(() => {
+        axios.get(`${ApiUrl.BaseUrl}api/course/price-tier/`).then((response) => {
+            if (response.data.error === false) {
+                setCoursePriceTier(response.data.data);
+            }
+        });
         axios.get(`${ApiUrl.BaseUrl}api/v2/courselevel-info/`).then((response) => {
             if (response.data.error === false) {
                 setCourseLevel(response.data.data);
@@ -138,6 +171,7 @@ function CourseSearchFilter() {
                 setSubCategory(response.data.data);
             }
         });
+        SearchFunction()
     }, [])
 
 
@@ -151,14 +185,16 @@ function CourseSearchFilter() {
             country_id: contryCode,
             sub_category_id: NewSubCategoryID,
             course_with_certificate: newCourseWithCertificate,
-            intellogeek_choice: newIntelloGeekChoice
+            intellogeek_choice: newIntelloGeekChoice,
+            price_tier_id: PriceTier
         }
         console.log('function called data is ', data);
-        axios.post(`${ApiUrl.BaseUrl}api/search/course/`, data).then((response) => {
+        axios.post(`${ApiUrl.BaseUrl}api/search/course/?category_id=${categoryIDValue}&searchValue=${searchValue}`, data).then((response) => {
             if (response.data.error === false) {
                 console.log('success')
                 console.log('course filter data = ', response.data.data);
                 setCourseFilterData(response.data.data);
+                setCourseTotalFound(response.data.total)
                 setIsLoading(false);
             }
         })
@@ -186,6 +222,15 @@ function CourseSearchFilter() {
         return (
             courseSubCategory.map((course_sub_category) => (
                 <option className="text-maincolor bg-white hover:bg-maincolor" value={course_sub_category.sub_category_id}>{course_sub_category.sub_category_name}</option>
+            ))
+        )
+    })()
+
+    const CoursePriceTierHTML = (() => {
+        return (
+            coursePriceTier.map((course_price_tier) => (
+                <option className="text-maincolor bg-white hover:bg-maincolor" value={course_price_tier.price_tier_id}>
+                    {course_price_tier.price_tier_name} ({course_price_tier.price_tier_price})</option>
             ))
         )
     })()
@@ -795,7 +840,7 @@ function CourseSearchFilter() {
         <Fragment>
             <div>
                 <div className="container">
-                    <h6 className="text-center xl:mt-10 lg:mt-8 xl:text-2xl lg:text-xl text-maingray dark:text-white lg:font-medium lg:mb-4">Result of your Research >> “Learn Big Data”</h6>
+                    <h6 className="text-center xl:mt-10 lg:mt-8 xl:text-2xl lg:text-xl text-maingray dark:text-white lg:font-medium lg:mb-4">Result of your Research >> “{searchValue}”</h6>
                 </div >
 
                 <div className="container-fluid">
@@ -817,7 +862,7 @@ function CourseSearchFilter() {
                     <div className="container">
                         <div className="flex flex-wrap">
                             <div className="lg:w-1/2">
-                                <h6 className=" text-maingray dark:text-white text-xl xl:mt-2 lg:mt-3 font-medium xl:pl-10 lg:pl-6">768 Result for “Learn Big Data”</h6>
+                                <h6 className=" text-maingray dark:text-white text-xl xl:mt-2 lg:mt-3 font-medium xl:pl-10 lg:pl-6">{CourseTotalFound} Result for “{searchValue}”</h6>
                             </div>
                             <div className="lg:w-1/2 flex justify-end">
 
@@ -975,13 +1020,14 @@ function CourseSearchFilter() {
                                 </div>
 
                                 <div className="lg:w-full">
-                                    <select className="select lg:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 lg:mt-4 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
+                                    <select 
+                                        onChange={selectPriceTier}
+                                        value={PriceTier}
+                                     className="select lg:w-full border-none active:outline-none focus:outline-none rounded-sm xl:mt-7 lg:mt-4 bg-gray-100 focus:border-maincolor focus:border-2 active:border-none font-normal">
                                         <option selected className="hover:bg-maincolor text-sm">Course Prices</option>
-                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="5">1</option>
-                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="4">2</option>
-                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="3">3</option>
-                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="2">4</option>
-                                        <option className="text-maincolor bg-white hover:bg-maincolor" value="1">5</option>
+                                        {
+                                            CoursePriceTierHTML
+                                        }
                                     </select>
                                 </div>
 
