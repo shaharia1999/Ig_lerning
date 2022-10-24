@@ -840,7 +840,7 @@ function CourseSearchFilter() {
         <Fragment>
             <div>
                 <div className="container">
-                    <h6 className="text-center xl:mt-10 lg:mt-8 xl:text-2xl lg:text-xl text-maingray dark:text-white lg:font-medium lg:mb-4">Result of your Research >> “{searchValue}”</h6>
+                    <h6 className="text-center xl:mt-10 lg:mt-8 xl:text-2xl lg:text-xl text-maingray dark:text-white lg:font-medium lg:mb-4">Result of your Research &gt;&gt; “{searchValue}”</h6>
                 </div >
 
                 <div className="container-fluid">
