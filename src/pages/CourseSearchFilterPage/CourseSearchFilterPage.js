@@ -10,6 +10,7 @@ import FooterMobile from '../../component/Common/FooterMobile/FooterMobile';
 import MobileCourseSearchFilter from "../../component/CourseSearchFilter/MobileCourseSearchFilter";
 import FeatureCourse from "../../component/CategoryDetails/FeatureCourse/FeatureCourse";
 import PopularInstructor from "../../component/CourseSearchFilter/PopularInstructor";
+import PopularTopics from "../../component/CourseSearchFilter/PopularTopics";
 
 function CourseSearchFilterPage() {
     useEffect(() => {
@@ -25,6 +26,9 @@ function CourseSearchFilterPage() {
             </div>
             <div className="">
                 <FeatureCourse/>
+            </div>
+            <div>
+                <PopularTopics/>
             </div>
             <div>
                 <PopularInstructor/>
