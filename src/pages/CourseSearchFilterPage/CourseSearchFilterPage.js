@@ -11,6 +11,7 @@ import MobileCourseSearchFilter from "../../component/CourseSearchFilter/MobileC
 import FeatureCourse from "../../component/CategoryDetails/FeatureCourse/FeatureCourse";
 import PopularInstructor from "../../component/CourseSearchFilter/PopularInstructor";
 import PopularTopics from "../../component/CourseSearchFilter/PopularTopics";
+import ArtDesign from "../../component/CourseSearchFilter/ArtDesign";
 
 function CourseSearchFilterPage() {
     useEffect(() => {
@@ -23,6 +24,9 @@ function CourseSearchFilterPage() {
             </div>
             <div className="Mobile">
                 <NavMenuMobile />
+            </div>
+            <div>
+                <ArtDesign/>
             </div>
             <div className="">
                 <FeatureCourse/>
