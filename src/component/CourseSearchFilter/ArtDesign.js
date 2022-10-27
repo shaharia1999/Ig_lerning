@@ -15,15 +15,16 @@ import certificateIcon from '../../asset/images/icon/icon_certificate.png'
 
 const ArtDesign = () => {
     const [loved, setLoved] = useState(false)
+    const [popular, setPopular] =useState(true)
+    const [news, setNews] =useState(false)
+    const [trending, setTrending] =useState(false)
+    console.log("popular",popular,"News",news,"Trending",trending)
     // Caruosel settings
     const settings = {
         infinite: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
-        initialSlide: 0,
-        arrows: true,
-        swipeToSlide: true,
         responsive: [
             {
                 breakpoint: 1024,
@@ -60,15 +61,15 @@ const ArtDesign = () => {
                 <div className='flex items-center justify-between'>
                     <p className='text-lg font-semibold'>Choose your course and getting started</p>
                     <div>
-                        <button className='focus:bg-[#D76E2D] rounded-full px-8 py-2 focus:text-white'>Most popular</button>
-                        <button className='focus:bg-[#D76E2D] rounded-full px-8 py-2 focus:text-white'>News</button>
-                        <button className='focus:bg-[#D76E2D] rounded-full px-8 py-2 focus:text-white'>Trending</button>
+                        <button className={`${!popular ? 'bg-white text-black' : 'bg-[#D76E2D] text-white'} rounded-full px-8 py-2`} onClick={()=>{setPopular(true);setNews(false);setTrending(false)}}>Most popular</button>
+                        <button className='focus:bg-[#D76E2D] rounded-full px-8 py-2 focus:text-white' onClick={()=>{setNews(true);setPopular(false);setTrending(false)}}>News</button>
+                        <button className='focus:bg-[#D76E2D] rounded-full px-8 py-2 focus:text-white' onClick={()=>{setTrending(true); setNews(false);setPopular(false)}}>Trending</button>
                     </div>
                 </div>
                 <div>
                     <div className='w-full'>
                         <Slider {...settings}>
-<div key="" className="2xl:my-8 xl:my-8 lg:my-3 2xl:px-3 xl: px-2 xl:w-1/4">
+                            <div key="" className="2xl:my-8 xl:my-8 lg:my-3 2xl:px-3 xl: px-2 xl:w-1/4">
                                 <div className="wrapper antialiased text-gray-900">
                                     <div className="relative">
                                         <img className="w-full xl:h-72 h-56 object-cover object-center rounded-lg shadow-md" src={demoImg} alt='' />
@@ -86,7 +87,7 @@ const ArtDesign = () => {
                                                 <a href="!#">
                                                     <div className="text-lg absolute top-0 text-white mt-5">
                                                         <h6 className="2xl:font-medium xl:font-medium lg:font-normal 2xl:text-xl xl:text-lg lg:text-base text-sm -mt-2 text-white 2xl:ml-3 xl:ml-3 lg:ml-2 ml-3">ABC Learning Center</h6>
-                                                        <h6 className="text-sm">45 mins</h6>
+                                                        <h6 className="text-sm ml-3">45 mins</h6>
                                                     </div>
                                                 </a>
                                             </div>
@@ -120,12 +121,12 @@ const ArtDesign = () => {
                                             <div className="flex flex-wrap">
                                                 <div className="w-full">
                                                     <div className="flex xl:justify-start items-center">
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <span className='text-xs ml-2'>(4.5)</span>
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <span className='text-xs ml-2'>(4.5)</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -149,7 +150,7 @@ const ArtDesign = () => {
                                                 </div>
                                                 <div className="xl:w-8/12 w-9/12 relative">
                                                     <div className="flex xl:justify-end -mt-3 absolute right-0">
-                                                        <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white 2xl:pl-2 2xl:pr-2 2xl:pt-1 2xl:pb-1 2xl:mr-1 xl:pl-1.5 xl:pr-1.5 xl:pt-0.5 xl:pb-0.5 xl:mr-1 pl-1 pr-1 pt-0.5 pb-0.5 mr-0.5 rounded-md" onClick={()=> setLoved(loved ? false : true)}>
+                                                        <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white 2xl:pl-2 2xl:pr-2 2xl:pt-1 2xl:pb-1 2xl:mr-1 xl:pl-1.5 xl:pr-1.5 xl:pt-0.5 xl:pb-0.5 xl:mr-1 pl-1 pr-1 pt-0.5 pb-0.5 mr-0.5 rounded-md" onClick={() => setLoved(loved ? false : true)}>
                                                             <img className="2xl:px-1 2xl:h-3 2xl:w-5 xl:px-1 xl:h-3 xl:w-5 h-3 w-3" src={loved ? loveIcon : Heart} alt="" /></button>
                                                         <button
                                                             className="2xl:text-sm xl:text-sm lg:text-sm text-xs flex xl:font-light font-extralight leading-tight bg-apply-now text-white 2xl:pl-3 2xl:pr-3 2xl:pt-2 2xl:pb-2 xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 pl-1 pr-1 pt-0.5 pb-0.5 2xl:rounded-lg xl:rounded-md lg:rounded rounded-sm"> Enroll Now
@@ -162,7 +163,7 @@ const ArtDesign = () => {
                                 </div>
                             </div>
                             {/* ========================================== */}
-<div key="" className="2xl:my-8 xl:my-8 lg:my-3 2xl:px-3 xl: px-2 xl:w-1/4">
+                            <div key="" className="2xl:my-8 xl:my-8 lg:my-3 2xl:px-3 xl: px-2 xl:w-1/4">
                                 <div className="wrapper antialiased text-gray-900">
                                     <div className="relative">
                                         <img className="w-full xl:h-72 h-56 object-cover object-center rounded-lg shadow-md" src={demoImg} alt='' />
@@ -180,7 +181,7 @@ const ArtDesign = () => {
                                                 <a href="!#">
                                                     <div className="text-lg absolute top-0 text-white mt-5">
                                                         <h6 className="2xl:font-medium xl:font-medium lg:font-normal 2xl:text-xl xl:text-lg lg:text-base text-sm -mt-2 text-white 2xl:ml-3 xl:ml-3 lg:ml-2 ml-3">ABC Learning Center</h6>
-                                                        <h6 className="text-sm">45 mins</h6>
+                                                        <h6 className="text-sm ml-3">45 mins</h6>
                                                     </div>
                                                 </a>
                                             </div>
@@ -214,12 +215,12 @@ const ArtDesign = () => {
                                             <div className="flex flex-wrap">
                                                 <div className="w-full">
                                                     <div className="flex xl:justify-start items-center">
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <span className='text-xs ml-2'>(4.5)</span>
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <span className='text-xs ml-2'>(4.5)</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -243,7 +244,7 @@ const ArtDesign = () => {
                                                 </div>
                                                 <div className="xl:w-8/12 w-9/12 relative">
                                                     <div className="flex xl:justify-end -mt-3 absolute right-0">
-                                                        <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white 2xl:pl-2 2xl:pr-2 2xl:pt-1 2xl:pb-1 2xl:mr-1 xl:pl-1.5 xl:pr-1.5 xl:pt-0.5 xl:pb-0.5 xl:mr-1 pl-1 pr-1 pt-0.5 pb-0.5 mr-0.5 rounded-md" onClick={()=> setLoved(loved ? false : true)}>
+                                                        <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white 2xl:pl-2 2xl:pr-2 2xl:pt-1 2xl:pb-1 2xl:mr-1 xl:pl-1.5 xl:pr-1.5 xl:pt-0.5 xl:pb-0.5 xl:mr-1 pl-1 pr-1 pt-0.5 pb-0.5 mr-0.5 rounded-md" onClick={() => setLoved(loved ? false : true)}>
                                                             <img className="2xl:px-1 2xl:h-3 2xl:w-5 xl:px-1 xl:h-3 xl:w-5 h-3 w-3" src={loved ? loveIcon : Heart} alt="" /></button>
                                                         <button
                                                             className="2xl:text-sm xl:text-sm lg:text-sm text-xs flex xl:font-light font-extralight leading-tight bg-apply-now text-white 2xl:pl-3 2xl:pr-3 2xl:pt-2 2xl:pb-2 xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 pl-1 pr-1 pt-0.5 pb-0.5 2xl:rounded-lg xl:rounded-md lg:rounded rounded-sm"> Enroll Now
@@ -256,7 +257,7 @@ const ArtDesign = () => {
                                 </div>
                             </div>
                             {/* ======================================================== */}
-<div key="" className="2xl:my-8 xl:my-8 lg:my-3 2xl:px-3 xl: px-2 xl:w-1/4">
+                            <div key="" className="2xl:my-8 xl:my-8 lg:my-3 2xl:px-3 xl: px-2 xl:w-1/4">
                                 <div className="wrapper antialiased text-gray-900">
                                     <div className="relative">
                                         <img className="w-full xl:h-72 h-56 object-cover object-center rounded-lg shadow-md" src={demoImg} alt='' />
@@ -274,7 +275,7 @@ const ArtDesign = () => {
                                                 <a href="!#">
                                                     <div className="text-lg absolute top-0 text-white mt-5">
                                                         <h6 className="2xl:font-medium xl:font-medium lg:font-normal 2xl:text-xl xl:text-lg lg:text-base text-sm -mt-2 text-white 2xl:ml-3 xl:ml-3 lg:ml-2 ml-3">ABC Learning Center</h6>
-                                                        <h6 className="text-sm">45 mins</h6>
+                                                        <h6 className="text-sm ml-3">45 mins</h6>
                                                     </div>
                                                 </a>
                                             </div>
@@ -308,12 +309,12 @@ const ArtDesign = () => {
                                             <div className="flex flex-wrap">
                                                 <div className="w-full">
                                                     <div className="flex xl:justify-start items-center">
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <span className='text-xs ml-2'>(4.5)</span>
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <span className='text-xs ml-2'>(4.5)</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -337,7 +338,7 @@ const ArtDesign = () => {
                                                 </div>
                                                 <div className="xl:w-8/12 w-9/12 relative">
                                                     <div className="flex xl:justify-end -mt-3 absolute right-0">
-                                                        <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white 2xl:pl-2 2xl:pr-2 2xl:pt-1 2xl:pb-1 2xl:mr-1 xl:pl-1.5 xl:pr-1.5 xl:pt-0.5 xl:pb-0.5 xl:mr-1 pl-1 pr-1 pt-0.5 pb-0.5 mr-0.5 rounded-md" onClick={()=> setLoved(loved ? false : true)}>
+                                                        <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white 2xl:pl-2 2xl:pr-2 2xl:pt-1 2xl:pb-1 2xl:mr-1 xl:pl-1.5 xl:pr-1.5 xl:pt-0.5 xl:pb-0.5 xl:mr-1 pl-1 pr-1 pt-0.5 pb-0.5 mr-0.5 rounded-md" onClick={() => setLoved(loved ? false : true)}>
                                                             <img className="2xl:px-1 2xl:h-3 2xl:w-5 xl:px-1 xl:h-3 xl:w-5 h-3 w-3" src={loved ? loveIcon : Heart} alt="" /></button>
                                                         <button
                                                             className="2xl:text-sm xl:text-sm lg:text-sm text-xs flex xl:font-light font-extralight leading-tight bg-apply-now text-white 2xl:pl-3 2xl:pr-3 2xl:pt-2 2xl:pb-2 xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 pl-1 pr-1 pt-0.5 pb-0.5 2xl:rounded-lg xl:rounded-md lg:rounded rounded-sm"> Enroll Now
@@ -350,7 +351,7 @@ const ArtDesign = () => {
                                 </div>
                             </div>
                             {/* ======================================================== */}
-<div key="" className="2xl:my-8 xl:my-8 lg:my-3 2xl:px-3 xl: px-2 xl:w-1/4">
+                            <div key="" className="2xl:my-8 xl:my-8 lg:my-3 2xl:px-3 xl: px-2 xl:w-1/4">
                                 <div className="wrapper antialiased text-gray-900">
                                     <div className="relative">
                                         <img className="w-full xl:h-72 h-56 object-cover object-center rounded-lg shadow-md" src={demoImg} alt='' />
@@ -368,7 +369,7 @@ const ArtDesign = () => {
                                                 <a href="!#">
                                                     <div className="text-lg absolute top-0 text-white mt-5">
                                                         <h6 className="2xl:font-medium xl:font-medium lg:font-normal 2xl:text-xl xl:text-lg lg:text-base text-sm -mt-2 text-white 2xl:ml-3 xl:ml-3 lg:ml-2 ml-3">ABC Learning Center</h6>
-                                                        <h6 className="text-sm">45 mins</h6>
+                                                        <h6 className="text-sm ml-3">45 mins</h6>
                                                     </div>
                                                 </a>
                                             </div>
@@ -402,12 +403,12 @@ const ArtDesign = () => {
                                             <div className="flex flex-wrap">
                                                 <div className="w-full">
                                                     <div className="flex xl:justify-start items-center">
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <span className='text-xs ml-2'>(4.5)</span>
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <span className='text-xs ml-2'>(4.5)</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -431,7 +432,7 @@ const ArtDesign = () => {
                                                 </div>
                                                 <div className="xl:w-8/12 w-9/12 relative">
                                                     <div className="flex xl:justify-end -mt-3 absolute right-0">
-                                                        <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white 2xl:pl-2 2xl:pr-2 2xl:pt-1 2xl:pb-1 2xl:mr-1 xl:pl-1.5 xl:pr-1.5 xl:pt-0.5 xl:pb-0.5 xl:mr-1 pl-1 pr-1 pt-0.5 pb-0.5 mr-0.5 rounded-md" onClick={()=> setLoved(loved ? false : true)}>
+                                                        <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white 2xl:pl-2 2xl:pr-2 2xl:pt-1 2xl:pb-1 2xl:mr-1 xl:pl-1.5 xl:pr-1.5 xl:pt-0.5 xl:pb-0.5 xl:mr-1 pl-1 pr-1 pt-0.5 pb-0.5 mr-0.5 rounded-md" onClick={() => setLoved(loved ? false : true)}>
                                                             <img className="2xl:px-1 2xl:h-3 2xl:w-5 xl:px-1 xl:h-3 xl:w-5 h-3 w-3" src={loved ? loveIcon : Heart} alt="" /></button>
                                                         <button
                                                             className="2xl:text-sm xl:text-sm lg:text-sm text-xs flex xl:font-light font-extralight leading-tight bg-apply-now text-white 2xl:pl-3 2xl:pr-3 2xl:pt-2 2xl:pb-2 xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 pl-1 pr-1 pt-0.5 pb-0.5 2xl:rounded-lg xl:rounded-md lg:rounded rounded-sm"> Enroll Now
@@ -462,7 +463,7 @@ const ArtDesign = () => {
                                                 <a href="!#">
                                                     <div className="text-lg absolute top-0 text-white mt-5">
                                                         <h6 className="2xl:font-medium xl:font-medium lg:font-normal 2xl:text-xl xl:text-lg lg:text-base text-sm -mt-2 text-white 2xl:ml-3 xl:ml-3 lg:ml-2 ml-3">ABC Learning Center</h6>
-                                                        <h6 className="text-sm">45 mins</h6>
+                                                        <h6 className="text-sm ml-3">45 mins</h6>
                                                     </div>
                                                 </a>
                                             </div>
@@ -496,12 +497,12 @@ const ArtDesign = () => {
                                             <div className="flex flex-wrap">
                                                 <div className="w-full">
                                                     <div className="flex xl:justify-start items-center">
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <FaStar className='text-yellow-300'/>
-                                                    <span className='text-xs ml-2'>(4.5)</span>
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <FaStar className='text-yellow-300' />
+                                                        <span className='text-xs ml-2'>(4.5)</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -525,7 +526,7 @@ const ArtDesign = () => {
                                                 </div>
                                                 <div className="xl:w-8/12 w-9/12 relative">
                                                     <div className="flex xl:justify-end -mt-3 absolute right-0">
-                                                        <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white 2xl:pl-2 2xl:pr-2 2xl:pt-1 2xl:pb-1 2xl:mr-1 xl:pl-1.5 xl:pr-1.5 xl:pt-0.5 xl:pb-0.5 xl:mr-1 pl-1 pr-1 pt-0.5 pb-0.5 mr-0.5 rounded-md" onClick={()=> setLoved(loved ? false : true)}>
+                                                        <button className="text-sm px-2 font-extralight leading-tight bg-BgLoveIcon text-white 2xl:pl-2 2xl:pr-2 2xl:pt-1 2xl:pb-1 2xl:mr-1 xl:pl-1.5 xl:pr-1.5 xl:pt-0.5 xl:pb-0.5 xl:mr-1 pl-1 pr-1 pt-0.5 pb-0.5 mr-0.5 rounded-md" onClick={() => setLoved(loved ? false : true)}>
                                                             <img className="2xl:px-1 2xl:h-3 2xl:w-5 xl:px-1 xl:h-3 xl:w-5 h-3 w-3" src={loved ? loveIcon : Heart} alt="" /></button>
                                                         <button
                                                             className="2xl:text-sm xl:text-sm lg:text-sm text-xs flex xl:font-light font-extralight leading-tight bg-apply-now text-white 2xl:pl-3 2xl:pr-3 2xl:pt-2 2xl:pb-2 xl:pl-2 xl:pr-2 xl:pt-1 xl:pb-1 pl-1 pr-1 pt-0.5 pb-0.5 2xl:rounded-lg xl:rounded-md lg:rounded rounded-sm"> Enroll Now
