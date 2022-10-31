@@ -5,8 +5,8 @@ import image from '../../asset/images/course-teacher/male-teacher.jpg'
 const PopularInstructor = () => {
     return (
         <div className='mx-10'>
-            <h4 className='text-2xl font-semibold ml-2 lg:mb-7'>Popular Instructors</h4>
-            <div className='grid grid-cols-5 gap-5'>
+            <h4 className='text-2xl font-semibold ml-2 mb-5 lg:mb-7'>Popular Instructors</h4>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5'>
                 <div className='text-center bg-white rounded-lg py-6 px-3 shadow-lg'>
                     <div className='relative flex flex-col items-center'>
                         <div class="avatar relative">
