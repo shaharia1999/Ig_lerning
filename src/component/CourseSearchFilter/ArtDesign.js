@@ -11,6 +11,7 @@ import loveIcon from '../../asset/images/icon/love-icon.png'
 import levelIcon from '../../asset/images/icon/icon_level.png'
 import shareIcon from '../../asset/images/icon/icon_share.png'
 import certificateIcon from '../../asset/images/icon/icon_certificate.png'
+import { BsStarHalf } from 'react-icons/bs';
 // import CourseCaruosel from '../../asset/css/CourseCaruosel.css'
 
 const ArtDesign = () => {
@@ -56,13 +57,13 @@ const ArtDesign = () => {
 
     return (
         <div className='container'>
-            <h4 className='text-xl font-semibold'>Art & Design</h4>
+            <h4 className='text-4xl font-semibold ml-2 my-10'>Art & Design</h4>
             <div>
                 <div className='flex items-center justify-between'>
-                    <p className='text-lg font-semibold'>Choose your course and getting started</p>
+                    <p className='text-lg font-semibold ml-2'>Choose your course and getting started</p>
                     <div>
                         <button className={`${!popular ? 'bg-white text-black' : 'bg-[#D76E2D] text-white'} rounded-full px-8 py-2`} onClick={()=>{setPopular(true);setNews(false);setTrending(false)}}>Most popular</button>
-                        <button className='focus:bg-[#D76E2D] rounded-full px-8 py-2 focus:text-white' onClick={()=>{setNews(true);setPopular(false);setTrending(false)}}>News</button>
+                        <button className='focus:bg-[#D76E2D] rounded-full px-8 py-2 focus:text-white' onClick={()=>{setNews(true);setPopular(false);setTrending(false)}}>New</button>
                         <button className='focus:bg-[#D76E2D] rounded-full px-8 py-2 focus:text-white' onClick={()=>{setTrending(true); setNews(false);setPopular(false)}}>Trending</button>
                     </div>
                 </div>
@@ -125,7 +126,7 @@ const ArtDesign = () => {
                                                         <FaStar className='text-yellow-300' />
                                                         <FaStar className='text-yellow-300' />
                                                         <FaStar className='text-yellow-300' />
-                                                        <FaStar className='text-yellow-300' />
+                                                        <BsStarHalf className='text-yellow-300' />
                                                         <span className='text-xs ml-2'>(4.5)</span>
                                                     </div>
                                                 </div>
@@ -219,7 +220,7 @@ const ArtDesign = () => {
                                                         <FaStar className='text-yellow-300' />
                                                         <FaStar className='text-yellow-300' />
                                                         <FaStar className='text-yellow-300' />
-                                                        <FaStar className='text-yellow-300' />
+                                                        <BsStarHalf className='text-yellow-300' />
                                                         <span className='text-xs ml-2'>(4.5)</span>
                                                     </div>
                                                 </div>
@@ -313,7 +314,7 @@ const ArtDesign = () => {
                                                         <FaStar className='text-yellow-300' />
                                                         <FaStar className='text-yellow-300' />
                                                         <FaStar className='text-yellow-300' />
-                                                        <FaStar className='text-yellow-300' />
+                                                        <BsStarHalf className='text-yellow-300' />
                                                         <span className='text-xs ml-2'>(4.5)</span>
                                                     </div>
                                                 </div>
@@ -407,7 +408,7 @@ const ArtDesign = () => {
                                                         <FaStar className='text-yellow-300' />
                                                         <FaStar className='text-yellow-300' />
                                                         <FaStar className='text-yellow-300' />
-                                                        <FaStar className='text-yellow-300' />
+                                                        <BsStarHalf className='text-yellow-300' />
                                                         <span className='text-xs ml-2'>(4.5)</span>
                                                     </div>
                                                 </div>
@@ -501,7 +502,7 @@ const ArtDesign = () => {
                                                         <FaStar className='text-yellow-300' />
                                                         <FaStar className='text-yellow-300' />
                                                         <FaStar className='text-yellow-300' />
-                                                        <FaStar className='text-yellow-300' />
+                                                        <BsStarHalf className='text-yellow-300' />
                                                         <span className='text-xs ml-2'>(4.5)</span>
                                                     </div>
                                                 </div>

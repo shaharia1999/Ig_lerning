@@ -5,7 +5,7 @@ function FeatureCourse() {
     return (
         <Fragment>
                 <div className="container">
-                    <h6 className="feature-title lg:mb-7">
+                    <h6 className="text-2xl font-semibold ml-2 lg:mb-7">
                         Featured Courses
                     </h6>
                     <div className="flex flex-wrap">

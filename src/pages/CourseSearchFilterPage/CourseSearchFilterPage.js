@@ -25,16 +25,16 @@ function CourseSearchFilterPage() {
             <div className="Mobile">
                 <NavMenuMobile />
             </div>
-            <div>
+            <div className="mb-10">
                 <ArtDesign/>
             </div>
-            <div className="">
+            <div className="mb-20">
                 <FeatureCourse/>
             </div>
-            <div>
+            <div className="mb-20">
                 <PopularTopics/>
             </div>
-            <div>
+            <div className="mb-20">
                 <PopularInstructor/>
             </div>
             <div className="DesktopCourseSearchFilter">
