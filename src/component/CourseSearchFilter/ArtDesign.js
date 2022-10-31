@@ -57,11 +57,11 @@ const ArtDesign = () => {
 
     return (
         <div className='container'>
-            <h4 className='text-4xl font-semibold ml-2 my-10'>Art & Design</h4>
+            <h4 className='text-4xl text-center md:text-left font-semibold ml-2 my-10'>Art & Design</h4>
             <div>
-                <div className='flex items-center justify-between'>
-                    <p className='text-lg font-semibold ml-2'>Choose your course and getting started</p>
-                    <div>
+                <div className='flex flex-col md:flex-row items-start md:items-center justify-between'>
+                    <p className='text-lg font-semibold ml-2 mb-5 md:mb-0 text-center md:text-left w-full md:w-auto'>Choose your course and getting started</p>
+                    <div className='mb-5 md:mb-0'>
                         <button className={`${!popular ? 'bg-white text-black' : 'bg-[#D76E2D] text-white'} rounded-full px-8 py-2`} onClick={()=>{setPopular(true);setNews(false);setTrending(false)}}>Most popular</button>
                         <button className='focus:bg-[#D76E2D] rounded-full px-8 py-2 focus:text-white' onClick={()=>{setNews(true);setPopular(false);setTrending(false)}}>New</button>
                         <button className='focus:bg-[#D76E2D] rounded-full px-8 py-2 focus:text-white' onClick={()=>{setTrending(true); setNews(false);setPopular(false)}}>Trending</button>
