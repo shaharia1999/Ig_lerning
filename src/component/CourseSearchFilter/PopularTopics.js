@@ -11,8 +11,8 @@ import xd from '../../asset/images/popular-topics/adobe-xd.png'
 const PopularTopics = () => {
     return (
         <div className='relative mt-20 mx-10'>
-            <h4 className='text-2xl font-semibold ml-2 lg:mb-7'>Popular Topics</h4>
-            <div className='grid grid-cols-4 gap-5 w-full'>
+            <h4 className='text-2xl font-semibold ml-2 mb-5 lg:mb-7'>Popular Topics</h4>
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full'>
                 <div className='flex items-center justify-center border rounded-full py-2'>
                     <img height="28px" width="28px" src={blender} alt="" />
                         <span>Blender 3D</span>
