@@ -1,6 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
 import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";
+import fe1 from '../../../asset/images/shaharia/pexels-photo-4195342.jpeg'
+import fe2 from '../../../asset/images/shaharia/free-photo-of-a-girl-with-a-backpack-standing-outside.jpeg'
 import {
     Accordion,
     AccordionHeader,
@@ -55,26 +57,26 @@ function PriceAccordonSection() {
                                 <h2 className="text-about-analytics-subTitle text-center xl:font-medium xl:text-base xl:mt-4 xl:pl-56 xl:pr-56 xl:mb-16 dark:text-gray-400">Our support team ready to help you, please contact with them</h2>
 
                                 <div className="justify-center items-center">
-                                    <div className="bg-gray-50 icon-select shadow mt-3 rounded-lg animate-pulse">
+                                    <div className="bg-gray-50 icon-select shadow mt-3 rounded-lg ">
                                         <Accordion className="rounded m-0">
                                             <AccordionHeader className="flex pr-4">
-                                                <div className="h-10 w-10 ml-4 bg-gray-100 rounded-md"></div>
+                                                <div className=" w-10 ml-4 bg-gray-100 rounded-md"><img src={fe1} className="rounded-full"></img></div>
                                             </AccordionHeader>
                                         </Accordion>
                                     </div>
 
-                                    <div className="bg-gray-50 icon-select shadow mt-3 rounded-lg animate-pulse">
+                                    <div className="bg-gray-50 icon-select shadow mt-3 rounded-lg ">
                                         <Accordion className="rounded m-0">
                                             <AccordionHeader className="flex pr-4">
-                                                <div className="h-10 w-10 ml-4 bg-gray-100 rounded-md"></div>
+                                                <div className=" w-10 ml-4 bg-gray-100 rounded-md"><img src={fe2} className="rounded-full"></img></div>
                                             </AccordionHeader>
                                         </Accordion>
                                     </div>
 
-                                    <div className="bg-gray-50 icon-select shadow mt-3 rounded-lg animate-pulse">
+                                    <div className="bg-gray-50 icon-select shadow mt-3 rounded-lg ">
                                         <Accordion className="rounded m-0">
                                             <AccordionHeader className="flex pr-4">
-                                                <div className="h-10 w-10 ml-4 bg-gray-100 rounded-md"></div>
+                                                <div className=" w-10 ml-4 bg-gray-100 rounded-md"><img src={fe1} className="rounded-full"></img></div>
                                             </AccordionHeader>
                                         </Accordion>
                                     </div>

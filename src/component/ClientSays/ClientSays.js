@@ -1,10 +1,13 @@
 import React, { useState, useEffect, Fragment, useRef } from 'react';
-import { FaStar } from "react-icons/fa";
+import { FaStar ,FaStarHalfAlt} from "react-icons/fa";
+import { AiFillStar} from 'react-icons/ai';
 import ApiUrl from '../../Api/ApiUrl';
 import axios from "axios";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import fe1 from "../../asset/images/shaharia/free-photo-of-a-girl-with-a-backpack-standing-outside.jpeg"
+import fe2 from "../../asset/images/shaharia/pexels-photo-4195342.jpeg"
 
 function ClientSays() {
     const [says_client, setClientSays] = React.useState([]);
@@ -31,39 +34,69 @@ function ClientSays() {
         if (isLoading === true) {
             return (
                 <div className="flex w-full flex-wrap xl:mt-6 p-3">
-                    <div className="xl:basis-1/3 px-4 animate-pulse">
+                    <div className="xl:basis-1/3 px-4 ">
                         <div className="bg-white dark:bg-dark-scleton1 rounded-2xl shadow-client border-none xl:p-12 h-full w-auto">
-                            <div className="rounded-full bg-gray-100 dark:bg-dark-scleton2 h-36 w-36 mt-8 mb-12"></div>
-                            <div className="mt-2 xl:w-12/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
-                            <div className="mt-2 xl:w-12/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
-                            <div className="mt-2 xl:w-8/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
-                            <div className="mt-2 xl:w-3/12 bg-gray-100 h-4 dark:bg-dark-scleton2 rounded"></div>
-                            <div className="mt-2 xl:w-6/12 bg-gray-100 h-5 dark:bg-dark-scleton2 rounded"></div>
-                            <div className="mt-2 xl:w-3/12 bg-gray-100 h-2 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="rounded-full bg-gray-100 dark:bg-dark-scleton2 h-36 w-36 mt-8 mb-12  overflow-hidden"> <img src={fe1} className='rounded-full'></img></div>
+                            <div className=" rounded">
+                            Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor incidi
+                                dunt ut labore et dol magna aliqua.
+                            </div>
+                            <div className="mt-6 grid grid-cols-5 rounded w-32">
+                                <AiFillStar className='text-[#FFC117]'></AiFillStar>
+                                <AiFillStar className='text-[#FFC117]'></AiFillStar>
+                                <AiFillStar className='text-[#FFC117]'></AiFillStar>
+                                <AiFillStar className='text-[#FFC117]'></AiFillStar>
+                                <FaStarHalfAlt className='text-[#FFC117]'></FaStarHalfAlt>
+                            </div>
+                            <div className="mt-2   rounded font-bold text-xl">Jessica Strike</div>
+                            <div className="mt-2   rounded">Student</div>
+                            {/* <div className="mt-2 xl:w-6/12 bg-gray-100 h-5 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="mt-2 xl:w-3/12 bg-gray-100 h-2 dark:bg-dark-scleton2 rounded"></div> */}
                         </div>
                     </div>
 
-                    <div className="xl:basis-1/3 px-4 animate-pulse">
+                  <div className="xl:basis-1/3 px-4 ">
                         <div className="bg-white dark:bg-dark-scleton1 rounded-2xl shadow-client border-none xl:p-12 h-full w-auto">
-                            <div className="rounded-full bg-gray-100 dark:bg-dark-scleton2 h-36 w-36 mt-8 mb-12"></div>
-                            <div className="mt-2 xl:w-12/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
-                            <div className="mt-2 xl:w-12/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
-                            <div className="mt-2 xl:w-8/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
-                            <div className="mt-2 xl:w-3/12 bg-gray-100 h-4 dark:bg-dark-scleton2 rounded"></div>
-                            <div className="mt-2 xl:w-6/12 bg-gray-100 h-5 dark:bg-dark-scleton2 rounded"></div>
-                            <div className="mt-2 xl:w-3/12 bg-gray-100 h-2 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="rounded-full bg-gray-100 dark:bg-dark-scleton2 h-36 w-36 mt-8 mb-12  overflow-hidden"> <img src={fe2} className='rounded-full'></img></div>
+                            <div className=" rounded">
+                            Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor incidi
+                                dunt ut labore et dol magna aliqua.
+                            </div>
+                            <div className="mt-6 grid grid-cols-5 rounded w-32">
+                                <AiFillStar className='text-[#FFC117]'></AiFillStar>
+                                <AiFillStar className='text-[#FFC117]'></AiFillStar>
+                                <AiFillStar className='text-[#FFC117]'></AiFillStar>
+                                <AiFillStar className='text-[#FFC117]'></AiFillStar>
+                                <FaStarHalfAlt className='text-[#FFC117]'></FaStarHalfAlt>
+                            </div>
+                            <div className="mt-2   rounded font-bold text-xl">Jessica Strike</div>
+                            <div className="mt-2   rounded">Student</div>
+                            {/* <div className="mt-2 xl:w-6/12 bg-gray-100 h-5 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="mt-2 xl:w-3/12 bg-gray-100 h-2 dark:bg-dark-scleton2 rounded"></div> */}
                         </div>
                     </div>
 
-                    <div className="xl:basis-1/3 px-4 animate-pulse">
+                   <div className="xl:basis-1/3 px-4 ">
                         <div className="bg-white dark:bg-dark-scleton1 rounded-2xl shadow-client border-none xl:p-12 h-full w-auto">
-                            <div className="rounded-full bg-gray-100 dark:bg-dark-scleton2 h-36 w-36 mt-8 mb-12"></div>
-                            <div className="mt-2 xl:w-12/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
-                            <div className="mt-2 xl:w-12/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
-                            <div className="mt-2 xl:w-8/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
-                            <div className="mt-2 xl:w-3/12 bg-gray-100 h-4 dark:bg-dark-scleton2 rounded"></div>
-                            <div className="mt-2 xl:w-6/12 bg-gray-100 h-5 dark:bg-dark-scleton2 rounded"></div>
-                            <div clclassNameass="mt-2 xl:w-3/12 bg-gray-100 dark:bg-dark-scleton2 h-2 rounded"></div>
+                            <div className="rounded-full bg-gray-100 dark:bg-dark-scleton2 h-36 w-36 mt-8 mb-12  overflow-hidden"> <img src={fe1} className='rounded-full'></img></div>
+                            <div className=" rounded">
+                            Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor incidi
+                                dunt ut labore et dol magna aliqua.
+                            </div>
+                            <div className="mt-6 grid grid-cols-5 rounded w-32">
+                                <AiFillStar className='text-[#FFC117]'></AiFillStar>
+                                <AiFillStar className='text-[#FFC117]'></AiFillStar>
+                                <AiFillStar className='text-[#FFC117]'></AiFillStar>
+                                <AiFillStar className='text-[#FFC117]'></AiFillStar>
+                                <FaStarHalfAlt className='text-[#FFC117]'></FaStarHalfAlt>
+                            </div>
+                            <div className="mt-2   rounded font-bold text-xl">Jessica Strike</div>
+                            <div className="mt-2   rounded">Student</div>
+                            {/* <div className="mt-2 xl:w-6/12 bg-gray-100 h-5 dark:bg-dark-scleton2 rounded"></div>
+                            <div className="mt-2 xl:w-3/12 bg-gray-100 h-2 dark:bg-dark-scleton2 rounded"></div> */}
                         </div>
                     </div>
                 </div>

@@ -30,7 +30,7 @@ function HomeAdvertisedment() {
                             <TopCategories />
                         </div>
                         <div className="xl:w-1/3 ">
-                            <div className="w-96 xl:ml-20 xl:mt-20 rounded-md   home-ad-banner"><img src={noPath}></img></div>
+                            <div className="w-96 xl:ml-20 xl:mt-20 rounded-md  dark:bg-dark-scleton2 home-ad-banner"><img src={noPath}></img></div>
                         </div>
                     </div>
                 </div>
