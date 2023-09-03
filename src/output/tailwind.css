@@ -8930,10 +8930,12 @@ body[dir="rtl"] .checkbox:checked,
   }
 }
 
-.animate-pulse {
+/* .animate-pulse {
   -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
           animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
+} */
+
+
 
 .cursor-pointer {
   cursor: pointer;

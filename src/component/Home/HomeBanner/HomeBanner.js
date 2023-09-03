@@ -2,9 +2,9 @@ import React, { Fragment, useState, useRef, useEffect } from 'react';
 import Certificate from "../../../asset/images/icon/certificate.svg";
 import Globe from "../../../asset/images/icon/globe.svg";
 import Teacher from "../../../asset/images/icon/teacher.svg";
-import IntelloGeekSlider1 from "../../../asset/images/banner/IntelloGeek-Slider1.svg";
-import IntelloGeekSlider2 from "../../../asset/images/banner/IntelloGeek-Slider2.svg";
-import IntelloGeekSlider3 from "../../../asset/images/banner/IntelloGeek-Slider3.svg";
+import IntelloGeekSlider1 from "../../../asset/images/banner/Bg.png";
+import IntelloGeekSlider2 from "../../../asset/images/banner/1.png";
+import IntelloGeekSlider3 from "../../../asset/images/banner/Bg.png";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -70,21 +70,23 @@ function HomeBanner() {
         ),
     }
 
-    if (isLoading === true) {
-        return (
-            <Fragment>
-                <div className="container-fluid xl:w-full xl:h-screen bg-gray-100 animate-pulse">
-                </div>
-            </Fragment>
-        );
-    }
-    else if (isLoading === false) {
+    // if (isLoading === true) {
+    //     return (
+    //         <Fragment>
+    //             <div className="container-fluid xl:w-full xl:h-screen bg-gray-100 animate-pulse">
+    //             </div>
+    //         </Fragment>
+    //     );
+    // }
+    // else if (isLoading === false) {
         return (
             <Fragment>
 
                 <div className="container-fluid 2xl:w-full overflow-hidden">
-                    <Slider {...settings}
-                        ref={(slider9) => setNav9(slider9)}
+                    {/* <Slider {...settings}
+                        ref={(slider9) => setNav9(slider9)} */}
+                    <Slider 
+                        // ref={(slider9) => }
                         slidesToShow={1}
                         focusOnSelect={true}
                         dots={true}
@@ -103,16 +105,20 @@ function HomeBanner() {
                             <img src={IntelloGeekSlider1}
                                 className="2xl:w-full xl:w-full lg:w-full flex overflow-hidden"
                                 alt="Wild Landscape" />
+                               
+                                
                         </div>
                         <div className="2xl:w-full xl:w-full lg:w-full home-banner">
                             <img src={IntelloGeekSlider2}
                                 className="2xl:w-full xl:w-full lg:w-full flex overflow-hidden"
                                 alt="Wild Landscape" />
+                            
                         </div>
                         <div className="2xl:w-full xl:w-full lg:w-full home-banner">
                             <img src={IntelloGeekSlider3}
                                 className="2xl:w-full xl:w-full lg:w-full flex overflow-hidden"
                                 alt="Wild Landscape" />
+                                
                         </div>
                     </Slider>
                 </div>
@@ -149,7 +155,7 @@ function HomeBanner() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
 
                 <div className="container 2xl:-mt-28 xl:-mt-24 lg:-mt-24 md:-mt-24 stack flex 2xl:p-12 xl:p-12 lg:p-10 md:p-8">
                     <div className="flex flex-row bg-white dark:bg-dark-color2 rounded-xl shadow-client border-none 2xl:p-16 xl:p-12 lg:p-10 md:p-7 pt-4 pb-4 w-full text-center">
@@ -192,14 +198,14 @@ function HomeBanner() {
                             </h6>
                         </div>
                     </div>
-                </div>
-                {EktaFunction()}
-
+                </div> 
+                {/* {EktaFunction()} */}
+ 
 
             </Fragment>
         );
     }
 
 
-}
+// }
 export default HomeBanner;

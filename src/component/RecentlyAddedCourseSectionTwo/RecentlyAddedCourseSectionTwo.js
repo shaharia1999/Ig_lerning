@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import LoveIcon from "../../asset/images/icon/love-icon.png";
 import MasterCourseThumbnail from "../../asset/images/master-course/master-course-thumbnail.png";
-import CourseLogo from "../../asset/images/logo/course-logo.svg";
+import CourseLogo from "../../asset/images/shaharia/Rectangle 422.png";
 import { GoPrimitiveDot } from "react-icons/go";
 import { MdLogin } from "react-icons/md";
 import axios from "axios";
@@ -10,7 +10,23 @@ import { Link } from "react-router-dom";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
+import book from "../../asset/images/shaharia/book.png";
+import book2 from "../../asset/images/shaharia/0.png";
+import book3 from "../../asset/images/shaharia/2.png";
+import book4 from "../../asset/images/shaharia/3.png";
+import book5 from "../../asset/images/shaharia/4.png";
+import book6 from "../../asset/images/shaharia/5.png";
+import green from "../../asset/images/shaharia/Group 862.png";
+import love from "../../asset/images/shaharia/love.png";
+import book7 from "../../asset/images/shaharia/NoPath - Copy (4).png";
+// import 'tw-elements';
+
+import StarRatings from 'react-star-ratings';
+
 import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from "react-icons/md";
+
+
 
 function SampleNextArrow1(props) {
     const { className, style, onClick } = props;
@@ -188,24 +204,21 @@ function RecentlyAddedCourseSectionTwo() {
         if (categoryLoading === true) {
             return (
                 <>
-                    <li className="nav-item animate-pulse mx-2">
-                        <div className="bg-gray-100 dark:bg-dark-scleton2 w-24 px-6 py-3 my-2 md:mr-2 h-8 rounded"></div>
+                    <li className="nav-item se mx-2">
+                        <div className="bg-[#D76E2D] gray-100 dark:bg-dark-scleton2 w-auto px-6 py-3 my-2 md:mr-2 dark:text-white   rounded text-white">Business & Company</div>
                     </li>
 
-                    <li className="nav-item animate-pulse mx-2">
-                        <div className="bg-gray-100 dark:bg-dark-scleton2 w-24 px-6 py-3 my-2 md:mr-2 h-8 rounded"></div>
+                    <li className="nav-item se mx-2">
+                        <div className="bg-gray-100 dark:bg-dark-scleton2  px-6 py-3 my-2 md:mr-2 dark:text-white  rounded">Finance</div>
                     </li>
 
-                    <li className="nav-item animate-pulse mx-2">
-                        <div className="bg-gray-100 dark:bg-dark-scleton2 w-24 px-6 py-3 my-2 md:mr-2 h-8 rounded"></div>
+                    <li className="nav-item se mx-2">
+                        <div className="bg-gray-100 dark:bg-dark-scleton2  px-6 py-3 my-2 md:mr-2 dark:text-white  rounded">IA & Big Data</div>
                     </li>
 
-                    <li className="nav-item animate-pulse mx-2">
-                        <div className="bg-gray-100 dark:bg-dark-scleton2 w-24 px-6 py-3 my-2 md:mr-2 h-8 rounded"></div>
-                    </li>
 
-                    <li className="nav-item animate-pulse mx-2">
-                        <div className="bg-gray-100 dark:bg-dark-scleton2 w-24 px-6 py-3 my-2 md:mr-2 h-8 rounded"></div>
+                    <li className="nav-item se mx-2">
+                        <div className="bg-gray-100 dark:bg-dark-scleton2  px-6 py-3 my-2 md:mr-2 dark:text-white  rounded">Digital Marketing</div>
                     </li>
                 </>
             )
@@ -234,25 +247,25 @@ function RecentlyAddedCourseSectionTwo() {
         if (subCategoryLoading === true) {
             return (
                 <>
-                    <li className="nav-item animate-pulse mx-2">
-                        <div className="bg-gray-100 dark:bg-dark-scleton2 w-24 px-6 py-3 my-2 md:mr-2 h-8 rounded"></div>
+                    <li className="nav-item se mx-2">
+                        <div className="bg-gray-100 dark:bg-dark-scleton2  px-6 py-3 my-2 md:mr-2 text-[#D76E2D]  rounded border-b-maincolor ">Master Degrees</div>
                     </li>
 
-                    <li className="nav-item animate-pulse mx-2">
-                        <div className="bg-gray-100 dark:bg-dark-scleton2 w-24 px-6 py-3 my-2 md:mr-2 h-8 rounded"></div>
+                    <li className="nav-item se mx-2">
+                        <div className="bg-gray-100 dark:bg-dark-scleton2 dark:text-white  px-6 py-3 my-2 md:mr-2  rounded">Certifications</div>
                     </li>
 
-                    <li className="nav-item animate-pulse mx-2">
-                        <div className="bg-gray-100 dark:bg-dark-scleton2 w-24 px-6 py-3 my-2 md:mr-2 h-8 rounded"></div>
+                    <li className="nav-item se mx-2">
+                        <div className="bg-gray-100 dark:bg-dark-scleton2 dark:text-white   px-6 py-3 my-2 md:mr-2  rounded">Certificates</div>
                     </li>
 
-                    <li className="nav-item animate-pulse mx-2">
-                        <div className="bg-gray-100 dark:bg-dark-scleton2 w-24 px-6 py-3 my-2 md:mr-2 h-8 rounded"></div>
+                    {/* <li className="nav-item se mx-2">
+                        <div className="bg-gray-100 dark:bg-dark-scleton2  px-6 py-3 my-2 md:mr-2  rounded"></div>
                     </li>
 
-                    <li className="nav-item animate-pulse mx-2">
-                        <div className="bg-gray-100 dark:bg-dark-scleton2 w-24 px-6 py-3 my-2 md:mr-2 h-8 rounded"></div>
-                    </li>
+                    <li className="nav-item se mx-2">
+                        <div className="bg-gray-100 dark:bg-dark-scleton2  px-6 py-3 my-2 md:mr-2  rounded"></div>
+                    </li> */}
                 </>
             )
         }
@@ -283,8 +296,8 @@ function RecentlyAddedCourseSectionTwo() {
         if (CourseLoading === true) {
             return (
                 <>
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
-                        <div className="wrapper">
+                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 se">
+                        {/*  <div className="wrapper">
                             <div className="relative">
                                 <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
                                 <div className="flex flex-wrap">
@@ -323,6 +336,55 @@ function RecentlyAddedCourseSectionTwo() {
                                             <div className="flex sm:justify-center xl:justify-start right-0 absolute">
                                                 <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
                                                 <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> */}
+                         <div className="wrapper">
+                            <div className="relative">
+                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
+                                <div className="flex flex-wrap">
+
+                                    <div className="w-1/5">
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 dark:text-white rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3">
+                                            <img src={CourseLogo}></img>
+                                        </div>
+                                    </div>
+                                    <div className="w-4/5 xl:pl-3" >
+                                        <div className="absolute top-0 mt-5">
+                                            <div className= "dark:text-white xl:w-56 h-4 rounded">University of Mishigan</div>
+                                            <div className="  dark:text-white xl:w-6/12 h-4 mt-2 rounded">United State</div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-20 rounded-sm bg-gray-100  dark:text-white">
+                                                <img src={book} className=""></img>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="relative px-4 -mt-16">
+                                <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
+                                      <div className="flex flex-wrap">
+                                        <div className="w-full">
+                                            <div className="mt-1.5   dark:text-white xl:w-10/12 h-4 rounded">Training English Course</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-6/12 h-4 rounded">Learn Online</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-8/12 h-4 rounded">77 Participants</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-7/12 h-4 rounded">rating (4.5)</div>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-wrap">
+                                        <div className="w-1/3">
+                                            <div className="flex sm:justify-center xl:justify-start">
+                                                <div className="mt-3 mx-1  dark:bg-dark-scleton2 dark:text-white w-10 h-7 rounded flex justify-center items-center"><img src={green}></img></div>
+                                               
+                                               
+                                            </div>
+                                        </div>
+                                        <div className="w-2/3 relative">
+                                            <div className="flex sm:justify-center xl:justify-start right-0 absolute">
+                                                <div className="mt-3 mx-1 px-2 py-1 bg-gray-100 dark:bg-dark-scleton2 dark:text-white w-auto h-7 rounded text-master-degree-text"><img src={love}></img></div>
+                                                <div className="mt-3 mx-1 px-2 py-1 bg-green-600 dark:bg-dark-scleton2 dark:text-white w-auto  rounded text-white">Apply Now</div>
                                             </div>
                                         </div>
                                     </div>
@@ -330,46 +392,50 @@ function RecentlyAddedCourseSectionTwo() {
                             </div>
                         </div>
                     </div>
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
-                        <div className="wrapper">
+                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 se">
+          <div className="wrapper">
                             <div className="relative">
                                 <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
                                 <div className="flex flex-wrap">
 
                                     <div className="w-1/5">
-                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 dark:text-white rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3">
+                                            <img src={CourseLogo}></img>
+                                        </div>
                                     </div>
-                                    <div className="w-4/5 xl:pl-3">
+                                    <div className="w-4/5 xl:pl-3" >
                                         <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
+                                            <div className= "dark:text-white xl:w-56 h-4 rounded">University of Mishigan</div>
+                                            <div className="  dark:text-white xl:w-6/12 h-4 mt-2 rounded">United State</div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-20 rounded-sm bg-gray-100  dark:text-white">
+                                                <img src={book} className=""></img>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="relative px-4 -mt-16">
                                 <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
-                                    <div className="flex flex-wrap">
+                                      <div className="flex flex-wrap">
                                         <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
+                                            <div className="mt-1.5   dark:text-white xl:w-10/12 h-4 rounded">Training English Course</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-6/12 h-4 rounded">Learn Online</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-8/12 h-4 rounded">77 Participants</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-7/12 h-4 rounded">rating (4.5)</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap">
-                                        <div className="w-1/2">
+                                        <div className="w-1/3">
                                             <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1  dark:bg-dark-scleton2 dark:text-white w-10 h-7 rounded flex justify-center items-center"><img src={green}></img></div>
+                                               
+                                               
                                             </div>
                                         </div>
-                                        <div className="w-1/2 relative">
+                                        <div className="w-2/3 relative">
                                             <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 px-2 py-1 bg-gray-100 dark:bg-dark-scleton2 dark:text-white w-auto h-7 rounded text-master-degree-text"><img src={love}></img></div>
+                                                <div className="mt-3 mx-1 px-2 py-1 bg-green-600 dark:bg-dark-scleton2 dark:text-white w-auto  rounded text-white">Apply Now</div>
                                             </div>
                                         </div>
                                     </div>
@@ -377,46 +443,50 @@ function RecentlyAddedCourseSectionTwo() {
                             </div>
                         </div>
                     </div>
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
-                        <div className="wrapper">
+                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 se">
+          <div className="wrapper">
                             <div className="relative">
                                 <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
                                 <div className="flex flex-wrap">
 
                                     <div className="w-1/5">
-                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 dark:text-white rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3">
+                                            <img src={CourseLogo}></img>
+                                        </div>
                                     </div>
-                                    <div className="w-4/5 xl:pl-3">
+                                    <div className="w-4/5 xl:pl-3" >
                                         <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
+                                            <div className= "dark:text-white xl:w-56 h-4 rounded">University of Mishigan</div>
+                                            <div className="  dark:text-white xl:w-6/12 h-4 mt-2 rounded">United State</div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-20 rounded-sm bg-gray-100  dark:text-white">
+                                                <img src={book} className=""></img>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="relative px-4 -mt-16">
                                 <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
-                                    <div className="flex flex-wrap">
+                                      <div className="flex flex-wrap">
                                         <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
+                                            <div className="mt-1.5   dark:text-white xl:w-10/12 h-4 rounded">Training English Course</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-6/12 h-4 rounded">Learn Online</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-8/12 h-4 rounded">77 Participants</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-7/12 h-4 rounded">rating (4.5)</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap">
-                                        <div className="w-1/2">
+                                        <div className="w-1/3">
                                             <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1  dark:bg-dark-scleton2 dark:text-white w-10 h-7 rounded flex justify-center items-center"><img src={green}></img></div>
+                                               
+                                               
                                             </div>
                                         </div>
-                                        <div className="w-1/2 relative">
+                                        <div className="w-2/3 relative">
                                             <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 px-2 py-1 bg-gray-100 dark:bg-dark-scleton2 dark:text-white w-auto h-7 rounded text-master-degree-text"><img src={love}></img></div>
+                                                <div className="mt-3 mx-1 px-2 py-1 bg-green-600 dark:bg-dark-scleton2 dark:text-white w-auto  rounded text-white">Apply Now</div>
                                             </div>
                                         </div>
                                     </div>
@@ -424,46 +494,50 @@ function RecentlyAddedCourseSectionTwo() {
                             </div>
                         </div>
                     </div>
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 animate-pulse">
-                        <div className="wrapper">
+                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/4 se">
+          <div className="wrapper">
                             <div className="relative">
                                 <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
                                 <div className="flex flex-wrap">
 
                                     <div className="w-1/5">
-                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 dark:text-white rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3">
+                                            <img src={CourseLogo}></img>
+                                        </div>
                                     </div>
-                                    <div className="w-4/5 xl:pl-3">
+                                    <div className="w-4/5 xl:pl-3" >
                                         <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-32 xl:mt-6 xl:-ml-14 xl:-mr-6 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
+                                            <div className= "dark:text-white xl:w-56 h-4 rounded">University of Mishigan</div>
+                                            <div className="  dark:text-white xl:w-6/12 h-4 mt-2 rounded">United State</div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-20 rounded-sm bg-gray-100  dark:text-white">
+                                                <img src={book} className=""></img>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="relative px-4 -mt-16">
                                 <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
-                                    <div className="flex flex-wrap">
+                                      <div className="flex flex-wrap">
                                         <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-7/12 h-4 rounded"></div>
+                                            <div className="mt-1.5   dark:text-white xl:w-10/12 h-4 rounded">Training English Course</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-6/12 h-4 rounded">Learn Online</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-8/12 h-4 rounded">77 Participants</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-7/12 h-4 rounded">rating (4.5)</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap">
-                                        <div className="w-1/2">
+                                        <div className="w-1/3">
                                             <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1  dark:bg-dark-scleton2 dark:text-white w-10 h-7 rounded flex justify-center items-center"><img src={green}></img></div>
+                                               
+                                               
                                             </div>
                                         </div>
-                                        <div className="w-1/2 relative">
+                                        <div className="w-2/3 relative">
                                             <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 px-2 py-1 bg-gray-100 dark:bg-dark-scleton2 dark:text-white w-auto h-7 rounded text-master-degree-text"><img src={love}></img></div>
+                                                <div className="mt-3 mx-1 px-2 py-1 bg-green-600 dark:bg-dark-scleton2 dark:text-white w-auto  rounded text-white">Apply Now</div>
                                             </div>
                                         </div>
                                     </div>
@@ -545,15 +619,15 @@ function RecentlyAddedCourseSectionTwo() {
                                             <div className="xl:w-4/12 w-3/12">
                                                 <div className="flex sm:justify-center xl:justify-start -mt-3">
                                                     <Link to="" className="z-30">
-                                                        <img className="2xl:h-8 2xl:w-8 xl:h-7 xl:w-7 h-6 w-6 rounded-full border-2 border-white"
+                                                        <img className="2xl: 2xl:w-8 xl:h-7 xl:w-7 h-6 w-6 rounded-full border-2 border-white"
                                                             src="https://media.istockphoto.com/photos/got-this-picture-id1332291404?b=1&k=20&m=1332291404&s=170667a&w=0&h=uRm6p7xa_-YF9t_6sVY7DXnXaa2Jo_NeL4oUvrFJq6I=" alt="" />
                                                     </Link>
                                                     <Link to="" className="-ml-3 z-20">
-                                                        <img className="2xl:h-8 2xl:w-8 xl:h-7 xl:w-7 h-6 w-6 rounded-full border-2 border-white"
+                                                        <img className="2xl: 2xl:w-8 xl:h-7 xl:w-7 h-6 w-6 rounded-full border-2 border-white"
                                                             src="https://cbsnews1.cbsistatic.com/hub/i/2018/11/06/0c1af1b8-155a-458e-b105-78f1e7344bf4/2018-11-06t054310z-1334124005-rc1be15a8050-rtrmadp-3-people-sexiest-man.jpg" alt="" />
                                                     </Link>
                                                     <Link to="" className="-ml-3 z-10">
-                                                        <img className="2xl:h-8 2xl:w-8 xl:h-7 xl:w-7 h-6 w-6 rounded-full border-2 border-white"
+                                                        <img className="2xl: 2xl:w-8 xl:h-7 xl:w-7 h-6 w-6 rounded-full border-2 border-white"
                                                             src="https://aisvox-a.akamaihd.net/masters/940835/26-1/27-1yk13p/2540x1429/4080/800604860-jpg.jpg" alt="" />
                                                     </Link>
                                                 </div>

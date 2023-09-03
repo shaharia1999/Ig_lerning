@@ -5,6 +5,11 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Link } from "react-router-dom";
+import c1 from '../../../asset/images/shaharia/c1.png'
+import c2 from '../../../asset/images/shaharia/c2.png'
+import c3 from '../../../asset/images/shaharia/c3.png'
+import c4 from '../../../asset/images/shaharia/c4.png'
+
 
 function TopCategories() {
     const [topCategory, setTopCategory] = useState([]);
@@ -33,60 +38,60 @@ function TopCategories() {
             return (
                 <div className="flex flex-wrap w-full">
                     <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
-                        <div className="animate-pulse bg-white dark:bg-dark-scleton1 shadow-sm rounded xl:p-4 xl:w-full">
-                            <div className="rounded w-full 2xl:h-52 xl:h-44 h-52 bg-gray-100 dark:bg-dark-scleton2"></div>
-                            <div className="flex flex-col mt-5">
-                                <div className="w-full h-5 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
-                                <div className="mt-2 w-8/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
+                        <div className="  dark:bg-dark-scleton1 shadow-sm rounded xl:w-full relative">
+                            <div className="rounded w-full  bg-gray-100 dark:bg-dark-scleton2"><img src={c1}></img></div>
+                            <div className="flex flex-col absolute bottom-0 left-0  w-[100%]  text-center ">
+                                <div className="w-full bg-white dark:bg-dark-scleton2 py-2 dark:text-white rounded">Business & Company</div>
+                           
                             </div>
                         </div>
                     </div>
 
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
-                        <div className="animate-pulse bg-white dark:bg-dark-scleton1 shadow-sm rounded xl:p-4 xl:w-full">
-                            <div className="rounded w-full h-52 bg-gray-100 dark:bg-dark-scleton2"></div>
-                            <div className="flex flex-col mt-5">
-                                <div className="w-full h-5 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
-                                <div className="mt-2 w-8/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
+                        <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
+                        <div className="  dark:bg-dark-scleton1 shadow-sm rounded xl:w-full relative">
+                            <div className="rounded w-full  bg-gray-100 dark:bg-dark-scleton2"><img src={c2}></img></div>
+                            <div className="flex flex-col absolute bottom-0 left-0  w-[100%]  text-center ">
+                                <div className="w-full bg-white dark:bg-dark-scleton2 py-2 dark:text-white rounded">Business & Company</div>
+                           
                             </div>
                         </div>
                     </div>
 
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
-                        <div className="animate-pulse bg-white dark:bg-dark-scleton1 shadow-sm rounded xl:p-4 xl:w-full">
-                            <div className="rounded w-full h-52 bg-gray-100 dark:bg-dark-scleton2"></div>
-                            <div className="flex flex-col mt-5">
-                                <div className="w-full h-5 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
-                                <div className="mt-2 w-8/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
+                        <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
+                        <div className="  dark:bg-dark-scleton1 shadow-sm rounded xl:w-full relative">
+                            <div className="rounded w-full  bg-gray-100 dark:bg-dark-scleton2"><img src={c3}></img></div>
+                            <div className="flex flex-col absolute bottom-0 left-0  w-[100%]  text-center ">
+                                <div className="w-full bg-white dark:bg-dark-scleton2 py-2 dark:text-white rounded">Business & Company</div>
+                           
                             </div>
                         </div>
                     </div>
 
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
-                        <div className="animate-pulse bg-white dark:bg-dark-scleton1 shadow-sm rounded xl:p-4 xl:w-full">
-                            <div className="rounded w-full h-52 bg-gray-100 dark:bg-dark-scleton2"></div>
-                            <div className="flex flex-col mt-5">
-                                <div className="w-full h-5 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
-                                <div className="mt-2 w-8/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
+                        <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
+                        <div className="  dark:bg-dark-scleton1 shadow-sm rounded xl:w-full relative">
+                            <div className="rounded w-full  bg-gray-100 dark:bg-dark-scleton2"><img src={c4}></img></div>
+                            <div className="flex flex-col absolute bottom-0 left-0  w-[100%]  text-center ">
+                                <div className="w-full bg-white dark:bg-dark-scleton2 py-2 dark:text-white rounded">Business & Company</div>
+                           
                             </div>
                         </div>
                     </div>
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
-                        <div className="animate-pulse bg-white dark:bg-dark-scleton1 shadow-sm rounded xl:p-4 xl:w-full">
-                            <div className="rounded w-full h-52 bg-gray-100 dark:bg-dark-scleton2"></div>
-                            <div className="flex flex-col mt-5">
-                                <div className="w-full h-5 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
-                                <div className="mt-2 w-8/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
+                        <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
+                        <div className="  dark:bg-dark-scleton1 shadow-sm rounded xl:w-full relative">
+                            <div className="rounded w-full  bg-gray-100 dark:bg-dark-scleton2"><img src={c1}></img></div>
+                            <div className="flex flex-col absolute bottom-0 left-0  w-[100%]  text-center ">
+                                <div className="w-full bg-white dark:bg-dark-scleton2 py-2 dark:text-white rounded">Business & Company</div>
+                           
                             </div>
                         </div>
                     </div>
 
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
-                        <div className="animate-pulse bg-white dark:bg-dark-scleton1 shadow-sm rounded xl:p-4 xl:w-full">
-                            <div className="rounded w-full h-52 bg-gray-100 dark:bg-dark-scleton2"></div>
-                            <div className="flex flex-col mt-5">
-                                <div className="w-full h-5 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
-                                <div className="mt-2 w-8/12 h-3 bg-gray-100 dark:bg-dark-scleton2 rounded"></div>
+                        <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3">
+                        <div className="  dark:bg-dark-scleton1 shadow-sm rounded xl:w-full relative">
+                            <div className="rounded w-full  bg-gray-100 dark:bg-dark-scleton2"><img src={c2}></img></div>
+                            <div className="flex flex-col absolute bottom-0 left-0  w-[100%]  text-center ">
+                                <div className="w-full bg-white dark:bg-dark-scleton2 py-2 dark:text-white rounded">Business & Company</div>
+                           
                             </div>
                         </div>
                     </div>

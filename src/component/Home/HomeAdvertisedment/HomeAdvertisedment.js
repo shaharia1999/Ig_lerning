@@ -4,6 +4,7 @@ import MostVisited from "../MostVisited/MostVisited";
 import TopCategories from "../TopCategories/TopCategories";
 import axios from "axios";
 import ApiUrl from "../../../Api/ApiUrl";
+import noPath from '../../../asset/images/shaharia/NoPath - Copy (18).png'
 
 function HomeAdvertisedment() {
     const [isLoading, setIsLoading] = useState(false);
@@ -28,8 +29,8 @@ function HomeAdvertisedment() {
                             <MostVisited />
                             <TopCategories />
                         </div>
-                        <div className="xl:w-1/3 animate-pulse">
-                            <div className="w-96 xl:ml-20 xl:mt-20 rounded-md bg-gray-100 dark:bg-dark-scleton2 home-ad-banner"></div>
+                        <div className="xl:w-1/3 ">
+                            <div className="w-96 xl:ml-20 xl:mt-20 rounded-md   home-ad-banner"><img src={noPath}></img></div>
                         </div>
                     </div>
                 </div>

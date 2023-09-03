@@ -13,6 +13,15 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from "react-icons/md";
+import book from "../../../asset/images/shaharia/book.png";
+import book2 from "../../../asset/images/shaharia/0.png";
+import book3 from "../../../asset/images/shaharia/2.png";
+import book4 from "../../../asset/images/shaharia/3.png";
+import book5 from "../../../asset/images/shaharia/4.png";
+import book6 from "../../../asset/images/shaharia/5.png";
+import green from "../../../asset/images/shaharia/g.png";
+import white from "../../../asset/images/shaharia/white.png";
+import book7 from "../../../asset/images/shaharia/NoPath - Copy (4).png";
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -100,46 +109,99 @@ function MostVisited() {
         if (isLoading === true) {
             return (
                 <>
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3 animate-pulse">
-                        <div className="wrapper">
+                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3 ">
+                        {/*   <div className="wrapper">
                             <div className="relative">
-                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-lg shadow-lg"></div>
+                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
                                 <div className="flex flex-wrap">
 
                                     <div className="w-1/5">
-                                        <div className="absolute ml-2 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 dark:text-white rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3">
+                                            <img src={CourseLogo}></img>
+                                        </div>
                                     </div>
-                                    <div className="w-4/5">
+                                    <div className="w-4/5 xl:pl-3" >
                                         <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-28 xl:mt-6 xl:-ml-8 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
+                                            <div className= "dark:text-white xl:w-56 h-4 rounded">ABC Learning Center</div>
+                                            <div className="  dark:text-white xl:w-6/12 h-4 mt-2 rounded">45 mins</div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-20 rounded-sm bg-gray-100  dark:text-white">
+                                                <img src={book} className=""></img>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <div className="relative px-4 -mt-16">
                                 <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
-                                    <div className="flex flex-wrap">
+                                      <div className="flex flex-wrap">
                                         <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                            <div className="mt-1.5   dark:text-white xl:w-10/12 h-4 rounded">Training English Course</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-6/12 h-4 rounded">Learn Online</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-8/12 h-4 rounded">77 Participants</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-7/12 h-4 rounded">rating (4.5)</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap">
-                                        <div className="w-1/2">
+                                        <div className="w-1/3">
                                             <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-[#7CCC15] dark:bg-dark-scleton2 dark:text-white w-7 h-7 rounded flex justify-center items-center"><img src={green}></img></div>
+                                                <div className="mt-3 mx-1 bg-[#0ea4c5] dark:bg-dark-scleton2 dark:text-white w-7 h-7 rounded flex justify-center items-center"><img scr={white}></img></div>
+                                                <div className="mt-3 mx-1 bg-[#F5A625] dark:bg-dark-scleton2 dark:text-white w-7 h-7 flex justify-center items-center rounded"><img src={green}></img></div>
                                             </div>
                                         </div>
-                                        <div className="w-1/2 relative">
+                                        <div className="w-2/3 relative">
                                             <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 px-2 py-1 bg-gray-100 dark:bg-dark-scleton2 dark:text-white w-auto h-7 rounded text-master-degree-text">Heart</div>
+                                                <div className="mt-3 mx-1 px-2 py-1 bg-[#D76E2D] dark:bg-dark-scleton2 dark:text-white w-auto h-7 rounded text-white">Enroll</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> */}
+                          <div className="wrapper">
+                            <div className="relative">
+                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
+                                <div className="flex flex-wrap">
+
+                                    <div className="w-1/5">
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 dark:text-white rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3">
+                                            <img src={CourseLogo}></img>
+                                        </div>
+                                    </div>
+                                    <div className="w-4/5 xl:pl-3" >
+                                        <div className="absolute top-0 mt-5">
+                                            <div className= "dark:text-white xl:w-56 h-4 rounded">ABC Learning Center</div>
+                                            <div className="  dark:text-white xl:w-6/12 h-4 mt-2 rounded">45 mins</div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-20 rounded-sm bg-gray-100  dark:text-white">
+                                                <img src={book} className=""></img>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="relative px-4 -mt-16">
+                                <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
+                                      <div className="flex flex-wrap">
+                                        <div className="w-full">
+                                            <div className="mt-1.5   dark:text-white xl:w-10/12 h-4 rounded">Training English Course</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-6/12 h-4 rounded">Learn Online</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-8/12 h-4 rounded">77 Participants</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-7/12 h-4 rounded">rating (4.5)</div>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-wrap">
+                                        <div className="w-1/3">
+                                            <div className="flex sm:justify-center xl:justify-start">
+                                                <div className="mt-3 mx-1 bg-[#7CCC15] dark:bg-dark-scleton2 dark:text-white w-7 h-7 rounded flex justify-center items-center"><img src={green}></img></div>
+                                                <div className="mt-3 mx-1 bg-[#0ea4c5] dark:bg-dark-scleton2 dark:text-white w-7 h-7 rounded flex justify-center items-center"><img scr={white}></img></div>
+                                                <div className="mt-3 mx-1 bg-[#F5A625] dark:bg-dark-scleton2 dark:text-white w-7 h-7 flex justify-center items-center rounded"><img src={green}></img></div>
+                                            </div>
+                                        </div>
+                                        <div className="w-2/3 relative">
+                                            <div className="flex sm:justify-center xl:justify-start right-0 absolute">
+                                                <div className="mt-3 mx-1 px-2 py-1 bg-gray-100 dark:bg-dark-scleton2 dark:text-white w-auto h-7 rounded text-master-degree-text">Heart</div>
+                                                <div className="mt-3 mx-1 px-2 py-1 bg-[#D76E2D] dark:bg-dark-scleton2 dark:text-white w-auto h-7 rounded text-white">Enroll</div>
                                             </div>
                                         </div>
                                     </div>
@@ -148,46 +210,50 @@ function MostVisited() {
                         </div>
                     </div>
 
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3 animate-pulse">
-                        <div className="wrapper">
+                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3 ">
+                          <div className="wrapper">
                             <div className="relative">
-                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-lg shadow-lg"></div>
+                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
                                 <div className="flex flex-wrap">
 
                                     <div className="w-1/5">
-                                        <div className="absolute ml-2 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 dark:text-white rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3">
+                                            <img src={CourseLogo}></img>
+                                        </div>
                                     </div>
-                                    <div className="w-4/5">
+                                    <div className="w-4/5 xl:pl-3" >
                                         <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-28 xl:mt-6 xl:-ml-8 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
+                                            <div className= "dark:text-white xl:w-56 h-4 rounded">ABC Learning Center</div>
+                                            <div className="  dark:text-white xl:w-6/12 h-4 mt-2 rounded">45 mins</div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-20 rounded-sm bg-gray-100  dark:text-white">
+                                                <img src={book3} className=""></img>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <div className="relative px-4 -mt-16">
                                 <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
-                                    <div className="flex flex-wrap">
+                                      <div className="flex flex-wrap">
                                         <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                            <div className="mt-1.5   dark:text-white xl:w-10/12 h-4 rounded">Training English Course</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-6/12 h-4 rounded">Learn Online</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-8/12 h-4 rounded">77 Participants</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-7/12 h-4 rounded">rating (4.5)</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap">
-                                        <div className="w-1/2">
+                                        <div className="w-1/3">
                                             <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-[#7CCC15] dark:bg-dark-scleton2 dark:text-white w-7 h-7 rounded flex justify-center items-center"><img src={green}></img></div>
+                                                <div className="mt-3 mx-1 bg-[#0ea4c5] dark:bg-dark-scleton2 dark:text-white w-7 h-7 rounded flex justify-center items-center"><img scr={white}></img></div>
+                                                <div className="mt-3 mx-1 bg-[#F5A625] dark:bg-dark-scleton2 dark:text-white w-7 h-7 flex justify-center items-center rounded"><img src={green}></img></div>
                                             </div>
                                         </div>
-                                        <div className="w-1/2 relative">
+                                        <div className="w-2/3 relative">
                                             <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 px-2 py-1 bg-gray-100 dark:bg-dark-scleton2 dark:text-white w-auto h-7 rounded text-master-degree-text">Heart</div>
+                                                <div className="mt-3 mx-1 px-2 py-1 bg-[#D76E2D] dark:bg-dark-scleton2 dark:text-white w-auto h-7 rounded text-white">Enroll</div>
                                             </div>
                                         </div>
                                     </div>
@@ -196,46 +262,50 @@ function MostVisited() {
                         </div>
                     </div>
 
-                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3 animate-pulse">
-                        <div className="wrapper">
+                    <div className="my-1 px-1 w-full md:w-1/2 xl:my-8 xl:px-5 xl:w-1/3 ">
+                          <div className="wrapper">
                             <div className="relative">
-                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-lg shadow-lg"></div>
+                                <div className="w-full h-72 bg-white dark:bg-dark-scleton1 rounded-xl shadow-lg"></div>
                                 <div className="flex flex-wrap">
 
                                     <div className="w-1/5">
-                                        <div className="absolute ml-2 top-0 bg-gray-100 dark:bg-dark-scleton2 rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3"></div>
+                                        <div className="absolute ml-4 top-0 bg-gray-100 dark:bg-dark-scleton2 dark:text-white rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3">
+                                            <img src={CourseLogo}></img>
+                                        </div>
                                     </div>
-                                    <div className="w-4/5">
+                                    <div className="w-4/5 xl:pl-3" >
                                         <div className="absolute top-0 mt-5">
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-56 h-4 rounded"></div>
-                                            <div className="bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 mt-2 rounded"></div>
-                                            <div className="xl:h-28 xl:mt-6 xl:-ml-8 rounded-sm bg-gray-100 dark:bg-dark-scleton2"></div>
+                                            <div className= "dark:text-white xl:w-56 h-4 rounded">ABC Learning Center</div>
+                                            <div className="  dark:text-white xl:w-6/12 h-4 mt-2 rounded">45 mins</div>
+                                            <div className="xl:h-32 xl:mt-6 xl:-ml-20 rounded-sm bg-gray-100  dark:text-white">
+                                                <img src={book5} className=""></img>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <div className="relative px-4 -mt-16">
                                 <div className="bg-white dark:bg-dark-color2 p-3 rounded-lg shadow-lg">
-                                    <div className="flex flex-wrap">
+                                      <div className="flex flex-wrap">
                                         <div className="w-full">
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-10/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-6/12 h-4 rounded"></div>
-                                            <div className="mt-1.5 bg-gray-100 dark:bg-dark-scleton2 xl:w-8/12 h-4 rounded"></div>
+                                            <div className="mt-1.5   dark:text-white xl:w-10/12 h-4 rounded">Training English Course</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-6/12 h-4 rounded">Learn Online</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-8/12 h-4 rounded">77 Participants</div>
+                                            <div className="mt-1.5   dark:text-white xl:w-7/12 h-4 rounded">rating (4.5)</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap">
-                                        <div className="w-1/2">
+                                        <div className="w-1/3">
                                             <div className="flex sm:justify-center xl:justify-start">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 bg-[#7CCC15] dark:bg-dark-scleton2 dark:text-white w-7 h-7 rounded flex justify-center items-center"><img src={green}></img></div>
+                                                <div className="mt-3 mx-1 bg-[#0ea4c5] dark:bg-dark-scleton2 dark:text-white w-7 h-7 rounded flex justify-center items-center"><img scr={white}></img></div>
+                                                <div className="mt-3 mx-1 bg-[#F5A625] dark:bg-dark-scleton2 dark:text-white w-7 h-7 flex justify-center items-center rounded"><img src={green}></img></div>
                                             </div>
                                         </div>
-                                        <div className="w-1/2 relative">
+                                        <div className="w-2/3 relative">
                                             <div className="flex sm:justify-center xl:justify-start right-0 absolute">
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-7 h-7 rounded"></div>
-                                                <div className="mt-3 mx-1 bg-gray-100 dark:bg-dark-scleton2 w-12 h-7 rounded"></div>
+                                                <div className="mt-3 mx-1 px-2 py-1 bg-gray-100 dark:bg-dark-scleton2 dark:text-white w-auto h-7 rounded text-master-degree-text">Heart</div>
+                                                <div className="mt-3 mx-1 px-2 py-1 bg-[#D76E2D] dark:bg-dark-scleton2 dark:text-white w-auto h-7 rounded text-white">Enroll</div>
                                             </div>
                                         </div>
                                     </div>
