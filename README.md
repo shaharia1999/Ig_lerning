@@ -4,7 +4,7 @@
 other live link
 ## team Work 
 1.Arena web and Security https://arenawebsecurity.net/
-2.E-comarece Tavas : next-tavaas.vercel.app
+2.E-comarece Tavas : https://next-tavaas.vercel.app
 3.Ticket Booking system : https://ticket-kato.web.app/
 
 
