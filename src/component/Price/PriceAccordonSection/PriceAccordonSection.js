@@ -60,7 +60,7 @@ function PriceAccordonSection() {
                                     <div className="bg-gray-50 icon-select shadow mt-3 rounded-lg ">
                                         <Accordion className="rounded m-0">
                                             <AccordionHeader className="flex pr-4">
-                                                <div className=" w-10 ml-4 bg-gray-100 rounded-md"><img src={fe1} className="rounded-full"></img></div>
+                                                <div className=" w-10 ml-4 bg-gray-100 rounded-md"><img src={fe1} className="rounded-full" alt=""/></div>
                                             </AccordionHeader>
                                         </Accordion>
                                     </div>
